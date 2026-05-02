@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mew Korean Learning</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        #lesson-frame {
+            width: 100%;
+            border: none;
+            height: calc(100vh - 120px);
+            border-radius: var(--radius);
+            display: block;
+        }
+        .lesson-viewer-bar {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+        .lesson-viewer-bar a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .lesson-viewer-bar a:hover { text-decoration: underline; }
+        .lesson-viewer-bar .crumb { color: var(--text-muted); font-size: 0.85rem; }
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <a href="#" class="sidebar-brand">
+            <img src="static/images/mew.png" alt="Mew" class="sidebar-logo">
+            <span class="sidebar-title">Mew</span>
+        </a>
+    </div>
+    <nav class="sidebar-nav">
+        <div class="nav-section-label">Navigation</div>
+        <a href="#" class="sidebar-link" id="nav-vocab">
+            <span class="sidebar-icon"><i data-lucide="book"></i></span>
+            <span>Vocabulaire</span>
+        </a>
+        <a href="#lessons" class="sidebar-link" id="nav-lessons">
+            <span class="sidebar-icon"><i data-lucide="pen-tool"></i></span>
+            <span>Lessons</span>
+        </a>
+        <div id="sidebar-extra"></div>
+    </nav>
+    <div class="sidebar-footer">
+        <div class="sidebar-footer-text">
+            <span class="kr">한국어</span> Dashboard
+        </div>
+    </div>
+</aside>
+
+<div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<div class="main-wrap">
+    <div class="topbar">
+        <button class="topbar-toggle" onclick="toggleSidebar()">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="#" class="topbar-brand">
+            <img src="static/images/mew.png" alt="Mew" class="topbar-logo">
+            <span>Mew</span>
+        </a>
+    </div>
+    <main id="content"><div class="loading">Chargement…</div></main>
+</div>
+
+<script>
+// ================================================================
+// DATA (inlined from manifest.json — auto-updated by LLM)
+// ================================================================
+let MANIFEST = null;
+const bookCache = {};
+
+// ================================================================
+// CSV PARSER
+// ================================================================
+function parseCSV(text) {
+    const rows = [];
+    let row = [], field = '', inQ = false;
+    for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (inQ) {
+            if (ch === '"') { if (text[i+1] === '"') { field += '"'; i++; } else inQ = false; }
+            else field += ch;
+        } else {
+            if (ch === '"') inQ = true;
+            else if (ch === ',') { row.push(field); field = ''; }
+            else if (ch === '\n' || ch === '\r') {
+                if (ch === '\r' && text[i+1] === '\n') i++;
+                row.push(field); field = '';
+                if (row.some(f => f)) rows.push(row);
+                row = [];
+            } else field += ch;
+        }
+    }
+    if (field || row.length) { row.push(field); if (row.some(f => f)) rows.push(row); }
+    return rows;
+}
+
+function parseVocabCSV(text, bookId) {
+    const rows = parseCSV(text);
+    const chapters = {};
+    let cur = 0;
+    let total = 0;
+    for (let i = 1; i < rows.length; i++) {
+        const [h='', fr='', ex='', tr='', expl=''] = rows[i].map(s => s.trim());
+        if (h && /^\d+과$/.test(h) && !fr) {
+            cur = parseInt(h);
+            if (!chapters[cur]) chapters[cur] = [];
+            continue;
+        }
+        if (!h && !fr) continue;
+        if (!chapters[cur]) chapters[cur] = [];
+        chapters[cur].push({ hangul: h, french: fr, example: ex, translated: tr, explanation: expl });
+        total++;
+    }
+    return { id: bookId, name: `Vocab ${bookId}`, chapters, total };
+}
+
+async function fetchBook(bookId) {
+    if (bookCache[bookId]) return bookCache[bookId];
+    const res = await fetch(`content/vocab/Vocab ${bookId}.csv`);
+    const text = await res.text();
+    bookCache[bookId] = parseVocabCSV(text, bookId);
+    return bookCache[bookId];
+}
+
+// ================================================================
+// ROUTING
+// ================================================================
+function getRoute() {
+    const h = decodeURIComponent(location.hash || '#');
+    const parts = h.slice(1).split('/').filter(Boolean);
+    return { page: parts[0] || '', args: parts.slice(1) };
+}
+
+window.addEventListener('hashchange', route);
+window.addEventListener('load', async () => {
+    const res = await fetch('content/manifest.json');
+    MANIFEST = await res.json();
+    route();
+});
+
+async function route() {
+    const { page, args } = getRoute();
+    setNavActive(page);
+    const el = document.getElementById('content');
+    el.innerHTML = '<div class="loading">Chargement…</div>';
+    lucide.createIcons();
+
+    if (!page || page === '') { await renderHome(); }
+    else if (page === 'vocab') { await renderVocab(args[0], args[1] ? parseInt(args[1]) : null); }
+    else if (page === 'lessons') { renderLessons(); }
+    else if (page === 'lesson') { renderLesson(args[0], args.slice(1).join('/')); }
+}
+
+function setNavActive(page) {
+    document.getElementById('nav-vocab').classList.toggle('active', !page || page === '' || page === 'vocab');
+    document.getElementById('nav-lessons').classList.toggle('active', page === 'lessons' || page === 'lesson');
+}
+
+// ================================================================
+// HOME — books grid
+// ================================================================
+async function renderHome() {
+    const books = [];
+    for (const id of MANIFEST.books) {
+        const b = await fetchBook(id);
+        books.push(b);
+    }
+
+    // Sidebar extra: book links
+    document.getElementById('sidebar-extra').innerHTML = `
+        <div class="nav-section-label">Livres</div>
+        ${books.map(b => `
+        <a href="#vocab/${b.id}" class="sidebar-link">
+            <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
+            <span>${b.name}</span>
+        </a>`).join('')}
+    `;
+
+    const totalWords = books.reduce((s, b) => s + b.total, 0);
+
+    document.getElementById('content').innerHTML = `
+        <div class="hero">
+            <h1><span class="kr">한국어</span> Vocabulary</h1>
+            <p class="subtitle">${books.length} livres &bull; ${totalWords} mots au total</p>
+        </div>
+        <div class="books-grid">
+            ${books.map(b => {
+                const lvl = b.id.startsWith('3') ? 'l3' : 'l4';
+                const chCount = Object.keys(b.chapters).length;
+                return `<a href="#vocab/${b.id}" class="book-card">
+                    <span class="book-level ${lvl}">Level ${b.id}</span>
+                    <div class="book-title">${b.name}</div>
+                    <div class="book-stats">
+                        <div class="book-stat">
+                            <span class="book-stat-value">${b.total}</span>
+                            <span class="book-stat-label">Mots</span>
+                        </div>
+                        <div class="book-stat">
+                            <span class="book-stat-value">${chCount}</span>
+                            <span class="book-stat-label">Chapitres</span>
+                        </div>
+                    </div>
+                </a>`;
+            }).join('')}
+        </div>
+    `;
+    lucide.createIcons();
+}
+
+// ================================================================
+// VOCAB — table with chapters, search, toggle
+// ================================================================
+async function renderVocab(bookId, selectedChapter) {
+    if (!bookId) { location.hash = '#'; return; }
+    const book = await fetchBook(bookId);
+    const books = [];
+    for (const id of MANIFEST.books) books.push(await fetchBook(id));
+
+    const chNums = Object.keys(book.chapters).map(Number).sort((a,b)=>a-b);
+    const avgPerCh = chNums.length ? Math.round(book.total / chNums.length) : 0;
+
+    // Sidebar
+    document.getElementById('sidebar-extra').innerHTML = `
+        <div class="nav-section-label">Livres</div>
+        ${books.map(b => `
+        <a href="#vocab/${b.id}" class="sidebar-link ${b.id === bookId ? 'active' : ''}">
+            <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
+            <span>${b.name}</span>
+        </a>`).join('')}
+        <div class="nav-section-label">Chapitres</div>
+        <div class="sidebar-sub">
+            <a href="#vocab/${bookId}" class="sidebar-link ${selectedChapter === null ? 'active' : ''}">
+                <span>Tous (${book.total})</span>
+            </a>
+            ${chNums.map(n => `
+            <a href="#vocab/${bookId}/${n}" class="sidebar-link ${selectedChapter === n ? 'active' : ''}">
+                <span>${n}과 (${book.chapters[n].length})</span>
+            </a>`).join('')}
+        </div>
+    `;
+
+    // Build table rows
+    let counter = 0;
+    const rowsHTML = chNums.filter(n => selectedChapter === null || selectedChapter === n).map(n => {
+        const sepRow = `<tr class="chapter-sep" data-chapter="${n}">
+            <td colspan="6"><i data-lucide="book" class="icon-xs"></i> Chapitre ${n}과 — ${book.chapters[n].length} mots</td>
+        </tr>`;
+        const wordRows = book.chapters[n].map(e => {
+            counter++;
+            return `<tr class="vocab-row" data-hangul="${e.hangul.toLowerCase()}" data-french="${e.french.toLowerCase()}" onclick="this.classList.toggle('expanded')">
+                <td style="color:var(--text-muted);font-size:0.8rem">${counter}</td>
+                <td class="col-hangul">${e.hangul}</td>
+                <td class="col-french">${e.french}</td>
+                <td class="col-example example-col">${e.example}</td>
+                <td class="col-translated example-col">${e.translated}</td>
+                <td class="col-explanation detail-col" style="display:none">${e.explanation}</td>
+            </tr>`;
+        }).join('');
+        return sepRow + wordRows;
+    }).join('');
+
+    document.getElementById('content').innerHTML = `
+        <div class="vocab-header">
+            <div class="vocab-title-group">
+                <p class="breadcrumb"><a href="#"><i data-lucide="home" class="icon-xs"></i> Home</a> → ${book.name}</p>
+                <h1>${book.name}</h1>
+            </div>
+        </div>
+        <div class="stats-bar">
+            <div class="stat-card"><div class="stat-value purple">${book.total}</div><div class="stat-label">Total mots</div></div>
+            <div class="stat-card"><div class="stat-value pink">${chNums.length}</div><div class="stat-label">Chapitres</div></div>
+            <div class="stat-card"><div class="stat-value cyan">${avgPerCh}</div><div class="stat-label">Mots / chapitre</div></div>
+        </div>
+        <div class="chapter-nav">
+            <a href="#vocab/${bookId}" class="ch-pill ${selectedChapter === null ? 'active' : ''}">
+                Tous <span class="count">${book.total}</span>
+            </a>
+            ${chNums.map(n => `
+            <a href="#vocab/${bookId}/${n}" class="ch-pill ${selectedChapter === n ? 'active' : ''}">
+                ${n}과 <span class="count">${book.chapters[n].length}</span>
+            </a>`).join('')}
+        </div>
+        <div class="controls">
+            <div class="search-box">
+                <span class="icon"><i data-lucide="search" class="icon-xs"></i></span>
+                <input type="text" id="search" placeholder="Rechercher en 한글 ou français…" oninput="filterVocab()">
+            </div>
+            <button class="toggle-btn" id="toggle-details" onclick="toggleDetails()">
+                <i data-lucide="file-text" class="icon-xs"></i> Détails
+            </button>
+            <button class="toggle-btn" id="toggle-examples" onclick="toggleExamples()">
+                <i data-lucide="message-square" class="icon-xs"></i> Exemples
+            </button>
+        </div>
+        <div class="word-counter" id="word-counter">
+            <strong id="visible-count">${counter}</strong> mots affichés
+        </div>
+        <div class="vocab-table-wrap">
+            <table class="vocab-table" id="vocab-table">
+                <thead>
+                    <tr>
+                        <th style="width:30px">#</th>
+                        <th>한글</th>
+                        <th>Français</th>
+                        <th class="example-col">Exemple</th>
+                        <th class="example-col">Traduction</th>
+                        <th class="detail-col" style="display:none">Explication</th>
+                    </tr>
+                </thead>
+                <tbody>${rowsHTML}</tbody>
+            </table>
+        </div>
+    `;
+    lucide.createIcons();
+}
+
+let _detailsVisible = false;
+let _examplesVisible = true;
+
+function filterVocab() {
+    const q = document.getElementById('search').value.toLowerCase().trim();
+    const rows = document.querySelectorAll('.vocab-row');
+    let visible = 0;
+    rows.forEach(row => {
+        const match = !q || row.dataset.hangul.includes(q) || row.dataset.french.includes(q);
+        row.style.display = match ? '' : 'none';
+        if (match) visible++;
+    });
+    document.querySelectorAll('.chapter-sep').forEach(sep => {
+        let next = sep.nextElementSibling;
+        let hasVisible = false;
+        while (next && !next.classList.contains('chapter-sep')) {
+            if (next.style.display !== 'none') hasVisible = true;
+            next = next.nextElementSibling;
+        }
+        sep.style.display = hasVisible ? '' : 'none';
+    });
+    document.getElementById('visible-count').textContent = visible;
+}
+
+function toggleDetails() {
+    _detailsVisible = !_detailsVisible;
+    document.querySelectorAll('.detail-col').forEach(el => el.style.display = _detailsVisible ? '' : 'none');
+    document.getElementById('toggle-details').classList.toggle('active', _detailsVisible);
+}
+
+function toggleExamples() {
+    _examplesVisible = !_examplesVisible;
+    document.querySelectorAll('.example-col').forEach(el => el.style.display = _examplesVisible ? '' : 'none');
+    document.getElementById('toggle-examples').classList.toggle('active', !_examplesVisible);
+}
+
+// ================================================================
+// LESSONS — list by level
+// ================================================================
+function renderLessons() {
+    document.getElementById('sidebar-extra').innerHTML = `
+        <div class="nav-section-label">Niveaux</div>
+        ${Object.keys(MANIFEST.lessons).map(lvl => `
+        <a href="#lessons" class="sidebar-link" onclick="document.getElementById('level-${lvl}').scrollIntoView({behavior:'smooth'});return false;">
+            <span class="sidebar-icon"><i data-lucide="folder" class="icon-sm"></i></span>
+            <span>Level ${lvl}</span>
+        </a>`).join('')}
+    `;
+
+    const levelsHTML = Object.entries(MANIFEST.lessons).map(([lvl, lessons]) => {
+        const cls = lvl.startsWith('3') ? 'l3' : 'l4';
+        const cardsHTML = lessons.length ? lessons.map((l, i) => {
+            const topicsHTML = l.topics.length ? `
+                <div class="lesson-card-topics">
+                    ${l.topics.map(t => {
+                        const dot = t.indexOf('. ');
+                        const num = dot > -1 ? t.slice(0, dot) : '';
+                        const text = dot > -1 ? t.slice(dot + 2) : t;
+                        return `<span class="topic-tag">
+                            <span class="topic-num">${num}.</span>
+                            <span class="topic-text">${text}</span>
+                        </span>`;
+                    }).join('')}
+                </div>` : '';
+            const name = l.filename.replace('.html', '');
+            const encFile = encodeURIComponent(l.filename);
+            return `<a href="#lesson/${lvl}/${encFile}" class="lesson-card">
+                <div class="lesson-card-inner">
+                    <div class="lesson-card-accent"></div>
+                    <div class="lesson-card-content">
+                        <div class="lesson-card-header">
+                            <div class="lesson-card-number">${i + 1}</div>
+                            <div class="lesson-card-title">${name}</div>
+                        </div>
+                        ${topicsHTML}
+                    </div>
+                    <div class="lesson-card-arrow">→</div>
+                </div>
+            </a>`;
+        }).join('') : '<div class="empty-state">Aucune lesson pour ce niveau pour l\'instant.</div>';
+
+        return `<div class="level-group" id="level-${lvl}">
+            <div class="level-group-header">
+                <div class="level-group-icon ${cls}"><i data-lucide="folder"></i></div>
+                <span class="level-group-title">Level ${lvl}</span>
+                <span class="level-group-badge ${cls}">${lessons.length} lessons</span>
+            </div>
+            <div class="lessons-grid">${cardsHTML}</div>
+        </div>`;
+    }).join('');
+
+    document.getElementById('content').innerHTML = `
+        <div class="hero">
+            <h1><span class="kr">한국어</span> Lessons</h1>
+            <p class="subtitle">Cours de grammaire et exercices</p>
+        </div>
+        ${levelsHTML}
+    `;
+    lucide.createIcons();
+}
+
+// ================================================================
+// LESSON VIEWER — iframe
+// ================================================================
+function renderLesson(level, filename) {
+    const decodedFile = decodeURIComponent(filename);
+    const name = decodedFile.replace('.html', '');
+    const src = `content/lessons/${level}/${decodedFile}`;
+
+    document.getElementById('sidebar-extra').innerHTML = `
+        <div class="nav-section-label">Niveaux</div>
+        ${Object.keys(MANIFEST.lessons).map(lvl => `
+        <a href="#lessons" class="sidebar-link ${lvl === level ? 'active' : ''}">
+            <span class="sidebar-icon"><i data-lucide="folder" class="icon-sm"></i></span>
+            <span>Level ${lvl}</span>
+        </a>`).join('')}
+    `;
+
+    document.getElementById('content').innerHTML = `
+        <div class="lesson-viewer-bar">
+            <a href="#lessons">← Retour aux lessons</a>
+            <span class="crumb">/ Level ${level} / ${name}</span>
+        </div>
+        <iframe id="lesson-frame" src="${src}" title="${name}"></iframe>
+    `;
+    lucide.createIcons();
+}
+
+// ================================================================
+// UTILS
+// ================================================================
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebar-overlay').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

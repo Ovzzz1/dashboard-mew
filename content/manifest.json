@@ -1,0 +1,68 @@
+{
+  "books": ["3A", "3B", "4A", "4B"],
+  "lessons": {
+    "4A": [
+      {
+        "filename": "4A 과1.html",
+        "topics": [
+          "I. Structure principale : -아/어서 -게 됐어요",
+          "II. Variante avancée : -다가 -아/어서 -게 됐어요",
+          "III. Expressions pour organiser un événement",
+          "IV. Expressions pour se présenter"
+        ]
+      },
+      {
+        "filename": "4A 과2.html",
+        "topics": [
+          "I. Structure 1 : -다 보니 -게 됐어요",
+          "II. Structure 2 : -다 보면 -게 될 거예요"
+        ]
+      },
+      {
+        "filename": "4A 과3.html",
+        "topics": [
+          "I. Le discours formel : 격식체",
+          "II. Expressions pour une présentation (발표)"
+        ]
+      },
+      {
+        "filename": "4A 과4.html",
+        "topics": [
+          "I. Exprimer une crainte : -을까 봐",
+          "II. Donner une opinion avec tact : -는 게 -을 것 같아요",
+          "III. Relation proportionnelle : -으면 -을수록"
+        ]
+      },
+      {
+        "filename": "4A 과5.html",
+        "topics": [
+          "I. Expressions pour donner des directions",
+          "II. Confirmer ce qu'on a entendu : -다고요?"
+        ]
+      },
+      {
+        "filename": "4A 과6.html",
+        "topics": [
+          "I. Les mots expressifs : 의성어 · 의태어",
+          "II. Enchaîner deux actions observées : -더니"
+        ]
+      },
+      {
+        "filename": "4A 과7.html",
+        "topics": [
+          "I. Rappeler un fait commun : -잖아요",
+          "II. Nuancer une généralité : -다고 해서 다 -은/는 것은 아니에요",
+          "III. Probabilité comme base d'une action : -을 텐데②"
+        ]
+      },
+      {
+        "filename": "4A 과8.html",
+        "topics": [
+          "I. Vocabulaire pour décrire des objets physiques",
+          "II. Comparer à une taille connue : noun만 해요",
+          "III. Dépasser ou ne pas atteindre une valeur : -이 넘어요 / -이 안 돼요"
+        ]
+      }
+    ]
+  }
+}

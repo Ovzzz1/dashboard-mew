@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Mew Vocabulaire{% endblock %}
+{% block nav_vocab %}active{% endblock %}
+
+{% block sidebar_extra %}
+<div class="nav-section-label">Livres</div>
+{% for book in books %}
+<a href="/vocab/{{ book.id }}" class="sidebar-link">
+    <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
+    <span>{{ book.name }}</span>
+</a>
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1><span class="kr">한국어</span> Vocabulary</h1>
+    <p class="subtitle">{{ books|length }} livres • {{ books|map(attribute='total_words')|sum }} mots au total</p>
+</div>
+
+<div class="books-grid">
+    {% for book in books %}
+    <a href="/vocab/{{ book.id }}" class="book-card">
+        <span class="book-level {{ 'l3' if book.id.startswith('3') else 'l4' }}">
+            Level {{ book.id[0] }}{{ 'A' if 'A' in book.id else 'B' }}
+        </span>
+        <div class="book-title">{{ book.name }}</div>
+        <div class="book-stats">
+            <div class="book-stat">
+                <span class="book-stat-value">{{ book.total_words }}</span>
+                <span class="book-stat-label">Mots</span>
+            </div>
+            <div class="book-stat">
+                <span class="book-stat-value">{{ book.chapters|length }}</span>
+                <span class="book-stat-label">Chapitres</span>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}
