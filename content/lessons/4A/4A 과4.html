@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4과 — Points de grammaire (Niveau 4급) - Sogang University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #fafafa;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #ffffff;
+            border-bottom: 3px solid #b50004;
+            color: #2c3e50;
+            padding: 40px 50px;
+        }
+
+        h1 { font-size: 2.4em; font-weight: 700; margin-bottom: 10px; color: #2c3e50; }
+        .header-subtitle { font-size: 1em; color: #7f8c8d; }
+        .content { padding: 50px; }
+
+        h2 {
+            font-size: 1.8em; color: #34495e;
+            margin: 50px 0 25px 0; font-weight: 700;
+            padding-bottom: 12px; border-bottom: 2px solid #ecf0f1;
+        }
+        h2::before {
+            content: ''; display: inline-block;
+            width: 5px; height: 28px; background: #b50004;
+            margin-right: 12px; vertical-align: middle;
+        }
+        h3 { font-size: 1.4em; color: #2c3e50; margin: 30px 0 18px 0; font-weight: 600; }
+        h4 { font-size: 1.15em; color: #34495e; margin: 22px 0 12px 0; font-weight: 600; }
+
+        p, li { font-size: 1.05em; margin-bottom: 15px; line-height: 1.8; color: #2c3e50; }
+        ul, ol { margin: 20px 0; padding-left: 35px; }
+        li { margin-bottom: 12px; }
+
+        .highlight-yellow { background: #ffff00; font-weight: 600; padding: 2px 5px; border-radius: 3px; }
+        .grammar-red { color: #b50004; font-weight: 700; }
+        .super-important { background: #ffff00; font-weight: 700; padding: 3px 6px; border-radius: 3px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
+        th { background: #f8f9fa; color: #2c3e50; padding: 16px; text-align: left; font-weight: 600; font-size: 1.05em; border-bottom: 2px solid #e0e0e0; }
+        td { padding: 15px 16px; border-bottom: 1px solid #f0f0f0; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background: #f8f9fa; }
+
+        .example-box { background: #f8f9fa; padding: 25px; border-left: 4px solid #95a5a6; margin: 25px 0; border-radius: 6px; }
+        .error-box { background: #fff5f5; padding: 20px 25px; border-left: 4px solid #e74c3c; margin: 20px 0; border-radius: 6px; }
+        .success-box { background: #f0f9f4; padding: 20px 25px; border-left: 4px solid #27ae60; margin: 20px 0; border-radius: 6px; }
+        .note-box { background: #fffef7; padding: 20px 25px; border-left: 4px solid #f39c12; margin: 25px 0; border-radius: 6px; }
+
+        .korean { font-size: 1.15em; font-weight: 600; color: #2c3e50; }
+        .french-translation { font-style: italic; color: #7f8c8d; margin-top: 8px; display: block; }
+        strong { color: #2c3e50; font-weight: 600; }
+
+        .tip-badge {
+            display: inline-block; background: #34495e; color: white;
+            padding: 5px 12px; border-radius: 20px; font-size: 0.85em;
+            font-weight: 600; margin-right: 10px;
+        }
+
+        .formula {
+            background: #f8f9fa; padding: 18px 22px; border-radius: 6px;
+            font-family: 'Courier New', monospace; font-size: 1.05em;
+            margin: 18px 0; border: 2px solid #e0e0e0; color: #2c3e50;
+        }
+
+        .recap-table { border: 2px solid #34495e; }
+        .recap-table th { background: #34495e; color: white; }
+
+        .compare-table th { background: #4a4a8a; color: white; }
+        .compare-table { border: 2px solid #4a4a8a; }
+
+        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
+        @media (max-width: 768px) {
+            .content { padding: 30px 25px; } .header { padding: 30px 25px; }
+            h1 { font-size: 2em; } h2 { font-size: 1.5em; } table { font-size: 0.9em; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>4과 — Points de grammaire</h1>
+        <div class="header-subtitle">Niveau 4급 | Sogang Korean Program</div>
+    </div>
+
+    <div class="content">
+
+        <!-- ===== SECTION I : -을까 봐 ===== -->
+        <h2>I. Exprimer une crainte : -을까 봐</h2>
+
+        <h3>1. Sens et fonction</h3>
+        <p><span class="super-important">Ce pattern exprime la peur ou l'inquiétude que quelque chose de négatif se produise.</span> Il traduit une anxiété vague, un "et si…" pessimiste — on espère que ça n'arrivera pas, mais on le craint.</p>
+
+        <div class="note-box">
+            <p><span class="tip-badge">💡 Traduction</span></p>
+            <p>"J'ai peur que..." / "De peur que..." / "De crainte que..."</p>
+            <p style="margin-top:8px;">Exemple du manuel :</p>
+            <p class="korean">약속에 늦<span class="grammar-red">을까 봐</span> 택시를 탔어요.</p>
+            <p class="french-translation">"De peur d'être en retard au rendez-vous, j'ai pris un taxi."</p>
+        </div>
+
+        <h3>2. Construction grammaticale</h3>
+        <div class="formula">
+            Radical verbal/adjectif + <strong>-을까 봐</strong> + action prise (ou sentiment d'inquiétude)
+        </div>
+
+        <p>Le pattern se rencontre souvent dans ces formes :</p>
+        <ul>
+            <li><span class="korean grammar-red">-을까 봐 걱정이에요</span> → "Je suis inquiet·ète que..."</li>
+            <li><span class="korean grammar-red">-을까 봐 걱정돼요</span> → "Ça m'inquiète que..."</li>
+            <li><span class="korean grammar-red">-을까 봐 + action concrète</span> → "De peur que X, j'ai fait Y"</li>
+        </ul>
+
+        <h3>3. Conjugaison : -을까 봐 / -ㄹ까 봐</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Radical</th>
+                    <th>Terminaison</th>
+                    <th>Exemple</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Terminé par une <strong>consonne</strong></td>
+                    <td class="grammar-red">-을까 봐</td>
+                    <td class="korean">늦다 → 늦<span class="grammar-red">을까 봐</span></td>
+                </tr>
+                <tr>
+                    <td>Terminé par une <strong>voyelle</strong></td>
+                    <td class="grammar-red">-ㄹ까 봐</td>
+                    <td class="korean">오다 → 올<span class="grammar-red">까 봐</span></td>
+                </tr>
+                <tr>
+                    <td>Radical en <strong>ㄹ</strong></td>
+                    <td class="grammar-red">-ㄹ까 봐 (ㄹ conservé)</td>
+                    <td class="korean">살다 → 살<span class="grammar-red">까 봐</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note-box">
+            <p><span class="tip-badge">⚠️ Attention</span></p>
+            <p>Ce pattern peut s'utiliser avec des <strong>verbes</strong>, des <strong>adjectifs</strong> et des <strong>noms + 이다</strong>.</p>
+            <p class="korean" style="margin-top:8px;">감기<span class="grammar-red">일까 봐</span> 병원에 갔어요. → "De peur que ce soit un rhume, je suis allé chez le médecin."</p>
+        </div>
+
+        <h3>4. Exemples du manuel</h3>
+        <div class="example-box">
+            <p>① <span class="korean">내일 시험이에요. 그동안 공부한 거 잊어버릴<span class="grammar-red">까 봐</span> 복습하러 가요.</span></p>
+            <p class="french-translation">"C'est l'examen demain. De peur d'oublier ce que j'ai étudié, je vais réviser."</p>
+
+            <p style="margin-top:15px;">② <span class="korean">내일 소풍 가는데 비가 올<span class="grammar-red">까 봐</span> 걱정이에요.</span></p>
+            <p class="french-translation">"Je pars en sortie demain, j'ai peur qu'il pleuve."</p>
+
+            <p style="margin-top:15px;">③ <span class="korean">아직 감기가 다 안 나아서요. 저녁에 추울<span class="grammar-red">까 봐</span> 옷을 많이 입었어요.</span></p>
+            <p class="french-translation">"Je n'ai pas encore tout à fait guéri. De peur d'avoir froid ce soir, j'ai mis beaucoup de vêtements."</p>
+
+            <p style="margin-top:15px;">④ <span class="korean">민수가 여행지에서 크게 다쳤다는 얘기를 들었어요. 그 말이 사실일<span class="grammar-red">까 봐</span> 걱정돼요.</span></p>
+            <p class="french-translation">"J'ai entendu dire que Minsu s'était gravement blessé en voyage. J'ai peur que ce soit vrai."</p>
+
+            <p style="margin-top:15px;">⑤ <span class="korean">그 지갑을 잃어버렸을<span class="grammar-red">까 봐</span> 밤에 한숨도 못 잤어요.</span></p>
+            <p class="french-translation">"De peur d'avoir perdu ce portefeuille, je n'ai pas fermé l'œil de la nuit."</p>
+        </div>
+
+        <h3>5. Points importants à retenir</h3>
+
+        <h4>Note 1 : Le temps s'exprime sur le verbe final</h4>
+        <div class="example-box">
+            <p class="korean">늦<span class="grammar-red">을까 봐</span> 택시를 타요. <span style="color:#7f8c8d;">(présent)</span></p>
+            <p class="korean">늦<span class="grammar-red">을까 봐</span> 택시를 탔어요. <span style="color:#7f8c8d;">(passé)</span></p>
+            <p class="french-translation">→ -을까 봐 ne change pas ; seul le verbe final est conjugué au temps voulu.</p>
+        </div>
+
+        <h4>Note 2 : Uniquement pour les événements négatifs</h4>
+        <div class="error-box">
+            <p>❌ <span class="korean">시험을 잘 볼<span class="grammar-red">까 봐</span> 걱정이에요.</span></p>
+            <p style="color:#c0392b; margin-top:5px;">→ On ne peut pas craindre quelque chose de positif !</p>
+        </div>
+        <div class="success-box">
+            <p>✅ <span class="korean">시험을 못 볼<span class="grammar-red">까 봐</span> 걱정이에요.</span></p>
+            <p class="french-translation">"J'ai peur de rater l'examen."</p>
+        </div>
+
+        <h4>Note 3 : Sujet à la troisième personne</h4>
+        <div class="note-box">
+            <p>Quand <strong>quelqu'un d'autre</strong> est inquiet (3ème personne), on utilise :</p>
+            <ul style="margin-top:8px;">
+                <li><span class="korean grammar-red">걱정해요</span> ou <span class="korean grammar-red">걱정하고 있어요</span></li>
+            </ul>
+            <p class="korean" style="margin-top:10px;">친구가 시험이 어려울<span class="grammar-red">까 봐</span> 걱정해요 / 걱정하고 있어요.</p>
+            <p class="french-translation">"Mon ami est inquiet que l'examen soit difficile."</p>
+        </div>
+
+        <h4>Note 4 : Pas d'impératif ni de propositionnel dans la suite</h4>
+        <div class="error-box">
+            <p>❌ <span class="korean">미카 씨, 살이 찔까 봐 저녁은 조금만 드세요.</span></p>
+        </div>
+        <div class="success-box">
+            <p>✅ <span class="korean">미카 씨, 살이 찔지도 모르니까 저녁은 조금만 드세요.</span></p>
+            <p class="french-translation">"Mika, comme tu risques peut-être de grossir, mange peu ce soir."</p>
+        </div>
+        <div class="note-box">
+            <strong>→</strong> <span class="super-important">La proposition suivant -을까 봐 ne peut pas être un ordre ou une suggestion.</span> Utiliser -ㄹ/을지도 모르니까 dans ce cas.
+        </div>
+
+        <h3>6. Comparaison : -을까 봐 vs -을 텐데</h3>
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>-을까 봐</th>
+                    <th>-을 텐데</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Sens</strong></td>
+                    <td>Peur vague, on espère que ça n'arrivera pas</td>
+                    <td>Prédiction basée sur une information ou expérience</td>
+                </tr>
+                <tr>
+                    <td><strong>Exemple</strong></td>
+                    <td class="korean">비가 올<span class="grammar-red">까 봐</span> 걱정이에요.<br><span style="font-size:0.9em; color:#7f8c8d;">(sans info météo)</span></td>
+                    <td class="korean">비가 올 <span class="grammar-red">텐데</span> 걱정이에요.<br><span style="font-size:0.9em; color:#7f8c8d;">(après avoir vu la météo)</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Déclaratif</strong></td>
+                    <td style="text-align:center;">✅</td>
+                    <td style="text-align:center;">✅</td>
+                </tr>
+                <tr>
+                    <td><strong>Propositionnel</strong></td>
+                    <td style="text-align:center;">❌</td>
+                    <td style="text-align:center;">✅</td>
+                </tr>
+                <tr>
+                    <td><strong>Impératif</strong></td>
+                    <td style="text-align:center;">❌</td>
+                    <td style="text-align:center;">✅</td>
+                </tr>
+                <tr>
+                    <td><strong>Interrogatif</strong></td>
+                    <td style="text-align:center;">✅</td>
+                    <td style="text-align:center;">✅</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="example-box">
+            <p><span class="tip-badge">💡 Bonus 1</span> En conversation courante, la proposition suivant -을까 봐 peut être omise :</p>
+            <p class="korean" style="margin-top:10px;">A: 왜 그렇게 발표 준비를 열심히 해?</p>
+            <p class="korean">B: 긴장해서 실수할<span class="grammar-red">까 봐</span>.</p>
+            <p class="french-translation">"De peur de faire des erreurs en étant stressé." (la conséquence est sous-entendue)</p>
+        </div>
+
+        <div class="example-box">
+            <p><span class="tip-badge">💡 Bonus 2</span> Quand on craint que quelque chose de négatif se soit <em>déjà</em> produit :</p>
+            <p class="korean" style="margin-top:10px;">A: 길이 너무 막히네요.</p>
+            <p class="korean">B: 네, 공연이 이미 시작됐<span class="grammar-red">을까 봐</span> 걱정이에요.</p>
+            <p class="french-translation">"Oui, j'ai peur que le spectacle ait déjà commencé."</p>
+        </div>
+
+        <h3>7. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <p>Structure similaire au subjonctif de crainte :</p>
+            <ul style="margin-top:10px;">
+                <li>"J'ai peur <strong>qu'il soit</strong> trop tard." → <span class="korean">너무 늦<span class="grammar-red">을까 봐</span> 걱정이에요.</span></li>
+                <li>"De peur <strong>qu'il pleuve</strong>, j'ai pris un parapluie." → <span class="korean">비가 올<span class="grammar-red">까 봐</span> 우산을 가져갔어요.</span></li>
+            </ul>
+            <p style="margin-top:10px;"><span class="highlight-yellow">Clé : l'événement craint est toujours négatif, toujours incertain, toujours dans le futur ou le présent.</span></p>
+        </div>
+
+        <!-- ===== SECTION II : -는 게 -을 것 같아요 ===== -->
+        <h2>II. Donner une opinion avec tact : -는 게 -을 것 같아요</h2>
+
+        <h3>1. Sens et fonction</h3>
+        <p><span class="super-important">Ce pattern permet d'exprimer une opinion ou une suggestion de façon modeste et indirecte.</span> On ne force pas son point de vue sur l'autre — on lui laisse la liberté de décider.</p>
+
+        <div class="note-box">
+            <p><span class="tip-badge">💡 Traduction</span></p>
+            <p>"Il me semble que ce serait mieux de..." / "Je pense que ce serait bien de..."</p>
+            <p style="margin-top:8px;">Exemple du manuel :</p>
+            <p class="korean">신촌 근처에서 하는 <span class="grammar-red">게</span> 좋<span class="grammar-red">을 것 같아요</span>.</p>
+            <p class="french-translation">"Il me semble que ce serait mieux de le faire près de Sinchon."</p>
+        </div>
+
+        <h3>2. Construction grammaticale</h3>
+        <div class="formula">
+            verbe + <strong>-는 게(=것이)</strong> + adjectif + <strong>-을 것 같아요</strong>
+        </div>
+
+        <div class="example-box">
+            <p class="korean">등산화를 선물하는 <span class="grammar-red">게</span> 좋<span class="grammar-red">을 것 같아요</span>.</p>
+            <p class="french-translation">"Il me semble que ce serait bien de lui offrir des chaussures de randonnée."</p>
+        </div>
+
+        <h3>3. Exemples du manuel</h3>
+        <div class="example-box">
+            <p>① <span class="tip-badge">Grand magasin</span></p>
+            <p class="korean">A: 미카 씨 생일 선물로 뭘 살까요?</p>
+            <p class="korean">B: 미카 씨가 등산을 좋아하니까 등산화를 선물하는 <span class="grammar-red">게</span> 좋<span class="grammar-red">을 것 같아요</span>.</p>
+            <p class="french-translation">"Comme Mika aime la randonnée, je pense que ce serait bien de lui offrir des chaussures de randonnée."</p>
+
+            <p style="margin-top:20px;">② <span class="tip-badge">Salon de coiffure</span></p>
+            <p class="korean">A: 머리를 어떻게 하는 게 좋을까요?</p>
+            <p class="korean">B: 봄이니까 짧게 자르고 파마를 하는 <span class="grammar-red">게</span> 좋<span class="grammar-red">을 것 같아요</span>.</p>
+            <p class="french-translation">"Comme c'est le printemps, je pense que ce serait bien de couper court et de faire une permanente."</p>
+
+            <p style="margin-top:20px;">③ <span class="tip-badge">Salle des professeurs</span></p>
+            <p class="korean">A: 이번 복습 수업은 어떻게 할까요?</p>
+            <p class="korean">B: 단어 복습을 먼저 하는 <span class="grammar-red">게</span> 좋<span class="grammar-red">을 것 같아요</span>. 그 다음에 듣기 시험을 연습하고 마지막으로 문법 복습을 하는 게 어떨까요?</p>
+            <p class="french-translation">"Je pense qu'il serait mieux de réviser le vocabulaire d'abord. Ensuite, pratiquer l'écoute, et pour finir réviser la grammaire, qu'en pensez-vous ?"</p>
+
+            <p style="margin-top:20px;">④ <span class="tip-badge">Club</span></p>
+            <p class="korean">A: 이번 방학 때 동아리 MT를 어디로 가는 게 좋을까?</p>
+            <p class="korean">B: 다들 계획이 있을 테니까 가까운 데로 가는 <span class="grammar-red">게</span> 좋<span class="grammar-red">을 것 같아</span>.</p>
+            <p class="french-translation">"Comme tout le monde a sûrement des plans, je pense qu'il serait mieux d'aller quelque part de proche."</p>
+        </div>
+
+        <h3>4. Variantes courantes de l'adjectif final</h3>
+        <div class="note-box">
+            <p>L'adjectif <span class="korean grammar-red">좋다</span> peut être remplacé par :</p>
+            <ul style="margin-top:8px;">
+                <li><span class="korean grammar-red">낫다</span> → "ce serait mieux" (comparaison avec une autre option)</li>
+                <li><span class="korean grammar-red">중요하다</span> → "ce serait important de"</li>
+                <li><span class="korean grammar-red">필요하다</span> → "il serait nécessaire de"</li>
+            </ul>
+            <p class="korean" style="margin-top:10px;">먼저 준비를 하는 <span class="grammar-red">게</span> 필요할 것 같아요.</p>
+            <p class="french-translation">"Il me semble qu'il serait nécessaire de se préparer d'abord."</p>
+        </div>
+
+        <h3>5. Erreur courante</h3>
+        <div class="error-box">
+            <p>❌ <span class="korean">등산화를 선물하는 것이 좋을 것 같습니다.</span> (trop formel pour une suggestion entre amis)</p>
+        </div>
+        <div class="success-box">
+            <p>✅ <span class="korean">등산화를 선물하는 <span class="grammar-red">게</span> 좋<span class="grammar-red">을 것 같아요</span>.</span></p>
+            <p class="french-translation">→ <span class="korean">게</span> est la forme contractée de <span class="korean">것이</span>, naturelle à l'oral.</p>
+        </div>
+
+        <h3>6. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <p>Équivalent du conditionnel de politesse :</p>
+            <ul style="margin-top:10px;">
+                <li>"Il <strong>vaudrait mieux</strong> partir tôt." → <span class="korean">일찍 출발하는 <span class="grammar-red">게</span> 나<span class="grammar-red">을 것 같아요</span>.</span></li>
+                <li>"Je <strong>pense que</strong> ce serait bien de..." → <span class="korean">___하는 <span class="grammar-red">게</span> 좋<span class="grammar-red">을 것 같아요</span>.</span></li>
+            </ul>
+            <p style="margin-top:10px;"><span class="highlight-yellow">On n'affirme pas — on suggère humblement, en laissant l'autre décider.</span></p>
+        </div>
+
+        <!-- ===== SECTION III : -으면 -을수록 ===== -->
+        <h2>III. Relation proportionnelle : -으면 -을수록</h2>
+
+        <h3>1. Sens et fonction</h3>
+        <p><span class="super-important">Ce pattern exprime une relation proportionnelle : plus X augmente, plus Y augmente (ou diminue).</span> C'est l'équivalent de "the more… the more…" en anglais, ou "plus… plus…" en français.</p>
+
+        <div class="note-box">
+            <p><span class="tip-badge">💡 Traduction</span></p>
+            <p>"Plus on fait X, plus Y..." / "Au fur et à mesure qu'on fait X, Y..."</p>
+            <p style="margin-top:8px;">Exemple du manuel :</p>
+            <p class="korean">A: 이 음악만 계속 듣네요.</p>
+            <p class="korean">B: 네, 들으<span class="grammar-red">면</span> 들<span class="grammar-red">을수록</span> 좋아져요.</p>
+            <p class="french-translation">"Plus je l'écoute, plus je l'aime."</p>
+        </div>
+
+        <h3>2. Construction grammaticale</h3>
+        <div class="formula">
+            Radical + <strong>-(으)면</strong> + Radical + <strong>-(으)ㄹ수록</strong> + résultat
+        </div>
+
+        <div class="note-box">
+            <p>La partie <span class="grammar-red">-(으)면</span> en début de phrase est <strong>souvent omise</strong> à l'oral — on garde uniquement <span class="grammar-red">-(으)ㄹ수록</span>.</p>
+            <p class="korean" style="margin-top:8px;">(배우면) 배울<span class="grammar-red">수록</span> 더 어려워지는 것 같아요.</p>
+            <p class="french-translation">"Plus j'apprends, plus ça me semble difficile."</p>
+        </div>
+
+        <h3>3. Conjugaison : -(으)ㄹ수록</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Radical</th>
+                    <th>Terminaison</th>
+                    <th>Exemple</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Terminé par une <strong>consonne</strong></td>
+                    <td class="grammar-red">-을수록</td>
+                    <td class="korean">먹다 → 먹<span class="grammar-red">을수록</span></td>
+                </tr>
+                <tr>
+                    <td>Terminé par une <strong>voyelle</strong></td>
+                    <td class="grammar-red">-ㄹ수록</td>
+                    <td class="korean">보다 → 볼<span class="grammar-red">수록</span></td>
+                </tr>
+                <tr>
+                    <td>Radical en <strong>ㄹ</strong></td>
+                    <td class="grammar-red">-수록 (ㄹ conservé)</td>
+                    <td class="korean">알다 → 알<span class="grammar-red">수록</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Nom + 이다</strong></td>
+                    <td class="grammar-red">(이)면 (이)ㄹ수록</td>
+                    <td class="korean">학생이다 → (학생이면) 학생일<span class="grammar-red">수록</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4. Exemples du manuel</h3>
+        <div class="example-box">
+            <p>① <span class="korean">A: 아직도 한국어를 공부해요?</span></p>
+            <p class="korean">&nbsp;&nbsp;&nbsp;B: 네, 아직도 배울 게 많아요. (배우면) 배울<span class="grammar-red">수록</span> 더 어려워지는 것 같아요.</p>
+            <p class="french-translation">"Oui, il y a encore beaucoup à apprendre. Plus j'apprends, plus ça semble difficile."</p>
+
+            <p style="margin-top:15px;">② <span class="korean">A: 이 가수 좋아하세요?</span></p>
+            <p class="korean">&nbsp;&nbsp;&nbsp;B: 네, 목소리가 너무 좋아서 (들으면) 들<span class="grammar-red">을수록</span> 더 좋아하게 돼요.</p>
+            <p class="french-translation">"Oui, sa voix est tellement belle — plus je l'écoute, plus je l'apprécie."</p>
+
+            <p style="margin-top:15px;">③ <span class="korean">A: 앤디 씨 아세요?</span></p>
+            <p class="korean">&nbsp;&nbsp;&nbsp;B: 네, 같이 봉사 활동 해요. (보면) 볼<span class="grammar-red">수록</span> 참 좋은 사람인 것 같아요.</p>
+            <p class="french-translation">"Oui, on fait du bénévolat ensemble. Plus je le vois, plus il me semble être quelqu'un de bien."</p>
+
+            <p style="margin-top:15px;">④ <span class="korean">A: 친구 세 명하고 아파트를 같이 쓰는데 다 친하니까 편하게 지내요.</span></p>
+            <p class="korean">&nbsp;&nbsp;&nbsp;B: (친하면) 친할<span class="grammar-red">수록</span> 서로 예의를 지켜야 해요.</p>
+            <p class="french-translation">"Plus on est proche, plus il faut se respecter mutuellement."</p>
+
+            <p style="margin-top:15px;">⑤ <span class="korean">A: 지하철 역에서 가까운 곳으로 이사 가려고 해요.</span></p>
+            <p class="korean">&nbsp;&nbsp;&nbsp;B: 지하철 역에서 가까운 (집이면) 집일<span class="grammar-red">수록</span> 집세가 더 비쌀 텐데요.</p>
+            <p class="french-translation">"Plus l'appartement est proche du métro, plus le loyer sera cher."</p>
+        </div>
+
+        <h3>5. Utilisation avec un nom</h3>
+        <div class="note-box">
+            <p>Avec un <strong>nom + 이다</strong>, le nom est normalement précédé d'une proposition relative ou d'un qualificatif :</p>
+            <div class="example-box" style="margin-top:12px;">
+                <p class="korean">① 집이 가까운 학생일<span class="grammar-red">수록</span> 오히려 더 지각을 많이 한다.</p>
+                <p class="french-translation">"Plus les étudiants habitent près, plus ils sont en retard paradoxalement."</p>
+                <p class="korean" style="margin-top:10px;">② 오래 가르친 선생님일<span class="grammar-red">수록</span> 쉽게 잘 가르친다.</p>
+                <p class="french-translation">"Plus un professeur a de l'expérience, mieux il enseigne."</p>
+            </div>
+        </div>
+
+        <h3>6. Erreur courante</h3>
+        <div class="error-box">
+            <p>❌ <span class="korean">많이 먹으면 많이 먹을수록 살이 쪄요.</span> (répétition lourde)</p>
+        </div>
+        <div class="success-box">
+            <p>✅ <span class="korean">(많이) 먹<span class="grammar-red">을수록</span> 살이 쪄요.</span></p>
+            <p class="french-translation">"Plus on mange, plus on grossit." → La partie -(으)면 est généralement omise.</p>
+        </div>
+
+        <h3>7. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <p>Structure identique à la construction française "plus... plus..." / "moins... moins..."</p>
+            <ul style="margin-top:10px;">
+                <li>"<strong>Plus</strong> j'apprends, <strong>plus</strong> c'est difficile." → <span class="korean">배울<span class="grammar-red">수록</span> 어려워요.</span></li>
+                <li>"<strong>Plus</strong> c'est cher, <strong>mieux</strong> c'est." → <span class="korean">비쌀<span class="grammar-red">수록</span> 좋아요.</span></li>
+                <li>"<strong>Plus tôt</strong> c'est fait, <strong>mieux</strong> c'est." → <span class="korean">빠를<span class="grammar-red">수록</span> 좋아요.</span></li>
+            </ul>
+            <p style="margin-top:10px;"><span class="highlight-yellow">La logique est la même : une progression dans X entraîne une progression dans Y.</span></p>
+        </div>
+
+        <!-- ===== RÉCAP ===== -->
+        <h2>📋 Récapitulatif</h2>
+
+        <table class="recap-table">
+            <thead>
+                <tr>
+                    <th>Structure</th>
+                    <th>Sens</th>
+                    <th>Exemple</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="korean grammar-red">-을까 봐</td>
+                    <td>Craindre qu'un événement <em>négatif</em> se produise</td>
+                    <td class="korean">비가 올<span class="grammar-red">까 봐</span> 우산을 가져갔어요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-는 게 -을 것 같아요</td>
+                    <td>Donner une opinion ou suggestion de façon modeste</td>
+                    <td class="korean">가까운 데로 가는 <span class="grammar-red">게</span> 좋<span class="grammar-red">을 것 같아요</span>.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-(으)면 -(으)ㄹ수록</td>
+                    <td>Plus X, plus Y (relation proportionnelle)</td>
+                    <td class="korean">들<span class="grammar-red">을수록</span> 더 좋아요.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>

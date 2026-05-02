@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1과 — Points de grammaire (Niveau 4급) - Sogang University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #e8e8f0;
+            background: #0a0a0f;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #12121a;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #12121a;
+            border-bottom: 3px solid #a78bfa;
+            color: #e8e8f0;
+            padding: 40px 50px;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #e8e8f0;
+        }
+
+        .header-subtitle {
+            font-size: 1em;
+            color: #8888aa;
+        }
+
+        .content {
+            padding: 50px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #c8c8e0;
+            margin: 50px 0 25px 0;
+            font-weight: 700;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #2a2a3e;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 28px;
+            background: #a78bfa;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #e8e8f0;
+            margin: 30px 0 18px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.15em;
+            color: #c8c8e0;
+            margin: 22px 0 12px 0;
+            font-weight: 600;
+        }
+
+        p, li {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #e8e8f0;
+        }
+
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 35px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .highlight-yellow {
+            background: rgba(251,191,60,0.25); color: #fbbf24; border: 1px solid #fbbf24;
+            font-weight: 600;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .grammar-red {
+            color: #a78bfa;
+            font-weight: 700;
+        }
+
+        .super-important {
+            background: rgba(251,191,60,0.25); color: #fbbf24; border: 1px solid #fbbf24;
+            font-weight: 700;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: #12121a;
+            border: 1px solid #2a2a3e;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #1a1a26;
+            color: #e8e8f0;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+            border-bottom: 2px solid #2a2a3e;
+        }
+
+        td {
+            padding: 15px 16px;
+            border-bottom: 1px solid #1e1e30;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: #1a1a26;
+        }
+
+        .example-box {
+            background: #1a1a26;
+            padding: 25px;
+            border-left: 4px solid #555570;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .error-box {
+            background: rgba(248,113,113,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #f87171;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .success-box {
+            background: rgba(52,211,153,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #34d399;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .note-box {
+            background: rgba(251,191,60,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #fb923c;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .korean {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #e8e8f0;
+        }
+
+        .french-translation {
+            font-style: italic;
+            color: #8888aa;
+            margin-top: 8px;
+            display: block;
+        }
+
+        strong {
+            color: #e8e8f0;
+            font-weight: 600;
+        }
+
+        .tip-badge {
+            display: inline-block;
+            background: #a78bfa;
+            color: #0a0a0f;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .formula {
+            background: #1a1a26;
+            padding: 18px 22px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.05em;
+            margin: 18px 0;
+            border: 2px solid #2a2a3e;
+            color: #e8e8f0;
+        }
+
+        .recap-table {
+            border: 2px solid #a78bfa;
+        }
+
+        .recap-table th {
+            background: #a78bfa;
+            color: #0a0a0f;
+        }
+
+        @media print {
+            body {
+                background: #12121a;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 30px 25px;
+            }
+            .header {
+                padding: 30px 25px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>1과 — Points de grammaire</h1>
+            <div class="header-subtitle">Niveau 4급 | Sogang Korean Program</div>
+        </div>
+
+        <div class="content">
+            <h2>I. Structure principale : -아/어서 -게 됐어요</h2>
+
+            <h3>1. Sens et fonction</h3>
+            <p><span class="super-important">Cette structure exprime le processus qui a mené à faire une action ou à prendre une décision.</span> Elle répond à la question <span class="korean">"comment en es-tu venu·e à faire ça ?"</span></p>
+
+            <p><strong>Contextes d'utilisation :</strong></p>
+            <ul>
+                <li><span class="highlight-yellow">Se présenter à un nouveau groupe</span> (동호회, classe, entreprise)</li>
+                <li><span class="highlight-yellow">Expliquer comment on en est arrivé à une situation</span></li>
+            </ul>
+
+            <div class="note-box">
+                <p><span class="tip-badge">💡 Traduction</span></p>
+                <p>"J'en suis venu·e à... parce que..." / "J'ai fini par... parce que..."</p>
+            </div>
+
+            <h3>2. Construction grammaticale</h3>
+            <div class="formula">
+                Radical verbal + <strong>-아/어서</strong> + verbe + <strong>-게 됐어요</strong>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Exemple :</strong></p>
+                <p class="korean">여행을 좋아<span class="grammar-red">해서</span> 가입<span class="grammar-red">하게 됐어요</span>.</p>
+                <p class="french-translation">"J'aime voyager, donc j'ai fini par adhérer."</p>
+            </div>
+
+            <h3>3. Règles de conjugaison</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Radical</th>
+                        <th>Terminaison</th>
+                        <th>Exemple</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Voyelle ㅏ, ㅗ</td>
+                        <td><strong>-아서</strong></td>
+                        <td class="korean">좋아하다 → 좋아<span class="grammar-red">해서</span></td>
+                    </tr>
+                    <tr>
+                        <td>Autres voyelles</td>
+                        <td><strong>-어서</strong></td>
+                        <td class="korean">먹다 → 먹<span class="grammar-red">어서</span></td>
+                    </tr>
+                    <tr>
+                        <td>하다 verbes</td>
+                        <td><strong>-여서 (→해서)</strong></td>
+                        <td class="korean">공부하다 → 공부<span class="grammar-red">해서</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="note-box">
+                <strong>→</strong> Puis ajouter : <span class="super-important">-게 됐어요</span> au verbe de résultat
+            </div>
+
+            <h3>4. Registres de langue</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Contexte</th>
+                        <th>Forme</th>
+                        <th>Exemple</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Formel (présentation officielle)</td>
+                        <td><strong>-게 됐습니다</strong></td>
+                        <td class="korean">가입<span class="grammar-red">하게 됐습니다</span></td>
+                    </tr>
+                    <tr>
+                        <td>Poli standard (contexte neutre)</td>
+                        <td><strong>-게 됐어요</strong></td>
+                        <td class="korean">가입<span class="grammar-red">하게 됐어요</span></td>
+                    </tr>
+                    <tr>
+                        <td>Informel (entre amis)</td>
+                        <td><strong>-게 됐어</strong></td>
+                        <td class="korean">가입<span class="grammar-red">하게 됐어</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>5. Erreurs courantes</h3>
+
+            <h4>Erreur n°1 : Utiliser -게 되다 au présent</h4>
+            <div class="error-box">
+                <p>❌ <span class="korean">친구를 사귀고 싶어서 가입하게 돼요.</span></p>
+            </div>
+            <div class="success-box">
+                <p>✅ <span class="korean">친구를 사귀고 싶<span class="grammar-red">어서</span> 가입<span class="grammar-red">하게 됐어요</span>.</span></p>
+                <p class="french-translation">"Je voulais me faire des amis, donc j'ai fini par adhérer."</p>
+            </div>
+            <div class="note-box">
+                <strong>→</strong> <span class="highlight-yellow">Cette structure est toujours au passé</span> car elle décrit un processus déjà accompli.
+            </div>
+
+            <h4>Erreur n°2 : Oublier -아/어서</h4>
+            <div class="error-box">
+                <p>❌ <span class="korean">여행을 좋아하다 가입하게 됐어요.</span></p>
+            </div>
+            <div class="success-box">
+                <p>✅ <span class="korean">여행을 좋아<span class="grammar-red">해서</span> 가입<span class="grammar-red">하게 됐어요</span>.</span></p>
+                <p class="french-translation">"J'aime voyager, donc j'ai fini par adhérer."</p>
+            </div>
+
+            <h4>Erreur n°3 : Confusion avec les verbes 듣다, 보다, 읽다</h4>
+            <div class="error-box">
+                <p>❌ <span class="korean">친구한테 이 동아리가 좋다는 말을 들어서 가입하게 됐어요.</span></p>
+            </div>
+            <div class="success-box">
+                <p>✅ <span class="korean">친구한테 이 동아리가 좋다는 말을 듣<span class="grammar-red">고</span> 가입<span class="grammar-red">하게 됐어요</span>.</span></p>
+                <p class="french-translation">"J'ai entendu dire par un ami que ce club était bien, donc j'ai fini par adhérer."</p>
+            </div>
+            <div class="note-box">
+                <strong>→</strong> <span class="super-important">Avec ces verbes de perception (듣다, 보다, 읽다), on utilise -고 au lieu de -아/어서</span> dans la première proposition
+            </div>
+
+            <div class="example-box">
+                <p><strong>Exemples du manuel :</strong></p>
+                <p class="korean">친구한테 이 동아리가 좋다는 말을 듣<span class="grammar-red">고</span> 가입<span class="grammar-red">하게 됐어요</span>. ✅</p>
+                <p class="french-translation">"J'ai entendu dire par un ami que ce club était bien, donc j'ai fini par adhérer."</p>
+
+                <p style="margin-top: 15px;" class="korean">게시판에 있는 광고를 보<span class="grammar-red">고</span> 그 동아리에 대해 알<span class="grammar-red">게 됐어요</span>. ✅</p>
+                <p class="french-translation">"J'ai vu une annonce sur le panneau d'affichage et j'en suis venu à connaître ce club."</p>
+            </div>
+
+            <h3>6. Tips et parallèles avec le français</h3>
+            <div class="note-box">
+                <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+                <p>Similaire à : "C'est comme ça que je suis venu·e à..." / "J'ai fini par..."</p>
+                <p style="margin-top: 15px;"><strong>Logique de la structure :</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li><span class="highlight-yellow">-게 되다</span> = "devenir / en arriver à"</li>
+                    <li><span class="highlight-yellow">-아/어서</span> = "parce que / donc"</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>→ Assemblage :</strong> cause → résultat naturel</p>
+            </div>
+
+            <div class="example-box">
+                <p><span class="tip-badge">💡 Bonus 1</span></p>
+                <p>Le -게 되다 de changement apparaît dans Sogang 2B, Unit 9</p>
+                <p class="korean" style="margin-top: 10px;">처음 한국에 왔을 때에는 문화가 달라<span class="grammar-red">서</span> 힘들었는데 지금은 많이 이해<span class="grammar-red">하게 됐어요</span>.</p>
+                <p class="french-translation">"Au début quand je suis venu en Corée, c'était difficile car la culture était différente, mais maintenant j'en suis venu à beaucoup comprendre."</p>
+            </div>
+
+            <div class="example-box">
+                <p><span class="tip-badge">💡 Bonus 2</span></p>
+                <p>Ce pattern peut aussi être utilisé avec -으면서</p>
+                <p class="korean" style="margin-top: 10px;">대학생 때 인턴 사원으로 일하<span class="grammar-red">면서</span> 그 회사의 장점을 알<span class="grammar-red">게 돼서</span> 나중에 지원했어요.</p>
+                <p class="french-translation">"Quand j'étais étudiant, en travaillant comme stagiaire, j'en suis venu à connaître les avantages de cette entreprise, donc j'ai postulé plus tard."</p>
+            </div>
+
+            <h2>II. Variante avancée : -다가 -아/어서 -게 됐어요</h2>
+
+            <h3>1. Sens et fonction</h3>
+            <p><span class="super-important">Cette variante ajoute -다가 pour raconter comment quelque chose s'est produit pendant une action en cours.</span> Elle exprime un processus plus narratif et détaillé.</p>
+
+            <div class="note-box">
+                <p><span class="tip-badge">💡 Traduction</span></p>
+                <p>"En train de faire X, j'ai fini par Y parce que..." / "Alors que je faisais X, Y s'est produit, donc..."</p>
+            </div>
+
+            <h3>2. Construction grammaticale</h3>
+            <div class="formula">
+                Radical verbal + <strong>-다가</strong> + cause (<strong>-아/어서</strong>) + verbe + <strong>-게 됐어요</strong>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Exemple :</strong></p>
+                <p class="korean">인터넷에서 동호회 광고를 찾<span class="grammar-red">다가</span> 관심이 생겨<span class="grammar-red">서</span> 가입<span class="grammar-red">하게 됐습니다</span>.</p>
+                <p class="french-translation">"En cherchant des annonces de clubs sur Internet, je me suis intéressé·e, donc j'ai fini par adhérer."</p>
+            </div>
+
+            <h3>3. Structure détaillée</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Action en cours</th>
+                        <th>-다가</th>
+                        <th>Cause</th>
+                        <th>-아/어서</th>
+                        <th>Résultat</th>
+                        <th>-게 됐어요</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="korean">찾다 (chercher)</td>
+                        <td class="korean">찾<span class="grammar-red">다가</span></td>
+                        <td class="korean">관심이 생기다</td>
+                        <td class="korean">생겨<span class="grammar-red">서</span></td>
+                        <td class="korean">가입하다</td>
+                        <td class="korean">가입<span class="grammar-red">하게 됐어요</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>4. Exemples du manuel</h3>
+            <div class="example-box">
+                <p class="korean">• 인터넷에서 동호회 광고를 찾<span class="grammar-red">다가</span> 관심이 생겨<span class="grammar-red">서</span> 가입<span class="grammar-red">하게 됐습니다</span>.</p>
+                <p class="french-translation">"En cherchant des annonces de clubs sur Internet, je me suis intéressé·e, donc j'ai fini par adhérer."</p>
+
+                <p style="margin-top: 15px;" class="korean">• 한국 친구랑 얘기하<span class="grammar-red">다가</span> 한국어를 더 배우고 싶어져<span class="grammar-red">서</span> 공부하러 오<span class="grammar-red">게 됐어요</span>.</p>
+                <p class="french-translation">"En parlant avec des amis coréens, j'ai eu envie d'apprendre plus de coréen, donc j'en suis venu à venir étudier."</p>
+
+                <p style="margin-top: 15px;" class="korean">• 여기저기 알아보<span class="grammar-red">다가</span> 집세가 비싸지 않고 마음에 들<span class="grammar-red">어서</span> 살<span class="grammar-red">게 됐어요</span>.</p>
+                <p class="french-translation">"En cherchant ici et là, le loyer n'était pas cher et ça me plaisait, donc j'ai fini par y vivre."</p>
+
+                <p style="margin-top: 15px;" class="korean">• '경영학의 이해'라는 책을 읽<span class="grammar-red">다가</span> 마케팅에 관심이 생겨<span class="grammar-red">서</span> 경영학을 공부<span class="grammar-red">하게 됐어요</span>.</p>
+                <p class="french-translation">"En lisant un livre intitulé 'Introduction au management', je me suis intéressé au marketing, donc j'ai fini par étudier le management."</p>
+
+                <p style="margin-top: 15px;" class="korean">• 같은 가게에서 아르바이트하<span class="grammar-red">다가</span> 친해져<span class="grammar-red">서</span> 결혼<span class="grammar-red">하게 됐어요</span>.</p>
+                <p class="french-translation">"En travaillant à temps partiel dans le même magasin, nous sommes devenus proches, donc nous avons fini par nous marier."</p>
+            </div>
+
+            <h3>5. Erreurs courantes</h3>
+
+            <h4>Erreur n°1 : Confondre -다가 avec -다가가</h4>
+            <div class="error-box">
+                <p>❌ <span class="korean">인터넷에서 찾다가가 관심이 생겼어요.</span></p>
+            </div>
+            <div class="success-box">
+                <p>✅ <span class="korean">인터넷에서 찾<span class="grammar-red">다가</span> 관심이 생겼어요.</span></p>
+                <p class="french-translation">"En cherchant sur Internet, je me suis intéressé·e."</p>
+            </div>
+
+            <h4>Erreur n°2 : Utiliser -다가 sans contexte narratif approprié</h4>
+            <div class="error-box">
+                <p>❌ <span class="korean">여행을 좋아하다가 가입하게 됐어요.</span> (pas de lien logique temporel)</p>
+            </div>
+            <div class="success-box">
+                <p>✅ <span class="korean">여행을 좋아<span class="grammar-red">해서</span> 가입<span class="grammar-red">하게 됐어요</span>.</span></p>
+                <p class="french-translation">"J'aime voyager, donc j'ai fini par adhérer."</p>
+            </div>
+            <div class="note-box">
+                <strong>→</strong> <span class="super-important">-다가 nécessite une action en cours pendant laquelle un changement survient.</span>
+            </div>
+
+            <h3>6. Tips et parallèles avec le français</h3>
+            <div class="note-box">
+                <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+                <p>"En train de faire X, il s'est passé Y"</p>
+                <p>Structure similaire au gérondif + conséquence</p>
+                <p>Proche de : "Alors que / Pendant que je faisais X..."</p>
+
+                <p style="margin-top: 20px;"><strong>Quand utiliser -다가 ?</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li><span class="highlight-yellow">Quand il y a une action en cours pendant laquelle un changement se produit</span></li>
+                    <li>Donne un ton plus narratif et vivant</li>
+                    <li>Compare avec la version simple pour choisir le niveau de détail souhaité</li>
+                </ul>
+            </div>
+
+            <h2>III. Expressions pour organiser un événement</h2>
+
+            <h3>1. Contexte d'utilisation</h3>
+            <p>Ces expressions sont utilisées par le <span class="korean">사회자</span> (animateur, maître de cérémonie) lors d'événements formels :</p>
+            <ul>
+                <li>Réunions de club (동호회 모임)</li>
+                <li>Cérémonies de remise de diplômes (졸업식)</li>
+                <li>Événements officiels</li>
+            </ul>
+            <div class="note-box">
+                <p><strong>Registre :</strong> <span class="super-important">Formel (격식체)</span></p>
+            </div>
+
+            <h3>2. Annoncer le début d'une section</h3>
+            <div class="formula">
+                지금부터 (sujet) + 가/이 있겠습니다
+            </div>
+
+            <div class="example-box">
+                <p><strong>Exemples du manuel :</strong></p>
+                <p><span class="tip-badge">Réunion de club</span></p>
+                <p class="korean">지금부터 (신입 회원들의 인사)<span class="grammar-red">가 있겠습니다</span>.</p>
+                <p class="french-translation">"Maintenant, nous allons entendre (les salutations des nouveaux membres)."</p>
+
+                <p style="margin-top: 20px;"><span class="tip-badge">Cérémonie de diplôme</span></p>
+                <p class="korean">지금부터 (졸업생의 연설)<span class="grammar-red">이 있겠습니다</span>.</p>
+                <p class="french-translation">"Maintenant, il va y avoir (un discours d'un diplômé)."</p>
+
+                <p style="margin-top: 20px;" class="korean">지금부터 (4급 학생의 춤 공연)<span class="grammar-red">이 있겠습니다</span>.</p>
+                <p class="french-translation">"Maintenant, il va y avoir (une performance de danse d'un étudiant de niveau 4)."</p>
+            </div>
+
+            <h3>3. Donner des instructions au public</h3>
+            <div class="formula">
+                (action) + <strong>-아/어 주시기 바랍니다</strong>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Exemples du manuel :</strong></p>
+                <p class="korean">(한 분씩 앞으로 나<span class="grammar-red">와 주시기 바랍니다</span>.)</p>
+                <p class="french-translation">"Veuillez (venir devant un par un)."</p>
+
+                <p style="margin-top: 15px;" class="korean">(여러분, 끝까지 잘 들<span class="grammar-red">어 주시기 바랍니다</span>.)</p>
+                <p class="french-translation">"Tout le monde, veuillez (écouter attentivement jusqu'à la fin)."</p>
+
+                <p style="margin-top: 15px;" class="korean">(큰 박수로 환영<span class="grammar-red">해 주시기 바랍니다</span>.)</p>
+                <p class="french-translation">"Veuillez (accueillir avec de chaleureux applaudissements)."</p>
+            </div>
+
+            <h2>IV. Expressions pour se présenter</h2>
+
+            <h3>1. Contexte d'utilisation</h3>
+            <p>Ces expressions sont utilisées lors de présentations personnelles dans un contexte formel :</p>
+            <ul>
+                <li>Première réunion d'un club</li>
+                <li>Cérémonie d'accueil (신고식)</li>
+                <li>Présentation devant un nouveau groupe</li>
+            </ul>
+            <div class="note-box">
+                <p><strong>Registre :</strong> <span class="super-important">Poli à formel (격식체)</span></p>
+            </div>
+
+            <h3>2. Début de présentation</h3>
+            <p><strong>Formules d'ouverture :</strong></p>
+            <div class="example-box">
+                <p class="korean">00에서 온 ○○<span class="grammar-red">입니다</span>.</p>
+                <p class="french-translation">"Je suis ○○, je viens de 00."</p>
+
+                <p style="margin-top: 15px;" class="korean">-아/어서 -게 됐<span class="grammar-red">습니다</span>.</p>
+                <p class="french-translation">"J'en suis venu·e à... parce que..."</p>
+
+                <p style="margin-top: 15px;" class="korean">-다가 -아/어서 -게 됐<span class="grammar-red">습니다</span>.</p>
+                <p class="french-translation">"En faisant..., j'en suis venu·e à... parce que..."</p>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Exemple complet du manuel :</strong></p>
+                <p class="korean">저는 미카라고 합니다. 여행을 통해 많은 경험을 하고 싶<span class="grammar-red">어서</span> 가입<span class="grammar-red">하게 됐습니다</span>.</p>
+                <p class="french-translation">"Je m'appelle Mika. Je voulais acquérir beaucoup d'expériences à travers les voyages, donc j'ai fini par adhérer."</p>
+            </div>
+
+            <h3>3. Clôture de présentation</h3>
+            <p><strong>Formules de conclusion :</strong></p>
+            <div class="example-box">
+                <p class="korean">열심히 활동<span class="grammar-red">하겠습니다</span>.</p>
+                <p class="french-translation">"Je vais participer activement."</p>
+
+                <p style="margin-top: 15px;" class="korean">앞으로 여러분과 잘 지냈으면 좋<span class="grammar-red">겠습니다</span>.</p>
+                <p class="french-translation">"J'espère bien m'entendre avec vous à l'avenir."</p>
+
+                <p style="margin-top: 15px;" class="korean">많이 가르쳐 주<span class="grammar-red">세요</span>. / 많이 도와주<span class="grammar-red">세요</span>.</p>
+                <p class="french-translation">"Enseignez-moi beaucoup. / Aidez-moi beaucoup."</p>
+            </div>
+
+            <h3>4. Erreur courante : cohérence du registre</h3>
+            <div class="error-box">
+                <p>❌ <span class="korean">저는 미카라고 합니다. 여행을 좋아해서 가입하게 됐어요.</span></p>
+            </div>
+            <div class="success-box">
+                <p>✅ <span class="korean">저는 미카라고 합니다. 여행을 좋아<span class="grammar-red">해서</span> 가입<span class="grammar-red">하게 됐습니다</span>.</span></p>
+                <p class="french-translation">"Je m'appelle Mika. J'aime voyager, donc j'ai fini par adhérer."</p>
+            </div>
+            <div class="note-box">
+                <strong>→</strong> <span class="super-important">Tout le discours doit rester cohérent en niveau de formalité.</span> Pas de mélange 격식체 + 반말 ou 존댓말 standard.
+            </div>
+
+            <h2>📋 Récapitulatif : Quand utiliser quoi ?</h2>
+            <table class="recap-table">
+                <thead>
+                    <tr>
+                        <th>Structure</th>
+                        <th>Usage</th>
+                        <th>Contexte</th>
+                        <th>Exemple</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="korean">-아/어서 -게 됐어요</td>
+                        <td>Expliquer une raison simple</td>
+                        <td>Général, direct</td>
+                        <td class="korean">친구를 사귀고 싶<span class="grammar-red">어서</span> 가입<span class="grammar-red">하게 됐어요</span>.</td>
+                    </tr>
+                    <tr>
+                        <td class="korean">-다가 -아/어서 -게 됐어요</td>
+                        <td>Narration d'un processus</td>
+                        <td>Plus détaillé, narratif</td>
+                        <td class="korean">광고를 보<span class="grammar-red">다가</span> 관심이 생겨<span class="grammar-red">서</span> 가입<span class="grammar-red">하게 됐어요</span>.</td>
+                    </tr>
+                    <tr>
+                        <td class="korean">Expressions 사회자</td>
+                        <td>Animer un événement</td>
+                        <td>Formel, cérémoniel</td>
+                        <td class="korean">지금부터 (신입 회원들의 인사)<span class="grammar-red">가 있겠습니다</span>.</td>
+                    </tr>
+                    <tr>
+                        <td class="korean">Expressions 자기소개</td>
+                        <td>Se présenter formellement</td>
+                        <td>Officiel, première rencontre</td>
+                        <td class="korean">저는 ○○<span class="grammar-red">입니다</span>. -아/어서 -게 됐<span class="grammar-red">습니다</span>.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</body>
+</html>

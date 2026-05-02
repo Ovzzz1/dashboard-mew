@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5과 — Points de grammaire (Niveau 4급) - Sogang University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #fafafa;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #ffffff;
+            border-bottom: 3px solid #b50004;
+            color: #2c3e50;
+            padding: 40px 50px;
+        }
+
+        h1 { font-size: 2.4em; font-weight: 700; margin-bottom: 10px; color: #2c3e50; }
+        .header-subtitle { font-size: 1em; color: #7f8c8d; }
+        .content { padding: 50px; }
+
+        h2 {
+            font-size: 1.8em; color: #34495e;
+            margin: 50px 0 25px 0; font-weight: 700;
+            padding-bottom: 12px; border-bottom: 2px solid #ecf0f1;
+        }
+        h2::before {
+            content: ''; display: inline-block;
+            width: 5px; height: 28px; background: #b50004;
+            margin-right: 12px; vertical-align: middle;
+        }
+        h3 { font-size: 1.4em; color: #2c3e50; margin: 30px 0 18px 0; font-weight: 600; }
+        h4 { font-size: 1.15em; color: #34495e; margin: 22px 0 12px 0; font-weight: 600; }
+
+        p, li { font-size: 1.05em; margin-bottom: 15px; line-height: 1.8; color: #2c3e50; }
+        ul, ol { margin: 20px 0; padding-left: 35px; }
+        li { margin-bottom: 12px; }
+
+        .highlight-yellow { background: #ffff00; font-weight: 600; padding: 2px 5px; border-radius: 3px; }
+        .grammar-red { color: #b50004; font-weight: 700; }
+        .super-important { background: #ffff00; font-weight: 700; padding: 3px 6px; border-radius: 3px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
+        th { background: #f8f9fa; color: #2c3e50; padding: 16px; text-align: left; font-weight: 600; font-size: 1.05em; border-bottom: 2px solid #e0e0e0; }
+        td { padding: 15px 16px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background: #f8f9fa; }
+
+        .example-box { background: #f8f9fa; padding: 25px; border-left: 4px solid #95a5a6; margin: 25px 0; border-radius: 6px; }
+        .error-box { background: #fff5f5; padding: 20px 25px; border-left: 4px solid #e74c3c; margin: 20px 0; border-radius: 6px; }
+        .success-box { background: #f0f9f4; padding: 20px 25px; border-left: 4px solid #27ae60; margin: 20px 0; border-radius: 6px; }
+        .note-box { background: #fffef7; padding: 20px 25px; border-left: 4px solid #f39c12; margin: 25px 0; border-radius: 6px; }
+
+        .korean { font-size: 1.15em; font-weight: 600; color: #2c3e50; }
+        .french-translation { font-style: italic; color: #7f8c8d; margin-top: 8px; display: block; }
+        strong { color: #2c3e50; font-weight: 600; }
+
+        .tip-badge {
+            display: inline-block; background: #34495e; color: white;
+            padding: 5px 12px; border-radius: 20px; font-size: 0.85em;
+            font-weight: 600; margin-right: 10px;
+        }
+
+        .formula {
+            background: #f8f9fa; padding: 18px 22px; border-radius: 6px;
+            font-family: 'Courier New', monospace; font-size: 1.05em;
+            margin: 18px 0; border: 2px solid #e0e0e0; color: #2c3e50;
+        }
+
+        .direction-block {
+            background: #f0f4ff;
+            border: 2px solid #c0cce8;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin: 18px 0;
+        }
+
+        .direction-block .korean {
+            color: #2c3e50;
+        }
+
+        .recap-table { border: 2px solid #34495e; }
+        .recap-table th { background: #34495e; color: white; }
+
+        .speech-table th { background: #5a3e8a; color: white; }
+        .speech-table { border: 2px solid #5a3e8a; }
+        .speech-table td { font-size: 0.98em; }
+
+        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
+        @media (max-width: 768px) {
+            .content { padding: 30px 25px; } .header { padding: 30px 25px; }
+            h1 { font-size: 2em; } h2 { font-size: 1.5em; } table { font-size: 0.9em; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>5과 — Points de grammaire</h1>
+        <div class="header-subtitle">Niveau 4급 | Sogang Korean Program</div>
+    </div>
+
+    <div class="content">
+
+        <!-- ===== SECTION I : Expressions pour donner des directions ===== -->
+        <h2>I. Expressions pour donner des directions</h2>
+
+        <h3>1. Contexte d'utilisation</h3>
+        <p>Ces expressions sont des <span class="highlight-yellow">formules fixes</span> utilisées pour expliquer un itinéraire à quelqu'un. Chaque structure couvre une étape typique d'un trajet : sortir, avancer, tourner, etc.</p>
+
+        <h3>2. Les structures de base</h3>
+
+        <h4>① Sortir par une sortie</h4>
+        <div class="direction-block">
+            <p class="korean">○번 출구로 나가다 / 나오다</p>
+            <p class="french-translation">"Sortir par la sortie n°○"</p>
+        </div>
+
+        <h4>② Ce qu'on voit / ce qu'il y a</h4>
+        <div class="direction-block">
+            <div class="formula" style="margin:0 0 12px 0;">
+                -으면 -이 나오다 / 보이다 / 있다
+            </div>
+            <p class="korean">○번 출구로 나오<span class="grammar-red">면</span> 편의점<span class="grammar-red">이 보여요</span>.</p>
+            <p class="french-translation">"Si vous sortez par la sortie n°○, vous verrez un convenience store."</p>
+            <p class="korean" style="margin-top:10px;">조금 걷<span class="grammar-red">으면</span> 신호등<span class="grammar-red">이 나와요</span>.</p>
+            <p class="french-translation">"Si vous marchez un peu, vous arriverez à un feu rouge."</p>
+        </div>
+
+        <h4>③ Tourner à un point de repère</h4>
+        <div class="direction-block">
+            <div class="formula" style="margin:0 0 12px 0;">
+                -을 끼고 -으로 가다 / 오다 / 돌다
+            </div>
+            <p class="korean">편의점<span class="grammar-red">을 끼고</span> 오른쪽<span class="grammar-red">으로 돌면</span> 돼요.</p>
+            <p class="french-translation">"Tournez à droite en longeant le convenience store."</p>
+            <p class="korean" style="margin-top:10px;">은행<span class="grammar-red">을 끼고</span> 왼쪽<span class="grammar-red">으로 가세요</span>.</p>
+            <p class="french-translation">"Allez à gauche en longeant la banque."</p>
+        </div>
+
+        <div class="note-box">
+            <p><span class="tip-badge">💡 -을 끼고</span></p>
+            <p>Le verbe <span class="korean grammar-red">끼다</span> signifie ici "longer, avoir sur le côté". On utilise cette structure quand on tourne en prenant un repère comme point de pivot — comme en français "en longeant le café, tournez à gauche".</p>
+        </div>
+
+        <h4>④ Avancer depuis un point de repère</h4>
+        <div class="direction-block">
+            <div class="formula" style="margin:0 0 12px 0;">
+                -다가 -에서 -으로 가다 / 오다 / 돌다
+            </div>
+            <p class="korean">쭉 가<span class="grammar-red">다가</span> 신호등<span class="grammar-red">에서</span> 왼쪽<span class="grammar-red">으로 돌아요</span>.</p>
+            <p class="french-translation">"Allez tout droit, puis au feu rouge tournez à gauche."</p>
+            <p class="korean" style="margin-top:10px;">걷<span class="grammar-red">다가</span> 사거리<span class="grammar-red">에서</span> 오른쪽<span class="grammar-red">으로 가세요</span>.</p>
+            <p class="french-translation">"Marchez, puis au carrefour, allez à droite."</p>
+        </div>
+
+        <h3>3. Vocabulaire utile pour les directions</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Coréen</th>
+                    <th>Sens</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="korean">쭉 / 똑바로</td><td>Tout droit</td></tr>
+                <tr><td class="korean">왼쪽으로</td><td>À gauche</td></tr>
+                <tr><td class="korean">오른쪽으로</td><td>À droite</td></tr>
+                <tr><td class="korean">○번 출구</td><td>Sortie n°○</td></tr>
+                <tr><td class="korean">신호등</td><td>Feu rouge / feux de circulation</td></tr>
+                <tr><td class="korean">사거리</td><td>Carrefour (4 voies)</td></tr>
+                <tr><td class="korean">삼거리</td><td>Intersection en T (3 voies)</td></tr>
+                <tr><td class="korean">횡단보도</td><td>Passage piéton</td></tr>
+                <tr><td class="korean">골목</td><td>Ruelle, petite rue</td></tr>
+            </tbody>
+        </table>
+
+        <h3>4. Exemple d'itinéraire complet</h3>
+        <div class="example-box">
+            <p><span class="tip-badge">📍 Exemple</span> Comment aller de la station de métro à un café :</p>
+            <p class="korean" style="margin-top:12px;">① 2번 출구로 나오세요.</p>
+            <p class="french-translation">"Sortez par la sortie n°2."</p>
+            <p class="korean">② 나오면 편의점이 보여요.</p>
+            <p class="french-translation">"En sortant, vous verrez un convenience store."</p>
+            <p class="korean">③ 편의점을 끼고 왼쪽으로 도세요.</p>
+            <p class="french-translation">"Tournez à gauche en longeant le convenience store."</p>
+            <p class="korean">④ 쭉 가다가 신호등에서 오른쪽으로 가세요.</p>
+            <p class="french-translation">"Allez tout droit, puis au feu tournez à droite."</p>
+            <p class="korean">⑤ 조금 더 가면 카페가 나와요.</p>
+            <p class="french-translation">"En marchant encore un peu, vous arriverez au café."</p>
+        </div>
+
+        <h3>5. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <p>Les structures coréennes correspondent aux formules françaises typiques :</p>
+            <ul style="margin-top:10px;">
+                <li><span class="korean grammar-red">-으면 -이 나와요/보여요</span> ≈ "vous arriverez à..." / "vous verrez..."</li>
+                <li><span class="korean grammar-red">-을 끼고 -으로 돌다</span> ≈ "tournez à [droite/gauche] en longeant..."</li>
+                <li><span class="korean grammar-red">-다가 -에서 -으로 돌다</span> ≈ "continuez, puis à [repère] tournez..."</li>
+            </ul>
+        </div>
+
+        <!-- ===== SECTION II : -다고요? ===== -->
+        <h2>II. Confirmer ce qu'on a entendu : -다고요?</h2>
+
+        <h3>1. Sens et fonction</h3>
+        <p><span class="super-important">Ce pattern sert à confirmer qu'on a bien compris ce que quelqu'un vient de dire.</span> C'est l'équivalent de "vous avez dit que... ?" ou "tu dis que... ?" en français — on reformule ce qu'on a entendu pour vérifier.</p>
+
+        <div class="note-box">
+            <p><span class="tip-badge">💡 Traduction</span></p>
+            <p>"Vous avez dit que... ?" / "C'est bien... ?" / "Tu dis que... ?"</p>
+            <p style="margin-top:8px;">Exemple du manuel :</p>
+            <p class="korean">A: 저는 매일 세 시간씩 운동해요.</p>
+            <p class="korean">B: 세 시간씩 운동한<span class="grammar-red">다고요</span>?</p>
+            <p class="french-translation">"Vous faites du sport trois heures par jour, c'est bien ça ?"</p>
+        </div>
+
+        <h3>2. Construction : le discours rapporté</h3>
+        <p>Le pattern -다고요? est basé sur le <span class="highlight-yellow">discours rapporté (간접 화법)</span>. Pour former -다고요?, on part de la forme du discours rapporté et on remplace 했어요 par le point d'interrogation.</p>
+
+        <div class="formula">
+            Discours rapporté (-다고 했어요) → <strong>-다고요?</strong>
+        </div>
+
+        <h3>3. Tableau complet de formation</h3>
+        <table class="speech-table">
+            <thead>
+                <tr>
+                    <th colspan="2">Type de phrase</th>
+                    <th>Discours rapporté</th>
+                    <th>-다고요?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3"><strong>Déclaratif</strong></td>
+                    <td>Verbes (présent)</td>
+                    <td class="korean">-는/ㄴ다고 했어요</td>
+                    <td class="korean grammar-red">-는/ㄴ다고요?</td>
+                </tr>
+                <tr>
+                    <td>Adjectifs (présent)</td>
+                    <td class="korean">-다고 했어요</td>
+                    <td class="korean grammar-red">-다고요?</td>
+                </tr>
+                <tr>
+                    <td>Noms</td>
+                    <td class="korean">-(이)라고 했어요</td>
+                    <td class="korean grammar-red">-(이)라고요?</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Passé</strong> (verbes/adjectifs)</td>
+                    <td class="korean">-았/었다고 했어요</td>
+                    <td class="korean grammar-red">-았/었다고요?</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Futur</strong> (verbes/adjectifs)</td>
+                    <td class="korean">-을/ㄹ 거라고 했어요</td>
+                    <td class="korean grammar-red">-을/ㄹ 거라고요?</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Propositionnel</strong> (suggestion)</td>
+                    <td class="korean">-자고 했어요</td>
+                    <td class="korean grammar-red">-자고요?</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Impératif</strong> (ordre)</td>
+                    <td class="korean">-(으)라고 했어요</td>
+                    <td class="korean grammar-red">-(으)라고요?</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Interrogatif</strong> (question)</td>
+                    <td class="korean">-냐고 했어요</td>
+                    <td class="korean grammar-red">-냐고요?</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4. Exemples du manuel</h3>
+        <div class="example-box">
+            <p>① <span class="tip-badge">Déclaratif — Verbe présent</span></p>
+            <p class="korean">A: 한국 사람들은 더운 여름에 뜨거운 삼계탕을 먹어요.</p>
+            <p class="korean">B: 날씨가 더운데 뜨거운 삼계탕을 먹는<span class="grammar-red">다고요</span>?</p>
+            <p class="french-translation">"Vous dites qu'ils mangent du samgyetang chaud même par temps chaud ?"</p>
+
+            <p style="margin-top:18px;">② <span class="tip-badge">Déclaratif — Adjectif présent</span></p>
+            <p class="korean">A: 오늘 날씨가 너무 추워요.</p>
+            <p class="korean">B: 오늘 날씨가 춥<span class="grammar-red">다고요</span>?</p>
+            <p class="french-translation">"Il fait froid aujourd'hui, vous dites ?"</p>
+
+            <p style="margin-top:18px;">③ <span class="tip-badge">Déclaratif — Nom</span></p>
+            <p class="korean">A: 신촌 역 1번 출구예요.</p>
+            <p class="korean">B: 신촌 역 1번 출구<span class="grammar-red">라고요</span>?</p>
+            <p class="french-translation">"C'est bien la sortie n°1 de la station Sinchon ?"</p>
+
+            <p style="margin-top:18px;">④ <span class="tip-badge">Passé</span></p>
+            <p class="korean">A: 어제 빌린 책을 다 읽었어요.</p>
+            <p class="korean">B: 그 책을 벌써 다 읽었<span class="grammar-red">다고요</span>?</p>
+            <p class="french-translation">"Vous avez déjà fini tout le livre ?"</p>
+
+            <p style="margin-top:18px;">⑤ <span class="tip-badge">Futur</span></p>
+            <p class="korean">A: 내일 독일로 돌아갈 거예요.</p>
+            <p class="korean">B: 내일 독일로 돌아갈 거<span class="grammar-red">라고요</span>?</p>
+            <p class="french-translation">"Vous rentrez en Allemagne demain, c'est ça ?"</p>
+
+            <p style="margin-top:18px;">⑥ <span class="tip-badge">Propositionnel</span></p>
+            <p class="korean">A: 오늘 수업 끝나고 영화 보러 갈까요?</p>
+            <p class="korean">B: 오늘 영화 보러 가<span class="grammar-red">자고요</span>? 내일 발표가 있으니까 내일 오후에 가는 게 어때요?</p>
+            <p class="french-translation">"Vous suggérez d'aller voir un film aujourd'hui ? Comme il y a une présentation demain, que pensez-vous d'y aller demain après-midi ?"</p>
+
+            <p style="margin-top:18px;">⑦ <span class="tip-badge">Impératif</span></p>
+            <p class="korean">A: 내일 아침 8시까지 오세요.</p>
+            <p class="korean">B: 8시까지 오<span class="grammar-red">라고요</span>?</p>
+            <p class="french-translation">"Vous me demandez d'arriver pour 8h ?"</p>
+
+            <p style="margin-top:18px;">⑧ <span class="tip-badge">Interrogatif</span></p>
+            <p class="korean">A: 언제 처음 한국에 왔어요?</p>
+            <p class="korean">B: 언제 처음 왔<span class="grammar-red">냐고요</span>? 음…… 2010년에 부모님과 처음 여행하러 왔었어요.</p>
+            <p class="french-translation">"Vous me demandez quand je suis venu pour la première fois ? Euh… je suis venu voyager avec mes parents en 2010."</p>
+        </div>
+
+        <h3>5. Point important : la particule -이/가 (et non -은/는)</h3>
+        <div class="note-box">
+            <p>Dans les phrases en -다고요?, on utilise généralement la <span class="super-important">particule sujet -이/가</span>, pas la particule thème -은/는.</p>
+            <div class="example-box" style="margin-top:12px;">
+                <p class="korean">A: 루이 씨는 아파 보여요.</p>
+                <p class="korean">B: 루이 씨<span class="grammar-red">가</span> 아프다고요? 무슨 일이 있었어요?</p>
+                <p class="french-translation">"Vous dites que Louis a l'air malade ? Que s'est-il passé ?"</p>
+
+                <p style="margin-top:12px;" class="korean">A: 페이 씨는 오늘 아파서 학교에 못 왔어요.</p>
+                <p class="korean">B: 페이 씨<span class="grammar-red">가</span> 아프다고요?</p>
+                <p class="french-translation">"Vous dites que Pei est malade ?"</p>
+            </div>
+        </div>
+
+        <h3>6. Nuances : confirmation vs surprise / doute</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">💡 Intonation</span></p>
+            <p>La même forme -다고요? peut exprimer des nuances différentes selon l'intonation :</p>
+            <ul style="margin-top:10px;">
+                <li><strong>Intonation neutre ou descendante</strong> → simple confirmation de ce qu'on a entendu</li>
+                <li><strong>Intonation montante marquée</strong> → surprise ou légère incrédulité ("Vraiment ?! Vous avez dit ça ?!")</li>
+            </ul>
+            <p class="korean" style="margin-top:10px;">세 시간씩 운동한<span class="grammar-red">다고요</span>? <span style="color:#7f8c8d;">(↗ surprise : "Trois heures ?! Vraiment ?!")</span></p>
+        </div>
+
+        <h3>7. Bonus : autre façon de confirmer</h3>
+        <div class="example-box">
+            <p><span class="tip-badge">💡 Bonus</span> On peut aussi simplement répéter le mot-clé + <span class="korean grammar-red">요?</span> pour confirmer :</p>
+            <p class="korean" style="margin-top:10px;">A: 10층 1008호로 오세요.</p>
+            <p class="korean">B: 1008호<span class="grammar-red">요</span>?</p>
+            <p class="french-translation">"Le 1008, c'est bien ça ?"</p>
+            <p style="margin-top:8px;">→ Plus court et plus naturel dans les échanges rapides.</p>
+        </div>
+
+        <h3>8. Erreur courante</h3>
+        <div class="error-box">
+            <p>❌ <span class="korean">세 시간씩 운동해요? (simple répétition de la forme polie)</span></p>
+            <p style="color:#c0392b; margin-top:5px;">→ Ce n'est pas la même chose : ici on repose la question directement, sans reformuler via le discours rapporté.</p>
+        </div>
+        <div class="success-box">
+            <p>✅ <span class="korean">세 시간씩 운동한<span class="grammar-red">다고요</span>?</span></p>
+            <p class="french-translation">→ On reformule ce qu'on vient d'entendre pour confirmer ou marquer sa surprise.</p>
+        </div>
+
+        <h3>9. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <p>Très proche de la reformulation interrogative en français :</p>
+            <ul style="margin-top:10px;">
+                <li>"Vous avez dit que vous partez demain ?" → <span class="korean">내일 떠난<span class="grammar-red">다고요</span>?</span></li>
+                <li>"Il fait froid, vous dites ?" → <span class="korean">춥<span class="grammar-red">다고요</span>?</span></li>
+                <li>"Vous me demandez de venir à 8h ?" → <span class="korean">8시까지 오<span class="grammar-red">라고요</span>?</span></li>
+            </ul>
+            <p style="margin-top:10px;"><span class="highlight-yellow">L'idée centrale : on ne pose pas une nouvelle question — on répète/reformule ce qu'on a entendu pour s'assurer d'avoir bien compris.</span></p>
+        </div>
+
+        <!-- ===== RÉCAP ===== -->
+        <h2>📋 Récapitulatif</h2>
+
+        <table class="recap-table">
+            <thead>
+                <tr>
+                    <th>Structure</th>
+                    <th>Sens</th>
+                    <th>Exemple</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="korean grammar-red">○번 출구로 나오다</td>
+                    <td>Sortir par une sortie</td>
+                    <td class="korean">2번 출구로 나오세요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-으면 -이 나오다/보이다</td>
+                    <td>Ce qu'on voit / trouve en avançant</td>
+                    <td class="korean">나오면 편의점이 보여요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-을 끼고 -으로 돌다</td>
+                    <td>Tourner en longeant un repère</td>
+                    <td class="korean">편의점을 끼고 왼쪽으로 도세요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-다가 -에서 -으로 가다</td>
+                    <td>Avancer puis tourner à un point</td>
+                    <td class="korean">쭉 가다가 사거리에서 오른쪽으로 가세요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-다고요?</td>
+                    <td>Confirmer / reformuler ce qu'on a entendu</td>
+                    <td class="korean">세 시간씩 운동한다고요?</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>

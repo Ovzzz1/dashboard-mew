@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7과 — Points de grammaire (Niveau 4급) - Sogang University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #fafafa;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #ffffff;
+            border-bottom: 3px solid #b50004;
+            color: #2c3e50;
+            padding: 40px 50px;
+        }
+
+        h1 { font-size: 2.4em; font-weight: 700; margin-bottom: 10px; color: #2c3e50; }
+        .header-subtitle { font-size: 1em; color: #7f8c8d; }
+        .content { padding: 50px; }
+
+        h2 {
+            font-size: 1.8em; color: #34495e;
+            margin: 50px 0 25px 0; font-weight: 700;
+            padding-bottom: 12px; border-bottom: 2px solid #ecf0f1;
+        }
+        h2::before {
+            content: ''; display: inline-block;
+            width: 5px; height: 28px; background: #b50004;
+            margin-right: 12px; vertical-align: middle;
+        }
+        h3 { font-size: 1.4em; color: #2c3e50; margin: 30px 0 18px 0; font-weight: 600; }
+        h4 { font-size: 1.15em; color: #34495e; margin: 22px 0 12px 0; font-weight: 600; }
+
+        p, li { font-size: 1.05em; margin-bottom: 15px; line-height: 1.8; color: #2c3e50; }
+        ul, ol { margin: 20px 0; padding-left: 35px; }
+        li { margin-bottom: 12px; }
+
+        .highlight-yellow { background: #ffff00; font-weight: 600; padding: 2px 5px; border-radius: 3px; }
+        .grammar-red { color: #b50004; font-weight: 700; }
+        .super-important { background: #ffff00; font-weight: 700; padding: 3px 6px; border-radius: 3px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
+        th { background: #f8f9fa; color: #2c3e50; padding: 16px; text-align: left; font-weight: 600; font-size: 1.05em; border-bottom: 2px solid #e0e0e0; }
+        td { padding: 15px 16px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background: #f8f9fa; }
+
+        .example-box { background: #f8f9fa; padding: 25px; border-left: 4px solid #95a5a6; margin: 25px 0; border-radius: 6px; }
+        .error-box { background: #fff5f5; padding: 20px 25px; border-left: 4px solid #e74c3c; margin: 20px 0; border-radius: 6px; }
+        .success-box { background: #f0f9f4; padding: 20px 25px; border-left: 4px solid #27ae60; margin: 20px 0; border-radius: 6px; }
+        .note-box { background: #fffef7; padding: 20px 25px; border-left: 4px solid #f39c12; margin: 25px 0; border-radius: 6px; }
+
+        .korean { font-size: 1.15em; font-weight: 600; color: #2c3e50; }
+        .french-translation { font-style: italic; color: #7f8c8d; margin-top: 8px; display: block; }
+        strong { color: #2c3e50; font-weight: 600; }
+
+        .tip-badge {
+            display: inline-block; background: #34495e; color: white;
+            padding: 5px 12px; border-radius: 20px; font-size: 0.85em;
+            font-weight: 600; margin-right: 10px;
+        }
+
+        .formula {
+            background: #f8f9fa; padding: 18px 22px; border-radius: 6px;
+            font-family: 'Courier New', monospace; font-size: 1.05em;
+            margin: 18px 0; border: 2px solid #e0e0e0; color: #2c3e50;
+        }
+
+        .rule-box {
+            background: #f0f4ff;
+            border: 2px solid #c0cce8;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin: 18px 0;
+        }
+
+        .compare-table th { background: #4a4a8a; color: white; }
+        .compare-table { border: 2px solid #4a4a8a; }
+
+        .recap-table { border: 2px solid #34495e; }
+        .recap-table th { background: #34495e; color: white; }
+
+        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
+        @media (max-width: 768px) {
+            .content { padding: 30px 25px; } .header { padding: 30px 25px; }
+            h1 { font-size: 2em; } h2 { font-size: 1.5em; } table { font-size: 0.9em; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>7과 — Points de grammaire</h1>
+        <div class="header-subtitle">Niveau 4급 | Sogang Korean Program</div>
+    </div>
+
+    <div class="content">
+
+        <!-- ===== SECTION I : -잖아요 ===== -->
+        <h2>I. Rappeler un fait commun : -잖아요</h2>
+
+        <h3>1. Sens et fonction</h3>
+        <p><span class="super-important">-잖아요 s'utilise pour convaincre l'interlocuteur en lui rappelant quelque chose qu'il sait déjà.</span> Le locuteur invoque un fait partagé — une évidence connue des deux parties — pour soutenir son argument ou expliquer une décision. C'est l'équivalent de "tu sais bien que..." ou "c'est bien connu que..." en français.</p>
+
+        <div class="note-box">
+            <p><span class="tip-badge">💡 Traduction</span></p>
+            <p>"Tu sais bien que..." / "C'est bien que..." / "Comme tu le sais, ..." / "Parce que, comme tu sais..."</p>
+            <p style="margin-top:8px;">Exemple du manuel :</p>
+            <p class="korean">A: 우리 금요일 저녁에 회식할까요?</p>
+            <p class="korean">B: 금요일 저녁에는 모두 약속이 있<span class="grammar-red">잖아요</span>. 목요일에 모입시다.</p>
+            <p class="french-translation">"Tu sais bien que tout le monde a des engagements le vendredi soir. Retrouvons-nous jeudi."</p>
+        </div>
+
+        <h3>2. Construction grammaticale</h3>
+        <div class="formula">
+            Radical verbal / adjectif + <strong>-잖아요</strong><br>
+            Nom + <strong>이잖아요</strong>
+        </div>
+
+        <h3>3. Conjugaison complète</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Catégorie</th>
+                    <th>Temps</th>
+                    <th>Terminaison</th>
+                    <th>Exemple</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2"><strong>Verbes &amp; Adjectifs</strong></td>
+                    <td>Présent</td>
+                    <td class="grammar-red">-잖아요</td>
+                    <td class="korean">바쁘다 → 바쁘<span class="grammar-red">잖아요</span></td>
+                </tr>
+                <tr>
+                    <td>Passé</td>
+                    <td class="grammar-red">-았/었잖아요</td>
+                    <td class="korean">먹다 → 먹었<span class="grammar-red">잖아요</span></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>Verbes seulement</strong></td>
+                    <td>Futur</td>
+                    <td class="grammar-red">-을/ㄹ 거잖아요</td>
+                    <td class="korean">오다 → 올 거<span class="grammar-red">잖아요</span></td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>Nom + 이다</strong></td>
+                    <td>Présent</td>
+                    <td class="grammar-red">-(이)잖아요</td>
+                    <td class="korean">학생이다 → 학생이<span class="grammar-red">잖아요</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Nom + 이다</strong></td>
+                    <td>Passé</td>
+                    <td class="grammar-red">-이었/였잖아요</td>
+                    <td class="korean">학생이다 → 학생이었<span class="grammar-red">잖아요</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4. Exemples du manuel</h3>
+        <div class="example-box">
+            <p>① <span class="tip-badge">En classe, après les cours</span></p>
+            <p class="korean">A: 내일 미카 씨 생일인데 책을 선물할까요?</p>
+            <p class="korean">B: 네, 소설 책을 선물하는 게 좋겠어요. 미카 씨가 소설 책을 많이 읽<span class="grammar-red">잖아요</span>.</p>
+            <p class="french-translation">"Oui, ce serait bien d'offrir un roman. Tu sais bien que Mika lit beaucoup de romans."</p>
+
+            <p style="margin-top:20px;">② <span class="tip-badge">Au bureau</span></p>
+            <p class="korean">A: 점심 때 삼계탕 먹으러 갈래요?</p>
+            <p class="korean">B: 삼계탕 말고 냉면 먹으러 가요. 오늘 날씨가 너무 덥<span class="grammar-red">잖아요</span>.</p>
+            <p class="french-translation">"Mangeons des naengmyeon plutôt. Tu sais bien qu'il fait très chaud aujourd'hui."</p>
+
+            <p style="margin-top:20px;">③ <span class="tip-badge">Une mère à ses fils qui se disputent</span></p>
+            <p class="korean">A: 동생한테 양보해. 니가(=네가) 형이<span class="grammar-red">잖아</span>.</p>
+            <p class="korean">B: 싫어요. 제가 왜 항상 양보해야 해요?</p>
+            <p class="french-translation">"Cède à ton petit frère. Tu sais bien que c'est toi l'aîné."</p>
+        </div>
+
+        <h3>5. Comparaison : -잖아요 vs -거든요</h3>
+        <p>Ces deux patterns servent tous les deux à expliquer ou justifier, mais ils s'adressent à des interlocuteurs différents :</p>
+
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>-잖아요</th>
+                    <th>-거든요</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Ce que l'interlocuteur sait</strong></td>
+                    <td>Il <strong>sait déjà</strong> le fait évoqué</td>
+                    <td>Il <strong>ne sait pas</strong> le fait évoqué</td>
+                </tr>
+                <tr>
+                    <td><strong>Équivalent français</strong></td>
+                    <td>"Tu sais bien que..." / "comme tu le sais..."</td>
+                    <td>"Tu vois, c'est que..." / "en fait..."</td>
+                </tr>
+                <tr>
+                    <td><strong>Exemple</strong></td>
+                    <td class="korean">이번 학기까지만 공부하는 친구들이 많<span class="grammar-red">잖아요</span>.<br><span style="font-size:0.9em; color:#7f8c8d;">(B rappelle à A ce qu'ils savent tous les deux)</span></td>
+                    <td class="korean">제가 이번 학기까지만 공부하<span class="grammar-red">거든요</span>.<br><span style="font-size:0.9em; color:#7f8c8d;">(A ne savait pas ça — nouvelle info)</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="example-box">
+            <p><span class="tip-badge">Contexte complet</span></p>
+            <p class="korean">A: 이번 소풍을 별로 가고 싶지 않아요.</p>
+
+            <p style="margin-top:12px;"><strong>Réponse avec -잖아요 :</strong></p>
+            <p class="korean">B: 같이 가요. 이번 학기까지만 공부하는 친구들이 많<span class="grammar-red">잖아요</span>. 마지막 소풍이니까 A 씨도 꼭 같이 갔으면 좋겠어요.</p>
+            <p class="french-translation">"Viens quand même. Tu sais bien que beaucoup d'amis ne seront là que ce semestre. C'est le dernier pique-nique, j'espère que tu viendras aussi."</p>
+            <p style="color:#7f8c8d; font-size:0.95em;">(B rappelle un fait qu'A et B savent tous les deux)</p>
+
+            <p style="margin-top:16px;"><strong>Réponse avec -거든요 :</strong></p>
+            <p class="korean">B: 같이 가요. 제가 이번 학기까지만 공부하<span class="grammar-red">거든요</span>. 마지막 소풍이니까 A 씨도 꼭 같이 갔으면 좋겠어요.</p>
+            <p class="french-translation">"Viens quand même. En fait, moi je ne reste que jusqu'à la fin de ce semestre. C'est le dernier pique-nique, j'espère que tu viendras aussi."</p>
+            <p style="color:#7f8c8d; font-size:0.95em;">(B révèle une information qu'A ne connaissait pas)</p>
+        </div>
+
+        <div class="note-box">
+            <p><span class="tip-badge">⚠️ Attention</span></p>
+            <p>Utiliser -잖아요 avec un supérieur peut sonner <strong>condescendant ou impoli</strong>, comme si on lui reprochait de ne pas savoir quelque chose d'évident. À utiliser avec prudence dans un contexte formel.</p>
+        </div>
+
+        <h3>6. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <p>Comparable aux formules françaises qui rappellent une évidence partagée :</p>
+            <ul style="margin-top:10px;">
+                <li>"<strong>Tu sais bien que</strong> tout le monde est occupé le vendredi."</li>
+                <li>"<strong>C'est bien connu que</strong> Mika lit beaucoup."</li>
+                <li>"<strong>Rappelle-toi</strong> que c'est toi l'aîné !"</li>
+            </ul>
+            <p style="margin-top:10px;"><span class="highlight-yellow">La clé : le fait invoqué est DÉJÀ connu des deux interlocuteurs — ce n'est pas une nouvelle information.</span></p>
+        </div>
+
+        <!-- ===== SECTION II : -다고 해서 다 -은/는 것은 아니에요 ===== -->
+        <h2>II. Nuancer une généralité : -다고 해서 다 -은/는 것은 아니에요</h2>
+
+        <h3>1. Sens et fonction</h3>
+        <p><span class="super-important">Ce pattern exprime une opinion contraire à une croyance largement répandue.</span> Il sert à dire qu'une règle générale ne s'applique pas dans tous les cas — qu'un principe communément admis a des exceptions. C'est l'équivalent de "ce n'est pas parce que... que forcément..."</p>
+
+        <div class="note-box">
+            <p><span class="tip-badge">💡 Traduction</span></p>
+            <p>"Ce n'est pas parce que X que forcément Y" / "X ne signifie pas nécessairement Y"</p>
+            <p style="margin-top:8px;">Exemple du manuel :</p>
+            <p class="korean">A: 복권에 당첨되면 얼마나 좋을까요?</p>
+            <p class="korean">B: 복권에 당첨된<span class="grammar-red">다고 해서 다</span> 행복한 것<span class="grammar-red">은 아니에요</span>. 불행해진 사람이 더 많다고 하던데요.</p>
+            <p class="french-translation">"Ce n'est pas parce qu'on gagne à la loterie qu'on est forcément heureux. Il paraît que les gens qui deviennent malheureux sont encore plus nombreux."</p>
+        </div>
+
+        <h3>2. Construction grammaticale</h3>
+        <div class="formula">
+            Proposition + <strong>-다고 해서 다</strong> + résultat + <strong>-은/는 것은 아니다</strong>
+        </div>
+
+        <h3>3. Conjugaison de -다고 해서</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Catégorie</th>
+                    <th>Temps</th>
+                    <th>Terminaison</th>
+                    <th>Exemple</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2"><strong>Verbes</strong></td>
+                    <td>Présent</td>
+                    <td class="grammar-red">-는/ㄴ다고 해서</td>
+                    <td class="korean">가다 → 간<span class="grammar-red">다고 해서</span></td>
+                </tr>
+                <tr>
+                    <td>Passé</td>
+                    <td class="grammar-red">-았/었다고 해서</td>
+                    <td class="korean">먹다 → 먹었<span class="grammar-red">다고 해서</span></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>Adjectifs</strong></td>
+                    <td>Présent</td>
+                    <td class="grammar-red">-다고 해서</td>
+                    <td class="korean">비싸다 → 비싸<span class="grammar-red">다고 해서</span></td>
+                </tr>
+                <tr>
+                    <td>Passé</td>
+                    <td class="grammar-red">-았/었다고 해서</td>
+                    <td class="korean">좋다 → 좋았<span class="grammar-red">다고 해서</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Nom + 이다</strong></td>
+                    <td>Présent</td>
+                    <td class="grammar-red">-(이)라고 해서</td>
+                    <td class="korean">선생님이다 → 선생님이<span class="grammar-red">라고 해서</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Nom + 이다</strong></td>
+                    <td>Passé</td>
+                    <td class="grammar-red">-이었/였다고 해서</td>
+                    <td class="korean">학생이다 → 학생이었<span class="grammar-red">다고 해서</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4. Exemples du manuel</h3>
+        <div class="example-box">
+            <p>① <span class="korean">좋은 대학교에 간<span class="grammar-red">다고 해서 다</span> 성공하는 것<span class="grammar-red">은 아니다</span>.</span></p>
+            <p class="french-translation">"Ce n'est pas parce qu'on va dans une bonne université qu'on réussit forcément."</p>
+
+            <p style="margin-top:15px;">② <span class="korean">문법을 많이 안<span class="grammar-red">다고 해서 다</span> 말을 잘하는 것<span class="grammar-red">은 아니다</span>.</span></p>
+            <p class="french-translation">"Ce n'est pas parce qu'on connaît beaucoup de grammaire qu'on parle bien forcément."</p>
+
+            <p style="margin-top:15px;">③ <span class="korean">비싸<span class="grammar-red">다고 해서 다</span> 좋은 물건<span class="grammar-red">은 아니다</span>.</span></p>
+            <p class="french-translation">"Ce n'est pas parce que c'est cher que c'est forcément de bonne qualité."</p>
+
+            <p style="margin-top:15px;">④ <span class="korean">선생님이<span class="grammar-red">라고 해서</span> 모든 것을 다 아는 것<span class="grammar-red">은 아니다</span>.</span></p>
+            <p class="french-translation">"Ce n'est pas parce qu'on est professeur qu'on sait forcément tout."</p>
+        </div>
+
+        <h3>5. Points importants à retenir</h3>
+
+        <h4>Bonus 1 : -해서 peut être omis</h4>
+        <div class="note-box">
+            <p>Le <span class="korean grammar-red">해서</span> dans -다고 해서 peut être supprimé sans changer le sens :</p>
+            <div class="example-box" style="margin-top:12px;">
+                <p class="korean">좋은 대학교에 간<span class="grammar-red">다고</span> 다 성공하는 것은 아니다.</p>
+                <p class="french-translation">= "Ce n'est pas parce qu'on va dans une bonne université qu'on réussit forcément." ✅</p>
+            </div>
+        </div>
+
+        <h4>Bonus 2 : 다 peut être remplacé par d'autres adverbes</h4>
+        <div class="note-box">
+            <p>Le mot <span class="korean grammar-red">다</span> (= "tout", "forcément") peut être remplacé par d'autres adverbes selon la nuance voulue :</p>
+            <table style="margin-top:12px;">
+                <thead>
+                    <tr>
+                        <th>Adverbe</th>
+                        <th>Sens</th>
+                        <th>Exemple</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="korean grammar-red">다</td>
+                        <td>Tout / forcément</td>
+                        <td class="korean">비싸다고 해서 <span class="grammar-red">다</span> 좋은 것은 아니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="korean grammar-red">언제나</td>
+                        <td>Toujours</td>
+                        <td class="korean">비싸다고 해서 <span class="grammar-red">언제나</span> 좋은 것은 아니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="korean grammar-red">늘</td>
+                        <td>Toujours (habituel)</td>
+                        <td class="korean">단어를 많이 안다고 해서 <span class="grammar-red">늘</span> 말을 잘하는 것은 아니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="korean grammar-red">모두</td>
+                        <td>Tous / tout le monde</td>
+                        <td class="korean">한국 음식이라고 해서 <span class="grammar-red">모두</span> 매운 것은 아니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="korean grammar-red">꼭</td>
+                        <td>Nécessairement</td>
+                        <td class="korean">단어를 많이 안다고 해서 <span class="grammar-red">꼭</span> 말을 잘하는 것은 아니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>6. Erreur courante</h3>
+        <div class="error-box">
+            <p>❌ <span class="korean">비싸다고 해서 다 좋아요.</span></p>
+            <p style="color:#c0392b; margin-top:5px;">→ La phrase affirme le contraire de ce qu'on veut dire !</p>
+        </div>
+        <div class="success-box">
+            <p>✅ <span class="korean">비싸<span class="grammar-red">다고 해서 다</span> 좋은 것<span class="grammar-red">은 아니에요</span>.</span></p>
+            <p class="french-translation">"Ce n'est pas parce que c'est cher que c'est forcément bon."</p>
+        </div>
+        <div class="note-box">
+            <strong>→</strong> <span class="super-important">La négation -은/는 것은 아니다est obligatoire.</span> Sans elle, la phrase dit l'inverse de ce qu'on veut exprimer.
+        </div>
+
+        <h3>7. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <p>Structure identique à la formulation française de la nuance :</p>
+            <ul style="margin-top:10px;">
+                <li>"<strong>Ce n'est pas parce qu'</strong>on est riche <strong>qu'</strong>on est heureux."</li>
+                <li>"Être diplômé <strong>ne garantit pas</strong> le succès."</li>
+                <li>"<strong>Tout ce qui brille</strong> n'est pas or."</li>
+            </ul>
+            <p style="margin-top:10px;"><span class="highlight-yellow">Ce pattern est très utile pour nuancer, corriger une idée reçue, ou exprimer une pensée critique.</span></p>
+        </div>
+
+        <!-- ===== SECTION III : -을 텐데② ===== -->
+        <h2>III. Probabilité comme base d'une action : -을 텐데②</h2>
+
+        <h3>1. Sens et fonction</h3>
+        <p><span class="super-important">Dans ce deuxième emploi, -을 텐데 exprime la probabilité que quelque chose va se produire, et cette probabilité sert de base pour la question, suggestion ou ordre de la deuxième proposition.</span> Le locuteur anticipe une situation probable et en tire une conséquence pratique.</p>
+
+        <div class="note-box">
+            <p><span class="tip-badge">💡 Traduction</span></p>
+            <p>"Comme il va probablement... / Puisque ça va sûrement..., [suggestion / question / ordre]"</p>
+            <p style="margin-top:8px;">Exemple du manuel :</p>
+            <p class="korean">A: 이번 주말에 내장산에 단풍 구경 갈까 해.</p>
+            <p class="korean">B: 내장산은 그때쯤 단풍이 다 질 <span class="grammar-red">텐데</span> 다음 주에 설악산으로 가는 게 어때?</p>
+            <p class="french-translation">"Comme les feuilles d'automne seront probablement toutes tombées à Naejangsan à ce moment-là, que dirais-tu d'aller au mont Seoraksan la semaine prochaine ?"</p>
+        </div>
+
+        <h3>2. Construction grammaticale</h3>
+        <div class="formula">
+            Radical + <strong>-을/ㄹ 텐데</strong> + question / suggestion / ordre (2ème proposition)
+        </div>
+
+        <div class="rule-box">
+            <p><strong>Structure logique :</strong></p>
+            <p style="margin-top:8px;"><strong>[Proposition 1 : probabilité]</strong> + -을 텐데 + <strong>[Proposition 2 : conséquence pratique]</strong></p>
+            <p style="margin-top:8px; color:#7f8c8d;">→ La prop. 1 établit le contexte probable ; la prop. 2 en tire une action concrète (conseil, question, ordre).</p>
+        </div>
+
+        <h3>3. Conjugaison</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Radical</th>
+                    <th>Terminaison</th>
+                    <th>Exemple</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Terminé par une <strong>consonne</strong></td>
+                    <td class="grammar-red">-을 텐데</td>
+                    <td class="korean">늦다 → 늦<span class="grammar-red">을 텐데</span></td>
+                </tr>
+                <tr>
+                    <td>Terminé par une <strong>voyelle</strong></td>
+                    <td class="grammar-red">-ㄹ 텐데</td>
+                    <td class="korean">오다 → 올 <span class="grammar-red">텐데</span></td>
+                </tr>
+                <tr>
+                    <td>Radical en <strong>ㄹ</strong></td>
+                    <td class="grammar-red">-ㄹ 텐데 (ㄹ conservé)</td>
+                    <td class="korean">힘들다 → 힘들 <span class="grammar-red">텐데</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Nom + 이다</strong></td>
+                    <td class="grammar-red">-일 텐데</td>
+                    <td class="korean">학생이다 → 학생일 <span class="grammar-red">텐데</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4. Exemples du manuel</h3>
+        <div class="example-box">
+            <p>① <span class="tip-badge">Pause déjeuner au bureau</span></p>
+            <p class="korean">A: 커피 한 잔 할래요?</p>
+            <p class="korean">B: 늦게 들어가면 부장님이 화 내실 <span class="grammar-red">텐데</span> 얼른 들어갑시다.</p>
+            <p class="french-translation">"Comme le chef va probablement se mettre en colère si on rentre en retard, rentrons vite."</p>
+
+            <p style="margin-top:20px;">② <span class="tip-badge">En classe après les cours</span></p>
+            <p class="korean">A: 숙제 너무 하기 싫어.</p>
+            <p class="korean">B: 계속 미루면 나중에 힘들 <span class="grammar-red">텐데</span> 같이 하자.</p>
+            <p class="french-translation">"Comme ça va sûrement être difficile si on continue à remettre à plus tard, faisons-le ensemble."</p>
+
+            <p style="margin-top:20px;">③ <span class="tip-badge">À la maison, enfant qui rentre</span></p>
+            <p class="korean">A: 학교 다녀왔습니다.</p>
+            <p class="korean">B: 그래. 배고플 <span class="grammar-red">텐데</span> 씻고 와서 간식 먹어.</p>
+            <p class="french-translation">"Bienvenue ! Comme tu as sûrement faim, lave-toi les mains et viens manger une collation."</p>
+        </div>
+
+        <h3>5. Ce qui peut suivre -을 텐데</h3>
+        <div class="rule-box">
+            <p>Contrairement à -을까 봐, <span class="super-important">-을 텐데② peut être suivi de tous les types de phrases</span> :</p>
+            <table style="margin-top:12px;">
+                <thead>
+                    <tr>
+                        <th>Type de suite</th>
+                        <th>Exemple</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Déclaratif</strong> (affirmation)</td>
+                        <td class="korean">비가 올 <span class="grammar-red">텐데</span> 우산을 가져가야 해요.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Propositionnel</strong> (suggestion)</td>
+                        <td class="korean">늦을 <span class="grammar-red">텐데</span> 택시를 탑시다.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Impératif</strong> (ordre)</td>
+                        <td class="korean">배고플 <span class="grammar-red">텐데</span> 간식 먹어.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interrogatif</strong> (question)</td>
+                        <td class="korean">단풍이 다 질 <span class="grammar-red">텐데</span> 설악산으로 가는 게 어때?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>6. Rappel : les deux emplois de -을 텐데</h3>
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>-을 텐데 ①<br><span style="font-size:0.85em; font-weight:400;">(Sogang 3A, Unit 7)</span></th>
+                    <th>-을 텐데 ②<br><span style="font-size:0.85em; font-weight:400;">(présent unit)</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Sens</strong></td>
+                    <td>Prédire quelque chose qui va arriver en exprimant une inquiétude ou une attente</td>
+                    <td>Probabilité d'un événement → base pour une suggestion, question ou ordre</td>
+                </tr>
+                <tr>
+                    <td><strong>Suite possible</strong></td>
+                    <td>Déclaratif, interrogatif, impératif, propositionnel</td>
+                    <td>Déclaratif, interrogatif, impératif, propositionnel</td>
+                </tr>
+                <tr>
+                    <td><strong>Exemple</strong></td>
+                    <td class="korean">비가 올 텐데 걱정이에요.<br><span style="font-size:0.9em; color:#7f8c8d;">"Il va probablement pleuvoir, je m'inquiète."</span></td>
+                    <td class="korean">비가 올 텐데 우산 가져가요.<br><span style="font-size:0.9em; color:#7f8c8d;">"Il va probablement pleuvoir, prenez un parapluie."</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>7. Erreur courante</h3>
+        <div class="error-box">
+            <p>❌ <span class="korean">배고플 텐데 밥을 먹었어요.</span></p>
+            <p style="color:#c0392b; margin-top:5px;">→ La deuxième proposition doit être une suggestion, question ou ordre — pas un fait passé accompli sans lien avec la probabilité.</p>
+        </div>
+        <div class="success-box">
+            <p>✅ <span class="korean">배고플 <span class="grammar-red">텐데</span> 밥 먹어요.</span> <span style="color:#7f8c8d;">(suggestion / invitation)</span></p>
+            <p>✅ <span class="korean">배고플 <span class="grammar-red">텐데</span> 밥 먹읍시다.</span> <span style="color:#7f8c8d;">(propositionnel)</span></p>
+            <p>✅ <span class="korean">배고플 <span class="grammar-red">텐데</span> 뭐 먹을까요?</span> <span style="color:#7f8c8d;">(question)</span></p>
+        </div>
+
+        <h3>8. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <p>Correspond aux constructions causales du français avec probabilité :</p>
+            <ul style="margin-top:10px;">
+                <li>"<strong>Comme tu as probablement faim</strong>, viens manger." → <span class="korean">배고플 <span class="grammar-red">텐데</span> 먹어요.</span></li>
+                <li>"<strong>Puisque ça va sûrement être difficile</strong>, faisons-le ensemble." → <span class="korean">힘들 <span class="grammar-red">텐데</span> 같이 하자.</span></li>
+                <li>"<strong>Il va probablement pleuvoir</strong>, prends un parapluie." → <span class="korean">비가 올 <span class="grammar-red">텐데</span> 우산 가져가.</span></li>
+            </ul>
+            <p style="margin-top:10px;"><span class="highlight-yellow">La logique : j'anticipe une situation probable → j'en tire une action concrète pour toi ou pour nous.</span></p>
+        </div>
+
+        <!-- ===== RÉCAP ===== -->
+        <h2>📋 Récapitulatif</h2>
+
+        <table class="recap-table">
+            <thead>
+                <tr>
+                    <th>Structure</th>
+                    <th>Sens</th>
+                    <th>Exemple clé</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="korean grammar-red">-잖아요</td>
+                    <td>Rappeler un fait déjà connu des deux interlocuteurs pour convaincre<br><span style="font-size:0.9em; color:#7f8c8d;">"tu sais bien que..."</span></td>
+                    <td class="korean">날씨가 덥<span class="grammar-red">잖아요</span>. 냉면 먹어요.<br><span class="french-translation" style="margin:0;">"Tu sais bien qu'il fait chaud. Mangeons des naengmyeon."</span></td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-다고 해서 다<br>-은/는 것은 아니에요</td>
+                    <td>Nuancer une idée reçue / contredire une généralité<br><span style="font-size:0.9em; color:#7f8c8d;">"ce n'est pas parce que... que forcément..."</span></td>
+                    <td class="korean">비싸<span class="grammar-red">다고 해서 다</span> 좋은 것<span class="grammar-red">은 아니에요</span>.<br><span class="french-translation" style="margin:0;">"Ce n'est pas parce que c'est cher que c'est forcément bon."</span></td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-을 텐데②</td>
+                    <td>Probabilité d'une situation → base pour une suggestion, question ou ordre<br><span style="font-size:0.9em; color:#7f8c8d;">"comme il va probablement..., [action]"</span></td>
+                    <td class="korean">배고플 <span class="grammar-red">텐데</span> 간식 먹어.<br><span class="french-translation" style="margin:0;">"Comme tu as sûrement faim, mange une collation."</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>

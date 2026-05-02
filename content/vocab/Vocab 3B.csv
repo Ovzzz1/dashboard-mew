@@ -1,0 +1,477 @@
+한글,French,Example Sentence,Translated Sentence,Explanation
+1과,,,,
+날씨,"météo, temps",오늘 날씨가 정말 좋아요.,Il fait vraiment beau aujourd’hui.,État du temps.
+바람이 강하다,vent fort,바람이 너무 강해요.,Le vent est très fort.,"Rafales, conditions venteuses."
+쌀쌀하다,frisquet,아침엔 좀 쌀쌀해요.,Il fait un peu frais le matin.,Frais désagréable.
+안개가 끼어 있다,il y a du brouillard,안개가 끼어 많아요,Il y a beaucoup de brouillard.,Visibilité réduite.
+태풍이 오다,un typhon arrive,이번 주에 태풍이 와요.,Un typhon arrive cette semaine.,Alerte météo.
+태풍이 지나가다,le typhon passe,,Le typhon est déjà passé.,Après l’orage.
+햇빛이 강하다,soleil fort,오늘은 햇빛이 아주 강해요.,Le soleil tape fort aujourd’hui.,Protection solaire.
+흐리다,temps couvert/grisaille,하늘이 흐려요.,Le ciel est couvert.,Nuageux sans pluie.
+여행지,destination de voyage,인기 있는 여행지는 어디예요?,Quelles destinations sont populaires ?,Lieu de voyage.
+코스,"parcours, itinéraire",여행 코스를 짰어요.,J’ai monté un itinéraire.,Suite d’étapes.
+풍경,paysage,풍경이 정말 아름다워요.,Le paysage est magnifique.,Scènes naturelles/urbaines.
+볼거리,choses à voir,볼거리가 많은 도시예요.,Ville avec beaucoup à voir.,"Attractions, spectacles."
+대나무 숲,forêt de bambous,대나무 숲을 걸었어요.,J’ai marché dans une bambouseraie.,Site naturel.
+동굴,grotte,동굴 관람을 했어요.,J’ai visité une grotte.,Site géologique.
+어시장,marché aux poissons,어시장에서 회를 먹었어요.,J’ai mangé du sashimi au marché.,Produits de la mer.
+해수욕장,plage (baignade),해수욕장에서 놀았어요.,Je me suis amusé à la plage.,Baignade en mer.
+호수,lac,호수 주변을 산책했어요.,J’ai marché autour du lac.,Plan d’eau intérieur.
+일기 예보,prévisions météo,일기 예보를 확인하세요.,Vérifiez la météo.,Bulletin météo.
+최고 기온,température max,오늘 최고 기온은 28도예요.,Max aujourd’hui: 28°C.,Indicateur météo.
+최저 기온,température min,최저 기온은 15도예요.,Min: 15°C.,Indicateur météo.
+레스토랑,restaurant,유명한 레스토랑을 예약했어요.,J’ai réservé un resto célèbre.,Emprunt courant.
+성당,cathédrale/église cath.,성당에 들렀어요.,Je suis passé à la cathédrale.,Édifice religieux catholique.
+한우,bœuf coréen (hanwoo),한우가 정말 맛있어요.,Le hanwoo est délicieux.,Viande premium.
+한우가 부드럽다,Le hanwoo est tendre,한우가 아주 부드러워요.,Le hanwoo est très tendre.,Texture/qualité.
+메다,porter (sur l’épaule),배낭을 메고 갔어요.,Je suis parti avec un sac à l’épaule.,"Pour sac/arme, etc."
+가방을 메다,porter un sac,가방을 메고 출근해요.,Je vais au travail avec un sac.,Collocation fréquente.
+조언하다,conseiller,여행 코스를 조언해 주세요.,Conseillez-moi un itinéraire.,Donner un conseil.
+이/가 (보다) 낫다,être meilleur (que),이 코스가 그거보다 나아요.,Ce parcours est meilleur que l’autre.,Comparatif de supériorité.
+부지런하다,"diligent, matinal",그는 아주 부지런해요.,Il est très diligent.,Opposé de 게으르다.
+맛이 좋다,être bon (goût),이 집 김치찌개 맛이 좋아요.,Leur jjigae est bon.,Goût agréable.
+여러 군데,plusieurs endroits,여러 군데를 돌아봤어요.,J’ai fait plusieurs endroits.,Multiplicité de lieux.
+차가 밀리다,embouteillages,주말엔 차가 많이 밀려요.,Il y a beaucoup de bouchons le week-end.,Trafic chargé.
+향이 좋다,bonne odeur/arôme,이 차는 향이 좋아요.,Ce thé a un bon arôme.,Parfum/nez agréable.
+갔다 와서 보자,On voit ça au retour / on se voit au retour,여행 갔다 와서 보자.,On verra ça après ton retour.,Remettre à plus tard. / se revoir
+재미있게 놀다 와,Amuse-toi bien,여행 재미있게 놀다 와!,Amuse-toi bien en voyage !,Souhait amical.
+낮,journée (jour),낮에는 덥고 밤에는 서늘해요.,"Chaud le jour, frais la nuit.",Période diurne.
+동해안,côte Est (Corée),동해안으로 드라이브 갔어요.,J’ai conduit le long de la côte Est.,Région littorale.
+전국적,national (à l’échelle),전국적으로 비가 와요.,Il pleut à l’échelle nationale.,Portée géographique.
+맞다,être correct,네 말이 맞아.,Tu as raison.,Justesse/correction.
+틀리다,être faux,답이 틀렸어요.,La réponse est fausse.,Erreur.
+취소하다,annuler,예약을 취소했어요.,J’ai annulé la réservation.,Annulation de service.
+22도,22 degrés,실내는 22도예요.,Il fait 22°C à l’intérieur.,Température précise.
+돈을 들이다,dépenser (investir),돈을 많이 들였어요.,On a beaucoup dépensé.,Coût consenti.
+시간을 들이다,consacrer du temps,시간을 충분히 들였어요.,J’y ai consacré assez de temps.,Investissement temporel.
+둘이서 갈게요,On y va à deux,예약은 둘이서 갈게요.,"Pour la résa, on sera deux.",Nombre de personnes.
+새벽,aube,새벽에 출발했어요.,Je suis parti à l’aube.,Très tôt le matin.
+시계탑,tour horloge,시게탑 앞에서 만나자.,On se voit devant la tour horloge.,Point de repère urbain.
+패스트푸드점,fast-food,패스트푸드점에서 점심 먹었어요.,J’ai déjeuné au fast-food.,Chaîne/restauration rapide.
+해,"soleil, année (selon)",해가 강하게 비쳐요.,Le soleil brille fort.,Ici: astre solaire.
+해가 뜨다,le soleil se lève,해가 일찍 떴어요.,Le soleil s’est levé tôt.,Aube/lever du jour.
+잡다,"attraper, saisir",택시를 잡았어요.,J’ai attrapé un taxi.,"Polyvalent: saisir, capturer, héler."
+아쉽다,"dommage, regret",시간이 없어 아쉬워요.,Dommage qu’on manque de temps.,Regret léger.
+밤새,toute la nuit,밤새 비가 내렸어요.,Il a plu toute la nuit.,Durée nocturne complète.
+방금,à l’instant,방금 도착했어요.,Je viens d’arriver.,Très récent.
+땀이 나다,transpirer,더워서 땀이 나요.,Je transpire à cause de la chaleur.,Sudation.
+살아 있다,être vivant,전통이 아직 살아 있어요.,La tradition est encore vivante.,Vivant/encore en vigueur.
+살아 있는 생선,poisson vivant,살아 있는 생선을 팔아요.,On vend du poisson vivant.,Frais au marché/restaurant.
+,,,,
+2과,,,,
+국사,nouilles,국사 시험을 준비해요.,Je prépare l’examen d’histoire coréenne.,"Étude de l’histoire coréenne (dynasties, guerres, culture). Matière scolaire qui met l’accent sur l’identité nationale."
+닭 칼국수,soupe de nouilles et poulet,닭 칼국수를 두 그릇 시켰어요.,On a commandé deux bols de nouilles au poulet.,"Plat chaud, bouillon clair avec nouilles coupées à la main et poulet. Considéré comme réconfortant, souvent mangé les jours de pluie."
+나물,légumes assaisonnés,나물 반찬을 좋아해요.,J’aime les légumes assaisonnés.,Ensemble de légumes cuits ou crus relevés d’huile de sésame et sauce soja. Servis comme accompagnement (반찬).
+돌솥 비빔밥,bibimbap en bol de pierre,돌솥 비빔밥 하나 주세요.,"Un bibimbap en marmite, s’il vous plaît.","Version servie dans un bol de pierre brûlante : le riz croustille au fond, souvent garni de légumes, œuf et sauce gochujang."
+콩나물 국밥,soupe de riz aux germes de soja,콩나물 국밥은 시원해요.,La soupe de soja est rafraîchissante.,"Spécialité régionale chaude et légère, réputée pour “rafraîchir” le corps. Souvent recommandée contre la gueule de bois."
+전,crêpe coréenne salée,김치전을 부쳤어요.,J’ai fait des crêpes au kimchi.,"Friture plate à base de pâte de farine et divers ingrédients ; existe en versions au kimchi, fruits de mer, courgettes, etc."
+탕,"soupe claire, bouillon",갈비탕을 먹었어요.,J’ai pris un bol de soupe de côtes.,"Mot générique pour les soupes longues à cuire, claires, plus “sérieuses” que 찌개. Nourrissant et souvent consommé comme repas complet."
+갈비탕,soupe de côtes de bœuf,갈비탕은 국물이 진해요.,Le bouillon du galbitang est riche.,"Bouillon de bœuf clair préparé avec des os et des côtes, servi chaud, considéré comme plat énergisant."
+해물탕,soupe de fruits de mer,해물탕이 매워요.,La soupe est très épicée.,"Mélange pimenté de crustacés, coquillages, tofu et légumes. Goût fort, très populaire en hiver."
+한정식,menu traditionnel coréen,한정식을 먹었어요.,J’ai dégusté un menu hanjeongsik.,Repas complet coréen avec de nombreux plats variés servis à la fois ; symbole d’élégance et d’abondance dans la gastronomie locale.
+고추장,pâte de piment rouge fermentée,고추장을 넣었어요.,J’ai ajouté du gochujang.,Ingrédient essentiel coréen (fermentation de piment + riz + soja). Base du goût “épicé-sucré-fermenté” de nombreux plats.
+밀가루,farine de blé,밀가루 음식이 좋아요.,J’aime les plats à base de farine.,Ingrédient de base pour pâtes (칼국수) ou crêpes (전). Peut désigner les plats “occidentaux” : 밀가루 음식.
+파,oignon vert,파를 썰어 넣었어요.,J’ai coupé et ajouté de la ciboule.,"Garniture omniprésente dans la cuisine coréenne, apporte fraîcheur et parfum. Utile en soupe, omelette, kimchi, etc."
+해물,fruits de mer,해물 볶음밥이에요.,C’est du riz sauté aux fruits de mer.,"Désigne l’ensemble des ingrédients issus de la mer : crevettes, seiche, moules, etc. Combine souvent avec 전, 찌개, 볶음."
+덜다,se servir (transférer un peu),자기 그릇에 덜어 주세요.,Servez-vous un peu dans votre bol.,Action de prélever du plat commun dans son assiette : geste de partage et de politesse.
+비비다,mélanger (aliment),비빔밥을 잘 비비세요.,Mélangez bien le bibimbap.,"Action d’incorporer tous les ingrédients avant de manger, pour homogénéiser les saveurs ; typique du bibimbap."
+싸다,envelopper,고기를 쌌어요.,J’ai enveloppé la viande.,"Empaqueter un aliment dans une feuille, une algue, ou un emballage ; aussi “emballer” au sens pratique."
+상추에 싸다,envelopper dans de la laitue,상추에 고기를 싸서 먹어요.,On mange la viande roulée dans une feuille de laitue.,"Manière traditionnelle de manger le barbecue (삼겹살). Permet de combiner viande, riz, ail, sauce, en une bouchée."
+찍다,tremper (dans une sauce),간장에 찍어 드세요.,Trempez dans la sauce soja.,"Action de plonger brièvement dans une sauce ; typique avec mandu, 전, 고기 grillée."
+양념간장에 찍다,tremper dans la sauce soja épicée,만두를 양념간장에 찍었어요.,J’ai trempé les raviolis dans la sauce.,"Sauce composée de soja, vinaigre, piment, ail. Geste quasi automatique à table."
+둘이 먹다가 하나 죽어도 모를 만큼 맛있어요,“Tellement bon qu’on en oublierait tout”,이 음식은 정말 그렇게 맛있어요.,C’est si bon qu’on en oublierait le monde.,"Expression typiquement coréenne, humoristique, utilisée pour exagérer le goût exceptionnel d’un plat."
+뭐 드실래요?,Que souhaitez-vous manger ?,뭐 드실래요?,Qu’est-ce que vous allez prendre ?,Formule polie standard pour proposer un plat ou prendre commande au restaurant.
+뭘로 만든 거예요?,C’est fait avec quoi ?,이건 뭘로 만든 거예요?,C’est fait à partir de quoi ?,Manière naturelle de demander les ingrédients d’un plat ou d’un objet.
+아무거나 다 잘 먹어요,Je mange de tout,아무거나 다 잘 먹어요.,Je ne suis pas difficile.,Manière modeste et polie de dire “je ne choisis pas” ; souvent au resto ou chez quelqu’un.
+좀 덜 맵게 해 주세요,Un peu moins épicé svp,좀 덜 맵게 해 주세요.,"Faites-le un peu moins épicé, s’il vous plaît.",Formel et courant pour adapter le niveau de piment selon les goûts.
+국물,bouillon,국물이 진해요.,Le bouillon est riche.,"Partie liquide d’un plat (탕, 찌개). Très valorisée dans la culture culinaire coréenne."
+후식,dessert,후식으로 과일이 나왔어요.,On a eu des fruits en dessert.,"Dessert léger après le repas : fruits, thé, café, ou petit snack."
+메뉴,menu (liste de plats),메뉴에 김치찌개가 있어요.,Il y a du kimchi jjigae au menu.,Récapitulatif verbal ou papier des plats disponibles.
+메뉴판,"carte, menu imprimé",메뉴판 좀 주세요.,"La carte, s’il vous plaît.","Support physique pour commander, souvent plastifié dans les petits restaurants."
+빼다,retirer/enlever,파 좀 빼 주세요.,"Enlevez les oignons verts, s’il vous plaît.",Servi pour omettre un ingrédient particulier lors de la commande.
+돼지고기 빼고,sans porc,저는 돼지고기 빼고 주세요.,"Pour moi, sans porc.","Précision fréquente, notamment pour des raisons religieuses ou de goût."
+요청하다,"demander, solliciter",도움을 요청했어요.,J’ai demandé de l’aide.,"Forme écrite et polie, employée dans les contextes formels ou administratifs."
+부족하다,"manquer de, insuffisant",시간이 부족해요.,Il me manque du temps.,"Quantité ou capacité trop faible ; nuance objective, sans ton dramatique."
+덜,"moins, pas complètement",덜 익었어요.,Ce n’est pas assez cuit.,Adverbe indiquant le manque d’un degré ou d’une intensité.
+오래,longtemps,오래 기다렸어요?,Vous avez attendu longtemps ?,Sert à exprimer la durée ; souvent opposé à “금방” (rapidement).
+자세히,en détail,자세히 설명해 주세요.,"Expliquez en détail, s’il vous plaît.","Indique le soin, la précision d’une explication ou observation."
+불판을 갈다,changer la grille du grill,불판 좀 갈아 주세요.,Pouvez-vous changer la grille ?,"Formule classique au barbecue coréen, quand la plaque devient grasse ou brûlée."
+더위,chaleur (forte),더위를 많이 타요.,Je supporte mal la chaleur.,"Fait de ressentir la chaleur ; souvent utilisé avec 덥다, 참다."
+복날,“jours de canicule” (3 jours spéciaux d’été),복날에는 삼계탕을 먹어요.,On mange du poulet pendant le Boknal.,Croyance traditionnelle : manger chaud pour “combattre le chaud”.
+초복,premier jour de Boknal,초복에 삼계탕을 먹었어요.,J’ai mangé du samgyetang au premier Boknal.,Annonce le début des grandes chaleurs (mi-juillet).
+중복,deuxième Boknal,중복은 더 더워요.,Il fait encore plus chaud au 2ᵉ Boknal.,"Journée du milieu, souvent la plus étouffante."
+말복,dernier Boknal,말복이 지나면 가을이에요.,"Après le dernier Boknal, c’est l’automne.",Clôture de la période des grandes chaleurs.
+종류,"type, sorte, gamme",여러 종류의 전이 있어요.,Il y a plusieurs types de jeon.,Catégorie ou variété ; très productif avec tous les noms concrets.
+줄,"file, rangée, ligne",줄을 서 주세요.,"Faites la queue, s’il vous plaît.","Peut désigner une file d’attente, une rangée d’objets ou un “trait” sur papier."
+줄을 서다,faire la queue,사람들이 줄을 서 있어요.,Les gens font la queue.,"Formule fixe ; comportement ordonné auprès de stands, restaus, bus."
+차례,"tour, ordre",이제 제 차례예요.,C’est mon tour maintenant.,Désigne aussi l’ordre rituel ou un rite ancestral (selon contexte).
+힘이 생기다,retrouver des forces,삼계탕 먹으니 힘이 생겼어요.,"Après le samgyetang, je me sens en forme.",Sentiment d’énergie retrouvée après un repas ou un repos.
+네? 뭐라고요?,Pardon ? Que dites-vous ?,네? 뭐라고요?,"Pardon, vous avez dit ?","Réplique polie pour faire répéter, typique de la conversation naturelle."
+닭이 다 떨어졌어요,On n’a plus de poulet,오늘 닭이 다 떨어졌어요.,On est à court de poulet aujourd’hui.,Expression pour annoncer une rupture de stock au resto ou au marché.
+"아, 그렇군요","Ah, je vois","아, 그렇군요.","Ah, je comprends.","Réponse polie montrant l’écoute et l’accord ; ton formel, utilisé aussi en travail."
+이야기 좀 하면서 기다리지요,Attendons en discutant un peu,"이야기 좀 하면서 기다리지요, 뭐.",Attendre tranquillement en discutant.,"Expression amicale, détendue : on ne presse pas les choses."
+이제 우리 차례예요,C’est notre tour maintenant,이제 우리 차례예요.,C’est enfin notre tour.,Expression typique dans une file d’attente ou un service.
+점심시간이 다 됐네요,C’est presque l’heure du déjeuner,점심시간이 다 됐네요.,Il est presque midi.,"Observation de situation, façon polie d’introduire une pause."
+속, intérieur/esrtomac (pas scientifique),속이 안 좋아요.,J’ai mal à l’estomac.,"Peut désigner soit l’intérieur du corps (胃), soit la « pensée intérieure ». Très fréquent avec verbes composés."
+속이 불편하다,avoir l’estomac dérangé,기름진 음식 먹어서 속이 불편해요.,J’ai l’estomac barbouillé après avoir mangé gras.,Expression de malaise digestif ; peut aussi se dire figurativement (mal à l’aise).
+속이 시원하다,"être soulagé, se sentir bien",말하고 나니 속이 시원해요.,Je me sens soulagé après l’avoir dit.,"Expression d’un soulagement profond, soit physique, soit émotionnel."
+달콤하다,être doux/sucré,달콤한 디저트를 좋아해요.,J’aime les desserts sucrés.,"Désigne un goût sucré, mais peut aussi qualifier une parole ou atmosphère “douce”."
+거의,"presque, quasiment",거의 다 왔어요.,On est presque arrivés.,Adverbe de quasi-réalisation ; marque la proximité dans le temps ou la distance.
+그동안 잘 지내셨어요?,Vous alliez bien depuis le temps ?,그동안 잘 지내셨어요?,Comment allez-vous depuis tout ce temps ?,"Formule de retrouvailles polie et chaleureuse, souvent lors de rencontres après plusieurs semaines/mois."
+끓다,faire bouillir,물을 끓고 있어요.,je fais bouillir l'eau.,"Sert aussi pour “être en effervescence” (rage, passion, foule) selon le contexte."
+,,,,
+,,,,
+3과,,,,
+안과,ophtalmologie,눈이 아파서 안과에 갔어요.,Je suis allé(e) chez l’ophtalmologue parce que j’avais mal aux yeux.,"Service médical spécialisé dans les yeux et la vision. Utilisé pour problèmes de vue, infections, lentilles, etc."
+이비인후과,oto‑rhino‑laryngologie (ORL),귀가 먹먹해서 이비인후과에 갔어요.,J’ai consulté un ORL pour mes oreilles bouchées.,"S’occupe des oreilles, du nez et de la gorge. Terme courant pour maux de gorge, otites, sinusites."
+피부과,dermatologie,여드름 때문에 피부과에 다녀요.,Je vais chez le dermatologue pour l’acné.,"Clinique pour la peau (acné, éruptions, soins esthétiques). Très fréquent pour traitements et conseils cosmétiques."
+내과,médecine interne  (médecine générale),감기 증상으로 내과에 다녀왔어요.,Je suis allé au service de médecine interne pour des symptômes de rhume.,"Spécialité traitant des maladies internes non chirurgicales (rhume, 고혈압, 당뇨, 소화기 질환 등). Clinique/hôpital: 내과 진료, 내과 의사."
+증상,symptôme,증상이 어떤가요?,Quels sont vos symptômes ?,"Terme générique médical pour décrire ce que ressent le patient (fièvre, toux, douleur). Utilisé dans les échanges médecin‑patient."
+가스가 차다,"être ballonné, avoir des gaz",가스가 차서 배가 불편해요.,"J’ai des gaz, mon ventre est inconfortable.","Expression pour l’inconfort digestif (ballonnements, flatulences). Peut causer douleur ou sensation de plénitude."
+눈이 충혈되다,avoir les yeux rouges,밤새워서 눈이 충혈됐어요.,Mes yeux sont rouges après une nuit blanche.,"Rougeur due à fatigue, irritation, allergie ou infection; souvent visible et fréquent."
+두통이 심하다,avoir de violents maux de tête,두통이 심해서 일을 못 했어요.,J’avais si mal à la tête que je n’ai pas pu travailler.,Indique une douleur intense; peut justifier un analgésique ou visite médicale si persistant.
+속이 답답하다,avoir l’estomac serré / sensation d’oppression,속이 답답하고 힘이 없어요.,J’ai une sensation d’oppression dans l’estomac et je suis faible.,"Peut être digestif (indigestion) ou émotionnel (stress, anxiété). Contexte détermine le sens."
+속이 쓰리다,avoir des brûlures d’estomac,매운거 먹고 속이 쓰려요.,J’ai des brûlures d’estomac après avoir mangé épicé.,Sensation de brûlure/irritation gastrique liée à l’acidité ou au reflux.
+얼굴에 뭐가 나다,avoir des boutons / imperfections,스트레스 받아서 얼굴에 뭐가 났어요.,J’ai des boutons au visage à cause du stress.,Expression naturelle pour dire qu’une éruption ou des imperfections sont apparues sur le visage.
+콧물이 나다,avoir le nez qui coule,감기 걸려서 콧물이 나요.,"J’ai le nez qui coule, j’ai attrapé un rhume.",Très courant pour rhume/allergie; littéralement « du nez sort ».
+토하다,vomir,배 아파서 토했어요.,J’ai vomi parce que j’avais mal au ventre.,Verbe direct et courant; usage médical: 구토하다 (plus formel). Peut indiquer intoxication ou maladie gastro‑intestinale.
+깁스를 하다,porter un plâtre,팔에 깁스를 했어요.,J’ai un plâtre au bras.,Action/état après fracture ou blessure osseuse. S’emploie dans le contexte orthopédique.
+넘어지다,tomber,계단에서 넘어졌어요.,Je suis tombé(e) dans les escaliers.,"Perdre l’équilibre et chuter; peut entraîner contusions, entorses, fractures."
+미끄러지다,glisser,길이 얼어서 미끄러졌어요.,J’ai glissé sur la route gelée.,Glisser sur une surface; souvent cause d’accidents domestiques ou extérieurs.
+발목을 삐다,se fouler la cheville,운동하다가 발목을 삐었어요.,Je me suis foulé(e) la cheville en faisant du sport.,"« 삐다/삐다 » = se fouler, tordre une articulation; provoque douleur, enflure; traitement: repos, glaçage, bandage."
+와/과 부딪치다,"heurter, entrer en collision (avec)",자전거와 부딪쳤어요.,Je suis entré(e) en collision avec un vélo.,와/과 s’utilisent selon la terminaison précédente (consonne/voyelle). Verbe pour chocs physiques entre objets/personnes.
+부러지다,"se casser (os, objet)",뼈가 부러졌어요.,J’ai un os cassé.,Utilisé pour fractures d’os ou rupture d’objets longs; souvent suivi de radiographie et immobilisation.
+손을 불에 데다,se brûler la main,뜨거운 냄비에 손을 데었어요.,Je me suis brûlé(e) la main sur une casserole chaude.,"« 데다 » = se brûler par contact avec chaleur; degrés et soins varient (refroidir, désinfecter)."
+손을 칼에 베다,se couper la main avec un couteau,요리하다가 손을 칼에 베었어요.,Je me suis coupé(e) en cuisinant.,"Coupure par lame; selon profondeur, nettoyages, points de suture possibles."
+어떻게 하다가 그랬어요?,Comment cela s’est‑il produit ?,어제 넘어졌다고요? 어떻게 하다가 그랬어요?,Vous êtes tombé(e) hier ? Comment cela est‑il arrivé ?,Question courante d’un médecin ou proche pour connaître le mécanisme de la blessure (important pour diagnostic).
+규칙적,régulier,규칙적으로 운동하세요.,Faites de l’exercice régulièrement.,"Qualifie une habitude qui se répète selon une routine; souvent conseillé en santé (sommeil, repas, sport)."
+발목,cheville,발목이 부었어요.,Ma cheville est enflée.,Partie du corps entre jambe et pied; fréquente pour entorses et foulures.
+접수,"enregistrement, accueil",접수 먼저 하세요.,Enregistrez‑vous d’abord.,"Terme administratif/bureau pour l’acte d’inscription ou réception de dossier (hôpital, concours)."
+접수처,"guichet d’accueil, réception",접수처가 1층에 있어요.,La réception est au rez‑de‑chaussée.,"Lieu physique où l’on dépose dossiers, prend rendez‑vous ou paie; point de départ des démarches."
+접수를 하다,"s’enregistrer, déposer (dossier)",병원에서 접수를 했어요.,Je me suis enregistré(e) à l’hôpital.,Action effectuée par le patient ou son accompagnant pour commencer la procédure administrative.
+접수를 받다,recevoir des inscriptions,지금 접수를 받고 있습니다.,Nous acceptons les inscriptions maintenant.,Formulation côté établissement; indique qu’on enregistre les demandes/dossiers.
+진찰,"consultation médicale, examen",진찰 전에 체온을 재요.,On prend la température avant la consultation.,"Examen clinique réalisé par un médecin (auscultation, palpation, questions). Mot courant sur feuille et en discussion."
+진찰을 받다,se faire examiner,병원에서 진찰을 받았어요.,J’ai été examiné(e) à l’hôpital.,Expression complète pour décrire la visite médicale; souvent suivie de 처방.
+처방,ordonnance,의사가 처방을 해줬어요.,Le médecin m’a donné une ordonnance.,Document ou indication pharmaceutique listant médicaments et posologie.
+처방하다,prescrire,의사가 약을 처방했어요.,Le médecin a prescrit des médicaments.,Action du médecin; formelle et réglementée (certaines substances nécessitent ordonnance).
+환자,patient,환자가 많아서 대기 시간이 길어요.,"Il y a beaucoup de patients, l’attente est longue.","Personne recevant des soins médicaux; utilisé dans hôpitaux, cliniques."
+내려가다,descendre (e.g. : escalier); baisser (fièvre),열이 내려가서 한결 편해요.,"La fièvre a baissé, ça va mieux.","Mouvement vers le bas physique, ou diminution (température, intensité)."
+급하다,"urgent, pressé",일이 급해서 병원에 빨리 갔어요.,"C’était urgent, je suis allé(e) vite à l’hôpital.",Sens d’urgence ou de précipitation; peut qualifier une situation médicale ou comportementale.
+급하게 먹다,manger trop vite,급하게 먹어서 체했어요.,J’ai mal digéré parce que j’ai mangé trop vite.,"Manger en hâte peut provoquer indigestion, reflux, étouffement; souvent déconseillé."
+차다,être froid / être plein,손이 차요. / 가방이 꽉 차요.,Mes mains sont froides. / Le sac est plein.,Mot polyvalent : froid au toucher (médical/confort) ou rempli; sens dépend du contexte.
+찬 음식,plat froid,감기 걸렸을 때 찬 음식은 피하세요.,Évitez les plats froids quand vous avez un rhume.,"Dans la pratique populaire, les aliments froids peuvent être déconseillés pour l’estomac ou lors d’un rhume."
+렌즈를 끼다,mettre des lentilles,아침에 렌즈를 끼고 출근해요.,Je mets mes lentilles le matin avant d’aller au travail.,Verbe standard pour insérer lentilles de contact; attention à l’hygiène (risques infectieux).
+약을 짓다,préparer un médicament (pharmacien / herboriste),약국에서 한약을 지어 드렸습니다.,Nous avons préparé l’herbe médicinale pour vous à la pharmacie.,S’emploie pour la préparation sur mesure (principalement en médecine traditionnelle ou officinale).
+많이 놀랐겠어요,Vous avez dû avoir très peur (ou être très surpris),많이 놀랐겠어요—괜찮으세요?,Vous avez dû être très choqué — ça va ?,"Expression empathique utilisée par médecins, infirmiers ou proches après un accident ou mauvaise nouvelle."
+어디 좀 봅시다,Laissez‑moi voir / Voyons ça,상처를 보세요—어디 좀 봅시다.,Regardez la blessure — voyons un peu.,Phrase professionnelle qu’un médecin/infirmier dira avant d’examiner une blessure ou symptôme.
+소화제,médicament digestif,소화제를 먹고 나니 속이 편해졌어요.,"Après le digestif, je me sens mieux.",Remède courant contre lourdeurs/brûlures d’estomac. S’achète facilement en pharmacie; souvent conseillé après repas copieux.
+식후,après le repas,이 약은 식후에 드세요.,Prenez ce médicament après le repas.,"Indication fréquente sur ordonnances/boîtes. Opposé: 식전 (avant repas), 식간 (entre repas)."
+약사,pharmacien,궁금한 점은 약사에게 물어보세요.,Posez vos questions au pharmacien.,"Professionnel qui délivre les médicaments, explique posologie/effets secondaires; premier conseil accessible."
+위,estomac,위가 안 좋아서 매운 걸 못 먹어요.,"Mon estomac est fragile, je ne peux pas manger épicé.","Organe; entre souvent dans composés médicaux (위염, 위궤양). Ne pas confondre avec 위(上)=“au‑dessus”."
+위염,gastrite,스트레스로 위염이 심해졌어요.,Ma gastrite s’est aggravée à cause du stress.,"Inflammation de l’estomac: douleurs, brûlures, nausées. Requiert souvent régime doux + traitement acide."
+자극적(이다)," (être) irritant, très relevé",자극적인 음식은 당분간 피하세요.,Évitez les aliments trop relevés pour l’instant.,"Qualifie plats épicés/salés/gras/acides qui “agressent” l’estomac ou la peau. Contextes: diète, dermatologie."
+다치다,,,,
+처방전,ordonnance,처방전을 약국에 제출하세요.,Remettez l’ordonnance à la pharmacie.,Document du médecin listant médicaments et posologie. Nécessaire pour certains produits.
+치료,"traitement, soin",적절한 치료가 필요해요.,Un traitement approprié est nécessaire.,"Processus de soins (médicaments, thérapies). Terme général, médical ou psychologique."
+치료를 받다,recevoir un traitement,병원에서 꾸준히 치료를 받고 있어요.,Je suis un traitement régulier à l’hôpital.,Formulation côté patient; insiste sur la continuité et l’encadrement professionnel.
+음식이 부드럽다,nourriture tendre,회복 중이라 음식이 부드러워요.,"En convalescence, la nourriture est tendre.","Texture facile à mâcher/digerer (죽, 두부…). Recommandée pour troubles digestifs ou dentaires."
+꾸준히,"continuellement, avec constance",꾸준히 운동하면 효과가 있어요.,Le sport régulier porte ses fruits.,Insiste sur la constance à long terme. Pas vraiment aussi structuré que 큐칙적 mais Valeur clé en santé/études/habitudes.
+3일치,pour trois jours (quantité),약은 3일치로 처방됐어요.,Les médicaments sont pour trois jours.,Indique la durée couverte par l’ordonnance. Structure productive: N일치/N주치.
+뭐 잘못 드셨어요?,Vous avez mangé quelque chose de mauvais ?,배탈 나셨다구요? 뭐 잘못 드셨어요?,Vous avez mal au ventre? Vous avez mangé quelque chose de mauvais?,"Question typique du médecin pour suspecter intoxication/intolérance. Polie, conversationnelle."
+아이고,oh là là; mince…,"아이고, 많이 속상하셨겠어요.","Oh là là, ça a dû être pénible.","Interjection empathique ou surprise. Très naturel et fréquent, de ton familier à respectueux selon intonation."
+어떻게 오셨어요?,Qu’est‑ce qui vous amène ?,병원에서 “어떻게 오셨어요?”라고 물어요.,"À l’hôpital, on demande « Qu’est‑ce qui vous amène ? ».",Formule standard d’accueil pour connaître le motif de venue (symptômes/problème).
+지금 가 봐야겠어요,Il faut que j’y aille maintenant,상태가 심해서 지금 가 봐야겠어요.,"C’est sérieux, je dois y aller maintenant.",Indique décision immédiate de se déplacer (urgence/impératif). Poli et ferme.
+건강식품,produits de santé,부모님께 건강식품을 선물했어요.,J’ai offert des produits de santé à mes parents.,"Catégorie large (miel, 홍삼, 비타민). Entre aliment et complément; très populaire comme cadeau."
+달리기,course à pied,아침 달리기를 습관으로 만들었어요.,J’ai fait de la course matinale une habitude.,Exercice simple pour cardio/stress. Collocations: 달리기를 하다/즐기다/시작하다.
+마찬가지,"pareil, idem",저도 마찬가지예요.,"Moi aussi, pareil.","Sert à marquer la même opinion/situation. Polie, omniprésente en conversation."
+문화생활,vie culturelle,바쁜데도 문화생활을 챙겨요.,"Même occupé, je garde une vie culturelle.","Film, expo, théâtre, concert… Marque l’équilibre et l’enrichissement personnel."
+사우나,sauna,운동 후에 사우나 가면 피로가 풀려요.,Le sauna après sport détend.,Très courant en Corée (찜질방). Contexte détente/santé sociale (amis/collègues).
+수,nombre; moyen; possibilité,참가 수가 부족해요.,Le nombre de participants est insuffisant.,"Nom polyvalent: “nombre” (인원 수), “moyen/solution” (방법/수단), “possibilité” (할 수 있다). Le sens dépend du contexte."
+수다,"bavardage, papote",친구랑 수다 떨다 보니 시간이 금방 갔어요.,"À force de papoter, le temps a filé.","Conversation légère entre proches; positif (liens sociaux, défouloir). Verbe: 수다를 떨다."
+술자리,moment pour boire,회식 후 술자리가 길어졌어요.,"Après le dîner d’équipe, la soirée arrosée s’est prolongée.","Contexte social/entreprise; peut impliquer étiquette (boire avec modération, respect des aînés)."
+영양제,compléments nutritionnels,피곤해서 영양제를 챙겨 먹어요.,"Fatigué, je prends des compléments.",Vitamines/minéraux/probiotiques. Nuance pratique et non médicale stricte.
+육체,corps (physique),육체와 정신의 균형이 필요해요.,Il faut l’équilibre du corps et de l’esprit.,"Terme formel/abstrait, souvent opposé à 정신. Contexte santé, philosophie, travail physique."
+인삼,ginseng,인삼은 원기 회복에 좋아요.,Le ginseng aide à retrouver de l’énergie.,"Racine emblématique (홍삼 = ginseng rouge). Boissons, infusions, extraits; cadeau de prestige."
+전부,"tout, entièrement",비용은 전부 제가 낼게요.,Je paierai tout.,Synonyme de 모두/다 mais nuance d’entièreté forte. Très courant en promesse ou bilan.
+최근,récemment; récent,최근에 운동을 다시 시작했어요.,J’ai récemment repris le sport.,"Marque une période proche; utile pour actualiser un état (최근 근황, 최근 소식)."
+한약,remède de médecine traditionnelle,한의원에서 한약을 지었어요.,La clinique orientale m’a préparé des herbes.,"Préparations sur mesure; prises selon “복용법”. Voc: 한의사 (praticien), 탕약/환약 (formes)."
+흡연,tabagisme; fumer,이 건물은 흡연이 금지예요.,Fumer est interdit dans ce bâtiment.,"Usage formel (panneaux, règlements). Collocations: 흡연구역/금연구역."
+복용하다,prendre (un médicament),처방약을 규칙적으로 복용하세요.,Prenez votre traitement régulièrement.,Verbe formel écrit/oral médical. Plus soutenu que 먹다/마시다 pour médicaments.
+조사하다,"enquêter, examiner",부작용 원인을 조사하고 있어요.,On examine la cause des effets secondaires.,"Recherche dans contexte médical, académique, administratif. Nom: 조사(연구)."
+아깝다,regrettable (gâchis),이렇게 버리기엔 아깝네요.,Ce serait dommage de jeter ça.,"Sentiment de perte d’une ressource (temps, argent, effort). Nuance émotionnelle fréquente."
+돈이 아깝다,regretter l’argent dépensé,품질이 별로라 돈이 아까웠어요.,"Vu la qualité, j’ai regretté l’argent dépensé.",Variante concrète de 아깝다 centrée sur le coût/performance. Très idiomatique au quotidien.
+정신 건강,santé mentale,회사에서 정신 건강 프로그램을 운영해요.,L’entreprise propose un programme de santé mentale.,"Bien‑être psychique/émotionnel. Collocations: 상담(consultation), 관리(gestion), 회복(guérison)."
+스트레스가 쌓이다,accumuler du stress,마감이 겹쳐서 스트레스가 쌓였어요.,Les deadlines qui s’enchaînent m’ont stressé.,"Processus graduel; déclencheurs: travail, relations, santé. Souvent amène à “풀다/해소하다”."
+스트레스를 풀다,"déstresser, relâcher",음악 들으며 스트레스를 풀어요.,J’évacue le stress en écoutant de la musique.,"Verbe usuel pour méthodes personnelles (sport, hobbies, sauna, voyage)."
+스트레스 해소 방법,méthode pour réduire le stress,본인만의 스트레스 해소 방법이 있나요?,As‑tu ta méthode pour déstresser ?,"Expression nominale pour lister/recommander stratégies (명상, 달리기, 수다 등)."
+인기를 끌다,gagner en popularité,그 제품이 SNS에서 인기를 끌고 있어요.,Ce produit devient populaire sur les réseaux.,"Locution figée: “attirer la popularité/attention”. Contexte médias, tendances, marketing."
+,,,,
+4과,,,,
+TV 홈쇼핑,télé-achat TV,TV 홈쇼핑에서 샀어요.,Je l’ai acheté via le télé-achat.,Chaînes TV vendant des produits avec promotions limitées. Commande par téléphone/app ou site.
+대형 할인 매장,hypermarché à bas prix,대형 할인 매장에서 장 봤어요.,J’ai fait les courses dans un hyper discount.,"Grandes surfaces (type E‑Mart, Homeplus) avec prix compétitifs et cartes de fidélité."
+벼룩시장,marché aux puces,주말에 벼룩시장에 가요.,Je vais au marché aux puces ce week-end.,"Marché d’occasion, troc, artisanat. Prix négociables."
+인터넷 쇼핑몰,boutique en ligne,인터넷 쇼핑몰에서 주문했어요.,J’ai commandé sur une boutique en ligne.,"Sites/plates-formes e‑commerce. Livraison rapide, options de retour."
+전자 상가,centre d’électronique,전자 상가에서 비교해 봐요.,Comparons au centre d’électronique.,"Ensemble de magasins d’électronique (ex. Yongsan). Prix négociables, beaucoup de modèles."
+제품,produit,이 제품은 품질이 좋아요.,Ce produit est de bonne qualité.,"Terme générique pour article commercial. Souvent avec 신제품, 전자 제품."
+신제품,nouveau produit,신제품이 출시됐어요.,Un nouveau produit est sorti.,Sortie récente; souvent accompagné de promos et de démos.
+전자 제품,produit électronique,전자 제품은 A/S가 중요해요.,Le SAV est crucial pour l’électronique.,"Inclut TV, PC, rasoirs, aspirateurs. A/S = service après-vente."
+면도기,rasoir (électrique),면도기가 고장났어요.,Mon rasoir est en panne.,Peut être manuel ou électrique; souvent classé en “전자 제품” s’il est électrique.
+기능,"fonction, fonctionnalité",어떤 기능이 있어요?,Quelles fonctionnalités y a‑t‑il ?,"Détaille capacités techniques (Wi‑Fi, Bluetooth, etc.)."
+건조 기능,fonction séchage,건조 기능이 있어서 편해요.,La fonction séchage est pratique.,"Machines à laver, lave-vaisselle, sèche-cheveux; “드럼 세탁기 건조 기능”."
+녹음 기능,fonction d’enregistrement,이 기계에 녹음 기능이 있어요.,Cet appareil a une fonction d’enregistrement.,"Dictaphones, smartphones, appareils multi‑médias."
+반복 기능,fonction répétition,반복 기능으로 다시 들어요.,Je réécoute avec la fonction répétition.,"Lecture en boucle (audio/vidéo), utile pour l’étude des langues."
+음성,"voix, audio",음성 안내가 나와요.,Une annonce vocale sort.,"Peut être “voix humaine” ou “audio” (assistant vocal, messages)."
+자동 응답 기능,répondeur automatique,자동 응답 기능을 설정했어요.,J’ai activé le répondeur.,"Réponse automatique (téléphone, service client, IoT)."
+취침 예약 기능,minuterie de veille / alarme telephone,취침 예약 기능으로 자동 종료돼요.,La minuterie éteint l’appareil.,Timer “sleep” pour TV/climatiseur/ventilateur la nuit.
+계산은 어떻게 해 드릴까요?,Comment souhaitez-vous payer ?,계산은 어떻게 해 드릴까요?,Comment désirez-vous régler ?,"Formule vendeur au moment du paiement (carte, espèces, mobile, sans contact)."
+이게 요즘 제일 잘 나가요,C’est ce qui se vend le mieux,이게 요즘 제일 잘 나가요.,C’est le best‑seller du moment.,Argument de vente courant; “잘 나가다” = forte demande.
+특별히 찾는 거 있으세요?,Cherchez-vous quelque chose en particulier ?,특별히 찾는 거 있으세요?,Vous cherchez quelque chose de précis ?,Ouverture de dialogue en magasin; polie et serviable.
+기회,opportunité,이번 기회를 놓치지 마세요.,Ne ratez pas cette opportunité.,Promo/événement limité; collocations: 좋은/절호의 기회.
+목록,"liste, catalogue",제품 목록을 보내 드릴게요.,Je vous enverrai la liste des produits.,Listing d’articles/fonctions; document ou page web.
+지난번,la dernière fois,지난번에 본 제품이에요.,C’est le produit vu la dernière fois.,Marque un référent temporel antérieur dans la conversation.
+할부,paiement en plusieurs fois,12개월 할부로 해 주세요.,Mettez en 12 fois s’il vous plaît.,Paiement fractionné (souvent sans frais pour cartes locales).
+일시불,paiement en une fois (comptant),일시불로 계산할게요.,Je vais payer en une fois.,"Paiement unique, souvent privilégié pour éviter les frais ou simplifier l’achat."
+돌려주다,"rendre, restituer",영수증을 돌려드릴게요.,Je vous rends le reçu.,Rendre un objet/argent; avec honorifique pour client.
+적당하다,"convenir, approprié",가격이 적당하네요.,Le prix est raisonnable.,Équilibre correct entre qualité/prix/taille.
+복잡하다,être complexe,,,
+사은품,freebie,,,
+편리하다,to be convenient,,,
+버튼이 안 눌러지다,le bouton ne s’enfonce pas,버튼이 안 눌러져요.,Le bouton ne marche pas.,Symptôme de panne (mécanique/logicielle). À dire au SAV.
+빨래를 말리다,sécher le linge,베란다에서 빨래를 말렸어요.,J’ai fait sécher le linge au balcon.,Action de séchage (naturel ou machine).
+소음이 심해지다,le bruit s’intensifie,사용 중 소음이 심해졌어요.,Le bruit a empiré pendant l’usage.,"Plaintes fréquentes sur appareils (ventilateur, clim, frigo)."
+작동이 안 되다,ne pas fonctionner,갑자기 작동이 안 돼요.,Ça ne fonctionne plus soudainement.,Formulation standard pour panne; utile au téléphone avec SAV.
+그럼 이번 기회에 바꿀까요?,Et si on en profitait pour changer ?,그럼 이번 기회에 바꿀까요?,On change à cette occasion ?,Proposition douce d’achat/remplacement lors d’une promo/panne.
+어 전자 사전이 왜 이러지?,"Euh, pourquoi mon dico électronique fait ça ?",어 전자 사전이 왜 이러지?,"Euh, qu’est-ce qui ne va pas avec mon dico électronique ?",Réaction spontanée à un dysfonctionnement; “왜 이러지?” = “pourquoi ça fait ça ?”
+교환,échange (de produit),일주일 이내 교환 가능해요.,Échange possible sous une semaine.,"Politique magasin; souvent avec 영수증, 포장 상태."
+반품,retour (de marchandise),단순 변심 반품은 택배비가 들어요.,Le retour par simple changement d’avis coûte des frais.,"Retour produit; conditions: délai, état, motif."
+무이자,sans intérêts,6개월 무이자 할부,Paiement en 6 mois sans intérêts,Terme promo lié aux cartes et financements.
+벨트,ceinture,벨트 구멍을 더 뚫었어요.,J’ai ajouté un trou à la ceinture.,Accessoire vestimentaire; parfois pièce machine (courroie) selon contexte.
+색깔,couleur,이 색깔로 할게요.,Je prendrai cette couleur.,Variante plus parlée que 색; choix esthétique produit.
+지볼,payment,,,
+택배비,frais de livraison,택배비는 별도예요.,Les frais d’envoi sont en sus.,Coût d’expédition retour/aller. Terme très courant en e‑commerce coréen.
+품질,qualité (du produit),품질 보증 기간이 길어요.,La garantie qualité est longue.,"Concerne durabilité, finitions; “품질 보증서” = certificat."
+구입하다,"acheter, se procurer",온라인으로 구입했어요.,Je l’ai acheté en ligne.,Synonyme un peu plus formel de 사다/구매하다.
+믿다,"faire confiance, croire",이 브랜드는 믿을 만해요.,Cette marque est fiable.,Utilisé pour établir la crédibilité d’une marque/marchand.
+입금하다,virer (de l’argent),오늘 중으로 입금할게요.,Je ferai le virement aujourd’hui.,Paiement par virement bancaire (souvent pour marketplaces C2C).
+가능하다,être possible,오늘 발송 가능해요.,Envoi possible aujourd’hui.,Forme formelle; opposé: 불가능하다.
+불가능하다,être impossible,무이자 할부는 불가능합니다.,Le paiement sans intérêt est impossible.,Refus poli/administratif.
+간단하다,être simple,설치가 간단해요.,L’installation est simple.,Décrit procédure/produit facile à utiliser.
+가죽 재킷,veste en cuir,가죽 재킷은 관리가 중요해요.,L’entretien est important pour une veste en cuir.,Produit mode; attention à la taille/coupe/entretien (conditionneur).
+신용 카드,carte de crédit,신용 카드로 일시불 할게요.,Je paie en une fois par carte.,“일시불” = paiement comptant; “할부” = en plusieurs fois.
+뭐 하나 물어봐도 돼요?,Je peux vous demander un truc ?,뭐 하나 물어봐도 돼요?,Je peux poser une question ?,"Formule polie, conversationnelle, pour solliciter une info au vendeur."
+뭔데요?,Quoi donc ?,뭔데요?,Qu’est-ce que c’est ?,Réponse directe et neutre; ton dépend de l’intonation (peut être sec ou amical).
+기증,don (d’objets/argent),의류 기증을 받습니다.,Nous acceptons les dons de vêtements.,"Don à des œuvres, friperies solidaires; utilisé par associations."
+기증 받다,recevoir des dons,중고 책을 기증 받았어요.,On a reçu des livres en don.,Côté organisation; formule passive “받다”.
+기증하다,faire don (donner),재활용 센터에 기증했어요.,J’ai fait don au centre de recyclage.,Verbe d’action; valorisé socialement.
+이달,ce mois-ci,이달 프로모션이 많아요.,Il y a beaucoup de promos ce mois-ci.,"Repère temporel dans pubs, bulletins, relevés."
+주변,"alentours, entourage",주변 매장을 확인해 보세요.,Vérifiez les magasins aux alentours.,Espace proche (géographique/social).
+트럭,camion,트럭으로 물건을 옮겼어요.,On a transporté les affaires en camion.,"Logistique, déménagement, livraisons volumineuses."
+후원,"parrainage, soutien",아동 후원을 시작했어요.,J’ai commencé un parrainage d’enfant.,Don régulier/ponctuel; organisations caritatives.
+후원 천사,“ange” parrain/soutien,후원 천사 모집 중입니다.,Nous recrutons des “anges” parrains.,Expression marketing affective pour désigner donateurs.
+모으다,"rassembler, collecter",기부금을 모으고 있어요.,Nous collectons des dons.,Collecte d’argent/objets/points.
+원하다,"vouloir, souhaiter",어떤 기능을 원하세요?,Quelles fonctions souhaitez-vous ?,Demande des besoins clients. Synonyme de 바라다 (plus souhait).
+싼값에 팔다,vendre à bas prix,재고를 싼값에 팔아요.,On vend les stocks à bas prix.,Expression promo/liquidation; synonyme de 저렴하게 팔다.
+어려운 사람,personne dans le besoin,어려운 사람들을 돕고 싶어요.,Je veux aider les personnes en difficulté.,Terme humanitaire/social.
+자원 봉사자,bénévole,자원 봉사자를 모집해요.,On recrute des bénévoles.,"Services solidaires, événements caritatifs, logistique d’associations."
+,,,,
+5과,,,,
+경찰서,commissariat de police,분실 신고하러 경찰서에 갔어요.,Je suis allé au commissariat pour déclarer une perte.,"Lieu pour déclarations (perte, vol, accident). Procédures officielles et récupération d’objets trouvés."
+분실물 센터,centre des objets trouvés,지하철 분실물 센터에 문의했어요.,J’ai contacté le centre des objets trouvés du métro.,"Service de récupération (métro, aéroports, grands magasins). On décrit l’objet et la date."
+사례금,récompense (pour restitution),지갑 찾아주시면 사례금 드릴게요.,Je vous donnerai une récompense si vous retrouvez mon portefeuille.,Somme donnée en remerciement. Terme courant dans annonces de perte.
+큰일 났네,"Mince, c’est grave…",여권을 잃어버렸어. 큰일 났네.,J’ai perdu mon passeport. Quelle galère.,Exclamation spontanée face à un gros problème. Ton alarmé mais courant.
+혹시 이거 아니에요?,"Par hasard, ce n’est pas ça ?",혹시 이거 아니에요? 지갑 맞나요?,Ce n’est pas ça par hasard ? C’est bien votre portefeuille ?,Formule polie pour vérifier prudemment si un objet correspond.
+매표소,guichet (billetterie),매표소에서 표를 샀어요.,J’ai acheté un billet au guichet.,"Point de vente de billets (musée, gare, parc). Synonyme proche: 매표창구."
+소나기,averse,소나기가 와서 다 젖었어요.,Une averse m’a trempé.,Pluie courte et soudaine. Fréquent l’été en Corée.
+수첩,"carnet, calepin",중요한 번호를 수첩에 적었어요.,J’ai noté un numéro important dans mon carnet.,Petit carnet pour notes. Plus personnel et analogique que 노트.
+은테,monture argentée (bordure argent),은테 안경을 잃어버렸어요.,J’ai perdu des lunettes à monture argentée.,"Se dit des bords/cerclages couleur argent (lunettes, cadre photo)."
+떨어뜨리다,faire tomber,휴대폰을 떨어뜨렸어요.,J’ai fait tomber mon téléphone.,Verbe transitif (cause). ≠ 떨어지다 (tomber tout seul).
+젖다,être mouillé,비에 옷이 다 젖었어요.,Mes vêtements sont trempés par la pluie.,Résultat d’une humidification; état après averse/renversement.
+네모나다,"être carré, rectangulaire",네모난 수첩을 찾고 있어요.,Je cherche un carnet carré/rectangulaire.,Décrit la forme géométrique. Très utile pour donner un signalement.
+깨져 있다,être (déjà) cassé,화면이 깨져 있어요.,L’écran est fissuré.,Construction “-아/어 있다” = état résultant d’une action passée.
+꺼져 있다,être éteint,기기가 꺼져 있어요.,L’appareil est éteint.,Décrit l’état actuel (pas l’action d’éteindre).
+닫혀 있다,être fermé (porte),문이 닫혀 있어요.,La porte est fermée.,"État statique; ≠ 닫다 (fermer, action)."
+달려 있다,"être attaché, suspendu",열쇠고리에 카드가 달려 있어요.,Une carte est attachée au porte-clés.,Décrit un objet fixé/pendu à autre chose.
+들어 있다,"contenir, être à l’intérieur",가방에 지갑이 들어 있어요.,Le portefeuille est dans le sac.,Indique contenu interne; très courant pour signalements.
+떨어져 있다,être tombé / par terre,본체와 케이블이 떨어져 있어요.,Le câble est séparé du boîtier.,Indique distance/dispersion par rapport à un ensemble.
+쓰여 있다,il est écrit,표지에 이름이 쓰여 있어요.,Le nom est écrit sur la couverture.,Très utile pour lire ce qui figure sur un panneau/objet.
+열려 있다,être ouvert,창문이 열려 있어요.,La fenêtre est ouverte.,"État actuel, résultat d’une ouverture antérieure."
+켜져 있다,être allumé,불이 켜져 있어요.,La lumière est allumée.,"État électrique actif (écran, lampe, appareil)."
+빠뜨리다,to drop,,,
+"네, 그렇게 해요","Oui, faisons comme ça","네, 그렇게 해요.","Oui, faisons ainsi.",Acceptation polie d’une proposition. Courant en service/public.
+어떻게 하죠?,On fait comment ?,"표를 잃어버렸는데, 어떻게 하죠?","J’ai perdu mon billet, on fait comment ?",Demande d’instruction polie face à un problème.
+금도끼,hache d’or,금도끼를 잃어버린 나무꾼 이야기,L’histoire du bûcheron et de la hache d’or,Motif d’un conte moral coréen classique (honnêteté).
+은도끼,hache d’argent,연못에서 은도끼가 나왔어요.,La hache d’argent est sortie de l’étang.,Variante du même conte (tests d’honnêteté).
+쇠도끼,hache en fer,원래 제 건 쇠도끼예요.,"À l’origine, la mienne est en fer.",Le héros avoue que sa hache est en fer → récompense.
+산속,au cœur de la montagne,산속 연못에서 일이 벌어졌어요.,L’affaire s’est passée au cœur de la montagne.,Lieu de contes/aventures; image d’isolement.
+소식,"nouvelles, nouvelles reçues",친구에게서 소식을 들었어요.,J’ai eu des nouvelles d’un ami.,Information/contacts; ≠ 음식 “소식(少食)” = manger peu.
+연못,étang,연못에 도끼가 빠졌어요.,La hache est tombée dans l’étang.,Décor récurrent des contes (apparition d’une divinité).
+옛날,autrefois,옛날 이야기예요.,C’est une histoire d’autrefois.,Marque le passé lointain; introduit contes.
+옛날 옛날에,Il était une fois,옛날 옛날에 한 나무꾼이 살았어요.,"Il était une fois, vivait un bûcheron.",Formule d’ouverture traditionnelle des contes coréens.
+옛날이야기,conte traditionnel,아이들에게 옛날이야기를 들려줬어요.,J’ai raconté un conte aux enfants.,Récit folklorique avec morale.
+욕심,"cupidité, avidité",욕심을 부리면 안 돼요.,Il ne faut pas être avide.,Désir excessif; souvent négatif dans les morales.
+욕심이 많다,être très avide,그는 욕심이 많아요.,Il est très avide.,"Qualité négative; opposé moral à 정직함, 절제."
+갖다,"avoir, prendre",우산 좀 갖고 가요.,Prends un parapluie.,Forme contractée/coloquiale de 가지다; en composition (갖다 주다).
+갖고 가다,emporter (avec soi),우산을 갖고 갔어요.,Il a emporté un parapluie.,“갖다 + 가다” = prendre et aller. Très usuel.
+나타나다,"apparaître, émerger",갑자기 요정이 나타났어요.,Une fée est apparue soudainement.,"Dans contes/rapports, apparition inattendue (personne/objet)."
+용서하다,pardonner,잘못을 용서했어요.,J’ai pardonné sa faute.,Dimension morale/relationnelle (réconciliation).
+정직하다,être honnête,정직한 답을 했어요.,Il a répondu honnêtement.,Valeur positive; qualité récompensée dans contes.
+엉엉,ouin ouin (pleurs forts),아이가 엉엉 울었어요.,L’enfant pleurait à chaudes larmes.,"Onomatopée de pleurs bruyants, souvent enfantins."
+일부러,"exprès, volontairement",일부러 그런 거 아니에요.,Ce n’était pas fait exprès.,Marque l’intention (ou sa négation). Important dans excuses.
+남,"autrui, les autres",남의 물건을 함부로 쓰면 안 돼요.,On ne doit pas utiliser les affaires d’autrui.,“Les autres” vs soi; nuance sociale de respect des biens/droits.
+뒷자리,siège arrière,뒷자리에 앉을게요.,Je vais m’asseoir à l’arrière.,"Voiture, salle, théâtre; contraire: 앞자리."
+쇼핑백,sac de shopping,쇼핑백에 넣어 드릴까요?,Je vous mets ça dans un sac de shopping ?,Sac papier/plastique de boutique.
+하루하루,jour après jour,하루하루가 바빠요.,Chaque jour est chargé.,"Accent sur la répétition quotidienne, parfois difficile."
+갚다,rembourser,빌린 돈을 갚았어요.,J’ai remboursé l’argent emprunté.,Remboursement de dette/ faveur (은혜를 갚다 = rendre un bienfait).
+거절하다,refuser,제안을 정중히 거절했어요.,J’ai poliment refusé la proposition.,Registre formel; synonyme plus direct que “사양하다” (décliner).
+발견하다,"découvrir, trouver",지갑을 길에서 발견했어요.,J’ai trouvé un portefeuille dans la rue.,Découverte par hasard ou recherche.
+변하다,changer (devenir différent),계절이 변하고 있어요.,La saison change.,Transformation d’état/situation; intransitif.
+신고하다,"déclarer, signaler",분실물을 경찰에 신고했어요.,J’ai déclaré l’objet perdu à la police.,"Acte officiel (perte, vol, incident). Documents requis possibles."
+실패하다,échouer,한 번 실패했지만 다시 도전해요.,J’ai échoué une fois mais je retente.,Verbe formel; souvent suivi de motivation à réessayer.
+결국,"finalement, en fin de compte",결국 찾아냈어요.,"Finalement, on l’a retrouvé.",Bilan conclusif d’une série d’événements.
+당연히,"bien sûr, naturellement",당연히 돌려줘야죠.,Bien sûr qu’il faut le rendre.,Marque l’évidence morale/logique.
+만약,si (hypothétique),만약 못 찾으면 어떻게 하죠?,"Et si on ne le trouve pas, on fait quoi ?",Introduit une condition hypothétique; s’emploie avec -(으)면.
+고민에 빠지다,être plongé dans un dilemme,그는 고민에 빠졌어요.,Il est tombé dans un dilemme.,Conflit intérieur soutenu; choix moral/pratique difficile.
+두고 내리다,laisser (dans un transport),버스에 가방을 두고 내렸어요.,J’ai laissé mon sac dans le bus.,Expression fixe pour un oubli en descendant. À dire au centre des objets trouvés.
+,,,,
+6과,,,,
+변명하다,"se justifier, donner des excuses",변명하지 말고 솔직히 말해요.,"Ne te justifie pas, dis la vérité.",Connotation souvent négative (excuse pour se dédouaner). S’oppose à 사과하다 (présenter des excuses sincères).
+사과하다,s’excuser,늦어서 사과합니다.,Je m’excuse pour mon retard.,"Excuses formelles ou sincères. Formes: 미안해(요) (informel), 죄송합니다 (formel)."
+깜빡 잊어버리고 말을 못 했어,j’ai totalement oublié de dire…,깜빡 잊어버리고 말을 못 했어요.,J’ai complètement oublié de te le dire.,Formule très naturelle pour “oublier sans faire exprès”. Compléter la phrase après 말을.
+무슨 일이 생긴 줄 알았어요,je croyais qu’il t’était arrivé quelque chose,연락이 없길래 무슨 일이 생긴 줄 알았어요.,"Sans nouvelles, je croyais qu’il t’était arrivé un truc.",Expression empathique; “-줄 알았다” = “je pensais que…”.
+연락이 안 돼서 걱정했어요,pas de news donc j'etais inquiet,하루 종일 연락이 안 돼서 걱정했어.,J’ai stressé car je n’arrivais pas à te joindre.,Motif fréquent d’inquiétude ou d’explication d’un retard.
+날,jour (abréviation de “날짜/날”),청소하기로 한 날 잊었지?,"Tu as oublié le jour où on devait nettoyer, hein ?",Registre familier; s’emploie souvent avec un déterminant: “-하기로 한 날”.
+청소하기로 한 날,le jour prévu pour le ménage,청소하기로 한 날에 못 갔어.,Je n’ai pas pu venir le jour prévu pour le ménage.,Construction “-기로 하다” = décision/prévision. Met l’accent sur l’engagement initial.
+발표,présentation (orale),내일 수업에서 발표가 있어요.,J’ai une présentation demain en cours.,"Université/entreprise. Collocations: 발표 자료, 발표를 하다."
+보고서,rapport,보고서를 오늘까지 제출하세요.,Rendez le rapport pour aujourd’hui.,Document écrit formel (travail/études). Verbe: 제출하다 (soumettre).
+세미나,séminaire,주말에 학회 세미나가 있어요.,Il y a un séminaire d’association ce week-end.,Réunion académique/pro. Peut être interne (소규모) ou public.
+자료,"document(s), support",발표 자료를 이메일로 보냈어요.,J’ai envoyé les supports de présentation par mail.,"Terme générique pour fichiers, slides, données."
+짐,"affaires, bagages",짐이 많아서 택시 탔어요.,"J’avais trop d’affaires, j’ai pris un taxi.","Objets à transporter (déménagement, voyage)."
+짐을 싸다,faire ses bagages,내일 떠나서 오늘 짐을 싸요.,"Je fais ma valise aujourd’hui, je pars demain.",Action de préparer ses affaires (voyage/déplacement).
+후문,porte arrière (entrée secondaire),후문에서 만나자.,On se retrouve à l’entrée arrière.,Opposé: 정문 (porte principale). Souvent sur campus/complexe.
+걸레질하다,passer la serpillière,바닥을 걸레질했어요.,J’ai passé la serpillière au sol.,Ménage humide; verbe naturel du quotidien.
+세탁기를 돌리다,faire tourner la machine,세탁기를 돌려 놓고 나왔어요.,J’ai lancé une machine avant de sortir.,Expression fixe pour lancer un cycle de machine à laver.
+정신이 없다,"être débordé, la tête ailleurs",요즘 정신이 없어요.,En ce moment je suis débordé.,"Très courant pour expliquer un oubli/retard; pas forcément négatif, juste surmenage."
+동창,ancien camarade de classe,동창을 우연히 만났어요.,J’ai croisé un ancien camarade par hasard.,Personne ayant fréquenté la même école (même promo).
+동창회,réunion d’anciens élèves,이번 주말에 동창회가 있어요.,J’ai une réunion d’anciens ce week-end.,Événement social de retrouvailles; souvent dîner/soirée.
+길이 막히다,avoir des bouchons (voiture),,,
+환자,patient,환자를 돌봐야 해요.,Je dois m’occuper d’un patient.,Contexte médical/hospitalier; opposé à 의료진 (personnel soignant).
+돌보다,"s’occuper de, prendre soin de",아픈 엄마를 돌봤어요.,Je me suis occupé de ma mère malade.,"Soins attentifs (enfant, malade, animal). Synonyme: 보살피다 (plus soutenu)."
+키우다,"élever, éduquer; élever (animal/plante)",강아지를 키워요.,J’élève un chiot.,"Large: enfants, animaux, plantes, compétences (실력을 키우다)."
+갑자기,soudain,갑자기 비가 내렸어요.,Il s’est mis à pleuvoir soudainement.,Adverbe de survenue imprévue; dramatise un récit.
+문자 메시지,"SMS, message texte",문자 메시지로 보내 줄게요.,Je te l’enverrai par SMS.,Communication brève; verbe: 문자를 보내다/받다.
+그랬으면 좋겠다.,j’aimerais bien que ce soit comme ça,내일 비 안 왔으면 좋겠어.,J’aimerais qu’il ne pleuve pas demain.,Structure de souhait: -았/었으면 좋겠다 (souhait irréel/probable).
+지금 가고 있는 중이야.,je suis en train d’y aller,지금 가고 있는 중이야. 10분 후 도착해.,Je suis en route. J’arrive dans 10 minutes.,Construction progressive: V-는 중이다 = “être en train de”. Registre familier ici.
+상황,"situation, contexte",상황을 먼저 파악합시다.,Comprenons d’abord la situation.,Terme neutre pour l’état des choses; utile en gestion de projet.
+깨닫다,"réaliser, prendre conscience",그때 큰 실수를 깨달았어요.,J’ai réalisé alors ma grosse erreur.,“Prise de conscience” souvent après un événement marquant.
+두리번거리다,regarder autour de soi (en quête),지갑을 잃어버려서 두리번거렸어요.,J’ai cherché partout du regard mon portefeuille.,Mouvement répétitif des yeux/tête; suggère nervosité/recherche.
+웃다,"rire, sourire",농담에 다 같이 웃었어요.,On a tous ri à la blague.,Verbe de base; souriant/gai. Nom: 웃음 (rire).
+귀엽다,être mignon,강아지가 정말 귀여워요.,Le chiot est trop mignon.,Appréciation affective (personnes/objets/gestes).
+부끄럽다,être timide / avoir honte,사람 많아서 좀 부끄러워요.,Je suis un peu gêné devant la foule.,Double sens: timidité (innocente) ou honte (faute). Contexte clarifie.
+억지로,"de force, à contrecœur",억지로 가지 마.,N’y va pas à contrecœur.,Marque contrainte; nuance négative (sans envie).
+종종,"parfois, souvent",종종 연락해.,Donne des nouvelles de temps en temps.,Fréquence occasionnelle mais régulière (entre “parfois” et “souvent”).
+한참,un bon moment (longtemps),한참을 기다렸어요.,J’ai attendu un bon moment.,Indique une durée sensiblement longue.
+어느 날,un jour (un certain jour),어느 날 갑자기 연락이 왔어요.,"Un jour, j’ai reçu un message soudainement.",Ouverture de récit/roman; crée une attente narrative.
+,,,,
+7과,,,,
+강의,cours magistral (leçon),오늘 강의가 취소됐어요.,Le cours d’aujourd’hui est annulé.,Cours à l’université; verbe: 강의를 듣다/하다.
+성적,"notes, résultats",이번 학기 성적이 좋아요.,Mes notes de ce semestre sont bonnes.,Bulletin universitaire; 성적표 = relevé.
+성적을 잘 받다,recevoir de bonnes notes,열심히 해서 성적을 잘 받았어요.,J’ai eu de bonnes notes en travaillant dur.,Expression fixe pour les résultats académiques.
+수료하다,achever (un cursus/certificat),교육 과정을 수료했어요.,J’ai achevé la formation.,"Diplôme d’achèvement, pas une “graduation” complète."
+입학하다,entrer (dans un établissement),3월에 대학에 입학했어요.,Je suis entré(e) à l’université en mars.,Étape d’admission officielle. Opposé: 졸업하다.
+졸업장,diplôme (document),졸업장을 받았어요.,J’ai reçu mon diplôme.,Document officiel attestant la fin d’études.
+캠퍼스,campus,캠퍼스가 정말 넓어요.,Le campus est très grand.,Ensemble des bâtiments universitaires.
+학번,année de promo,제 학번은 21학번이에요.,Ma promo est 2021.,Marque l’année d’entrée (ex: 21학번 = promo 2021).
+관심,intérêt,사회 문제에 관심이 많아요.,Je m’intéresse aux problèmes sociaux.,Peut prendre des compléments avec 에.
+떡볶이,tteokbokki (gâteau de riz pimenté),학교 앞 떡볶이가 맛있어요.,Le tteokbokki devant l’école est bon.,Snack populaire près des campus.
+문구류,papeterie (articles),문구류를 대량으로 샀어요.,J’ai acheté beaucoup d’articles de papeterie.,"Stylos, carnets, trombones, etc."
+미용실,salon de coiffure,학교 근처 미용실에 갔어요.,Je suis allé au salon près du campus.,"Pour coupe, soins, teinture."
+방청객,public (plateau TV/radio),방청객으로 참여했어요.,J’ai participé comme public.,Spectateurs en studio.
+시절,"époque, période",대학 시절이 그립네요.,La période universitaire me manque.,Souvent nostalgique (어린 시절).
+유행,"tendance, mode",요즘 유행이에요.,C’est à la mode en ce moment.,"Noms: 유행곡, 유행어."
+유행하다,être à la mode,그 스타일이 유행해요.,Ce style est à la mode.,Verbe dérivé de 유행.
+주제,"sujet, thème",발표 주제가 뭐예요?,Quel est le sujet de la présentation ?,"Thème de cours, mémoire, débat."
+지사장,directeur de filiale,그는 서울 지사장이에요.,Il est le directeur de la filiale de Séoul.,Entreprise: chef d’antenne régionale.
+출연자,"intervenant, participant (émission)",출연자 명단을 공개했어요.,La liste des participants a été publiée.,TV/radio/événements.
+진행하다,animer un programme (TV),프로그램을 진행했어요.,J’ai animé le programme.,Aussi “faire avancer” un projet.
+국제 대학원,école doctorale/masters internationale,국제 대학원에 진학했어요.,J’ai intégré une graduate school internationale.,"Programmes anglophones, étudiants étrangers."
+꿈을 이루다,réaliser un rêve,드디어 꿈을 이뤘어요.,J’ai enfin réalisé mon rêve.,Expression positive très courante.
+방송 아카데미,académie des médias (broadcasting),방송 아카데미에서 수업을 들었어요.,J’ai suivi des cours à une académie de médias.,Formations pratiques pour TV/radio/MC.
+볼일이 있다,avoir des choses à faire,오늘은 볼일이 좀 있어요.,J’ai des trucs à faire aujourd’hui.,“Affaires personnelles” vagues; excuse neutre.
+해외 연수,stage/formation à l’étranger,해외 연수를 다녀왔어요.,J’ai fait une formation à l’étranger.,Séjours courts d’études/entreprise.
+맞긴 한데.....,"c’est vrai, mais…",맞긴 한데 조금 아쉬워요...,"C’est pas faux, mais c’est un peu dommage…",Concession + réserve; registre conversationnel.
+이게 얼마 만이에요?,Ça fait combien de temps !,"우와, 이게 얼마 만이에요?","Wow, ça fait si longtemps !",Retrouvailles chaleureuses; très naturel.
+너희,vous (pluriel familier),너희 어디 가?,Vous allez où ?,Familier entre proches; formel: 여러분/너희들 (entre amis).
+데모,démo; manifestation (selon contexte),게임 데모를 해 봤어요.,J’ai essayé la démo du jeu.,“Manifestation” = 시위/데모. Contexte clarifie.
+막걸리,makgeolli (vin de riz),막걸리에 파전이 최고죠.,"Makgeolli avec pancake coréen, le top.","Boisson traditionnelle, souvent associée aux sorties."
+돌아다니다,"vadrouiller, circuler",캠퍼스를 돌아다녔어요.,J’ai flâné sur le campus.,"Mouvement informel, sans but précis."
+머리를 기르다,laisser pousser les cheveux,머리를 길렀어요.,J’ai laissé pousser mes cheveux.,Opposé: 머리를 자르다.
+사회 문제,problème de société,사회 문제에 대해 토론했어요.,On a débattu de questions sociales.,"Économie, inégalités, environnement, etc."
+그렇죠?,n’est‑ce pas ?,그게 더 낫죠?,"C’est mieux, n’est‑ce pas ?",Marque l’accord/confirmation.
+결론,conclusion,결론을 내리기 어렵네요.,Difficile de tirer une conclusion.,"Fin d’exposé, décision finale."
+대상,grand prix; cible/objet,대상 수상작을 발표했어요.,On a annoncé le lauréat du Grand Prix.,En concours/festivals: grand prix; sinon “cible” (연구 대상).
+대상을 받다,recevoir le grand prix,그 작품이 대상을 받았어요.,Cette œuvre a reçu le grand prix.,Formule fixe de récompense.
+이불,"couette, couverture",이불을 털어서 말렸어요.,J’ai secoué et séché la couette.,Linge de lit; “이불 킥” = regret tardif (idiome).
+이불을 뒤집어쓰다,se cacher sous la couette,창피해서 이불을 뒤집어썼어요.,"Honteux, je me suis caché sous la couette.",Expression vivante pour gêne intense.
+제도,"système, policy",교육 제도를 개편했어요.,Le système éducatif a été réformé.,Contexte détermine: institutionnel ou “dessin technique”.
+철학,philosophie,인생 철학을 정리했어요.,J’ai clarifié ma philosophie de vie.,Aussi matière scolaire/universitaire.
+후회,regret,후회가 많이 남아요.,J’ai beaucoup de regrets.,Sentiment post‑action.
+후회하다,regretter,그렇게 말한 걸 후회해요.,Je regrette d’avoir dit ça.,Verbe d’émotion; souvent avec -게 되다.
+다투다,se disputer,사소한 일로 다퉜어요.,On s’est disputés pour un rien.,Conflit verbal; plus fort que 언쟁하다.
+반대하다,s’opposer,그 의견에 반대해요.,Je m’oppose à cette opinion.,Verbe d’avis; politique/projet/décision.
+비다,être vide,강의실이 비었어요.,La salle de cours est vide.,Adjectif d’état.
+빈 강의실,salle de cours vide,빈 강의실에서 공부했어요.,J’ai étudié dans une salle vide.,Collocation naturelle.
+쓰러지다,"s’effondrer, tomber (épuisement)",무리하다 쓰러졌어요.,Il s’est effondré d’épuisement.,Santé/accident; dramatique.
+응원하다,"encourager, soutenir",친구를 응원했어요.,J’ai encouragé mon ami.,"Sport, concours, projets personnels."
+(대해서) 토론하다,débattre (de),사회 문제에 대해서 토론했어요.,On a débattu de problèmes sociaux.,Construction: N에 대해서 토론하다.
+화해하다,se réconcilier,결국 화해했어요.,"Finalement, on s’est réconciliés.",Fin d’un conflit; retrouvailles.
+관계없다,n’avoir aucun rapport; peu importe,시간은 상관없고 장소는 관계없어요.,"L’heure m’importe peu, le lieu m’est égal.",Souvent avec -랑/-와 관계없다 = sans rapport.
+몰래,"en cachette, secrètement",몰래 선물을 준비했어요.,J’ai préparé un cadeau en secret.,Adverbe de discrétion; peut être neutre/négatif selon contexte.
+무엇보다도,"avant tout, surtout",무엇보다도 건강이 중요해요.,"La santé, avant tout.",Sert à hiérarchiser un argument.
+소홀히 하다,négliger,학업을 소홀히 했어요.,J’ai négligé mes études.,Manque d’attention/soin; registre plutôt formel.
+,,,,
+8과,,,,
+작심삼일,résolution qui ne dure que 3 jours,또 작심삼일로 끝났어요.,Ma résolution n’a encore duré que trois jours.,Idiome sur la difficulté à tenir ses engagements.
+그만두고 싶었던 적이 한두 번이 아니에요,Ce n’est pas une ou deux fois que j’ai voulu tout arrêter,힘들 때마다 그만두고 싶었던 적이 한두 번이 아니에요.,"À chaque difficulté, j’ai souvent eu envie d’abandonner.",Tour intensif “한두 번이 아니다” = très souvent.
+며칠 하다가 그만두곤 해요,Je fais quelques jours puis j’abandonne souvent,운동은 며칠 하다가 그만두곤 해요.,"Le sport, je commence quelques jours puis j’arrête.",Habitude récurrente avec “-곤 하다”.
+시작이 반이라고 하잖아요,"On dit que commencer, c’est déjà la moitié",시작이 반이라고 하잖아요. 일단 시작해요.,"On dit que le début, c’est la moitié. Commençons.",Proverbe motivant.
+논문,"mémoire, thèse",논문 마감을 앞두고 있어요.,J’approche la deadline de ma thèse.,Travail académique long; collocations: 논문 제출/심사.
+세월,le temps (qui passe) =  durée,세월이 참 빠르네요.,Le temps passe si vite.,Nuance poétique/nostalgique.
+일자리,job openings,좋은 일자리를 찾고 있어요.,Je cherche un bon emploi.,Terme socio‑éco pour opportunités d’emploi.
+돌아보다,rétrospecter,한 해를 돌아보니 많이 배웠어요.,"En regardant l’année passée, j’ai beaucoup appris.",Sens concret et figuré.
+복학하다,reprendre ses études (après interruption),군 복무 후 복학했어요.,J’ai repris mes études après le service.,Opposé: 휴학하다 (interrompre).
+완성하다,"achever, finaliser",계획서를 완성했어요.,J’ai finalisé le plan.,"Produit fini, complet."
+진학하다,poursuivre des études (au niveau supérieur),대학원에 진학했어요.,J’ai poursuivi en master/doctorat.,Passage à un cycle supérieur.
+오히려,"au contraire, plutôt",늦게 시작해서 오히려 집중이 잘 돼요.,"En commençant tard, je me concentre mieux.",Marque un résultat inverse à l’attendu.
+운전 면허증,permis de conduire,운전 면허증을 갱신했어요.,J’ai renouvelé mon permis.,Document officiel; souvent abrégé 면허증.
+운전 면허증을 따다,obtenir le permis,이번 달에 운전 면허증을 땄어요.,J’ai obtenu mon permis ce mois‑ci.,Verbe courant: ~을/를 따다 (décrocher).
+음식점을 차리다,ouvrir un restaurant,작은 음식점을 차릴 계획이에요.,Je prévois d’ouvrir un petit resto.,“차리다” = monter/établir (entreprise).
+그동안 고마웠어요,Merci pour tout pendant ce temps,그동안 고마웠어요. 많이 배웠어요.,Merci pour tout; j’ai beaucoup appris.,"Polie, en clôture d’une période."
+무슨 말씀을요,"Mais voyons, de rien",무슨 말씀을요. 제가 더 감사해요.,"Mais voyons, c’est moi qui vous remercie.",Réponse humble à un remerciement/éloge.
+세월이 참 빠른 것 같아요,Le temps passe vraiment vite,"벌써 졸업이라니, 세월이 참 빨라요.",Déjà la remise de diplôme… le temps file.,Variation de “세월이 빠르다”.
+오히려 제가 감사하죠,C’est plutôt moi qui vous remercie,오히려 제가 감사하죠. 많이 도와주셨어요.,C’est plutôt moi qui suis reconnaissant.,Formule de politesse humble.
+상,"prix, récompense",공모전에서 상을 받았어요.,J’ai reçu un prix au concours.,"Catégories: 대상, 금상, 은상, 동상…"
+티켓,"billet, ticket",콘서트 티켓을 구했어요.,J’ai obtenu un ticket de concert.,Emprunt anglais; contexte spectacles/transport.
+노력하다,faire des efforts,끝까지 노력해 봅시다.,Faisons des efforts jusqu’au bout.,Valeur clé en contexte d’étude/travail.
+뛰다,courir; exceller (fam.),실력이 뛰어요.,Il/Elle est excellent(e).,Adjectival: “뛰어나다” = remarquable.
+실천하다,mettre en pratique,계획을 세우고 실천하세요.,Faites un plan et mettez‑le en pratique.,Passer de l’intention à l’action.
+열리다,"s’ouvrir, avoir lieu",내일 회의가 열려요.,Une réunion a lieu demain.,Forme passive naturelle pour événements.
+대회가 열리다,un concours a lieu,전국 대회가 이번 주에 열려요.,Le championnat national a lieu cette semaine.,Collocation fixe avec 열리다.
+게으르다,être paresseux,게으르면 실천이 어렵죠.,"Quand on est flemmard, agir est difficile.",Adjectif d’état; contraire: 부지런하다.
+1등 (일등),"première place, n°1",수학 경시대회에서 1등 했어요.,J’ai fait premier au concours de maths.,S’emploie aussi pour “première place” au classement.
+작년 초,début de l’an dernier,작년 초에 프로젝트를 시작했어요.,J’ai démarré le projet début l’an dernier.,Marqueur temporel précis.
+건강 관리,gestion de la santé,요즘 건강 관리를 철저히 해요.,Je gère ma santé de manière stricte.,"Somme d’habitudes (sommeil, sport, alimentation)."
+성적표,relevé de notes,성적표를 발급받았어요.,J’ai obtenu mon relevé de notes.,Document officiel des notes.
+실력,"compétence, niveau",실력이 많이 늘었네요.,Ton niveau a beaucoup monté.,Mesure qualitative de performance.
+실력이 늘다,voir son niveau augmenter,꾸준히 해서 실력이 늘었어요.,"À force de régularité, mon niveau a monté.",Collocation très fréquente.
+실망,déception,결과에 실망이 컸어요.,La déception a été grande.,Nom; verbe associé: 실망하다/실망을 하다.
+실망을 하다,être déçu,자신에게 실망을 했어요.,J’ai été déçu de moi‑même.,Variante explicite avec objet.
+전공과목,matière de spécialité,전공과목 위주로 들었어요.,J’ai surtout pris des matières de spécialité.,Cours liés au major; ≠ 교양과목 (tronc commun).
+주위,alentours; entourage,주위의 조언을 들었어요.,J’ai écouté les conseils de mon entourage.,Espace ou cercle relationnel selon contexte.
+주위 사람,les personnes de l’entourage,주위 사람들이 많이 도와줬어요.,Mon entourage m’a beaucoup aidé.,"Famille, amis, collègues, mentors…"
+최고,le meilleur,올해는 진짜 최고였어요.,Cette année était vraiment la meilleure.,Superlatif courant; emphatique.
+최고의 해,la meilleure année,올해를 최고의 해로 만들자.,Faisons de cette année la meilleure.,Expression motivante/bilan.
+과/와 어울리다,aller bien avec; s’entendre avec,이 색이 그 옷과 잘 어울려요.,Cette couleur va bien avec ces vêtements.,Particule 과/와 pour le complément; aussi “s’entendre (사람과)”.
+친구들과 어울리다,traîner/s’entendre avec des amis,주말에 친구들과 어울렸어요.,J’ai passé du temps avec des amis le week‑end.,Collocation sociale naturelle.
+소중하다,être précieux,시간이 가장 소중해요.,Le temps est ce qu’il y a de plus précieux.,"Valeur, importance émotionnelle."
+한 해,une année,한 해를 잘 마무리합시다.,Clôturons bien l’année.,Souvent dans bilans de fin d’année.
+소홀히 대하다,traiter avec négligence,고객을 소홀히 대하면 안 됩니다.,Il ne faut pas négliger les clients.,“소홀히 하다” appliqué à autrui; registre formel.

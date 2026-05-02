@@ -1,6 +1,7 @@
 """
-Dashboard Mew - Korean Learning 🐱
-Standalone FastAPI app, completely isolated from the main OpenClaw dashboard.
+Dashboard Mew - Korean Learning
+FastAPI app for Korean courses and vocabulary.
+Content lives in content/vocab/ and content/lessons/ (versioned in this repo).
 Port: 8181
 """
 
@@ -17,8 +18,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 
 # === Config ===
-VOCAB_DIR = Path.home() / ".openclaw" / "workspace-mew" / "Korean" / "Vocab"
-LESSONS_DIR = Path.home() / ".openclaw" / "workspace-mew" / "Korean" / "Lessons"
+BASE_DIR = Path(__file__).parent
+VOCAB_DIR = BASE_DIR / "content" / "vocab"
+LESSONS_DIR = BASE_DIR / "content" / "lessons"
 HOST = "0.0.0.0"
 PORT = 8181
 

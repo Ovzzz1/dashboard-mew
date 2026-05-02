@@ -1,0 +1,527 @@
+한글,French,Example Sentence,Translated Sentence,Explanation
+1과,,,,
+직장,lieu de travail,새 직장은 집에서 가까워요.,Mon nouveau lieu de travail est proche de la maison.,Terme général pour désigner son entreprise ou son lieu de travail (workplace). Plus formel que 회사 (entreprise).
+상사,supérieur / chef,상사에게 보고서를 제출했어요.,J'ai soumis le rapport à mon supérieur.,"Désigne toute personne hiérarchiquement au-dessus de soi (boss, superior). Terme respectueux et formel."
+신입 사원,nouvel employé,저는 올해 입사한 신입 사원입니다.,Je suis un nouvel employé qui a rejoint l'entreprise cette année.,"New employee. Personne qui vient de commencer dans une entreprise, souvent juste après ses études."
+동아리,club,대학 때 사진 동아리 활동을 했어요.,J'étais dans le club de photo à l'université.,Club étudiant ou groupe de loisirs. Important pour la vie sociale et le développement de compétences.
+선배,senior,회사 선배에게 많은 것을 배웠어요.,J'ai beaucoup appris de mes aînés au travail.,"Personne plus âgée ou plus expérimentée dans un groupe (école, entreprise). On leur doit le respect. Opposé : 후배 (junior)."
+신입 회원,nouveau membre,동아리 신입 회원을 모집합니다.,Nous recrutons de nouveaux membres pour le club.,"New member. Personne qui vient de rejoindre un club, une association ou un groupe."
+많이 도와주세요.,"Aidez-moi beaucoup, s'il vous plaît.","저는 아직 모르는 것이 많으니, 많이 도와주세요.","Il y a encore beaucoup de choses que je ne sais pas, alors aidez-moi beaucoup s'il vous plaît.",Phrase de présentation humble pour demander le soutien de ses collègues ou seniors. Montre une volonté d'apprendre.
+모르는 것이 많습니다.,Il y a beaucoup de choses que je ne connais pas.,신입 사원이라 아직 모르는 것이 많습니다.,"Comme je suis un nouvel employé, il y a beaucoup de choses que je ne connais pas encore.",Expression d'humilité utilisée lors d'une présentation pour montrer qu'on est conscient de son inexpérience.
+반갑습니다.,Enchanté(e).,만나서 반갑습니다.,Je suis ravi(e) de vous rencontrer.,Formule de salutation standard et polie (Nice to meet you) lorsqu'on rencontre quelqu'un pour la première fois.
+앞으로 여러분과 잘 지내고 싶습니다.,J'aimerais bien m'entendre avec vous tous.,앞으로 여러분과 잘 지내고 싶습니다. 잘 부탁드립니다.,J'espère bien m'entendre avec vous tous. Je compte sur votre bienveillance.,"Phrase de conclusion d'une présentation, exprimant le souhait d'établir de bonnes relations avec le groupe."
+앞으로 열심히 하겠습니다.,Je travaillerai dur à l'avenir.,부족하지만 앞으로 열심히 하겠습니다.,"Je ne suis pas encore parfait, mais je travaillerai dur.","Promesse de faire de son mieux, utilisée dans les présentations pour montrer sa détermination et sa bonne volonté."
+잘 부탁드립니다.,Je compte sur votre bienveillance.,신입 사원 김민준입니다. 잘 부탁드립니다.,Je suis le nouvel employé Kim Min-jun. Je me réjouis de travailler avec vous.,Expression idiomatique intraduisible littéralement. C'est une formule de politesse essentielle pour demander la coopération et le soutien des autres.
+처음 뵙겠습니다.,C'est la première fois que je vous rencontre.,"안녕하세요, 처음 뵙겠습니다.","Bonjour, enchanté(e) de faire votre connaissance.",Formule très polie et formelle (Nice to meet you for the first time) utilisée lors d'une première rencontre.
+미혼,non-marié,저는 아직 미혼입니다.,Je suis encore célibataire.,Statut marital (unmarried/single). Information souvent demandée dans des contextes formels ou personnels. Opposé : 기혼 (marié).
+사회학,sociologie,대학에서 사회학을 전공했어요.,Je me suis spécialisé(e) en sociologie à l'université.,Le domaine d'étude académique (sociology).
+자기소개,présentation de soi,면접 때 1분 자기소개를 준비해야 해요.,Il faut préparer une présentation de soi d'une minute pour l'entretien.,Self-introduction. Acte de se présenter à un groupe ou à une personne.
+근무하다,travailler (dans un lieu),저는 서울 본사에서 근무합니다.,Je travaille au siège de Séoul.,Verbe formel pour indiquer son lieu de travail ou ses heures de travail (to work).
+궁금하다,être curieux,그 사람에 대해 궁금한 것이 많아요.,Je suis curieux/curieuse à propos de beaucoup de choses sur cette personne.,Le sentiment de vouloir savoir quelque chose (to be curious).
+똑똑하다,être intelligent,그 친구는 정말 똑똑해요.,Cet ami est vraiment intelligent.,"Qualifie quelqu'un d'intelligent, de vif d'esprit (to be smart)."
+적다,être peu nombreux / en petite quantité,시간이 너무 적어요.,Il y a trop peu de temps.,Adjectif qui indique une petite quantité ou un petit nombre (to be few/little). Opposé : 많다 (être nombreux).
+활발하다,être actif / dynamique,그는 성격이 활발해서 친구가 많아요.,"Il a une personnalité dynamique, donc il a beaucoup d'amis.","Qualifie une personne énergique, sociable et extravertie (to be active/lively)."
+우연히,par hasard,길에서 우연히 친구를 만났어요.,J'ai rencontré un ami dans la rue par hasard.,"Adverbe qui indique qu'un événement s'est produit de manière inattendue (by chance, accidentally)."
+성격이 맞다,avoir des personnalités compatibles,우리는 성격이 잘 맞아서 좋은 친구가 됐어요.,Nous sommes devenus de bons amis car nos personnalités sont compatibles.,Expression pour dire que deux personnes s'entendent bien (personalities match).
+성격이 조용하다,avoir une personnalité calme,저는 성격이 조용한 편이에요.,J'ai plutôt une personnalité calme.,"Décrit une personne réservée, introvertie (to have a quiet personality)."
+"아, 참!","Ah, au fait !","아, 참! 깜빡했어요.","Ah, au fait ! J'ai oublié.","Interjection utilisée quand on se souvient soudainement de quelque chose (Oh, by the way!)."
+어디 가는 길이에요?,Où allez-vous ?,"안녕하세요, 어디 가는 길이에요?","Bonjour, où allez-vous comme ça ?",Phrase pour demander poliment la destination de quelqu'un qu'on croise (Where are you on your way to?).
+국적,nationalité,국적이 어디예요?,Quelle est votre nationalité ?,L'appartenance légale à une nation (nationality).
+꿈,rêve,제 꿈은 세계 일주를 하는 것입니다.,Mon rêve est de faire le tour du monde.,"Aspiration, but dans la vie (dream), ou ce que l'on voit en dormant."
+미팅,blind date,주말에 미팅이 있어요.,"J'ai un ""meeting"" ce week-end.","En Corée, ""meeting"" (미팅) fait souvent référence à un rendez-vous arrangé en groupe (group blind date). Peut aussi signifier une réunion professionnelle."
+이것저것,ceci cela,가게에서 이것저것 샀어요.,J'ai acheté diverses choses au magasin.,This and that. Expression pour désigner plusieurs choses variées sans les nommer.
+이웃,voisin,이웃과 사이좋게 지내요.,Je m'entends bien avec mes voisins.,Personne qui habite à côté (neighbor).
+자기,soi-même / chéri(e),먼저 자기 자신을 사랑해야 해요.,Il faut d'abord s'aimer soi-même.,"Pronom réfléchi (oneself). Peut aussi être un terme d'affection entre couples (honey, darling)."
+평일,jour de semaine,평일에는 일하고 주말에는 쉬어요.,Je travaille les jours de semaine et je me repose le week-end.,Du lundi au vendredi (weekday). Opposé : 주말 (week-end).
+해외,étranger / outre-mer,해외 여행을 가고 싶어요.,Je veux voyager à l'étranger.,Terme qui désigne les pays étrangers (overseas).
+해외 출장,voyage d'affaires à l'étranger,다음 주에 해외 출장을 가요.,Je pars en voyage d'affaires à l'étranger la semaine prochaine.,Overseas business trip.
+활동,activité,동아리 활동을 열심히 하고 있어요.,Je participe activement aux activités du club.,Action ou participation à un événement ou un groupe (activity).
+(-에) 들어오다,entrer / rejoindre,동아리에 새로 들어왔어요.,J'ai récemment rejoint le club.,Verbe qui signifie entrer (to come in) ou rejoindre une organisation.
+회사에 들어오다,rejoindre une entreprise,작년에 이 회사에 들어왔어요.,J'ai rejoint cette entreprise l'année dernière.,Expression courante pour dire qu'on a été embauché (to join a company). Synonyme : 입사하다.
+함께,ensemble,친구와 함께 영화를 봤어요.,J'ai regardé un film avec un ami.,"Adverbe signifiant ""ensemble"" (together). Synonyme : 같이."
+신문 기자,journaliste (presse écrite),그의 직업은 신문 기자입니다.,Son métier est journaliste.,Newspaper reporter/journalist.
+,,,,
+2과,,,,
+건물,bâtiment,이 건물은 신축이에요.,Ce bâtiment est de construction récente.,"Terme général pour toute construction (building) : école, bibliothèque, dortoir. Utilisé pour localiser un lieu sur un plan ou donner une adresse."
+강의실,salle de cours,강의실이 바뀌었어요.,La salle de cours a changé.,Pièce où se tiennent les cours magistraux ou les TD (lecture room/classroom). Essentiel pour suivre son emploi du temps.
+편의점,supérette,편의점에서 간단히 먹을 것을 샀어요.,J'ai acheté quelque chose de simple à manger à la supérette.,"Convenience store (souvent 24/7). On y achète snacks, boissons, fournitures de base. Très présent sur les campus."
+보건실,infirmerie,어지러워서 보건실에 다녀왔어요.,"J'avais la tête qui tourne, donc je suis allé(e) à l'infirmerie.","Health room sur le campus. Pour les premiers soins, médicaments de base, ou un court repos en cas de malaise."
+컴퓨터실,salle informatique,과제 때문에 컴퓨터실에서 작업했어요.,J'ai travaillé dans la salle informatique pour un devoir.,"Computer lab avec des ordinateurs en libre-service, imprimantes et logiciels spécifiques. Indispensable pour les étudiants."
+탁구장,salle de ping-pong,점심시간에 탁구장에서 운동했어요.,J'ai fait du sport dans la salle de ping-pong pendant la pause déjeuner.,Espace sportif (table tennis room) souvent disponible sur les campus pour la détente et le loisir des étudiants.
+과,département (académique),어느 과 학생이세요?,De quel département êtes-vous étudiant ?,"Abréviation de 학과 (department). Désigne la spécialité d'un étudiant (ex: département de littérature, d'ingénierie)."
+교환 학생,étudiant d'échange,저는 이번 학기 교환 학생입니다.,Je suis un étudiant d'échange ce semestre.,Exchange student qui étudie pour un ou deux semestres dans une université partenaire à l'étranger.
+보고서,rapport,보고서를 제출해야 해요.,Je dois rendre un rapport.,"Devoir écrit structuré (report) qui demande une analyse, une recherche ou une synthèse sur un sujet donné."
+(보고서를) 제출하다,soumettre (un rapport),보고서를 기한 내에 제출했어요.,J’ai remis le rapport dans les délais.,"Soumission officielle (rapport, devoir, formulaire)."
+학생증,carte d'étudiant,학생증으로 도서관에 들어가요.,J'entre dans la bibliothèque avec ma carte d'étudiant.,"Student ID card. Sert de pièce d'identité sur le campus, pour emprunter des livres, accéder aux bâtiments, etc."
+학점,crédits / note,이번 학기에 18학점을 들어요.,Je prends 18 crédits ce semestre.,Représente la charge de cours (credits) ou la note obtenue (grade/GPA). Un élément central de la vie universitaire.
+후배,junior,후배들에게 조언해 줬어요.,J'ai donné des conseils aux juniors.,Désigne un étudiant plus jeune ou moins avancé dans le cursus. Opposé de 선배 (senior).
+동아리,club étudiant,동아리에 가입했어요.,J'ai rejoint un club.,"Club activity (sport, culture, bénévolat). Un aspect très important de la vie sociale sur les campus coréens."
+가입하다,adhérer / rejoindre,사진 동아리에 가입했어요.,J'ai rejoint le club de photo.,"Verbe pour s'inscrire officiellement à un club, un service en ligne, etc. (to join)."
+신청하다,postuler / s'inscrire,교환 학생 프로그램을 신청했어요.,J'ai postulé au programme d'échange.,"Action de soumettre une demande formelle (to apply) pour un programme, un cours, une bourse."
+신청서,formulaire d'inscription,신청서를 작성해 주세요.,Veuillez remplir le formulaire d'inscription.,Le document papier ou en ligne (application form) à remplir pour 신청하다.
+모이다,se réunir,친구들이 도서관 앞에 모였어요.,Des amis se sont réunis devant la bibliothèque.,Des personnes se regroupent en un même lieu pour un but commun (to gather).
+모임,réunion / rencontre,이번 주 금요일에 모임이 있어요.,Il y a une réunion ce vendredi.,"L'événement où l'on se réunit (meet-up, gathering), souvent pour un club ou un groupe d'étude."
+엠티 (MT),sortie d'intégration,주말에 과 엠티를 갑니다.,Je pars en sortie d'intégration avec mon département ce week-end.,"Membership Training. Voyage de cohésion (retreat) d'un club ou d'un département, souvent avec des jeux et de l'alcool."
+도서관,bibliothèque,도서관에서 공부해요.,J'étudie à la bibliothèque.,"Library. Lieu central du campus pour l'étude, l'emprunt de livres et l'accès aux ressources académiques."
+대출,emprunt (de livres),책 대출 기간은 2주입니다.,La durée d'emprunt des livres est de 2 semaines.,Action d'emprunter un livre à la bibliothèque (book loan).
+반납,retour (de livres),반납 기한을 지켜 주세요.,Veuillez respecter la date limite de retour.,Action de rendre un livre emprunté (return). Opposé de 대출.
+반납하다,rendre / retourner,내일 책을 반납할 거예요.,Je vais rendre le livre demain.,Le verbe d'action pour effectuer le retour (to return).
+반납일,date de retour,반납일이 다음 주 월요일이에요.,La date de retour est lundi prochain.,La date limite (due date) à laquelle un livre doit être rendu.
+연체료를 내다,payer des frais de retard,반납일이 지나서 연체료를 냈어요.,J'ai payé des frais de retard car la date de retour était dépassée.,Payer une amende (late fee) pour avoir rendu un livre après la date limite.
+이용 규칙,règles d'utilisation,이용 규칙을 꼭 읽으세요.,Lisez attentivement les règles d'utilisation.,Le règlement (rules of use) d'un lieu comme la bibliothèque ou la salle de sport.
+규칙을 지키다,respecter les règles,도서관 규칙을 지켜 주세요.,Veuillez respecter les règles de la bibliothèque.,Se conformer au règlement (to follow the rules).
+맞은편,en face de,편의점 맞은편에 카페가 있어요.,Il y a un café en face de la supérette.,Indique une position directement de l'autre côté (opposite side). Très utile pour donner des directions.
+매주,chaque semaine,모임은 매주 수요일이에요.,La réunion a lieu chaque mercredi.,Adverbe de fréquence (every week).
+복도,couloir,복도에서 떠들지 마세요.,Ne faites pas de bruit dans le couloir.,Espace de passage (hallway) dans un bâtiment.
+지하,sous-sol,지하 1층에 탁구장이 있어요.,La salle de ping-pong est au premier sous-sol.,"Niveau inférieur d'un bâtiment (basement, underground)."
+홈페이지,site web (officiel),공지를 홈페이지에서 확인하세요.,Vérifiez les annonces sur le site web.,"Homepage. La source principale d'informations officielles pour un cours, un département ou l'université."
+출력하다,imprimer,보고서를 출력했어요.,J'ai imprimé le rapport.,Action d'imprimer un document depuis un ordinateur (to print).
+다다음 주,la semaine d'après la semaine prochaine,발표는 다다음 주예요.,La présentation est dans deux semaines.,The week after next week. Utile pour planifier à moyen terme.
+입구,entrée,입구에서 만나자.,Retrouvons-nous à l'entrée.,Le point d'accès principal d'un bâtiment (entrance).
+(-이/가) 닫히다,se fermer / être fermé,문이 자동으로 닫혀요.,La porte se ferme automatiquement.,Forme passive de 닫다 (fermer). Indique qu'une chose se ferme d'elle-même ou a été fermée par quelqu'un.
+(-이/가) 지나다,"passer (temps, date)",마감일이 지났어요.,La date limite est passée.,"Indique que le temps ou une date limite est écoulé (to pass, to be over)."
+반납일이 지나다,la date de retour est dépassée,반납일이 지나서 연체료가 발생했어요.,Des frais de retard ont été appliqués car la date de retour est dépassée.,Expression spécifique pour un retard de prêt à la bibliothèque.
+(-에게) 혼나다,se faire gronder,수업 중에 떠들어서 선생님에게 혼났어요.,Je me suis fait gronder par le professeur pour avoir bavardé en cours.,Subir une réprimande (to get scolded). Forme passive de 혼내다 (gronder).
+경비 아저씨,gardien / vigile,경비 아저씨가 출입을 확인해요.,Le gardien vérifie les entrées.,Terme familier pour le gardien de sécurité (security guard) d'un bâtiment.
+놓고 나오다,oublier (et sortir),강의실에 가방을 놓고 나왔어요.,J'ai oublié mon sac dans la salle de cours.,Action de laisser un objet quelque part par inadvertance (to leave something behind).
+사실은,en fait / à vrai dire,사실은 숙제를 아직 못 했어요.,"En fait, je n'ai pas encore fait mes devoirs.","Utilisé pour introduire la vérité ou une information cachée (actually, in fact)."
+주의 사항,points d'attention / avertissements,시험 전 주의 사항을 반드시 읽으세요.,Lisez impérativement les consignes avant l'examen.,"Instructions ou avertissements importants à prendre en compte (cautions, things to note)."
+그런 게 있어?,"Ça existe, ce genre de chose ?","A: ""이 학교엔 수면실도 있어."" B: ""정말? 그런 게 있어?""","A: ""Cette école a même une salle de sieste."" B: ""Vraiment ? Ça existe ?""",Expression de surprise ou d'incrédulité (Is there such a thing?).
+당연하지!,Bien sûr ! / Évidemment !,"A: ""도와줄 수 있어?"" B: ""당연하지!""","A: ""Tu peux m'aider ?"" B: ""Bien sûr !""",Réponse affirmative et enthousiaste (Of course!).
+언어,langue,언어 교환을 하고 있어요.,Je fais un échange linguistique.,"Le système de communication (language), comme le coréen, le français, etc."
+자신감,confiance en soi,발표에서 자신감이 중요해요.,La confiance en soi est importante pour une présentation.,Le sentiment d'assurance et de foi en ses propres capacités (self-confidence).
+자신감이 생기다,gagner en confiance,반복 연습으로 자신감이 생겼어요.,J'ai gagné en confiance en m'entraînant de manière répétée.,Le processus de développer de l'assurance (to build confidence).
+환경,environnement,학습 환경이 좋아요.,L'environnement d'étude est bon.,Le contexte ou les conditions dans lesquelles on vit ou travaille (environment).
+경험하다,faire l'expérience de,다양한 문화를 직접 경험했어요.,J'ai fait l'expérience de diverses cultures personnellement.,Vivre ou traverser une situation concrètement (to experience).
+느끼다,ressentir,큰 성취감을 느꼈어요.,J'ai ressenti un grand sentiment d'accomplissement.,Éprouver une émotion ou une sensation (to feel).
+느낀 점,ce que j'ai ressenti / mes impressions,발표 후 느낀 점을 이야기해 보세요.,Parlez de vos impressions après la présentation.,"Les pensées et sentiments personnels suite à une expérience (takeaways, impressions)."
+실력이 늘다,s'améliorer / progresser,연습을 하니 실력이 늘었어요.,Mon niveau s'est amélioré car je me suis entraîné.,Indique une amélioration des compétences (skills improve). 늘다 signifie augmenter.
+한국어가 늘다,progresser en coréen,한국 드라마를 보니까 한국어가 늘었어요.,Mon coréen s'est amélioré en regardant des dramas coréens.,Expression spécifique pour indiquer une amélioration de son niveau de coréen.
+(에) 적응하다,s'adapter à,새 환경에 잘 적응하고 있어요.,Je m'adapte bien au nouvel environnement.,S'habituer et s'ajuster à une nouvelle situation ou un nouveau lieu (to adapt to).
+해결하다,résoudre,어려운 문제를 해결했어요.,J'ai résolu un problème difficile.,Trouver une solution à un problème ou une difficulté (to solve).
+새롭다,être nouveau,새로운 친구들을 많이 사귀었어요.,Je me suis fait beaucoup de nouveaux amis.,Qualifie quelque chose de nouveau et d'inédit (to be new).
+익숙하다,être familier / habitué,이제 한국 생활이 익숙해요.,"Maintenant, je suis habitué(e) à la vie en Corée.",Le sentiment d'être à l'aise avec quelque chose car on en a l'habitude (to be familiar with).
+점점,progressivement / de plus en plus,날씨가 점점 추워져요.,Le temps se refroidit de plus en plus.,"Adverbe qui indique un changement graduel (gradually, increasingly)."
+한국 사람이 다 됐대요.,On dirait que tu es devenu(e) tout(e) coréen(ne).,"김치를 잘 먹어서 친구가 ""한국 사람이 다 됐네요""라고 했어요.","Mon ami m'a dit ""On dirait que tu es devenu tout coréen"" parce que je mange bien le kimchi.",Expression idiomatique pour complimenter un étranger qui s'est très bien adapté à la culture coréenne.
+,,,,
+3과,,,,
+아파트,appartement,한국에서는 아파트에 사는 사람이 많아요.,"En Corée, beaucoup de gens vivent en appartement.",Désigne un appartement dans un grand immeuble résidentiel (apartment complex). C'est le type de logement le plus courant en ville.
+기숙사,dortoir / résidence universitaire,대학교 기숙사 추첨에서 떨어졌어요.,Je n'ai pas été sélectionné au tirage au sort pour le dortoir.,Logement pour étudiants sur le campus (dormitory). Les chambres sont souvent partagées (ex: 2인 1실).
+원룸,studio,혼자 살기에는 원룸이 편해요.,"Pour vivre seul, un studio est pratique.","Logement d'une seule pièce (one-room studio) où chambre, salon et cuisine sont combinés."
+주택,maison individuelle,마당이 있는 주택에서 살고 싶어요.,Je veux vivre dans une maison avec un jardin.,"Maison unifamiliale (house), par opposition à un appartement dans un immeuble collectif."
+하숙집,pension (chez l'habitant),하숙집에서는 보통 아침과 저녁을 줘요.,"Dans une pension, on vous donne généralement le petit-déjeuner et le dîner.",Logement (boarding house) où l'on loue une chambre chez une famille qui fournit souvent les repas.
+거실,salon,거실에서 다 같이 TV를 봐요.,On regarde la télé tous ensemble dans le salon.,La pièce à vivre principale d'une maison ou d'un grand appartement (living room).
+부엌,cuisine,부엌에서 요리하고 있어요.,Je suis en train de cuisiner dans la cuisine.,L'espace dédié à la préparation des repas (kitchen).
+샤워실,salle de douche,기숙사는 공동 샤워실을 사용해요.,"Au dortoir, on utilise une salle de douche commune.","Pièce contenant une douche (shower room), parfois séparée de la salle de bain."
+가구,meuble(s),이사할 때 새 가구를 샀어요.,J'ai acheté de nouveaux meubles en déménageant.,"Terme général pour le mobilier (furniture) : lit, table, chaise, armoire, etc."
+싱크대,évier (de cuisine),설거지할 그릇이 싱크대에 쌓여 있어요.,La vaisselle à faire s'accumule dans l'évier.,L'évier de la cuisine (kitchen sink).
+옷장,armoire / penderie,겨울옷을 옷장에 정리했어요.,J'ai rangé les vêtements d'hiver dans l'armoire.,Meuble destiné au rangement des vêtements (closet/wardrobe).
+침대,lit,피곤해서 침대에 눕고 싶어요.,"Je suis fatigué(e), je veux m'allonger sur le lit.",Le meuble sur lequel on dort (bed).
+가스가 들어오다,le gaz est raccordé,이 집에 아직 가스가 안 들어와요.,Le gaz n'est pas encore raccordé dans cette maison.,"Expression signifiant que l'alimentation en gaz (pour la cuisine, le chauffage) est fonctionnelle."
+난방이 되다,le chauffage fonctionne,겨울에는 난방이 잘 돼야 해요.,"En hiver, le chauffage doit bien fonctionner.",Indique que le système de chauffage (heating system) est en état de marche.
+물이 나오다,l'eau coule (du robinet),갑자기 뜨거운 물이 안 나와요.,"Soudainement, l'eau chaude ne coule plus.",Signifie que l'approvisionnement en eau est fonctionnel.
+물이 내려가다,l'eau s'évacue,싱크대 물이 잘 안 내려가요.,L'eau de l'évier ne s'évacue pas bien.,Concerne le drainage (draining). Un problème ici indique souvent un bouchon.
+불이 들어오다,la lumière s'allume / l'électricité fonctionne,전기가 나가서 불이 안 들어와요.,"L'électricité est coupée, donc la lumière ne s'allume pas.",Indique que l'électricité est fonctionnelle.
+비가 새다,il y a une fuite (de pluie),천장에서 비가 새요.,Il y a une fuite d'eau du plafond quand il pleut.,Le toit ou le mur n'est pas étanche et laisse passer l'eau de pluie (the rain leaks in).
+창문이 닫히다,la fenêtre se ferme / est fermée,바람 때문에 창문이 저절로 닫혔어요.,La fenêtre s'est fermée toute seule à cause du vent.,"Forme passive de ""fermer la fenêtre""."
+보증금,dépôt de garantie / caution,이 원룸은 보증금 500만 원입니다.,Ce studio a une caution de 5 millions de wons.,Somme d'argent importante (security deposit) donnée au propriétaire au début du contrat et restituée à la fin.
+부동산,agence immobilière,부동산에 가서 집을 알아봤어요.,Je suis allé(e) à l'agence immobilière pour chercher un logement.,L'agence (real estate agency) qui sert d'intermédiaire pour la location ou la vente.
+부동산 중개인,agent immobilier,부동산 중개인이 좋은 집을 소개해 줬어요.,L'agent immobilier m'a présenté un bon logement.,Le professionnel qui travaille dans une agence immobilière (real estate agent).
+쇼핑센터,centre commercial,주말에 쇼핑센터에 사람이 많아요.,"Le week-end, il y a beaucoup de monde au centre commercial.","Un grand bâtiment avec de nombreux magasins, restaurants, etc. (shopping center)."
+월세,loyer mensuel,매달 1일에 월세를 내야 해요.,Je dois payer le loyer mensuel le 1er de chaque mois.,Système de location où l'on paie un loyer chaque mois (monthly rent).
+전세,"location par dépôt ""Jeonse""",전세로 계약하면 월세를 안 내도 돼요.,"Si on signe un contrat ""Jeonse"", on n'a pas besoin de payer de loyer mensuel.",Système de location unique à la Corée où le locataire verse une très grosse somme en dépôt et ne paie pas de loyer.
+주택가,quartier résidentiel,이곳은 조용한 주택가예요.,C'est un quartier résidentiel calme.,Une zone où se trouvent principalement des maisons et des appartements (residential area).
+집주인,propriétaire,문제가 생기면 집주인에게 연락하세요.,"Si un problème survient, contactez le propriétaire.",La personne qui possède le logement et le met en location (landlord).
+뜨겁다,être chaud (au toucher),국이 뜨거우니 조심하세요.,"La soupe est chaude, alors faites attention.","Décrit une température élevée pour un objet ou un liquide. Ne pas confondre avec 덥다 (chaud, pour la météo)."
+주변 환경,environnement alentour,이 동네는 주변 환경이 조용해서 좋아요.,J'aime ce quartier car l'environnement est calme.,"Concerne les environs immédiats d'un logement : bruit, propreté, sécurité, commerces (surrounding environment)."
+공기가 맑다,l'air est pur,산이라서 공기가 맑아요.,"Comme c'est la montagne, l'air est pur.","Décrit une bonne qualité de l'air, sans pollution (the air is clean/fresh)."
+전망이 좋다,la vue est belle,제 방은 전망이 좋아서 인기가 많아요.,Ma chambre est populaire car la vue est belle.,Qualifie un logement qui offre un beau panorama (to have a good view).
+어떻게 해야 할지 잘 모르겠어요.,Je ne sais pas bien ce que je dois faire.,보일러가 고장 나서 어떻게 해야 할지 잘 모르겠어요.,"La chaudière est en panne, je ne sais pas bien quoi faire.",Phrase utilisée quand on est face à un problème et qu'on ne connaît pas la solution.
+점,point / aspect,이 집의 좋은 점은 역에서 가깝다는 거예요.,"Le bon point de ce logement, c'est qu'il est proche de la station.","Utilisé pour parler d'une caractéristique ou d'un aspect (point, aspect). Ex: 장점 (point fort), 단점 (point faible)."
+장단점,avantages et inconvénients,기숙사의 장단점을 알려 주세요.,Dites-moi quels sont les avantages et les inconvénients du dortoir.,Mot-valise combinant 장점 (avantage) et 단점 (inconvénient) (pros and cons).
+힘든 점,point difficile / difficulté,한국 생활의 힘든 점은 뭐예요?,Quelle est la chose la plus difficile dans la vie en Corée ?,"Désigne l'aspect le plus pénible ou difficile d'une expérience (hardship, difficult point)."
+구하다,chercher / trouver,인터넷으로 집을 구했어요.,J'ai trouvé un logement sur internet.,"Verbe utilisé pour la recherche et l'obtention d'un logement, d'un travail, etc. (to look for, to get)."
+제안하다,proposer / suggérer,제가 좋은 방법을 제안할게요.,Je vais proposer une bonne méthode.,"Faire une suggestion ou une proposition (to suggest, to propose)."
+불친절하다,être désagréable / pas aimable,그 식당 직원은 좀 불친절했어요.,L'employé de ce restaurant était un peu désagréable.,"Le contraire de 친절하다 (être aimable) (to be unkind, unfriendly)."
+지저분하다,être désordonné / sale,방이 너무 지저분해서 청소해야 해요.,"La chambre est trop en désordre, je dois la nettoyer.","Décrit un manque de propreté ou d'ordre (to be messy, dirty)."
+먼저,d'abord / en premier,집에 오면 먼저 손을 씻어요.,"Quand je rentre à la maison, je me lave d'abord les mains.",Adverbe qui indique la priorité dans une séquence d'actions (first).
+반씩 내다,payer moitié-moitié,친구와 관리비를 반반 내기로 했어요.,Mon ami et moi avons décidé de payer les charges moitié-moitié.,Expression familière pour dire qu'on partage un coût à parts égales (to split the bill 50/50).
+그래그래.,"Oui, oui. / C'est ça.","A: ""이렇게 하면 돼?"" B: ""응, 그래그래.""","A: ""Je dois faire comme ça ?"" B: ""Oui, c'est ça.""","Expression familière et décontractée pour marquer son accord (Yeah, yeah. / Okay, okay.)."
+깜짝이야.,Quelle surprise ! / Tu m'as fait peur !,"뒤에서 갑자기 나타나서 ""깜짝이야!"" 하고 소리쳤어요.","J'ai crié ""Tu m'as fait peur !"" parce que tu es apparu soudainement derrière moi.",Interjection utilisée pour exprimer la surprise ou la peur.
+뭘 그렇게 열심히 보고 있어?,Qu'est-ce que tu regardes avec autant d'attention ?,"친구가 휴대폰만 보고 있어서 ""뭘 그렇게 열심히 보고 있어?""라고 물었다.","Mon ami ne regardait que son téléphone, alors j'ai demandé ""Qu'est-ce que tu regardes avec autant d'attention ?"".",Phrase familière pour demander à quelqu'un ce qui capte son attention.
+우리 이렇게 하면 어떨까?,Et si on faisait comme ça ?,"청소 당번을 정해야 하는데, 우리 이렇게 하면 어떨까?","On doit décider des tours de ménage, et si on faisait comme ça ?",Formule de suggestion douce et collaborative pour proposer une idée.
+가족적,familial / chaleureux,하숙집 분위기가 아주 가족적이에요.,L'ambiance de la pension est très familiale.,"Décrit une atmosphère chaleureuse et accueillante, comme dans une famille (family-like)."
+공동생활,vie en communauté,기숙사에서는 공동생활 규칙을 잘 지켜야 해요.,"Au dortoir, il faut bien respecter les règles de la vie en communauté.",Le fait de vivre avec d'autres personnes et de partager des espaces (communal living).
+매점,kiosque / petite boutique,기숙사 1층에 매점이 있어서 편리해요.,C'est pratique car il y a un kiosque au rez-de-chaussée du dortoir.,"Petit magasin (snack shop, kiosk) situé à l'intérieur d'un bâtiment (école, entreprise, dortoir) vendant des snacks et des boissons."
+비,frais,이 서비스는 가입비가 없어요.,Ce service n'a pas de frais d'inscription.,"Suffixe signifiant ""frais"" ou ""coût"" (fee). Ex: 학비 (frais de scolarité), 회비 (cotisation)."
+관리비,charges / frais de gestion,이 아파트는 관리비가 비싼 편이에요.,Les charges de cet appartement sont plutôt chères.,Frais mensuels pour l'entretien des parties communes d'un immeuble (maintenance fees).
+기숙사비,frais de dortoir,다음 학기 기숙사비를 내야 해요.,Je dois payer les frais de dortoir pour le prochain semestre.,Le coût de la location d'une chambre en résidence universitaire (dormitory fee).
+식사비,frais de repas,하숙비에는 식사비가 포함되어 있어요.,Les frais de repas sont inclus dans le coût de la pension.,Le coût de la nourriture (meal expenses).
+하숙비,frais de pension,한 달 하숙비는 60만 원이에요.,Les frais de pension pour un mois sont de 600 000 wons.,Le coût de la location d'une chambre en 하숙집 (boarding house fee).
+요금,tarif / facture,이번 달 전기 요금이 많이 나왔어요.,La facture d'électricité de ce mois-ci est élevée.,"Terme général pour les frais de services (fee, rate, charge), souvent pour des consommations mesurées."
+가스 요금,facture de gaz,겨울에는 가스 요금이 많이 나와요.,"En hiver, la facture de gaz est élevée.",Gas bill.
+수도 요금,facture d'eau,샤워를 오래 해서 수도 요금이 걱정돼요.,Je m'inquiète pour la facture d'eau car j'ai pris une longue douche.,Water bill.
+전기 요금,facture d'électricité,에어컨 때문에 전기 요금이 많이 나왔어요.,La facture d'électricité est élevée à cause de la climatisation.,Electricity bill.
+정도,environ / degré,집에서 학교까지 30분 정도 걸려요.,"De la maison à l'école, ça prend environ 30 minutes.","Utilisé pour donner une approximation (approximately, about) ou pour parler d'un niveau (degree, extent)."
+추첨,tirage au sort,기숙사는 인기가 많아서 추첨을 해요.,"Le dortoir est très populaire, donc ils font un tirage au sort.","Loterie ou tirage au sort (lottery, drawing) utilisé quand la demande dépasse l'offre."
+운영하다,gérer / exploiter,이 하숙집은 할머니 혼자 운영하세요.,C'est une grand-mère qui gère cette pension toute seule.,"Faire fonctionner et administrer une entreprise, un service ou une installation (to operate, to run)."
+(-이/가) 포함되다,être inclus,관리비에 인터넷 요금이 포함되어 있어요.,La facture internet est incluse dans les charges.,Indique que quelque chose fait partie d'un tout (to be included).
+각각,chacun / respectivement,방세는 각각 30만 원씩 내요.,Nous payons 300 000 wons chacun pour le loyer.,"Adverbe signifiant que chaque personne ou chose est traitée individuellement (each, respectively)."
+따로,séparément,식사비는 따로 내야 해요.,Il faut payer les frais de repas séparément.,"Adverbe qui indique que quelque chose est fait à part, non inclus (separately)."
+미리,à l'avance,이사하기 전에 미리 청소했어요.,J'ai nettoyé à l'avance avant de déménager.,"Adverbe signifiant qu'une action est faite avant le moment prévu (in advance, beforehand)."
+2인 1실,chambre pour deux personnes,기숙사는 보통 2인 1실이에요.,Les dortoirs sont généralement des chambres pour deux.,"2 personnes, 1 chambre. Décrit une chambre double (double-occupancy room)."
+추첨에서 떨어지다,ne pas être tiré au sort,기숙사 추첨에서 떨어져서 실망했어요.,J'ai été déçu(e) de ne pas avoir été sélectionné(e) au tirage au sort du dortoir.,"Expression signifiant ""échouer"" ou ""ne pas être sélectionné"" lors d'un tirage au sort."
+여러분께 도움이 되면 좋겠습니다.,J'espère que cela vous sera utile.,제가 정리한 정보가 여러분께 도움이 되면 좋겠습니다.,J'espère que les informations que j'ai organisées vous seront utiles.,Phrase de conclusion polie pour exprimer le souhait que son travail ou ses explications aident les autres.
+4과,,,,
+결혼식,cérémonie de mariage,결혼식에 초대받았어요.,J’ai été invité au mariage.,"La cérémonie officielle où le couple se marie. Inclut souvent des rituels, discours, photos, puis un repas."
+결혼식장,salle de mariage,결혼식장은 3층이에요.,La salle de mariage est au 3e étage.,"Lieu où se tient la cérémonie (wedding hall). En Corée, souvent des complexes dédiés aux mariages."
+박수를 치다,applaudir,신랑신부 입장 때 박수를 쳐 주세요.,Veuillez applaudir à l’entrée des mariés.,"Geste de félicitation pendant la cérémonie, à l’entrée, aux vœux, etc."
+봉투,enveloppe,축의금을 봉투에 넣었어요.,J’ai mis l’argent du cadeau dans une enveloppe.,"Enveloppe pour offrir de l’argent (cadeau) au mariage, avec nom du donateur."
+부케를 던지다,lancer le bouquet,신부가 부케를 던졌어요.,La mariée a lancé le bouquet.,Tradition où la mariée jette le bouquet à des invitées célibataires. Symbole de chance pour le prochain mariage.
+(-이/가) 시집가다,se marier (femme → va chez le mari),언니가 다음 달에 시집가요.,Ma grande sœur se marie le mois prochain.,Verbe traditionnel pour une femme qui se marie. Nuance patriarcale “aller dans la maison du mari”.
+(-이/가) 장가가다,se marier (homme),오빠가 올해 장가가요.,Mon grand frère se marie cette année.,"Verbe traditionnel pour un homme qui se marie. Aujourd’hui, on utilise aussi 결혼하다 (neutre)."
+신랑,marié (groom),오늘 신랑 정말 멋지네요.,Le marié est vraiment élégant aujourd’hui.,Le fiancé pendant la cérémonie. Utilisé avec 신부 (mariée).
+신부,mariée (bride),신부가 너무 예뻐요.,La mariée est magnifique.,La fiancée pendant la cérémonie. Paire: 신랑.
+축의금,don d’argent (mariage),축의금을 내고 방명록에 이름을 적었어요.,J’ai donné le don et signé le livre d’or.,Argent offert pour féliciter un mariage. Se met dans un 봉투 et se remet à l’accueil.
+피로연,réception (après cérémonie),피로연에서 식사를 했어요.,Nous avons dîné à la réception.,Repas/banquet pour remercier les invités après la cérémonie.
+피로연장,salle de réception,피로연장은 결혼식장 옆이에요.,La salle de réception est à côté.,Espace où se tient le banquet post‑cérémonie.
+장례식,funérailles,장례식에 다녀왔어요.,Je suis allé aux funérailles.,Cérémonie pour rendre hommage au défunt. En Corée: protocole et codes vestimentaires sobres.
+장례식장,funérarium / salle des funérailles,장례식장은 병원 건물에 있어요.,Le funérarium est dans l’hôpital.,Lieu où l’on présente ses condoléances et où se tient la veillée.
+빈소,salle ardente (chapelle ardente),빈소가 어디인지 안내받으세요.,Demandez l’emplacement de la salle ardente.,Pièce où est installé l’autel du défunt pour les condoléances.
+영정,photo du défunt (portrait),영정 앞에 절을 했어요.,J’ai salué devant la photo du défunt.,Portrait encadré placé sur l’autel des funérailles.
+위로하다,consoler,유가족을 위로했습니다.,J’ai présenté mes condoléances à la famille.,Exprimer soutien et réconfort aux proches endeuillés.
+절을 하다,faire une révérence,어른께 절을 했어요.,J’ai fait une révérence à l’aîné.,Salutation traditionnelle (bow profond). Aux funérailles ou lors des salutations formelles.
+조의금,don d’argent (condoléances),조의금을 봉투에 담았어요.,J’ai mis l’argent de condoléances dans une enveloppe.,Argent offert à la famille du défunt pour aider aux frais et exprimer sa sympathie.
+향을 피우다,allumer de l’encens,향을 피우고 묵념했습니다.,J’ai allumé de l’encens et observé un moment de silence.,Rituel aux funérailles: encens devant l’autel puis révérence.
+방문하다,rendre visite,내일 교수님 연구실을 방문할 예정이에요.,Je prévois de rendre visite au labo du professeur demain.,Visiter un lieu/personne de façon formelle ou informelle.
+손님을 맞다,accueillir des invités,명절에 손님을 맞을 준비를 했어요.,J’ai préparé l’accueil des invités pour la fête.,Recevoir et accueillir des visiteurs chez soi ou dans un établissement.
+김 부장님을 뵈러 왔는데요.,Je suis venu voir le chef Kim.,김 부장님을 뵈러 왔는데요.,"Je suis venu rencontrer M. Kim, chef de service.",Formule très polie avec 뵙다 (voir honorifique) pour annoncer la personne que l’on vient voir.
+무슨 일로 오셨습니까?,Pour quel motif êtes‑vous venu ?,무슨 일로 오셨습니까?,Quel est l’objet de votre visite ?,Formule polie standard en réception/accueil pour demander la raison de la visite.
+지금 자리에 안 계신데요.,Il n’est pas à son poste en ce moment.,지금 자리에 안 계신데요.,Il est absent de son bureau pour l’instant.,Formule polie pour informer de l’absence temporaire d’une personne.
+뭐 마실 것 좀 드릴까요?,Voulez‑vous boire quelque chose ?,뭐 마실 것 좀 드릴까요?,Puis‑je vous offrir à boire ?,Offre polie (hospitalité) à un visiteur/cliente.
+뭐 이런 걸 다 사 오셨어요?,Il ne fallait pas !,뭐 이런 걸 다 사 오셨어요? 감사합니다.,"Oh, vous n’auriez pas dû ! Merci.",Expression polie quand un invité apporte un cadeau; modestie culturelle.
+별거 아니에요.,Ce n’est rien.,별거 아니에요. 그냥 작은 선물이에요.,"Ce n’est pas grand‑chose, juste un petit cadeau.",Réponse modeste de la personne qui offre un présent.
+조심해서 가세요.,Rentrez prudemment.,늦었네요. 조심해서 가세요.,Il se fait tard. Rentrer prudemment.,Formule de départ polie pour souhaiter un retour en sécurité.
+댁,maison (honorifique),선생님 댁은 어디세요?,Où est la maison du professeur ?,Forme honorifique de 집 pour parler du domicile d’autrui avec respect.
+떡국,soupe de gâteau de riz,설날에 떡국을 먹어요.,On mange du tteokguk au Nouvel An lunaire.,Plat traditionnel du Nouvel An (symbolise “prendre un an”).
+세뱃돈,argent donné au Nouvel An,아이들에게 세뱃돈을 줬어요.,J’ai donné de l’argent du Nouvel An aux enfants.,Argent offert après la salutation traditionnelle (세배) aux aînés.
+연휴,pont / jours fériés consécutifs,이번 추석 연휴는 길어요.,Le pont de Chuseok est long cette année.,Plusieurs jours fériés à la suite; période de déplacements familiaux.
+윷놀이,jeu de yut (traditionnel),가족과 윷놀이를 했어요.,On a joué à Yut avec la famille.,Jeu de société traditionnel joué notamment pendant les fêtes.
+세배를 드리다,faire la salutation du Nouvel An,어른들께 세배를 드렸어요.,Nous avons fait la salutation du Nouvel An aux aînés.,Révérence profonde pour souhaiter la bonne année aux aînés; forme honorifique 드리다.
+초대하다,inviter,회의에 초대해 주셔서 감사합니다.,Merci de m’avoir invité à la réunion.,Invitation à évènement/réunion/repas.
+새해 복 많이 받으세요.,Bonne année !,새해 복 많이 받으세요!,"Bonne année, plein de bonheur !","Vœux standard du Nouvel An, très utilisé dans les messages/coups de fil."
+교수님,professeur (honorifique),교수님을 연구실에서 뵈었어요.,J’ai rencontré le professeur au labo.,Titre honorifique pour s’adresser à un professeur d’université.
+부장님,chef de service (honorifique),"부장님, 보고 드리겠습니다.","Chef, je vous ferai un rapport.",Titre honorifique pour un manager (부장). Ajout de 님 = respect.
+연구실,laboratoire / bureau de recherche universitaire,연구실에 방문해도 될까요?,Puis‑je passer au laboratoire ?,Bureau/lab d’un prof ou d’une équipe de recherche à l’université.
+환송회,pot de départ (farewell party),동료 환송회를 열었어요.,On a organisé un pot de départ pour un collègue.,"Fête pour dire au revoir à quelqu’un qui part (mutation, départ)."
+뵈다,voir (honorifique de 보다),내일 회장님을 뵐 예정입니다.,Je verrai le président demain.,Forme humble/honorifique quand on parle de “voir” une personne à respecter.
+칭찬하다,complimenter,직원들을 칭찬했어요.,J’ai complimenté les employés.,"Faire des éloges, reconnaître un bon travail."
+검은색,noir (couleur),검은색 정장을 입었어요.,J’ai mis un costume noir.,"Couleur noire; appropriée pour funérailles, formelle et sobre."
+흰색,blanc (couleur),흰색 와이셔츠를 준비하세요.,Préparez une chemise blanche.,"Couleur blanche; chemise formelle, symbolique de pureté; funérailles: noir et blanc."
+대기실,salle d’attente,신랑신부 대기실은 오른쪽입니다.,La salle d’attente des mariés est à droite.,Espace pour patienter avant une cérémonie ou un rendez‑vous.
+띠,ceinture / signe zodiacal,검은 띠를 매세요.,Mettez une ceinture noire.,"Objet “ceinture” (belt) ou signe zodiacal chinois selon contexte; ici, surtout la ceinture vêtement."
+와이셔츠,chemise (dress shirt),흰색 와이셔츠가 필요해요.,Il me faut une chemise blanche.,"Chemise de ville, portée avec costume. Terme d’origine japonaise (white shirt → 와이셔츠)."
+정장,costume / tenue formelle,결혼식에는 정장을 입으세요.,Mettez une tenue formelle pour le mariage.,Tenue formelle (suit). Noir/gris/bleu marine selon l’événement; funérailles: sombre.
+주의하다,faire attention,예절에 주의하세요.,Faites attention à l’étiquette.,"Avertissement/consigne pour agir prudemment, respecter les règles."
+어둡다,être sombre,색이 너무 어두워요.,La couleur est trop sombre.,Pour couleur/lumière; tons sombres appropriés aux funérailles.
+진하다,être foncé / intense,메이크업이 좀 진하네요.,Le maquillage est un peu chargé.,"Couleur/maquillage/goût “fort, intense, foncé”."
+진하게,de façon foncée / intense,커피는 진하게 마셔요.,Je bois le café serré.,"Adverbe dérivé de 진하다; qualifier l’intensité (couleur, goût, maquillage)."
+말없이,sans parler,말없이 자리를 떴어요.,Il est parti sans dire un mot.,"Manière silencieuse, sans paroles; convenable dans certains contextes solennels."
+수업 중,en cours (pendant le cours),지금 수업 중입니다.,Je suis en cours.,“En plein cours” affiché sur la porte/écran; évite d’interrompre. Forme fixe “N 중”.
+식사 중,en train de manger,지금 식사 중이세요.,Il est en train de manger.,Indique qu’une personne déjeune; à l’accueil: personne indisponible.
+외출 중,en sortie (hors du bureau),부장님은 외출 중이세요.,Le chef est sorti.,Personne momentanément hors du bureau; panneau standard au travail.
+회의 중,en réunion,지금 회의 중입니다.,Nous sommes en réunion.,Occupé en réunion; souvent affiché pour éviter les interruptions.
+이야기를 나누다,échanger / discuter,오랜만에 친구와 이야기를 나눴어요.,J’ai discuté avec un ami après longtemps.,"Avoir une conversation mutuelle, partager des nouvelles."
+가까운 사이,relation proche / intime,우리는 꽤 가까운 사이예요.,Nous sommes assez proches.,"Relation de confiance/proximité (amis, famille). Justifie un ton plus direct."
+신경을 쓰다,faire attention / se soucier,복장에 신경을 쓰세요.,Faites attention à votre tenue.,"Se préoccuper d’un détail (tenue, étiquette, timing); “to pay attention, care about”."
+액세서리를 하다,porter des accessoires,장례식에는 액세서리를 적게 하세요.,Portez peu d’accessoires pour des funérailles.,Mettre des bijoux/accessoires. Étiquette: discret pour les cérémonies formelles.
+,,,,
+5과,,,,
+외모,apparence (physique),외모보다 성격이 더 중요해요.,La personnalité est plus importante que l’apparence.,"L’aspect extérieur (looks): visage, coiffure, style vestimentaire. Sert à parler de « soigner son look »."
+인상,impression (visage),인상이 부드러워 보여요.,Il/Elle donne une impression douce.,"L’impression que dégage le visage (vibe initiale). Collocations: 좋은/나쁜 인상, 인상이 강하다."
+첫인상,première impression,첫인상이 정말 좋았어요.,La première impression était excellente.,L’impression au premier contact; souvent considérée importante au travail ou en rendez‑vous.
+단발머리,carré (cheveux courts féminins),단발머리로 잘랐어요.,J’ai coupé en carré.,Coupe féminine courte/moyenne (bob). Image nette/pratique; fréquent pour « changement de look ».
+생머리,cheveux lisses (naturels),그녀는 긴 생머리예요.,Elle a de longs cheveux lisses.,Cheveux naturellement raides (straight). Opposé de 파마머리.
+짧게 깎은 머리,coupe très courte,여름이라 머리를 짧게 깎았어요.,J’ai coupé très court pour l’été.,"Coupe courte type buzz/crew cut. Pratique, sport, sensation de fraîcheur."
+파마머리,cheveux permanentés/bouclés,파마머리로 스타일을 바꿨어요.,J’ai changé pour une permanente.,"Cheveux ondulés/bouclés (perm). Effet volume/boucles, souvent au salon."
+갸름하다,avoir le visage fin/ovale,얼굴이 가름해 보여요.,Il/Elle a le visage fin/ovale.,Décrit un visage élancé. Variante courante: 갸름하다 (plus usuelle en écriture).
+둥글다,être rond,얼굴이 둥근 편이에요.,Son visage est plutôt rond.,"Forme arrondie (face, objets). Nuance descriptive neutre."
+날씬하다,être mince (harmonieux),키도 크고 날씬해요.,Il/Elle est grand(e) et mince.,"Mince positif/équilibré (slim), différent de 마르다 (maigre). Compliment fréquent."
+통통하다,être rondelet(te),아기가 통통해서 귀여워요.,"Le bébé est potelé, c’est mignon.",Un peu enrobé avec nuance affectueuse/douce. Moins abrupt que 뚱뚱하다.
+마르다,être maigre,요즘 너무 말라 보여요.,Tu parais trop maigre ces temps-ci.,Très mince/maigre (skinny). Peut avoir une connotation négative (santé).
+체격이 좋다,avoir une bonne carrure,그는 체격이 좋아요.,Il a une bonne carrure.,Constitution robuste/athlétique (broad build). Souvent compliment masculin.
+뚱뚱하다,être gros(se),전에보다 좀 뚱뚱해졌어요.,J’ai pris du poids par rapport à avant.,Terme direct « overweight ». Sensible; à éviter pour ne pas vexer.
+성격,personnalité,성격이 밝고 친절해요.,Il/Elle est jovial(e) et gentil(le).,"Traits de caractère; combine avec adjectifs: 활발하다, 조용하다, 솔직하다, etc."
+사교적이다,être sociable,그는 아주 사교적이에요.,Il est très sociable.,"À l’aise avec les gens, réseau facile (outgoing). Positif en contexte pro."
+솔직하다,être franc(he),솔직하게 말해 줄게요.,Je vais parler franchement.,Honnête/direct; peut sembler abrupt selon le ton.
+얌전하다,être sage/discret,그녀는 얌전한 편이에요.,Elle est plutôt réservée.,"Calme, posé, discret (demure). Souvent pour un style/perso tranquille."
+유머 감각이 있다,avoir de l’humour,그 사람은 유머 감각이 좋아요.,Il a un bon sens de l’humour.,"Sait faire/recevoir des blagues, bon timing social."
+이해심이 많다,être très compréhensif(ve),그는 이해심이 많아요.,Il est très compréhensif.,"Empathique, tolérant; sait se mettre à la place des autres."
+적극적이다,être proactif(ve),일에 아주 적극적이에요.,Il est très proactif au travail.,"Prend des initiatives, avance sans attendre (proactive). Opposé: 소극적이다 (passif)."
+점잖다,être digne/posée,점잖은 인상을 줘요.,Il/Elle dégage de la dignité.,"Raffiné, correct, posé. Bonne image dans des contextes formels."
+활동적이다,être actif(ve),주말엔 활동적으로 지내요.,Je mène une vie active le week-end.,Bouge beaucoup (sports/loisirs). Diffère de « proactif » (initiative).
+잘생기다,être beau (souvent homme),진짜 잘생겼네요.,Il est vraiment beau.,"« Good‑looking ». En grammaire coréenne, forme passée descriptive (타고난/constaté)."
+얼굴이 잘생기다,avoir un beau visage,얼굴이 정말 잘생겼어요.,Il a un très beau visage.,Met l’accent sur le visage (plus explicite).
+대화가 통하다,bien se comprendre en parlant,우리는 대화가 잘 통해요.,On se comprend bien en discutant.,Bonne alchimie en conversation (same wavelength).
+안경을 끼다,porter des lunettes,요즘 안경을 끼고 다녀요.,"Ces jours-ci, je porte des lunettes.","Verbe pour mettre/porter des lunettes, lentilles: 렌즈를 끼다."
+얼마 전에,récemment,얼마 전에 머리를 잘랐어요.,J’ai coupé mes cheveux récemment.,Passé proche (recently). Syn.: 최근에 (plus formel).
+어떻게 알았어?,Comment t’as su ?,내일 이사해. — 어떻게 알았어?,Je déménage demain. — Comment t’as su ?,Registre familier; surprise que l’autre sache. Forme polie: 어떻게 아셨어요?
+외모에 얼마나 신경을 쓰는데.,Je soigne tellement mon look !,나 외모에 얼마나 신경을 쓰는데.,Tu sais combien je fais attention à mon apparence !,"Insiste sur l’effort; ton familier/colloquial, souvent pour se défendre/taquiner."
+드라이하다,faire un brushing/sécher,아침마다 머리를 드라이해요.,Je me fais un brushing chaque matin.,Blow‑dry au salon ou chez soi; terme d’emprunt.
+바르다,appliquer (produit),헤어에 오일을 발랐어요.,J’ai appliqué de l’huile sur les cheveux.,Appliquer crème/gel/baume. Coiffure ou soins de peau.
+무스를 바르다,mettre de la mousse coiffante,볼륨 주려고 무스를 발랐어요.,J’ai mis de la mousse pour donner du volume.,Produit coiffant (mousse/foam) pour volume et tenue.
+능력,capacité/compétence,문제 해결 능력이 좋아요.,Il a de bonnes capacités de résolution de problèmes.,"Ability/skills; se combine: 언어 능력, 업무 능력, 리더십."
+능력이 있다,être compétent,그는 업무 능력이 있어요.,Il est compétent au travail.,Avoir des aptitudes concrètes; compliment professionnel.
+동호회,"club (loisirs, adultes)",회사 동호회에 가입했어요.,J’ai rejoint un club de l’entreprise.,Club de hobby pour adultes. Diffère de 동아리 (plutôt étudiant).
+명함,carte de visite,명함 한 장 주시겠어요?,Pourrais-je avoir votre carte de visite ?,"Business card; étiquette: donner/recevoir à deux mains, lire avant de ranger."
+(-이/가) 넘다,dépasser/plus de X..,나이가 마흔을 넘었어요.,J’ai dépassé la quarantaine.,"Exceed/go over pour âge, taille, quantité, temps."
+선택하다,choisir/sélectionner,최종 후보 중 하나를 선택했어요.,J’ai sélectionné une option finale.,Choix après comparaison; plus formel que 고르다 (choisir).
+묘사하다,décrire,외모를 자세히 묘사해 보세요.,Décrivez l’apparence en détail.,"Décrire par mots (describe). Utilisé en rédaction, police, portraits."
+하루 종일,toute la journée,하루 종일 바빴어요.,J’ai été occupé(e) toute la journée.,Durée continue du matin au soir; insiste sur la constance.
+어떻게 생겼는데?,Il/Elle ressemble à quoi ?,그 사람 어떻게 생겼는데?,Il/Elle est comment physiquement ?,Familier; demande une description de l’apparence (looks).
+깊다,être profond,생각이 깊어요.,Sa pensée est profonde.,"Profondeur physique/abstraite (eau, nuit, pensée). Intensité/gravité."
+생각이 깊다,être réfléchi,그는 생각이 깊은 사람이에요.,C’est quelqu’un de très réfléchi.,"Qualifie une personne posée, prudente, qui réfléchit avant d’agir/parler."
+생각을 깊게 하다,réfléchir en profondeur,이 문제에 대해 생각을 깊게 했어요.,J’ai beaucoup réfléchi à ce problème.,Accent sur l’effort de réflexion soutenue/profonde.
+다양하다,être varié/divers,취미가 다양해요.,J’ai des hobbies variés.,Diversité de types/options. Collocations: 다양한 경험/배경.
+절대,absolument (jamais/à ne pas…),그건 절대 말하지 마.,Ne le dis absolument jamais.,Adverbe intensif; souvent avec négation: 절대 안/절대 못. Polie: 절대로.
+눈이 높다,avoir des exigences élevées,그는 눈이 높아서 쉽게 안 사요.,"Il est difficile, il achète rarement.",Standards élevés (people/objets). Peut sonner difficile/exigeant.
+발이 넓다,avoir un large réseau,그는 발이 넓어 아는 사람이 많아요.,Il connaît beaucoup de monde.,Bien connecté socialement (wide network). Utile pour affaires/opportunités.
+입이 무겁다,savoir garder un secret,그는 입이 무거운 편이에요.,Il sait garder un secret.,"Discret, ne parle pas inutilement. Opposé: 입이 가볍다 (bavard, indiscret)."
+비밀을 지키다,garder un secret,약속한 비밀을 꼭 지켰어요.,J’ai bien gardé le secret promis.,Respecter la confidentialité; valeur importante en amitié/travail.
+,,,,
+6과,,,,
+기계,"machine, appareil",기계가 고장 났어요.,La machine est en panne.,"Terme général pour dispositif mécanique/électrique (machine). Contexte SAV, usine, bureau."
+가전제품,électroménager (au sens large),가전제품을 새로 구입했어요.,J’ai acheté de nouveaux appareils électroménagers.,"Produits électriques pour la maison (frigo, lave‑linge, TV). Mot englobant."
+복사기,photocopieur,복사기가 먹통이에요.,Le photocopieur ne répond plus.,Appareil pour faire des copies (copier). Bureaux/écoles.
+스캐너,scanner,서류를 스캐너로 스캔했어요.,J’ai scanné le document avec un scanner.,Numérise des documents/images (to scan). Parfois intégré à une imprimante.
+콘센트,prise murale,콘센트가 어디에 있어요?,Où est la prise murale ?,Prise d’alimentation au mur. À ne pas confondre avec 플러그 (fiche).
+고,brancher à la prise,전원 코드를 콘센트에 꽂으세요.,Branchez le câble d’alimentation dans la prise.,Action de connecter physiquement l’alimentation (plug in). Étape basique de dépannage.
+파워 버튼,bouton Power,파워 버튼을 길게 누르세요.,Maintenez le bouton Power enfoncé.,Bouton d’alimentation pour allumer/éteindre (power).
+플러그,Plug,플러그가 헐거워요.,La fiche est lâche.,Extrémité du câble qui va dans la prise. Vérifier contact et sécurité.
+연결이 잘못되어 있다,mauvais branchement,케이블 연결이 잘못되어 있어요.,Le câble est mal branché.,Connexion incorrecte (loose/wrong port). Cause fréquente de panne.
+종이가 걸리다,papier coincé (bourrage),복사기에 종이가 걸렸어요.,Le papier s’est coincé dans le photocopieur.,« Paper jam » dans imprimantes/photocopieurs. Procédure de retrait à suivre.
+컴퓨터가 안 켜지다,l’ordi ne s’allume pas,컴퓨터가 안 켜져요.,L’ordinateur ne s’allume pas.,"Problème d’alimentation, matériel ou batterie. Vérifier câble, multiprise, PSU."
+토너가 떨어지다,toner épuisé,프린터 토너가 떨어졌어요.,Le toner de l’imprimante est épuisé.,Cartouche de toner vide (laser). Nécessite remplacement.
+고객,client,고객 불만을 접수했어요.,Nous avons reçu une plainte client.,Terme standard business (customer).
+고객 상담실,service client (centre),문제는 고객 상담실로 문의하세요.,Contactez le service client pour le problème.,"Centre d’appels/accueil pour demandes, réclamations."
+상담원,conseiller (SAV),상담원과 통화했습니다.,J’ai parlé avec un conseiller.,Agent du service client (call center/desk).
+무엇을 도와 드릴까요?,Que puis‑je faire pour vous ?,무엇을 도와 드릴까요?,En quoi puis‑je vous aider ?,Formule polie standard d’accueil au service client.
+연락 가능한 번호를 알려 주시겠습니까?,"Votre numéro joignable, s’il vous plaît ?",연락 가능한 번호를 알려 주시겠습니까?,Pourriez‑vous me donner un numéro joignable ?,Formule polie pour collecter les coordonnées.
+이름과 연락처를 남겨 주세요,Laissez votre nom et contact,성함과 연락처를 남겨 주세요.,Veuillez laisser votre nom et vos coordonnées.,Demande d’infos pour rappel/suivi. Polie et fréquente.
+친절하게 모시겠습니다,Nous vous servirons avec amabilité,"고객님, 친절하게 모시겠습니다.",Nous allons bien nous occuper de vous.,Formule commerciale polie d’accueil et de service.
+결과,résultat,검사 결과를 알려 드리겠습니다.,Nous vous communiquerons le résultat.,"Outcome d’un test/réparation, analyse, impression."
+상대방,"interlocuteur, partie adverse",상대방 의견을 먼저 듣죠.,Écoutons d’abord l’interlocuteur.,"L’autre partie dans une conversation, un conflit ou un contrat."
+원본,original (document),원본을 제출해 주세요.,Veuillez soumettre l’original.,Document non copié/numérisé. Important pour démarches officielles.
+누르다,appuyer (bouton),시작 버튼을 눌러 주세요.,Appuyez sur le bouton Démarrer.,Pression sur un bouton/écran. Collocations: 버튼/키/종이.
+인쇄하다,imprimer,파일을 컬러로 인쇄했어요.,J’ai imprimé le fichier en couleur.,To print (depuis PC). ≈ 출력하다 (sortir/imprimer).
+클릭하다,cliquer,아이콘을 클릭하세요.,Cliquez sur l’icône.,Click souris/touchpad. Double‑cliquer: 더블 클릭하다.
+통화 중,en ligne (occupé),지금 통화 중이십니다.,Il est en communication.,Statut « ligne occupée » ; message d’accueil/pro/secrétariat.
+현금 인출기,distributeur de billets (ATM),현금 인출기에서 돈을 찾았어요.,J’ai retiré de l’argent au distributeur.,Appareil bancaire pour retirer (ATM). Syn.: 현금자동인출기(구).
+기타,"autres, divers",기타 문의 사항은 이메일로 주세요.,"Pour toute autre question, envoyez un e‑mail.",Catégorie « autres » (miscellaneous).
+모델명,nom de modèle (référence),모델명을 알려 주세요.,"Donnez la référence du modèle, svp.",Identifiant précis d’un produit; nécessaire pour pièces et SAV.
+시기,"période, moment",구입 시기가 언제예요?,C’est quand la période d’achat ?,Moment/période (time period). Plus large que 날짜 (date).
+구입 시기,date/période d’achat,구입 시기를 확인해 주세요.,Veuillez vérifier la date d’achat.,"Pour garanties, retours, pièces. Demande standard SAV."
+지역,"région, zone",어느 지역에서 사용하세요?,Dans quelle région l’utilisez‑vous ?,"Sert à planifier interventions, livraison, couverture de service."
+구입하다,acheter (formel),어제를 기준으로 구입했습니다.,J’ai acheté hier.,Forme plus formelle de 사다. Documents/contrats/factures.
+연결하다,connecter,프린터를 PC에 연결했어요.,J’ai connecté l’imprimante au PC.,Joindre par câble/Wi‑Fi; relier deux systèmes.
+확인하다,"vérifier, confirmer",연결 상태를 확인해 주세요.,Veuillez vérifier l’état de la connexion.,Vérif de base dans troubleshooting; très fréquent.
+가능하다,être possible,당일 수리가 가능할까요?,La réparation le jour même est‑elle possible ?,"Confirmer faisabilité (service, option, échange)."
+서비스 기사,technicien (SAV),서비스 기사가 방문할 거예요.,Le technicien passera.,Spécialiste envoyé pour diagnostiquer/réparer sur site.
+저장되어 있다,être enregistré,사진이 자동으로 저장되어 있어요.,Les photos sont enregistrées automatiquement.,État passif: données déjà stockées (device/cloud).
+그래 주셨으면 좋겠어요,J’aimerais que vous fassiez ça,내일 방문해 주셨으면 좋겠어요.,J’aimerais que vous passiez demain.,Demande polie et douce d’une action souhaitée.
+어떻게 하지?,On fait comment ?,"프린터가 멈췄는데, 어떻게 하지?",L’imprimante s’est arrêtée; on fait comment ?,Réaction spontanée face à un souci; familier. Polie: 어떻게 하죠?/할까요?
+기능,"fonction, fonctionnalité",이 모델은 스캔 기능이 있어요.,Ce modèle a une fonction de scan.,Feature d’un appareil/logiciel.
+두부,tofu,두부를 하나 샀어요.,J’ai acheté un tofu.,"Aliment à base de soja; rien à voir avec appareils, mais vocab courant."
+디자인,design,디자인이 깔끔해요.,Le design est épuré.,Apparence/esthétique d’un produit.
+사실,"en fait, le fait",사실 그럴 필요 없어요.,"En fait, ce n’est pas nécessaire.",Introduit la réalité/un correctif; ou « fait » (fact).
+실수,erreur (faute),제 실수였어요.,C’était mon erreur.,Mistake; souvent utilisé pour s’excuser.
+실수로,par erreur,실수로 파일을 지웠어요.,J’ai supprimé le fichier par erreur.,By mistake/accidentally. Très fréquent en SAV/IT.
+안내서,"guide, notice",사용자 안내서를 참고하세요.,Veuillez consulter le guide utilisateur.,Manuel d’utilisation (user guide). Syn.: 설명서.
+양,quantité,인쇄물의 양이 많네요.,La quantité d’impressions est élevée.,"Mesure/volume/quantité; en cuisine, production, documents."
+양이 많다,être en grande quantité,이번 주 일의 양이 많아요.,Il y a beaucoup de travail cette semaine.,"Beaucoup de volume (workload, pages à imprimer, etc.)."
+여성,femme (sexe),여성 고객이 많아요.,Il y a beaucoup de clientes.,Catégorie « femmes »; contexte démographique/marketing.
+콩나물,germes de soja,콩나물 국을 만들었어요.,J’ai fait une soupe de germes de soja.,Aliment courant; vocabulaire culinaire.
+관람하다,"assister/visiter (expo, spectacle)",전시회를 관람했어요.,J’ai visité l’exposition.,Registre formel pour « voir » un spectacle/expo.
+남다,rester (rester en surplus),종이가 좀 남았어요.,Il reste un peu de papier.,Rester après utilisation; surplus/temps/argent.
+음식이 남다,il reste de la nourriture,음식이 많이 남았어요.,Il reste beaucoup de nourriture.,Construction spécifique avec 음식; surplus après repas/événement.
+무시하다,"ignorer, mépriser",규칙을 무시하면 안 돼요.,Il ne faut pas ignorer les règles.,Ne pas tenir compte / mépriser; nuance parfois forte.
+올리다,"monter, mettre en ligne",사진을 올렸어요.,J’ai mis en ligne une photo.,Monter (prix/volume) ou uploader (post). Polyvalent.
+글을 올리다,publier un post,공지사항에 글을 올렸어요.,J’ai publié un post dans les annonces.,Poster un message sur forum/site/app interne.
+포장하다,emballer,선물을 예쁘게 포장했어요.,J’ai joliment emballé le cadeau.,Wrapping/packaging; aussi take‑out.
+곤란하다,"embarrassant, délicat",지금은 곤란합니다.,"Désolé, c’est délicat en ce moment.",Difficile/incommode; formule polie de refus.
+물에 빠뜨리다,faire tomber dans l’eau,폰을 물에 빠뜨렸어요.,J’ai fait tomber le téléphone dans l’eau.,Causatif: on a laissé tomber qqch dans l’eau (damage risk).
+예를 들면,par exemple,"예를 들면, 이런 경우예요.","Par exemple, c’est ce cas‑là.",Introduit un exemple explicatif (for example).
+오고 가다,aller et venir,서류가 부서 간에 오고 가요.,Les documents vont et viennent entre services.,Mouvement répété (back and forth); fréquent en logistique/bureau.
+포장되어 있다,être emballé,제품이 단단히 포장되어 있어요.,Le produit est solidement emballé.,État passif: déjà emballé/conditionné.
+할 수 없이,"à contrecœur, faute de mieux",할 수 없이 A/S 센터에 맡겼어요.,"Faute de mieux, j’ai laissé l’appareil au SAV.",« Unavoidably »: on n’a pas le choix; nuance de résignation.
+,,,,
+7과,,,,
+업무,tâches professionnelles / duties,업무가 많아서 야근했어요.,J’ai fait des heures sup car j’avais beaucoup de tâches.,"Ensemble des missions au travail (work duties). Terme général, formel."
+일반 업무,tâches générales,일반 업무를 먼저 처리하세요.,Traitez d’abord les tâches générales.,"Routine quotidienne (admin, mails, rapports) par opposition aux projets spéciaux."
+교육,formation,신입 사원 교육을 받았어요.,J’ai suivi la formation des nouveaux.,"Training/éducation interne pour compétences, conformité, etc."
+마케팅,marketing,마케팅 전략을 세웠어요.,On a établi une stratégie marketing.,"Promotion, positionnement, étude de marché; souvent lié à 홍보."
+홍보,communication/promo,신제품 홍보를 강화했어요.,Nous avons renforcé la promo du nouveau produit.,"PR/communication (publicité, médias, image de marque)."
+프로젝트,projet,프로젝트가 이번 주에 끝나요.,Le projet se termine cette semaine.,Travail limité dans le temps avec objectifs et livrables.
+담당하다,être en charge de,저는 해외 영업을 담당해요.,Je suis en charge des ventes à l’étranger.,Assumer la responsabilité officielle d’une tâche/zone.
+맡다,prendre en charge,이번 보고서는 제가 맡을게요.,Je prends ce rapport en charge.,Verbe courant « prendre un rôle/une tâche ». Moins formel que 담당하다.
+인정받다,être reconnu,성과로 인정받았어요.,J’ai été reconnu pour mes résultats.,Recevoir la reconnaissance (boss/entreprise/clients).
+보람을 느끼다,trouver ça gratifiant,일하면서 큰 보람을 느꼈어요.,J’ai trouvé mon travail très gratifiant.,Sentiment de valeur/sens après un effort utile.
+구인 광고,annonce de recrutement,신문에 구인 광고가 났어요.,Une annonce d’emploi est parue dans le journal.,"Job ad. Pub pour embaucher (en ligne, journal)."
+경험자,personne expérimentée,경험자 우대,Expérience souhaitée,Candidat avec expérience préalable; souvent mention « 우대 » (préférence).
+아르바이트생,étudiant·e en job / employé à temps partiel,주말 아르바이트생을 구해요.,On cherche un·e part-timer pour le week-end.,Part‑time worker (souvent étudiant). Abrégé: 알바.
+인턴사원,stagiaire (intern),인턴사원으로 일했어요.,J’ai travaillé comme stagiaire.,Emploi temporaire d’apprentissage en entreprise.
+정식 사원,employé titulaire (CDI),인턴 후 정식 사원이 됐어요.,"Après le stage, je suis devenu employé titulaire.",Full‑time official employee (permanent staff).
+모집하다,recruter (appeler des candidatures),신입을 모집합니다.,Nous recrutons des juniors.,Lancer un appel à candidatures (to recruit).
+사람을 뽑다,embaucher (sélectionner),이번에 세 명을 뽑았어요.,On a embauché trois personnes.,Sélection effective de candidats (to hire).
+~에 지원하다,postuler à ~,마케팅팀에 지원했어요.,J’ai postulé à l’équipe marketing.,Soumettre sa candidature à un poste/équipe.
+~이/가 ~으로 채용되다,être recruté comme ~,그는 기획자로 채용됐어요.,Il a été recruté comme planner.,Résultat passif de l’embauche (hired as).
+경쟁률이 높다,fort taux de concurrence,경쟁률이 아주 높았어요.,La concurrence était très forte.,Beaucoup de candidats par poste; sélectif.
+보수,rémunération,보수가 어떤가요?,Quelle est la rémunération ?,Salaire/rémunération globale (peut inclure primes).
+신문사,société de presse,신문사에서 일하고 싶어요.,Je veux travailler dans un journal.,Entreprise qui publie un quotidien (newspaper company).
+자격증,certificat/diplôme pro,자격증이 있으면 유리해요.,Avoir un certificat est un atout.,"Certification professionnelle (compta, IT, langues)."
+자격증을 따다,obtenir un certificat,정보처리 자격증을 땄어요.,J’ai obtenu un certif d’informatique.,Passer et réussir une certification (earn).
+조언,conseil,선배에게 조언을 구했어요.,J’ai demandé conseil à mon aîné.,Advice. Souvent auprès de seniors/mentors.
+조언을 듣다,écouter un conseil,상사의 조언을 들었어요.,J’ai écouté les conseils du supérieur.,Recevoir/tenir compte des conseils.
+격려하다,encourager,팀을 격려해 주셨어요.,Il·Elle a encouragé l’équipe.,Donner du courage/motivation (to encourage).
+문의하다,se renseigner,일정에 대해 문의했어요.,Je me suis renseigné sur le planning.,Demander des infos à un service (inquire).
+문의 전화,appel de renseignement,문의 전화가 많아요.,On reçoit beaucoup d’appels d’info.,Appel entrant pour poser des questions.
+~이/가 정해지다,être fixé/décidé,면접 날짜가 정해졌어요.,La date d’entretien est fixée.,Décision finale prise (passif de 정하다).
+~이/가 진행되다,se dérouler/être en cours,채용이 순조롭게 진행돼요.,Le recrutement se déroule bien.,Processus en cours (progress).
+보험 회사,compagnie d’assurances,보험 회사에서 일해요.,Je travaille dans une compagnie d’assurances.,"Secteur assurance (produits, sinistres)."
+필요한 게 있으면 언제든지 말씀하세요,Dites si vous avez besoin de quoi que ce soit,필요한 게 있으면 언제든지 말씀하세요.,N’hésitez pas si vous avez besoin de quelque chose.,Formule polie d’aide/disponibilité (service mindset).
+한스 씨라면 잘할 수 있을 거예요,"Hans, vous y arriverez",한스 씨라면 잘할 수 있을 거예요.,"Si c’est Hans, il s’en sortira très bien.",Encouragement personnalisé; montre confiance.
+동남아,Asie du Sud‑Est,동남아로 출장을 갔어요.,Je suis parti en mission en Asie du Sud‑Est.,"Région (SEA): Thaïlande, Vietnam, etc."
+사회,société (monde social),사회 경험이 부족해요.,Il me manque d’expérience sociale.,« Society » ou présentation d’évènements (MC) selon contexte.
+사회 경험,expérience sociale,사회 경험을 쌓고 있어요.,J’accumule de l’expérience sociale.,"Expériences hors école: travail, bénévolat, interactions."
+사회생활,vie en société/vie pro,사회생활이 쉽지 않네요.,La vie en société n’est pas facile.,S’adapter aux codes du monde pro/social.
+해외여행,voyage à l’étranger,첫 해외여행이에요.,C’est mon premier voyage à l’étranger.,Voyages hors du pays (tourisme).
+게다가,en plus/de plus,"바쁘고, 게다가 아파요.","Je suis occupé, et en plus je suis malade.",Ajoute un argument; renforce une justification.
+경험을 쌓다,accumuler de l’expérience,현장에서 경험을 쌓았어요.,J’ai accumulé de l’expérience sur le terrain.,Build experience par pratique répétée.
+긴장이 되다,être tendu/stressé,면접이라 긴장이 돼요.,Je suis tendu à cause de l’entretien.,Devenir nerveux (get nervous).
+경력,expérience pro (CV),5년 경력이 있어요.,J’ai 5 ans d’expérience.,Expérience de travail formelle; rubrique clé d’un CV.
+면접,entretien (d’embauche),내일 면접이 있어요.,J’ai un entretien demain.,Recrutement; aussi 대학 면접.
+출퇴근하다,faire l’aller-retour travail,지하철로 출퇴근해요.,Je vais au travail en métro.,Commute quotidien (aller + retour).
+관광지,site touristique,유명한 관광지를 방문했어요.,J’ai visité un site touristique célèbre.,Lieu d’intérêt pour touristes.
+동유럽,Europe de l’Est,동유럽 여행을 계획해요.,Je planifie un voyage en Europe de l’Est.,"Région: Pologne, Hongrie, etc."
+목적,but/objectif,여행 목적이 뭐예요?,Quel est l’objectif du voyage ?,"Purpose (business, tourisme, visite familiale)."
+미래,futur,미래 계획을 세웠어요.,J’ai fait des plans pour l’avenir.,Time à venir; projets de carrière/vie.
+여행상품,produit de voyage,여행상품을 비교해 봤어요.,J’ai comparé des packages de voyage.,Packages (vol+hébergement+tours).
+여행 상품 기획가,concepteur de produits de voyage,꿈은 여행 상품 기획가예요.,Mon rêve est de devenir concepteur de voyages.,Rôle qui conçoit/assemble des packages touristiques.
+성별,sexe/genre,성별을 기입하세요.,Indiquez votre sexe/genre.,Catégorie administrative (M/F/…).
+신혼여행,voyage de noces,신혼여행으로 몰디브에 갔어요.,On est partis en lune de miel aux Maldives.,Honeymoon; segment de marché voyages.
+여행지,destination de voyage,인기 있는 여행지는 어디예요?,Quelles sont les destinations populaires ?,Lieu précis du voyage (destination).
+연령,tranche d’âge,연령별 선호가 달라요.,Les préférences varient selon l’âge.,Age group (démographie marketing).
+일정,planning/itinéraire,일정이 빡빡해요.,Le planning est serré.,Schedule/itinerary de projet ou de voyage.
+재작년,il y a deux ans,재작년에 취업했어요.,J’ai trouvé un emploi il y a deux ans.,L’année avant l’an dernier (two years ago).
+휴양지,station balnéaire/lieu de détente,휴양지에서 푹 쉬었어요.,Je me suis bien reposé dans une station balnéaire.,Destination axée repos (resort).
+와/과 관계되다,être lié à/en rapport avec,업무와 관계된 서류예요.,Ce sont des documents liés au travail.,Relation/pertinence entre choses (be related to).
+기획하다; 계획하다,planifier; organiser,행사를 기획/계획했어요.,Nous avons planifié l’évènement.,기획: conception stratégique; 계획: plan général/calendrier.
+~이/가 ~으로 예상되다,être prévu/attendu comme ~,매출이 증가할 것으로 예상돼요.,On s’attend à une hausse des ventes.,Projection/forecast (expected to be).
+또한,également / de plus,"비용도 높고, 또한 시간이 걸려요.","C’est coûteux et, en plus, ça prend du temps.","Connecteur d’ajout (also, furthermore) registre écrit."
+매우,très,매우 중요한 회의예요.,C’est une réunion très importante.,Adverbe « très » plus formel que 아주/너무.
+3년차,de 3e année d’ancienneté,저는 3년차 마케터예요.,Je suis marketeur avec 3 ans d’ancienneté.,« Nᵉ année dans le poste/secteur » (year N).
+돈이 들다,coûter de l’argent,이 과정은 돈이 많이 들어요.,Cette formation coûte cher.,Indique un coût requis (costs money).
+뜨는 직업,métier en vogue,요즘 데이터 사이언스가 뜨는 직업이에요.,La data science est un métier en vogue.,Profession tendance avec forte demande.
+서비스 정신,sens du service,그는 서비스 정신이 뛰어나요.,Il a un excellent sens du service.,"Attitude orientée client, proactivité et amabilité."
+태도,attitude,업무 태도가 좋아요.,Son attitude au travail est bonne.,Comportement/posture pro.
+성실,"assiduité, sérieux",그는 성실하기로 유명해요.,Il est réputé pour son sérieux.,"Diligence, fiabilité."
+열정,"passion, motivation",일에 대한 열정이 있어요.,Il a de la passion pour son travail.,Enthousiasme/engagement.
+오는 22일,le 22 (à venir),회의는 오는 22일에 있어요.,La réunion a lieu le 22 courant.,Date future proche (upcoming). Formule écrite/pro.
+주 5일제,semaine de 5 jours,우리 회사는 주 5일제예요.,Notre entreprise est à 5 jours/semaine.,Semaine de travail lundi‑vendredi (weekends off).
+호프집,bar à bière (hof),회사 근처 호프집에서 회식했어요.,On a fait un dîner d’équipe dans un hof près du bureau.,Bar type coréen (bière + snacks). Lieux de 회식 (sortie d’équipe).
+자유롭다,être libre,비교적 근무 시간이 자유로워요.,Les horaires sont relativement libres.,Flexibilité/peu de contraintes; aussi « libre d’esprit ».
+바닷물,eau de mer,바닷물은 짜요.,L’eau de mer est salée.,Mer/océan (sea water). Vocab basique de voyage/côte.
+가방을 싸다,faire son sac,여행 가방을 미리 쌌어요.,J’ai fait ma valise à l’avance.,Pack your bag/valise (préparation de voyage).
+외국인 등록증,carte de résident étranger,외국인 등록증을 제출하세요.,Veuillez soumettre votre carte de résident étranger.,Alien registration card (ARC) en Corée; document officiel.
+재학 증명서,certificat de scolarité,재학 증명서를 발급받았어요.,J’ai obtenu un certificat de scolarité.,Preuve d’inscription active à l’université.
+은행 잔고 증명서,attestation de solde bancaire,은행 잔고 증명서가 필요해요.,J’ai besoin d’une attestation de solde bancaire.,Bank balance certificate; demandes de visa/inscription.
+등록금 납입 증명서,attestation de paiement des frais de scolarité,등록금 납입 증명서를 냈어요.,J’ai soumis l’attestation de paiement des frais.,Proof of tuition payment; démarches scolaires/visa.
+자연스럽다,être naturel,말투가 아주 자연스러워요.,Ta façon de parler est très naturelle.,"Sans effort, fluide (langage, comportement, look)."
+예절을 지키다,respecter l’étiquette,회식에서도 예절을 지켜야 해요.,"Même en dîner d’équipe, il faut respecter l’étiquette.",Politesse/protocole social adaptés à la situation.
+전동차,rame de métro/train électrique,전동차가 역에 들어옵니다.,La rame arrive en station.,Terme ferroviaire pour les trains/métros électriques.
+승강장,quai (plateforme),승강장에서 줄을 서세요.,Faites la queue sur le quai.,Plateforme d’embarquement en gare/métro.
+새로 문을 열다,ouvrir (nouvellement),새로 문을 연 호프집이에요.,C’est un hof qui vient d’ouvrir.,"Nouvelle ouverture (magasin, resto, lieu)."
+마이 보호 센터,“My Protection Center” (nom propre),마이 보호 센터에 문의하세요.,Veuillez contacter “My Protection Center”.,Nom d’établissement/service (garde/assistance). Conserver tel quel comme nom propre.
+공공장소,lieu public,공공장소에서 예절을 지켜요.,Respectons l’étiquette dans les lieux publics.,"Espaces publics (transport, parcs, bâtiments)."
+으니,comme/étant donné que (~으니까 forme écrite),시간이 없으니 바로 출발합시다.,"Comme on manque de temps, partons tout de suite.",Connecteur causal/raison (since/because). Register écrit/contracté.
+그렇게 말씀해 주셔서 감사합니다,Merci pour vos paroles,그렇게 말씀해 주셔서 감사합니다.,"Merci de dire cela, c’est gentil.",Remercie une remarque encourageante/élogieuse; très poli.
+,,,,
+8과,,,,
+우체국,bureau de poste,우체국에서 소포를 보냈어요.,J’ai envoyé un colis à la poste.,"Lieu pour envois (lettres/colis), services financiers basiques, mandats."
+내용,contenu,박스 안의 내용을 확인해 주세요.,Vérifiez le contenu du carton.,Ce qui est à l’intérieur d’un paquet/document. Utile pour formulaires d’expédition.
+박스,"boîte, carton",박스를 튼튼하게 포장했어요.,J’ai bien renforcé le carton.,Boîte d’expédition; synonyme courant de 상자.
+소포,colis,소포가 오늘 도착했어요.,Le colis est arrivé aujourd’hui.,Paquet envoyé par la poste (parcel).
+올려놓다,poser dessus,박스를 저울 위에 올려놓으세요.,Posez le carton sur la balance.,Mettre un objet sur une surface (table/plateau/저울).
+저울,balance,저울로 무게를 쟀어요.,J’ai pesé avec la balance.,"Appareil pour mesurer le poids (poste, cuisine)."
+배편,envoi par bateau,배편은 시간이 오래 걸려요.,L’envoi par bateau prend du temps.,"Chemin maritime, moins cher mais plus lent que l’avion."
+항공편,envoi par avion,항공편으로 보내면 빨라요.,"Par avion, c’est rapide.",Transport aérien (air mail/air freight). Coûte plus cher.
+보통 우편,courrier standard,보통 우편으로 보내 주세요.,Envoyez en courrier standard.,"Service non urgent, moins cher; suivi parfois limité."
+빠른 우편,courrier express,빠른 우편으로 보내면 내일 도착해요.,"En express, ça arrive demain.","Service accéléré (EMS/express). Délai court, tarif plus élevé."
+은행,banque,은행에서 환전을 했어요.,J’ai fait du change à la banque.,"Institution financière; dépôts, retraits, virements, change."
+고지서,facture/avis de paiement,공과금 고지서를 냈어요.,J’ai payé la facture des charges.,"Avis officiel (eau, élec., impôts)."
+금액,montant,결제 금액을 확인해 주세요.,Vérifiez le montant à régler.,Somme d’argent due/reçue (amount).
+번호표를 뽑다,prendre un ticket (file),번호표를 뽑고 기다리세요.,Prenez un ticket et attendez.,Système de file à la banque/poste/admin.
+비밀 번호,code secret (PIN),비밀 번호를 입력해 주세요.,Entrez votre code PIN.,Code à 4–6 chiffres pour carte/ATM.
+사용료,frais d’utilisation,대여 사용료가 얼마예요?,Combien sont les frais d’utilisation ?,Fee pour utiliser un service/équipement.
+수수료,commission/frais,환전 수수료가 있어요.,Il y a des frais de change.,Fee pour service financier/administratif.
+수표,chèque,수표로 결제할 수 있나요?,Peut‑on payer par chèque ?,Moyen de paiement moins courant en Corée que la carte/espèces.
+원화,won coréen (KRW),달러를 원화로 바꿨어요.,J’ai changé des dollars en won.,Monnaie locale; utile en change.
+통장,livret de banque,통장에 입금했어요.,J’ai déposé sur mon livret.,Bankbook pour suivre transactions; parfois requis par admin.
+현금,espèces,현금으로 드릴게요.,Je paierai en espèces.,Cash; opposé de carte/virement.
+동전,pièce de monnaie,지갑에 동전이 없어요.,Je n’ai pas de pièces dans mon portefeuille.,"Petite monnaie, par opposition aux billets (지폐)."
+현금 카드,carte de débit,현금 카드로 결제했어요.,J’ai payé par carte de débit.,Carte liée au compte pour retraits/paiements (debit card).
+환율,taux de change,오늘 환율이 올랐어요.,Le taux de change a augmenté.,Rate entre monnaies; fluctue selon marché.
+환전하다,exchange (de devises),공항에서 환전했어요.,J’ai changé de l’argent à l’aéroport.,Échanger une monnaie contre une autre.
+출입국 관리 사무소,service immigration,출입국 관리 사무소에 가야 해요.,Je dois aller à l’immigration.,"Bureau pour visa, extension, ARC."
+서명하다,signer,여기에 서명해 주세요.,"Signez ici, s’il vous plaît.",Apposer sa signature (signature).
+연장하다,prolonger,비자를 연장했어요.,J’ai prolongé mon visa.,"Étendre une durée (visa, contrat, abonnement)."
+인지,timbre fiscal,인지를 붙여야 합니다.,Il faut apposer un timbre fiscal.,Timbre/taxe apposé sur documents officiels.
+재발급하다,"réémettre, redélivrer",통장을 재발급했어요.,J’ai fait réémettre mon livret.,Obtenir un duplicata (carte/ID/livret).
+성함,nom (honorifique),성함이 어떻게 되세요?,Quel est votre nom (poliment) ?,Forme honorifique de 이름. Usage client/administratif.
+깨지다,se casser (fragile),유리가 깨졌어요.,Le verre s’est cassé.,Se briser (verre/porcelaine). Colis: “깨지기 쉬움”.
+떼어 내다,"décoller, détacher",스티커를 떼어 냈어요.,J’ai décollé l’autocollant.,"Enlever ce qui adhère (étiquette, scellé)."
+확인 버튼,bouton « Confirmer »,확인 버튼을 눌러 주세요.,Appuyez sur le bouton Confirmer.,Bouton d’UI pour valider (OK/Confirm).
+다 된 거예요?,C’est tout fini ?,이걸로 다 된 거예요?,"Avec ça, tout est fini ?",Question pour confirmer la fin de la procédure.
+다 됐어요,Tout est fait.,"네, 다 됐어요.","Oui, tout est terminé.",Confirmation de fin d’opération.
+미술관,musée d’art,주말에 미술관에 갔어요.,Je suis allé au musée d’art.,Lieu d’expositions d’art; syn.: 갤러리 (plus petit).
+사은품,cadeau promotionnel,사은품으로 텀블러를 줘요.,Ils offrent un tumbler en cadeau.,Freebie offert lors d’achat/événement.
+산책로,promenade (sentier),강변 산책로가 좋아요.,La promenade le long du fleuve est agréable.,Chemin piéton pour marcher/jogging.
+선착순,"premier arrivé, premier servi",선착순 100명에게 증정.,Offert aux 100 premiers.,Règle de distribution selon ordre d’arrivée.
+어린이,enfant,어린이 입장료가 할인돼요.,Tarif réduit pour enfants.,Catégorie d’âge (child).
+열차,train,열차가 지연되고 있어요.,Le train a du retard.,"Train au sens large (KTX, ITX, etc.)."
+예정,"prévu, programmé",행사는 3시에 예정되어 있어요.,L’événement est prévu à 15h.,Horaire planifié; s’emploie en annonces officielles.
+행사,événement,지역 축제 행사가 열려요.,Un événement de festival local a lieu.,"Événement public/entreprise (festival, promo, cérémonie)."
+보관하다,"entreposer, garder",짐을 보관해 드립니다.,Nous gardons vos bagages.,Stocker/garder en sécurité (locker/desk).
+보호하다,protéger,유물을 잘 보호해야 해요.,Il faut bien protéger les artefacts.,Protection d’objets/personnes/environnement.
+태어나다,naître,1998년에 태어났어요.,Je suis né en 1998.,Naissance (birth).
+할인되다,être soldé,학생은 20% 할인돼요.,Les étudiants ont 20% de réduction.,Remise appliquée (passif).
+그림을 그리다,"dessiner, peindre",취미로 그림을 그려요.,Je dessine en hobby.,Produire une image (draw/paint).
+두고 가다,laisser et partir,우산을 두고 갔어요.,Il a laissé son parapluie en partant.,Oublier volontairement/involontairement un objet.
+종합 안내소,Le centre d'information,종합 안내소에서 지도 받아요.,Prenez un plan au point d’info.,"Desk central d’informations (musée, parc, gare)."
+이번 정류장에서 내리실 분은 벨을 눌러주시기 바랍니다,Descendez: appuyez sur le bouton,다음: “이번 정류장에서 내리실 분은 벨을 눌러주시기 바랍니다.”,"“Les passagers qui descendent à cet arrêt, appuyez sur le bouton s.v.p.”",Annonce standard de bus en Corée.
+이 역은 전동차와 승강장 사이가 넓습니다,Attention à l’espace quai-train,“이 역은 전동차와 승강장 사이가 넓습니다.”,“Attention: grand espace entre le train et le quai.”,Annonce de sécurité dans le métro.
+거스름돈,monnaie rendue,거스름돈 확인해 보세요.,Vérifiez votre monnaie.,Change rendu après paiement en cash.
+관람객,visiteur (expo),관람객이 많아요.,Il y a beaucoup de visiteurs.,Public d’un musée/expo/spectacle (visitors).
+관람,"visite (expo), visionnage",전시 관람은 6시까지예요.,La visite de l’expo est jusqu’à 18h.,Acte de voir/examiner une expo/spectacle (formal).
+대여,location (prêt),유모차 대여가 가능합니다.,Location de poussettes possible.,Service de prêt/location temporaire (rental).
+대여료,frais de location,대여료를 선불로 내세요.,Payez la location à l’avance.,Tarif pour emprunter/louer un bien.
+대여하다,"louer, prêter",우산을 대여해 드려요.,Nous prêtons des parapluies.,Action de louer/prêter (service).
+대인,tarif adulte,"대인 10,000원, 소인 5,000원.","Adulte 10 000 wons, enfant 5 000.",Catégorie tarifaire “adulte” (opposé: 소인 enfant).
+소인,tarif enfant,소인은 할인돼요.,Les enfants ont un tarif réduit.,Catégorie “enfant” dans la billetterie.
+독서,lecture (activité),독서를 즐겨요.,J’aime lire.,Lire des livres comme activité (reading).
+매수,nombre d’exemplaires/pages,서류 매수가 몇 장이에요?,Il y a combien de pages ?,"Compte d’exemplaires/pages (printing, tickets)."
+승차권,billet de transport,승차권을 구입하세요.,Achetez un billet.,Ticket de train/métro/bus longue distance.
+신분증,pièce d’identité,신분증을 제시해 주세요.,Présentez votre pièce d’identité.,"ID card (carte résident, permis, passeport)."
+애완동물,animal de compagnie,애완동물 반입 금지.,Animaux de compagnie interdits.,Terme traditionnel; actuel: 반려동물 (plus respectueux).
+전날,la veille,전날에 예약했어요.,J’ai réservé la veille.,Le jour précédent un événement.
+피해,"dommage, préjudice",피해를 입었어요.,J’ai subi un préjudice.,Dégâts ou tort; contexte légal/assurance.
+피해를 주다,causer un préjudice,이웃에게 피해를 주지 마세요.,Ne dérangez pas/Ne causez pas de préjudice aux voisins.,"Faire du tort, déranger, nuire."
+분리하다,séparer,쓰레기를 분리하세요.,Triez les déchets.,"Séparer en catégories (recyclage, process)."
+분리수거함,bac de tri,분리수거함에 버리세요.,Jetez dans le bac de tri.,"Container de recyclage (papier, plastique, canettes)."
+행동하다,"agir, se comporter",공공장소에서 바르게 행동하세요.,Comportez‑vous correctement en public.,Passer de l’intention à l’action; comportement.
+구매 시,lors de l’achat,구매 시 신분증이 필요합니다.,Une pièce d’identité est requise lors de l’achat.,Formule écrite (terms & conditions): “at purchase”.
+매표 시간,heures de billetterie,매표 시간은 9시부터예요.,La billetterie ouvre à 9h.,Plage horaire pour acheter des tickets.
+영화 상영,projection de film,영화 상영 시간이 변경됐어요.,Les horaires de projection ont changé.,Screenings (cinéma/festival).
+휴대 전화는 전원을 꺼 주시거나 진동으로 해 주십시오,Éteignez/mettez en vibreur votre téléphone,“휴대 전화는 전원을 꺼 주시거나 진동으로 해 주십시오.”,“Veuillez éteindre votre téléphone ou le mettre en mode vibreur.”,Annonce polie standard au musée/cinéma/théâtre.
+계좌,compte bancaire,새 계좌를 개설했어요.,J’ai ouvert un nouveau compte.,Forme de base (pas “계좌를”).
+영수증,reçu,영수증 필요하세요?,Vous voulez un reçu ?,Preuve de paiement.

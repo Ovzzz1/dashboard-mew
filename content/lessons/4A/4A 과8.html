@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8과 — Points de grammaire (Niveau 4급) - Sogang University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #fafafa;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #ffffff;
+            border-bottom: 3px solid #b50004;
+            color: #2c3e50;
+            padding: 40px 50px;
+        }
+
+        h1 { font-size: 2.4em; font-weight: 700; margin-bottom: 10px; color: #2c3e50; }
+        .header-subtitle { font-size: 1em; color: #7f8c8d; }
+        .content { padding: 50px; }
+
+        h2 {
+            font-size: 1.8em; color: #34495e;
+            margin: 50px 0 25px 0; font-weight: 700;
+            padding-bottom: 12px; border-bottom: 2px solid #ecf0f1;
+        }
+        h2::before {
+            content: ''; display: inline-block;
+            width: 5px; height: 28px; background: #b50004;
+            margin-right: 12px; vertical-align: middle;
+        }
+        h3 { font-size: 1.4em; color: #2c3e50; margin: 30px 0 18px 0; font-weight: 600; }
+        h4 { font-size: 1.15em; color: #34495e; margin: 22px 0 12px 0; font-weight: 600; }
+
+        p, li { font-size: 1.05em; margin-bottom: 15px; line-height: 1.8; color: #2c3e50; }
+        ul, ol { margin: 20px 0; padding-left: 35px; }
+        li { margin-bottom: 12px; }
+
+        .highlight-yellow { background: #ffff00; font-weight: 600; padding: 2px 5px; border-radius: 3px; }
+        .grammar-red { color: #b50004; font-weight: 700; }
+        .super-important { background: #ffff00; font-weight: 700; padding: 3px 6px; border-radius: 3px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
+        th { background: #f8f9fa; color: #2c3e50; padding: 16px; text-align: left; font-weight: 600; font-size: 1.05em; border-bottom: 2px solid #e0e0e0; }
+        td { padding: 15px 16px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background: #f8f9fa; }
+
+        .example-box { background: #f8f9fa; padding: 25px; border-left: 4px solid #95a5a6; margin: 25px 0; border-radius: 6px; }
+        .error-box { background: #fff5f5; padding: 20px 25px; border-left: 4px solid #e74c3c; margin: 20px 0; border-radius: 6px; }
+        .success-box { background: #f0f9f4; padding: 20px 25px; border-left: 4px solid #27ae60; margin: 20px 0; border-radius: 6px; }
+        .note-box { background: #fffef7; padding: 20px 25px; border-left: 4px solid #f39c12; margin: 25px 0; border-radius: 6px; }
+
+        .korean { font-size: 1.15em; font-weight: 600; color: #2c3e50; }
+        .french-translation { font-style: italic; color: #7f8c8d; margin-top: 8px; display: block; }
+        strong { color: #2c3e50; font-weight: 600; }
+
+        .tip-badge {
+            display: inline-block; background: #34495e; color: white;
+            padding: 5px 12px; border-radius: 20px; font-size: 0.85em;
+            font-weight: 600; margin-right: 10px;
+        }
+
+        .formula {
+            background: #f8f9fa; padding: 18px 22px; border-radius: 6px;
+            font-family: 'Courier New', monospace; font-size: 1.05em;
+            margin: 18px 0; border: 2px solid #e0e0e0; color: #2c3e50;
+        }
+
+        .rule-box {
+            background: #f0f4ff;
+            border: 2px solid #c0cce8;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin: 18px 0;
+        }
+
+        /* Cartes vocabulaire */
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin: 20px 0;
+        }
+
+        .vocab-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-left: 5px solid #b50004;
+        }
+
+        .vocab-word {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #b50004;
+            margin-bottom: 4px;
+        }
+
+        .vocab-def {
+            font-size: 0.97em;
+            color: #2c3e50;
+            margin-bottom: 0;
+        }
+
+        .vocab-category {
+            display: inline-block;
+            font-size: 0.8em;
+            font-weight: 600;
+            padding: 2px 9px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            background: #ecf0f1;
+            color: #7f8c8d;
+        }
+
+        /* Couleurs par catégorie */
+        .cat-shape { background: #eaf4fb; color: #2471a3; }
+        .cat-feel  { background: #eafaf1; color: #1e8449; }
+        .cat-mat   { background: #fdf2f8; color: #76448a; }
+
+        .recap-table { border: 2px solid #34495e; }
+        .recap-table th { background: #34495e; color: white; }
+
+        .compare-table th { background: #4a4a8a; color: white; }
+        .compare-table { border: 2px solid #4a4a8a; }
+
+        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
+        @media (max-width: 768px) {
+            .content { padding: 30px 25px; } .header { padding: 30px 25px; }
+            h1 { font-size: 2em; } h2 { font-size: 1.5em; } table { font-size: 0.9em; }
+            .vocab-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>8과 — Points de grammaire</h1>
+        <div class="header-subtitle">Niveau 4급 | Sogang Korean Program</div>
+    </div>
+
+    <div class="content">
+
+        <!-- ===== SECTION I : Vocabulaire objets physiques ===== -->
+        <h2>I. Vocabulaire pour décrire des objets physiques</h2>
+
+        <h3>1. Contexte d'utilisation</h3>
+        <p>Ce vocabulaire sert à <span class="highlight-yellow">décrire précisément un objet</span> — sa forme, sa texture au toucher, et la matière dont il est fait. Il est particulièrement utile pour expliquer à quoi ressemble un objet qu'on cherche, qu'on possède, ou qu'on veut acheter.</p>
+
+        <h3>2. Décrire la forme : 모양</h3>
+
+        <div class="vocab-grid">
+            <div class="vocab-card">
+                <div class="vocab-word">길쭉하다</div>
+                <span class="vocab-category cat-shape">forme</span>
+                <p class="vocab-def">Être allongé des deux côtés — plus long que large dans les deux sens</p>
+                <p class="french-translation" style="margin-top:6px;">"Être oblong / allongé"</p>
+            </div>
+            <div class="vocab-card">
+                <div class="vocab-word">네모나다</div>
+                <span class="vocab-category cat-shape">forme</span>
+                <p class="vocab-def">Avoir la forme d'un carré ou d'un rectangle</p>
+                <p class="french-translation" style="margin-top:6px;">"Être carré / rectangulaire"</p>
+            </div>
+            <div class="vocab-card">
+                <div class="vocab-word">둥글다</div>
+                <span class="vocab-category cat-shape">forme</span>
+                <p class="vocab-def">Avoir la forme d'un cercle ou d'une sphère</p>
+                <p class="french-translation" style="margin-top:6px;">"Être rond / circulaire"</p>
+            </div>
+            <div class="vocab-card">
+                <div class="vocab-word">세모나다</div>
+                <span class="vocab-category cat-shape">forme</span>
+                <p class="vocab-def">Avoir la forme d'un triangle</p>
+                <p class="french-translation" style="margin-top:6px;">"Être triangulaire"</p>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <p><span class="tip-badge">📐 Exemples de formes</span></p>
+            <p class="korean" style="margin-top:10px;">A: 어떻게 생긴 책상이에요?</p>
+            <p class="korean">B: 음…… 세로는 60센티미터 정도이고 가로는 1미터가 넘어요. <span class="grammar-red">길쭉한</span> 모양이에요.</p>
+            <p class="french-translation">"La hauteur fait environ 60 cm et la largeur dépasse 1 mètre. C'est une forme allongée."</p>
+
+            <p class="korean" style="margin-top:15px;">A: 이 거울은 어떤 모양이에요?</p>
+            <p class="korean">B: <span class="grammar-red">둥근</span> 거울이에요.</p>
+            <p class="french-translation">"C'est un miroir rond."</p>
+        </div>
+
+        <h3>3. Décrire la texture au toucher : 촉감</h3>
+
+        <div class="vocab-grid">
+            <div class="vocab-card">
+                <div class="vocab-word">부드럽다</div>
+                <span class="vocab-category cat-feel">texture</span>
+                <p class="vocab-def">Ni rugueux ni dur — agréable et lisse au toucher</p>
+                <p class="french-translation" style="margin-top:6px;">"Être doux / lisse au toucher"</p>
+            </div>
+            <div class="vocab-card">
+                <div class="vocab-word">폭신하다</div>
+                <span class="vocab-category cat-feel">texture</span>
+                <p class="vocab-def">Très mou et confortable au toucher — qui s'enfonce agréablement</p>
+                <p class="french-translation" style="margin-top:6px;">"Être moelleux / douillet / bien rembourré"</p>
+            </div>
+            <div class="vocab-card">
+                <div class="vocab-word">딱딱하다</div>
+                <span class="vocab-category cat-feel">texture</span>
+                <p class="vocab-def">Très ferme et dur au toucher — qui ne cède pas à la pression</p>
+                <p class="french-translation" style="margin-top:6px;">"Être dur / rigide / ferme"</p>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <p><span class="tip-badge">✋ Exemples de textures</span></p>
+            <p class="korean" style="margin-top:10px;">A: 이 소파 어때요?</p>
+            <p class="korean">B: 정말 <span class="grammar-red">폭신해요</span>. 앉으면 기분이 좋아요.</p>
+            <p class="french-translation">"C'est vraiment moelleux. On se sent bien quand on s'assoit."</p>
+
+            <p class="korean" style="margin-top:15px;">A: 이 베개 어때요?</p>
+            <p class="korean">B: 너무 <span class="grammar-red">딱딱해서</span> 자기가 불편해요.</p>
+            <p class="french-translation">"C'est trop dur, c'est inconfortable pour dormir."</p>
+
+            <p class="korean" style="margin-top:15px;">A: 이 스카프 만져 봐요.</p>
+            <p class="korean">B: 와, 정말 <span class="grammar-red">부드럽네요</span>!</p>
+            <p class="french-translation">"Waouh, c'est vraiment doux !"</p>
+        </div>
+
+        <h3>4. Décrire la matière : 재료</h3>
+
+        <div class="vocab-grid">
+            <div class="vocab-card">
+                <div class="vocab-word">비닐</div>
+                <span class="vocab-category cat-mat">matière</span>
+                <p class="vocab-def">Substance artificielle utilisée pour les sacs plastique, les emballages</p>
+                <p class="french-translation" style="margin-top:6px;">"Plastique souple / vinyle / cellophane"</p>
+            </div>
+            <div class="vocab-card">
+                <div class="vocab-word">유리</div>
+                <span class="vocab-category cat-mat">matière</span>
+                <p class="vocab-def">Matière dure, fragile et transparente — utilisée pour les vitres et bouteilles</p>
+                <p class="french-translation" style="margin-top:6px;">"Verre"</p>
+            </div>
+            <div class="vocab-card">
+                <div class="vocab-word">천</div>
+                <span class="vocab-category cat-mat">matière</span>
+                <p class="vocab-def">Matière utilisée pour fabriquer les vêtements et les couvertures</p>
+                <p class="french-translation" style="margin-top:6px;">"Tissu / étoffe"</p>
+            </div>
+            <div class="vocab-card">
+                <div class="vocab-word">플라스틱</div>
+                <span class="vocab-category cat-mat">matière</span>
+                <p class="vocab-def">Matière synthétique utilisée pour une grande variété d'objets du quotidien</p>
+                <p class="french-translation" style="margin-top:6px;">"Plastique (rigide)"</p>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <p><span class="tip-badge">🧱 Exemples de matières</span></p>
+            <p class="korean" style="margin-top:10px;">A: 이 가방 뭐로 만들었어요?</p>
+            <p class="korean">B: <span class="grammar-red">천</span>으로 만든 가방이에요. 가볍고 세탁도 돼요.</p>
+            <p class="french-translation">"C'est un sac en tissu. C'est léger et on peut le laver."</p>
+
+            <p class="korean" style="margin-top:15px;">A: 이 컵은 <span class="grammar-red">유리</span>예요, <span class="grammar-red">플라스틱</span>이에요?</p>
+            <p class="korean">B: <span class="grammar-red">유리</span>예요. 그래서 조심해서 써야 해요.</p>
+            <p class="french-translation">"C'est en verre. Il faut donc l'utiliser avec précaution."</p>
+        </div>
+
+        <h3>5. Récapitulatif du vocabulaire descriptif</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Catégorie</th>
+                    <th>Mot coréen</th>
+                    <th>Sens</th>
+                    <th>Exemple d'utilisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4"><strong>Forme</strong><br>모양</td>
+                    <td class="korean grammar-red">길쭉하다</td>
+                    <td>Allongé des deux côtés</td>
+                    <td class="korean">길쭉한 모양이에요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">네모나다</td>
+                    <td>Carré / rectangulaire</td>
+                    <td class="korean">네모난 상자예요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">둥글다</td>
+                    <td>Rond / circulaire</td>
+                    <td class="korean">둥근 테이블이에요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">세모나다</td>
+                    <td>Triangulaire</td>
+                    <td class="korean">세모난 지붕이에요.</td>
+                </tr>
+                <tr>
+                    <td rowspan="3"><strong>Texture</strong><br>촉감</td>
+                    <td class="korean grammar-red">부드럽다</td>
+                    <td>Doux / lisse au toucher</td>
+                    <td class="korean">천이 부드러워요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">폭신하다</td>
+                    <td>Moelleux / douillet</td>
+                    <td class="korean">쿠션이 폭신해요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">딱딱하다</td>
+                    <td>Dur / rigide / ferme</td>
+                    <td class="korean">바닥이 딱딱해요.</td>
+                </tr>
+                <tr>
+                    <td rowspan="4"><strong>Matière</strong><br>재료</td>
+                    <td class="korean grammar-red">비닐</td>
+                    <td>Plastique souple / vinyle</td>
+                    <td class="korean">비닐 봉투예요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">유리</td>
+                    <td>Verre</td>
+                    <td class="korean">유리로 만들었어요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">천</td>
+                    <td>Tissu / étoffe</td>
+                    <td class="korean">천으로 된 가방이에요.</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">플라스틱</td>
+                    <td>Plastique rigide</td>
+                    <td class="korean">플라스틱 통이에요.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>6. Comment décrire un objet : structure utile</h3>
+        <div class="rule-box">
+            <p>Pour décrire un objet inconnu ou difficile à nommer, on peut combiner forme + texture + matière :</p>
+            <div class="formula" style="margin-top:12px;">
+                [형태 adjectif] + [촉감 adjectif] + [재료(으)로 만든/된] + 물건/것이에요
+            </div>
+            <div class="example-box" style="margin-top:12px;">
+                <p class="korean"><span class="grammar-red">둥글고 폭신한</span> <span class="grammar-red">천으로</span> 만든 물건이에요.</p>
+                <p class="french-translation">"C'est un objet rond et moelleux, fait en tissu." → (un coussin / 쿠션)</p>
+
+                <p class="korean" style="margin-top:10px;"><span class="grammar-red">네모나고 딱딱한</span> <span class="grammar-red">플라스틱으로</span> 된 물건이에요.</p>
+                <p class="french-translation">"C'est un objet rectangulaire et dur, en plastique." → (une télécommande / 리모컨)</p>
+            </div>
+        </div>
+
+        <!-- ===== SECTION II : noun만 해요 ===== -->
+        <h2>II. Comparer à une taille connue : noun만 해요</h2>
+
+        <h3>1. Sens et fonction</h3>
+        <p><span class="super-important">Ce pattern indique que le sujet est égal en taille (ou en quantité) à l'objet mentionné avant 만.</span> On utilise un objet déjà connu des deux interlocuteurs comme référence de comparaison, pour donner une idée concrète de la dimension de quelque chose.</p>
+
+        <div class="note-box">
+            <p><span class="tip-badge">💡 Traduction</span></p>
+            <p>"C'est de la taille de..." / "C'est aussi grand que..." / "Ça fait à peu près la taille de..."</p>
+            <p style="margin-top:8px;">Exemple du manuel :</p>
+            <p class="korean">A: 미카 씨 방 크기가 어떻게 돼요?</p>
+            <p class="korean">B: 우리 교실<span class="grammar-red">만 해요</span>.</p>
+            <p class="french-translation">"C'est de la taille de notre salle de classe."</p>
+        </div>
+
+        <h3>2. Construction grammaticale</h3>
+        <div class="formula">
+            Nom (référence connue) + <strong>만 해요</strong>
+        </div>
+
+        <div class="rule-box">
+            <p><strong>Règle clé :</strong> <span class="super-important">Le nom avant 만 doit être un objet spécifique dont la taille est connue des deux interlocuteurs.</span> On ne peut pas utiliser un objet inconnu ou vague comme référence.</p>
+        </div>
+
+        <h3>3. Exemples du manuel</h3>
+        <div class="example-box">
+            <p>① <span class="tip-badge">À la pêche</span></p>
+            <p class="korean">A: 와, 고기 많이 잡았어요? 잡은 고기가 컸어요?</p>
+            <p class="korean">B: 크지는 않았어요. 제 손바닥<span class="grammar-red">만 했어요</span>.</p>
+            <p class="french-translation">"Ce n'était pas grand. C'était de la taille de ma paume."</p>
+
+            <p style="margin-top:20px;">② <span class="tip-badge">En regardant une photo</span></p>
+            <p class="korean">A: (looking at a photo) 여기 이 사람이 제 여동생이에요.</p>
+            <p class="korean">B: 와, 키가 크네요.</p>
+            <p class="korean">A: 네, 저보다 훨씬 커요. 음…… 우리 반 루이 씨<span class="grammar-red">만 해요</span>.</p>
+            <p class="korean">B: 루이 씨만 하다고요? 그럼 키가 아주 큰 편이겠어요.</p>
+            <p class="french-translation">"Oui, elle est bien plus grande que moi. Environ la même taille que Louis de notre classe." / "De la même taille que Louis ? Alors elle est vraiment grande."</p>
+        </div>
+
+        <h3>4. Contrainte importante : la référence doit être connue</h3>
+        <div class="error-box">
+            <p>❌ <span class="korean">A: 미카 씨 방 크기가 어떻게 돼요?</span></p>
+            <p>❌ <span class="korean">B: 일본에 있는 제 방<span class="grammar-red">만 해요</span>.</span></p>
+            <p style="color:#c0392b; margin-top:5px;">→ A n'a jamais vu la chambre de B au Japon — c'est une référence sans valeur pour lui !</p>
+        </div>
+        <div class="success-box">
+            <p>✅ <span class="korean">우리 교실<span class="grammar-red">만 해요</span>.</span> <span style="color:#7f8c8d;">(les deux connaissent la salle de classe)</span></p>
+            <p>✅ <span class="korean">제 손바닥<span class="grammar-red">만 해요</span>.</span> <span style="color:#7f8c8d;">(montré directement — référence visible)</span></p>
+            <p>✅ <span class="korean">루이 씨<span class="grammar-red">만 해요</span>.</span> <span style="color:#7f8c8d;">(les deux connaissent Louis)</span></p>
+        </div>
+        <div class="note-box">
+            <strong>→</strong> <span class="super-important">La référence doit être un objet ou une personne dont les deux interlocuteurs connaissent la taille.</span>
+        </div>
+
+        <h3>5. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <p>Exactement comme en français quand on dit :</p>
+            <ul style="margin-top:10px;">
+                <li>"C'est <strong>grand comme notre salle de classe</strong>."</li>
+                <li>"Le poisson faisait <strong>la taille de ma main</strong>."</li>
+                <li>"Elle est <strong>aussi grande que Louis</strong>."</li>
+            </ul>
+            <p style="margin-top:10px;"><span class="highlight-yellow">On choisit une référence partagée pour que la comparaison soit utile et compréhensible pour l'autre.</span></p>
+        </div>
+
+        <!-- ===== SECTION III : -이 넘어요 / -이 안 돼요 ===== -->
+        <h2>III. Dépasser ou ne pas atteindre une valeur : -이 넘어요 / -이 안 돼요</h2>
+
+        <h3>1. Vue d'ensemble</h3>
+        <p>Ces deux patterns expriment le <span class="highlight-yellow">dépassement ou le non-atteinte d'une valeur numérique</span> — taille, poids, durée, quantité, etc. Ils fonctionnent en miroir et couvrent ensemble tout le spectre "plus que / moins que".</p>
+
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>-이 넘어요</th>
+                    <th>-이 안 돼요</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Sens</strong></td>
+                    <td>La taille / quantité <strong>dépasse</strong> la valeur mentionnée</td>
+                    <td>La taille / quantité est <strong>inférieure à</strong> la valeur mentionnée</td>
+                </tr>
+                <tr>
+                    <td><strong>Équivalent</strong></td>
+                    <td>"Ça dépasse les X" / "Ça fait plus de X"</td>
+                    <td>"Ça ne fait pas X" / "C'est moins de X"</td>
+                </tr>
+                <tr>
+                    <td><strong>Exemple</strong></td>
+                    <td class="korean">가로는 1미터<span class="grammar-red">가 넘어요</span>.<br><span style="font-size:0.9em; color:#7f8c8d;">"La largeur dépasse 1 mètre."</span></td>
+                    <td class="korean">가로 길이가 30cm<span class="grammar-red">가 안 돼요</span>.<br><span style="font-size:0.9em; color:#7f8c8d;">"La largeur ne fait pas 30 cm."</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SOUS-SECTION : -이 넘어요 -->
+        <h3>2. -이 넘어요 : dépasser une valeur</h3>
+
+        <p><span class="super-important">Ce pattern exprime que la taille ou la quantité de quelque chose excède la valeur numérique mentionnée.</span></p>
+
+        <div class="formula">
+            Chiffre / valeur + <strong>이/가 넘다</strong>
+        </div>
+
+        <h4>Exemples du manuel — taille et quantité</h4>
+        <div class="example-box">
+            <p>① <span class="tip-badge">Description d'un bureau</span></p>
+            <p class="korean">A: 미카 씨 집에 있는 책상 크기가 어느 정도 돼요?</p>
+            <p class="korean">B: 음…… 세로는 60센티미터 정도이고 가로는 1미터<span class="grammar-red">가 넘어요</span>.</p>
+            <p class="french-translation">"Hmm… la hauteur fait environ 60 cm et la largeur dépasse 1 mètre."</p>
+
+            <p style="margin-top:20px;">② <span class="tip-badge">À l'épicerie — pesée de viande</span></p>
+            <p class="korean">A: 갈비 2킬로로 주세요.</p>
+            <p class="korean">B: (placing the meat on the scale) 2킬로를 좀 넘는데 어떻게 할까요?</p>
+            <p class="korean">A: 괜찮아요. 주세요.</p>
+            <p class="french-translation">"Ça dépasse un peu les 2 kilos, qu'est-ce qu'on fait ?" / "C'est bon, donnez-le moi quand même."</p>
+        </div>
+
+        <h4>Bonus : -이 넘어요 s'applique aussi aux durées</h4>
+        <div class="example-box">
+            <p><span class="tip-badge">💡 Bonus — durée</span></p>
+            <p class="korean">A: 한국에 온 지 얼마나 되셨어요?</p>
+            <p class="korean">B: 오래 됐어요. 벌써 2년<span class="grammar-red">이 넘었어요</span>.</p>
+            <p class="french-translation">"Ça fait longtemps. Ça fait déjà plus de 2 ans."</p>
+            <p style="margin-top:10px; color:#7f8c8d; font-size:0.95em;">→ Le pattern fonctionne de la même façon avec les périodes de temps.</p>
+        </div>
+
+        <!-- SOUS-SECTION : -이 안 돼요 -->
+        <h3>3. -이 안 돼요 : ne pas atteindre une valeur</h3>
+
+        <p><span class="super-important">Ce pattern exprime que la taille ou la quantité de quelque chose est inférieure à la valeur numérique mentionnée.</span></p>
+
+        <div class="formula">
+            Chiffre / valeur + <strong>이/가 안 되다</strong>
+        </div>
+
+        <h4>Exemples du manuel</h4>
+        <div class="example-box">
+            <p>① <span class="tip-badge">Description d'un sac</span></p>
+            <p class="korean">A: 새로 산 가방 크기가 어떻게 돼요?</p>
+            <p class="korean">B: 한 만 해요. 가로 길이가 30cm<span class="grammar-red">가 안 돼요</span>.</p>
+            <p class="french-translation">"C'est petit. La largeur ne fait pas 30 cm."</p>
+        </div>
+
+        <h4>Bonus : sens étendu — ne pas atteindre un standard</h4>
+        <div class="example-box">
+            <p><span class="tip-badge">💡 Bonus — standard ou quantité</span></p>
+            <p class="korean">① A: 이번 휴가 때 어디 가실 거예요?</p>
+            <p class="korean">&nbsp;&nbsp;&nbsp;B: 휴가가 일주일<span class="grammar-red">이 안 돼서</span> 가까운 곳으로 가려고 해요.</p>
+            <p class="french-translation">"Comme les vacances ne font pas une semaine, je vais quelque part de proche."</p>
+
+            <p style="margin-top:15px;" class="korean">② A: 탈출 수업에 오는 학생이 몇 명이에요?</p>
+            <p class="korean">&nbsp;&nbsp;&nbsp;B: 왠지 모르겠지만 학생이 적어요. 10명<span class="grammar-red">이 안 될</span> 거예요.</p>
+            <p class="french-translation">"Je ne sais pas pourquoi, mais il y a peu d'étudiants. Il n'y en aura probablement pas 10."</p>
+
+            <p style="margin-top:10px; color:#7f8c8d; font-size:0.95em;">→ -이 안 돼요 peut aussi exprimer qu'un seuil (quantité minimale, durée requise) n'est pas atteint.</p>
+        </div>
+
+        <h3>4. Les deux patterns ensemble : comparaison directe</h3>
+        <div class="example-box">
+            <p><span class="tip-badge">📏 Situation : décrire deux objets</span></p>
+            <p class="korean">A: 새 책상이 커요?</p>
+            <p class="korean">B: 네, 가로가 1미터<span class="grammar-red">가 넘어요</span>. 근데 서랍은 작아서 깊이가 20cm<span class="grammar-red">도 안 돼요</span>.</p>
+            <p class="french-translation">"Oui, la largeur dépasse 1 mètre. Mais les tiroirs sont petits — la profondeur ne fait même pas 20 cm."</p>
+        </div>
+
+        <h3>5. Erreurs courantes</h3>
+
+        <h4>Confondre les deux patterns</h4>
+        <div class="error-box">
+            <p>❌ <span class="korean">가로가 1미터<span class="grammar-red">가 안 넘어요</span>.</span></p>
+            <p style="color:#c0392b; margin-top:5px;">→ Double négation maladroite — inutile et non standard</p>
+        </div>
+        <div class="success-box">
+            <p>✅ "Ça dépasse 1 m" → <span class="korean">1미터<span class="grammar-red">가 넘어요</span>.</span></p>
+            <p>✅ "Ça ne dépasse pas 1 m" → <span class="korean">1미터<span class="grammar-red">가 안 돼요</span>.</span></p>
+        </div>
+
+        <h4>Utiliser -이 넘어요 pour une durée au présent vs au passé</h4>
+        <div class="note-box">
+            <p>Attention aux temps :</p>
+            <ul style="margin-top:8px;">
+                <li><span class="korean">2년이 <span class="grammar-red">넘었어요</span></span> → "Ça a dépassé 2 ans." (accompli — passé ✅)</li>
+                <li><span class="korean">2년이 <span class="grammar-red">넘어요</span></span> → "Ça dépasse 2 ans." (état actuel ✅)</li>
+                <li><span class="korean">2년이 <span class="grammar-red">넘을 거예요</span></span> → "Ça va dépasser 2 ans." (futur ✅)</li>
+            </ul>
+        </div>
+
+        <h3>6. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <ul style="margin-top:10px;">
+                <li><span class="korean grammar-red">-이 넘어요</span> → "dépasse X" / "fait plus de X" / "excède X"</li>
+                <li><span class="korean grammar-red">-이 안 돼요</span> → "ne fait pas X" / "n'atteint pas X" / "est inférieur à X"</li>
+            </ul>
+            <p style="margin-top:12px;">Exemples :</p>
+            <ul style="margin-top:6px;">
+                <li>"La longueur <strong>dépasse</strong> 1 mètre." → <span class="korean">길이가 1미터<span class="grammar-red">가 넘어요</span>.</span></li>
+                <li>"La largeur <strong>ne fait pas</strong> 30 cm." → <span class="korean">너비가 30cm<span class="grammar-red">가 안 돼요</span>.</span></li>
+                <li>"Ça <strong>fait déjà plus de</strong> 2 ans." → <span class="korean">벌써 2년<span class="grammar-red">이 넘었어요</span>.</span></li>
+            </ul>
+        </div>
+
+        <!-- ===== RÉCAP ===== -->
+        <h2>📋 Récapitulatif</h2>
+
+        <table class="recap-table">
+            <thead>
+                <tr>
+                    <th>Point</th>
+                    <th>Sens / Règle</th>
+                    <th>Exemple clé</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Vocabulaire</strong><br>forme, texture, matière</td>
+                    <td>Décrire précisément un objet physique avec les adjectifs appropriés</td>
+                    <td class="korean">둥글고 폭신한 천으로 만든 물건이에요.<br><span class="french-translation" style="margin:0;">"C'est un objet rond et moelleux en tissu."</span></td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">noun만 해요</td>
+                    <td>Comparer la taille à un objet <strong>connu des deux</strong> interlocuteurs<br><span style="font-size:0.9em; color:#7f8c8d;">"C'est de la taille de..."</span></td>
+                    <td class="korean">우리 교실<span class="grammar-red">만 해요</span>.<br><span class="french-translation" style="margin:0;">"C'est de la taille de notre salle de classe."</span></td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-이 넘어요</td>
+                    <td>La taille / quantité <strong>dépasse</strong> la valeur mentionnée<br><span style="font-size:0.9em; color:#7f8c8d;">"Ça fait plus de X / ça dépasse X"</span></td>
+                    <td class="korean">가로는 1미터<span class="grammar-red">가 넘어요</span>.<br><span class="french-translation" style="margin:0;">"La largeur dépasse 1 mètre."</span></td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-이 안 돼요</td>
+                    <td>La taille / quantité <strong>n'atteint pas</strong> la valeur mentionnée<br><span style="font-size:0.9em; color:#7f8c8d;">"Ça ne fait pas X / c'est moins de X"</span></td>
+                    <td class="korean">가로 길이가 30cm<span class="grammar-red">가 안 돼요</span>.<br><span class="french-translation" style="margin:0;">"La largeur ne fait pas 30 cm."</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>

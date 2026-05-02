@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6과 — Points de grammaire (Niveau 4급) - Sogang University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #fafafa;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #ffffff;
+            border-bottom: 3px solid #b50004;
+            color: #2c3e50;
+            padding: 40px 50px;
+        }
+
+        h1 { font-size: 2.4em; font-weight: 700; margin-bottom: 10px; color: #2c3e50; }
+        .header-subtitle { font-size: 1em; color: #7f8c8d; }
+        .content { padding: 50px; }
+
+        h2 {
+            font-size: 1.8em; color: #34495e;
+            margin: 50px 0 25px 0; font-weight: 700;
+            padding-bottom: 12px; border-bottom: 2px solid #ecf0f1;
+        }
+        h2::before {
+            content: ''; display: inline-block;
+            width: 5px; height: 28px; background: #b50004;
+            margin-right: 12px; vertical-align: middle;
+        }
+        h3 { font-size: 1.4em; color: #2c3e50; margin: 30px 0 18px 0; font-weight: 600; }
+        h4 { font-size: 1.15em; color: #34495e; margin: 22px 0 12px 0; font-weight: 600; }
+
+        p, li { font-size: 1.05em; margin-bottom: 15px; line-height: 1.8; color: #2c3e50; }
+        ul, ol { margin: 20px 0; padding-left: 35px; }
+        li { margin-bottom: 12px; }
+
+        .highlight-yellow { background: #ffff00; font-weight: 600; padding: 2px 5px; border-radius: 3px; }
+        .grammar-red { color: #b50004; font-weight: 700; }
+        .super-important { background: #ffff00; font-weight: 700; padding: 3px 6px; border-radius: 3px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
+        th { background: #f8f9fa; color: #2c3e50; padding: 16px; text-align: left; font-weight: 600; font-size: 1.05em; border-bottom: 2px solid #e0e0e0; }
+        td { padding: 15px 16px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background: #f8f9fa; }
+
+        .example-box { background: #f8f9fa; padding: 25px; border-left: 4px solid #95a5a6; margin: 25px 0; border-radius: 6px; }
+        .error-box { background: #fff5f5; padding: 20px 25px; border-left: 4px solid #e74c3c; margin: 20px 0; border-radius: 6px; }
+        .success-box { background: #f0f9f4; padding: 20px 25px; border-left: 4px solid #27ae60; margin: 20px 0; border-radius: 6px; }
+        .note-box { background: #fffef7; padding: 20px 25px; border-left: 4px solid #f39c12; margin: 25px 0; border-radius: 6px; }
+
+        .korean { font-size: 1.15em; font-weight: 600; color: #2c3e50; }
+        .french-translation { font-style: italic; color: #7f8c8d; margin-top: 8px; display: block; }
+        strong { color: #2c3e50; font-weight: 600; }
+
+        .tip-badge {
+            display: inline-block; background: #34495e; color: white;
+            padding: 5px 12px; border-radius: 20px; font-size: 0.85em;
+            font-weight: 600; margin-right: 10px;
+        }
+
+        .formula {
+            background: #f8f9fa; padding: 18px 22px; border-radius: 6px;
+            font-family: 'Courier New', monospace; font-size: 1.05em;
+            margin: 18px 0; border: 2px solid #e0e0e0; color: #2c3e50;
+        }
+
+        /* Carte pour chaque mot d'onomatopée */
+        .onoma-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 22px 25px;
+            margin: 20px 0;
+            border-left: 6px solid #b50004;
+        }
+
+        .onoma-word {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #b50004;
+            margin-bottom: 5px;
+        }
+
+        .onoma-type {
+            display: inline-block;
+            font-size: 0.82em;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .type-sound {
+            background: #eaf4fb;
+            color: #2471a3;
+        }
+
+        .type-manner {
+            background: #eafaf1;
+            color: #1e8449;
+        }
+
+        .type-both {
+            background: #fdf2f8;
+            color: #76448a;
+        }
+
+        .recap-table { border: 2px solid #34495e; }
+        .recap-table th { background: #34495e; color: white; }
+
+        .rule-box {
+            background: #f0f4ff;
+            border: 2px solid #c0cce8;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin: 18px 0;
+        }
+
+        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
+        @media (max-width: 768px) {
+            .content { padding: 30px 25px; } .header { padding: 30px 25px; }
+            h1 { font-size: 2em; } h2 { font-size: 1.5em; } table { font-size: 0.9em; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>6과 — Points de grammaire</h1>
+        <div class="header-subtitle">Niveau 4급 | Sogang Korean Program</div>
+    </div>
+
+    <div class="content">
+
+        <!-- ===== SECTION I : 의성어 · 의태어 ===== -->
+        <h2>I. Les mots expressifs : 의성어 · 의태어</h2>
+
+        <h3>1. Définitions</h3>
+        <p>Le coréen est une langue très riche en mots expressifs. On distingue deux grandes catégories, toutes deux liées à l'idée d'onomatopée :</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Terme</th>
+                    <th>Définition</th>
+                    <th>Équivalent français</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="korean grammar-red">의성어</span><br><span style="font-size:0.9em; color:#7f8c8d;">(擬聲語)</span></td>
+                    <td>Mots qui imitent un <strong>son</strong> réel</td>
+                    <td>"Plouf", "Crac", "Boum", "Cui-cui"</td>
+                </tr>
+                <tr>
+                    <td><span class="korean grammar-red">의태어</span><br><span style="font-size:0.9em; color:#7f8c8d;">(擬態語)</span></td>
+                    <td>Mots qui décrivent une <strong>manière</strong> d'agir ou un état visuel/physique (sans forcément de son)</td>
+                    <td>"Lentement", "En douce", "Tout souriant"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note-box">
+            <p><span class="tip-badge">💡 Important</span></p>
+            <p>Certains mots coréens appartiennent aux <strong>deux catégories à la fois</strong> — ils imitent à la fois un son ET décrivent une manière. C'est le cas de <span class="korean grammar-red">훌쩍훌쩍</span> ou <span class="korean grammar-red">소곤소곤</span> par exemple.</p>
+        </div>
+
+        <h3>2. Comment les utiliser ?</h3>
+        <div class="formula">
+            의성어/의태어 + <strong>하다</strong> &nbsp;&nbsp;(action correspondante)<br>
+            <span style="font-size:0.9em; color:#7f8c8d;">OU</span><br>
+            의성어/의태어 + <strong>verbe approprié au contexte</strong>
+        </div>
+
+        <div class="example-box">
+            <p class="korean">훌쩍훌쩍 <span class="grammar-red">하다</span> → 울다 → <span class="grammar-red">훌쩍훌쩍 울었어요.</span></p>
+            <p class="french-translation">"Il/Elle a pleuré en reniflant."</p>
+            <p class="korean" style="margin-top:10px;">끄덕끄덕 <span class="grammar-red">하다</span> → 고개를 끄덕이다 → <span class="grammar-red">끄덕끄덕하면서</span> 잘 들어줬어요.</p>
+            <p class="french-translation">"Il/Elle a bien écouté en hochant la tête."</p>
+        </div>
+
+        <h3>3. Les 의성어/의태어 du manuel</h3>
+        <p>Voici les six mots expressifs présentés dans l'unité, avec leur catégorie, leur sens précis et leurs exemples du manuel :</p>
+
+        <!-- 훨훨 -->
+        <div class="onoma-card">
+            <div class="onoma-word">훨훨</div>
+            <span class="onoma-type type-manner">의태어</span>
+            <p><strong>Sens :</strong> Battre des ailes amplement, voler avec de grands mouvements d'ailes — idée de légèreté et de liberté dans le vol</p>
+            <div class="example-box" style="margin-top:12px;">
+                <p class="korean">A: 나무꾼이 선녀한테 날개옷을 보여준 다음에 어떻게 됐어?</p>
+                <p class="korean">B: 어떻게 되긴. 날개옷을 입고 <span class="grammar-red">훨훨</span> 날아 올라가 버렸지.</p>
+                <p class="french-translation">"Qu'est-ce qui s'est passé après que le bûcheron a montré le vêtement-ailes à la fée ? Bah, elle l'a enfilé et s'est envolée en battant des ailes."</p>
+            </div>
+        </div>
+
+        <!-- 활짝 -->
+        <div class="onoma-card">
+            <div class="onoma-word">활짝</div>
+            <span class="onoma-type type-manner">의태어</span>
+            <p><strong>Sens :</strong> Grand sourire éclatant / porte qui s'ouvre en grand — idée d'ouverture totale et franche</p>
+            <div class="example-box" style="margin-top:12px;">
+                <p class="korean">A: 루이 씨가 오늘 <span class="grammar-red">활짝</span> 웃으면서 교실로 들어왔어.</p>
+                <p class="korean">B: 좋은 일이 있나 봐.</p>
+                <p class="french-translation">"Louis est entré dans la classe aujourd'hui avec un grand sourire éclatant." / "Il a dû se passer quelque chose de bien."</p>
+            </div>
+        </div>
+
+        <!-- 훌쩍훌쩍 -->
+        <div class="onoma-card">
+            <div class="onoma-word">훌쩍훌쩍</div>
+            <span class="onoma-type type-both">의성어 + 의태어</span>
+            <p><strong>Sens :</strong> Pleurer en reniflant — à la fois le son du reniflement répété ET la manière de pleurer silencieusement</p>
+            <div class="example-box" style="margin-top:12px;">
+                <p class="korean">A: 영화 좋았지? 마지막에 정말 눈물 나더라.</p>
+                <p class="korean">B: 응. 너무 슬퍼서 계속 <span class="grammar-red">훌쩍훌쩍</span>했더니 옆 사람이 나를 쳐다봤어.</p>
+                <p class="french-translation">"Le film était bien, non ? La fin m'a vraiment fait pleurer." / "Oui. J'étais tellement triste que j'ai continué à renifler en pleurant, et la personne à côté me regardait."</p>
+            </div>
+        </div>
+
+        <!-- 끄덕끄덕 -->
+        <div class="onoma-card">
+            <div class="onoma-word">끄덕끄덕</div>
+            <span class="onoma-type type-manner">의태어</span>
+            <p><strong>Sens :</strong> Hocher la tête de haut en bas à plusieurs reprises — geste d'approbation ou d'écoute attentive</p>
+            <div class="example-box" style="margin-top:12px;">
+                <p class="korean">A: 미카, 발표하느라 수고했어! 정말 잘하더라.</p>
+                <p class="korean">B: 고마워. 친구들이 <span class="grammar-red">끄덕끄덕</span>하면서 잘 들어줘서 힘이 났어.</p>
+                <p class="french-translation">"Mika, tu as bien travaillé pour ta présentation ! C'était vraiment bien." / "Merci. Mes amis hochaient la tête en écoutant attentivement, ça m'a donné de l'énergie."</p>
+            </div>
+        </div>
+
+        <!-- 소곤소곤 -->
+        <div class="onoma-card">
+            <div class="onoma-word">소곤소곤</div>
+            <span class="onoma-type type-both">의성어 + 의태어</span>
+            <p><strong>Sens :</strong> Parler à voix très basse pour ne pas être entendu — à la fois le son feutré des chuchotements ET la manière de parler en secret</p>
+            <div class="example-box" style="margin-top:12px;">
+                <p class="korean">A: 왜 그렇게 <span class="grammar-red">소곤소곤</span> 얘기해?</p>
+                <p class="korean">B: 페이가 들을까 봐. 오늘 생일 파티 페이한테는 비밀이야. 알았지?</p>
+                <p class="french-translation">"Pourquoi tu parles en chuchotant comme ça ?" / "De peur que Pei entende. La fête d'anniversaire d'aujourd'hui est un secret pour Pei. C'est compris ?"</p>
+            </div>
+        </div>
+
+        <!-- 글썽글썽 -->
+        <div class="onoma-card">
+            <div class="onoma-word">글썽글썽</div>
+            <span class="onoma-type type-manner">의태어</span>
+            <p><strong>Sens :</strong> Les yeux qui se remplissent de larmes — décrit le moment où les larmes montent dans les yeux sans encore couler</p>
+            <div class="example-box" style="margin-top:12px;">
+                <p class="korean">A: 어제 페이 생일 파티 어땠어? 페이가 선물을 받고 좋아했어?</p>
+                <p class="korean">B: 응. 눈에 눈물이 <span class="grammar-red">글썽글썽</span>했어. 정말 고맙대.</p>
+                <p class="french-translation">"Comment était la fête d'anniversaire de Pei hier ? Pei était content du cadeau ?" / "Oui. Ses yeux se sont remplis de larmes. Il/Elle dit vraiment merci."</p>
+            </div>
+        </div>
+
+        <h3>4. Tableau récapitulatif des 의성어/의태어 du manuel</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mot</th>
+                    <th>Type</th>
+                    <th>Sens</th>
+                    <th>Contexte typique</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="korean grammar-red">훨훨</td>
+                    <td><span class="onoma-type type-manner" style="font-size:0.85em;">의태어</span></td>
+                    <td>Voler en battant amplement des ailes</td>
+                    <td>Oiseaux, fées, envol</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">활짝</td>
+                    <td><span class="onoma-type type-manner" style="font-size:0.85em;">의태어</span></td>
+                    <td>Grand sourire / ouverture en grand</td>
+                    <td>Sourire, porte, fleur qui s'ouvre</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">훌쩍훌쩍</td>
+                    <td><span class="onoma-type type-both" style="font-size:0.85em;">의성어+의태어</span></td>
+                    <td>Pleurer en reniflant</td>
+                    <td>Pleurs silencieux, émotion</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">끄덕끄덕</td>
+                    <td><span class="onoma-type type-manner" style="font-size:0.85em;">의태어</span></td>
+                    <td>Hocher la tête (approbation)</td>
+                    <td>Écoute attentive, accord</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">소곤소곤</td>
+                    <td><span class="onoma-type type-both" style="font-size:0.85em;">의성어+의태어</span></td>
+                    <td>Chuchoter, parler à voix basse en secret</td>
+                    <td>Secret, discrétion</td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">글썽글썽</td>
+                    <td><span class="onoma-type type-manner" style="font-size:0.85em;">의태어</span></td>
+                    <td>Yeux qui se remplissent de larmes</td>
+                    <td>Émotion forte, gratitude</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>5. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <p>Le français possède aussi des onomatopées, mais les <strong>의태어</strong> n'ont pas vraiment d'équivalent direct — en français on utiliserait plutôt un adverbe ou une proposition participiale :</p>
+            <ul style="margin-top:10px;">
+                <li><span class="korean grammar-red">활짝 웃다</span> → "sourire <strong>de toutes ses dents</strong>" / "sourire <strong>radieusement</strong>"</li>
+                <li><span class="korean grammar-red">끄덕끄덕하다</span> → "hocher la tête <strong>à plusieurs reprises</strong>"</li>
+                <li><span class="korean grammar-red">소곤소곤 얘기하다</span> → "parler <strong>en chuchotant</strong>"</li>
+                <li><span class="korean grammar-red">글썽글썽하다</span> → "avoir les yeux <strong>qui brillent de larmes</strong>"</li>
+            </ul>
+            <p style="margin-top:10px;"><span class="highlight-yellow">En coréen, un seul mot expressif suffit là où le français a besoin de plusieurs mots. C'est l'une des grandes richesses du coréen !</span></p>
+        </div>
+
+        <!-- ===== SECTION II : -더니 ===== -->
+        <h2>II. Enchaîner deux actions observées : -더니</h2>
+
+        <h3>1. Sens et fonction</h3>
+        <p><span class="super-important">Le pattern -더니 indique qu'une action a été immédiatement suivie d'une autre.</span> Il s'utilise quand on <strong>raconte quelque chose qu'on a soi-même observé</strong> — une séquence d'événements dont on a été témoin direct. C'est un outil narratif très vivant pour décrire le passé dans l'ordre où les choses se sont produites.</p>
+
+        <div class="note-box">
+            <p><span class="tip-badge">💡 Traduction</span></p>
+            <p>"Et puis soudain..." / "Alors..." / "Après avoir fait X, il/elle a fait Y"</p>
+            <p style="margin-top:8px;">Exemple du manuel :</p>
+            <p class="korean">A: 에! 미카 벌써 갔어?</p>
+            <p class="korean">B: 응. 조금 전에 전화 받<span class="grammar-red">더니</span> 급하게 나가더라고.</p>
+            <p class="french-translation">"Oui. Il y a peu, elle a reçu un appel et puis elle est sortie précipitamment."</p>
+        </div>
+
+        <h3>2. Construction grammaticale</h3>
+        <div class="formula">
+            Radical verbal (présent) + <strong>-더니</strong> + deuxième action
+        </div>
+
+        <div class="rule-box">
+            <p><strong>Règle clé :</strong> <span class="super-important">-더니 se fixe sur le radical du présent</span>, même si on parle du passé.</p>
+            <p class="korean" style="margin-top:8px;">전화를 <span class="grammar-red">받더니</span> (← 받다, pas 받았더니) 급하게 나갔어요.</p>
+            <p class="french-translation">"Elle a reçu un appel et puis elle est sortie en vitesse."</p>
+        </div>
+
+        <h3>3. Exemples du manuel</h3>
+        <div class="example-box">
+            <p>① <span class="tip-badge">Centre de service client</span></p>
+            <p class="korean">직원: 고객님 컴퓨터에 어떤 문제가 있으십니까?</p>
+            <p class="korean">손님: 아까 컴퓨터를 켰는데 삐 소리가 나<span class="grammar-red">더니</span> 갑자기 꺼졌어요. 아무리 버튼을 눌러도 안 돼요.</p>
+            <p class="french-translation">"Tout à l'heure j'ai allumé l'ordinateur, il a émis un bip et puis il s'est éteint d'un coup. Même en appuyant sur les boutons, rien ne marche."</p>
+
+            <p style="margin-top:20px;">② <span class="tip-badge">En classe</span></p>
+            <p class="korean">선생님: 알렉스 씨 못 봤어요?</p>
+            <p class="korean">미카: 조금 전에 전화를 받<span class="grammar-red">더니</span> 집에 가야 한다면서 급하게 나갔어요.</p>
+            <p class="french-translation">"Il y a peu, il a reçu un appel, a dit qu'il devait rentrer chez lui et est parti précipitamment."</p>
+
+            <p style="margin-top:20px;">③ <span class="tip-badge">Mika et Stefan observent Pei</span></p>
+            <p class="korean">미카: 페이 씨 뭐 해요?</p>
+            <p class="korean">스테판: 오늘 대학원 수업에서 발표를 한대요. 아까부터 계속 인터넷에서 자료를 찾<span class="grammar-red">더니</span> 발표문 읽는 연습을 하고 있네요.</p>
+            <p class="french-translation">"Il paraît qu'elle doit faire une présentation en cours de master aujourd'hui. Elle cherchait des sources sur Internet depuis tout à l'heure, et maintenant elle s'entraîne à lire son texte de présentation."</p>
+        </div>
+
+        <h3>4. Règles importantes</h3>
+
+        <h4>Note 1 : Le sujet des deux propositions doit être identique</h4>
+        <div class="success-box">
+            <p>✅ <span class="korean">미카는 부엌에 가<span class="grammar-red">더니</span> 10분 만에 김치볶음밥을 만들어 냈다.</span></p>
+            <p class="french-translation">"Mika est allée dans la cuisine et en 10 minutes, elle avait fait du kimchi-bokkeumbap." (même sujet : Mika)</p>
+        </div>
+        <div class="error-box">
+            <p>❌ <span class="korean">미카는 부엌에 가<span class="grammar-red">더니</span> 10분 만에 김치볶음밥<span class="grammar-red">이</span> 나왔다.</span></p>
+            <p style="color:#c0392b; margin-top:5px;">→ Le sujet change en milieu de phrase (Mika → le kimchi-bokkeumbap) : interdit avec -더니 !</p>
+        </div>
+        <div class="note-box">
+            <strong>→</strong> <span class="super-important">Les deux actions doivent avoir le même sujet grammatical.</span>
+        </div>
+
+        <h4>Note 2 : Le locuteur ne peut pas être le sujet</h4>
+        <div class="rule-box">
+            <p>Le sujet d'une phrase avec -더니 est <strong>toujours quelqu'un que le locuteur a observé</strong>. Le locuteur lui-même ne peut pas être le sujet, car on ne peut pas s'observer de l'extérieur.</p>
+            <div class="error-box" style="margin-top:12px;">
+                <p>❌ <span class="korean">저는 전화를 받<span class="grammar-red">더니</span> 급하게 나갔어요.</span></p>
+                <p style="color:#c0392b; margin-top:5px;">→ Je ne peux pas m'observer moi-même comme un témoin !</p>
+            </div>
+            <div class="success-box">
+                <p>✅ <span class="korean">미카 씨가 전화를 받<span class="grammar-red">더니</span> 급하게 나갔어요.</span></p>
+                <p class="french-translation">"Mika a reçu un appel et est sortie en vitesse." (j'ai observé Mika)</p>
+            </div>
+        </div>
+
+        <h3>5. Les autres usages de -더니 (référence)</h3>
+        <p>Le manuel signale deux autres emplois de -더니 enseignés dans les niveaux précédents de Sogang. Il est utile de les connaître pour ne pas confondre :</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Usage</th>
+                    <th>Niveau / Unité</th>
+                    <th>Exemple</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>-더니 d'observation</strong><br><span style="font-size:0.9em; color:#7f8c8d;">Action A immédiatement suivie de B (vu de l'extérieur)</span></td>
+                    <td>4A — Unit 6<br><span style="font-size:0.9em; color:#7f8c8d;">(le présent unit)</span></td>
+                    <td class="korean">전화를 받<span class="grammar-red">더니</span> 나갔어요.</td>
+                </tr>
+                <tr>
+                    <td><strong>-더니 de séquence observée</strong><br><span style="font-size:0.9em; color:#7f8c8d;">Quelqu'un fait X, le locuteur constate Y</span></td>
+                    <td>4A — Unit 6<br><span style="font-size:0.9em; color:#7f8c8d;">(même emploi, exemples variés)</span></td>
+                    <td class="korean">스테판 씨가 교실 앞으로 나가<span class="grammar-red">더니</span> 춤을 추기 시작했어요.</td>
+                </tr>
+                <tr>
+                    <td><strong>-았/었더니 de conclusion</strong><br><span style="font-size:0.9em; color:#7f8c8d;">Après avoir fait X (moi-même), voilà le résultat Y</span></td>
+                    <td>3B — Unit 3</td>
+                    <td class="korean">어젯밤에 못 잤<span class="grammar-red">더니</span> 졸려요.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note-box">
+            <p><span class="tip-badge">⚠️ Distinction clé</span></p>
+            <p><strong>-더니</strong> (présent) → <strong>observation externe</strong> : j'ai vu quelqu'un faire X, puis Y</p>
+            <p style="margin-top:5px;"><strong>-았/었더니</strong> (passé) → <strong>expérience personnelle</strong> : moi j'ai fait X, et du coup Y (le locuteur PEUT être sujet)</p>
+            <div class="example-box" style="margin-top:12px;">
+                <p class="korean">밥을 많이 먹<span class="grammar-red">었더니</span> 배가 불러요.</p>
+                <p class="french-translation">"Comme j'ai beaucoup mangé, je suis rassasié·e." (c'est moi le sujet → -았/었더니 ✅)</p>
+                <p class="korean" style="margin-top:10px;">스테판이 밥을 많이 먹<span class="grammar-red">더니</span> 배부르다고 해요.</p>
+                <p class="french-translation">"Stefan a beaucoup mangé et dit qu'il est rassasié." (Stefan est observé → -더니 ✅)</p>
+            </div>
+        </div>
+
+        <h3>6. Erreurs courantes</h3>
+
+        <h4>Erreur n°1 : Utiliser -더니 avec soi-même comme sujet</h4>
+        <div class="error-box">
+            <p>❌ <span class="korean">저는 자료를 찾<span class="grammar-red">더니</span> 발표 준비를 시작했어요.</span></p>
+        </div>
+        <div class="success-box">
+            <p>✅ <span class="korean">자료를 찾<span class="grammar-red">았더니</span> 발표 준비를 시작할 수 있었어요.</span> <span style="color:#27ae60;">(avec -았더니 : expérience personnelle)</span></p>
+            <p style="margin-top:8px;"><em>ou</em></p>
+            <p>✅ <span class="korean">페이 씨가 자료를 찾<span class="grammar-red">더니</span> 발표 준비를 시작했어요.</span> <span style="color:#27ae60;">(avec -더니 : sujet = quelqu'un d'autre)</span></p>
+        </div>
+
+        <h4>Erreur n°2 : Changer de sujet entre les deux propositions</h4>
+        <div class="error-box">
+            <p>❌ <span class="korean">미카가 창문을 열<span class="grammar-red">더니</span> 바람이 들어왔어요.</span></p>
+            <p style="color:#c0392b; margin-top:5px;">→ Sujet 1 : 미카 / Sujet 2 : 바람 → changement interdit !</p>
+        </div>
+        <div class="success-box">
+            <p>✅ <span class="korean">미카가 창문을 열<span class="grammar-red">더니</span> 깜짝 놀랐어요.</span></p>
+            <p class="french-translation">"Mika a ouvert la fenêtre et a eu un choc." (même sujet : Mika)</p>
+        </div>
+
+        <h3>7. Parallèle avec le français</h3>
+        <div class="note-box">
+            <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+            <p>-더니 correspond à l'enchaînement narratif au passé en français, avec une idée de succession rapide et observée :</p>
+            <ul style="margin-top:10px;">
+                <li>"Il a reçu un appel, <strong>et puis</strong> il est sorti en courant."</li>
+                <li>"Elle a allumé l'ordinateur, <strong>et là</strong> un bip a retenti."</li>
+                <li>"Il cherchait ses affaires <strong>quand soudain</strong> il a trouvé son portefeuille."</li>
+            </ul>
+            <p style="margin-top:10px;"><span class="highlight-yellow">C'est un outil de narration : on donne vie aux événements en les enchaînant dans l'ordre où on les a vus se produire.</span></p>
+        </div>
+
+        <!-- ===== RÉCAP ===== -->
+        <h2>📋 Récapitulatif</h2>
+
+        <table class="recap-table">
+            <thead>
+                <tr>
+                    <th>Point</th>
+                    <th>Définition / Règle</th>
+                    <th>Exemple clé</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="korean grammar-red">의성어</td>
+                    <td>Mot qui imite un <strong>son</strong></td>
+                    <td class="korean">훌쩍훌쩍 울었어요.<br><span class="french-translation" style="margin:0;">"a pleuré en reniflant"</span></td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">의태어</td>
+                    <td>Mot qui décrit une <strong>manière</strong> d'agir</td>
+                    <td class="korean">활짝 웃었어요.<br><span class="french-translation" style="margin:0;">"a souri de toutes ses dents"</span></td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-더니</td>
+                    <td>Action observée A, immédiatement suivie de B<br><span style="font-size:0.9em; color:#7f8c8d;">→ même sujet, pas le locuteur, radical présent</span></td>
+                    <td class="korean">전화를 받더니 급하게 나갔어요.<br><span class="french-translation" style="margin:0;">"a reçu un appel et est sorti(e) en vitesse"</span></td>
+                </tr>
+                <tr>
+                    <td class="korean grammar-red">-았/었더니</td>
+                    <td>Moi j'ai fait X → résultat Y<br><span style="font-size:0.9em; color:#7f8c8d;">→ locuteur peut être sujet (3B Unit 3)</span></td>
+                    <td class="korean">못 잤더니 졸려요.<br><span class="french-translation" style="margin:0;">"comme je n'ai pas dormi, j'ai sommeil"</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>

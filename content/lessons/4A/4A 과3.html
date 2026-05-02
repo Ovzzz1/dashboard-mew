@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3과 — Points de grammaire (Niveau 4급) - Sogang University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #fafafa;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #ffffff;
+            border-bottom: 3px solid #b50004;
+            color: #2c3e50;
+            padding: 40px 50px;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .header-subtitle {
+            font-size: 1em;
+            color: #7f8c8d;
+        }
+
+        .content {
+            padding: 50px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #34495e;
+            margin: 50px 0 25px 0;
+            font-weight: 700;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 28px;
+            background: #b50004;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin: 30px 0 18px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.15em;
+            color: #34495e;
+            margin: 22px 0 12px 0;
+            font-weight: 600;
+        }
+
+        p, li {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #2c3e50;
+        }
+
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 35px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .highlight-yellow {
+            background: #ffff00;
+            font-weight: 600;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .grammar-red {
+            color: #b50004;
+            font-weight: 700;
+        }
+
+        .super-important {
+            background: #ffff00;
+            font-weight: 700;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #f8f9fa;
+            color: #2c3e50;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        td {
+            padding: 15px 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        .example-box {
+            background: #f8f9fa;
+            padding: 25px;
+            border-left: 4px solid #95a5a6;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .error-box {
+            background: #fff5f5;
+            padding: 20px 25px;
+            border-left: 4px solid #e74c3c;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .success-box {
+            background: #f0f9f4;
+            padding: 20px 25px;
+            border-left: 4px solid #27ae60;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .note-box {
+            background: #fffef7;
+            padding: 20px 25px;
+            border-left: 4px solid #f39c12;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .korean {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .french-translation {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 8px;
+            display: block;
+        }
+
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .tip-badge {
+            display: inline-block;
+            background: #34495e;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .formula {
+            background: #f8f9fa;
+            padding: 18px 22px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.05em;
+            margin: 18px 0;
+            border: 2px solid #e0e0e0;
+            color: #2c3e50;
+        }
+
+        .recap-table {
+            border: 2px solid #34495e;
+        }
+
+        .recap-table th {
+            background: #34495e;
+            color: white;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; }
+        }
+
+        @media (max-width: 768px) {
+            .content { padding: 30px 25px; }
+            .header { padding: 30px 25px; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            table { font-size: 0.9em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>3과 — Points de grammaire</h1>
+            <div class="header-subtitle">Niveau 4급 | Sogang Korean Program</div>
+        </div>
+
+        <div class="content">
+
+            <!-- ===== SECTION I : 격식체 ===== -->
+            <h2>I. Le discours formel : 격식체</h2>
+
+            <h3>1. Qu'est-ce que la 격식체 ?</h3>
+            <p><span class="super-important">La 격식체 (格式體) est le registre formel de la langue coréenne.</span> Elle s'utilise dans les contextes officiels où l'on s'adresse à un public, à des supérieurs ou à des inconnus dans un cadre professionnel.</p>
+
+            <p><strong>Contextes d'utilisation :</strong></p>
+            <ul>
+                <li>Réunions professionnelles (비즈니스 미팅)</li>
+                <li>Entretiens d'embauche (면접)</li>
+                <li>Présentations et exposés (발표)</li>
+                <li>Rapports oraux (보고)</li>
+                <li>Discours publics (연설)</li>
+                <li>S'adresser à des clients ou supérieurs hiérarchiques</li>
+            </ul>
+
+            <div class="note-box">
+                <p><span class="tip-badge">💡 À retenir</span></p>
+                <p>La 격식체 ne s'utilise <strong>pas</strong> dans les conversations du quotidien entre amis ou collègues proches. Pour ça, on utilise la <strong>해요체</strong>.</p>
+            </div>
+
+            <h3>2. Conjugaison : 격식체 vs 해요체</h3>
+            <p>Voici les terminaisons à connaître selon le type de phrase :</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type de phrase</th>
+                        <th>해요체 (poli courant)</th>
+                        <th>격식체 (formel)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Déclaratif (affirmation)</td>
+                        <td class="korean">-아요/어요</td>
+                        <td class="korean grammar-red">-습니다 / -ㅂ니다</td>
+                    </tr>
+                    <tr>
+                        <td>Interrogatif (question)</td>
+                        <td class="korean">-아요?/어요?</td>
+                        <td class="korean grammar-red">-습니까? / -ㅂ니까?</td>
+                    </tr>
+                    <tr>
+                        <td>Impératif (ordre poli)</td>
+                        <td class="korean">-(으)세요</td>
+                        <td class="korean grammar-red">-(으)십시오</td>
+                    </tr>
+                    <tr>
+                        <td>Propositionnel (suggestion)</td>
+                        <td class="korean">-(으)ㄹ까요?</td>
+                        <td class="korean grammar-red">-(으)십시다</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3. Règles de conjugaison : -습니다 / -ㅂ니다</h3>
+            <p>La terminaison dépend de la finale du radical verbal :</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Radical</th>
+                        <th>Terminaison</th>
+                        <th>Exemple (해요체 → 격식체)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Terminé par une <strong>consonne</strong></td>
+                        <td class="grammar-red">-습니다</td>
+                        <td class="korean">먹어요 → 먹<span class="grammar-red">습니다</span></td>
+                    </tr>
+                    <tr>
+                        <td>Terminé par une <strong>voyelle</strong> (ou ㄹ)</td>
+                        <td class="grammar-red">-ㅂ니다</td>
+                        <td class="korean">가요 → 가<span class="grammar-red">ㅂ니다</span></td>
+                    </tr>
+                    <tr>
+                        <td>Radical en <strong>ㄹ</strong></td>
+                        <td class="grammar-red">-ㅂ니다 (ㄹ disparaît)</td>
+                        <td class="korean">알아요 → 아<span class="grammar-red">ㅂ니다</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>이다</strong> (être)</td>
+                        <td class="grammar-red">-입니다</td>
+                        <td class="korean">학생이에요 → 학생<span class="grammar-red">입니다</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="note-box">
+                <p><span class="tip-badge">⚠️ Attention</span></p>
+                <p>Pour les questions, même règle : radical + <span class="grammar-red">-습니까?</span> (consonne) ou <span class="grammar-red">-ㅂ니까?</span> (voyelle/ㄹ).</p>
+                <p class="korean" style="margin-top: 10px;">먹어요? → 먹<span class="grammar-red">습니까</span>? &nbsp;|&nbsp; 가요? → 가<span class="grammar-red">ㅂ니까</span>?</p>
+            </div>
+
+            <h3>4. Comparaison directe : exemples du manuel</h3>
+            <div class="example-box">
+                <p><strong>Déclaratif :</strong></p>
+                <p><span class="tip-badge">해요체</span> <span class="korean">발표를 시작해요.</span></p>
+                <p><span class="tip-badge">격식체</span> <span class="korean">발표를 시작<span class="grammar-red">합니다</span>.</span></p>
+                <p class="french-translation">"Je commence la présentation."</p>
+
+                <p style="margin-top: 20px;"><strong>Question :</strong></p>
+                <p><span class="tip-badge">해요체</span> <span class="korean">궁금한 점이 있어요?</span></p>
+                <p><span class="tip-badge">격식체</span> <span class="korean">궁금한 점이 있으<span class="grammar-red">십니까</span>?</span></p>
+                <p class="french-translation">"Y a-t-il des points qui vous intéressent ?"</p>
+
+                <p style="margin-top: 20px;"><strong>Ordre poli :</strong></p>
+                <p><span class="tip-badge">해요체</span> <span class="korean">말씀해 주세요.</span></p>
+                <p><span class="tip-badge">격식체</span> <span class="korean">말씀해 주<span class="grammar-red">십시오</span>.</span></p>
+                <p class="french-translation">"Veuillez prendre la parole."</p>
+            </div>
+
+            <h3>5. Erreurs courantes</h3>
+
+            <h4>Erreur n°1 : Mélanger 격식체 et 해요체 dans un même discours</h4>
+            <div class="error-box">
+                <p>❌ <span class="korean">지금부터 발표를 시작하겠습니다. 제 발표 주제는 환경 문제예요.</span></p>
+                <p style="margin-top: 8px; color: #c0392b;">→ On commence en 격식체 puis on bascule en 해요체</p>
+            </div>
+            <div class="success-box">
+                <p>✅ <span class="korean">지금부터 발표를 시작<span class="grammar-red">하겠습니다</span>. 제 발표 주제는 환경 문제<span class="grammar-red">입니다</span>.</span></p>
+                <p class="french-translation">"Je vais maintenant commencer ma présentation. Le thème de ma présentation est la question environnementale."</p>
+            </div>
+            <div class="note-box">
+                <strong>→</strong> <span class="super-important">Tout le discours doit rester en 격식체 du début à la fin.</span>
+            </div>
+
+            <h4>Erreur n°2 : Utiliser -(으)세요 au lieu de -(으)십시오</h4>
+            <div class="error-box">
+                <p>❌ <span class="korean">질문이 있으시면 말씀해 주세요.</span> (contexte formel de présentation)</p>
+            </div>
+            <div class="success-box">
+                <p>✅ <span class="korean">질문이 있으신 분은 말씀해 주<span class="grammar-red">십시오</span>.</span></p>
+                <p class="french-translation">"Veuillez prendre la parole si vous avez des questions."</p>
+            </div>
+
+            <h3>6. Parallèle avec le français</h3>
+            <div class="note-box">
+                <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+                <p>La 격식체 est comparable au registre soutenu du français :</p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>해요체</strong> ≈ "vous" standard (conversation polie du quotidien)</li>
+                    <li><strong>격식체</strong> ≈ "vous" de cérémonie (discours, rapport formel, présentation devant public)</li>
+                </ul>
+                <p style="margin-top: 10px;">Comme en français où on ne mélange pas "Je vais maintenant vous présenter... c'est trop cool non ?" — en coréen on ne mélange pas 격식체 et 해요체.</p>
+            </div>
+
+            <!-- ===== SECTION II : Expressions de présentation ===== -->
+            <h2>II. Expressions pour une présentation (발표)</h2>
+
+            <h3>1. Ouverture de la présentation</h3>
+            <p>Ces formules permettent d'annoncer le sujet et le plan. Toutes sont en <span class="highlight-yellow">격식체</span>.</p>
+
+            <h4>Annoncer le thème</h4>
+            <div class="formula">
+                지금부터 발표를 시작하겠습니다. 발표 주제는 <strong>_____</strong>입니다.
+            </div>
+            <div class="example-box">
+                <p class="korean">지금부터 발표를 시작<span class="grammar-red">하겠습니다</span>. 발표 주제는 한국의 음식 문화<span class="grammar-red">입니다</span>.</p>
+                <p class="french-translation">"Je vais maintenant commencer ma présentation. Le thème de ma présentation est la culture alimentaire coréenne."</p>
+            </div>
+
+            <h4>Annoncer ce dont on va parler</h4>
+            <div class="formula">
+                지금부터 발표를 시작하겠습니다. 저는 <strong>_____</strong>에 대해 발표하려고 합니다.
+            </div>
+            <div class="example-box">
+                <p class="korean">지금부터 발표를 시작<span class="grammar-red">하겠습니다</span>. 저는 기후 변화<span class="grammar-red">에 대해</span> 발표하려고 합<span class="grammar-red">니다</span>.</p>
+                <p class="french-translation">"Je vais maintenant commencer ma présentation. Je vais parler du changement climatique."</p>
+            </div>
+
+            <h4>Annoncer le plan</h4>
+            <div class="formula">
+                먼저 <strong>_____</strong>을/를 소개한 다음에 <strong>_____</strong>에 대해 설명하겠습니다.
+            </div>
+            <div class="example-box">
+                <p class="korean">먼저 현황을 소개한 다음에 해결 방법<span class="grammar-red">에 대해</span> 설명<span class="grammar-red">하겠습니다</span>.</p>
+                <p class="french-translation">"Je vais d'abord présenter la situation actuelle, puis expliquer les solutions."</p>
+            </div>
+
+            <h3>2. Pendant la présentation : utilisation de supports visuels</h3>
+
+            <h4>Présenter ce qui est à l'écran</h4>
+            <div class="formula">
+                지금 보시는 것은 <strong>_____</strong>입니다. (L'explication continue)
+            </div>
+            <div class="example-box">
+                <p class="korean">지금 보시는 것은 최근 5년간의 통계<span class="grammar-red">입니다</span>.</p>
+                <p class="french-translation">"Ce que vous voyez maintenant, c'est les statistiques des 5 dernières années."</p>
+            </div>
+
+            <h4>Passer à l'élément suivant</h4>
+            <div class="formula">
+                다음을 보시면 <strong>_____</strong>이/가 있는데…… (L'explication continue)
+            </div>
+            <div class="example-box">
+                <p class="korean">다음을 보시면 비교 그래프<span class="grammar-red">가 있는데</span> 두 나라의 차이를 잘 보여 줍니다.</p>
+                <p class="french-translation">"Si vous regardez la suite, il y a un graphique comparatif qui montre bien la différence entre les deux pays."</p>
+            </div>
+
+            <h3>3. Clôture de la présentation</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Formule coréenne</th>
+                        <th>Traduction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="korean">이것으로 발표를 <span class="grammar-red">마치겠습니다</span>. 들어 주셔서 감사합니다.</td>
+                        <td>"Je vais maintenant conclure ma présentation. Merci de m'avoir écouté."</td>
+                    </tr>
+                    <tr>
+                        <td class="korean">제 발표는 <span class="grammar-red">여기까지입니다</span>. 들어 주셔서 감사합니다.</td>
+                        <td>"C'est la fin de ma présentation. Merci de m'avoir écouté."</td>
+                    </tr>
+                    <tr>
+                        <td class="korean">지금까지 저는 _____에 대해서 말씀 드렸<span class="grammar-red">습니다</span>. 감사합니다.</td>
+                        <td>"Aujourd'hui je vous ai parlé de _____. Merci."</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>4. Connecteurs pour structurer la présentation</h3>
+
+            <h4>Pour indiquer l'ordre des idées</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Coréen</th>
+                        <th>Sens</th>
+                        <th>Équivalent français</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="korean grammar-red">먼저</td>
+                        <td>En premier lieu</td>
+                        <td>First of all / Tout d'abord</td>
+                    </tr>
+                    <tr>
+                        <td class="korean grammar-red">다음으로</td>
+                        <td>Ensuite</td>
+                        <td>Next / Ensuite</td>
+                    </tr>
+                    <tr>
+                        <td class="korean grammar-red">마지막으로</td>
+                        <td>Pour finir</td>
+                        <td>Finally / Pour finir</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>Pour numéroter les points</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Coréen</th>
+                        <th>Sens</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="korean grammar-red">첫째</td>
+                        <td>Premièrement</td>
+                    </tr>
+                    <tr>
+                        <td class="korean grammar-red">둘째</td>
+                        <td>Deuxièmement</td>
+                    </tr>
+                    <tr>
+                        <td class="korean grammar-red">셋째</td>
+                        <td>Troisièmement</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>5. Inviter les questions</h3>
+            <div class="example-box">
+                <p class="korean">궁금한 점이 있으<span class="grammar-red">십니까</span>?</p>
+                <p class="french-translation">"Y a-t-il des points sur lesquels vous avez des questions ?"</p>
+
+                <p style="margin-top: 15px;" class="korean">질문이 있으신 분은 말씀해 주<span class="grammar-red">십시오</span>.</p>
+                <p class="french-translation">"Veuillez prendre la parole si vous avez des questions."</p>
+            </div>
+
+            <h3>6. Exemple de présentation complète</h3>
+            <div class="example-box">
+                <p><span class="tip-badge">📋 Modèle</span></p>
+                <p class="korean">지금부터 발표를 시작<span class="grammar-red">하겠습니다</span>.</p>
+                <p class="korean">저는 한국의 교육 제도<span class="grammar-red">에 대해</span> 발표하려고 합<span class="grammar-red">니다</span>.</p>
+                <p class="korean">먼저 현황을 소개한 다음에 문제점과 해결 방법<span class="grammar-red">에 대해</span> 설명<span class="grammar-red">하겠습니다</span>.</p>
+                <br>
+                <p class="korean">지금 보시는 것은 최근 입시 통계<span class="grammar-red">입니다</span>. …</p>
+                <p class="korean">다음을 보시면 해외 사례<span class="grammar-red">가 있는데</span> …</p>
+                <br>
+                <p class="korean">이것으로 발표를 <span class="grammar-red">마치겠습니다</span>. 들어 주셔서 감사<span class="grammar-red">합니다</span>.</p>
+                <p class="korean">질문이 있으신 분은 말씀해 주<span class="grammar-red">십시오</span>.</p>
+                <p class="french-translation">→ Présentation complète 100% en 격식체</p>
+            </div>
+
+            <h3>7. Erreur courante : registre incohérent</h3>
+            <div class="error-box">
+                <p>❌ <span class="korean">이것으로 발표를 마치겠습니다. 질문 있으면 말해요.</span></p>
+            </div>
+            <div class="success-box">
+                <p>✅ <span class="korean">이것으로 발표를 마치<span class="grammar-red">겠습니다</span>. 질문이 있으신 분은 말씀해 주<span class="grammar-red">십시오</span>.</span></p>
+                <p class="french-translation">"Je vais maintenant conclure. Veuillez prendre la parole si vous avez des questions."</p>
+            </div>
+            <div class="note-box">
+                <strong>→</strong> <span class="super-important">La cohérence de registre est cruciale dans un exposé formel. Ne jamais mélanger 격식체 et 해요체.</span>
+            </div>
+
+            <!-- ===== RÉCAP ===== -->
+            <h2>📋 Récapitulatif</h2>
+
+            <table class="recap-table">
+                <thead>
+                    <tr>
+                        <th>Moment</th>
+                        <th>Expression clé</th>
+                        <th>Traduction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ouverture</td>
+                        <td class="korean">지금부터 발표를 시작<span class="grammar-red">하겠습니다</span>.</td>
+                        <td>Je commence ma présentation.</td>
+                    </tr>
+                    <tr>
+                        <td>Annoncer le sujet</td>
+                        <td class="korean">발표 주제는 _____<span class="grammar-red">입니다</span>.</td>
+                        <td>Le thème est _____.</td>
+                    </tr>
+                    <tr>
+                        <td>Annoncer le plan</td>
+                        <td class="korean">먼저 _____ 다음에 _____<span class="grammar-red">하겠습니다</span>.</td>
+                        <td>D'abord _____, ensuite _____.</td>
+                    </tr>
+                    <tr>
+                        <td>Support visuel</td>
+                        <td class="korean">지금 보시는 것은 _____<span class="grammar-red">입니다</span>.</td>
+                        <td>Ce que vous voyez est _____.</td>
+                    </tr>
+                    <tr>
+                        <td>Clôture</td>
+                        <td class="korean">이것으로 발표를 <span class="grammar-red">마치겠습니다</span>.</td>
+                        <td>Je conclus ma présentation.</td>
+                    </tr>
+                    <tr>
+                        <td>Questions</td>
+                        <td class="korean">질문이 있으신 분은 말씀해 주<span class="grammar-red">십시오</span>.</td>
+                        <td>Veuillez prendre la parole si vous avez des questions.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</body>
+</html>
