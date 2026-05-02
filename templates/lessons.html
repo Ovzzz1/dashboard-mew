@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Mew Lessons{% endblock %}
+{% block nav_lessons %}active{% endblock %}
+
+{% block sidebar_extra %}
+<div class="nav-section-label">Niveaux</div>
+{% for level, lessons in lessons_by_level.items() %}
+<a href="#level-{{ level }}" class="sidebar-link">
+    <span class="sidebar-icon"><i data-lucide="folder" class="icon-sm"></i></span>
+    <span>Level {{ level }}</span>
+</a>
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1><span class="kr">한국어</span> Lessons</h1>
+    <p class="subtitle">Cours de grammaire et exercices</p>
+</div>
+
+{% set total_lessons = [] %}
+{% for level, lessons in lessons_by_level.items() %}
+<div class="level-group" id="level-{{ level }}">
+    <div class="level-group-header">
+        <div class="level-group-icon {{ 'l3' if level.startswith('3') else 'l4' }}"><i data-lucide="folder"></i></div>
+        <span class="level-group-title">Level {{ level }}</span>
+        <span class="level-group-badge {{ 'l3' if level.startswith('3') else 'l4' }}">{{ lessons|length }}
+            lessons</span>
+    </div>
+
+    {% if lessons %}
+    <div class="lessons-grid">
+        {% for lesson in lessons %}
+        {% set lesson_num = lesson.name.split('과')[-1] if '과' in lesson.name else loop.index %}
+        <a href="/lessons/view/{{ level }}/{{ lesson.filename }}" class="lesson-card">
+            <div class="lesson-card-inner">
+                <div class="lesson-card-accent"></div>
+                <div class="lesson-card-content">
+                    <div class="lesson-card-header">
+                        <div class="lesson-card-number">{{ loop.index }}</div>
+                        <div class="lesson-card-title">{{ lesson.name }}</div>
+                    </div>
+                    {% if lesson.topics %}
+                    <div class="lesson-card-topics">
+                        {% for topic in lesson.topics %}
+                        {% set parts = topic.split('. ', 1) %}
+                        <span class="topic-tag">
+                            <span class="topic-num">{{ parts[0] }}.</span>
+                            <span class="topic-text">{% if parts|length > 1 %}{{ parts[1] }}{% else %}{{ topic }}{%
+                                endif %}</span>
+                        </span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="lesson-card-arrow">→</div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">Aucune lesson pour ce niveau pour l'instant.</div>
+    {% endif %}
+</div>
+{% endfor %}
+{% endblock %}
