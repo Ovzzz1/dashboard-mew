@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1과 — Points de grammaire (Niveau 3급) - Sogang University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #e8e8f0;
+            background: #0a0a0f;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #12121a;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #12121a;
+            border-bottom: 3px solid #a78bfa;
+            color: #e8e8f0;
+            padding: 40px 50px;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #e8e8f0;
+        }
+
+        .header-subtitle {
+            font-size: 1em;
+            color: #8888aa;
+        }
+
+        .content {
+            padding: 50px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #c8c8e0;
+            margin: 50px 0 25px 0;
+            font-weight: 700;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #2a2a3e;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 28px;
+            background: #a78bfa;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #e8e8f0;
+            margin: 30px 0 18px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.15em;
+            color: #c8c8e0;
+            margin: 22px 0 12px 0;
+            font-weight: 600;
+        }
+
+        p, li {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #e8e8f0;
+        }
+
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 35px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .highlight-yellow {
+            background: rgba(251,191,60,0.25); color: #fbbf24; border: 1px solid #fbbf24;
+            font-weight: 600;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .grammar-red {
+            color: #a78bfa;
+            font-weight: 700;
+        }
+
+        .super-important {
+            background: rgba(251,191,60,0.25); color: #fbbf24; border: 1px solid #fbbf24;
+            font-weight: 700;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: #12121a;
+            border: 1px solid #2a2a3e;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #1a1a26;
+            color: #e8e8f0;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+            border-bottom: 2px solid #2a2a3e;
+        }
+
+        td {
+            padding: 15px 16px;
+            border-bottom: 1px solid #1e1e30;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: #1a1a26;
+        }
+
+        .example-box {
+            background: #1a1a26;
+            padding: 25px;
+            border-left: 4px solid #555570;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .error-box {
+            background: rgba(248,113,113,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #f87171;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .success-box {
+            background: rgba(52,211,153,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #34d399;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .note-box {
+            background: rgba(251,191,60,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #fb923c;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .korean {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #e8e8f0;
+        }
+
+        .french-translation {
+            font-style: italic;
+            color: #8888aa;
+            margin-top: 8px;
+            display: block;
+        }
+
+        strong {
+            color: #e8e8f0;
+            font-weight: 600;
+        }
+
+        .tip-badge {
+            display: inline-block;
+            background: #a78bfa;
+            color: #0a0a0f;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .formula {
+            background: #1a1a26;
+            padding: 18px 22px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.05em;
+            margin: 18px 0;
+            border: 2px solid #2a2a3e;
+            color: #e8e8f0;
+        }
+
+        .recap-table {
+            border: 2px solid #a78bfa;
+        }
+
+        .recap-table th {
+            background: #a78bfa;
+            color: #0a0a0f;
+        }
+
+        @media print {
+            body {
+                background: #12121a;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 30px 25px;
+            }
+            .header {
+                padding: 30px 25px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>1과 — Points de grammaire</h1>
+            <div class="header-subtitle">Niveau 3급 | Sogang Korean Program</div>
+        </div>
+
+        <div class="content">
+
+            <h2>I. Exprimer le temps écoulé depuis un événement : -은 지(시간) 됐다</h2>
+
+            <h3>1. Sens et fonction</h3>
+            <p><span class="super-important">Cette structure exprime la quantité de temps écoulée depuis qu'un événement s'est produit.</span> Elle répond à la question <span class="korean">"depuis combien de temps...?"</span></p>
+
+            <div class="note-box">
+                <p><span class="tip-badge">💡 Traduction</span></p>
+                <p>"Cela fait (durée) que..." / "Il y a (durée) que..." / "Voilà (durée) que..."</p>
+            </div>
+
+            <p>Une <strong>expression de durée</strong> est insérée entre <span class="grammar-red">-은/ㄴ 지</span> et <span class="grammar-red">됐다</span> : <span class="korean">2시간, 하루, 일주일, 두 달, 3년</span>, etc.</p>
+
+            <h3>2. Construction grammaticale</h3>
+            <div class="formula">
+                Radical verbal + <strong>-은/ㄴ 지</strong> + (durée) + <strong>됐어요</strong>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Exemple de base :</strong></p>
+                <p class="korean">한국어를 배<span class="grammar-red">운 지</span> 6개월 <span class="grammar-red">됐어요</span>.</p>
+                <p class="french-translation">"Cela fait 6 mois que j'apprends le coréen."</p>
+            </div>
+
+            <h3>3. Règles de conjugaison</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type de radical</th>
+                        <th>Terminaison</th>
+                        <th>Exemple</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Radical se terminant par une consonne</td>
+                        <td><strong>-은 지</strong></td>
+                        <td class="korean">먹다 → 먹<span class="grammar-red">은 지</span></td>
+                    </tr>
+                    <tr>
+                        <td>Radical se terminant par une voyelle</td>
+                        <td><strong>-ㄴ 지</strong></td>
+                        <td class="korean">오다 → 오<span class="grammar-red">ㄴ 지</span> (= 온 지)</td>
+                    </tr>
+                    <tr>
+                        <td>Radical en 르 (irrégulier)</td>
+                        <td><strong>-른 지</strong></td>
+                        <td class="korean">모르다 → 모<span class="grammar-red">른 지</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>4. Registres de langue</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Contexte</th>
+                        <th>Forme</th>
+                        <th>Exemple</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Formel</td>
+                        <td><strong>-은/ㄴ 지 (durée) 됐습니다</strong></td>
+                        <td class="korean">배운 지 6개월 <span class="grammar-red">됐습니다</span></td>
+                    </tr>
+                    <tr>
+                        <td>Poli standard</td>
+                        <td><strong>-은/ㄴ 지 (durée) 됐어요</strong></td>
+                        <td class="korean">배운 지 6개월 <span class="grammar-red">됐어요</span></td>
+                    </tr>
+                    <tr>
+                        <td>Informel (entre amis)</td>
+                        <td><strong>-은/ㄴ 지 (durée) 됐어</strong></td>
+                        <td class="korean">배운 지 6개월 <span class="grammar-red">됐어</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>5. Exemples du manuel</h3>
+            <div class="example-box">
+                <p>① <span class="korean">A: 한국어를 언제부터 배우셨어요?</span>
+                <span class="french-translation">"Depuis quand apprenez-vous le coréen ?"</span></p>
+                <p style="margin-top: 12px;"><span class="korean">B: 한국어를 배<span class="grammar-red">운 지</span> 6개월 <span class="grammar-red">됐어요</span>.</span>
+                <span class="french-translation">"Cela fait 6 mois que j'apprends le coréen."</span></p>
+
+                <p style="margin-top: 20px;">② <span class="korean">A: 동 씨, 이 집에서 산 지 얼마나 됐어요?</span>
+                <span class="french-translation">"Dong, depuis combien de temps vivez-vous dans cette maison ?"</span></p>
+                <p style="margin-top: 12px;"><span class="korean">B: 여기로 이사 오<span class="grammar-red">ㄴ 지</span> 2주일밖에 <span class="grammar-red">됐어요</span>.</span>
+                <span class="french-translation">"Cela ne fait que 2 semaines depuis que je suis emménagé ici."</span></p>
+
+                <p style="margin-top: 20px;">③ <span class="korean">A: 한스 씨, 혹시 전 씨 만났어요? 어떻게 여러 번 전화했는데 안 받더라고요.</span>
+                <span class="french-translation">"Hans, tu as rencontré Jeon par hasard ? Je lui ai appelé plusieurs fois mais il ne répond pas."</span></p>
+                <p style="margin-top: 12px;"><span class="korean">B: 네, 전화하면 보통 시간이 좀 걸려요. 새 번호로 바뀐 지 얼마 안 됐어요.</span>
+                <span class="french-translation">"Oui, ça prend du temps en général. Il n'y a pas longtemps qu'il a changé de numéro."</span></p>
+
+                <p style="margin-top: 20px;">④ <span class="korean">A: 지난 번에 왜 그렇게 갔다 왔어요?</span>
+                <span class="french-translation">"Pourquoi êtes-vous parti et revenu si vite la dernière fois ?"</span></p>
+                <p style="margin-top: 12px;"><span class="korean">B: 그레이와 갔다 왔는데, 공항에서 기다린 지 한 시간이 안 됐어요.</span>
+                <span class="french-translation">"Je suis allé avec Gray, cela n'a fait même pas une heure d'attente à l'aéroport."</span></p>
+
+                <p style="margin-top: 20px;">⑤ <span class="korean">A: 음식이 왜 이렇게 달라요?</span>
+                <span class="french-translation">"Pourquoi la nourriture est-elle si différente ?"</span></p>
+                <p style="margin-top: 12px;"><span class="korean">B: 이번에 바뀐 지 얼마 안 됐거든요. 먹어 보세요.</span>
+                <span class="french-translation">"Ça vient juste de changer, ça n'a pas longtemps. Goûtez !"</span></p>
+            </div>
+
+            <h3>6. Erreur courante : ne pas insérer 동안</h3>
+            <div class="error-box">
+                <p>❌ <span class="korean">한국어를 배운 지 6개월 <strong>동안</strong> 됐어요.</span></p>
+            </div>
+            <div class="success-box">
+                <p>✅ <span class="korean">한국어를 배<span class="grammar-red">운 지</span> 6개월 <span class="grammar-red">됐어요</span>.</span></p>
+                <p class="french-translation">"Cela fait 6 mois que j'apprends le coréen."</p>
+            </div>
+            <div class="note-box">
+                <strong>→</strong> <span class="super-important">Ne jamais insérer '동안' entre -은/ㄴ 지 et됐다.</span> La durée seule suffit.
+            </div>
+
+            <h3>7. Tips et parallèles avec le français</h3>
+            <div class="note-box">
+                <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+                <p>Équivalent direct de : "Cela fait X que..." / "Il y a X que..." / "Voilà X que..."</p>
+                <p style="margin-top: 15px;"><strong>Logique de la structure :</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li><span class="highlight-yellow">-은/ㄴ 지</span> = marque le point de départ de l'action (passé)</li>
+                    <li><span class="highlight-yellow">됐다</span> = "être devenu" → indique que la durée est atteinte</li>
+                    <li><span class="highlight-yellow">-밖에 안 됐어요</span> = "cela ne fait que..." (durée courte)</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <p><span class="tip-badge">💡 Nuance avec 밖에</span></p>
+                <p>Pour insister sur le fait que la durée est courte, on ajoute <span class="grammar-red">-밖에 안 됐어요</span> :</p>
+                <p class="korean" style="margin-top: 10px;">여기로 이사 온 지 2주일<span class="grammar-red">밖에 안 됐어요</span>.</p>
+                <p class="french-translation">"Cela ne fait que 2 semaines depuis que j'ai emménagé ici." (= très peu de temps)</p>
+            </div>
+
+            <h2>II. Introduire une information complémentaire : -인데</h2>
+
+            <h3>1. Sens et fonction</h3>
+            <p><span class="super-important">-인데 est utilisé pour ajouter une information complémentaire sur quelqu'un ou quelque chose qu'on est en train de présenter.</span> Il lie deux propositions dont la première identifie un sujet et la seconde l'enrichit.</p>
+
+            <div class="note-box">
+                <p><span class="tip-badge">💡 Traduction</span></p>
+                <p>"C'est X, et (d'ailleurs)..." / "Voici X, qui (est/fait)..."</p>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Logique de construction :</strong></p>
+                <p class="korean" style="margin-top: 10px;">이분은 한스 씨예요. + 독일 사람이에요.</p>
+                <p style="margin-top: 8px; font-size: 1.2em; text-align: center; color: #a78bfa;">↓ fusion avec -인데</p>
+                <p class="korean" style="margin-top: 8px;">이분은 한스 씨<span class="grammar-red">인데</span> 독일 사람이에요.</p>
+                <p class="french-translation">"Voici Monsieur Hans, qui est allemand."</p>
+            </div>
+
+            <h3>2. Construction grammaticale</h3>
+            <div class="formula">
+                Nom / Pronom + <strong>-인데</strong> + information complémentaire
+            </div>
+
+            <div class="note-box">
+                <strong>→</strong> <span class="super-important">-인데 s'utilise toujours avec des noms, prénoms ou pronoms.</span> Jamais directement avec un verbe ou un adjectif.
+            </div>
+
+            <h3>3. Restriction d'utilisation</h3>
+            <p>Quand on présente une personne ou un objet <span class="highlight-yellow">pour la première fois</span>, on utilise la structure :</p>
+            <div class="formula">
+                이분은 / 이것은 + [Nom] + <strong>-인데</strong> + [info supplémentaire]
+            </div>
+
+            <div class="example-box">
+                <p class="korean">이분은 엔나 씨<span class="grammar-red">인데</span> 소설책을 아주 재미있게 써요.</p>
+                <p class="french-translation">"Voici Mme Enna, qui écrit des romans très intéressants."</p>
+
+                <p style="margin-top: 15px;" class="korean">이분은 엔나 씨<span class="grammar-red">인데</span> 마케팅부에서 3일 전에 오셨어요.</p>
+                <p class="french-translation">"Voici Mme Enna, qui est arrivée au département marketing il y a 3 jours."</p>
+            </div>
+
+            <h3>4. Exemples du manuel</h3>
+            <div class="example-box">
+                <p>① <span class="korean">A: 전도 씨, 고향이 어디에요?</span>
+                <span class="french-translation">"Jeon-do, d'où venez-vous ?"</span></p>
+                <p style="margin-top: 12px;"><span class="korean">B: 제 고향은 춘천<span class="grammar-red">인데</span> 닭갈비와 국수가 유명한 곳이에요.</span>
+                <span class="french-translation">"Mon chez-moi, c'est Chuncheon, un endroit célèbre pour le dakgalbi et les nouilles."</span></p>
+
+                <p style="margin-top: 20px;">② <span class="korean">A: 학교 근처에 약국이 있어요?</span>
+                <span class="french-translation">"Y a-t-il une pharmacie près de l'école ?"</span></p>
+                <p style="margin-top: 12px;"><span class="korean">B: 네, 가장 가까운 곳은 이 약국<span class="grammar-red">인데</span> 학교 앞에 있어요.</span>
+                <span class="french-translation">"Oui, la plus proche, c'est cette pharmacie, qui est devant l'école."</span></p>
+
+                <p style="margin-top: 20px;">③ <span class="korean">A: 지금 들려오는 노래 제목이 뭐예요?</span>
+                <span class="french-translation">"Quel est le titre de la chanson qui joue en ce moment ?"</span></p>
+                <p style="margin-top: 12px;"><span class="korean">B: '올른 사람이야'라는 노래<span class="grammar-red">인데</span> 요즘 대학생들한테 가장 인기가 있는 노래예요.</span>
+                <span class="french-translation">"C'est une chanson qui s'appelle '올른 사람이야', c'est la chanson la plus populaire chez les étudiants ces derniers temps."</span></p>
+
+                <p style="margin-top: 20px;">④ <span class="korean">A: 이 사진에서 옆에 서 있는 사람이 누구예요?</span>
+                <span class="french-translation">"Qui est la personne debout à côté sur cette photo ?"</span></p>
+                <p style="margin-top: 12px;"><span class="korean">B: 제 대학교 졸업사진<span class="grammar-red">인데</span> 저랑 같이 서 있는 사람은 제 친구예요.</span>
+                <span class="french-translation">"C'est ma photo de remise de diplôme à l'université, et la personne debout avec moi est mon ami."</span></p>
+
+                <p style="margin-top: 20px;">⑤ <span class="korean">A: 이번에 제 어머니께서 한국에 오셨어요.</span>
+                <span class="french-translation">"Cette fois-ci, ma mère est venue en Corée."</span></p>
+                <p style="margin-top: 12px;"><span class="korean">B: 어머니<span class="grammar-red">인데</span> 마케팅부에서 3일 전에 오셨어요. → 제 어머니<span class="grammar-red">인데</span> 한국을 정말 좋아하세요.</span>
+                <span class="french-translation">"C'est ma mère, et elle adore vraiment la Corée."</span></p>
+            </div>
+
+            <h3>5. Erreur courante : confusion avec -는데 (verbe)</h3>
+            <div class="note-box">
+                <p><strong>À ne pas confondre :</strong></p>
+                <ul>
+                    <li><span class="grammar-red">-인데</span> → s'attache à un <span class="highlight-yellow">nom/pronom</span> : <span class="korean">학생인데, 선생님인데</span></li>
+                    <li><span class="grammar-red">-는데</span> → s'attache à un <span class="highlight-yellow">verbe au présent</span> : <span class="korean">가는데, 먹는데</span></li>
+                    <li><span class="grammar-red">-(으)ㄴ데</span> → s'attache à un <span class="highlight-yellow">adjectif ou verbe au passé</span> : <span class="korean">좋은데, 갔는데</span></li>
+                </ul>
+            </div>
+
+            <h3>6. Tips et parallèles avec le français</h3>
+            <div class="note-box">
+                <p><span class="tip-badge">🇫🇷 Parallèle</span></p>
+                <p>Proche du pronom relatif en français : "C'est X, <strong>qui</strong>..." ou "Voici X, <strong>et</strong>..."</p>
+                <p style="margin-top: 15px;"><strong>Quand utiliser -인데 ?</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li><span class="highlight-yellow">Présenter quelqu'un</span> et ajouter une info le concernant</li>
+                    <li><span class="highlight-yellow">Introduire un lieu, objet</span> et préciser une caractéristique</li>
+                    <li>Donne un ton naturel et fluide à la conversation</li>
+                </ul>
+            </div>
+
+            <h2>📋 Récapitulatif : Quand utiliser quoi ?</h2>
+            <table class="recap-table">
+                <thead>
+                    <tr>
+                        <th>Structure</th>
+                        <th>Usage</th>
+                        <th>Contexte</th>
+                        <th>Exemple</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="korean">-은/ㄴ 지 (durée) 됐어요</td>
+                        <td>Exprimer le temps écoulé depuis un événement</td>
+                        <td>Répondre à "depuis combien de temps ?"</td>
+                        <td class="korean">한국어를 배<span class="grammar-red">운 지</span> 6개월 <span class="grammar-red">됐어요</span>.</td>
+                    </tr>
+                    <tr>
+                        <td class="korean">-은/ㄴ 지 (durée)밖에 안 됐어요</td>
+                        <td>Insister sur une durée courte</td>
+                        <td>Événement récent</td>
+                        <td class="korean">이사 온 지 2주일<span class="grammar-red">밖에 안 됐어요</span>.</td>
+                    </tr>
+                    <tr>
+                        <td class="korean">Nom + -인데</td>
+                        <td>Présenter quelqu'un/quelque chose et ajouter une info</td>
+                        <td>Présentations, descriptions</td>
+                        <td class="korean">제 고향은 춘천<span class="grammar-red">인데</span> 닭갈비가 유명해요.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</body>
+</html>
