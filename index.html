@@ -172,7 +172,7 @@ async function route() {
 
     if (!page || page === '') { await renderHome(); }
     else if (page === 'vocab') { await renderVocab(args[0], args[1] ? parseInt(args[1]) : null); }
-    else if (page === 'lessons') { renderLessons(); }
+    else if (page === 'lessons') { renderLessons(args[0] || null); }
     else if (page === 'lesson') { renderLesson(args[0], args.slice(1).join('/')); }
 }
 
@@ -378,17 +378,26 @@ function toggleExamples() {
 // ================================================================
 // LESSONS — list by level
 // ================================================================
-function renderLessons() {
+function renderLessons(filterLevel) {
+    const allLevels = Object.keys(MANIFEST.lessons);
     document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">Niveaux</div>
-        ${Object.keys(MANIFEST.lessons).map(lvl => `
-        <a href="#lessons" class="sidebar-link" onclick="document.getElementById('level-${lvl}').scrollIntoView({behavior:'smooth'});return false;">
+        <a href="#lessons" class="sidebar-link ${!filterLevel ? 'active' : ''}">
+            <span class="sidebar-icon"><i data-lucide="layers" class="icon-sm"></i></span>
+            <span>Tous les niveaux</span>
+        </a>
+        ${allLevels.map(lvl => `
+        <a href="#lessons/${lvl}" class="sidebar-link ${filterLevel === lvl ? 'active' : ''}">
             <span class="sidebar-icon"><i data-lucide="folder" class="icon-sm"></i></span>
             <span>Level ${lvl}</span>
         </a>`).join('')}
     `;
 
-    const levelsHTML = Object.entries(MANIFEST.lessons).map(([lvl, lessons]) => {
+    const visibleLevels = filterLevel
+        ? Object.entries(MANIFEST.lessons).filter(([lvl]) => lvl === filterLevel)
+        : Object.entries(MANIFEST.lessons);
+
+    const levelsHTML = visibleLevels.map(([lvl, lessons]) => {
         const cls = lvl.startsWith('3') ? 'l3' : 'l4';
         const cardsHTML = lessons.length ? lessons.map((l, i) => {
             const topicsHTML = l.topics.length ? `
@@ -450,8 +459,12 @@ function renderLesson(level, filename) {
 
     document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">Niveaux</div>
+        <a href="#lessons" class="sidebar-link">
+            <span class="sidebar-icon"><i data-lucide="layers" class="icon-sm"></i></span>
+            <span>Tous les niveaux</span>
+        </a>
         ${Object.keys(MANIFEST.lessons).map(lvl => `
-        <a href="#lessons" class="sidebar-link ${lvl === level ? 'active' : ''}">
+        <a href="#lessons/${lvl}" class="sidebar-link ${lvl === level ? 'active' : ''}">
             <span class="sidebar-icon"><i data-lucide="folder" class="icon-sm"></i></span>
             <span>Level ${lvl}</span>
         </a>`).join('')}
