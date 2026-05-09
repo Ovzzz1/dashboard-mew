@@ -7,40 +7,55 @@
     <link rel="stylesheet" href="static/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        #lesson-frame {
-            width: 100%;
-            border: none;
-            height: calc(100vh - 120px);
-            border-radius: var(--radius);
-            display: block;
-        }
-        .lesson-viewer-bar {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 1rem;
-        }
-        .lesson-viewer-bar a {
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-        .lesson-viewer-bar a:hover { text-decoration: underline; }
-        .lesson-viewer-bar .crumb { color: var(--text-muted); font-size: 0.85rem; }
-        .loading {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 200px;
-            color: var(--text-dim);
-            font-size: 0.95rem;
-            gap: 10px;
-        }
+        #lesson-frame { width:100%; border:none; height:calc(100vh - 120px); border-radius:var(--radius); display:block; }
+        .lesson-viewer-bar { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:12px 20px; display:flex; align-items:center; gap:10px; margin-bottom:1rem; }
+        .lesson-viewer-bar a { color:var(--accent); text-decoration:none; font-size:0.875rem; font-weight:500; }
+        .lesson-viewer-bar a:hover { text-decoration:underline; }
+        .lesson-viewer-bar .crumb { color:var(--text-muted); font-size:0.85rem; }
+        .loading { display:flex; align-items:center; justify-content:center; min-height:200px; color:var(--text-dim); font-size:0.95rem; gap:10px; }
+        /* Level dot */
+        .col-level { text-align:center; padding:0 6px !important; vertical-align:middle !important; cursor:pointer; width:36px; }
+        .level-dot { display:inline-block; width:14px; height:14px; border-radius:50%; background:transparent; border:2px solid var(--border); transition:all .2s ease; cursor:pointer; }
+        .col-level:hover .level-dot { transform:scale(1.4); border-color:var(--text-muted); }
+        tr[data-level="green"] .level-dot { background:var(--green); border-color:var(--green); box-shadow:0 0 6px var(--green); }
+        tr[data-level="orange"] .level-dot { background:var(--orange); border-color:var(--orange); box-shadow:0 0 6px var(--orange); }
+        tr[data-level="red"] .level-dot { background:var(--red); border-color:var(--red); box-shadow:0 0 6px var(--red); }
+        /* Add word btn in chapter sep */
+        .chapter-sep td { display:flex; align-items:center; justify-content:space-between; }
+        .add-word-btn { display:inline-flex; align-items:center; gap:5px; padding:5px 12px; border-radius:var(--radius-xs); border:1px solid var(--accent-dim); background:var(--accent-glow); color:var(--accent); font-size:.78rem; font-weight:600; cursor:pointer; transition:var(--transition); }
+        .add-word-btn:hover { background:var(--accent-dim); color:#fff; border-color:var(--accent); }
+        /* Level filter bar */
+        .level-filter-bar { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:1rem; padding:12px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); }
+        .lvl-filter-btn { padding:6px 14px; border-radius:20px; border:1px solid var(--border); background:var(--bg-card-alt); color:var(--text-dim); font-size:.82rem; font-weight:500; cursor:pointer; transition:var(--transition); }
+        .lvl-filter-btn:hover { border-color:var(--accent-dim); color:var(--text); }
+        .lvl-filter-btn.active { background:var(--accent-glow); border-color:var(--accent); color:var(--accent); font-weight:600; }
+        /* Modal */
+        .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.65); backdrop-filter:blur(6px); z-index:400; }
+        .modal-overlay.open { display:block; }
+        .modal { position:fixed; top:50%; left:50%; transform:translate(-50%,-52%) scale(.96); z-index:500; width:min(540px,94vw); background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:0 24px 60px rgba(0,0,0,.5); padding:1.75rem 2rem; opacity:0; pointer-events:none; transition:opacity .25s ease,transform .25s cubic-bezier(.34,1.56,.64,1); }
+        .modal.open { opacity:1; pointer-events:all; transform:translate(-50%,-50%) scale(1); }
+        .modal-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:.4rem; }
+        .modal-title { font-size:1.15rem; font-weight:700; display:flex; align-items:center; gap:8px; }
+        .modal-subtitle { font-size:.82rem; color:var(--accent); font-weight:600; margin-bottom:1.2rem; }
+        .modal-close { width:32px; height:32px; border-radius:8px; border:1px solid var(--border); background:var(--bg-card-alt); color:var(--text-dim); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:var(--transition); }
+        .modal-close:hover { border-color:var(--red); color:var(--red); }
+        .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:1.5rem; }
+        .form-group { display:flex; flex-direction:column; gap:6px; }
+        .form-group-full { grid-column:1/-1; }
+        .form-label { font-size:.78rem; font-weight:600; text-transform:uppercase; letter-spacing:.5px; color:var(--text-dim); }
+        .form-label .req { color:var(--red); }
+        .form-input { padding:10px 14px; background:var(--bg-card-alt); border:1px solid var(--border); border-radius:var(--radius-xs); color:var(--text); font-size:.9rem; font-family:inherit; outline:none; transition:var(--transition); }
+        .form-input::placeholder { color:var(--text-muted); }
+        .form-input:focus { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-glow); }
+        .form-textarea { resize:vertical; min-height:68px; }
+        .modal-actions { display:flex; gap:12px; justify-content:flex-end; }
+        .btn-primary { display:inline-flex; align-items:center; gap:6px; padding:10px 22px; border-radius:var(--radius-sm); border:none; background:linear-gradient(135deg,var(--accent-dim),var(--accent)); color:#fff; font-size:.9rem; font-weight:600; cursor:pointer; transition:var(--transition); }
+        .btn-primary:hover { opacity:.88; }
+        .btn-primary:disabled { opacity:.5; cursor:not-allowed; }
+        .btn-secondary { padding:10px 18px; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--bg-card-alt); color:var(--text-dim); font-size:.9rem; font-weight:500; cursor:pointer; transition:var(--transition); }
+        .btn-secondary:hover { border-color:var(--text-dim); color:var(--text); }
+        .modal-success { display:flex; align-items:center; gap:10px; padding:14px 18px; border-radius:var(--radius-sm); background:rgba(52,211,153,.1); border:1px solid rgba(52,211,153,.3); color:var(--green); font-weight:500; margin-top:.5rem; }
+        @media(max-width:480px) { .form-grid{grid-template-columns:1fr;} .modal{padding:1.25rem;} }
     </style>
 </head>
 <body>
@@ -84,6 +99,47 @@
         </a>
     </div>
     <main id="content"><div class="loading">Chargement…</div></main>
+</div>
+
+<!-- Add word modal -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeAddModal()"></div>
+<div class="modal" id="add-word-modal">
+    <div class="modal-header">
+        <h2 class="modal-title"><i data-lucide="plus-circle" class="icon-sm"></i> Ajouter un mot</h2>
+        <button class="modal-close" onclick="closeAddModal()"><i data-lucide="x" class="icon-sm"></i></button>
+    </div>
+    <p class="modal-subtitle" id="modal-subtitle"></p>
+    <form id="add-word-form" onsubmit="submitNewWord(event)">
+        <div class="form-grid">
+            <div class="form-group">
+                <label class="form-label" for="fw-hangul">한글 <span class="req">*</span></label>
+                <input class="form-input" id="fw-hangul" type="text" placeholder="가다" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="fw-french">Français <span class="req">*</span></label>
+                <input class="form-input" id="fw-french" type="text" placeholder="aller" required>
+            </div>
+            <div class="form-group form-group-full">
+                <label class="form-label" for="fw-example">Exemple</label>
+                <input class="form-input" id="fw-example" type="text" placeholder="저는 학교에 가요.">
+            </div>
+            <div class="form-group form-group-full">
+                <label class="form-label" for="fw-translated">Traduction</label>
+                <input class="form-input" id="fw-translated" type="text" placeholder="Je vais à l'école.">
+            </div>
+            <div class="form-group form-group-full">
+                <label class="form-label" for="fw-explanation">Explication</label>
+                <textarea class="form-input form-textarea" id="fw-explanation" placeholder="Notes..."></textarea>
+            </div>
+        </div>
+        <div class="modal-actions">
+            <button type="button" class="btn-secondary" onclick="closeAddModal()">Annuler</button>
+            <button type="submit" class="btn-primary" id="btn-submit-word"><i data-lucide="save" class="icon-xs"></i> Enregistrer</button>
+        </div>
+    </form>
+    <div class="modal-success" id="modal-success" style="display:none">
+        <span>✅ Mot ajouté avec succès !</span>
+    </div>
 </div>
 
 <script>
@@ -264,15 +320,20 @@ async function renderVocab(bookId, selectedChapter) {
         </div>
     `;
 
-    // Build table rows
+    // Build table rows (with level dot + custom words from localStorage)
     let counter = 0;
+    const customWords = getCustomWords(bookId);
     const rowsHTML = chNums.filter(n => selectedChapter === null || selectedChapter === n).map(n => {
+        const allWords = [...book.chapters[n], ...(customWords[n] || [])];
         const sepRow = `<tr class="chapter-sep" data-chapter="${n}">
-            <td colspan="6"><i data-lucide="book" class="icon-xs"></i> Chapitre ${n}과 — ${book.chapters[n].length} mots</td>
+            <td colspan="7"><span><i data-lucide="book" class="icon-xs"></i> Chapitre ${n}과 — ${allWords.length} mots</span>
+            <button class="add-word-btn" onclick="openAddModal('${bookId}',${n},event)"><i data-lucide="plus" class="icon-xs"></i> Ajouter</button></td>
         </tr>`;
-        const wordRows = book.chapters[n].map(e => {
+        const wordRows = allWords.map(e => {
             counter++;
-            return `<tr class="vocab-row" data-hangul="${e.hangul.toLowerCase()}" data-french="${e.french.toLowerCase()}" onclick="this.classList.toggle('expanded')">
+            const key = `${n}_${e.hangul}`;
+            return `<tr class="vocab-row" data-hangul="${e.hangul.toLowerCase()}" data-french="${e.french.toLowerCase()}" data-level="none" data-lkey="${key}" onclick="this.classList.toggle('expanded')">
+                <td class="col-level" onclick="cycleLvl(this.parentElement,event)"><span class="level-dot"></span></td>
                 <td style="color:var(--text-muted);font-size:0.8rem">${counter}</td>
                 <td class="col-hangul">${e.hangul}</td>
                 <td class="col-french">${e.french}</td>
@@ -292,17 +353,20 @@ async function renderVocab(bookId, selectedChapter) {
             </div>
         </div>
         <div class="stats-bar">
-            <div class="stat-card"><div class="stat-value purple">${book.total}</div><div class="stat-label">Total mots</div></div>
+            <div class="stat-card"><div class="stat-value purple">${counter}</div><div class="stat-label">Total mots</div></div>
             <div class="stat-card"><div class="stat-value pink">${chNums.length}</div><div class="stat-label">Chapitres</div></div>
-            <div class="stat-card"><div class="stat-value cyan">${avgPerCh}</div><div class="stat-label">Mots / chapitre</div></div>
+            <div class="stat-card"><div class="stat-value cyan">${chNums.length ? Math.round(counter / chNums.length) : 0}</div><div class="stat-label">Mots / chapitre</div></div>
+            <div class="stat-card"><div class="stat-value green" id="count-green">0</div><div class="stat-label">Maîtrisés 🟢</div></div>
+            <div class="stat-card"><div class="stat-value" style="color:var(--orange)" id="count-orange">0</div><div class="stat-label">En cours 🟠</div></div>
+            <div class="stat-card"><div class="stat-value" style="color:var(--red)" id="count-red">0</div><div class="stat-label">À apprendre 🔴</div></div>
         </div>
         <div class="chapter-nav">
             <a href="#vocab/${bookId}" class="ch-pill ${selectedChapter === null ? 'active' : ''}">
-                Tous <span class="count">${book.total}</span>
+                Tous <span class="count">${counter}</span>
             </a>
             ${chNums.map(n => `
             <a href="#vocab/${bookId}/${n}" class="ch-pill ${selectedChapter === n ? 'active' : ''}">
-                ${n}과 <span class="count">${book.chapters[n].length}</span>
+                ${n}과 <span class="count">${(book.chapters[n].length + (customWords[n]||[]).length)}</span>
             </a>`).join('')}
         </div>
         <div class="controls">
@@ -316,6 +380,16 @@ async function renderVocab(bookId, selectedChapter) {
             <button class="toggle-btn" id="toggle-examples" onclick="toggleExamples()">
                 <i data-lucide="message-square" class="icon-xs"></i> Exemples
             </button>
+            <button class="toggle-btn" id="toggle-lvl-filter" onclick="toggleLvlFilter()">
+                <i data-lucide="filter" class="icon-xs"></i> Filtrer niveau
+            </button>
+        </div>
+        <div class="level-filter-bar" id="lvl-filter-bar" style="display:none">
+            <button class="lvl-filter-btn active" data-lvl="all" onclick="setLvlFilter('all')">Tous</button>
+            <button class="lvl-filter-btn" data-lvl="green" onclick="setLvlFilter('green')">🟢 Maîtrisés</button>
+            <button class="lvl-filter-btn" data-lvl="orange" onclick="setLvlFilter('orange')">🟠 En cours</button>
+            <button class="lvl-filter-btn" data-lvl="red" onclick="setLvlFilter('red')">🔴 À apprendre</button>
+            <button class="lvl-filter-btn" data-lvl="none" onclick="setLvlFilter('none')">⚫ Non évalués</button>
         </div>
         <div class="word-counter" id="word-counter">
             <strong id="visible-count">${counter}</strong> mots affichés
@@ -324,6 +398,7 @@ async function renderVocab(bookId, selectedChapter) {
             <table class="vocab-table" id="vocab-table">
                 <thead>
                     <tr>
+                        <th style="width:36px" title="Niveau">Niv.</th>
                         <th style="width:30px">#</th>
                         <th>한글</th>
                         <th>Français</th>
@@ -337,19 +412,137 @@ async function renderVocab(bookId, selectedChapter) {
         </div>
     `;
     lucide.createIcons();
+    // Apply saved levels
+    applyLevelsFromStorage(bookId);
 }
 
+// ================================================================
+// LEVEL SYSTEM (localStorage)
+// ================================================================
+const LVL_CYCLE = ['none','green','orange','red'];
+let _currentLvlFilter = 'all';
+let _lvlFilterActive = false;
+
+function getLvlStore(bookId) { try { return JSON.parse(localStorage.getItem(`mew_lvl_${bookId}`) || '{}'); } catch { return {}; } }
+function saveLvlStore(bookId, data) { localStorage.setItem(`mew_lvl_${bookId}`, JSON.stringify(data)); }
+
+function applyLevelsFromStorage(bookId) {
+    const data = getLvlStore(bookId);
+    document.querySelectorAll('.vocab-row').forEach(tr => {
+        const key = tr.dataset.lkey;
+        const lvl = data[key] || 'none';
+        tr.dataset.level = lvl;
+    });
+    updateLvlStats();
+}
+
+function cycleLvl(tr, e) {
+    e.stopPropagation();
+    const cur = tr.dataset.level || 'none';
+    const next = LVL_CYCLE[(LVL_CYCLE.indexOf(cur) + 1) % LVL_CYCLE.length];
+    tr.dataset.level = next;
+    // Save
+    const bookId = getRoute().args[0];
+    const data = getLvlStore(bookId);
+    data[tr.dataset.lkey] = next;
+    saveLvlStore(bookId, data);
+    updateLvlStats();
+    filterVocab();
+}
+
+function updateLvlStats() {
+    let g=0, o=0, r=0;
+    document.querySelectorAll('.vocab-row').forEach(tr => {
+        const l = tr.dataset.level;
+        if (l==='green') g++; else if (l==='orange') o++; else if (l==='red') r++;
+    });
+    const eg = document.getElementById('count-green');
+    const eo = document.getElementById('count-orange');
+    const er = document.getElementById('count-red');
+    if (eg) eg.textContent = g;
+    if (eo) eo.textContent = o;
+    if (er) er.textContent = r;
+}
+
+function toggleLvlFilter() {
+    _lvlFilterActive = !_lvlFilterActive;
+    document.getElementById('lvl-filter-bar').style.display = _lvlFilterActive ? 'flex' : 'none';
+    document.getElementById('toggle-lvl-filter').classList.toggle('active', _lvlFilterActive);
+}
+
+function setLvlFilter(lvl) {
+    _currentLvlFilter = lvl;
+    document.querySelectorAll('.lvl-filter-btn').forEach(b => b.classList.toggle('active', b.dataset.lvl === lvl));
+    filterVocab();
+}
+
+// ================================================================
+// CUSTOM WORDS (localStorage — for GitHub Pages static hosting)
+// ================================================================
+function getCustomWords(bookId) { try { return JSON.parse(localStorage.getItem(`mew_custom_${bookId}`) || '{}'); } catch { return {}; } }
+function saveCustomWords(bookId, data) { localStorage.setItem(`mew_custom_${bookId}`, JSON.stringify(data)); }
+
+let _addModalBookId = null, _addModalChapter = null;
+
+function openAddModal(bookId, chapter, e) {
+    e.stopPropagation();
+    _addModalBookId = bookId;
+    _addModalChapter = chapter;
+    document.getElementById('modal-subtitle').textContent = `Chapitre ${chapter}과 — Vocab ${bookId}`;
+    document.getElementById('add-word-form').reset();
+    document.getElementById('modal-success').style.display = 'none';
+    document.getElementById('add-word-form').style.display = '';
+    document.getElementById('btn-submit-word').disabled = false;
+    document.getElementById('modal-overlay').classList.add('open');
+    document.getElementById('add-word-modal').classList.add('open');
+    lucide.createIcons();
+    setTimeout(() => document.getElementById('fw-hangul').focus(), 120);
+}
+
+function closeAddModal() {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.getElementById('add-word-modal').classList.remove('open');
+}
+
+function submitNewWord(e) {
+    e.preventDefault();
+    const word = {
+        hangul: document.getElementById('fw-hangul').value.trim(),
+        french: document.getElementById('fw-french').value.trim(),
+        example: document.getElementById('fw-example').value.trim(),
+        translated: document.getElementById('fw-translated').value.trim(),
+        explanation: document.getElementById('fw-explanation').value.trim(),
+    };
+    if (!word.hangul || !word.french) return;
+    const cw = getCustomWords(_addModalBookId);
+    if (!cw[_addModalChapter]) cw[_addModalChapter] = [];
+    cw[_addModalChapter].push(word);
+    saveCustomWords(_addModalBookId, cw);
+    // Also invalidate book cache so re-render picks it up
+    delete bookCache[_addModalBookId];
+    document.getElementById('add-word-form').style.display = 'none';
+    document.getElementById('modal-success').style.display = 'flex';
+    setTimeout(() => { closeAddModal(); route(); }, 900);
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAddModal(); });
+
+// ================================================================
+// VOCAB FILTERS & TOGGLES
+// ================================================================
 let _detailsVisible = false;
 let _examplesVisible = true;
 
 function filterVocab() {
-    const q = document.getElementById('search').value.toLowerCase().trim();
+    const q = (document.getElementById('search')?.value || '').toLowerCase().trim();
     const rows = document.querySelectorAll('.vocab-row');
     let visible = 0;
     rows.forEach(row => {
-        const match = !q || row.dataset.hangul.includes(q) || row.dataset.french.includes(q);
-        row.style.display = match ? '' : 'none';
-        if (match) visible++;
+        const matchQ  = !q || row.dataset.hangul.includes(q) || row.dataset.french.includes(q);
+        const matchLv = _currentLvlFilter === 'all' || (row.dataset.level || 'none') === _currentLvlFilter;
+        const show = matchQ && matchLv;
+        row.style.display = show ? '' : 'none';
+        if (show) visible++;
     });
     document.querySelectorAll('.chapter-sep').forEach(sep => {
         let next = sep.nextElementSibling;
@@ -360,7 +553,8 @@ function filterVocab() {
         }
         sep.style.display = hasVisible ? '' : 'none';
     });
-    document.getElementById('visible-count').textContent = visible;
+    const vc = document.getElementById('visible-count');
+    if (vc) vc.textContent = visible;
 }
 
 function toggleDetails() {
