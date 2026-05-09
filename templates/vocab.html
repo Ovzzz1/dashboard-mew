@@ -52,6 +52,18 @@
             0 }}</div>
         <div class="stat-label">Mots / chapitre</div>
     </div>
+    <div class="stat-card" id="stats-known">
+        <div class="stat-value green" id="count-green">0</div>
+        <div class="stat-label">Maîtrisés 🟢</div>
+    </div>
+    <div class="stat-card" id="stats-learning">
+        <div class="stat-value" style="color:var(--orange)" id="count-orange">0</div>
+        <div class="stat-label">En cours 🟠</div>
+    </div>
+    <div class="stat-card" id="stats-unknown">
+        <div class="stat-value" style="color:var(--red)" id="count-red">0</div>
+        <div class="stat-label">À apprendre 🔴</div>
+    </div>
 </div>
 
 <!-- Chapter nav -->
@@ -75,6 +87,16 @@
     </div>
     <button class="toggle-btn" id="toggle-details" onclick="toggleDetails()"><i data-lucide="file-text" class="icon-xs"></i> Détails</button>
     <button class="toggle-btn" id="toggle-examples" onclick="toggleExamples()"><i data-lucide="message-square" class="icon-xs"></i> Exemples</button>
+    <button class="toggle-btn" id="toggle-level-filter" onclick="toggleLevelFilter()"><i data-lucide="filter" class="icon-xs"></i> Filtrer niveau</button>
+</div>
+
+<!-- Level filter bar (hidden by default) -->
+<div class="level-filter-bar" id="level-filter-bar" style="display:none">
+    <button class="lvl-filter-btn active" data-lvl="all" onclick="setLevelFilter('all')">Tous</button>
+    <button class="lvl-filter-btn" data-lvl="green" onclick="setLevelFilter('green')">🟢 Maîtrisés</button>
+    <button class="lvl-filter-btn" data-lvl="orange" onclick="setLevelFilter('orange')">🟠 En cours</button>
+    <button class="lvl-filter-btn" data-lvl="red" onclick="setLevelFilter('red')">🔴 À apprendre</button>
+    <button class="lvl-filter-btn" data-lvl="none" onclick="setLevelFilter('none')">⚫ Non évalués</button>
 </div>
 
 <div class="word-counter" id="word-counter">
@@ -86,6 +108,7 @@
     <table class="vocab-table" id="vocab-table">
         <thead>
             <tr>
+                <th style="width:38px" title="Niveau de connaissance">Niv.</th>
                 <th style="width:30px">#</th>
                 <th>한글</th>
                 <th>Français</th>
@@ -99,12 +122,23 @@
             {% for ch_num in book.chapters|sort %}
             {% if selected_chapter is none or selected_chapter == ch_num %}
             <tr class="chapter-sep" data-chapter="{{ ch_num }}">
-                <td colspan="6"><i data-lucide="book" class="icon-xs"></i> Chapitre {{ ch_num }}과 — {{ book.chapters[ch_num]|length }} mots</td>
+                <td colspan="7">
+                    <div class="chapter-sep-content">
+                        <span><i data-lucide="book" class="icon-xs"></i> Chapitre {{ ch_num }}과 — {{ book.chapters[ch_num]|length }} mots</span>
+                        <button class="add-word-btn" onclick="openAddModal('{{ book.id }}', {{ ch_num }}, event)" title="Ajouter un mot dans ce chapitre">
+                            <i data-lucide="plus" class="icon-xs"></i> Ajouter
+                        </button>
+                    </div>
+                </td>
             </tr>
             {% for entry in book.chapters[ch_num] %}
             {% set ns.counter = ns.counter + 1 %}
             <tr class="vocab-row" data-hangul="{{ entry.hangul|lower }}" data-french="{{ entry.french|lower }}"
-                onclick="toggleRow(this)">
+                data-book="{{ book.id }}" data-chapter="{{ ch_num }}" data-idx="{{ ns.counter }}"
+                data-level="none">
+                <td class="col-level" onclick="cycleLevelColor(this.parentElement, event)">
+                    <span class="level-dot" title="Cliquer pour changer le niveau"></span>
+                </td>
                 <td style="color:var(--text-muted); font-size:0.8rem">{{ ns.counter }}</td>
                 <td class="col-hangul">{{ entry.hangul }}</td>
                 <td class="col-french">{{ entry.french }}</td>
@@ -118,24 +152,152 @@
         </tbody>
     </table>
 </div>
+
+<!-- ======= ADD WORD MODAL ======= -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeAddModal()"></div>
+<div class="modal" id="add-word-modal">
+    <div class="modal-header">
+        <h2 class="modal-title"><i data-lucide="plus-circle" class="icon-sm"></i> Ajouter un mot</h2>
+        <button class="modal-close" onclick="closeAddModal()"><i data-lucide="x" class="icon-sm"></i></button>
+    </div>
+    <p class="modal-subtitle" id="modal-subtitle">Chapitre X</p>
+    <form id="add-word-form" onsubmit="submitNewWord(event)">
+        <div class="form-grid">
+            <div class="form-group">
+                <label class="form-label" for="fw-hangul">한글 <span class="required">*</span></label>
+                <input class="form-input" id="fw-hangul" type="text" placeholder="가다" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="fw-french">Français <span class="required">*</span></label>
+                <input class="form-input" id="fw-french" type="text" placeholder="aller" required autocomplete="off">
+            </div>
+            <div class="form-group form-group-full">
+                <label class="form-label" for="fw-example">Exemple (optionnel)</label>
+                <input class="form-input" id="fw-example" type="text" placeholder="저는 학교에 가요." autocomplete="off">
+            </div>
+            <div class="form-group form-group-full">
+                <label class="form-label" for="fw-translated">Traduction exemple (optionnel)</label>
+                <input class="form-input" id="fw-translated" type="text" placeholder="Je vais à l'école." autocomplete="off">
+            </div>
+            <div class="form-group form-group-full">
+                <label class="form-label" for="fw-explanation">Explication (optionnel)</label>
+                <textarea class="form-input form-textarea" id="fw-explanation" placeholder="Notes grammaticales..."></textarea>
+            </div>
+        </div>
+        <div class="modal-actions">
+            <button type="button" class="btn-secondary" onclick="closeAddModal()">Annuler</button>
+            <button type="submit" class="btn-primary" id="btn-submit-word">
+                <i data-lucide="save" class="icon-xs"></i> Enregistrer
+            </button>
+        </div>
+    </form>
+    <div class="modal-success" id="modal-success" style="display:none">
+        <i data-lucide="check-circle" class="icon-sm" style="color:var(--green)"></i>
+        <span>Mot ajouté avec succès ! La page va se recharger…</span>
+    </div>
+</div>
 {% endblock %}
 
 {% block scripts %}
 <script>
-    let detailsVisible = false;
+    // ── State ──────────────────────────────────────────────────────────────────
+    const BOOK_ID  = "{{ book.id }}";
+    const STORE_KEY = `mew_levels_${BOOK_ID}`;
+    let detailsVisible  = false;
     let examplesVisible = true;
+    let levelFilterActive = false;
+    let currentLevelFilter = 'all';
+    let addModalBook = null;
+    let addModalChapter = null;
 
+    // Levels cycle: none → green → orange → red → none
+    const LEVEL_CYCLE = ['none', 'green', 'orange', 'red'];
+    const LEVEL_LABELS = { none: '', green: '🟢', orange: '🟠', red: '🔴' };
+    const LEVEL_COLORS = {
+        none:   'transparent',
+        green:  'var(--green)',
+        orange: 'var(--orange)',
+        red:    'var(--red)',
+    };
+
+    // ── LocalStorage helpers ───────────────────────────────────────────────────
+    function loadLevels() {
+        try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); }
+        catch { return {}; }
+    }
+    function saveLevels(data) {
+        localStorage.setItem(STORE_KEY, JSON.stringify(data));
+    }
+
+    // Build a unique key per row from its hangul + chapter
+    function rowKey(tr) {
+        return `${tr.dataset.chapter}_${tr.querySelector('.col-hangul').textContent.trim()}`;
+    }
+
+    // ── Apply levels on load ───────────────────────────────────────────────────
+    function initLevels() {
+        const data = loadLevels();
+        document.querySelectorAll('.vocab-row').forEach(tr => {
+            const key = rowKey(tr);
+            const lvl = data[key] || 'none';
+            applyLevel(tr, lvl, false);
+        });
+        updateStats();
+    }
+
+    function applyLevel(tr, lvl, save = true) {
+        tr.dataset.level = lvl;
+        const dot = tr.querySelector('.level-dot');
+        if (!dot) return;
+        dot.style.background = LEVEL_COLORS[lvl];
+        dot.style.boxShadow  = lvl !== 'none' ? `0 0 6px ${LEVEL_COLORS[lvl]}` : 'none';
+        dot.title = lvl === 'none' ? 'Cliquer pour évaluer' : LEVEL_LABELS[lvl];
+        if (save) {
+            const data = loadLevels();
+            data[rowKey(tr)] = lvl;
+            saveLevels(data);
+            updateStats();
+        }
+    }
+
+    function cycleLevelColor(tr, e) {
+        e.stopPropagation();
+        const current = tr.dataset.level || 'none';
+        const nextIdx = (LEVEL_CYCLE.indexOf(current) + 1) % LEVEL_CYCLE.length;
+        applyLevel(tr, LEVEL_CYCLE[nextIdx]);
+        applyLevelFilter(); // refresh filter if active
+    }
+
+    // ── Stats counters ─────────────────────────────────────────────────────────
+    function updateStats() {
+        const rows = document.querySelectorAll('.vocab-row');
+        let g = 0, o = 0, r = 0;
+        rows.forEach(tr => {
+            const lvl = tr.dataset.level || 'none';
+            if (lvl === 'green')  g++;
+            else if (lvl === 'orange') o++;
+            else if (lvl === 'red')    r++;
+        });
+        document.getElementById('count-green').textContent  = g;
+        document.getElementById('count-orange').textContent = o;
+        document.getElementById('count-red').textContent    = r;
+    }
+
+    // ── Search filter ──────────────────────────────────────────────────────────
     function filterTable() {
         const q = document.getElementById('search').value.toLowerCase().trim();
         const rows = document.querySelectorAll('.vocab-row');
         let visible = 0;
 
         rows.forEach(row => {
-            const hangul = row.dataset.hangul || '';
-            const french = row.dataset.french || '';
-            const match = !q || hangul.includes(q) || french.includes(q);
-            row.style.display = match ? '' : 'none';
-            if (match) visible++;
+            const hangul  = row.dataset.hangul  || '';
+            const french  = row.dataset.french  || '';
+            const lvl     = row.dataset.level   || 'none';
+            const matchQ  = !q || hangul.includes(q) || french.includes(q);
+            const matchLv = currentLevelFilter === 'all' || lvl === currentLevelFilter;
+            const show    = matchQ && matchLv;
+            row.style.display = show ? '' : 'none';
+            if (show) visible++;
         });
 
         // Hide chapter separators if all their words are hidden
@@ -152,6 +314,25 @@
         document.getElementById('visible-count').textContent = visible;
     }
 
+    // ── Level filter ───────────────────────────────────────────────────────────
+    function toggleLevelFilter() {
+        levelFilterActive = !levelFilterActive;
+        const bar = document.getElementById('level-filter-bar');
+        bar.style.display = levelFilterActive ? 'flex' : 'none';
+        document.getElementById('toggle-level-filter').classList.toggle('active', levelFilterActive);
+    }
+
+    function setLevelFilter(lvl) {
+        currentLevelFilter = lvl;
+        document.querySelectorAll('.lvl-filter-btn').forEach(b => {
+            b.classList.toggle('active', b.dataset.lvl === lvl);
+        });
+        applyLevelFilter();
+    }
+
+    function applyLevelFilter() { filterTable(); }
+
+    // ── Toggle columns ─────────────────────────────────────────────────────────
     function toggleDetails() {
         detailsVisible = !detailsVisible;
         document.querySelectorAll('.detail-col').forEach(el => {
@@ -168,8 +349,73 @@
         document.getElementById('toggle-examples').classList.toggle('active', !examplesVisible);
     }
 
-    function toggleRow(tr) {
-        tr.classList.toggle('expanded');
+    function toggleRow(tr) { tr.classList.toggle('expanded'); }
+
+    // ── Add word modal ─────────────────────────────────────────────────────────
+    function openAddModal(bookId, chapter, e) {
+        e.stopPropagation();
+        addModalBook    = bookId;
+        addModalChapter = chapter;
+        document.getElementById('modal-subtitle').textContent = `Chapitre ${chapter}과 — ${bookId}`;
+        document.getElementById('add-word-form').reset();
+        document.getElementById('modal-success').style.display = 'none';
+        document.getElementById('add-word-form').style.display = '';
+        document.getElementById('btn-submit-word').disabled = false;
+        document.getElementById('modal-overlay').classList.add('open');
+        document.getElementById('add-word-modal').classList.add('open');
+        setTimeout(() => document.getElementById('fw-hangul').focus(), 100);
     }
+
+    function closeAddModal() {
+        document.getElementById('modal-overlay').classList.remove('open');
+        document.getElementById('add-word-modal').classList.remove('open');
+    }
+
+    async function submitNewWord(e) {
+        e.preventDefault();
+        const btn = document.getElementById('btn-submit-word');
+        btn.disabled = true;
+        btn.innerHTML = '<i data-lucide="loader" class="icon-xs"></i> Enregistrement…';
+
+        const payload = {
+            hangul:      document.getElementById('fw-hangul').value.trim(),
+            french:      document.getElementById('fw-french').value.trim(),
+            example:     document.getElementById('fw-example').value.trim(),
+            translated:  document.getElementById('fw-translated').value.trim(),
+            explanation: document.getElementById('fw-explanation').value.trim(),
+        };
+
+        try {
+            const res = await fetch(`/api/books/${addModalBook}/chapters/${addModalChapter}/add`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+            if (!res.ok) {
+                const err = await res.json();
+                alert('Erreur : ' + (err.detail || res.status));
+                btn.disabled = false;
+                btn.innerHTML = '<i data-lucide="save" class="icon-xs"></i> Enregistrer';
+                return;
+            }
+            document.getElementById('add-word-form').style.display = 'none';
+            document.getElementById('modal-success').style.display = 'flex';
+            lucide.createIcons();
+            setTimeout(() => { window.location.reload(); }, 1400);
+        } catch(err) {
+            alert('Erreur réseau : ' + err);
+            btn.disabled = false;
+            btn.innerHTML = '<i data-lucide="save" class="icon-xs"></i> Enregistrer';
+        }
+    }
+
+    // ── Init ───────────────────────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+        initLevels();
+        // close modal on Escape
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeAddModal();
+        });
+    });
 </script>
 {% endblock %}
