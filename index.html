@@ -21,7 +21,7 @@
         tr[data-level="orange"] .level-dot { background:var(--orange); border-color:var(--orange); box-shadow:0 0 6px var(--orange); }
         tr[data-level="red"] .level-dot { background:var(--red); border-color:var(--red); box-shadow:0 0 6px var(--red); }
         /* Add word btn in chapter sep */
-        .chapter-sep td { display:flex; align-items:center; justify-content:space-between; }
+        .chapter-sep-content { display:flex; align-items:center; justify-content:space-between; width:100%; }
         .add-word-btn { display:inline-flex; align-items:center; gap:5px; padding:5px 12px; border-radius:var(--radius-xs); border:1px solid var(--accent-dim); background:var(--accent-glow); color:var(--accent); font-size:.78rem; font-weight:600; cursor:pointer; transition:var(--transition); }
         .add-word-btn:hover { background:var(--accent-dim); color:#fff; border-color:var(--accent); }
         /* Level filter bar */
@@ -326,8 +326,8 @@ async function renderVocab(bookId, selectedChapter) {
     const rowsHTML = chNums.filter(n => selectedChapter === null || selectedChapter === n).map(n => {
         const allWords = [...book.chapters[n], ...(customWords[n] || [])];
         const sepRow = `<tr class="chapter-sep" data-chapter="${n}">
-            <td colspan="7"><span><i data-lucide="book" class="icon-xs"></i> Chapitre ${n}과 — ${allWords.length} mots</span>
-            <button class="add-word-btn" onclick="openAddModal('${bookId}',${n},event)"><i data-lucide="plus" class="icon-xs"></i> Ajouter</button></td>
+            <td colspan="7"><div class="chapter-sep-content"><span><i data-lucide="book" class="icon-xs"></i> Chapitre ${n}과 — ${allWords.length} mots</span>
+            <button class="add-word-btn" onclick="openAddModal('${bookId}',${n},event)"><i data-lucide="plus" class="icon-xs"></i> Ajouter</button></div></td>
         </tr>`;
         const wordRows = allWords.map(e => {
             counter++;
