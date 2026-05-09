@@ -1,6 +1,15 @@
 {
   "books": ["3A", "3B", "4A", "4B"],
   "lessons": {
+    "3A": [
+      {
+        "filename": "3A 과1.html",
+        "topics": [
+          "I. Exprimer le temps écoulé depuis un événement : -은 지(시간) 됐다",
+          "II. Introduire une information complémentaire : -인데"
+        ]
+      }
+    ],
     "4A": [
       {
         "filename": "4A 과1.html",
