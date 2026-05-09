@@ -5,11 +5,10 @@ Content lives in content/vocab/ and content/lessons/ (versioned in this repo).
 Port: 8181
 """
 
-from fastapi import FastAPI, Request, HTTPException
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from pydantic import BaseModel
 from pathlib import Path
 import csv
 import io
@@ -206,57 +205,6 @@ async def api_book(book_id: str):
         "total_words": book.total_words,
         "chapters": chapters_data,
     }
-
-
-class NewWordPayload(BaseModel):
-    hangul: str
-    french: str
-    example: str = ""
-    translated: str = ""
-    explanation: str = ""
-
-
-@app.post("/api/books/{book_id}/chapters/{chapter}/add")
-async def add_word(book_id: str, chapter: int, payload: NewWordPayload):
-    """Append a new word to the given chapter in the CSV file."""
-    csv_path = VOCAB_DIR / f"Vocab {book_id}.csv"
-    if not csv_path.exists():
-        raise HTTPException(status_code=404, detail="Book not found")
-
-    # Read current content
-    content = csv_path.read_text(encoding="utf-8")
-    lines = content.splitlines(keepends=True)
-
-    # Find insertion point: after the last line of the target chapter
-    chapter_marker = f"{chapter}과"
-    insert_after = -1
-    in_chapter = False
-    for i, line in enumerate(lines):
-        row = next(csv.reader([line.rstrip("\r\n")]))
-        if row and row[0].strip() == chapter_marker and (len(row) < 2 or not row[1].strip()):
-            in_chapter = True
-            insert_after = i
-            continue
-        if in_chapter:
-            # Next chapter marker or end of chapter block
-            if row and row[0].strip() and row[0].strip().replace("과", "").isdigit() and (len(row) < 2 or not row[1].strip()):
-                break
-            if row and (row[0].strip() or (len(row) > 1 and row[1].strip())):
-                insert_after = i
-
-    if insert_after == -1:
-        raise HTTPException(status_code=400, detail=f"Chapter {chapter} not found in book")
-
-    # Build new CSV row
-    new_row_io = io.StringIO()
-    writer = csv.writer(new_row_io, lineterminator="\n")
-    writer.writerow([payload.hangul, payload.french, payload.example, payload.translated, payload.explanation])
-    new_line = new_row_io.getvalue()
-
-    lines.insert(insert_after + 1, new_line)
-    csv_path.write_text("".join(lines), encoding="utf-8")
-
-    return {"ok": True, "chapter": chapter, "word": payload.hangul}
 
 
 # === Pages ===
