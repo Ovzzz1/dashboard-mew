@@ -6,95 +6,261 @@
     <title>4과 — Points de grammaire (Niveau 4급) - Sogang University</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.8;
-            color: #2c3e50;
-            background: #fafafa;
+            color: #e8e8f0;
+            background: #0a0a0f;
             padding: 40px 20px;
         }
 
         .container {
             max-width: 950px;
             margin: 0 auto;
-            background: white;
+            background: #12121a;
             padding: 0;
             border-radius: 12px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
             overflow: hidden;
         }
 
         .header {
-            background: #ffffff;
-            border-bottom: 3px solid #b50004;
-            color: #2c3e50;
+            background: #12121a;
+            border-bottom: 3px solid #a78bfa;
+            color: #e8e8f0;
             padding: 40px 50px;
         }
 
-        h1 { font-size: 2.4em; font-weight: 700; margin-bottom: 10px; color: #2c3e50; }
-        .header-subtitle { font-size: 1em; color: #7f8c8d; }
-        .content { padding: 50px; }
+        h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #e8e8f0;
+        }
+
+        .header-subtitle {
+            font-size: 1em;
+            color: #8888aa;
+        }
+
+        .content {
+            padding: 50px;
+        }
 
         h2 {
-            font-size: 1.8em; color: #34495e;
-            margin: 50px 0 25px 0; font-weight: 700;
-            padding-bottom: 12px; border-bottom: 2px solid #ecf0f1;
+            font-size: 1.8em;
+            color: #c8c8e0;
+            margin: 50px 0 25px 0;
+            font-weight: 700;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #2a2a3e;
         }
+
         h2::before {
-            content: ''; display: inline-block;
-            width: 5px; height: 28px; background: #b50004;
-            margin-right: 12px; vertical-align: middle;
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 28px;
+            background: #a78bfa;
+            margin-right: 12px;
+            vertical-align: middle;
         }
-        h3 { font-size: 1.4em; color: #2c3e50; margin: 30px 0 18px 0; font-weight: 600; }
-        h4 { font-size: 1.15em; color: #34495e; margin: 22px 0 12px 0; font-weight: 600; }
 
-        p, li { font-size: 1.05em; margin-bottom: 15px; line-height: 1.8; color: #2c3e50; }
-        ul, ol { margin: 20px 0; padding-left: 35px; }
-        li { margin-bottom: 12px; }
+        h3 {
+            font-size: 1.4em;
+            color: #e8e8f0;
+            margin: 30px 0 18px 0;
+            font-weight: 600;
+        }
 
-        .highlight-yellow { background: #ffff00; font-weight: 600; padding: 2px 5px; border-radius: 3px; }
-        .grammar-red { color: #b50004; font-weight: 700; }
-        .super-important { background: #ffff00; font-weight: 700; padding: 3px 6px; border-radius: 3px; }
+        h4 {
+            font-size: 1.15em;
+            color: #c8c8e0;
+            margin: 22px 0 12px 0;
+            font-weight: 600;
+        }
 
-        table { width: 100%; border-collapse: collapse; margin: 25px 0; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
-        th { background: #f8f9fa; color: #2c3e50; padding: 16px; text-align: left; font-weight: 600; font-size: 1.05em; border-bottom: 2px solid #e0e0e0; }
-        td { padding: 15px 16px; border-bottom: 1px solid #f0f0f0; }
-        tr:last-child td { border-bottom: none; }
-        tr:hover { background: #f8f9fa; }
+        p, li {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #e8e8f0;
+        }
 
-        .example-box { background: #f8f9fa; padding: 25px; border-left: 4px solid #95a5a6; margin: 25px 0; border-radius: 6px; }
-        .error-box { background: #fff5f5; padding: 20px 25px; border-left: 4px solid #e74c3c; margin: 20px 0; border-radius: 6px; }
-        .success-box { background: #f0f9f4; padding: 20px 25px; border-left: 4px solid #27ae60; margin: 20px 0; border-radius: 6px; }
-        .note-box { background: #fffef7; padding: 20px 25px; border-left: 4px solid #f39c12; margin: 25px 0; border-radius: 6px; }
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 35px;
+        }
 
-        .korean { font-size: 1.15em; font-weight: 600; color: #2c3e50; }
-        .french-translation { font-style: italic; color: #7f8c8d; margin-top: 8px; display: block; }
-        strong { color: #2c3e50; font-weight: 600; }
+        li {
+            margin-bottom: 12px;
+        }
+
+        .highlight-yellow {
+            background: rgba(251,191,60,0.25); color: #fbbf24; border: 1px solid #fbbf24;
+            font-weight: 600;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .grammar-red {
+            color: #a78bfa;
+            font-weight: 700;
+        }
+
+        .super-important {
+            background: rgba(251,191,60,0.25); color: #fbbf24; border: 1px solid #fbbf24;
+            font-weight: 700;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: #12121a;
+            border: 1px solid #2a2a3e;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #1a1a26;
+            color: #e8e8f0;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+            border-bottom: 2px solid #2a2a3e;
+        }
+
+        td {
+            padding: 15px 16px;
+            border-bottom: 1px solid #1e1e30;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: #1a1a26;
+        }
+
+        .example-box {
+            background: #1a1a26;
+            padding: 25px;
+            border-left: 4px solid #555570;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .error-box {
+            background: rgba(248,113,113,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #f87171;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .success-box {
+            background: rgba(52,211,153,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #34d399;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .note-box {
+            background: rgba(251,191,60,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #fb923c;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .korean {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #e8e8f0;
+        }
+
+        .french-translation {
+            font-style: italic;
+            color: #8888aa;
+            margin-top: 8px;
+            display: block;
+        }
+
+        strong {
+            color: #e8e8f0;
+            font-weight: 600;
+        }
 
         .tip-badge {
-            display: inline-block; background: #34495e; color: white;
-            padding: 5px 12px; border-radius: 20px; font-size: 0.85em;
-            font-weight: 600; margin-right: 10px;
+            display: inline-block;
+            background: #a78bfa;
+            color: #0a0a0f;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 10px;
         }
 
         .formula {
-            background: #f8f9fa; padding: 18px 22px; border-radius: 6px;
-            font-family: 'Courier New', monospace; font-size: 1.05em;
-            margin: 18px 0; border: 2px solid #e0e0e0; color: #2c3e50;
+            background: #1a1a26;
+            padding: 18px 22px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.05em;
+            margin: 18px 0;
+            border: 2px solid #2a2a3e;
+            color: #e8e8f0;
         }
 
-        .recap-table { border: 2px solid #34495e; }
-        .recap-table th { background: #34495e; color: white; }
+        .recap-table {
+            border: 2px solid #a78bfa;
+        }
 
-        .compare-table th { background: #4a4a8a; color: white; }
-        .compare-table { border: 2px solid #4a4a8a; }
+        .recap-table th {
+            background: #a78bfa;
+            color: #0a0a0f;
+        }
 
-        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
+        @media print {
+            body {
+                background: #12121a;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+
         @media (max-width: 768px) {
-            .content { padding: 30px 25px; } .header { padding: 30px 25px; }
-            h1 { font-size: 2em; } h2 { font-size: 1.5em; } table { font-size: 0.9em; }
+            .content {
+                padding: 30px 25px;
+            }
+            .header {
+                padding: 30px 25px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            table {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -189,15 +355,15 @@
 
         <h4>Note 1 : Le temps s'exprime sur le verbe final</h4>
         <div class="example-box">
-            <p class="korean">늦<span class="grammar-red">을까 봐</span> 택시를 타요. <span style="color:#7f8c8d;">(présent)</span></p>
-            <p class="korean">늦<span class="grammar-red">을까 봐</span> 택시를 탔어요. <span style="color:#7f8c8d;">(passé)</span></p>
+            <p class="korean">늦<span class="grammar-red">을까 봐</span> 택시를 타요. <span style="color:#8888aa;">(présent)</span></p>
+            <p class="korean">늦<span class="grammar-red">을까 봐</span> 택시를 탔어요. <span style="color:#8888aa;">(passé)</span></p>
             <p class="french-translation">→ -을까 봐 ne change pas ; seul le verbe final est conjugué au temps voulu.</p>
         </div>
 
         <h4>Note 2 : Uniquement pour les événements négatifs</h4>
         <div class="error-box">
             <p>❌ <span class="korean">시험을 잘 볼<span class="grammar-red">까 봐</span> 걱정이에요.</span></p>
-            <p style="color:#c0392b; margin-top:5px;">→ On ne peut pas craindre quelque chose de positif !</p>
+            <p style="color:#f87171; margin-top:5px;">→ On ne peut pas craindre quelque chose de positif !</p>
         </div>
         <div class="success-box">
             <p>✅ <span class="korean">시험을 못 볼<span class="grammar-red">까 봐</span> 걱정이에요.</span></p>
@@ -243,8 +409,8 @@
                 </tr>
                 <tr>
                     <td><strong>Exemple</strong></td>
-                    <td class="korean">비가 올<span class="grammar-red">까 봐</span> 걱정이에요.<br><span style="font-size:0.9em; color:#7f8c8d;">(sans info météo)</span></td>
-                    <td class="korean">비가 올 <span class="grammar-red">텐데</span> 걱정이에요.<br><span style="font-size:0.9em; color:#7f8c8d;">(après avoir vu la météo)</span></td>
+                    <td class="korean">비가 올<span class="grammar-red">까 봐</span> 걱정이에요.<br><span style="font-size:0.9em; color:#8888aa;">(sans info météo)</span></td>
+                    <td class="korean">비가 올 <span class="grammar-red">텐데</span> 걱정이에요.<br><span style="font-size:0.9em; color:#8888aa;">(après avoir vu la météo)</span></td>
                 </tr>
                 <tr>
                     <td><strong>Déclaratif</strong></td>

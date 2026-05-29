@@ -6,149 +6,261 @@
     <title>8과 — Points de grammaire (Niveau 4급) - Sogang University</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.8;
-            color: #2c3e50;
-            background: #fafafa;
+            color: #e8e8f0;
+            background: #0a0a0f;
             padding: 40px 20px;
         }
 
         .container {
             max-width: 950px;
             margin: 0 auto;
-            background: white;
+            background: #12121a;
             padding: 0;
             border-radius: 12px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
             overflow: hidden;
         }
 
         .header {
-            background: #ffffff;
-            border-bottom: 3px solid #b50004;
-            color: #2c3e50;
+            background: #12121a;
+            border-bottom: 3px solid #a78bfa;
+            color: #e8e8f0;
             padding: 40px 50px;
         }
 
-        h1 { font-size: 2.4em; font-weight: 700; margin-bottom: 10px; color: #2c3e50; }
-        .header-subtitle { font-size: 1em; color: #7f8c8d; }
-        .content { padding: 50px; }
+        h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #e8e8f0;
+        }
+
+        .header-subtitle {
+            font-size: 1em;
+            color: #8888aa;
+        }
+
+        .content {
+            padding: 50px;
+        }
 
         h2 {
-            font-size: 1.8em; color: #34495e;
-            margin: 50px 0 25px 0; font-weight: 700;
-            padding-bottom: 12px; border-bottom: 2px solid #ecf0f1;
+            font-size: 1.8em;
+            color: #c8c8e0;
+            margin: 50px 0 25px 0;
+            font-weight: 700;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #2a2a3e;
         }
+
         h2::before {
-            content: ''; display: inline-block;
-            width: 5px; height: 28px; background: #b50004;
-            margin-right: 12px; vertical-align: middle;
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 28px;
+            background: #a78bfa;
+            margin-right: 12px;
+            vertical-align: middle;
         }
-        h3 { font-size: 1.4em; color: #2c3e50; margin: 30px 0 18px 0; font-weight: 600; }
-        h4 { font-size: 1.15em; color: #34495e; margin: 22px 0 12px 0; font-weight: 600; }
 
-        p, li { font-size: 1.05em; margin-bottom: 15px; line-height: 1.8; color: #2c3e50; }
-        ul, ol { margin: 20px 0; padding-left: 35px; }
-        li { margin-bottom: 12px; }
+        h3 {
+            font-size: 1.4em;
+            color: #e8e8f0;
+            margin: 30px 0 18px 0;
+            font-weight: 600;
+        }
 
-        .highlight-yellow { background: #ffff00; font-weight: 600; padding: 2px 5px; border-radius: 3px; }
-        .grammar-red { color: #b50004; font-weight: 700; }
-        .super-important { background: #ffff00; font-weight: 700; padding: 3px 6px; border-radius: 3px; }
+        h4 {
+            font-size: 1.15em;
+            color: #c8c8e0;
+            margin: 22px 0 12px 0;
+            font-weight: 600;
+        }
 
-        table { width: 100%; border-collapse: collapse; margin: 25px 0; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
-        th { background: #f8f9fa; color: #2c3e50; padding: 16px; text-align: left; font-weight: 600; font-size: 1.05em; border-bottom: 2px solid #e0e0e0; }
-        td { padding: 15px 16px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
-        tr:last-child td { border-bottom: none; }
-        tr:hover { background: #f8f9fa; }
+        p, li {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #e8e8f0;
+        }
 
-        .example-box { background: #f8f9fa; padding: 25px; border-left: 4px solid #95a5a6; margin: 25px 0; border-radius: 6px; }
-        .error-box { background: #fff5f5; padding: 20px 25px; border-left: 4px solid #e74c3c; margin: 20px 0; border-radius: 6px; }
-        .success-box { background: #f0f9f4; padding: 20px 25px; border-left: 4px solid #27ae60; margin: 20px 0; border-radius: 6px; }
-        .note-box { background: #fffef7; padding: 20px 25px; border-left: 4px solid #f39c12; margin: 25px 0; border-radius: 6px; }
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 35px;
+        }
 
-        .korean { font-size: 1.15em; font-weight: 600; color: #2c3e50; }
-        .french-translation { font-style: italic; color: #7f8c8d; margin-top: 8px; display: block; }
-        strong { color: #2c3e50; font-weight: 600; }
+        li {
+            margin-bottom: 12px;
+        }
+
+        .highlight-yellow {
+            background: rgba(251,191,60,0.25); color: #fbbf24; border: 1px solid #fbbf24;
+            font-weight: 600;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .grammar-red {
+            color: #a78bfa;
+            font-weight: 700;
+        }
+
+        .super-important {
+            background: rgba(251,191,60,0.25); color: #fbbf24; border: 1px solid #fbbf24;
+            font-weight: 700;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: #12121a;
+            border: 1px solid #2a2a3e;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #1a1a26;
+            color: #e8e8f0;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+            border-bottom: 2px solid #2a2a3e;
+        }
+
+        td {
+            padding: 15px 16px;
+            border-bottom: 1px solid #1e1e30;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: #1a1a26;
+        }
+
+        .example-box {
+            background: #1a1a26;
+            padding: 25px;
+            border-left: 4px solid #555570;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .error-box {
+            background: rgba(248,113,113,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #f87171;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .success-box {
+            background: rgba(52,211,153,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #34d399;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .note-box {
+            background: rgba(251,191,60,0.08);
+            padding: 20px 25px;
+            border-left: 4px solid #fb923c;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .korean {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #e8e8f0;
+        }
+
+        .french-translation {
+            font-style: italic;
+            color: #8888aa;
+            margin-top: 8px;
+            display: block;
+        }
+
+        strong {
+            color: #e8e8f0;
+            font-weight: 600;
+        }
 
         .tip-badge {
-            display: inline-block; background: #34495e; color: white;
-            padding: 5px 12px; border-radius: 20px; font-size: 0.85em;
-            font-weight: 600; margin-right: 10px;
+            display: inline-block;
+            background: #a78bfa;
+            color: #0a0a0f;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 10px;
         }
 
         .formula {
-            background: #f8f9fa; padding: 18px 22px; border-radius: 6px;
-            font-family: 'Courier New', monospace; font-size: 1.05em;
-            margin: 18px 0; border: 2px solid #e0e0e0; color: #2c3e50;
-        }
-
-        .rule-box {
-            background: #f0f4ff;
-            border: 2px solid #c0cce8;
-            border-radius: 8px;
-            padding: 20px 25px;
+            background: #1a1a26;
+            padding: 18px 22px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.05em;
             margin: 18px 0;
+            border: 2px solid #2a2a3e;
+            color: #e8e8f0;
         }
 
-        /* Cartes vocabulaire */
-        .vocab-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px;
-            margin: 20px 0;
+        .recap-table {
+            border: 2px solid #a78bfa;
         }
 
-        .vocab-card {
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 18px 20px;
-            border-left: 5px solid #b50004;
+        .recap-table th {
+            background: #a78bfa;
+            color: #0a0a0f;
         }
 
-        .vocab-word {
-            font-size: 1.4em;
-            font-weight: 700;
-            color: #b50004;
-            margin-bottom: 4px;
+        @media print {
+            body {
+                background: #12121a;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
         }
 
-        .vocab-def {
-            font-size: 0.97em;
-            color: #2c3e50;
-            margin-bottom: 0;
-        }
-
-        .vocab-category {
-            display: inline-block;
-            font-size: 0.8em;
-            font-weight: 600;
-            padding: 2px 9px;
-            border-radius: 10px;
-            margin-bottom: 8px;
-            background: #ecf0f1;
-            color: #7f8c8d;
-        }
-
-        /* Couleurs par catégorie */
-        .cat-shape { background: #eaf4fb; color: #2471a3; }
-        .cat-feel  { background: #eafaf1; color: #1e8449; }
-        .cat-mat   { background: #fdf2f8; color: #76448a; }
-
-        .recap-table { border: 2px solid #34495e; }
-        .recap-table th { background: #34495e; color: white; }
-
-        .compare-table th { background: #4a4a8a; color: white; }
-        .compare-table { border: 2px solid #4a4a8a; }
-
-        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
         @media (max-width: 768px) {
-            .content { padding: 30px 25px; } .header { padding: 30px 25px; }
-            h1 { font-size: 2em; } h2 { font-size: 1.5em; } table { font-size: 0.9em; }
-            .vocab-grid { grid-template-columns: 1fr; }
+            .content {
+                padding: 30px 25px;
+            }
+            .header {
+                padding: 30px 25px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            table {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -415,12 +527,12 @@
         <div class="error-box">
             <p>❌ <span class="korean">A: 미카 씨 방 크기가 어떻게 돼요?</span></p>
             <p>❌ <span class="korean">B: 일본에 있는 제 방<span class="grammar-red">만 해요</span>.</span></p>
-            <p style="color:#c0392b; margin-top:5px;">→ A n'a jamais vu la chambre de B au Japon — c'est une référence sans valeur pour lui !</p>
+            <p style="color:#f87171; margin-top:5px;">→ A n'a jamais vu la chambre de B au Japon — c'est une référence sans valeur pour lui !</p>
         </div>
         <div class="success-box">
-            <p>✅ <span class="korean">우리 교실<span class="grammar-red">만 해요</span>.</span> <span style="color:#7f8c8d;">(les deux connaissent la salle de classe)</span></p>
-            <p>✅ <span class="korean">제 손바닥<span class="grammar-red">만 해요</span>.</span> <span style="color:#7f8c8d;">(montré directement — référence visible)</span></p>
-            <p>✅ <span class="korean">루이 씨<span class="grammar-red">만 해요</span>.</span> <span style="color:#7f8c8d;">(les deux connaissent Louis)</span></p>
+            <p>✅ <span class="korean">우리 교실<span class="grammar-red">만 해요</span>.</span> <span style="color:#8888aa;">(les deux connaissent la salle de classe)</span></p>
+            <p>✅ <span class="korean">제 손바닥<span class="grammar-red">만 해요</span>.</span> <span style="color:#8888aa;">(montré directement — référence visible)</span></p>
+            <p>✅ <span class="korean">루이 씨<span class="grammar-red">만 해요</span>.</span> <span style="color:#8888aa;">(les deux connaissent Louis)</span></p>
         </div>
         <div class="note-box">
             <strong>→</strong> <span class="super-important">La référence doit être un objet ou une personne dont les deux interlocuteurs connaissent la taille.</span>
@@ -465,8 +577,8 @@
                 </tr>
                 <tr>
                     <td><strong>Exemple</strong></td>
-                    <td class="korean">가로는 1미터<span class="grammar-red">가 넘어요</span>.<br><span style="font-size:0.9em; color:#7f8c8d;">"La largeur dépasse 1 mètre."</span></td>
-                    <td class="korean">가로 길이가 30cm<span class="grammar-red">가 안 돼요</span>.<br><span style="font-size:0.9em; color:#7f8c8d;">"La largeur ne fait pas 30 cm."</span></td>
+                    <td class="korean">가로는 1미터<span class="grammar-red">가 넘어요</span>.<br><span style="font-size:0.9em; color:#8888aa;">"La largeur dépasse 1 mètre."</span></td>
+                    <td class="korean">가로 길이가 30cm<span class="grammar-red">가 안 돼요</span>.<br><span style="font-size:0.9em; color:#8888aa;">"La largeur ne fait pas 30 cm."</span></td>
                 </tr>
             </tbody>
         </table>
@@ -500,7 +612,7 @@
             <p class="korean">A: 한국에 온 지 얼마나 되셨어요?</p>
             <p class="korean">B: 오래 됐어요. 벌써 2년<span class="grammar-red">이 넘었어요</span>.</p>
             <p class="french-translation">"Ça fait longtemps. Ça fait déjà plus de 2 ans."</p>
-            <p style="margin-top:10px; color:#7f8c8d; font-size:0.95em;">→ Le pattern fonctionne de la même façon avec les périodes de temps.</p>
+            <p style="margin-top:10px; color:#8888aa; font-size:0.95em;">→ Le pattern fonctionne de la même façon avec les périodes de temps.</p>
         </div>
 
         <!-- SOUS-SECTION : -이 안 돼요 -->
@@ -531,7 +643,7 @@
             <p class="korean">&nbsp;&nbsp;&nbsp;B: 왠지 모르겠지만 학생이 적어요. 10명<span class="grammar-red">이 안 될</span> 거예요.</p>
             <p class="french-translation">"Je ne sais pas pourquoi, mais il y a peu d'étudiants. Il n'y en aura probablement pas 10."</p>
 
-            <p style="margin-top:10px; color:#7f8c8d; font-size:0.95em;">→ -이 안 돼요 peut aussi exprimer qu'un seuil (quantité minimale, durée requise) n'est pas atteint.</p>
+            <p style="margin-top:10px; color:#8888aa; font-size:0.95em;">→ -이 안 돼요 peut aussi exprimer qu'un seuil (quantité minimale, durée requise) n'est pas atteint.</p>
         </div>
 
         <h3>4. Les deux patterns ensemble : comparaison directe</h3>
@@ -547,7 +659,7 @@
         <h4>Confondre les deux patterns</h4>
         <div class="error-box">
             <p>❌ <span class="korean">가로가 1미터<span class="grammar-red">가 안 넘어요</span>.</span></p>
-            <p style="color:#c0392b; margin-top:5px;">→ Double négation maladroite — inutile et non standard</p>
+            <p style="color:#f87171; margin-top:5px;">→ Double négation maladroite — inutile et non standard</p>
         </div>
         <div class="success-box">
             <p>✅ "Ça dépasse 1 m" → <span class="korean">1미터<span class="grammar-red">가 넘어요</span>.</span></p>
@@ -598,17 +710,17 @@
                 </tr>
                 <tr>
                     <td class="korean grammar-red">noun만 해요</td>
-                    <td>Comparer la taille à un objet <strong>connu des deux</strong> interlocuteurs<br><span style="font-size:0.9em; color:#7f8c8d;">"C'est de la taille de..."</span></td>
+                    <td>Comparer la taille à un objet <strong>connu des deux</strong> interlocuteurs<br><span style="font-size:0.9em; color:#8888aa;">"C'est de la taille de..."</span></td>
                     <td class="korean">우리 교실<span class="grammar-red">만 해요</span>.<br><span class="french-translation" style="margin:0;">"C'est de la taille de notre salle de classe."</span></td>
                 </tr>
                 <tr>
                     <td class="korean grammar-red">-이 넘어요</td>
-                    <td>La taille / quantité <strong>dépasse</strong> la valeur mentionnée<br><span style="font-size:0.9em; color:#7f8c8d;">"Ça fait plus de X / ça dépasse X"</span></td>
+                    <td>La taille / quantité <strong>dépasse</strong> la valeur mentionnée<br><span style="font-size:0.9em; color:#8888aa;">"Ça fait plus de X / ça dépasse X"</span></td>
                     <td class="korean">가로는 1미터<span class="grammar-red">가 넘어요</span>.<br><span class="french-translation" style="margin:0;">"La largeur dépasse 1 mètre."</span></td>
                 </tr>
                 <tr>
                     <td class="korean grammar-red">-이 안 돼요</td>
-                    <td>La taille / quantité <strong>n'atteint pas</strong> la valeur mentionnée<br><span style="font-size:0.9em; color:#7f8c8d;">"Ça ne fait pas X / c'est moins de X"</span></td>
+                    <td>La taille / quantité <strong>n'atteint pas</strong> la valeur mentionnée<br><span style="font-size:0.9em; color:#8888aa;">"Ça ne fait pas X / c'est moins de X"</span></td>
                     <td class="korean">가로 길이가 30cm<span class="grammar-red">가 안 돼요</span>.<br><span class="french-translation" style="margin:0;">"La largeur ne fait pas 30 cm."</span></td>
                 </tr>
             </tbody>
