@@ -1105,7 +1105,7 @@ async function renderTest(bookId, chapter) {
         inp.disabled = true;
         sb.disabled = true;
         fb.className = 'test-feedback show ' + (ok ? 'ok' : 'ko');
-        fb.textContent = ok ? `Correct !` : `Incorrect — Réponse : ${correct}`;
+        fb.textContent = ok ? `Correct ! — Réponse : ${correct}` : `Incorrect — Réponse : ${correct}`;
         nb.classList.add('show');
         nb.textContent = _test.idx === _test.words.length - 1 ? 'Voir les résultats →' : 'Question suivante →';
     };
