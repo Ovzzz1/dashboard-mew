@@ -541,6 +541,7 @@
 
         .card-controls {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
             margin-bottom: 14px;
@@ -577,24 +578,52 @@
             cursor: not-allowed;
         }
 
-        .fc-btn-ok {
+        .fc-btn-green {
             border-color: rgba(22, 163, 74, .5);
             color: var(--green);
             background: rgba(22, 163, 74, .07);
         }
 
-        .fc-btn-ok:hover {
+        .fc-btn-green:hover {
             background: rgba(22, 163, 74, .18);
         }
 
-        .fc-btn-ko {
+        .fc-btn-green.active {
+            background: var(--green);
+            border-color: var(--green);
+            color: #fff;
+        }
+
+        .fc-btn-orange {
+            border-color: rgba(217, 119, 6, .5);
+            color: var(--orange);
+            background: rgba(217, 119, 6, .07);
+        }
+
+        .fc-btn-orange:hover {
+            background: rgba(217, 119, 6, .18);
+        }
+
+        .fc-btn-orange.active {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: #fff;
+        }
+
+        .fc-btn-red {
             border-color: rgba(205, 46, 58, .5);
             color: var(--red);
             background: rgba(205, 46, 58, .07);
         }
 
-        .fc-btn-ko:hover {
+        .fc-btn-red:hover {
             background: rgba(205, 46, 58, .18);
+        }
+
+        .fc-btn-red.active {
+            background: var(--red);
+            border-color: var(--red);
+            color: #fff;
         }
 
         .fc-mode-bar {
@@ -1185,11 +1214,7 @@
             <a href="#test/${bookId}/${selectedChapter}" class="practice-btn test-btn">
                 <i data-lucide="check-square" class="icon-xs"></i> Test — ${selectedChapter}과
             </a>
-        </div>` : `
-        <div class="practice-bar">
-            ${chNums.map(n => `<a href="#flashcard/${bookId}/${n}" class="practice-btn" style="font-size:.75rem;padding:5px 11px;">${n}과 FC</a>
-            <a href="#test/${bookId}/${n}" class="practice-btn test-btn" style="font-size:.75rem;padding:5px 11px;">${n}과 Test</a>`).join('')}
-        </div>`}
+        </div>` : ''}
 
         <div class="controls">
             <div class="search-box">
@@ -1590,6 +1615,7 @@
                 document.getElementById('fc-btn-prev').disabled = _fc.idx === 0;
                 const isLast = _fc.idx === total - 1;
                 document.getElementById('fc-btn-next').textContent = isLast ? 'Terminer' : 'Suivant →';
+                fcUpdateLevelButtons();
             }
 
             document.getElementById('content').innerHTML = `
@@ -1627,8 +1653,9 @@
             </div>
             <div class="card-controls">
                 <button class="fc-btn" id="fc-btn-prev" onclick="fcNav(-1)" disabled>← Précédent</button>
-                <button class="fc-btn fc-btn-ok" onclick="fcMark(1)">Connu</button>
-                <button class="fc-btn fc-btn-ko" onclick="fcMark(0)">À revoir</button>
+                <button class="fc-btn fc-btn-green fc-lvl-btn" data-lvl="green" onclick="fcMark('green')">Connu</button>
+                <button class="fc-btn fc-btn-orange fc-lvl-btn" data-lvl="orange" onclick="fcMark('orange')">À réviser</button>
+                <button class="fc-btn fc-btn-red fc-lvl-btn" data-lvl="red" onclick="fcMark('red')">À apprendre</button>
                 <button class="fc-btn primary" id="fc-btn-next" onclick="fcNav(1)">Suivant →</button>
             </div>
             <div id="fc-end-screen" style="display:none" class="fc-end">
@@ -1666,8 +1693,27 @@
             document.getElementById('fc-score-ko').textContent = `${_fc.wrong} ko`;
             document.getElementById('fc-btn-prev').disabled = _fc.idx === 0;
             document.getElementById('fc-btn-next').textContent = _fc.idx === total - 1 ? 'Terminer' : 'Suivant →';
+            fcUpdateLevelButtons();
         };
-        window.fcMark = function (ok) { if (ok) _fc.correct++; else _fc.wrong++; fcNav(1); };
+        // Highlight the level button (Connu / À réviser / À apprendre) matching the
+        // saved level of the current word, using the same store as the vocab table.
+        function fcUpdateLevelButtons() {
+            const w = _fc.words?.[_fc.idx];
+            const buttons = document.querySelectorAll('.fc-lvl-btn');
+            if (!buttons.length) return;
+            const lvl = w ? (getLvlStore(_fc.bookId)[`${_fc.chapter}_${w.hangul}`] || 'none') : 'none';
+            buttons.forEach(b => b.classList.toggle('active', b.dataset.lvl === lvl));
+        }
+        // Set the mastery level for the current word (synced with the vocab table)
+        // and move to the next card.
+        window.fcMark = function (level) {
+            const w = _fc.words[_fc.idx];
+            if (level === 'green') _fc.correct++; else _fc.wrong++;
+            const data = getLvlStore(_fc.bookId);
+            data[`${_fc.chapter}_${w.hangul}`] = level;
+            saveLvlStore(_fc.bookId, data);
+            fcNav(1);
+        };
         window.fcSetMode = function (mode) {
             _fc.mode = mode;
             document.querySelectorAll('.fc-mode-btn').forEach((b, i) => {
