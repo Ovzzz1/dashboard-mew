@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,342 +10,1053 @@
     <link rel="stylesheet" href="static/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        #lesson-frame { width:100%; border:none; height:calc(100vh - 120px); border-radius:var(--radius); display:block; }
-        .lesson-viewer-bar { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:12px 20px; display:flex; align-items:center; gap:10px; margin-bottom:1rem; }
-        .lesson-viewer-bar a { color:var(--accent); text-decoration:none; font-size:0.875rem; font-weight:500; }
-        .lesson-viewer-bar a:hover { text-decoration:underline; }
-        .lesson-viewer-bar .crumb { color:var(--text-muted); font-size:0.85rem; }
-        .loading { display:flex; align-items:center; justify-content:center; min-height:200px; color:var(--text-dim); font-size:0.95rem; gap:10px; }
+        #lesson-frame {
+            width: 100%;
+            border: none;
+            height: calc(100vh - 120px);
+            border-radius: var(--radius);
+            display: block;
+        }
+
+        .lesson-viewer-bar {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .lesson-viewer-bar a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .lesson-viewer-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .lesson-viewer-bar .crumb {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            gap: 10px;
+        }
+
         /* Level dot */
-        .col-level { text-align:center; padding:0 6px !important; vertical-align:middle !important; cursor:pointer; width:36px; }
-        .level-dot { display:inline-block; width:14px; height:14px; border-radius:50%; background:transparent; border:2px solid var(--border); transition:all .2s ease; cursor:pointer; }
-        .col-level:hover .level-dot { transform:scale(1.4); border-color:var(--text-muted); }
-        tr[data-level="green"] .level-dot { background:var(--green); border-color:var(--green); box-shadow:0 0 6px var(--green); }
-        tr[data-level="orange"] .level-dot { background:var(--orange); border-color:var(--orange); box-shadow:0 0 6px var(--orange); }
-        tr[data-level="red"] .level-dot { background:var(--red); border-color:var(--red); box-shadow:0 0 6px var(--red); }
+        .col-level {
+            text-align: center;
+            padding: 0 6px !important;
+            vertical-align: middle !important;
+            cursor: pointer;
+            width: 36px;
+        }
+
+        .level-dot {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: transparent;
+            border: 2px solid var(--border);
+            transition: all .2s ease;
+            cursor: pointer;
+        }
+
+        .col-level:hover .level-dot {
+            transform: scale(1.4);
+            border-color: var(--text-muted);
+        }
+
+        tr[data-level="green"] .level-dot {
+            background: var(--green);
+            border-color: var(--green);
+            box-shadow: 0 0 6px var(--green);
+        }
+
+        tr[data-level="orange"] .level-dot {
+            background: var(--orange);
+            border-color: var(--orange);
+            box-shadow: 0 0 6px var(--orange);
+        }
+
+        tr[data-level="red"] .level-dot {
+            background: var(--red);
+            border-color: var(--red);
+            box-shadow: 0 0 6px var(--red);
+        }
+
         /* Add word btn in chapter sep */
-        .chapter-sep-content { display:flex; align-items:center; justify-content:space-between; width:100%; }
-        .add-word-btn { display:inline-flex; align-items:center; gap:5px; padding:5px 12px; border-radius:var(--radius-xs); border:1px solid var(--accent-dim); background:var(--accent-glow); color:var(--accent); font-size:.78rem; font-weight:600; cursor:pointer; transition:var(--transition); }
-        .add-word-btn:hover { background:var(--accent-dim); color:#fff; border-color:var(--accent); }
+        .chapter-sep-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .add-word-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 12px;
+            border-radius: var(--radius-xs);
+            border: 1px solid var(--accent-dim);
+            background: var(--accent-glow);
+            color: var(--accent);
+            font-size: .78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .add-word-btn:hover {
+            background: var(--accent-dim);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
         /* Level filter bar */
-        .level-filter-bar { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:1rem; padding:12px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); }
-        .lvl-filter-btn { padding:6px 14px; border-radius:20px; border:1px solid var(--border); background:var(--bg-card-alt); color:var(--text-dim); font-size:.82rem; font-weight:500; cursor:pointer; transition:var(--transition); }
-        .lvl-filter-btn:hover { border-color:var(--accent-dim); color:var(--text); }
-        .lvl-filter-btn.active { background:var(--accent-glow); border-color:var(--accent); color:var(--accent); font-weight:600; }
+        .level-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 1rem;
+            padding: 12px 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+        }
+
+        .lvl-filter-btn {
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: var(--bg-card-alt);
+            color: var(--text-dim);
+            font-size: .82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .lvl-filter-btn:hover {
+            border-color: var(--accent-dim);
+            color: var(--text);
+        }
+
+        .lvl-filter-btn.active {
+            background: var(--accent-glow);
+            border-color: var(--accent);
+            color: var(--accent);
+            font-weight: 600;
+        }
+
         /* Modal */
-        .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.65); backdrop-filter:blur(6px); z-index:400; }
-        .modal-overlay.open { display:block; }
-        .modal { position:fixed; top:50%; left:50%; transform:translate(-50%,-52%) scale(.96); z-index:500; width:min(540px,94vw); background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:0 24px 60px rgba(0,0,0,.5); padding:1.75rem 2rem; opacity:0; pointer-events:none; transition:opacity .25s ease,transform .25s cubic-bezier(.34,1.56,.64,1); }
-        .modal.open { opacity:1; pointer-events:all; transform:translate(-50%,-50%) scale(1); }
-        .modal-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:.4rem; }
-        .modal-title { font-size:1.15rem; font-weight:700; display:flex; align-items:center; gap:8px; }
-        .modal-subtitle { font-size:.82rem; color:var(--accent); font-weight:600; margin-bottom:1.2rem; }
-        .modal-close { width:32px; height:32px; border-radius:8px; border:1px solid var(--border); background:var(--bg-card-alt); color:var(--text-dim); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:var(--transition); }
-        .modal-close:hover { border-color:var(--red); color:var(--red); }
-        .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:1.5rem; }
-        .form-group { display:flex; flex-direction:column; gap:6px; }
-        .form-group-full { grid-column:1/-1; }
-        .form-label { font-size:.78rem; font-weight:600; text-transform:uppercase; letter-spacing:.5px; color:var(--text-dim); }
-        .form-label .req { color:var(--red); }
-        .form-input { padding:10px 14px; background:var(--bg-card-alt); border:1px solid var(--border); border-radius:var(--radius-xs); color:var(--text); font-size:.9rem; font-family:inherit; outline:none; transition:var(--transition); }
-        .form-input::placeholder { color:var(--text-muted); }
-        .form-input:focus { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-glow); }
-        .form-textarea { resize:vertical; min-height:68px; }
-        .modal-actions { display:flex; gap:12px; justify-content:flex-end; }
-        .btn-primary { display:inline-flex; align-items:center; gap:6px; padding:10px 22px; border-radius:var(--radius-sm); border:none; background:var(--accent); color:#fff; font-size:.9rem; font-weight:600; cursor:pointer; transition:var(--transition); }
-        .btn-primary:hover { opacity:.88; }
-        .btn-primary:disabled { opacity:.5; cursor:not-allowed; }
-        .btn-secondary { padding:10px 18px; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--bg-card-alt); color:var(--text-dim); font-size:.9rem; font-weight:500; cursor:pointer; transition:var(--transition); }
-        .btn-secondary:hover { border-color:var(--text-dim); color:var(--text); }
-        .modal-success { display:flex; align-items:center; gap:10px; padding:14px 18px; border-radius:var(--radius-sm); background:rgba(22,163,74,.1); border:1px solid rgba(22,163,74,.3); color:var(--green); font-weight:500; margin-top:.5rem; }
-        @media(max-width:480px) { .form-grid{grid-template-columns:1fr;} .modal{padding:1.25rem;} }
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .65);
+            backdrop-filter: blur(6px);
+            z-index: 400;
+        }
+
+        .modal-overlay.open {
+            display: block;
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -52%) scale(.96);
+            z-index: 500;
+            width: min(540px, 94vw);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+            padding: 1.75rem 2rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .25s ease, transform .25s cubic-bezier(.34, 1.56, .64, 1);
+        }
+
+        .modal.open {
+            opacity: 1;
+            pointer-events: all;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: .4rem;
+        }
+
+        .modal-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-subtitle {
+            font-size: .82rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+        }
+
+        .modal-close {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-card-alt);
+            color: var(--text-dim);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            border-color: var(--red);
+            color: var(--red);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group-full {
+            grid-column: 1/-1;
+        }
+
+        .form-label {
+            font-size: .78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            color: var(--text-dim);
+        }
+
+        .form-label .req {
+            color: var(--red);
+        }
+
+        .form-input {
+            padding: 10px 14px;
+            background: var(--bg-card-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xs);
+            color: var(--text);
+            font-size: .9rem;
+            font-family: inherit;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .form-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 68px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 22px;
+            border-radius: var(--radius-sm);
+            border: none;
+            background: var(--accent);
+            color: #fff;
+            font-size: .9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            opacity: .88;
+        }
+
+        .btn-primary:disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            padding: 10px 18px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: var(--bg-card-alt);
+            color: var(--text-dim);
+            font-size: .9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-dim);
+            color: var(--text);
+        }
+
+        .modal-success {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 18px;
+            border-radius: var(--radius-sm);
+            background: rgba(22, 163, 74, .1);
+            border: 1px solid rgba(22, 163, 74, .3);
+            color: var(--green);
+            font-weight: 500;
+            margin-top: .5rem;
+        }
+
+        @media(max-width:480px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal {
+                padding: 1.25rem;
+            }
+        }
 
         /* ── PRACTICE ENTRY BUTTONS (on vocab page) ── */
-        .practice-bar { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 4px; }
-        .practice-btn { display:inline-flex; align-items:center; gap:6px; padding:7px 16px; border-radius:20px; border:1px solid var(--accent-dim); background:var(--accent-glow); color:var(--accent); font-size:.82rem; font-weight:600; cursor:pointer; text-decoration:none; transition:var(--transition); }
-        .practice-btn:hover { background:var(--accent-dim); color:#fff; border-color:var(--accent); }
-        .practice-btn.test-btn { border-color:rgba(22,163,74,.4); background:rgba(22,163,74,.07); color:var(--green); }
-        .practice-btn.test-btn:hover { background:rgba(22,163,74,.18); color:#fff; border-color:var(--green); }
+        .practice-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0 4px;
+        }
+
+        .practice-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--accent-dim);
+            background: var(--accent-glow);
+            color: var(--accent);
+            font-size: .82rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .practice-btn:hover {
+            background: var(--accent-dim);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .practice-btn.test-btn {
+            border-color: rgba(22, 163, 74, .4);
+            background: rgba(22, 163, 74, .07);
+            color: var(--green);
+        }
+
+        .practice-btn.test-btn:hover {
+            background: rgba(22, 163, 74, .18);
+            color: #fff;
+            border-color: var(--green);
+        }
 
         /* ── FLASHCARD ── */
-        .fc-wrap { max-width:640px; margin:0 auto; padding-top:8px; }
-        .fc-hero { margin-bottom:24px; }
-        .fc-hero h1 { font-size:1.8em; font-weight:700; margin-bottom:4px; }
-        .fc-hero p { color:var(--text-muted); font-size:.9rem; }
-        .fc-progress-row { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
-        .fc-counter { font-size:.85rem; font-weight:600; color:var(--text-dim); min-width:56px; }
-        .fc-progress-bar { flex:1; height:5px; background:var(--border); border-radius:3px; overflow:hidden; }
-        .fc-progress-fill { height:100%; background:var(--accent); border-radius:3px; transition:width .35s ease; }
-        .fc-score-row { display:flex; gap:10px; margin-bottom:18px; font-size:.82rem; font-weight:600; }
-        .fc-score-ok { color:var(--green); } .fc-score-ko { color:var(--red); }
-        .card-perspective { perspective:1200px; margin-bottom:20px; }
-        .card-inner { position:relative; width:100%; height:240px; transform-style:preserve-3d; transition:transform .45s cubic-bezier(.4,0,.2,1); cursor:pointer; }
-        .card-inner.flipped { transform:rotateY(180deg); }
-        .card-face { position:absolute; inset:0; backface-visibility:hidden; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:28px 32px; }
-        .card-front { background:var(--bg-card); border:2px solid var(--border); }
-        .card-back { background:var(--accent-glow); border:2px solid var(--accent); transform:rotateY(180deg); }
-        .card-lang-badge { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:10px; }
-        .card-word { font-size:2rem; font-weight:700; text-align:center; line-height:1.3; }
-        .card-hint { font-size:.78rem; color:var(--text-muted); margin-top:12px; text-align:center; }
-        .card-controls { display:flex; gap:10px; justify-content:center; margin-bottom:14px; }
-        .fc-btn { display:inline-flex; align-items:center; gap:5px; padding:9px 20px; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--bg-card-alt); color:var(--text-dim); font-size:.88rem; font-weight:600; cursor:pointer; transition:var(--transition); }
-        .fc-btn:hover { border-color:var(--accent); color:var(--accent); }
-        .fc-btn.primary { background:var(--accent-glow); border-color:var(--accent); color:var(--accent); }
-        .fc-btn:disabled { opacity:.35; cursor:not-allowed; }
-        .fc-btn-ok { border-color:rgba(22,163,74,.5); color:var(--green); background:rgba(22,163,74,.07); }
-        .fc-btn-ok:hover { background:rgba(22,163,74,.18); }
-        .fc-btn-ko { border-color:rgba(205,46,58,.5); color:var(--red); background:rgba(205,46,58,.07); }
-        .fc-btn-ko:hover { background:rgba(205,46,58,.18); }
-        .fc-mode-bar { display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap; }
-        .fc-mode-btn { padding:5px 13px; border-radius:20px; border:1px solid var(--border); background:var(--bg-card-alt); color:var(--text-dim); font-size:.78rem; font-weight:600; cursor:pointer; transition:var(--transition); }
-        .fc-mode-btn.active { background:var(--accent-glow); border-color:var(--accent); color:var(--accent); }
-        .fc-end { text-align:center; padding:40px 20px; }
-        .fc-end h2 { font-size:1.6em; margin-bottom:8px; }
-        .fc-end .score-big { font-size:3em; font-weight:700; color:var(--accent); margin:12px 0; }
+        .fc-wrap {
+            max-width: 640px;
+            margin: 0 auto;
+            padding-top: 8px;
+        }
+
+        .fc-hero {
+            margin-bottom: 24px;
+        }
+
+        .fc-hero h1 {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .fc-hero p {
+            color: var(--text-muted);
+            font-size: .9rem;
+        }
+
+        .fc-progress-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .fc-counter {
+            font-size: .85rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            min-width: 56px;
+        }
+
+        .fc-progress-bar {
+            flex: 1;
+            height: 5px;
+            background: var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .fc-progress-fill {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 3px;
+            transition: width .35s ease;
+        }
+
+        .fc-score-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+            font-size: .82rem;
+            font-weight: 600;
+        }
+
+        .fc-score-ok {
+            color: var(--green);
+        }
+
+        .fc-score-ko {
+            color: var(--red);
+        }
+
+        .card-perspective {
+            perspective: 1200px;
+            margin-bottom: 20px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            transform-style: preserve-3d;
+            transition: transform .45s cubic-bezier(.4, 0, .2, 1);
+            cursor: pointer;
+        }
+
+        .card-inner.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 28px 32px;
+        }
+
+        .card-front {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+        }
+
+        .card-back {
+            background: var(--accent-glow);
+            border: 2px solid var(--accent);
+            transform: rotateY(180deg);
+        }
+
+        .card-lang-badge {
+            font-size: .7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .card-word {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .card-hint {
+            font-size: .78rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .card-controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+
+        .fc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 9px 20px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: var(--bg-card-alt);
+            color: var(--text-dim);
+            font-size: .88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .fc-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .fc-btn.primary {
+            background: var(--accent-glow);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .fc-btn:disabled {
+            opacity: .35;
+            cursor: not-allowed;
+        }
+
+        .fc-btn-ok {
+            border-color: rgba(22, 163, 74, .5);
+            color: var(--green);
+            background: rgba(22, 163, 74, .07);
+        }
+
+        .fc-btn-ok:hover {
+            background: rgba(22, 163, 74, .18);
+        }
+
+        .fc-btn-ko {
+            border-color: rgba(205, 46, 58, .5);
+            color: var(--red);
+            background: rgba(205, 46, 58, .07);
+        }
+
+        .fc-btn-ko:hover {
+            background: rgba(205, 46, 58, .18);
+        }
+
+        .fc-mode-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        .fc-mode-btn {
+            padding: 5px 13px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: var(--bg-card-alt);
+            color: var(--text-dim);
+            font-size: .78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .fc-mode-btn.active {
+            background: var(--accent-glow);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .fc-end {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .fc-end h2 {
+            font-size: 1.6em;
+            margin-bottom: 8px;
+        }
+
+        .fc-end .score-big {
+            font-size: 3em;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 12px 0;
+        }
 
         /* ── TEST ── */
-        .test-wrap { max-width:640px; margin:0 auto; padding-top:8px; }
-        .test-hero { margin-bottom:24px; }
-        .test-hero h1 { font-size:1.8em; font-weight:700; margin-bottom:4px; }
-        .test-hero p { color:var(--text-muted); font-size:.9rem; }
-        .test-question-card { background:var(--bg-card); border:2px solid var(--border); border-radius:12px; padding:36px 32px; text-align:center; margin-bottom:20px; }
-        .test-dir-badge { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:12px; }
-        .test-q-word { font-size:2.2rem; font-weight:700; line-height:1.3; margin-bottom:6px; }
-        .test-q-sub { font-size:.85rem; color:var(--text-muted); }
-        .test-input-row { display:flex; gap:10px; margin-bottom:12px; }
-        .test-input { flex:1; padding:13px 18px; background:var(--bg-card-alt); border:2px solid var(--border); border-radius:var(--radius-sm); color:var(--text); font-size:1.05rem; font-family:inherit; outline:none; transition:var(--transition); }
-        .test-input:focus { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-glow); }
-        .test-input.correct { border-color:var(--green); background:rgba(22,163,74,.07); }
-        .test-input.wrong { border-color:var(--red); background:rgba(205,46,58,.07); }
-        .test-submit-btn { padding:13px 24px; border-radius:var(--radius-sm); border:none; background:var(--accent); color:#fff; font-size:.95rem; font-weight:700; cursor:pointer; transition:var(--transition); white-space:nowrap; }
-        .test-submit-btn:hover { opacity:.88; }
-        .test-feedback { padding:13px 18px; border-radius:var(--radius-sm); font-weight:600; margin-bottom:12px; display:none; }
-        .test-feedback.show { display:block; }
-        .test-feedback.ok { background:rgba(22,163,74,.1); border:1px solid rgba(22,163,74,.3); color:var(--green); }
-        .test-feedback.ko { background:rgba(205,46,58,.08); border:1px solid rgba(205,46,58,.3); color:var(--red); }
-        .test-next-btn { width:100%; padding:12px; border-radius:var(--radius-sm); border:1px solid var(--accent); background:var(--accent-glow); color:var(--accent); font-size:.95rem; font-weight:700; cursor:pointer; transition:var(--transition); display:none; }
-        .test-next-btn.show { display:block; }
-        .test-next-btn:hover { background:var(--accent-dim); color:#fff; }
-        .test-results { background:var(--bg-card); border:2px solid var(--border); border-radius:12px; padding:32px; }
-        .test-results h2 { font-size:1.5em; margin-bottom:6px; }
-        .test-score-display { font-size:3em; font-weight:700; color:var(--accent); margin:12px 0 20px; }
-        .test-wrong-list { margin-top:16px; }
-        .test-wrong-item { display:flex; gap:12px; align-items:baseline; padding:10px 14px; border-radius:8px; background:rgba(205,46,58,.06); border:1px solid rgba(205,46,58,.2); margin-bottom:8px; }
-        .test-wrong-kr { font-weight:700; font-size:1.05em; min-width:120px; }
-        .test-wrong-arrow { color:var(--text-muted); }
-        .test-wrong-fr { color:var(--text-dim); }
-        .test-wrong-your { color:var(--red); font-size:.85em; margin-left:auto; }
+        .test-wrap {
+            max-width: 640px;
+            margin: 0 auto;
+            padding-top: 8px;
+        }
+
+        .test-hero {
+            margin-bottom: 24px;
+        }
+
+        .test-hero h1 {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .test-hero p {
+            color: var(--text-muted);
+            font-size: .9rem;
+        }
+
+        .test-question-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 36px 32px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .test-dir-badge {
+            font-size: .7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .test-q-word {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 6px;
+        }
+
+        .test-q-sub {
+            font-size: .85rem;
+            color: var(--text-muted);
+        }
+
+        .test-input-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .test-input {
+            flex: 1;
+            padding: 13px 18px;
+            background: var(--bg-card-alt);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text);
+            font-size: 1.05rem;
+            font-family: inherit;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .test-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+
+        .test-input.correct {
+            border-color: var(--green);
+            background: rgba(22, 163, 74, .07);
+        }
+
+        .test-input.wrong {
+            border-color: var(--red);
+            background: rgba(205, 46, 58, .07);
+        }
+
+        .test-submit-btn {
+            padding: 13px 24px;
+            border-radius: var(--radius-sm);
+            border: none;
+            background: var(--accent);
+            color: #fff;
+            font-size: .95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .test-submit-btn:hover {
+            opacity: .88;
+        }
+
+        .test-feedback {
+            padding: 13px 18px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: none;
+        }
+
+        .test-feedback.show {
+            display: block;
+        }
+
+        .test-feedback.ok {
+            background: rgba(22, 163, 74, .1);
+            border: 1px solid rgba(22, 163, 74, .3);
+            color: var(--green);
+        }
+
+        .test-feedback.ko {
+            background: rgba(205, 46, 58, .08);
+            border: 1px solid rgba(205, 46, 58, .3);
+            color: var(--red);
+        }
+
+        .test-next-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--accent);
+            background: var(--accent-glow);
+            color: var(--accent);
+            font-size: .95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: none;
+        }
+
+        .test-next-btn.show {
+            display: block;
+        }
+
+        .test-next-btn:hover {
+            background: var(--accent-dim);
+            color: #fff;
+        }
+
+        .test-results {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .test-results h2 {
+            font-size: 1.5em;
+            margin-bottom: 6px;
+        }
+
+        .test-score-display {
+            font-size: 3em;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 12px 0 20px;
+        }
+
+        .test-wrong-list {
+            margin-top: 16px;
+        }
+
+        .test-wrong-item {
+            display: flex;
+            gap: 12px;
+            align-items: baseline;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: rgba(205, 46, 58, .06);
+            border: 1px solid rgba(205, 46, 58, .2);
+            margin-bottom: 8px;
+        }
+
+        .test-wrong-kr {
+            font-weight: 700;
+            font-size: 1.05em;
+            min-width: 120px;
+        }
+
+        .test-wrong-arrow {
+            color: var(--text-muted);
+        }
+
+        .test-wrong-fr {
+            color: var(--text-dim);
+        }
+
+        .test-wrong-your {
+            color: var(--red);
+            font-size: .85em;
+            margin-left: auto;
+        }
     </style>
 </head>
+
 <body>
 
-<aside class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-        <a href="#" class="sidebar-brand">
-            <img src="static/images/logo-sk.png" alt="Mew" class="sidebar-logo">
-            <span class="sidebar-title">Mew</span>
-        </a>
-    </div>
-    <nav class="sidebar-nav">
-        <div class="nav-section-label">Navigation</div>
-        <a href="#" class="sidebar-link" id="nav-vocab">
-            <span class="sidebar-icon"><i data-lucide="book"></i></span>
-            <span>Vocabulaire</span>
-        </a>
-        <a href="#lessons" class="sidebar-link" id="nav-lessons">
-            <span class="sidebar-icon"><i data-lucide="pen-tool"></i></span>
-            <span>Lessons</span>
-        </a>
-        <a href="#flashcard" class="sidebar-link" id="nav-flashcard">
-            <span class="sidebar-icon"><i data-lucide="layers"></i></span>
-            <span>Flashcards</span>
-        </a>
-        <a href="#test" class="sidebar-link" id="nav-test">
-            <span class="sidebar-icon"><i data-lucide="check-square"></i></span>
-            <span>Test</span>
-        </a>
-        <a href="#youtube" class="sidebar-link" id="nav-youtube">
-            <span class="sidebar-icon"><i data-lucide="play-circle"></i></span>
-            <span>Vidéos</span>
-        </a>
-        <div id="sidebar-extra"></div>
-    </nav>
-    <div class="sidebar-footer">
-        <div class="sidebar-footer-text">
-            <span class="kr">한국어</span> Dashboard
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="sidebar-brand">
+                <img src="static/images/logo-sk.png" alt="Mew" class="sidebar-logo">
+                <span class="sidebar-title">Mew</span>
+            </a>
         </div>
-    </div>
-</aside>
-
-<div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
-
-<div class="main-wrap">
-    <div class="topbar">
-        <button class="topbar-toggle" onclick="toggleSidebar()">
-            <span></span><span></span><span></span>
-        </button>
-        <a href="#" class="topbar-brand">
-            <img src="static/images/logo-sk.png" alt="Mew" class="topbar-logo">
-            <span>Mew</span>
-        </a>
-    </div>
-    <main id="content"><div class="loading">Chargement…</div></main>
-</div>
-
-<!-- Add word modal -->
-<div class="modal-overlay" id="modal-overlay" onclick="closeAddModal()"></div>
-<div class="modal" id="add-word-modal">
-    <div class="modal-header">
-        <h2 class="modal-title"><i data-lucide="plus-circle" class="icon-sm"></i> Ajouter un mot</h2>
-        <button class="modal-close" onclick="closeAddModal()"><i data-lucide="x" class="icon-sm"></i></button>
-    </div>
-    <p class="modal-subtitle" id="modal-subtitle"></p>
-    <form id="add-word-form" onsubmit="submitNewWord(event)">
-        <div class="form-grid">
-            <div class="form-group">
-                <label class="form-label" for="fw-hangul">한글 <span class="req">*</span></label>
-                <input class="form-input" id="fw-hangul" type="text" placeholder="가다" required>
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="fw-french">Français <span class="req">*</span></label>
-                <input class="form-input" id="fw-french" type="text" placeholder="aller" required>
-            </div>
-            <div class="form-group form-group-full">
-                <label class="form-label" for="fw-example">Exemple</label>
-                <input class="form-input" id="fw-example" type="text" placeholder="저는 학교에 가요.">
-            </div>
-            <div class="form-group form-group-full">
-                <label class="form-label" for="fw-translated">Traduction</label>
-                <input class="form-input" id="fw-translated" type="text" placeholder="Je vais à l'école.">
-            </div>
-            <div class="form-group form-group-full">
-                <label class="form-label" for="fw-explanation">Explication</label>
-                <textarea class="form-input form-textarea" id="fw-explanation" placeholder="Notes..."></textarea>
+        <nav class="sidebar-nav">
+            <div class="nav-section-label">Navigation</div>
+            <a href="#" class="sidebar-link" id="nav-vocab">
+                <span class="sidebar-icon"><i data-lucide="book"></i></span>
+                <span>Vocabulaire</span>
+            </a>
+            <a href="#lessons" class="sidebar-link" id="nav-lessons">
+                <span class="sidebar-icon"><i data-lucide="pen-tool"></i></span>
+                <span>Lessons</span>
+            </a>
+            <a href="#flashcard" class="sidebar-link" id="nav-flashcard">
+                <span class="sidebar-icon"><i data-lucide="layers"></i></span>
+                <span>Flashcards</span>
+            </a>
+            <a href="#test" class="sidebar-link" id="nav-test">
+                <span class="sidebar-icon"><i data-lucide="check-square"></i></span>
+                <span>Test</span>
+            </a>
+            <a href="#youtube" class="sidebar-link" id="nav-youtube">
+                <span class="sidebar-icon"><i data-lucide="play-circle"></i></span>
+                <span>Vidéos</span>
+            </a>
+            <div id="sidebar-extra"></div>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="sidebar-footer-text">
+                <span class="kr">한국어</span> Dashboard
             </div>
         </div>
-        <div class="modal-actions">
-            <button type="button" class="btn-secondary" onclick="closeAddModal()">Annuler</button>
-            <button type="submit" class="btn-primary" id="btn-submit-word"><i data-lucide="save" class="icon-xs"></i> Enregistrer</button>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <div class="main-wrap">
+        <div class="topbar">
+            <button class="topbar-toggle" onclick="toggleSidebar()">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="#" class="topbar-brand">
+                <img src="static/images/logo-sk.png" alt="Mew" class="topbar-logo">
+                <span>Mew</span>
+            </a>
         </div>
-    </form>
-    <div class="modal-success" id="modal-success" style="display:none">
-        <span>✅ Mot ajouté avec succès !</span>
+        <main id="content">
+            <div class="loading">Chargement…</div>
+        </main>
     </div>
-</div>
 
-<script>
-// ================================================================
-// DATA (inlined from manifest.json — auto-updated by LLM)
-// ================================================================
-let MANIFEST = null;
-const bookCache = {};
+    <!-- Add word modal -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeAddModal()"></div>
+    <div class="modal" id="add-word-modal">
+        <div class="modal-header">
+            <h2 class="modal-title"><i data-lucide="plus-circle" class="icon-sm"></i> Ajouter un mot</h2>
+            <button class="modal-close" onclick="closeAddModal()"><i data-lucide="x" class="icon-sm"></i></button>
+        </div>
+        <p class="modal-subtitle" id="modal-subtitle"></p>
+        <form id="add-word-form" onsubmit="submitNewWord(event)">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label class="form-label" for="fw-hangul">한글 <span class="req">*</span></label>
+                    <input class="form-input" id="fw-hangul" type="text" placeholder="가다" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="fw-french">Français <span class="req">*</span></label>
+                    <input class="form-input" id="fw-french" type="text" placeholder="aller" required>
+                </div>
+                <div class="form-group form-group-full">
+                    <label class="form-label" for="fw-example">Exemple</label>
+                    <input class="form-input" id="fw-example" type="text" placeholder="저는 학교에 가요.">
+                </div>
+                <div class="form-group form-group-full">
+                    <label class="form-label" for="fw-translated">Traduction</label>
+                    <input class="form-input" id="fw-translated" type="text" placeholder="Je vais à l'école.">
+                </div>
+                <div class="form-group form-group-full">
+                    <label class="form-label" for="fw-explanation">Explication</label>
+                    <textarea class="form-input form-textarea" id="fw-explanation" placeholder="Notes..."></textarea>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn-secondary" onclick="closeAddModal()">Annuler</button>
+                <button type="submit" class="btn-primary" id="btn-submit-word"><i data-lucide="save"
+                        class="icon-xs"></i> Enregistrer</button>
+            </div>
+        </form>
+        <div class="modal-success" id="modal-success" style="display:none">
+            <span>✅ Mot ajouté avec succès !</span>
+        </div>
+    </div>
 
-// ================================================================
-// CSV PARSER
-// ================================================================
-function parseCSV(text) {
-    const rows = [];
-    let row = [], field = '', inQ = false;
-    for (let i = 0; i < text.length; i++) {
-        const ch = text[i];
-        if (inQ) {
-            if (ch === '"') { if (text[i+1] === '"') { field += '"'; i++; } else inQ = false; }
-            else field += ch;
-        } else {
-            if (ch === '"') inQ = true;
-            else if (ch === ',') { row.push(field); field = ''; }
-            else if (ch === '\n' || ch === '\r') {
-                if (ch === '\r' && text[i+1] === '\n') i++;
-                row.push(field); field = '';
-                if (row.some(f => f)) rows.push(row);
-                row = [];
-            } else field += ch;
+    <script>
+        // ================================================================
+        // DATA (inlined from manifest.json — auto-updated by LLM)
+        // ================================================================
+        let MANIFEST = null;
+        const bookCache = {};
+
+        // ================================================================
+        // CSV PARSER
+        // ================================================================
+        function parseCSV(text) {
+            const rows = [];
+            let row = [], field = '', inQ = false;
+            for (let i = 0; i < text.length; i++) {
+                const ch = text[i];
+                if (inQ) {
+                    if (ch === '"') { if (text[i + 1] === '"') { field += '"'; i++; } else inQ = false; }
+                    else field += ch;
+                } else {
+                    if (ch === '"') inQ = true;
+                    else if (ch === ',') { row.push(field); field = ''; }
+                    else if (ch === '\n' || ch === '\r') {
+                        if (ch === '\r' && text[i + 1] === '\n') i++;
+                        row.push(field); field = '';
+                        if (row.some(f => f)) rows.push(row);
+                        row = [];
+                    } else field += ch;
+                }
+            }
+            if (field || row.length) { row.push(field); if (row.some(f => f)) rows.push(row); }
+            return rows;
         }
-    }
-    if (field || row.length) { row.push(field); if (row.some(f => f)) rows.push(row); }
-    return rows;
-}
 
-function parseVocabCSV(text, bookId) {
-    const rows = parseCSV(text);
-    const chapters = {};
-    let cur = 0;
-    let total = 0;
-    for (let i = 1; i < rows.length; i++) {
-        const [h='', fr='', ex='', tr='', expl=''] = rows[i].map(s => s.trim());
-        if (h && /^\d+과$/.test(h) && !fr) {
-            cur = parseInt(h);
-            if (!chapters[cur]) chapters[cur] = [];
-            continue;
+        function parseVocabCSV(text, bookId) {
+            const rows = parseCSV(text);
+            const chapters = {};
+            let cur = 0;
+            let total = 0;
+            for (let i = 1; i < rows.length; i++) {
+                const [h = '', fr = '', ex = '', tr = '', expl = ''] = rows[i].map(s => s.trim());
+                if (h && /^\d+과$/.test(h) && !fr) {
+                    cur = parseInt(h);
+                    if (!chapters[cur]) chapters[cur] = [];
+                    continue;
+                }
+                if (!h && !fr) continue;
+                if (!chapters[cur]) chapters[cur] = [];
+                chapters[cur].push({ hangul: h, french: fr, example: ex, translated: tr, explanation: expl });
+                total++;
+            }
+            return { id: bookId, name: `Vocab ${bookId}`, chapters, total };
         }
-        if (!h && !fr) continue;
-        if (!chapters[cur]) chapters[cur] = [];
-        chapters[cur].push({ hangul: h, french: fr, example: ex, translated: tr, explanation: expl });
-        total++;
-    }
-    return { id: bookId, name: `Vocab ${bookId}`, chapters, total };
-}
 
-async function fetchBook(bookId) {
-    if (bookCache[bookId]) return bookCache[bookId];
-    const res = await fetch(`content/vocab/Vocab ${bookId}.csv`);
-    const text = await res.text();
-    bookCache[bookId] = parseVocabCSV(text, bookId);
-    return bookCache[bookId];
-}
+        async function fetchBook(bookId) {
+            if (bookCache[bookId]) return bookCache[bookId];
+            const res = await fetch(`content/vocab/Vocab ${bookId}.csv`);
+            const text = await res.text();
+            bookCache[bookId] = parseVocabCSV(text, bookId);
+            return bookCache[bookId];
+        }
 
-// ================================================================
-// ROUTING
-// ================================================================
-function getRoute() {
-    const h = decodeURIComponent(location.hash || '#');
-    const parts = h.slice(1).split('/').filter(Boolean);
-    return { page: parts[0] || '', args: parts.slice(1) };
-}
+        // ================================================================
+        // ROUTING
+        // ================================================================
+        function getRoute() {
+            const h = decodeURIComponent(location.hash || '#');
+            const parts = h.slice(1).split('/').filter(Boolean);
+            return { page: parts[0] || '', args: parts.slice(1) };
+        }
 
-window.addEventListener('hashchange', route);
-window.addEventListener('load', async () => {
-    const res = await fetch('content/manifest.json');
-    MANIFEST = await res.json();
-    route();
-});
+        window.addEventListener('hashchange', route);
+        window.addEventListener('load', async () => {
+            const res = await fetch('content/manifest.json');
+            MANIFEST = await res.json();
+            route();
+        });
 
-async function route() {
-    const { page, args } = getRoute();
-    setNavActive(page);
-    const el = document.getElementById('content');
-    el.innerHTML = '<div class="loading">Chargement…</div>';
-    lucide.createIcons();
+        async function route() {
+            const { page, args } = getRoute();
+            setNavActive(page);
+            const el = document.getElementById('content');
+            el.innerHTML = '<div class="loading">Chargement…</div>';
+            lucide.createIcons();
 
-    if (!page || page === '') { await renderHome(); }
-    else if (page === 'vocab') { await renderVocab(args[0], args[1] ? parseInt(args[1]) : null); }
-    else if (page === 'lessons') { renderLessons(args[0] || null); }
-    else if (page === 'lesson') { renderLesson(args[0], args.slice(1).join('/')); }
-    else if (page === 'flashcard') { await renderFlashcard(args[0] || null, args[1] ? parseInt(args[1]) : null); }
-    else if (page === 'test') { await renderTest(args[0] || null, args[1] ? parseInt(args[1]) : null); }
-    else if (page === 'youtube') { await renderYoutube(); }
-}
+            if (!page || page === '') { await renderHome(); }
+            else if (page === 'vocab') { await renderVocab(args[0], args[1] ? parseInt(args[1]) : null); }
+            else if (page === 'lessons') { renderLessons(args[0] || null); }
+            else if (page === 'lesson') { renderLesson(args[0], args.slice(1).join('/')); }
+            else if (page === 'flashcard') { await renderFlashcard(args[0] || null, args[1] ? parseInt(args[1]) : null); }
+            else if (page === 'test') { await renderTest(args[0] || null, args[1] ? parseInt(args[1]) : null); }
+            else if (page === 'youtube') { await renderYoutube(); }
+        }
 
-function setNavActive(page) {
-    document.getElementById('nav-vocab').classList.toggle('active', !page || page === '' || page === 'vocab');
-    document.getElementById('nav-lessons').classList.toggle('active', page === 'lessons' || page === 'lesson');
-    document.getElementById('nav-flashcard').classList.toggle('active', page === 'flashcard');
-    document.getElementById('nav-test').classList.toggle('active', page === 'test');
-    document.getElementById('nav-youtube').classList.toggle('active', page === 'youtube');
-}
+        function setNavActive(page) {
+            document.getElementById('nav-vocab').classList.toggle('active', !page || page === '' || page === 'vocab');
+            document.getElementById('nav-lessons').classList.toggle('active', page === 'lessons' || page === 'lesson');
+            document.getElementById('nav-flashcard').classList.toggle('active', page === 'flashcard');
+            document.getElementById('nav-test').classList.toggle('active', page === 'test');
+            document.getElementById('nav-youtube').classList.toggle('active', page === 'youtube');
+        }
 
-// ================================================================
-// HOME — books grid
-// ================================================================
-async function renderHome() {
-    const books = [];
-    for (const id of MANIFEST.books) {
-        const b = await fetchBook(id);
-        books.push(b);
-    }
+        // ================================================================
+        // HOME — books grid
+        // ================================================================
+        async function renderHome() {
+            const books = [];
+            for (const id of MANIFEST.books) {
+                const b = await fetchBook(id);
+                books.push(b);
+            }
 
-    // Sidebar extra: book links
-    document.getElementById('sidebar-extra').innerHTML = `
+            // Sidebar extra: book links
+            document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">Livres</div>
         ${books.map(b => `
         <a href="#vocab/${b.id}" class="sidebar-link">
@@ -353,9 +1065,9 @@ async function renderHome() {
         </a>`).join('')}
     `;
 
-    const totalWords = books.reduce((s, b) => s + b.total, 0);
+            const totalWords = books.reduce((s, b) => s + b.total, 0);
 
-    document.getElementById('content').innerHTML = `
+            document.getElementById('content').innerHTML = `
         <div class="hero">
             <h1><span class="kr">한국어</span> Vocabulary</h1>
             <p class="subtitle">${books.length} livres &bull; ${totalWords} mots au total</p>
@@ -381,23 +1093,23 @@ async function renderHome() {
             }).join('')}
         </div>
     `;
-    lucide.createIcons();
-}
+            lucide.createIcons();
+        }
 
-// ================================================================
-// VOCAB — table with chapters, search, toggle
-// ================================================================
-async function renderVocab(bookId, selectedChapter) {
-    if (!bookId) { location.hash = '#'; return; }
-    const book = await fetchBook(bookId);
-    const books = [];
-    for (const id of MANIFEST.books) books.push(await fetchBook(id));
+        // ================================================================
+        // VOCAB — table with chapters, search, toggle
+        // ================================================================
+        async function renderVocab(bookId, selectedChapter) {
+            if (!bookId) { location.hash = '#'; return; }
+            const book = await fetchBook(bookId);
+            const books = [];
+            for (const id of MANIFEST.books) books.push(await fetchBook(id));
 
-    const chNums = Object.keys(book.chapters).map(Number).sort((a,b)=>a-b);
-    const avgPerCh = chNums.length ? Math.round(book.total / chNums.length) : 0;
+            const chNums = Object.keys(book.chapters).map(Number).sort((a, b) => a - b);
+            const avgPerCh = chNums.length ? Math.round(book.total / chNums.length) : 0;
 
-    // Sidebar
-    document.getElementById('sidebar-extra').innerHTML = `
+            // Sidebar
+            document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">Livres</div>
         ${books.map(b => `
         <a href="#vocab/${b.id}" class="sidebar-link ${b.id === bookId ? 'active' : ''}">
@@ -416,19 +1128,19 @@ async function renderVocab(bookId, selectedChapter) {
         </div>
     `;
 
-    // Build table rows (with level dot + custom words from localStorage)
-    let counter = 0;
-    const customWords = getCustomWords(bookId);
-    const rowsHTML = chNums.filter(n => selectedChapter === null || selectedChapter === n).map(n => {
-        const allWords = [...book.chapters[n], ...(customWords[n] || [])];
-        const sepRow = `<tr class="chapter-sep" data-chapter="${n}">
+            // Build table rows (with level dot + custom words from localStorage)
+            let counter = 0;
+            const customWords = getCustomWords(bookId);
+            const rowsHTML = chNums.filter(n => selectedChapter === null || selectedChapter === n).map(n => {
+                const allWords = [...book.chapters[n], ...(customWords[n] || [])];
+                const sepRow = `<tr class="chapter-sep" data-chapter="${n}">
             <td colspan="7"><div class="chapter-sep-content"><span><i data-lucide="book" class="icon-xs"></i> Chapitre ${n}과 — ${allWords.length} mots</span>
             <button class="add-word-btn" onclick="openAddModal('${bookId}',${n},event)"><i data-lucide="plus" class="icon-xs"></i> Ajouter</button></div></td>
         </tr>`;
-        const wordRows = allWords.map(e => {
-            counter++;
-            const key = `${n}_${e.hangul}`;
-            return `<tr class="vocab-row" data-hangul="${e.hangul.toLowerCase()}" data-french="${e.french.toLowerCase()}" data-level="none" data-lkey="${key}" onclick="this.classList.toggle('expanded')">
+                const wordRows = allWords.map(e => {
+                    counter++;
+                    const key = `${n}_${e.hangul}`;
+                    return `<tr class="vocab-row" data-hangul="${e.hangul.toLowerCase()}" data-french="${e.french.toLowerCase()}" data-level="none" data-lkey="${key}" onclick="this.classList.toggle('expanded')">
                 <td class="col-level" onclick="cycleLvl(this.parentElement,event)"><span class="level-dot"></span></td>
                 <td style="color:var(--text-muted);font-size:0.8rem">${counter}</td>
                 <td class="col-hangul">${e.hangul}</td>
@@ -437,11 +1149,11 @@ async function renderVocab(bookId, selectedChapter) {
                 <td class="col-translated example-col">${e.translated}</td>
                 <td class="col-explanation detail-col" style="display:none">${e.explanation}</td>
             </tr>`;
-        }).join('');
-        return sepRow + wordRows;
-    }).join('');
+                }).join('');
+                return sepRow + wordRows;
+            }).join('');
 
-    document.getElementById('content').innerHTML = `
+            document.getElementById('content').innerHTML = `
         <div class="vocab-header">
             <div class="vocab-title-group">
                 <p class="breadcrumb"><a href="#"><i data-lucide="home" class="icon-xs"></i> Home</a> → ${book.name}</p>
@@ -462,7 +1174,7 @@ async function renderVocab(bookId, selectedChapter) {
             </a>
             ${chNums.map(n => `
             <a href="#vocab/${bookId}/${n}" class="ch-pill ${selectedChapter === n ? 'active' : ''}">
-                ${n}과 <span class="count">${(book.chapters[n].length + (customWords[n]||[]).length)}</span>
+                ${n}과 <span class="count">${(book.chapters[n].length + (customWords[n] || []).length)}</span>
             </a>`).join('')}
         </div>
         ${selectedChapter !== null ? `
@@ -521,170 +1233,170 @@ async function renderVocab(bookId, selectedChapter) {
             </table>
         </div>
     `;
-    lucide.createIcons();
-    // Apply saved levels
-    applyLevelsFromStorage(bookId);
-}
-
-// ================================================================
-// LEVEL SYSTEM (localStorage)
-// ================================================================
-const LVL_CYCLE = ['none','green','orange','red'];
-let _currentLvlFilter = 'all';
-let _lvlFilterActive = false;
-
-function getLvlStore(bookId) { try { return JSON.parse(localStorage.getItem(`mew_lvl_${bookId}`) || '{}'); } catch { return {}; } }
-function saveLvlStore(bookId, data) { localStorage.setItem(`mew_lvl_${bookId}`, JSON.stringify(data)); }
-
-function applyLevelsFromStorage(bookId) {
-    const data = getLvlStore(bookId);
-    document.querySelectorAll('.vocab-row').forEach(tr => {
-        const key = tr.dataset.lkey;
-        const lvl = data[key] || 'none';
-        tr.dataset.level = lvl;
-    });
-    updateLvlStats();
-}
-
-function cycleLvl(tr, e) {
-    e.stopPropagation();
-    const cur = tr.dataset.level || 'none';
-    const next = LVL_CYCLE[(LVL_CYCLE.indexOf(cur) + 1) % LVL_CYCLE.length];
-    tr.dataset.level = next;
-    // Save
-    const bookId = getRoute().args[0];
-    const data = getLvlStore(bookId);
-    data[tr.dataset.lkey] = next;
-    saveLvlStore(bookId, data);
-    updateLvlStats();
-    filterVocab();
-}
-
-function updateLvlStats() {
-    let g=0, o=0, r=0;
-    document.querySelectorAll('.vocab-row').forEach(tr => {
-        const l = tr.dataset.level;
-        if (l==='green') g++; else if (l==='orange') o++; else if (l==='red') r++;
-    });
-    const eg = document.getElementById('count-green');
-    const eo = document.getElementById('count-orange');
-    const er = document.getElementById('count-red');
-    if (eg) eg.textContent = g;
-    if (eo) eo.textContent = o;
-    if (er) er.textContent = r;
-}
-
-function toggleLvlFilter() {
-    _lvlFilterActive = !_lvlFilterActive;
-    document.getElementById('lvl-filter-bar').style.display = _lvlFilterActive ? 'flex' : 'none';
-    document.getElementById('toggle-lvl-filter').classList.toggle('active', _lvlFilterActive);
-}
-
-function setLvlFilter(lvl) {
-    _currentLvlFilter = lvl;
-    document.querySelectorAll('.lvl-filter-btn').forEach(b => b.classList.toggle('active', b.dataset.lvl === lvl));
-    filterVocab();
-}
-
-// ================================================================
-// CUSTOM WORDS (localStorage — for GitHub Pages static hosting)
-// ================================================================
-function getCustomWords(bookId) { try { return JSON.parse(localStorage.getItem(`mew_custom_${bookId}`) || '{}'); } catch { return {}; } }
-function saveCustomWords(bookId, data) { localStorage.setItem(`mew_custom_${bookId}`, JSON.stringify(data)); }
-
-let _addModalBookId = null, _addModalChapter = null;
-
-function openAddModal(bookId, chapter, e) {
-    e.stopPropagation();
-    _addModalBookId = bookId;
-    _addModalChapter = chapter;
-    document.getElementById('modal-subtitle').textContent = `Chapitre ${chapter}과 — Vocab ${bookId}`;
-    document.getElementById('add-word-form').reset();
-    document.getElementById('modal-success').style.display = 'none';
-    document.getElementById('add-word-form').style.display = '';
-    document.getElementById('btn-submit-word').disabled = false;
-    document.getElementById('modal-overlay').classList.add('open');
-    document.getElementById('add-word-modal').classList.add('open');
-    lucide.createIcons();
-    setTimeout(() => document.getElementById('fw-hangul').focus(), 120);
-}
-
-function closeAddModal() {
-    document.getElementById('modal-overlay').classList.remove('open');
-    document.getElementById('add-word-modal').classList.remove('open');
-}
-
-function submitNewWord(e) {
-    e.preventDefault();
-    const word = {
-        hangul: document.getElementById('fw-hangul').value.trim(),
-        french: document.getElementById('fw-french').value.trim(),
-        example: document.getElementById('fw-example').value.trim(),
-        translated: document.getElementById('fw-translated').value.trim(),
-        explanation: document.getElementById('fw-explanation').value.trim(),
-    };
-    if (!word.hangul || !word.french) return;
-    const cw = getCustomWords(_addModalBookId);
-    if (!cw[_addModalChapter]) cw[_addModalChapter] = [];
-    cw[_addModalChapter].push(word);
-    saveCustomWords(_addModalBookId, cw);
-    // Also invalidate book cache so re-render picks it up
-    delete bookCache[_addModalBookId];
-    document.getElementById('add-word-form').style.display = 'none';
-    document.getElementById('modal-success').style.display = 'flex';
-    setTimeout(() => { closeAddModal(); route(); }, 900);
-}
-
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAddModal(); });
-
-// ================================================================
-// VOCAB FILTERS & TOGGLES
-// ================================================================
-let _detailsVisible = false;
-let _examplesVisible = true;
-
-function filterVocab() {
-    const q = (document.getElementById('search')?.value || '').toLowerCase().trim();
-    const rows = document.querySelectorAll('.vocab-row');
-    let visible = 0;
-    rows.forEach(row => {
-        const matchQ  = !q || row.dataset.hangul.includes(q) || row.dataset.french.includes(q);
-        const matchLv = _currentLvlFilter === 'all' || (row.dataset.level || 'none') === _currentLvlFilter;
-        const show = matchQ && matchLv;
-        row.style.display = show ? '' : 'none';
-        if (show) visible++;
-    });
-    document.querySelectorAll('.chapter-sep').forEach(sep => {
-        let next = sep.nextElementSibling;
-        let hasVisible = false;
-        while (next && !next.classList.contains('chapter-sep')) {
-            if (next.style.display !== 'none') hasVisible = true;
-            next = next.nextElementSibling;
+            lucide.createIcons();
+            // Apply saved levels
+            applyLevelsFromStorage(bookId);
         }
-        sep.style.display = hasVisible ? '' : 'none';
-    });
-    const vc = document.getElementById('visible-count');
-    if (vc) vc.textContent = visible;
-}
 
-function toggleDetails() {
-    _detailsVisible = !_detailsVisible;
-    document.querySelectorAll('.detail-col').forEach(el => el.style.display = _detailsVisible ? '' : 'none');
-    document.getElementById('toggle-details').classList.toggle('active', _detailsVisible);
-}
+        // ================================================================
+        // LEVEL SYSTEM (localStorage)
+        // ================================================================
+        const LVL_CYCLE = ['none', 'green', 'orange', 'red'];
+        let _currentLvlFilter = 'all';
+        let _lvlFilterActive = false;
 
-function toggleExamples() {
-    _examplesVisible = !_examplesVisible;
-    document.querySelectorAll('.example-col').forEach(el => el.style.display = _examplesVisible ? '' : 'none');
-    document.getElementById('toggle-examples').classList.toggle('active', !_examplesVisible);
-}
+        function getLvlStore(bookId) { try { return JSON.parse(localStorage.getItem(`mew_lvl_${bookId}`) || '{}'); } catch { return {}; } }
+        function saveLvlStore(bookId, data) { localStorage.setItem(`mew_lvl_${bookId}`, JSON.stringify(data)); }
 
-// ================================================================
-// LESSONS — list by level
-// ================================================================
-function renderLessons(filterLevel) {
-    const allLevels = Object.keys(MANIFEST.lessons);
-    document.getElementById('sidebar-extra').innerHTML = `
+        function applyLevelsFromStorage(bookId) {
+            const data = getLvlStore(bookId);
+            document.querySelectorAll('.vocab-row').forEach(tr => {
+                const key = tr.dataset.lkey;
+                const lvl = data[key] || 'none';
+                tr.dataset.level = lvl;
+            });
+            updateLvlStats();
+        }
+
+        function cycleLvl(tr, e) {
+            e.stopPropagation();
+            const cur = tr.dataset.level || 'none';
+            const next = LVL_CYCLE[(LVL_CYCLE.indexOf(cur) + 1) % LVL_CYCLE.length];
+            tr.dataset.level = next;
+            // Save
+            const bookId = getRoute().args[0];
+            const data = getLvlStore(bookId);
+            data[tr.dataset.lkey] = next;
+            saveLvlStore(bookId, data);
+            updateLvlStats();
+            filterVocab();
+        }
+
+        function updateLvlStats() {
+            let g = 0, o = 0, r = 0;
+            document.querySelectorAll('.vocab-row').forEach(tr => {
+                const l = tr.dataset.level;
+                if (l === 'green') g++; else if (l === 'orange') o++; else if (l === 'red') r++;
+            });
+            const eg = document.getElementById('count-green');
+            const eo = document.getElementById('count-orange');
+            const er = document.getElementById('count-red');
+            if (eg) eg.textContent = g;
+            if (eo) eo.textContent = o;
+            if (er) er.textContent = r;
+        }
+
+        function toggleLvlFilter() {
+            _lvlFilterActive = !_lvlFilterActive;
+            document.getElementById('lvl-filter-bar').style.display = _lvlFilterActive ? 'flex' : 'none';
+            document.getElementById('toggle-lvl-filter').classList.toggle('active', _lvlFilterActive);
+        }
+
+        function setLvlFilter(lvl) {
+            _currentLvlFilter = lvl;
+            document.querySelectorAll('.lvl-filter-btn').forEach(b => b.classList.toggle('active', b.dataset.lvl === lvl));
+            filterVocab();
+        }
+
+        // ================================================================
+        // CUSTOM WORDS (localStorage — for GitHub Pages static hosting)
+        // ================================================================
+        function getCustomWords(bookId) { try { return JSON.parse(localStorage.getItem(`mew_custom_${bookId}`) || '{}'); } catch { return {}; } }
+        function saveCustomWords(bookId, data) { localStorage.setItem(`mew_custom_${bookId}`, JSON.stringify(data)); }
+
+        let _addModalBookId = null, _addModalChapter = null;
+
+        function openAddModal(bookId, chapter, e) {
+            e.stopPropagation();
+            _addModalBookId = bookId;
+            _addModalChapter = chapter;
+            document.getElementById('modal-subtitle').textContent = `Chapitre ${chapter}과 — Vocab ${bookId}`;
+            document.getElementById('add-word-form').reset();
+            document.getElementById('modal-success').style.display = 'none';
+            document.getElementById('add-word-form').style.display = '';
+            document.getElementById('btn-submit-word').disabled = false;
+            document.getElementById('modal-overlay').classList.add('open');
+            document.getElementById('add-word-modal').classList.add('open');
+            lucide.createIcons();
+            setTimeout(() => document.getElementById('fw-hangul').focus(), 120);
+        }
+
+        function closeAddModal() {
+            document.getElementById('modal-overlay').classList.remove('open');
+            document.getElementById('add-word-modal').classList.remove('open');
+        }
+
+        function submitNewWord(e) {
+            e.preventDefault();
+            const word = {
+                hangul: document.getElementById('fw-hangul').value.trim(),
+                french: document.getElementById('fw-french').value.trim(),
+                example: document.getElementById('fw-example').value.trim(),
+                translated: document.getElementById('fw-translated').value.trim(),
+                explanation: document.getElementById('fw-explanation').value.trim(),
+            };
+            if (!word.hangul || !word.french) return;
+            const cw = getCustomWords(_addModalBookId);
+            if (!cw[_addModalChapter]) cw[_addModalChapter] = [];
+            cw[_addModalChapter].push(word);
+            saveCustomWords(_addModalBookId, cw);
+            // Also invalidate book cache so re-render picks it up
+            delete bookCache[_addModalBookId];
+            document.getElementById('add-word-form').style.display = 'none';
+            document.getElementById('modal-success').style.display = 'flex';
+            setTimeout(() => { closeAddModal(); route(); }, 900);
+        }
+
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAddModal(); });
+
+        // ================================================================
+        // VOCAB FILTERS & TOGGLES
+        // ================================================================
+        let _detailsVisible = false;
+        let _examplesVisible = true;
+
+        function filterVocab() {
+            const q = (document.getElementById('search')?.value || '').toLowerCase().trim();
+            const rows = document.querySelectorAll('.vocab-row');
+            let visible = 0;
+            rows.forEach(row => {
+                const matchQ = !q || row.dataset.hangul.includes(q) || row.dataset.french.includes(q);
+                const matchLv = _currentLvlFilter === 'all' || (row.dataset.level || 'none') === _currentLvlFilter;
+                const show = matchQ && matchLv;
+                row.style.display = show ? '' : 'none';
+                if (show) visible++;
+            });
+            document.querySelectorAll('.chapter-sep').forEach(sep => {
+                let next = sep.nextElementSibling;
+                let hasVisible = false;
+                while (next && !next.classList.contains('chapter-sep')) {
+                    if (next.style.display !== 'none') hasVisible = true;
+                    next = next.nextElementSibling;
+                }
+                sep.style.display = hasVisible ? '' : 'none';
+            });
+            const vc = document.getElementById('visible-count');
+            if (vc) vc.textContent = visible;
+        }
+
+        function toggleDetails() {
+            _detailsVisible = !_detailsVisible;
+            document.querySelectorAll('.detail-col').forEach(el => el.style.display = _detailsVisible ? '' : 'none');
+            document.getElementById('toggle-details').classList.toggle('active', _detailsVisible);
+        }
+
+        function toggleExamples() {
+            _examplesVisible = !_examplesVisible;
+            document.querySelectorAll('.example-col').forEach(el => el.style.display = _examplesVisible ? '' : 'none');
+            document.getElementById('toggle-examples').classList.toggle('active', !_examplesVisible);
+        }
+
+        // ================================================================
+        // LESSONS — list by level
+        // ================================================================
+        function renderLessons(filterLevel) {
+            const allLevels = Object.keys(MANIFEST.lessons);
+            document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">Niveaux</div>
         <a href="#lessons" class="sidebar-link ${!filterLevel ? 'active' : ''}">
             <span class="sidebar-icon"><i data-lucide="layers" class="icon-sm"></i></span>
@@ -697,14 +1409,14 @@ function renderLessons(filterLevel) {
         </a>`).join('')}
     `;
 
-    const visibleLevels = filterLevel
-        ? Object.entries(MANIFEST.lessons).filter(([lvl]) => lvl === filterLevel)
-        : Object.entries(MANIFEST.lessons);
+            const visibleLevels = filterLevel
+                ? Object.entries(MANIFEST.lessons).filter(([lvl]) => lvl === filterLevel)
+                : Object.entries(MANIFEST.lessons);
 
-    const levelsHTML = visibleLevels.map(([lvl, lessons]) => {
-        const cls = lvl.startsWith('3') ? 'l3' : 'l4';
-        const cardsHTML = lessons.length ? lessons.map((l, i) => {
-            const topicsHTML = l.topics.length ? `
+            const levelsHTML = visibleLevels.map(([lvl, lessons]) => {
+                const cls = lvl.startsWith('3') ? 'l3' : 'l4';
+                const cardsHTML = lessons.length ? lessons.map((l, i) => {
+                    const topicsHTML = l.topics.length ? `
                 <div class="lesson-card-topics">
                     ${l.topics.map(t => {
                         const dot = t.indexOf('. ');
@@ -716,9 +1428,9 @@ function renderLessons(filterLevel) {
                         </span>`;
                     }).join('')}
                 </div>` : '';
-            const name = l.filename.replace('.html', '');
-            const encFile = encodeURIComponent(l.filename);
-            return `<a href="#lesson/${lvl}/${encFile}" class="lesson-card">
+                    const name = l.filename.replace('.html', '');
+                    const encFile = encodeURIComponent(l.filename);
+                    return `<a href="#lesson/${lvl}/${encFile}" class="lesson-card">
                 <div class="lesson-card-inner">
                     <div class="lesson-card-accent"></div>
                     <div class="lesson-card-content">
@@ -731,9 +1443,9 @@ function renderLessons(filterLevel) {
                     <div class="lesson-card-arrow">→</div>
                 </div>
             </a>`;
-        }).join('') : '<div class="empty-state">Aucune lesson pour ce niveau pour l\'instant.</div>';
+                }).join('') : '<div class="empty-state">Aucune lesson pour ce niveau pour l\'instant.</div>';
 
-        return `<div class="level-group" id="level-${lvl}">
+                return `<div class="level-group" id="level-${lvl}">
             <div class="level-group-header">
                 <div class="level-group-icon ${cls}"><i data-lucide="folder"></i></div>
                 <span class="level-group-title">Level ${lvl}</span>
@@ -741,27 +1453,27 @@ function renderLessons(filterLevel) {
             </div>
             <div class="lessons-grid">${cardsHTML}</div>
         </div>`;
-    }).join('');
+            }).join('');
 
-    document.getElementById('content').innerHTML = `
+            document.getElementById('content').innerHTML = `
         <div class="hero">
             <h1><span class="kr">한국어</span> Lessons</h1>
             <p class="subtitle">Cours de grammaire et exercices</p>
         </div>
         ${levelsHTML}
     `;
-    lucide.createIcons();
-}
+            lucide.createIcons();
+        }
 
-// ================================================================
-// LESSON VIEWER — iframe
-// ================================================================
-function renderLesson(level, filename) {
-    const decodedFile = decodeURIComponent(filename);
-    const name = decodedFile.replace('.html', '');
-    const src = `content/lessons/${level}/${decodedFile}`;
+        // ================================================================
+        // LESSON VIEWER — iframe
+        // ================================================================
+        function renderLesson(level, filename) {
+            const decodedFile = decodeURIComponent(filename);
+            const name = decodedFile.replace('.html', '');
+            const src = `content/lessons/${level}/${decodedFile}`;
 
-    document.getElementById('sidebar-extra').innerHTML = `
+            document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">Niveaux</div>
         <a href="#lessons" class="sidebar-link">
             <span class="sidebar-icon"><i data-lucide="layers" class="icon-sm"></i></span>
@@ -774,27 +1486,27 @@ function renderLesson(level, filename) {
         </a>`).join('')}
     `;
 
-    document.getElementById('content').innerHTML = `
+            document.getElementById('content').innerHTML = `
         <div class="lesson-viewer-bar">
             <a href="#lessons">← Retour aux lessons</a>
             <span class="crumb">/ Level ${level} / ${name}</span>
         </div>
         <iframe id="lesson-frame" src="${src}" title="${name}"></iframe>
     `;
-    lucide.createIcons();
-}
+            lucide.createIcons();
+        }
 
-// ================================================================
-// FLASHCARD
-// ================================================================
-let _fc = {};  // flashcard state
+        // ================================================================
+        // FLASHCARD
+        // ================================================================
+        let _fc = {};  // flashcard state
 
-async function renderFlashcard(bookId, chapter) {
-    // If no book selected, show book/chapter picker
-    const books = MANIFEST.books;
-    if (!bookId) {
-        document.getElementById('sidebar-extra').innerHTML = '';
-        document.getElementById('content').innerHTML = `
+        async function renderFlashcard(bookId, chapter) {
+            // If no book selected, show book/chapter picker
+            const books = MANIFEST.books;
+            if (!bookId) {
+                document.getElementById('sidebar-extra').innerHTML = '';
+                document.getElementById('content').innerHTML = `
             <div class="fc-wrap">
                 <div class="fc-hero">
                     <h1>Flashcards</h1>
@@ -802,18 +1514,18 @@ async function renderFlashcard(bookId, chapter) {
                 </div>
                 <div class="books-grid">
                     ${books.map(b => `<a href="#flashcard/${b}" class="book-card">
-                        <span class="book-level ${b.startsWith('3')?'l3':'l4'}">Level ${b}</span>
+                        <span class="book-level ${b.startsWith('3') ? 'l3' : 'l4'}">Level ${b}</span>
                         <div class="book-title">Vocab ${b}</div>
                     </a>`).join('')}
                 </div>
             </div>`;
-        lucide.createIcons(); return;
-    }
-    const book = await fetchBook(bookId);
-    const chNums = Object.keys(book.chapters).map(Number).sort((a,b)=>a-b);
-    if (chapter === null) {
-        document.getElementById('sidebar-extra').innerHTML = '';
-        document.getElementById('content').innerHTML = `
+                lucide.createIcons(); return;
+            }
+            const book = await fetchBook(bookId);
+            const chNums = Object.keys(book.chapters).map(Number).sort((a, b) => a - b);
+            if (chapter === null) {
+                document.getElementById('sidebar-extra').innerHTML = '';
+                document.getElementById('content').innerHTML = `
             <div class="fc-wrap">
                 <div class="fc-hero">
                     <h1>Flashcards — ${bookId}</h1>
@@ -823,78 +1535,78 @@ async function renderFlashcard(bookId, chapter) {
                     ${chNums.map(n => `<a href="#flashcard/${bookId}/${n}" class="ch-pill">${n}과 <span class="count">${book.chapters[n].length}</span></a>`).join('')}
                 </div>
             </div>`;
-        lucide.createIcons(); return;
-    }
+                lucide.createIcons(); return;
+            }
 
-    // Build sidebar
-    document.getElementById('sidebar-extra').innerHTML = `
+            // Build sidebar
+            document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">Livres</div>
-        ${books.map(b => `<a href="#flashcard/${b}" class="sidebar-link ${b===bookId?'active':''}">
+        ${books.map(b => `<a href="#flashcard/${b}" class="sidebar-link ${b === bookId ? 'active' : ''}">
             <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
             <span>${b}</span></a>`).join('')}
         <div class="nav-section-label">Chapitres</div>
         <div class="sidebar-sub">
-            ${chNums.map(n => `<a href="#flashcard/${bookId}/${n}" class="sidebar-link ${n===chapter?'active':''}">
+            ${chNums.map(n => `<a href="#flashcard/${bookId}/${n}" class="sidebar-link ${n === chapter ? 'active' : ''}">
                 <span>${n}과 (${book.chapters[n].length})</span></a>`).join('')}
         </div>`;
 
-    const rawWords = [...(book.chapters[chapter] || [])];
-    // Shuffle helper
-    function shuffle(arr) { const a=[...arr]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+            const rawWords = [...(book.chapters[chapter] || [])];
+            // Shuffle helper
+            function shuffle(arr) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a; }
 
-    _fc = {
-        bookId, chapter,
-        words: shuffle(rawWords),
-        idx: 0,
-        mode: 'alternate',  // 'kr', 'fr', 'alternate'
-        correct: 0, wrong: 0,
-        flipped: false,
-    };
+            _fc = {
+                bookId, chapter,
+                words: shuffle(rawWords),
+                idx: 0,
+                mode: 'alternate',  // 'kr', 'fr', 'alternate'
+                correct: 0, wrong: 0,
+                flipped: false,
+            };
 
-    function getDir(idx) {
-        if (_fc.mode === 'kr') return 'kr';
-        if (_fc.mode === 'fr') return 'fr';
-        return idx % 2 === 0 ? 'kr' : 'fr';
-    }
+            function getDir(idx) {
+                if (_fc.mode === 'kr') return 'kr';
+                if (_fc.mode === 'fr') return 'fr';
+                return idx % 2 === 0 ? 'kr' : 'fr';
+            }
 
-    function renderCard() {
-        const w = _fc.words[_fc.idx];
-        const dir = getDir(_fc.idx);
-        const frontWord = dir === 'kr' ? w.hangul : w.french;
-        const backWord  = dir === 'kr' ? w.french  : w.hangul;
-        const frontLang = dir === 'kr' ? '한글' : 'Français';
-        const backLang  = dir === 'kr' ? 'Français' : '한글';
-        const total = _fc.words.length;
+            function renderCard() {
+                const w = _fc.words[_fc.idx];
+                const dir = getDir(_fc.idx);
+                const frontWord = dir === 'kr' ? w.hangul : w.french;
+                const backWord = dir === 'kr' ? w.french : w.hangul;
+                const frontLang = dir === 'kr' ? '한글' : 'Français';
+                const backLang = dir === 'kr' ? 'Français' : '한글';
+                const total = _fc.words.length;
 
-        document.getElementById('fc-card-inner').className = 'card-inner' + (_fc.flipped ? ' flipped' : '');
-        document.getElementById('fc-front-lang').textContent = frontLang;
-        document.getElementById('fc-front-word').textContent = frontWord;
-        document.getElementById('fc-back-lang').textContent = backLang;
-        document.getElementById('fc-back-word').textContent = backWord;
-        document.getElementById('fc-counter').textContent = `${_fc.idx+1} / ${total}`;
-        document.getElementById('fc-fill').style.width = `${((_fc.idx+1)/total)*100}%`;
-        document.getElementById('fc-score-ok').textContent = `${_fc.correct} ok`;
-        document.getElementById('fc-score-ko').textContent = `${_fc.wrong} ko`;
-        document.getElementById('fc-btn-prev').disabled = _fc.idx === 0;
-        const isLast = _fc.idx === total - 1;
-        document.getElementById('fc-btn-next').textContent = isLast ? 'Terminer' : 'Suivant →';
-    }
+                document.getElementById('fc-card-inner').className = 'card-inner' + (_fc.flipped ? ' flipped' : '');
+                document.getElementById('fc-front-lang').textContent = frontLang;
+                document.getElementById('fc-front-word').textContent = frontWord;
+                document.getElementById('fc-back-lang').textContent = backLang;
+                document.getElementById('fc-back-word').textContent = backWord;
+                document.getElementById('fc-counter').textContent = `${_fc.idx + 1} / ${total}`;
+                document.getElementById('fc-fill').style.width = `${((_fc.idx + 1) / total) * 100}%`;
+                document.getElementById('fc-score-ok').textContent = `${_fc.correct} ok`;
+                document.getElementById('fc-score-ko').textContent = `${_fc.wrong} ko`;
+                document.getElementById('fc-btn-prev').disabled = _fc.idx === 0;
+                const isLast = _fc.idx === total - 1;
+                document.getElementById('fc-btn-next').textContent = isLast ? 'Terminer' : 'Suivant →';
+            }
 
-    document.getElementById('content').innerHTML = `
+            document.getElementById('content').innerHTML = `
         <div class="fc-wrap">
             <div class="fc-hero">
                 <h1>Flashcards — ${bookId} ${chapter}과</h1>
                 <p>${rawWords.length} mots · Cliquez sur la carte pour révéler la réponse</p>
             </div>
             <div class="fc-mode-bar">
-                <button class="fc-mode-btn ${_fc.mode==='alternate'?'active':''}" onclick="fcSetMode('alternate')">Alterné</button>
-                <button class="fc-mode-btn ${_fc.mode==='kr'?'active':''}" onclick="fcSetMode('kr')">한글 → FR</button>
-                <button class="fc-mode-btn ${_fc.mode==='fr'?'active':''}" onclick="fcSetMode('fr')">FR → 한글</button>
+                <button class="fc-mode-btn ${_fc.mode === 'alternate' ? 'active' : ''}" onclick="fcSetMode('alternate')">Alterné</button>
+                <button class="fc-mode-btn ${_fc.mode === 'kr' ? 'active' : ''}" onclick="fcSetMode('kr')">한글 → FR</button>
+                <button class="fc-mode-btn ${_fc.mode === 'fr' ? 'active' : ''}" onclick="fcSetMode('fr')">FR → 한글</button>
                 <button class="fc-mode-btn" onclick="fcShuffle()">Mélanger</button>
             </div>
             <div class="fc-progress-row">
                 <span class="fc-counter" id="fc-counter">1 / ${rawWords.length}</span>
-                <div class="fc-progress-bar"><div class="fc-progress-fill" id="fc-fill" style="width:${(1/rawWords.length)*100}%"></div></div>
+                <div class="fc-progress-bar"><div class="fc-progress-fill" id="fc-fill" style="width:${(1 / rawWords.length) * 100}%"></div></div>
             </div>
             <div class="fc-score-row">
                 <span class="fc-score-ok" id="fc-score-ok">0 ok</span>
@@ -928,144 +1640,144 @@ async function renderFlashcard(bookId, chapter) {
                 </div>
             </div>
         </div>`;
-    lucide.createIcons();
-    renderCard();
-}
+            lucide.createIcons();
+            renderCard();
+        }
 
-window.fcFlip = function() { _fc.flipped = !_fc.flipped; document.getElementById('fc-card-inner').classList.toggle('flipped', _fc.flipped); };
-window.fcNav = function(dir) {
-    const total = _fc.words.length;
-    const next = _fc.idx + dir;
-    if (next >= total) { fcShowEnd(); return; }
-    if (next < 0) return;
-    _fc.idx = next; _fc.flipped = false;
-    document.getElementById('fc-card-inner')?.classList.remove('flipped');
-    setTimeout(() => { try { renderFcCard(); } catch(e){} }, 0);
-    // inline re-render
-    const w = _fc.words[_fc.idx];
-    const d = _fc.mode === 'kr' ? 'kr' : _fc.mode === 'fr' ? 'fr' : (_fc.idx%2===0?'kr':'fr');
-    document.getElementById('fc-front-lang').textContent = d==='kr'?'한글':'Français';
-    document.getElementById('fc-front-word').textContent = d==='kr'?w.hangul:w.french;
-    document.getElementById('fc-back-lang').textContent  = d==='kr'?'Français':'한글';
-    document.getElementById('fc-back-word').textContent  = d==='kr'?w.french:w.hangul;
-    document.getElementById('fc-counter').textContent = `${_fc.idx+1} / ${total}`;
-    document.getElementById('fc-fill').style.width = `${((_fc.idx+1)/total)*100}%`;
-    document.getElementById('fc-score-ok').textContent = `${_fc.correct} ok`;
-    document.getElementById('fc-score-ko').textContent = `${_fc.wrong} ko`;
-    document.getElementById('fc-btn-prev').disabled = _fc.idx === 0;
-    document.getElementById('fc-btn-next').textContent = _fc.idx === total-1 ? 'Terminer' : 'Suivant →';
-};
-window.fcMark = function(ok) { if(ok) _fc.correct++; else _fc.wrong++; fcNav(1); };
-window.fcSetMode = function(mode) {
-    _fc.mode = mode;
-    document.querySelectorAll('.fc-mode-btn').forEach((b,i) => {
-        b.classList.toggle('active', ['alternate','kr','fr'][i] === mode);
-    });
-    fcNav(0);  // re-render current card
-};
-window.fcShuffle = function() {
-    const arr = _fc.words; for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}
-    _fc.idx = 0; _fc.flipped = false; _fc.correct = 0; _fc.wrong = 0;
-    fcNav(0);
-};
-function fcShowEnd() {
-    document.getElementById('fc-end-screen').style.display = '';
-    document.getElementById('fc-end-score').textContent = `${_fc.correct} / ${_fc.words.length}`;
-    document.querySelectorAll('.card-perspective,.card-controls,.fc-progress-row,.fc-score-row').forEach(el => el.style.display='none');
-}
-window.fcRestart = function() { _fc.idx=0; _fc.correct=0; _fc.wrong=0; _fc.flipped=false; document.getElementById('fc-end-screen').style.display='none'; document.querySelectorAll('.card-perspective,.card-controls,.fc-progress-row,.fc-score-row').forEach(el=>el.style.display=''); fcNav(0); };
-document.addEventListener('keydown', e => {
-    if (!document.getElementById('fc-card-inner')) return;
-    if (e.key === ' ') { e.preventDefault(); fcFlip(); }
-    if (e.key === 'ArrowRight') { e.preventDefault(); fcNav(1); }
-    if (e.key === 'ArrowLeft')  { e.preventDefault(); fcNav(-1); }
-});
+        window.fcFlip = function () { _fc.flipped = !_fc.flipped; document.getElementById('fc-card-inner').classList.toggle('flipped', _fc.flipped); };
+        window.fcNav = function (dir) {
+            const total = _fc.words.length;
+            const next = _fc.idx + dir;
+            if (next >= total) { fcShowEnd(); return; }
+            if (next < 0) return;
+            _fc.idx = next; _fc.flipped = false;
+            document.getElementById('fc-card-inner')?.classList.remove('flipped');
+            setTimeout(() => { try { renderFcCard(); } catch (e) { } }, 0);
+            // inline re-render
+            const w = _fc.words[_fc.idx];
+            const d = _fc.mode === 'kr' ? 'kr' : _fc.mode === 'fr' ? 'fr' : (_fc.idx % 2 === 0 ? 'kr' : 'fr');
+            document.getElementById('fc-front-lang').textContent = d === 'kr' ? '한글' : 'Français';
+            document.getElementById('fc-front-word').textContent = d === 'kr' ? w.hangul : w.french;
+            document.getElementById('fc-back-lang').textContent = d === 'kr' ? 'Français' : '한글';
+            document.getElementById('fc-back-word').textContent = d === 'kr' ? w.french : w.hangul;
+            document.getElementById('fc-counter').textContent = `${_fc.idx + 1} / ${total}`;
+            document.getElementById('fc-fill').style.width = `${((_fc.idx + 1) / total) * 100}%`;
+            document.getElementById('fc-score-ok').textContent = `${_fc.correct} ok`;
+            document.getElementById('fc-score-ko').textContent = `${_fc.wrong} ko`;
+            document.getElementById('fc-btn-prev').disabled = _fc.idx === 0;
+            document.getElementById('fc-btn-next').textContent = _fc.idx === total - 1 ? 'Terminer' : 'Suivant →';
+        };
+        window.fcMark = function (ok) { if (ok) _fc.correct++; else _fc.wrong++; fcNav(1); };
+        window.fcSetMode = function (mode) {
+            _fc.mode = mode;
+            document.querySelectorAll('.fc-mode-btn').forEach((b, i) => {
+                b.classList.toggle('active', ['alternate', 'kr', 'fr'][i] === mode);
+            });
+            fcNav(0);  // re-render current card
+        };
+        window.fcShuffle = function () {
+            const arr = _fc.words; for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[arr[i], arr[j]] = [arr[j], arr[i]]; }
+            _fc.idx = 0; _fc.flipped = false; _fc.correct = 0; _fc.wrong = 0;
+            fcNav(0);
+        };
+        function fcShowEnd() {
+            document.getElementById('fc-end-screen').style.display = '';
+            document.getElementById('fc-end-score').textContent = `${_fc.correct} / ${_fc.words.length}`;
+            document.querySelectorAll('.card-perspective,.card-controls,.fc-progress-row,.fc-score-row').forEach(el => el.style.display = 'none');
+        }
+        window.fcRestart = function () { _fc.idx = 0; _fc.correct = 0; _fc.wrong = 0; _fc.flipped = false; document.getElementById('fc-end-screen').style.display = 'none'; document.querySelectorAll('.card-perspective,.card-controls,.fc-progress-row,.fc-score-row').forEach(el => el.style.display = ''); fcNav(0); };
+        document.addEventListener('keydown', e => {
+            if (!document.getElementById('fc-card-inner')) return;
+            if (e.key === ' ') { e.preventDefault(); fcFlip(); }
+            if (e.key === 'ArrowRight') { e.preventDefault(); fcNav(1); }
+            if (e.key === 'ArrowLeft') { e.preventDefault(); fcNav(-1); }
+        });
 
-// ================================================================
-// TEST
-// ================================================================
-let _test = {};
+        // ================================================================
+        // TEST
+        // ================================================================
+        let _test = {};
 
-async function renderTest(bookId, chapter) {
-    const books = MANIFEST.books;
-    if (!bookId) {
-        document.getElementById('sidebar-extra').innerHTML = '';
-        document.getElementById('content').innerHTML = `
+        async function renderTest(bookId, chapter) {
+            const books = MANIFEST.books;
+            if (!bookId) {
+                document.getElementById('sidebar-extra').innerHTML = '';
+                document.getElementById('content').innerHTML = `
             <div class="test-wrap">
                 <div class="test-hero"><h1>Test</h1><p>Choisissez un livre.</p></div>
                 <div class="books-grid">
                     ${books.map(b => `<a href="#test/${b}" class="book-card">
-                        <span class="book-level ${b.startsWith('3')?'l3':'l4'}">Level ${b}</span>
+                        <span class="book-level ${b.startsWith('3') ? 'l3' : 'l4'}">Level ${b}</span>
                         <div class="book-title">Vocab ${b}</div></a>`).join('')}
                 </div>
             </div>`;
-        lucide.createIcons(); return;
-    }
-    const book = await fetchBook(bookId);
-    const chNums = Object.keys(book.chapters).map(Number).sort((a,b)=>a-b);
-    if (chapter === null) {
-        document.getElementById('sidebar-extra').innerHTML = '';
-        document.getElementById('content').innerHTML = `
+                lucide.createIcons(); return;
+            }
+            const book = await fetchBook(bookId);
+            const chNums = Object.keys(book.chapters).map(Number).sort((a, b) => a - b);
+            if (chapter === null) {
+                document.getElementById('sidebar-extra').innerHTML = '';
+                document.getElementById('content').innerHTML = `
             <div class="test-wrap">
                 <div class="test-hero"><h1>Test — ${bookId}</h1><p>Choisissez un chapitre :</p></div>
                 <div class="chapter-nav" style="margin-top:16px">
                     ${chNums.map(n => `<a href="#test/${bookId}/${n}" class="ch-pill">${n}과 <span class="count">${book.chapters[n].length}</span></a>`).join('')}
                 </div>
             </div>`;
-        lucide.createIcons(); return;
-    }
+                lucide.createIcons(); return;
+            }
 
-    document.getElementById('sidebar-extra').innerHTML = `
+            document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">Livres</div>
-        ${books.map(b => `<a href="#test/${b}" class="sidebar-link ${b===bookId?'active':''}">
+        ${books.map(b => `<a href="#test/${b}" class="sidebar-link ${b === bookId ? 'active' : ''}">
             <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
             <span>${b}</span></a>`).join('')}
         <div class="nav-section-label">Chapitres</div>
         <div class="sidebar-sub">
-            ${chNums.map(n => `<a href="#test/${bookId}/${n}" class="sidebar-link ${n===chapter?'active':''}">
+            ${chNums.map(n => `<a href="#test/${bookId}/${n}" class="sidebar-link ${n === chapter ? 'active' : ''}">
                 <span>${n}과 (${book.chapters[n].length})</span></a>`).join('')}
         </div>`;
 
-    function shuffle(arr) { const a=[...arr]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+            function shuffle(arr) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a; }
 
-    _test = {
-        bookId, chapter,
-        words: shuffle([...(book.chapters[chapter] || [])]),
-        idx: 0, score: 0,
-        wrongs: [],   // [{word, dir, given}]
-        answered: false,
-    };
+            _test = {
+                bookId, chapter,
+                words: shuffle([...(book.chapters[chapter] || [])]),
+                idx: 0, score: 0,
+                wrongs: [],   // [{word, dir, given}]
+                answered: false,
+            };
 
-    function getDir(idx) { return idx % 2 === 0 ? 'kr' : 'fr'; }
+            function getDir(idx) { return idx % 2 === 0 ? 'kr' : 'fr'; }
 
-    function normalise(s) { return s.toLowerCase().replace(/[()（）]/g,'').replace(/\s+/g,' ').trim(); }
+            function normalise(s) { return s.toLowerCase().replace(/[()（）]/g, '').replace(/\s+/g, ' ').trim(); }
 
-    function checkAnswer(word, dir, given) {
-        const correct = dir === 'kr' ? word.french : word.hangul;
-        const gn = normalise(given);
-        // Accept any segment separated by comma or /
-        const segments = correct.split(/[,/،]/).map(s => normalise(s));
-        return segments.some(seg => gn === seg || seg.includes(gn) || gn.includes(seg.slice(0, Math.min(seg.length, 6))));
-    }
+            function checkAnswer(word, dir, given) {
+                const correct = dir === 'kr' ? word.french : word.hangul;
+                const gn = normalise(given);
+                // Accept any segment separated by comma or /
+                const segments = correct.split(/[,/،]/).map(s => normalise(s));
+                return segments.some(seg => gn === seg || seg.includes(gn) || gn.includes(seg.slice(0, Math.min(seg.length, 6))));
+            }
 
-    function renderQuestion() {
-        if (_test.idx >= _test.words.length) { renderResults(); return; }
-        const w = _test.words[_test.idx];
-        const dir = getDir(_test.idx);
-        const shown = dir === 'kr' ? w.hangul : w.french;
-        const dirLabel = dir === 'kr' ? 'Donnez la traduction en français' : 'Donnez la traduction en coréen (한글)';
-        const ph = dir === 'kr' ? 'Traduction française…' : '한글로…';
-        const total = _test.words.length;
+            function renderQuestion() {
+                if (_test.idx >= _test.words.length) { renderResults(); return; }
+                const w = _test.words[_test.idx];
+                const dir = getDir(_test.idx);
+                const shown = dir === 'kr' ? w.hangul : w.french;
+                const dirLabel = dir === 'kr' ? 'Donnez la traduction en français' : 'Donnez la traduction en coréen (한글)';
+                const ph = dir === 'kr' ? 'Traduction française…' : '한글로…';
+                const total = _test.words.length;
 
-        document.getElementById('content').innerHTML = `
+                document.getElementById('content').innerHTML = `
             <div class="test-wrap">
                 <div class="test-hero">
                     <h1>Test — ${bookId} ${chapter}과</h1>
-                    <p>Question ${_test.idx+1} / ${total} · Score : ${_test.score} / ${_test.idx}</p>
+                    <p>Question ${_test.idx + 1} / ${total} · Score : ${_test.score} / ${_test.idx}</p>
                 </div>
                 <div class="fc-progress-row">
-                    <span class="fc-counter">${_test.idx+1} / ${total}</span>
-                    <div class="fc-progress-bar"><div class="fc-progress-fill" style="width:${((_test.idx)/total)*100}%"></div></div>
+                    <span class="fc-counter">${_test.idx + 1} / ${total}</span>
+                    <div class="fc-progress-bar"><div class="fc-progress-fill" style="width:${((_test.idx) / total) * 100}%"></div></div>
                 </div>
                 <div class="test-question-card">
                     <div class="test-dir-badge">${dirLabel}</div>
@@ -1078,49 +1790,49 @@ async function renderTest(bookId, chapter) {
                 <div class="test-feedback" id="test-feedback"></div>
                 <button class="test-next-btn" id="test-next-btn" onclick="testNext()">Question suivante →</button>
             </div>`;
-        lucide.createIcons();
-        _test.answered = false;
-        const inp = document.getElementById('test-inp');
-        inp.focus();
-        inp.addEventListener('keydown', e => { if (e.key === 'Enter') { if (!_test.answered) testSubmit(); else testNext(); } });
-    }
+                lucide.createIcons();
+                _test.answered = false;
+                const inp = document.getElementById('test-inp');
+                inp.focus();
+                inp.addEventListener('keydown', e => { if (e.key === 'Enter') { if (!_test.answered) testSubmit(); else testNext(); } });
+            }
 
-    window.testSubmit = function() {
-        if (_test.answered) return;
-        const given = document.getElementById('test-inp')?.value?.trim() || '';
-        if (!given) return;
-        const w = _test.words[_test.idx];
-        const dir = getDir(_test.idx);
-        const correct = dir === 'kr' ? w.french : w.hangul;
-        const ok = checkAnswer(w, dir, given);
-        if (ok) _test.score++;
-        else _test.wrongs.push({ word: w, dir, given });
-        _test.answered = true;
+            window.testSubmit = function () {
+                if (_test.answered) return;
+                const given = document.getElementById('test-inp')?.value?.trim() || '';
+                if (!given) return;
+                const w = _test.words[_test.idx];
+                const dir = getDir(_test.idx);
+                const correct = dir === 'kr' ? w.french : w.hangul;
+                const ok = checkAnswer(w, dir, given);
+                if (ok) _test.score++;
+                else _test.wrongs.push({ word: w, dir, given });
+                _test.answered = true;
 
-        const inp = document.getElementById('test-inp');
-        const fb = document.getElementById('test-feedback');
-        const nb = document.getElementById('test-next-btn');
-        const sb = document.getElementById('test-submit-btn');
-        inp.classList.add(ok ? 'correct' : 'wrong');
-        inp.disabled = true;
-        sb.disabled = true;
-        fb.className = 'test-feedback show ' + (ok ? 'ok' : 'ko');
-        fb.textContent = ok ? `Correct ! — Réponse : ${correct}` : `Incorrect — Réponse : ${correct}`;
-        nb.classList.add('show');
-        nb.textContent = _test.idx === _test.words.length - 1 ? 'Voir les résultats →' : 'Question suivante →';
-    };
+                const inp = document.getElementById('test-inp');
+                const fb = document.getElementById('test-feedback');
+                const nb = document.getElementById('test-next-btn');
+                const sb = document.getElementById('test-submit-btn');
+                inp.classList.add(ok ? 'correct' : 'wrong');
+                inp.disabled = true;
+                sb.disabled = true;
+                fb.className = 'test-feedback show ' + (ok ? 'ok' : 'ko');
+                fb.textContent = ok ? `Correct ! — Réponse : ${correct}` : `Incorrect — Réponse : ${correct}`;
+                nb.classList.add('show');
+                nb.textContent = _test.idx === _test.words.length - 1 ? 'Voir les résultats →' : 'Question suivante →';
+            };
 
-    window.testNext = function() { _test.idx++; renderQuestion(); };
+            window.testNext = function () { _test.idx++; renderQuestion(); };
 
-    function renderResults() {
-        const total = _test.words.length;
-        const pct = Math.round((_test.score / total) * 100);
-        const wrongsHTML = _test.wrongs.length ? `
+            function renderResults() {
+                const total = _test.words.length;
+                const pct = Math.round((_test.score / total) * 100);
+                const wrongsHTML = _test.wrongs.length ? `
             <div class="test-wrong-list">
                 <h3 style="margin-bottom:12px;font-size:1rem;color:var(--text-muted)">À retravailler (${_test.wrongs.length}) :</h3>
                 ${_test.wrongs.map(e => {
-                    const shown = e.dir==='kr' ? e.word.hangul : e.word.french;
-                    const ans   = e.dir==='kr' ? e.word.french  : e.word.hangul;
+                    const shown = e.dir === 'kr' ? e.word.hangul : e.word.french;
+                    const ans = e.dir === 'kr' ? e.word.french : e.word.hangul;
                     return `<div class="test-wrong-item">
                         <span class="test-wrong-kr">${shown}</span>
                         <span class="test-wrong-arrow">→</span>
@@ -1130,7 +1842,7 @@ async function renderTest(bookId, chapter) {
                 }).join('')}
             </div>` : `<p style="color:var(--green);font-weight:600;margin-top:12px;">Aucune erreur — parfait !</p>`;
 
-        document.getElementById('content').innerHTML = `
+                document.getElementById('content').innerHTML = `
             <div class="test-wrap">
                 <div class="test-results">
                     <h2>Résultats — ${bookId} ${chapter}과</h2>
@@ -1143,31 +1855,31 @@ async function renderTest(bookId, chapter) {
                     </div>
                 </div>
             </div>`;
-        lucide.createIcons();
-    }
+                lucide.createIcons();
+            }
 
-    window.testRestart = function() { renderTest(_test.bookId, _test.chapter); };
+            window.testRestart = function () { renderTest(_test.bookId, _test.chapter); };
 
-    renderQuestion();
-}
+            renderQuestion();
+        }
 
-// ================================================================
-// YOUTUBE FEED
-// ================================================================
-async function renderYoutube() {
-    document.getElementById('sidebar-extra').innerHTML = '';
-    let channels;
-    try {
-        const res = await fetch('api/youtube-feed.php');
-        channels = await res.json();
-    } catch (e) {
-        document.getElementById('content').innerHTML = `
-            <div class="hero"><h1>📺 Vidéos</h1></div>
+        // ================================================================
+        // YOUTUBE FEED
+        // ================================================================
+        async function renderYoutube() {
+            document.getElementById('sidebar-extra').innerHTML = '';
+            let channels;
+            try {
+                const res = await fetch('api/youtube-feed.php');
+                channels = await res.json();
+            } catch (e) {
+                document.getElementById('content').innerHTML = `
+            <div class="hero"><h1>Vidéos</h1></div>
             <p style="color:var(--text-dim)">Impossible de charger le feed YouTube pour le moment.</p>`;
-        return;
-    }
+                return;
+            }
 
-    document.getElementById('content').innerHTML = `
+            document.getElementById('content').innerHTML = `
         <div class="hero">
             <h1>📺 Vidéos</h1>
             <p class="subtitle">Dernières vidéos des chaînes coréennes suivies</p>
@@ -1178,13 +1890,13 @@ async function renderYoutube() {
         </div>
         ${channels.map(renderYtChannelSection).join('')}
     `;
-    lucide.createIcons();
-}
+            lucide.createIcons();
+        }
 
-function renderYtChannelSection(c) {
-    const main = c.videos.slice(0, 10);
-    const extra = c.videos.slice(10);
-    return `
+        function renderYtChannelSection(c) {
+            const main = c.videos.slice(0, 10);
+            const extra = c.videos.slice(10);
+            return `
         <div class="yt-channel-section" data-channel="${c.channelId}">
             <h2 class="yt-channel-title">${escapeHtml(c.channelName)}</h2>
             <div class="yt-grid">
@@ -1193,12 +1905,12 @@ function renderYtChannelSection(c) {
             </div>
             ${extra.length ? `<button class="toggle-btn yt-more-btn" onclick="ytToggleMore(this)">Voir ${extra.length} de plus</button>` : ''}
         </div>`;
-}
+        }
 
-function ytCard(v, channelName) {
-    const date = new Date(v.published);
-    const dateStr = isNaN(date) ? '' : date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
-    return `<div class="yt-card">
+        function ytCard(v, channelName) {
+            const date = new Date(v.published);
+            const dateStr = isNaN(date) ? '' : date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+            return `<div class="yt-card">
         <div class="yt-thumb-wrap" onclick="ytPlay(this,'${v.videoId}')">
             <img src="${v.thumbnail}" alt="" class="yt-thumb" loading="lazy">
             <div class="yt-play-btn"><i data-lucide="play-circle"></i></div>
@@ -1208,44 +1920,45 @@ function ytCard(v, channelName) {
             <div class="yt-meta">${escapeHtml(channelName)} · ${dateStr}</div>
         </div>
     </div>`;
-}
+        }
 
-function ytPlay(el, videoId) {
-    el.outerHTML = `<div class="yt-thumb-wrap yt-embed-wrap">
+        function ytPlay(el, videoId) {
+            el.outerHTML = `<div class="yt-thumb-wrap yt-embed-wrap">
         <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>`;
-}
+        }
 
-function ytFilter(e, channelId) {
-    e.preventDefault();
-    document.querySelectorAll('#yt-filter .ch-pill').forEach(p => p.classList.toggle('active', p.dataset.channel === channelId));
-    document.querySelectorAll('.yt-channel-section').forEach(s => {
-        s.style.display = (channelId === 'all' || s.dataset.channel === channelId) ? '' : 'none';
-    });
-}
+        function ytFilter(e, channelId) {
+            e.preventDefault();
+            document.querySelectorAll('#yt-filter .ch-pill').forEach(p => p.classList.toggle('active', p.dataset.channel === channelId));
+            document.querySelectorAll('.yt-channel-section').forEach(s => {
+                s.style.display = (channelId === 'all' || s.dataset.channel === channelId) ? '' : 'none';
+            });
+        }
 
-function ytToggleMore(btn) {
-    const section = btn.closest('.yt-channel-section');
-    const extras = section.querySelectorAll('.yt-extra');
-    const showing = !extras[0].classList.contains('show');
-    extras.forEach(el => el.classList.toggle('show', showing));
-    btn.textContent = showing ? 'Voir moins' : `Voir ${extras.length} de plus`;
-}
+        function ytToggleMore(btn) {
+            const section = btn.closest('.yt-channel-section');
+            const extras = section.querySelectorAll('.yt-extra');
+            const showing = !extras[0].classList.contains('show');
+            extras.forEach(el => el.classList.toggle('show', showing));
+            btn.textContent = showing ? 'Voir moins' : `Voir ${extras.length} de plus`;
+        }
 
-function escapeHtml(s) {
-    const div = document.createElement('div');
-    div.textContent = s ?? '';
-    return div.innerHTML;
-}
+        function escapeHtml(s) {
+            const div = document.createElement('div');
+            div.textContent = s ?? '';
+            return div.innerHTML;
+        }
 
-// ================================================================
-// UTILS
-// ================================================================
-function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('open');
-    document.getElementById('sidebar-overlay').classList.toggle('open');
-}
-</script>
+        // ================================================================
+        // UTILS
+        // ================================================================
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+            document.getElementById('sidebar-overlay').classList.toggle('open');
+        }
+    </script>
 
 </body>
+
 </html>
