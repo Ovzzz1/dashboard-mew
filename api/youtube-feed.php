@@ -18,9 +18,10 @@ if (file_exists($cacheFile) && (time() - filemtime($cacheFile) < $cacheTTL)) {
     exit;
 }
 
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
 $nsYt = 'http://www.youtube.com/xml/schemas/2015';
 $nsMedia = 'http://search.yahoo.com/mrss/';
-$ctx = stream_context_create(['http' => ['timeout' => 10, 'header' => "User-Agent: Mozilla/5.0\r\n"]]);
+$ctx = stream_context_create(['http' => ['timeout' => 10, 'header' => "User-Agent: " . UA . "\r\n"]]);
 
 $result = [];
 foreach ($channels as $ch) {
@@ -47,6 +48,50 @@ foreach ($channels as $ch) {
         'videos' => $videos,
     ];
 }
+
+// Filtre les YouTube Shorts : /shorts/{id} renvoie 200 si c'est un short,
+// 303 -> /watch?v=... sinon. Requêtes HEAD en parallèle (curl_multi).
+$allIds = [];
+foreach ($result as $ch) {
+    foreach ($ch['videos'] as $v) $allIds[] = $v['videoId'];
+}
+
+$isShort = [];
+if ($allIds) {
+    $mh = curl_multi_init();
+    $handles = [];
+    foreach ($allIds as $id) {
+        $c = curl_init("https://www.youtube.com/shorts/$id");
+        curl_setopt_array($c, [
+            CURLOPT_NOBODY => true,
+            CURLOPT_FOLLOWLOCATION => false,
+            CURLOPT_USERAGENT => UA,
+            CURLOPT_COOKIE => 'CONSENT=YES+1; SOCS=CAI',
+            CURLOPT_TIMEOUT => 8,
+            CURLOPT_RETURNTRANSFER => true,
+        ]);
+        curl_multi_add_handle($mh, $c);
+        $handles[$id] = $c;
+    }
+    $running = null;
+    do {
+        curl_multi_exec($mh, $running);
+        curl_multi_select($mh);
+    } while ($running > 0);
+    foreach ($handles as $id => $c) {
+        $isShort[$id] = curl_getinfo($c, CURLINFO_HTTP_CODE) === 200;
+        curl_multi_remove_handle($mh, $c);
+    }
+    curl_multi_close($mh);
+}
+
+foreach ($result as &$ch) {
+    $ch['videos'] = array_values(array_filter(
+        $ch['videos'],
+        fn($v) => empty($isShort[$v['videoId']])
+    ));
+}
+unset($ch);
 
 @mkdir(dirname($cacheFile), 0755, true);
 $json = json_encode($result, JSON_UNESCAPED_UNICODE);
