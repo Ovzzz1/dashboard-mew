@@ -163,6 +163,19 @@
             font-weight: 600;
         }
 
+        .filter-label {
+            display: flex;
+            align-items: center;
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            margin-right: 2px;
+        }
+
+        .fc-level-filter-bar {
+            margin: 0 0 4px;
+        }
+
         /* Modal */
         .modal-overlay {
             display: none;
@@ -1581,12 +1594,15 @@
 
             _fc = {
                 bookId, chapter,
-                words: shuffle(rawWords),
+                rawWords,
+                levelFilter: { green: true, orange: true, red: true, none: true },
+                words: [],
                 idx: 0,
                 mode: 'alternate',  // 'kr', 'fr', 'alternate'
                 correct: 0, wrong: 0,
                 flipped: false,
             };
+            _fc.words = shuffle(fcFilteredWords());
 
             function getDir(idx) {
                 if (_fc.mode === 'kr') return 'kr';
@@ -1622,13 +1638,23 @@
         <div class="fc-wrap">
             <div class="fc-hero">
                 <h1>Flashcards — ${bookId} ${chapter}과</h1>
-                <p>${rawWords.length} mots · Cliquez sur la carte pour révéler la réponse</p>
+                <p id="fc-subtitle">${rawWords.length} mots · Cliquez sur la carte pour révéler la réponse</p>
             </div>
             <div class="fc-mode-bar">
                 <button class="fc-mode-btn ${_fc.mode === 'alternate' ? 'active' : ''}" onclick="fcSetMode('alternate')">Alterné</button>
                 <button class="fc-mode-btn ${_fc.mode === 'kr' ? 'active' : ''}" onclick="fcSetMode('kr')">한글 → FR</button>
                 <button class="fc-mode-btn ${_fc.mode === 'fr' ? 'active' : ''}" onclick="fcSetMode('fr')">FR → 한글</button>
                 <button class="fc-mode-btn" onclick="fcShuffle()">Mélanger</button>
+            </div>
+            <div class="level-filter-bar fc-level-filter-bar">
+                <span class="filter-label">Entraîner sur :</span>
+                <button class="lvl-filter-btn active" data-lvl="green" onclick="fcToggleLevelFilter('green')">🟢 Maîtrisés</button>
+                <button class="lvl-filter-btn active" data-lvl="orange" onclick="fcToggleLevelFilter('orange')">🟠 À réviser</button>
+                <button class="lvl-filter-btn active" data-lvl="red" onclick="fcToggleLevelFilter('red')">🔴 À apprendre</button>
+                <button class="lvl-filter-btn active" data-lvl="none" onclick="fcToggleLevelFilter('none')">⚫ Non évalués</button>
+            </div>
+            <div id="fc-empty-state" class="empty-state" style="display:none">
+                Aucun mot ne correspond aux niveaux sélectionnés pour ce chapitre.
             </div>
             <div class="fc-progress-row">
                 <span class="fc-counter" id="fc-counter">1 / ${rawWords.length}</span>
@@ -1713,6 +1739,29 @@
             data[`${_fc.chapter}_${w.hangul}`] = level;
             saveLvlStore(_fc.bookId, data);
             fcNav(1);
+        };
+        // ── Level filter (Maîtrisés / À réviser / À apprendre / Non évalués) ──
+        function shuffleArr(arr) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a; }
+        function fcWordLevel(w) { return getLvlStore(_fc.bookId)[`${_fc.chapter}_${w.hangul}`] || 'none'; }
+        function fcFilteredWords() { return _fc.rawWords.filter(w => _fc.levelFilter[fcWordLevel(w)]); }
+        window.fcToggleLevelFilter = function (lvl) {
+            _fc.levelFilter[lvl] = !_fc.levelFilter[lvl];
+            document.querySelector(`.fc-level-filter-bar .lvl-filter-btn[data-lvl="${lvl}"]`)?.classList.toggle('active', _fc.levelFilter[lvl]);
+            _fc.words = shuffleArr(fcFilteredWords());
+            _fc.idx = 0; _fc.flipped = false; _fc.correct = 0; _fc.wrong = 0;
+            document.getElementById('fc-end-screen').style.display = 'none';
+            const subtitle = document.getElementById('fc-subtitle');
+            if (subtitle) subtitle.textContent = `${_fc.words.length} / ${_fc.rawWords.length} mots sélectionnés · Cliquez sur la carte pour révéler la réponse`;
+            const playEls = document.querySelectorAll('.card-perspective,.card-controls,.fc-progress-row,.fc-score-row');
+            if (_fc.words.length === 0) {
+                document.getElementById('fc-empty-state').style.display = '';
+                playEls.forEach(el => el.style.display = 'none');
+            } else {
+                document.getElementById('fc-empty-state').style.display = 'none';
+                playEls.forEach(el => el.style.display = '');
+                document.getElementById('fc-card-inner')?.classList.remove('flipped');
+                fcNav(0);
+            }
         };
         window.fcSetMode = function (mode) {
             _fc.mode = mode;
