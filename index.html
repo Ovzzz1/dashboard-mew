@@ -163,6 +163,10 @@
             <span class="sidebar-icon"><i data-lucide="check-square"></i></span>
             <span>Test</span>
         </a>
+        <a href="#youtube" class="sidebar-link" id="nav-youtube">
+            <span class="sidebar-icon"><i data-lucide="play-circle"></i></span>
+            <span>Vidéos</span>
+        </a>
         <div id="sidebar-extra"></div>
     </nav>
     <div class="sidebar-footer">
@@ -318,6 +322,7 @@ async function route() {
     else if (page === 'lesson') { renderLesson(args[0], args.slice(1).join('/')); }
     else if (page === 'flashcard') { await renderFlashcard(args[0] || null, args[1] ? parseInt(args[1]) : null); }
     else if (page === 'test') { await renderTest(args[0] || null, args[1] ? parseInt(args[1]) : null); }
+    else if (page === 'youtube') { await renderYoutube(); }
 }
 
 function setNavActive(page) {
@@ -325,6 +330,7 @@ function setNavActive(page) {
     document.getElementById('nav-lessons').classList.toggle('active', page === 'lessons' || page === 'lesson');
     document.getElementById('nav-flashcard').classList.toggle('active', page === 'flashcard');
     document.getElementById('nav-test').classList.toggle('active', page === 'test');
+    document.getElementById('nav-youtube').classList.toggle('active', page === 'youtube');
 }
 
 // ================================================================
@@ -1143,6 +1149,93 @@ async function renderTest(bookId, chapter) {
     window.testRestart = function() { renderTest(_test.bookId, _test.chapter); };
 
     renderQuestion();
+}
+
+// ================================================================
+// YOUTUBE FEED
+// ================================================================
+async function renderYoutube() {
+    document.getElementById('sidebar-extra').innerHTML = '';
+    let channels;
+    try {
+        const res = await fetch('api/youtube-feed.php');
+        channels = await res.json();
+    } catch (e) {
+        document.getElementById('content').innerHTML = `
+            <div class="hero"><h1>📺 Vidéos</h1></div>
+            <p style="color:var(--text-dim)">Impossible de charger le feed YouTube pour le moment.</p>`;
+        return;
+    }
+
+    document.getElementById('content').innerHTML = `
+        <div class="hero">
+            <h1>📺 Vidéos</h1>
+            <p class="subtitle">Dernières vidéos des chaînes coréennes suivies</p>
+        </div>
+        <div class="chapter-nav" id="yt-filter">
+            <a href="#" class="ch-pill active" data-channel="all" onclick="ytFilter(event,'all')">Toutes</a>
+            ${channels.map(c => `<a href="#" class="ch-pill" data-channel="${c.channelId}" onclick="ytFilter(event,'${c.channelId}')">${escapeHtml(c.channelName)} <span class="count">${c.videos.length}</span></a>`).join('')}
+        </div>
+        ${channels.map(renderYtChannelSection).join('')}
+    `;
+    lucide.createIcons();
+}
+
+function renderYtChannelSection(c) {
+    const main = c.videos.slice(0, 10);
+    const extra = c.videos.slice(10);
+    return `
+        <div class="yt-channel-section" data-channel="${c.channelId}">
+            <h2 class="yt-channel-title">${escapeHtml(c.channelName)}</h2>
+            <div class="yt-grid">
+                ${main.map(v => ytCard(v, c.channelName)).join('')}
+                ${extra.map(v => `<div class="yt-extra">${ytCard(v, c.channelName)}</div>`).join('')}
+            </div>
+            ${extra.length ? `<button class="toggle-btn yt-more-btn" onclick="ytToggleMore(this)">Voir ${extra.length} de plus</button>` : ''}
+        </div>`;
+}
+
+function ytCard(v, channelName) {
+    const date = new Date(v.published);
+    const dateStr = isNaN(date) ? '' : date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+    return `<div class="yt-card">
+        <div class="yt-thumb-wrap" onclick="ytPlay(this,'${v.videoId}')">
+            <img src="${v.thumbnail}" alt="" class="yt-thumb" loading="lazy">
+            <div class="yt-play-btn"><i data-lucide="play-circle"></i></div>
+        </div>
+        <div class="yt-info">
+            <div class="yt-title">${escapeHtml(v.title)}</div>
+            <div class="yt-meta">${escapeHtml(channelName)} · ${dateStr}</div>
+        </div>
+    </div>`;
+}
+
+function ytPlay(el, videoId) {
+    el.outerHTML = `<div class="yt-thumb-wrap yt-embed-wrap">
+        <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>`;
+}
+
+function ytFilter(e, channelId) {
+    e.preventDefault();
+    document.querySelectorAll('#yt-filter .ch-pill').forEach(p => p.classList.toggle('active', p.dataset.channel === channelId));
+    document.querySelectorAll('.yt-channel-section').forEach(s => {
+        s.style.display = (channelId === 'all' || s.dataset.channel === channelId) ? '' : 'none';
+    });
+}
+
+function ytToggleMore(btn) {
+    const section = btn.closest('.yt-channel-section');
+    const extras = section.querySelectorAll('.yt-extra');
+    const showing = !extras[0].classList.contains('show');
+    extras.forEach(el => el.classList.toggle('show', showing));
+    btn.textContent = showing ? 'Voir moins' : `Voir ${extras.length} de plus`;
+}
+
+function escapeHtml(s) {
+    const div = document.createElement('div');
+    div.textContent = s ?? '';
+    return div.innerHTML;
 }
 
 // ================================================================
