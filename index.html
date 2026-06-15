@@ -1074,7 +1074,7 @@
             else if (page === 'vocab') { await renderVocab(args[0], args[1] ? parseInt(args[1]) : null); }
             else if (page === 'lessons') { renderLessons(args[0] || null); }
             else if (page === 'lesson') { renderLesson(args[0], args.slice(1).join('/')); }
-            else if (page === 'flashcard') { await renderFlashcard(args[0] || null, args[1] ? parseInt(args[1]) : null); }
+            else if (page === 'flashcard') { await renderFlashcard(args[0] || null, args[1] ? parseInt(args[1]) : null, args[2] ? parseInt(args[2]) : null); }
             else if (page === 'test') { await renderTest(args[0] || null, args[1] ? parseInt(args[1]) : null); }
             else if (page === 'youtube') { await renderYoutube(); }
         }
@@ -1561,7 +1561,7 @@
         // ================================================================
         let _fc = {};  // flashcard state
 
-        async function renderFlashcard(bookId, chapter) {
+        async function renderFlashcard(bookId, chapter, week) {
             // If no book selected, show book/chapter picker
             const books = MANIFEST.books;
             if (!bookId) {
@@ -1590,14 +1590,31 @@
             <div class="fc-wrap">
                 <div class="fc-hero">
                     <h1>Flashcards — ${bookId}</h1>
-                    <p>Choisissez un chapitre :</p>
+                    <p>Choisissez un chapitre, ou directement une semaine (lot de 10 mots) :</p>
                 </div>
-                <div class="chapter-nav" style="margin-top:16px">
-                    ${chNums.map(n => `<a href="#flashcard/${bookId}/${n}" class="ch-pill">${n}과 <span class="count">${book.chapters[n].length}</span></a>`).join('')}
+                <div class="fc-chapter-list">
+                    ${chNums.map(n => {
+                        const words = book.chapters[n];
+                        const totalWeeks = Math.ceil(words.length / 10);
+                        const weekPills = totalWeeks > 1
+                            ? `<div class="week-pill-row">${Array.from({ length: totalWeeks }, (_, i) => i + 1).map(w => {
+                                const cnt = Math.min(10, words.length - (w - 1) * 10);
+                                return `<a href="#flashcard/${bookId}/${n}/${w}" class="week-pill">S${w} <span class="count">${cnt}</span></a>`;
+                            }).join('')}</div>`
+                            : '';
+                        return `<div class="fc-chapter-row">
+                            <a href="#flashcard/${bookId}/${n}" class="ch-pill">${n}과 <span class="count">${words.length}</span></a>
+                            ${weekPills}
+                        </div>`;
+                    }).join('')}
                 </div>
             </div>`;
                 lucide.createIcons(); return;
             }
+
+            const chapterWords = [...(book.chapters[chapter] || [])];
+            const totalWeeks = Math.ceil(chapterWords.length / 10);
+            if (week !== null && (week < 1 || week > totalWeeks)) week = null;
 
             // Build sidebar
             document.getElementById('sidebar-extra').innerHTML = `
@@ -1607,16 +1624,28 @@
             <span>${b}</span></a>`).join('')}
         <div class="nav-section-label">Chapitres</div>
         <div class="sidebar-sub">
-            ${chNums.map(n => `<a href="#flashcard/${bookId}/${n}" class="sidebar-link ${n === chapter ? 'active' : ''}">
-                <span>${n}과 (${book.chapters[n].length})</span></a>`).join('')}
+            ${chNums.map(n => {
+                const words = book.chapters[n];
+                const link = `<a href="#flashcard/${bookId}/${n}" class="sidebar-link ${n === chapter && !week ? 'active' : ''}">
+                    <span>${n}과 (${words.length})</span></a>`;
+                if (n !== chapter) return link;
+                const nWeeks = Math.ceil(words.length / 10);
+                if (nWeeks <= 1) return link;
+                const weekLinks = Array.from({ length: nWeeks }, (_, i) => i + 1).map(w => {
+                    const cnt = Math.min(10, words.length - (w - 1) * 10);
+                    return `<a href="#flashcard/${bookId}/${n}/${w}" class="sidebar-link ${week === w ? 'active' : ''}">
+                        <span>Semaine ${w} (${cnt})</span></a>`;
+                }).join('');
+                return link + `<div class="sidebar-sub">${weekLinks}</div>`;
+            }).join('')}
         </div>`;
 
-            const rawWords = [...(book.chapters[chapter] || [])];
+            const rawWords = week ? chapterWords.slice((week - 1) * 10, week * 10) : chapterWords;
             // Shuffle helper
             function shuffle(arr) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a; }
 
             _fc = {
-                bookId, chapter,
+                bookId, chapter, week,
                 rawWords,
                 levelFilter: { green: true, orange: true, red: true, none: true },
                 words: [],
@@ -1660,8 +1689,8 @@
             document.getElementById('content').innerHTML = `
         <div class="fc-wrap">
             <div class="fc-hero">
-                <h1>Flashcards — ${bookId} ${chapter}과</h1>
-                <p id="fc-subtitle">${rawWords.length} mots · Cliquez sur la carte pour révéler la réponse</p>
+                <h1>Flashcards — ${bookId} ${chapter}과${week ? ` · Semaine ${week}` : ''}</h1>
+                <p id="fc-subtitle">${rawWords.length} mots${week ? ` (mots ${(week - 1) * 10 + 1}–${(week - 1) * 10 + rawWords.length})` : ''} · Cliquez sur la carte pour révéler la réponse</p>
             </div>
             <div class="fc-mode-bar">
                 <button class="fc-mode-btn ${_fc.mode === 'alternate' ? 'active' : ''}" onclick="fcSetMode('alternate')">Alterné</button>
