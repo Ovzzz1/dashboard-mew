@@ -1586,25 +1586,49 @@
             const chNums = Object.keys(book.chapters).map(Number).sort((a, b) => a - b);
             if (chapter === null) {
                 document.getElementById('sidebar-extra').innerHTML = '';
+
+                const lvlData = getLvlStore(bookId);
+                const levelCounts = (chNum, wordList) => {
+                    let g = 0, o = 0, r = 0, none = 0;
+                    wordList.forEach(w => {
+                        const lvl = lvlData[`${chNum}_${w.hangul}`] || 'none';
+                        if (lvl === 'green') g++; else if (lvl === 'orange') o++; else if (lvl === 'red') r++; else none++;
+                    });
+                    return { g, o, r, none };
+                };
+                const masteryBar = (c) => `<div class="mastery-bar">
+                    ${c.g ? `<span style="flex:${c.g};background:var(--green)"></span>` : ''}
+                    ${c.o ? `<span style="flex:${c.o};background:var(--orange)"></span>` : ''}
+                    ${c.r ? `<span style="flex:${c.r};background:var(--red)"></span>` : ''}
+                    ${c.none ? `<span style="flex:${c.none};background:var(--border)"></span>` : ''}
+                </div>`;
+
                 document.getElementById('content').innerHTML = `
             <div class="fc-wrap">
                 <div class="fc-hero">
                     <h1>Flashcards — ${bookId}</h1>
-                    <p>Choisissez un chapitre, ou directement une semaine (lot de 10 mots) :</p>
+                    <p>Choisissez un chapitre entier, ou une semaine (lot de 10 mots) ciblée :</p>
                 </div>
-                <div class="fc-chapter-list">
+                <div class="fc-chapters-grid">
                     ${chNums.map(n => {
                         const words = book.chapters[n];
                         const totalWeeks = Math.ceil(words.length / 10);
-                        const weekPills = totalWeeks > 1
-                            ? `<div class="week-pill-row">${Array.from({ length: totalWeeks }, (_, i) => i + 1).map(w => {
-                                const cnt = Math.min(10, words.length - (w - 1) * 10);
-                                return `<a href="#flashcard/${bookId}/${n}/${w}" class="week-pill">S${w} <span class="count">${cnt}</span></a>`;
-                            }).join('')}</div>`
-                            : '';
-                        return `<div class="fc-chapter-row">
-                            <a href="#flashcard/${bookId}/${n}" class="ch-pill">${n}과 <span class="count">${words.length}</span></a>
-                            ${weekPills}
+                        const weekChips = Array.from({ length: totalWeeks }, (_, i) => i + 1).map(w => {
+                            const start = (w - 1) * 10, end = Math.min(w * 10, words.length);
+                            return `<a href="#flashcard/${bookId}/${n}/${w}" class="fc-week-chip">
+                                <span class="fc-week-num">S${w}</span>
+                                <span class="fc-week-count">${end - start} mots</span>
+                                ${masteryBar(levelCounts(n, words.slice(start, end)))}
+                            </a>`;
+                        }).join('');
+                        return `<div class="fc-chapter-card">
+                            <div class="fc-chapter-card-head">
+                                <h3>${n}과</h3>
+                                <span class="fc-chapter-count">${words.length} mots</span>
+                            </div>
+                            ${masteryBar(levelCounts(n, words))}
+                            <a href="#flashcard/${bookId}/${n}" class="fc-chapter-all-btn">Tout le chapitre →</a>
+                            <div class="fc-week-grid">${weekChips}</div>
                         </div>`;
                     }).join('')}
                 </div>

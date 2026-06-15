@@ -365,35 +365,67 @@ main {
 }
 
 /* Flashcard chapter+week picker */
-.fc-chapter-list {
-    display: flex; flex-direction: column; gap: 14px;
-    margin-top: 16px; margin-bottom: 2rem; padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
+.fc-chapters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 16px;
 }
-.fc-chapter-row {
-    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-}
-.week-pill-row {
-    display: flex; gap: 6px; flex-wrap: wrap;
-}
-.week-pill {
-    padding: 5px 12px;
-    border-radius: 16px;
-    border: 1px solid var(--border);
+.fc-chapter-card {
     background: var(--bg-card);
-    color: var(--text-muted);
-    font-size: 0.78rem;
-    font-weight: 500;
-    cursor: pointer;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.4rem 1.5rem;
+    position: relative;
+    overflow: hidden;
     transition: var(--transition);
-    text-decoration: none;
 }
-.week-pill:hover { border-color: var(--accent-dim); color: var(--text); background: var(--bg-hover); }
-.week-pill .count {
-    display: inline-block; margin-left: 4px; padding: 1px 6px;
-    border-radius: 8px; font-size: 0.65rem; font-weight: 600;
-    background: rgba(0,71,160,0.08); color: var(--text-muted);
+.fc-chapter-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--accent);
 }
+.fc-chapter-card:hover {
+    box-shadow: var(--shadow), 0 0 30px var(--accent-glow);
+    border-color: var(--accent-dim);
+}
+.fc-chapter-card-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 0.7rem;
+}
+.fc-chapter-card-head h3 { font-size: 1.3rem; font-weight: 800; }
+.fc-chapter-count { font-size: 0.78rem; color: var(--text-dim); font-weight: 600; white-space: nowrap; }
+
+/* Mini stacked bar showing green/orange/red/non-évalué proportions */
+.mastery-bar {
+    display: flex; height: 6px; border-radius: 4px; overflow: hidden;
+    background: var(--border); margin-bottom: 1rem;
+}
+.mastery-bar span { display: block; }
+
+.fc-chapter-all-btn {
+    display: block; text-align: center;
+    padding: 9px 14px; border-radius: var(--radius-sm);
+    background: var(--accent-glow); color: var(--accent);
+    font-weight: 600; font-size: 0.85rem; text-decoration: none;
+    margin-bottom: 1.1rem; transition: var(--transition);
+}
+.fc-chapter-all-btn:hover { background: var(--accent); color: #fff; }
+
+.fc-week-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(58px, 1fr)); gap: 8px;
+}
+.fc-week-chip {
+    display: flex; flex-direction: column; align-items: center; gap: 5px;
+    padding: 9px 4px 7px; border-radius: var(--radius-sm);
+    border: 1px solid var(--border); background: var(--bg);
+    text-decoration: none; color: var(--text);
+    transition: var(--transition);
+}
+.fc-week-chip:hover { border-color: var(--accent-dim); background: var(--bg-hover); transform: translateY(-2px); }
+.fc-week-num { font-weight: 700; font-size: 0.85rem; }
+.fc-week-count { font-size: 0.62rem; color: var(--text-muted); }
+.fc-week-chip .mastery-bar { width: 100%; height: 4px; margin: 0; }
 
 /* Search & controls */
 .controls {
