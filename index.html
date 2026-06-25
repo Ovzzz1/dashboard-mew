@@ -1921,14 +1921,44 @@
 
             function getDir(idx) { return idx % 2 === 0 ? 'kr' : 'fr'; }
 
-            function normalise(s) { return s.toLowerCase().replace(/[()（）]/g, '').replace(/\s+/g, ' ').trim(); }
+            function stripAccents(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+            function normalise(s) {
+                s = stripAccents(String(s).toLowerCase());
+                s = s.replace(/\([^)]*\)/g, ' ');                 // retire les clarifications entre parenthèses
+                s = s.replace(/['’.!?;:«»"]/g, ' ');               // ponctuation / apostrophes -> espace
+                s = s.replace(/[-–]/g, ' ');
+                s = s.replace(/\b(le|la|les|l|un|une|des|du|de|d|au|aux|a|à|en|the)\b/g, ' '); // articles / prépositions
+                s = s.replace(/\s+/g, ' ').trim();
+                return s;
+            }
+            function levenshtein(a, b) {
+                const m = a.length, n = b.length;
+                if (!m) return n; if (!n) return m;
+                let prev = Array.from({ length: n + 1 }, (_, j) => j);
+                for (let i = 1; i <= m; i++) {
+                    const cur = [i];
+                    for (let j = 1; j <= n; j++) {
+                        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+                    }
+                    prev = cur;
+                }
+                return prev[n];
+            }
 
             function checkAnswer(word, dir, given) {
                 const correct = dir === 'kr' ? word.french : word.hangul;
                 const gn = normalise(given);
-                // Accept any segment separated by comma or /
-                const segments = correct.split(/[,/،]/).map(s => normalise(s));
-                return segments.some(seg => gn === seg || seg.includes(gn) || gn.includes(seg.slice(0, Math.min(seg.length, 6))));
+                if (!gn) return false;
+                const isFrench = dir === 'kr';                     // on tape du français quand le coréen est montré
+                // Plusieurs traductions acceptées séparées par , ou /
+                const segments = correct.split(/[,/،;]/).map(normalise).filter(Boolean);
+                const gnNS = gn.replace(/\s+/g, '');
+                return segments.some(seg => {
+                    if (gn === seg) return true;
+                    if (gnNS === seg.replace(/\s+/g, '')) return true;          // tolère les espaces (utile en coréen)
+                    if (isFrench && seg.length >= 5 && levenshtein(gn, seg) <= 1) return true; // 1 faute de frappe en français
+                    return false;
+                });
             }
 
             function renderQuestion() {
