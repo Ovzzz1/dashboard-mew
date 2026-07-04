@@ -1,5 +1,10 @@
 {
   "books": ["3A", "3B", "4A", "4B"],
+  "exos": {
+    "4A": {
+      "1": ["Exo 1.md", "Exo 2.md", "Exo 3.md", "Exo 4.md", "Exo 5.md"]
+    }
+  },
   "lessons": {
     "3A": [
       {
