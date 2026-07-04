@@ -13,9 +13,156 @@
         #lesson-frame {
             width: 100%;
             border: none;
-            height: calc(100vh - 120px);
+            height: 1200px; /* fallback, ajusté au contenu par JS */
             border-radius: var(--radius);
             display: block;
+            background: #f4f5f8;
+        }
+
+        /* Vue leçon : pleine largeur + vrai scroll de toute la page */
+        body.lesson-mode main {
+            max-width: 100%;
+            padding: 1.25rem 1.75rem 3rem;
+        }
+
+        /* ---------- CALENDRIER ---------- */
+        .cal-hero { margin-bottom: 1.5rem; }
+        .cal-layout {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 1.5rem;
+            align-items: start;
+        }
+        .cal-main {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+        }
+        .cal-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .cal-month-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            min-width: 180px;
+        }
+        .cal-nav-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px; height: 34px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            color: var(--text);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .cal-nav-btn:hover { background: var(--bg); border-color: var(--accent); color: var(--accent); }
+        .cal-today-btn {
+            margin-left: auto;
+            padding: 0.4rem 0.85rem;
+            border-radius: 8px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .cal-today-btn:hover { filter: brightness(1.08); }
+        .cal-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 6px;
+        }
+        .cal-weekdays { margin-bottom: 6px; }
+        .cal-weekday {
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: var(--text-dim);
+            padding: 4px 0;
+        }
+        .cal-cell {
+            position: relative;
+            min-height: 78px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 6px 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            overflow: hidden;
+            background: var(--bg);
+        }
+        .cal-cell:hover { border-color: var(--accent); }
+        .cal-empty { background: transparent; border: none; cursor: default; }
+        .cal-daynum { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+        .cal-today { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+        .cal-today .cal-daynum { color: var(--accent); }
+        .cal-selected { border-color: var(--accent); box-shadow: inset 0 0 0 2px var(--accent); background: rgba(0,71,160,0.10); }
+        .cal-has-note { background: rgba(0,71,160,0.05); }
+        .cal-dot {
+            position: absolute;
+            top: 9px; right: 9px;
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+        .cal-preview {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-top: 4px;
+            font-size: 0.72rem;
+            line-height: 1.3;
+            color: var(--text-dim);
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .cal-editor {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            position: sticky;
+            top: 1rem;
+        }
+        .cal-editor-head {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.85rem;
+        }
+        .cal-textarea {
+            width: 100%;
+            min-height: 320px;
+            resize: vertical;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: var(--bg);
+            color: var(--text);
+            padding: 0.75rem;
+            font-family: inherit;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .cal-textarea:focus { outline: none; border-color: var(--accent); }
+        .cal-editor-foot { min-height: 20px; margin-top: 0.5rem; }
+        .cal-save-status { font-size: 0.78rem; color: var(--accent); font-weight: 600; }
+
+        @media (max-width: 900px) {
+            .cal-layout { grid-template-columns: 1fr; }
+            .cal-editor { position: static; }
+            .cal-cell { min-height: 58px; }
+            .cal-preview { display: none; }
         }
 
         .lesson-viewer-bar {
@@ -918,6 +1065,10 @@
                 <span class="sidebar-icon"><i data-lucide="play-circle"></i></span>
                 <span>Vidéos</span>
             </a>
+            <a href="#calendar" class="sidebar-link" id="nav-calendar">
+                <span class="sidebar-icon"><i data-lucide="calendar-days"></i></span>
+                <span>Calendrier</span>
+            </a>
             <div id="sidebar-extra"></div>
         </nav>
         <div class="sidebar-footer">
@@ -1066,6 +1217,7 @@
         async function route() {
             const { page, args } = getRoute();
             setNavActive(page);
+            document.body.classList.toggle('lesson-mode', page === 'lesson');
             const el = document.getElementById('content');
             el.innerHTML = '<div class="loading">Chargement…</div>';
             lucide.createIcons();
@@ -1077,6 +1229,7 @@
             else if (page === 'flashcard') { await renderFlashcard(args[0] || null, args[1] ? parseInt(args[1]) : null, args[2] ? parseInt(args[2]) : null); }
             else if (page === 'test') { await renderTest(args[0] || null, args[1] ? parseInt(args[1]) : null); }
             else if (page === 'youtube') { await renderYoutube(); }
+            else if (page === 'calendar') { renderCalendar(args[0] || null); }
         }
 
         function setNavActive(page) {
@@ -1085,6 +1238,7 @@
             document.getElementById('nav-flashcard').classList.toggle('active', page === 'flashcard');
             document.getElementById('nav-test').classList.toggle('active', page === 'test');
             document.getElementById('nav-youtube').classList.toggle('active', page === 'youtube');
+            document.getElementById('nav-calendar').classList.toggle('active', page === 'calendar');
         }
 
         // ================================================================
@@ -1551,9 +1705,173 @@
             <a href="#lessons">← Retour aux lessons</a>
             <span class="crumb">/ Level ${level} / ${name}</span>
         </div>
-        <iframe id="lesson-frame" src="${src}" title="${name}"></iframe>
+        <iframe id="lesson-frame" src="${src}" title="${name}" scrolling="no"></iframe>
     `;
             lucide.createIcons();
+
+            // Ajuste la hauteur de l'iframe à son contenu → le scroll se fait
+            // sur toute la page, plus de mini-bandeau scrollable interne.
+            const frame = document.getElementById('lesson-frame');
+            const resize = () => {
+                try {
+                    const doc = frame.contentDocument || frame.contentWindow.document;
+                    const h = Math.max(
+                        doc.body.scrollHeight, doc.documentElement.scrollHeight,
+                        doc.body.offsetHeight, doc.documentElement.offsetHeight
+                    );
+                    if (h > 0) frame.style.height = h + 'px';
+                } catch (e) { /* cross-origin : on garde le fallback */ }
+            };
+            frame.addEventListener('load', () => {
+                resize();
+                // Re-mesure après chargement des polices web / images.
+                setTimeout(resize, 250);
+                setTimeout(resize, 800);
+                setTimeout(resize, 2000);
+                try {
+                    const ro = new ResizeObserver(resize);
+                    ro.observe(frame.contentDocument.body);
+                } catch (e) { /* ResizeObserver indispo */ }
+            });
+            if (window._lessonResize) window.removeEventListener('resize', window._lessonResize);
+            window._lessonResize = resize;
+            window.addEventListener('resize', resize);
+        }
+
+        // ================================================================
+        // CALENDRIER — notes quotidiennes (localStorage)
+        // ================================================================
+        const MONTHS_FR = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+            'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+        const DAYS_FR = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'];
+
+        function getCalNotes() { try { return JSON.parse(localStorage.getItem('mew_calendar') || '{}'); } catch { return {}; } }
+        function saveCalNotes(d) { localStorage.setItem('mew_calendar', JSON.stringify(d)); }
+        const calKey = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+        let _calMonth = null;    // Date sur le 1er du mois affiché
+        let _calSelected = null; // clé YYYY-MM-DD du jour sélectionné
+
+        function renderCalendar(ym) {
+            document.getElementById('sidebar-extra').innerHTML = '';
+            const today = new Date();
+            if (ym && /^\d{4}-\d{2}$/.test(ym)) {
+                const [y, m] = ym.split('-').map(Number);
+                _calMonth = new Date(y, m - 1, 1);
+            } else if (!_calMonth) {
+                _calMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+            }
+            if (!_calSelected) _calSelected = calKey(today);
+
+            const year = _calMonth.getFullYear();
+            const month = _calMonth.getMonth();
+            const notes = getCalNotes();
+            const todayKey = calKey(today);
+
+            const first = new Date(year, month, 1);
+            const offset = (first.getDay() + 6) % 7; // lundi = 0
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            const prev = `${month === 0 ? year - 1 : year}-${String(month === 0 ? 12 : month).padStart(2, '0')}`;
+            const next = `${month === 11 ? year + 1 : year}-${String(month === 11 ? 1 : month + 2).padStart(2, '0')}`;
+
+            let cells = '';
+            for (let i = 0; i < offset; i++) cells += `<div class="cal-cell cal-empty"></div>`;
+            for (let d = 1; d <= daysInMonth; d++) {
+                const dd = new Date(year, month, d);
+                const key = calKey(dd);
+                const note = notes[key];
+                const cls = ['cal-cell'];
+                if (key === todayKey) cls.push('cal-today');
+                if (key === _calSelected) cls.push('cal-selected');
+                if (note && note.trim()) cls.push('cal-has-note');
+                cells += `<div class="${cls.join(' ')}" data-key="${key}" onclick="selectCalDay('${key}')">
+                    <span class="cal-daynum">${d}</span>
+                    ${note && note.trim() ? `<span class="cal-dot"></span><span class="cal-preview">${escapeHtml(note.trim())}</span>` : ''}
+                </div>`;
+            }
+
+            document.getElementById('content').innerHTML = `
+        <div class="hero cal-hero">
+            <h1><span class="kr">달력</span> Calendrier</h1>
+            <p class="subtitle">Note ce que tu veux, jour par jour.</p>
+        </div>
+        <div class="cal-layout">
+            <div class="cal-main">
+                <div class="cal-toolbar">
+                    <a class="cal-nav-btn" href="#calendar/${prev}"><i data-lucide="chevron-left" class="icon-sm"></i></a>
+                    <div class="cal-month-title">${MONTHS_FR[month]} ${year}</div>
+                    <a class="cal-nav-btn" href="#calendar/${next}"><i data-lucide="chevron-right" class="icon-sm"></i></a>
+                    <a class="cal-today-btn" href="#calendar/${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}" onclick="_calSelected='${todayKey}'">Aujourd'hui</a>
+                </div>
+                <div class="cal-grid cal-weekdays">
+                    ${DAYS_FR.map(d => `<div class="cal-weekday">${d}</div>`).join('')}
+                </div>
+                <div class="cal-grid cal-days">${cells}</div>
+            </div>
+            <div class="cal-editor" id="cal-editor"></div>
+        </div>
+    `;
+            drawCalEditor();
+            lucide.createIcons();
+        }
+
+        function selectCalDay(key) {
+            _calSelected = key;
+            document.querySelectorAll('.cal-cell.cal-selected').forEach(c => c.classList.remove('cal-selected'));
+            const cell = document.querySelector(`.cal-cell[data-key="${key}"]`);
+            if (cell) cell.classList.add('cal-selected');
+            drawCalEditor();
+        }
+
+        function drawCalEditor() {
+            const el = document.getElementById('cal-editor');
+            if (!el) return;
+            const notes = getCalNotes();
+            const [y, m, d] = _calSelected.split('-').map(Number);
+            const dObj = new Date(y, m - 1, d);
+            const label = `${DAYS_FR[(dObj.getDay() + 6) % 7]} ${d} ${MONTHS_FR[m - 1]} ${y}`;
+            el.innerHTML = `
+        <div class="cal-editor-head">
+            <i data-lucide="pencil" class="icon-sm"></i>
+            <span>${label}</span>
+        </div>
+        <textarea id="cal-note-input" class="cal-textarea" placeholder="Écris ta note du jour…" oninput="onCalInput(this.value)">${escapeHtml(notes[_calSelected] || '')}</textarea>
+        <div class="cal-editor-foot"><span id="cal-save-status" class="cal-save-status"></span></div>
+    `;
+            lucide.createIcons();
+        }
+
+        let _calSaveTimer = null;
+        function onCalInput(val) {
+            const notes = getCalNotes();
+            if (val.trim()) notes[_calSelected] = val; else delete notes[_calSelected];
+            saveCalNotes(notes);
+            // Met à jour la cellule (dot + aperçu) en direct.
+            const cell = document.querySelector(`.cal-cell[data-key="${_calSelected}"]`);
+            if (cell) {
+                cell.classList.toggle('cal-has-note', !!val.trim());
+                let dot = cell.querySelector('.cal-dot');
+                let prev = cell.querySelector('.cal-preview');
+                if (val.trim()) {
+                    if (!dot) { dot = document.createElement('span'); dot.className = 'cal-dot'; cell.appendChild(dot); }
+                    if (!prev) { prev = document.createElement('span'); prev.className = 'cal-preview'; cell.appendChild(prev); }
+                    prev.textContent = val.trim();
+                } else {
+                    if (dot) dot.remove();
+                    if (prev) prev.remove();
+                }
+            }
+            const status = document.getElementById('cal-save-status');
+            if (status) {
+                status.textContent = 'Enregistré ✓';
+                clearTimeout(_calSaveTimer);
+                _calSaveTimer = setTimeout(() => { if (status) status.textContent = ''; }, 1500);
+            }
+        }
+
+        function escapeHtml(s) {
+            return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
         }
 
         // ================================================================
