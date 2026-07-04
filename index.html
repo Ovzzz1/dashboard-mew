@@ -59,6 +59,13 @@
             border-bottom: 1px solid var(--border);
             background: var(--bg-card);
         }
+        .exo-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 16px;
+            overflow-y: auto;
+        }
 
         /* ---------- ONGLETS + CONTENU EXO (partagé lesson/standalone) ---------- */
         .exo-tabs {
@@ -1526,6 +1533,18 @@
             }).join('');
         }
 
+        // Panneau leçon : simple liste de liens vers chaque page d'exo (Exo 1..N)
+        function exoLinksList(level, gwa) {
+            const list = getExoList(level, gwa);
+            if (!list.length) return `<div class="empty-state" style="padding:18px">Aucun exercice pour ce 과.</div>`;
+            return `<div class="exo-links">${list.map((f, i) =>
+                `<a href="#exo/${level}/${gwa}/${i}" class="exo-card">
+                    <span class="exo-card-num">${i + 1}</span>
+                    <span class="exo-card-title">${f.replace('.md', '')}</span>
+                    <span class="exo-card-arrow">→</span>
+                </a>`).join('')}</div>`;
+        }
+
         // Coquille du panneau exo : barre d'onglets + zone de contenu
         function exoPanelShell(level, gwa, barId, bodyId) {
             const list = getExoList(level, gwa);
@@ -2137,12 +2156,11 @@
             <iframe id="lesson-frame" src="${src}" title="${name}" scrolling="no"></iframe>
             ${hasExos ? `<aside class="exo-side">
                 <div class="exo-side-head"><i data-lucide="dumbbell" class="icon-sm"></i> Exercices — ${gwa}과</div>
-                ${exoPanelShell(level, gwa, 'exo-bar-lesson', 'exo-body-lesson')}
+                ${exoLinksList(level, gwa)}
             </aside>` : ''}
         </div>
     `;
             lucide.createIcons();
-            if (hasExos) exoSelectTab('exo-bar-lesson', 'exo-body-lesson', level, gwa, 0);
 
             // Ajuste la hauteur de l'iframe à son contenu → le scroll se fait
             // sur toute la page, plus de mini-bandeau scrollable interne.
