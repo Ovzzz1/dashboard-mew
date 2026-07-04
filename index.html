@@ -2054,18 +2054,7 @@
         // ================================================================
         function renderLessons(filterLevel) {
             const allLevels = Object.keys(MANIFEST.lessons);
-            document.getElementById('sidebar-extra').innerHTML = `
-        <div class="nav-section-label">Niveaux</div>
-        <a href="#lessons" class="sidebar-link ${!filterLevel ? 'active' : ''}">
-            <span class="sidebar-icon"><i data-lucide="layers" class="icon-sm"></i></span>
-            <span>Tous les niveaux</span>
-        </a>
-        ${allLevels.map(lvl => `
-        <a href="#lessons/${lvl}" class="sidebar-link ${filterLevel === lvl ? 'active' : ''}">
-            <span class="sidebar-icon"><i data-lucide="folder" class="icon-sm"></i></span>
-            <span>Level ${lvl}</span>
-        </a>`).join('')}
-    `;
+            document.getElementById('sidebar-extra').innerHTML = '';
 
             const visibleLevels = filterLevel
                 ? Object.entries(MANIFEST.lessons).filter(([lvl]) => lvl === filterLevel)
@@ -2134,18 +2123,7 @@
             const gwa = gwaMatch ? gwaMatch[1] : null;
             const hasExos = gwa && getExoList(level, gwa).length > 0;
 
-            document.getElementById('sidebar-extra').innerHTML = `
-        <div class="nav-section-label">Niveaux</div>
-        <a href="#lessons" class="sidebar-link">
-            <span class="sidebar-icon"><i data-lucide="layers" class="icon-sm"></i></span>
-            <span>Tous les niveaux</span>
-        </a>
-        ${Object.keys(MANIFEST.lessons).map(lvl => `
-        <a href="#lessons/${lvl}" class="sidebar-link ${lvl === level ? 'active' : ''}">
-            <span class="sidebar-icon"><i data-lucide="folder" class="icon-sm"></i></span>
-            <span>Level ${lvl}</span>
-        </a>`).join('')}
-    `;
+            document.getElementById('sidebar-extra').innerHTML = '';
 
             document.getElementById('content').innerHTML = `
         <div class="lesson-viewer-bar">
