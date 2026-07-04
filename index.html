@@ -194,6 +194,38 @@
             font-size: 0.85rem;
         }
 
+        /* Bouton de téléchargement (leçons + vocab) */
+        .dl-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            cursor: pointer;
+            text-decoration: none;
+            transition: background .15s, border-color .15s, color .15s;
+        }
+        .dl-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+        .lesson-viewer-bar .dl-btn { margin-left: auto; }
+
+        .vocab-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .vocab-header .dl-btn { flex: none; }
+
         .loading {
             display: flex;
             align-items: center;
@@ -1201,6 +1233,64 @@
         }
 
         // ================================================================
+        // DOWNLOAD HELPERS
+        // ================================================================
+        function triggerDownload(filename, content, mime) {
+            // BOM en tête → Excel ouvre correctement l'UTF-8 (한글)
+            const blob = new Blob(['﻿', content], { type: `${mime};charset=utf-8` });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
+        }
+
+        function csvEscape(v) {
+            v = (v == null ? '' : String(v));
+            return /[",\n\r]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v;
+        }
+
+        const VOCAB_CSV_HEADER = ['한글', 'French', 'Example Sentence', 'Translated Sentence', 'Explanation'];
+
+        function wordRowCSV(w) {
+            return [w.hangul, w.french, w.example, w.translated, w.explanation].map(csvEscape).join(',');
+        }
+
+        // Télécharge le vocab : un chapitre précis (chapter = n) ou tout le livre (chapter = null),
+        // en reproduisant le format source (lignes séparatrices "N과").
+        function downloadVocab(bookId, chapter) {
+            const book = bookCache[bookId];
+            if (!book) return;
+            const custom = getCustomWords(bookId);
+            const lines = [VOCAB_CSV_HEADER.join(',')];
+            const chapNums = chapter != null
+                ? [chapter]
+                : Object.keys(book.chapters).map(Number).sort((a, b) => a - b);
+            for (const n of chapNums) {
+                lines.push(`${csvEscape(`${n}과`)},,,,`);
+                const words = [...(book.chapters[n] || []), ...(custom[n] || [])];
+                for (const w of words) lines.push(wordRowCSV(w));
+            }
+            const name = chapter != null ? `Vocab ${bookId} - ${chapter}과.csv` : `Vocab ${bookId}.csv`;
+            triggerDownload(name, lines.join('\r\n'), 'text/csv');
+        }
+
+        // Télécharge une leçon = son fichier HTML source, tel quel (self-contained).
+        async function downloadLesson(level, filename) {
+            const decodedFile = decodeURIComponent(filename);
+            try {
+                const res = await fetch(`content/lessons/${level}/${decodedFile}`);
+                if (!res.ok) throw new Error(res.status);
+                triggerDownload(decodedFile, await res.text(), 'text/html');
+            } catch (e) {
+                alert(`Téléchargement impossible : ${e.message}`);
+            }
+        }
+
+        // ================================================================
         // ROUTING
         // ================================================================
         function getRoute() {
@@ -1358,6 +1448,9 @@
                 <p class="breadcrumb"><a href="#"><i data-lucide="home" class="icon-xs"></i> Home</a> → ${book.name}</p>
                 <h1>${book.name}</h1>
             </div>
+            <button class="dl-btn" onclick="downloadVocab('${bookId}', ${selectedChapter === null ? 'null' : selectedChapter})">
+                <i data-lucide="download" class="icon-xs"></i> ${selectedChapter === null ? 'Télécharger le livre (CSV)' : `Télécharger ${selectedChapter}과 (CSV)`}
+            </button>
         </div>
         <div class="stats-bar">
             <div class="stat-card"><div class="stat-value purple">${counter}</div><div class="stat-label">Total mots</div></div>
@@ -1706,6 +1799,9 @@
         <div class="lesson-viewer-bar">
             <a href="#lessons">← Retour aux lessons</a>
             <span class="crumb">/ Level ${level} / ${name}</span>
+            <button class="dl-btn" onclick="downloadLesson('${level}', '${encodeURIComponent(decodedFile)}')">
+                <i data-lucide="download" class="icon-xs"></i> Télécharger
+            </button>
         </div>
         <iframe id="lesson-frame" src="${src}" title="${name}" scrolling="no"></iframe>
     `;
