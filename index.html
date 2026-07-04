@@ -1567,26 +1567,9 @@
             } catch (e) { alert(`Téléchargement impossible : ${e.message}`); }
         }
 
-        // Nav latérale commune aux vues Exo (niveaux)
-        function exoSidebarExtra(activeLevel) {
-            const levels = MANIFEST.exos ? Object.keys(MANIFEST.exos) : [];
-            document.getElementById('sidebar-extra').innerHTML = `
-        <div class="nav-section-label">Niveaux</div>
-        <a href="#exos" class="sidebar-link ${!activeLevel ? 'active' : ''}">
-            <span class="sidebar-icon"><i data-lucide="layers" class="icon-sm"></i></span>
-            <span>Tous les niveaux</span>
-        </a>
-        ${levels.map(lvl => `
-        <a href="#exos/${lvl}" class="sidebar-link ${lvl === activeLevel ? 'active' : ''}">
-            <span class="sidebar-icon"><i data-lucide="folder" class="icon-sm"></i></span>
-            <span>Level ${lvl}</span>
-        </a>`).join('')}
-    `;
-        }
-
-        // Page de navigation Exo : Level > 과 > Exo 1..N (miroir du volet Lessons)
+        // Page de navigation Exo : Level > 과 > Exo 1..N (une seule page, pas de sous-menu sidebar)
         function renderExos(filterLevel) {
-            exoSidebarExtra(filterLevel);
+            document.getElementById('sidebar-extra').innerHTML = '';
             const all = MANIFEST.exos || {};
             const levels = filterLevel ? Object.keys(all).filter(l => l === filterLevel) : Object.keys(all);
 
@@ -1634,7 +1617,7 @@
 
         // Vue standalone d'un exo (avec onglets frères + lien vers la leçon)
         function renderExoStandalone(level, gwa, index) {
-            exoSidebarExtra(level);
+            document.getElementById('sidebar-extra').innerHTML = '';
             const lessonFile = encodeURIComponent(`${level} 과${gwa}.html`);
             document.getElementById('content').innerHTML = `
         <div class="lesson-viewer-bar">
