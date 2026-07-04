@@ -12,6 +12,7 @@
     <style>
         #lesson-frame {
             width: 100%;
+            max-width: 1350px; /* leçon à gauche, espace libre à droite */
             border: none;
             height: 1200px; /* fallback, ajusté au contenu par JS */
             border-radius: var(--radius);
@@ -24,6 +25,7 @@
             max-width: 100%;
             padding: 1.25rem 1.75rem 3rem;
         }
+        body.lesson-mode .lesson-viewer-bar { max-width: 1350px; }
 
         /* ---------- CALENDRIER ---------- */
         .cal-hero { margin-bottom: 1.5rem; }
