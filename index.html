@@ -244,10 +244,59 @@
         .cal-today-btn:hover { filter: brightness(1.08); }
         .cal-grid {
             display: grid;
-            grid-template-columns: repeat(7, 1fr);
+            grid-template-columns: 46px repeat(7, 1fr);
             gap: 6px;
         }
         .cal-weekdays { margin-bottom: 6px; }
+        .cal-wk-head { color: var(--text-muted); }
+        .cal-weekcell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-dim);
+            border: 1px solid transparent;
+            text-decoration: none;
+        }
+        .cal-weekcell .cal-wk-num { font-size: 0.82rem; }
+        .cal-weekcell.has-vocab {
+            color: var(--accent);
+            border-color: var(--border);
+            background: rgba(0,71,160,0.05);
+            cursor: pointer;
+        }
+        .cal-weekcell.has-vocab:hover { border-color: var(--accent); background: rgba(0,71,160,0.12); }
+        .cal-weekcell .cal-wk-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+        /* Vocab semaine — cartes */
+        .week-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+        .week-card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.1rem 1.2rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: var(--transition);
+        }
+        .week-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .week-card-range { font-size: 1.05rem; font-weight: 800; }
+        .week-card-count { font-size: 0.82rem; color: var(--text-dim); }
+        .week-card-actions { margin-top: 0.2rem; }
+        .week-card-go { font-size: 0.85rem; font-weight: 700; color: var(--accent); }
+        .week-sub { font-size: 0.82rem; color: var(--text-dim); margin-top: 0.25rem; }
         .cal-weekday {
             text-align: center;
             font-size: 0.75rem;
@@ -1250,6 +1299,10 @@
                 <span class="sidebar-icon"><i data-lucide="book"></i></span>
                 <span>Vocabulaire</span>
             </a>
+            <a href="#weekly" class="sidebar-link" id="nav-weekly">
+                <span class="sidebar-icon"><i data-lucide="calendar-range"></i></span>
+                <span>Vocab semaine</span>
+            </a>
             <a href="#lessons" class="sidebar-link" id="nav-lessons">
                 <span class="sidebar-icon"><i data-lucide="pen-tool"></i></span>
                 <span>Lessons</span>
@@ -1397,10 +1450,63 @@
 
         async function fetchBook(bookId) {
             if (bookCache[bookId]) return bookCache[bookId];
+            // Livre-semaine synthétique : id "W<date>" → CSV plat dans content/weekly/
+            if (bookId && bookId[0] === 'W') {
+                const w = weekById(bookId.slice(1));
+                if (w) {
+                    const res = await fetch(`content/weekly/${w.file}`);
+                    const words = parseFlatVocabCSV(await res.text());
+                    bookCache[bookId] = { id: bookId, name: weekLabel(w), chapters: { 1: words }, total: words.length, isWeek: true, week: w };
+                    return bookCache[bookId];
+                }
+            }
             const res = await fetch(`content/vocab/Vocab ${bookId}.csv`);
             const text = await res.text();
             bookCache[bookId] = parseVocabCSV(text, bookId);
             return bookCache[bookId];
+        }
+
+        // ================================================================
+        // WEEKLY VOCAB (vocab annexe, hors leçon) — helpers
+        // ================================================================
+        // Un livre-semaine réutilise tout le moteur vocab/flashcard/test via
+        // l'id synthétique "W<date>" (chapitre unique = 1).
+        function getWeeks() { return (MANIFEST.weeks || []).slice().sort((a, b) => (a.start < b.start ? 1 : -1)); }
+        function weekById(id) { return (MANIFEST.weeks || []).find(w => w.id === id) || null; }
+        function weekBookId(id) { return 'W' + id; }
+
+        // "29 juin → 5 juil. 2026"
+        function weekLabel(w) {
+            const shortMon = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+            const [ys, ms, ds] = w.start.split('-').map(Number);
+            const [ye, me, de] = w.end.split('-').map(Number);
+            const s = `${ds} ${shortMon[ms - 1]}`;
+            const e = `${de} ${shortMon[me - 1]} ${ye}`;
+            return `${s} → ${e}`;
+        }
+
+        // CSV plat (header optionnel, pas de séparateur "N과") → liste de mots
+        function parseFlatVocabCSV(text) {
+            const rows = parseCSV(text);
+            const out = [];
+            for (let i = 0; i < rows.length; i++) {
+                const [h = '', fr = '', ex = '', tr = '', expl = ''] = rows[i].map(s => s.trim());
+                if (i === 0 && (h === '한글' || h.toLowerCase() === 'hangul')) continue; // header
+                if (!h && !fr) continue;
+                out.push({ hangul: h, french: fr, example: ex, translated: tr, explanation: expl });
+            }
+            return out;
+        }
+
+        // Télécharge une semaine = CSV plat (header + mots, + custom éventuels).
+        function downloadWeek(bookId) {
+            const book = bookCache[bookId];
+            if (!book) return;
+            const custom = getCustomWords(bookId);
+            const words = [...(book.chapters[1] || []), ...(custom[1] || [])];
+            const lines = [VOCAB_CSV_HEADER.join(',')];
+            for (const w of words) lines.push(wordRowCSV(w));
+            triggerDownload(`Vocab semaine ${book.week.start}.csv`, lines.join('\r\n'), 'text/csv');
         }
 
         // ================================================================
@@ -1680,6 +1786,7 @@
             lucide.createIcons();
 
             if (!page || page === '') { await renderHome(); }
+            else if (page === 'weekly') { await renderWeekList(); }
             else if (page === 'vocab') { await renderVocab(args[0], args[1] ? parseInt(args[1]) : null); }
             else if (page === 'lessons') { renderLessons(args[0] || null); }
             else if (page === 'lesson') { renderLesson(args[0], args.slice(1).join('/')); }
@@ -1692,11 +1799,14 @@
         }
 
         function setNavActive(page) {
-            document.getElementById('nav-vocab').classList.toggle('active', !page || page === '' || page === 'vocab');
+            const { args } = getRoute();
+            const weekCtx = page === 'weekly' || ((page === 'vocab' || page === 'flashcard' || page === 'test') && (args[0] || '')[0] === 'W');
+            document.getElementById('nav-weekly').classList.toggle('active', weekCtx);
+            document.getElementById('nav-vocab').classList.toggle('active', !page || page === '' || (page === 'vocab' && !weekCtx));
             document.getElementById('nav-lessons').classList.toggle('active', page === 'lessons' || page === 'lesson');
             document.getElementById('nav-exos').classList.toggle('active', page === 'exos' || page === 'exo');
-            document.getElementById('nav-flashcard').classList.toggle('active', page === 'flashcard');
-            document.getElementById('nav-test').classList.toggle('active', page === 'test');
+            document.getElementById('nav-flashcard').classList.toggle('active', page === 'flashcard' && !weekCtx);
+            document.getElementById('nav-test').classList.toggle('active', page === 'test' && !weekCtx);
             document.getElementById('nav-youtube').classList.toggle('active', page === 'youtube');
             document.getElementById('nav-calendar').classList.toggle('active', page === 'calendar');
         }
@@ -1753,20 +1863,81 @@
         }
 
         // ================================================================
+        // WEEKLY — liste des semaines (vocab annexe)
+        // ================================================================
+        async function renderWeekList() {
+            document.getElementById('sidebar-extra').innerHTML = '';
+            const weeks = getWeeks();
+            if (!weeks.length) {
+                document.getElementById('content').innerHTML = `
+            <div class="hero"><h1><span class="kr">주간 단어</span> Vocab semaine</h1>
+            <p class="subtitle">Aucune semaine pour l'instant. Dépose un CSV dans <code>content/weekly/</code> et ajoute-la au manifest.</p></div>`;
+                lucide.createIcons(); return;
+            }
+            // Charge chaque semaine + calcule la barre de maîtrise depuis le level store
+            const cards = [];
+            for (const w of weeks) {
+                const bid = weekBookId(w.id);
+                await syncLvlStore(bid);
+                const book = await fetchBook(bid);
+                const lvl = getLvlStore(bid);
+                let g = 0, o = 0, r = 0, none = 0;
+                (book.chapters[1] || []).forEach(word => {
+                    const l = lvl[`1_${word.hangul}`] || 'none';
+                    if (l === 'green') g++; else if (l === 'orange') o++; else if (l === 'red') r++; else none++;
+                });
+                const bar = `<div class="mastery-bar">
+                    ${g ? `<span style="flex:${g};background:var(--green)"></span>` : ''}
+                    ${o ? `<span style="flex:${o};background:var(--orange)"></span>` : ''}
+                    ${r ? `<span style="flex:${r};background:var(--red)"></span>` : ''}
+                    ${none ? `<span style="flex:${none};background:var(--border)"></span>` : ''}
+                </div>`;
+                cards.push(`<a href="#vocab/${bid}/1" class="week-card">
+                    <div class="week-card-range">${weekLabel(w)}</div>
+                    <div class="week-card-count">${book.total} mots</div>
+                    ${bar}
+                    <div class="week-card-actions">
+                        <span class="week-card-go">Ouvrir →</span>
+                    </div>
+                </a>`);
+            }
+            document.getElementById('content').innerHTML = `
+        <div class="hero">
+            <h1><span class="kr">주간 단어</span> Vocab semaine</h1>
+            <p class="subtitle">Le vocab que tu apprends hors leçon, rangé par semaine. Table, flashcards et test — comme les 과.</p>
+        </div>
+        <div class="week-grid">${cards.join('')}</div>`;
+            lucide.createIcons();
+        }
+
+        // ================================================================
         // VOCAB — table with chapters, search, toggle
         // ================================================================
         async function renderVocab(bookId, selectedChapter) {
             if (!bookId) { location.hash = '#'; return; }
             await syncLvlStore(bookId);
             const book = await fetchBook(bookId);
-            const books = [];
-            for (const id of MANIFEST.books) books.push(await fetchBook(id));
+            const isWeek = !!book.isWeek;
+            if (isWeek) selectedChapter = 1; // livre-semaine = chapitre unique
 
             const chNums = Object.keys(book.chapters).map(Number).sort((a, b) => a - b);
-            const avgPerCh = chNums.length ? Math.round(book.total / chNums.length) : 0;
 
             // Sidebar
-            document.getElementById('sidebar-extra').innerHTML = `
+            if (isWeek) {
+                const weeks = getWeeks();
+                document.getElementById('sidebar-extra').innerHTML = `
+        <div class="nav-section-label">Semaines</div>
+        <div class="sidebar-sub">
+            ${weeks.map(w => `
+            <a href="#vocab/${weekBookId(w.id)}/1" class="sidebar-link ${weekBookId(w.id) === bookId ? 'active' : ''}">
+                <span>${weekLabel(w)}</span>
+            </a>`).join('')}
+        </div>
+    `;
+            } else {
+                const books = [];
+                for (const id of MANIFEST.books) books.push(await fetchBook(id));
+                document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">Livres</div>
         ${books.map(b => `
         <a href="#vocab/${b.id}" class="sidebar-link ${b.id === bookId ? 'active' : ''}">
@@ -1784,14 +1955,16 @@
             </a>`).join('')}
         </div>
     `;
+            }
 
             // Build table rows (with level dot + custom words from localStorage)
             let counter = 0;
             const customWords = getCustomWords(bookId);
             const rowsHTML = chNums.filter(n => selectedChapter === null || selectedChapter === n).map(n => {
                 const allWords = [...book.chapters[n], ...(customWords[n] || [])];
+                const sepLabel = isWeek ? `Semaine ${book.week.start} — ${allWords.length} mots` : `Chapitre ${n}과 — ${allWords.length} mots`;
                 const sepRow = `<tr class="chapter-sep" data-chapter="${n}">
-            <td colspan="7"><div class="chapter-sep-content"><span><i data-lucide="book" class="icon-xs"></i> Chapitre ${n}과 — ${allWords.length} mots</span>
+            <td colspan="7"><div class="chapter-sep-content"><span><i data-lucide="book" class="icon-xs"></i> ${sepLabel}</span>
             <button class="add-word-btn" onclick="openAddModal('${bookId}',${n},event)"><i data-lucide="plus" class="icon-xs"></i> Ajouter</button></div></td>
         </tr>`;
                 const wordRows = allWords.map(e => {
@@ -1813,22 +1986,23 @@
             document.getElementById('content').innerHTML = `
         <div class="vocab-header">
             <div class="vocab-title-group">
-                <p class="breadcrumb"><a href="#"><i data-lucide="home" class="icon-xs"></i> Home</a> → ${book.name}</p>
-                <h1>${book.name}</h1>
+                <p class="breadcrumb"><a href="#"><i data-lucide="home" class="icon-xs"></i> Home</a> → ${isWeek ? `<a href="#weekly">Vocab semaine</a> → ` : ''}${book.name}</p>
+                <h1>${isWeek ? `<span class="kr">주간 단어</span> ${book.name}` : book.name}</h1>
+                ${isWeek ? `<p class="week-sub">Vocab annexe — mots appris hors leçon cette semaine.</p>` : ''}
             </div>
-            <button class="dl-btn" onclick="downloadVocab('${bookId}', ${selectedChapter === null ? 'null' : selectedChapter})">
-                <i data-lucide="download" class="icon-xs"></i> ${selectedChapter === null ? 'Télécharger le livre (CSV)' : `Télécharger ${selectedChapter}과 (CSV)`}
+            <button class="dl-btn" onclick="${isWeek ? `downloadWeek('${bookId}')` : `downloadVocab('${bookId}', ${selectedChapter === null ? 'null' : selectedChapter})`}">
+                <i data-lucide="download" class="icon-xs"></i> ${isWeek ? 'Télécharger la semaine (CSV)' : (selectedChapter === null ? 'Télécharger le livre (CSV)' : `Télécharger ${selectedChapter}과 (CSV)`)}
             </button>
         </div>
         <div class="stats-bar">
             <div class="stat-card"><div class="stat-value purple">${counter}</div><div class="stat-label">Total mots</div></div>
-            <div class="stat-card"><div class="stat-value pink">${chNums.length}</div><div class="stat-label">Chapitres</div></div>
-            <div class="stat-card"><div class="stat-value cyan">${chNums.length ? Math.round(counter / chNums.length) : 0}</div><div class="stat-label">Mots / chapitre</div></div>
+            ${isWeek ? '' : `<div class="stat-card"><div class="stat-value pink">${chNums.length}</div><div class="stat-label">Chapitres</div></div>
+            <div class="stat-card"><div class="stat-value cyan">${chNums.length ? Math.round(counter / chNums.length) : 0}</div><div class="stat-label">Mots / chapitre</div></div>`}
             <div class="stat-card"><div class="stat-value green" id="count-green">0</div><div class="stat-label">Maîtrisés 🟢</div></div>
             <div class="stat-card"><div class="stat-value" style="color:var(--orange)" id="count-orange">0</div><div class="stat-label">En cours 🟠</div></div>
             <div class="stat-card"><div class="stat-value" style="color:var(--red)" id="count-red">0</div><div class="stat-label">À apprendre 🔴</div></div>
         </div>
-        <div class="chapter-nav">
+        ${isWeek ? '' : `<div class="chapter-nav">
             <a href="#vocab/${bookId}" class="ch-pill ${selectedChapter === null ? 'active' : ''}">
                 Tous <span class="count">${counter}</span>
             </a>
@@ -1836,14 +2010,14 @@
             <a href="#vocab/${bookId}/${n}" class="ch-pill ${selectedChapter === n ? 'active' : ''}">
                 ${n}과 <span class="count">${(book.chapters[n].length + (customWords[n] || []).length)}</span>
             </a>`).join('')}
-        </div>
+        </div>`}
         ${selectedChapter !== null ? `
         <div class="practice-bar">
             <a href="#flashcard/${bookId}/${selectedChapter}" class="practice-btn">
-                <i data-lucide="layers" class="icon-xs"></i> Flashcards — ${selectedChapter}과
+                <i data-lucide="layers" class="icon-xs"></i> Flashcards${isWeek ? '' : ` — ${selectedChapter}과`}
             </a>
             <a href="#test/${bookId}/${selectedChapter}" class="practice-btn test-btn">
-                <i data-lucide="check-square" class="icon-xs"></i> Test — ${selectedChapter}과
+                <i data-lucide="check-square" class="icon-xs"></i> Test${isWeek ? '' : ` — ${selectedChapter}과`}
             </a>
         </div>` : ''}
 
@@ -2217,6 +2391,16 @@
         function getCalNotes() { try { return JSON.parse(localStorage.getItem('mew_calendar') || '{}'); } catch { return {}; } }
         function saveCalNotes(d) { localStorage.setItem('mew_calendar', JSON.stringify(d)); }
         const calKey = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+        // Numéro de semaine ISO 8601
+        function isoWeek(d) {
+            const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+            const day = (t.getUTCDay() + 6) % 7;      // lundi = 0
+            t.setUTCDate(t.getUTCDate() - day + 3);    // jeudi de la semaine
+            const firstThu = new Date(Date.UTC(t.getUTCFullYear(), 0, 4));
+            const firstDay = (firstThu.getUTCDay() + 6) % 7;
+            firstThu.setUTCDate(firstThu.getUTCDate() - firstDay + 3);
+            return 1 + Math.round((t - firstThu) / (7 * 24 * 3600 * 1000));
+        }
 
         let _calMonth = null;    // Date sur le 1er du mois affiché
         let _calSelected = null; // clé YYYY-MM-DD du jour sélectionné
@@ -2244,20 +2428,36 @@
             const prev = `${month === 0 ? year - 1 : year}-${String(month === 0 ? 12 : month).padStart(2, '0')}`;
             const next = `${month === 11 ? year + 1 : year}-${String(month === 11 ? 1 : month + 2).padStart(2, '0')}`;
 
+            const slots = offset + daysInMonth;
+            const rows = Math.ceil(slots / 7);
             let cells = '';
-            for (let i = 0; i < offset; i++) cells += `<div class="cal-cell cal-empty"></div>`;
-            for (let d = 1; d <= daysInMonth; d++) {
-                const dd = new Date(year, month, d);
-                const key = calKey(dd);
-                const note = notes[key];
-                const cls = ['cal-cell'];
-                if (key === todayKey) cls.push('cal-today');
-                if (key === _calSelected) cls.push('cal-selected');
-                if (note && note.trim()) cls.push('cal-has-note');
-                cells += `<div class="${cls.join(' ')}" data-key="${key}" onclick="selectCalDay('${key}')">
-                    <span class="cal-daynum">${d}</span>
-                    ${note && note.trim() ? `<span class="cal-dot"></span><span class="cal-preview">${escapeHtml(note.trim())}</span>` : ''}
-                </div>`;
+            for (let r = 0; r < rows; r++) {
+                // Lundi de la ligne → sert de clé de semaine (ids de semaines = lundis)
+                const monday = new Date(year, month, 1 - offset + r * 7);
+                const wKey = calKey(monday);
+                const wk = weekById(wKey);
+                if (wk) {
+                    cells += `<a class="cal-weekcell has-vocab" href="#vocab/${weekBookId(wk.id)}/1" title="Vocab semaine — ${weekLabel(wk)}">
+                        <span class="cal-wk-num">S${isoWeek(monday)}</span><span class="cal-wk-dot"></span>
+                    </a>`;
+                } else {
+                    cells += `<div class="cal-weekcell"><span class="cal-wk-num">S${isoWeek(monday)}</span></div>`;
+                }
+                for (let s = 0; s < 7; s++) {
+                    const d = r * 7 + s - offset + 1;
+                    if (d < 1 || d > daysInMonth) { cells += `<div class="cal-cell cal-empty"></div>`; continue; }
+                    const dd = new Date(year, month, d);
+                    const key = calKey(dd);
+                    const note = notes[key];
+                    const cls = ['cal-cell'];
+                    if (key === todayKey) cls.push('cal-today');
+                    if (key === _calSelected) cls.push('cal-selected');
+                    if (note && note.trim()) cls.push('cal-has-note');
+                    cells += `<div class="${cls.join(' ')}" data-key="${key}" onclick="selectCalDay('${key}')">
+                        <span class="cal-daynum">${d}</span>
+                        ${note && note.trim() ? `<span class="cal-dot"></span><span class="cal-preview">${escapeHtml(note.trim())}</span>` : ''}
+                    </div>`;
+                }
             }
 
             document.getElementById('content').innerHTML = `
@@ -2274,6 +2474,7 @@
                     <a class="cal-today-btn" href="#calendar/${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}" onclick="_calSelected='${todayKey}'">Aujourd'hui</a>
                 </div>
                 <div class="cal-grid cal-weekdays">
+                    <div class="cal-weekday cal-wk-head">Sem.</div>
                     ${DAYS_FR.map(d => `<div class="cal-weekday">${d}</div>`).join('')}
                 </div>
                 <div class="cal-grid cal-days">${cells}</div>
@@ -2393,7 +2594,7 @@
                 document.getElementById('content').innerHTML = `
             <div class="fc-wrap">
                 <div class="fc-hero">
-                    <h1>Flashcards — ${bookId}</h1>
+                    <h1>Flashcards — ${book.isWeek ? book.name : bookId}</h1>
                     <p>Choisissez un chapitre entier, ou une semaine (lot de 10 mots) ciblée :</p>
                 </div>
                 <div class="fc-chapters-grid">
@@ -2500,7 +2701,7 @@
             document.getElementById('content').innerHTML = `
         <div class="fc-wrap">
             <div class="fc-hero">
-                <h1>Flashcards — ${bookId} ${chapter}과${week ? ` · Semaine ${week}` : ''}</h1>
+                <h1>Flashcards — ${book.isWeek ? book.name : `${bookId} ${chapter}과`}${week ? ` · Lot ${week}` : ''}</h1>
                 <p id="fc-subtitle">${rawWords.length} mots${week ? ` (mots ${(week - 1) * 10 + 1}–${(week - 1) * 10 + rawWords.length})` : ''} · Cliquez sur la carte pour révéler la réponse</p>
             </div>
             <div class="fc-mode-bar">
@@ -2677,7 +2878,7 @@
                 document.getElementById('sidebar-extra').innerHTML = '';
                 document.getElementById('content').innerHTML = `
             <div class="test-wrap">
-                <div class="test-hero"><h1>Test — ${bookId}</h1><p>Choisissez un chapitre :</p></div>
+                <div class="test-hero"><h1>Test — ${book.isWeek ? book.name : bookId}</h1><p>Choisissez un chapitre :</p></div>
                 <div class="chapter-nav" style="margin-top:16px">
                     ${chNums.map(n => `<a href="#test/${bookId}/${n}" class="ch-pill">${n}과 <span class="count">${book.chapters[n].length}</span></a>`).join('')}
                 </div>
@@ -2760,7 +2961,7 @@
                 document.getElementById('content').innerHTML = `
             <div class="test-wrap">
                 <div class="test-hero">
-                    <h1>Test — ${bookId} ${chapter}과</h1>
+                    <h1>Test — ${book.isWeek ? book.name : `${bookId} ${chapter}과`}</h1>
                     <p>Question ${_test.idx + 1} / ${total} · Score : ${_test.score} / ${_test.idx}</p>
                 </div>
                 <div class="fc-progress-row">

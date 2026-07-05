@@ -1,5 +1,8 @@
 {
   "books": ["3A", "3B", "4A", "4B"],
+  "weeks": [
+    { "id": "2026-06-29", "start": "2026-06-29", "end": "2026-07-05", "file": "2026-06-29.csv" }
+  ],
   "exos": {
     "4A": {
       "1": ["Exo 1.md", "Exo 2.md", "Exo 3.md", "Exo 4.md", "Exo 5.md", "Exo 6.md", "Exo 7.md", "Exo 8.md", "Exo 9.md", "Exo 10.md"]
