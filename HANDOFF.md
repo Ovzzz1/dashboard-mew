@@ -1,6 +1,6 @@
 # HANDOFF — Korean Brain (système de mails quotidiens d'apprentissage du coréen)
 
-> Doc de passation. Dernière mise à jour : **2026-07-07**.
+> Doc de passation. Dernière mise à jour : **2026-07-07** (migration v2 → v3, cycle 7 jours).
 > Objectif : permettre à un autre agent IA de reprendre le système sans contexte préalable.
 > Voir aussi `~/korean-brain/CLAUDE.md` (rôle "prof IA" + rappel rapide).
 
@@ -11,27 +11,30 @@
 Système perso d'apprentissage automatisé du coréen pour Matéo (compte `ovisegroupe@gmail.com`).
 Deux briques :
 
-1. **Mailer automatique** (`~/korean-brain/scripts/korean_mailer.py`) — envoie chaque jour des emails (vocab, leçon, tests) via des LaunchAgents macOS. Génère du **MP3 bilingue** (TTS) et des **exercices** (via Claude CLI).
-2. **Dashboard web** (repo `~/Desktop/Git/dashboard-mew`, publié sur GitHub Pages : https://ovzzz1.github.io/dashboard-mew/) — flashcards + page de **test** interactif (QCM/saisie). Les emails renvoient vers ce dashboard.
+1. **Mailer automatique** (`~/korean-brain/scripts/korean_mailer.py`) — envoie chaque jour des emails (vocab, leçon, exos, tests) via des LaunchAgents macOS. Génère du **MP3 bilingue** (TTS). Ne génère **plus** d'exercices à la volée (voir §7).
+2. **Dashboard web** (repo `~/Desktop/Git/dashboard-mew`, publié sur GitHub Pages : https://ovzzz1.github.io/dashboard-mew/) — flashcards, leçons, **exos pré-écrits** (10 par 과), page de **test** interactif (QCM/saisie). Les emails renvoient vers ce dashboard.
 
 C'est **séparé de la flotte SEO** de Matéo (rien à voir avec `~/Desktop/Git/` hors dashboard-mew).
 
 ---
 
-## 2. État actuel (2026-07-07)
+## 2. État actuel (2026-07-07 — reprise volontaire à 2과)
+
+Matéo a repris le rythme après une pause (nouveau taff). Décision : repartir à **2과** sur les
+deux pistes (vocab avait un trou connu sur 4A 1과/2과, cf. §11 ; la leçon était déjà en 4B —
+choix de tout re-caler sur 4A 2과 plutôt que de continuer en avance sur une base mal consolidée).
 
 `~/korean-brain/progress/state.json` :
-
 ```json
 {
-  "vocab":  { "current_level": "4A", "current_과": 3, "word_index": 80, "last_email_date": "2026-07-06", ... },
-  "lesson": { "current_level": "4B", "current_과": 2, "day_in_lesson": 2, "last_email_date": "2026-07-06" }
+  "vocab":  { "current_level": "4A", "current_과": 2, "word_index": 0, "last_email_date": "", ... },
+  "lesson": { "current_level": "4A", "current_과": 2, "day_in_lesson": 1, "last_email_date": "" }
 }
 ```
 
-- **Vocab** : niveau 4A, 3과, ~mot 80. Avance de **10 mots/jour**.
-- **Leçon** : niveau 4B, 2과, jour 2 (J2). Avance d'**un jour de leçon/jour**.
-- ⚠️ **Vocab et leçon sont deux pistes INDÉPENDANTES à cadences différentes** : un 과 = **3 jours** côté leçon (J1/J2/J3) mais **~9 jours** côté vocab (car un 과 fait 66–114 mots). Donc la leçon "double" le vocab et prend de l'avance (elle est déjà en 4B, le vocab encore en 4A). **C'est normal, ne pas essayer de les resynchroniser.**
+- **Vocab** : niveau 4A, 2과, mot 0. Avance toujours de **10 mots/jour** (inchangé).
+- **Leçon** : niveau 4A, 2과, jour 1 (J1). Nouveau cycle **7 jours/과** (1과 par semaine, voir §7) — remplace l'ancien cycle 3 jours.
+- Vocab et leçon restent deux pistes **indépendantes à cadences différentes** (un 과 vocab fait 66–114 mots → ~7-10 jours ; un 과 leçon = 7 jours pile). Elles peuvent dériver l'une de l'autre avec le temps — **normal, ne pas chercher à les resynchroniser**.
 
 ---
 
@@ -40,18 +43,17 @@ C'est **séparé de la flotte SEO** de Matéo (rien à voir avec `~/Desktop/Git/
 ```
 ~/korean-brain/
 ├── CLAUDE.md              # rôle "prof IA" + rappel
-├── HANDOFF.md             # ce doc
+├── HANDOFF.md              # ce doc
 ├── scripts/
 │   └── korean_mailer.py   # LE script principal (tout est là)
-├── content/               # sources rapatriées (voir §6)
+├── content/               # sources rapatriées (voir §6) — PAS de dossier exos ici (voir §7)
 │   ├── vocab/Vocab 3A.csv, 3B.csv, 4A.csv, 4B.csv
 │   ├── lessons/{3A,4A,4B}/{LEVEL} 과{N}.html
 │   └── manifest.json
 └── progress/
     ├── state.json         # progression (source de vérité)
     ├── state.lock         # verrou fichier (fcntl) — ne pas toucher
-    ├── cron.log           # log de TOUS les runs (stdout+stderr)
-    └── exercises_cache/{LEVEL}_{N}.json  # exercices pré-générés par Claude
+    └── cron.log            # log de TOUS les runs (stdout+stderr)
 ```
 
 `~/.korean_env` (hors repo) :
@@ -75,12 +77,8 @@ export GMAIL_APP_PW="...(idem, alias)..."
 
 Chaque plist fait : `. $HOME/.korean_env && /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 .../korean_mailer.py <cmd> >> .../cron.log 2>&1`
 
-Recharger un agent après modif :
-```bash
-UID=$(id -u); L=com.mateo.korean.vocab
-launchctl bootout   gui/$UID/$L 2>/dev/null
-launchctl bootstrap gui/$UID ~/Library/LaunchAgents/$L.plist
-```
+Aucune modif de plist nécessaire pour la migration v3 (le contenu du script a changé, pas les
+plists) — pas besoin de `bootout`/`bootstrap`.
 
 ⚠️ **launchd ne rattrape PAS** une tâche si le Mac est éteint à l'heure prévue (seulement au réveil s'il était en veille). Si Matéo dit "j'ai rien reçu", vérifier d'abord si le Mac était allumé à 22h30.
 
@@ -92,7 +90,7 @@ launchctl bootstrap gui/$UID ~/Library/LaunchAgents/$L.plist
 
 - **Toujours** utiliser `/Library/Frameworks/Python.framework/Versions/3.13/bin/python3` (ou `python3` en interactif). C'est le **seul** Python qui a `edge_tts` (indispensable au MP3). **Pas** `/usr/bin/python3` (3.9, sans edge_tts → MP3 silencieusement absent).
 - `~/.korean_env` **doit** faire `export ...` (sinon la variable n'est pas héritée par le process → mode `[DRY RUN]`, aucun mail réellement envoyé).
-- Dépendances externes : `edge_tts` (pip, py3.13), `ffmpeg` (`/opt/homebrew/bin/ffmpeg`), Claude CLI (`~/.local/bin/claude`, pour générer les exercices).
+- Dépendances externes : `edge_tts` (pip, py3.13), `ffmpeg` (`/opt/homebrew/bin/ffmpeg`). **Claude CLI n'est plus une dépendance runtime** depuis la v3 (voir §7) — il reste utilisé en amont, manuellement, pour pré-écrire les exos (skill `exo-coreen`).
 
 ---
 
@@ -105,6 +103,10 @@ launchctl bootstrap gui/$UID ~/Library/LaunchAgents/$L.plist
   ```bash
   cp -R ~/Desktop/Git/dashboard-mew/content/{vocab,lessons} ~/korean-brain/content/
   ```
+- **Les exos (`content/exos/`) ne sont PAS copiés côté korean-brain** — le mailer ne fait que
+  construire un lien vers le dashboard (`exo_url()`), il ne lit jamais leur contenu localement.
+  Ça veut dire qu'un exo doit être **poussé sur GitHub** (branche `main`, dashboard-mew) pour que
+  le lien envoyé par email fonctionne réellement (GitHub Pages, ~1-2 min de délai). Voir §8.
 
 Format vocab CSV : colonnes `한글, French, Example, Translated, Explanation`. Les lignes `N과` (ex `1과`) marquent le début d'un 과. Voir `parse_vocab()`.
 
@@ -112,48 +114,72 @@ Format vocab CSV : colonnes `한글, French, Example, Translated, Explanation`. 
 
 ## 7. Machine à états (comment ça avance)
 
-### Piste VOCAB (`email_vocab`)
+### Piste VOCAB (`email_vocab`) — inchangée
 - Envoie `words[word_index : word_index+10]` du 과 courant, puis `word_index += 10`.
 - Libellé "vocab de demain" : envoyé le soir (22h30) pour étude le lendemain.
 - Quand `word_index >= nb_mots_du_과` → **jour TEST** : envoie le QCM de fin de 과 (`email_test_kwa`), passe au 과 suivant, `word_index=0`. Le test **consomme un jour** (pas de fournée ce jour-là).
 - Fin de 8과 d'un niveau → niveau suivant (`LEVEL_ORDER = ["3A","3B","4A","4B"]`).
 - Anti-doublon : si `last_email_date == aujourd'hui`, skip.
 
-### Piste LEÇON (`email_lesson`)
-- 3 jours par 과 : **J1** = lien "Learning" + pré-génération des exercices J2 en arrière-plan ; **J2** = fichier `.md` d'exercices (traduction Fr→Ko) en pièce jointe ; **J3** = lien "Workbook".
-- `day_in_lesson` 1→2→3 puis passe au 과 suivant.
+### Piste LEÇON (`email_lesson`) — **v3 : cycle 7 jours** (remplace le cycle 3 jours de v2)
+`LESSON_DAY_KIND = {1: learning, 2: exo, 3: workbook, 4: exo, 5: workbook, 6: learning, 7: exo}`
+- **J1** Learning (lien leçon) · **J2** Exo (lien vers les 10 exos du 과) · **J3** Workbook (lien
+  leçon) · **J4** Exo (suite) · **J5** Workbook · **J6** Learning (révision) · **J7** Exo (dernière
+  session avant le 과 suivant).
+- `day_in_lesson` 1→2→...→7 puis passe au 과 suivant (`day_in_lesson=1`).
+- Raison du changement : passer d'un rythme dense (3j/과) à un rythme posé (1과/semaine, ~1h de
+  marge par session) — décision de Matéo après une pause (nouveau taff, cf. §2).
 
-### Exercices (Claude CLI)
-- Générés par `generate_exercises()` : **1 appel `claude -p` par point de grammaire** (H2 du HTML de la leçon).
-- Le prompt inclut le **détail complet de la section de grammaire** (`extract_grammar_sections`) pour que les phrases respectent vraiment la structure enseignée (fix de juin, cf §9).
-- Cache dans `progress/exercises_cache/{LEVEL}_{N}.json`.
+### Exos — **v3 : pré-écrits, plus générés à la volée**
+- Avant (v2) : `generate_exercises()` appelait `claude -p` en live à chaque envoi J2, avec cache
+  dans `progress/exercises_cache/`. **Ce mécanisme a été entièrement supprimé** (plus de
+  `pregenerate`, `generate_exercises`, `extract_grammar_sections`, `cache_path`,
+  `load_exercises_from_cache`, dépendance `CLAUDE_BIN`/`CLAUDE_ENV` dans le mailer).
+- Maintenant : les 10 exos d'un 과 sont **pré-écrits en amont** (avant le début de la semaine où
+  le 과 est étudié) via le skill **`exo-coreen`** (`~/.claude/skills/exo-coreen/SKILL.md`), qui
+  lit directement `content/vocab/` + `content/lessons/` du repo dashboard-mew et écrit
+  `content/exos/{LEVEL}/{N}과/Exo 1.md` à `Exo 10.md` (+ mise à jour `content/manifest.json`).
+- Le dashboard sert ces fichiers directement via `#exo/{level}/{gwa}/{i}` (10 onglets, corrections
+  repliables, notes de grammaire). Le mailer ne fait que construire l'URL (`exo_url()`) et l'envoyer
+  — zéro appel Claude, zéro pièce jointe `.md`.
+- ⚠️ **Il faut préparer les exos d'un 과 AVANT le début de sa semaine** (J2 du cycle en a besoin).
+  Sinon le lien envoyé pointe vers une page vide côté dashboard.
 
 ### Recap dimanche / Test vendredi
-- `recap_week` : récap des 과 vus dans la semaine (exercices + liens test). `test_week` : QCM sur `words_this_week`.
+- `recap_week` (v3, simplifié) : un seul lien vers les exos du **과 de leçon en cours**
+  (`state["lesson"]`), plus les liens test vocab des 과 touchés dans la semaine
+  (`kwas_this_week`, piste vocab, inchangé). Plus de génération Claude, plus de pièce jointe.
+- `test_week` : QCM sur `words_this_week` — inchangé.
 
 ---
 
 ## 8. Dashboard web (dashboard-mew)
 
 - Repo : `~/Desktop/Git/dashboard-mew` → push `main` → **GitHub Pages** auto-déploie (branche `main`, racine) sur https://ovzzz1.github.io/dashboard-mew/ (~1-2 min de délai).
-- Tout est dans **`index.html`** (SPA, routes par hash : `#vocab/...`, `#lesson/...`, `#test/{level}/{과}`).
+- Tout est dans **`index.html`** (SPA, routes par hash : `#vocab/...`, `#lesson/...`, `#exo/{level}/{gwa}/{i}`, `#exos` (browse), `#test/{level}/{과}`).
+- **Page exo** : onglets Exo 1..N, listes numérotées FR à traduire, blocs `<details>` "Corrections"
+  repliables, notes de grammaire optionnelles (syntaxe markdown custom : une ligne `*texte*` seule
+  → rendue `<p class="exo-note">`, **pas** de blockquote `>` — piège rencontré en 2026-07, cf. §9).
 - **Page test** : saisie libre, correction par `checkAnswer()` (voir §9 pour la logique de matching). Si Matéo dit "le test valide/refuse à tort", c'est là qu'il faut regarder.
 - Après un push, si Matéo voit encore l'ancien comportement → **hard refresh** (`Cmd+Shift+R`), c'est du cache navigateur.
+- **Fichiers internes non servis par le dashboard** (à la racine du repo, jamais dans `content/`,
+  donc jamais accessibles via le web) : `CLAUDE.md` (identité/ADN du prof IA "강인"), `CONFIG.md`
+  (état live du setup), ce doc en copie (`HANDOFF.md`).
 
 ---
 
-## 9. Historique des bugs corrigés (contexte important)
-
-Tous corrigés, mais à connaître car ils peuvent réapparaître :
+## 9. Historique des bugs corrigés / changements majeurs (contexte important)
 
 1. **TCC/Desktop** (2026-06) — launchd ne lit pas `~/Desktop` → contenu copié dans `~/korean-brain/content/`. (§6)
 2. **Mauvais Python** — plists passés sur py3.13 framework (edge_tts). (§5)
 3. **env non exporté** — `.korean_env` doit faire `export`. (§5)
 4. **Doublon cron+launchd** — double-envois ; cron korean supprimé. (§4)
-5. **Race condition sur state.json** (2026-06-25) — vocab ET lesson à 22h30 faisaient chacun load→modify→save de TOUT le fichier ; la lesson (plus lente) écrasait la progression du vocab → vocab gelé 2 semaines (renvoyait 41-50 en boucle). **Fix** : verrou fichier `state_lock` (fcntl) sérialisant vocab/lesson/recap/tests + écriture atomique (temp+rename) dans `save_state`. `pregenerate` est **exclu** du verrou (n'écrit que le cache, lancé en background par lesson → sinon deadlock).
-6. **Exercices hors-sujet** (2026-06) — la génération n'envoyait que le *titre* du point de grammaire à Claude → phrases ne respectant pas la structure (ex : -다가 -아/어서 -게 되다). **Fix** : injecter le détail de la section (`extract_grammar_sections`) + règles strictes dans le prompt.
+5. **Race condition sur state.json** (2026-06-25) — vocab ET lesson à 22h30 faisaient chacun load→modify→save de TOUT le fichier ; la lesson (plus lente) écrasait la progression du vocab → vocab gelé 2 semaines (renvoyait 41-50 en boucle). **Fix** : verrou fichier `state_lock` (fcntl) sérialisant vocab/lesson/recap/tests + écriture atomique (temp+rename) dans `save_state`.
+6. **Exercices hors-sujet** (2026-06, **obsolète depuis v3**) — l'ancienne génération Claude n'envoyait que le *titre* du point de grammaire → phrases ne respectant pas la structure. Non-applicable depuis que les exos sont pré-écrits manuellement (§7).
 7. **Test trop laxiste** (2026-07-07) — `checkAnswer` validait toute sous-chaîne de la bonne réponse (`seg.includes(gn)`) → faux positifs. **Fix** : matching strict par segment + normalisation (accents, articles, ponctuation, espaces coréens) + tolérance 1 faute de frappe en français uniquement. Dans `dashboard-mew/index.html`.
 8. **Plists XML invalides** (2026-07-07) — `&&` non échappés (`&` brut) → `plutil` KO, risque au reboot. **Fix** : `&` → `&amp;`, tous `plutil -lint OK`.
+9. **Migration v2 → v3** (2026-07-07) — reprise après pause : cycle leçon 3j → **7j** (1과/semaine), suppression totale de la génération Claude à la volée au profit d'exos **pré-écrits** (skill `exo-coreen`) et simplement linkés, `recap_week` simplifié (plus de pièce jointe), reset `state.json` → Vocab 4A 2과 / Leçon 4A 2과 (choix explicite de Matéo, pas une resynchronisation automatique). Cache `exercises_cache/` supprimé (mort).
+10. **Note de grammaire mal formatée** (2026-07-07, lors de la préparation des exos 4A 2과) — syntaxe blockquote markdown (`> *texte*`) utilisée par erreur ; le parser d'exo du dashboard (`exoBlock()` dans `index.html`) attend une ligne entière `*texte*` (sans `>`) pour la rendre en `<p class="exo-note">`. **Fix** : suppression du `> ` en tête de ligne dans les 5 fichiers d'exos concernés. À retenir pour toute future rédaction d'exo avec note.
 
 ---
 
@@ -169,25 +195,31 @@ cat ~/korean-brain/progress/state.json
 
 # Voir les derniers runs :
 tail -40 ~/korean-brain/progress/cron.log
-
-# Pré-générer les exercices d'un 과 (ex 4B 3과) :
-/Library/Frameworks/Python.framework/Versions/3.13/bin/python3 korean_mailer.py pregenerate 4B 3
 ```
 
 - Un envoi qui affiche `[DRY RUN]` = `KOREAN_GMAIL_PW` absent → sourcer `.korean_env` (avec `export`).
 - Modifier `state.json` à la main est OK (le script relit à chaque run) — mais respecter la structure et ne pas tourner en parallèle d'un job (le verrou protège, mais éviter).
+- Il n'y a plus de commande `pregenerate` depuis la v3 (supprimée avec la génération Claude).
 
 ---
 
 ## 11. Caveats / points ouverts
 
-- **Trou de vocab** : suite au gel (bug #5), Matéo n'a jamais reçu le vocab 4A **1과 (51→83)** ni **2과 (1→60)**. On a re-calé le pointeur au bon endroit calendaire sans renvoyer ces mots. Si besoin, on peut lui renvoyer un récap groupé de ces plages (option évoquée, pas faite).
+- **Trou de vocab** : suite au gel (bug #5), Matéo n'a jamais reçu le vocab 4A **1과 (51→83)** ni **2과 (1→60)**. C'est une des raisons de la reprise à 2과 en v3 (§2, §9-#9) — le vocab 2과 sera donc étudié depuis le début cette fois.
 - **Vocab 1 seul mot en fin de 과** : quand un 과 finit sur une fournée incomplète (ex mot 71/71), l'email ne contient qu'1 mot. Normal, pas un bug.
 - **Dépendance au Mac allumé à 22h30** (pas de rattrapage launchd). Migration possible vers un serveur 24/7 / GitHub Actions un jour, mais compliquée par edge_tts+ffmpeg (audio). Non fait.
 - **Test dashboard plus strict** depuis le fix #7 : si un mot a des traductions alternatives légitimes absentes du CSV (pas séparées par `,`), elles seront comptées fausses → compléter le CSV le cas échéant.
+- **Batch d'exos à préparer à l'avance** : contrairement à l'ancien système (génération à la
+  demande), il faut désormais anticiper — écrire les 10 exos d'un 과 **avant** le début de sa
+  semaine (idéalement le dimanche précédent). Si ce n'est pas fait à temps, le lien envoyé en J2
+  pointera vers une page sans contenu.
 
 ---
 
 ## 12. Rôle "prof IA" (quand Matéo parle depuis ~/korean-brain)
 
-Voir `CLAUDE.md`. En résumé : lire `progress/state.json` pour connaître le niveau/과 exact, corriger les traductions du `.md` reçu par mail phrase par phrase (✅/❌ + explication), faire pratiquer un point de grammaire, ou converser en coréen. Niveau intermédiaire (4A/4B), corriger sans édulcorer.
+Voir `CLAUDE.md`. En résumé : lire `progress/state.json` pour connaître le niveau/과 exact, faire
+pratiquer un point de grammaire, ou converser en coréen. Niveau intermédiaire (4A), corriger sans
+édulcorer. Pour préparer les exos d'un 과, utiliser le skill `exo-coreen` (voir §7) depuis une
+session sur le repo `dashboard-mew` — pas depuis `~/korean-brain` (les exos vivent dans le repo
+dashboard, jamais copiés ici, cf. §6).
