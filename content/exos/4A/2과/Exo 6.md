@@ -22,7 +22,7 @@
 6. 관객 앞에서 자꾸 연기하다 보니 무대가 편해졌어요.
 7. 매번 리허설에 참여하다 보니 실수를 안 하게 됐어요.
 8. 선배들에게 자꾸 조언을 구하다 보니 실력이 좋아졌어요.
-9. 매일 목소리 연습을 하다 보니 목소리가 안정됐어요.
+9. 매일 목소리 연습을 하다 보니 목소리가 편안해졌어요.
 10. 실전처럼 계속 연습하다 보니 관객 앞에서 침착해졌어요.
 
 *Note de grammaire — phrase 1 : 서다 ("se tenir debout / monter sur scène") est en soi un acte plutôt ponctuel — c'est exactement le type de verbe que la leçon signale comme problématique seul avec -다 보니 (cf. Erreur n°1 : 가입하다, 결혼하다, 졸업하다 ne conviennent pas seuls). Ici, l'ajout de 자주 ("souvent") restaure la répétition nécessaire : 자주 무대에 서다 보니. Sans ce marqueur de fréquence, 무대에 서다 보니 sonnerait bancal.*
@@ -48,5 +48,5 @@
 6. 관객 앞에서 자꾸 연기하다 보면 무대가 편해질 거예요.
 7. 매번 리허설에 참여하다 보면 실수를 안 하게 될 거예요.
 8. 선배들에게 자꾸 조언을 구하다 보면 실력이 좋아질 거예요.
-9. 매일 목소리 연습을 하다 보면 목소리가 안정될 거예요.
+9. 매일 목소리 연습을 하다 보면 목소리가 편안해질 거예요.
 10. 실전처럼 계속 연습하다 보면 관객 앞에서 침착해질 거예요.
