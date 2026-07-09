@@ -1,50 +1,50 @@
 # EXO 8 — 4A 과2
-**Thème : Relations sociales & amitié**
+**Thème : Vaincre le trac & parler en public**
 
 **I. Structure 1 : -다 보니 -게 됐어요**
-1. À force de participer souvent au bénévolat, j'ai fini par me faire de nouvelles connaissances.
-2. En saluant souvent les voisins du quartier, je suis devenu proche d'eux.
-3. À force de rester en contact souvent avec mes amis, notre amitié s'est approfondie.
-4. En allant sans arrêt à des réunions, parler devant les gens est devenu confortable pour moi.
-5. À force d'écouter sans cesse ce que les autres racontent, j'ai fini par bien comprendre leurs sentiments.
-6. En passant souvent du temps avec un ami, on a fini par se faire confiance mutuellement.
-7. À force de rencontrer sans arrêt de nouvelles personnes, ma timidité a disparu.
-8. En discutant souvent avec ma famille, notre relation s'est améliorée.
-9. À force d'aider sans cesse les autres, mon cœur s'est ouvert davantage.
-10. En étant actif sans arrêt dans une communauté en ligne, j'ai fini par me faire des amis qui partagent mes centres d'intérêt.
+1. À force de [[monter sur scène|무대에 서다]] malgré la peur, j'ai fini par ne plus la [[craindre|두려워하다]].
+2. À force de parler [[au fil de mes idées|생각나는 대로]], j'ai fini par ne plus me [[tromper de mots|틀리게 말하다]].
+3. À force d'être [[encouragé|격려하다]] [[sans cesse|자꾸]] par mes amis, j'ai fini par oser prendre la parole.
+4. À force de trouver [[frustrant|답답하다]] de me taire, j'ai fini par exprimer mes opinions.
+5. À force de répéter mes [[répliques|대사]] [[régulièrement|꾸준히]], j'ai fini par parler sans notes.
+6. À force de soigner [[sans cesse|자꾸]] mes [[expressions|표정]] devant le miroir, j'ai fini par paraître plus confiant.
+7. À force de vouloir parler [[parfaitement|완벽하다]], j'ai fini par être trop tendu.
+8. À force de [[monter sur scène|무대에 서다]] [[sans cesse|자꾸]], j'ai fini par y prendre du plaisir.
+9. À force de ne plus [[craindre|두려워하다]] le regard des autres, j'ai fini par parler librement.
+10. À force d'[[encourager|격려하다]] les autres à parler, j'ai fini par gagner en assurance moi-même.
 
 **Corrections — I**
-1. 봉사활동에 자주 참여하다 보니 새로운 사람들을 사귀게 됐어요.
-2. 동네 사람들과 자주 인사를 나누다 보니 이웃과 친해졌어요.
-3. 친구들과 자주 연락하다 보니 우정이 깊어졌어요.
-4. 모임에 계속 나가다 보니 사람들 앞에서 말하는 것이 편해졌어요.
-5. 다른 사람의 이야기를 자꾸 들어주다 보니 남의 마음을 잘 이해하게 됐어요.
-6. 친구와 자주 시간을 보내다 보니 서로 신뢰하게 됐어요.
-7. 새로운 사람들을 자꾸 만나다 보니 낯가림이 없어졌어요.
-8. 가족과 자주 대화하다 보니 가족과 사이가 좋아졌어요.
-9. 다른 사람을 자꾸 도와주다 보니 마음이 넓어졌어요.
-10. 온라인 커뮤니티에서 계속 활동하다 보니 비슷한 관심사를 가진 사람들을 사귀게 됐어요.
+1. 무대를 두려워하면서도 자꾸 무대에 서다 보니 더 이상 안 두려워하게 됐어요.
+2. 생각나는 대로 말하다 보니 더 이상 틀리게 말하지 않게 됐어요.
+3. 친구들이 자꾸 격려해 주다 보니 용기를 내서 말하게 됐어요.
+4. 말을 못 하는 게 답답하다 보니 제 의견을 말하게 됐어요.
+5. 대사를 꾸준히 연습하다 보니 메모 없이 말하게 됐어요.
+6. 거울 앞에서 자꾸 표정을 연습하다 보니 더 자신 있어 보이게 됐어요.
+7. 완벽하게 말하려고 하다 보니 너무 긴장하게 됐어요.
+8. 자꾸 무대에 서다 보니 재미를 느끼게 됐어요.
+9. 남의 시선을 두려워하지 않다 보니 자유롭게 말하게 됐어요.
+10. 다른 사람을 격려하다 보니 저도 당당해졌어요.
 
 **II. Structure 2 : -다 보면 -게 될 거예요**
-1. Si tu participes souvent au bénévolat, tu finiras par te faire de nouvelles connaissances.
-2. En saluant souvent les voisins du quartier, tu finiras par devenir proche d'eux.
-3. À force de rester en contact souvent avec tes amis, votre amitié s'approfondira.
-4. En allant sans arrêt à des réunions, parler devant les gens deviendra confortable pour toi.
-5. À force d'écouter sans cesse ce que les autres racontent, tu finiras par bien comprendre leurs sentiments.
-6. En passant souvent du temps avec un ami, vous finirez par vous faire confiance mutuellement.
-7. À force de rencontrer sans arrêt de nouvelles personnes, ta timidité disparaîtra.
-8. En discutant souvent avec ta famille, votre relation finira par s'améliorer.
-9. À force d'aider sans cesse les autres, ton cœur s'ouvrira davantage.
-10. En étant actif sans arrêt dans une communauté en ligne, tu finiras par te faire des amis qui partagent tes centres d'intérêt.
+1. Si tu [[montes sur scène|무대에 서다]] malgré la peur, tu finiras par ne plus la [[craindre|두려워하다]].
+2. Si tu parles [[au fil de tes idées|생각나는 대로]], tu finiras par ne plus te [[tromper de mots|틀리게 말하다]].
+3. Si tu es [[encouragé|격려하다]] [[sans cesse|자꾸]] par tes amis, tu finiras par oser prendre la parole.
+4. Si tu trouves [[frustrant|답답하다]] de te taire, tu finiras par exprimer tes opinions.
+5. Si tu répètes tes [[répliques|대사]] [[régulièrement|꾸준히]], tu finiras par parler sans notes.
+6. Si tu soignes [[sans cesse|자꾸]] tes [[expressions|표정]] devant le miroir, tu finiras par paraître plus confiant.
+7. Si tu veux parler [[parfaitement|완벽하다]], tu finiras par être trop tendu.
+8. Si tu [[montes sur scène|무대에 서다]] [[sans cesse|자꾸]], tu finiras par y prendre du plaisir.
+9. Si tu ne [[crains|두려워하다]] plus le regard des autres, tu finiras par parler librement.
+10. Si tu [[encourages|격려하다]] les autres à parler, tu finiras par gagner en assurance toi-même.
 
 **Corrections — II**
-1. 봉사활동에 자주 참여하다 보면 새로운 사람들을 사귀게 될 거예요.
-2. 동네 사람들과 자주 인사를 나누다 보면 이웃과 친해질 거예요.
-3. 친구들과 자주 연락하다 보면 우정이 깊어질 거예요.
-4. 모임에 계속 나가다 보면 사람들 앞에서 말하는 것이 편해질 거예요.
-5. 다른 사람의 이야기를 자꾸 들어주다 보면 남의 마음을 잘 이해하게 될 거예요.
-6. 친구와 자주 시간을 보내다 보면 서로 신뢰하게 될 거예요.
-7. 새로운 사람들을 자꾸 만나다 보면 낯가림이 없어질 거예요.
-8. 가족과 자주 대화하다 보면 가족과 사이가 좋아질 거예요.
-9. 다른 사람을 자꾸 도와주다 보면 마음이 넓어질 거예요.
-10. 온라인 커뮤니티에서 계속 활동하다 보면 비슷한 관심사를 가진 사람들을 사귀게 될 거예요.
+1. 무대를 두려워하면서도 자꾸 무대에 서다 보면 더 이상 안 두려워하게 될 거예요.
+2. 생각나는 대로 말하다 보면 더 이상 틀리게 말하지 않게 될 거예요.
+3. 친구들이 자꾸 격려해 주다 보면 용기를 내서 말하게 될 거예요.
+4. 말을 못 하는 게 답답하다 보면 네 의견을 말하게 될 거예요.
+5. 대사를 꾸준히 연습하다 보면 메모 없이 말하게 될 거예요.
+6. 거울 앞에서 자꾸 표정을 연습하다 보면 더 자신 있어 보이게 될 거예요.
+7. 완벽하게 말하려고 하다 보면 너무 긴장하게 될 거예요.
+8. 자꾸 무대에 서다 보면 재미를 느끼게 될 거예요.
+9. 남의 시선을 두려워하지 않다 보면 자유롭게 말하게 될 거예요.
+10. 다른 사람을 격려하다 보면 너도 당당해질 거예요.

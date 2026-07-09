@@ -1,52 +1,50 @@
 # EXO 3 — 4A 과2
-**Thème : Apprentissage des langues**
+**Thème : Devenir un maître (apprentissage long)**
 
 **I. Structure 1 : -다 보니 -게 됐어요**
-1. À force d'écouter des podcasts coréens tous les jours, j'ai fini par voir mon niveau d'écoute progresser.
-2. En parlant coréen avec des amis coréens chaque semaine, j'ai fini par parler plus naturellement.
-3. À force de mémoriser dix mots par jour, mon vocabulaire s'est nettement enrichi.
-4. En lisant des textes coréens en détail chaque jour, j'ai fini par mieux comprendre la grammaire.
-5. À force de pratiquer la prononciation sans arrêt, ma prononciation s'est améliorée.
-6. En regardant des dramas coréens tous les soirs, j'ai fini par comprendre le coréen parlé sans sous-titres.
-7. À force d'étudier la langue avec passion chaque jour, ma motivation initiale ne s'est jamais éteinte.
-8. En écrivant mon journal en coréen tous les soirs, j'ai fini par écrire des phrases bien plus longues.
-9. À force d'étudier le vocabulaire de façon globale plutôt que mot par mot, j'ai fini par mieux le retenir.
-10. En réfléchissant profondément à chaque nouvelle expression apprise, j'ai fini par vraiment bien la comprendre.
+1. À force de [[m'entraîner|훈련하다]] [[régulièrement|꾸준히]], j'ai fini par beaucoup progresser.
+2. À force de répéter [[sans cesse|자꾸]] les bases, j'ai fini par les maîtriser [[parfaitement|완벽하다]].
+3. Même si le [[processus était difficile|과정이 힘들다]], à force de tenir [[sans cesse|자꾸]], j'ai fini par devenir plus fort.
+4. À force de ne jamais [[abandonner|포기하다]], j'ai fini par atteindre le niveau que je [[voulais|원하다]].
+5. À force d'admirer un [[maître|대가]], j'ai fini par vouloir lui ressembler.
+6. À force de tout vouloir faire [[parfaitement|완벽하다]], j'ai fini par avancer trop lentement.
+7. À force de comprendre que le talent [[ne se fait pas du jour au lendemain|하루아침에 이루어진 것이 아니다]], j'ai fini par devenir patient.
+8. À force de [[m'entraîner|훈련하다]] [[sans cesse|자꾸]], j'ai fini par devenir bien plus habile.
+9. À force de travailler [[autant|이만큼]], j'ai fini par ne plus avoir de regrets.
+10. À force de [[rêver de|꿈꾸다]] devenir un grand joueur, j'ai fini par [[m'entraîner|훈련하다]] sans relâche.
 
 **Corrections — I**
-1. 매일 한국어 팟캐스트를 듣다 보니 듣기 실력이 늘게 됐어요.
-2. 매주 한국 친구들과 한국어로 이야기를 나누다 보니 더 자연스럽게 말하게 됐어요.
-3. 하루에 단어를 열 개씩 외우다 보니 어휘가 눈에 띄게 풍부해졌어요.
-4. 매일 한국어 글을 자세하게 읽다 보니 문법을 더 잘 이해하게 됐어요.
-5. 발음 연습을 계속하다 보니 발음이 좋아졌어요.
-6. 매일 저녁 한국 드라마를 보다 보니 자막 없이도 한국어를 알아듣게 됐어요.
-7. 매일 열정을 가지고 언어를 공부하다 보니 초심을 잃지 않게 됐어요.
-8. 매일 저녁 한국어로 일기를 쓰다 보니 훨씬 긴 문장을 쓰게 됐어요.
-9. 단어를 하나씩보다 전체적으로 공부하다 보니 더 잘 외우게 됐어요.
-10. 새로 배운 표현을 매번 깊이 생각하다 보니 정말 잘 이해하게 됐어요.
-
-*Note de grammaire — phrase 7 : 초심을 잃지 않게 됐어요 montre que -게 되다 peut s'accoler après une forme négative (-지 않다) : 잃지 않다 ("ne pas perdre") + -게 되다 = "en venir à ne plus perdre" / "finir par ne jamais perdre". C'est le même mécanisme qu'un verbe positif — la négation ne change pas la construction, elle porte juste sur le sens.*
+1. 꾸준히 훈련하다 보니 실력이 많이 늘게 됐어요.
+2. 기본기를 자꾸 반복하다 보니 완벽하게 익히게 됐어요.
+3. 과정이 힘들었지만 자꾸 버티다 보니 더 강해졌어요.
+4. 포기하지 않고 계속하다 보니 원하는 수준에 이르게 됐어요.
+5. 한 대가를 존경하다 보니 그분처럼 되고 싶어졌어요.
+6. 모든 걸 완벽하게 하려고 하다 보니 너무 천천히 나아가게 됐어요.
+7. 실력이 하루아침에 이루어진 게 아니라는 걸 알다 보니 참을성이 많아졌어요.
+8. 자꾸 훈련하다 보니 훨씬 능숙해졌어요.
+9. 이만큼 노력하다 보니 후회가 없어졌어요.
+10. 훌륭한 선수가 되기를 꿈꾸다 보니 쉬지 않고 훈련하게 됐어요.
 
 **II. Structure 2 : -다 보면 -게 될 거예요**
-1. Si tu écoutes des podcasts coréens tous les jours, ton niveau d'écoute finira par progresser.
-2. Si tu parles coréen avec des amis coréens chaque semaine, tu finiras par parler plus naturellement.
-3. À force de mémoriser dix mots par jour, ton vocabulaire finira par s'enrichir nettement.
-4. Si tu lis des textes coréens en détail chaque jour, tu finiras par mieux comprendre la grammaire.
-5. À force de pratiquer la prononciation sans arrêt, ta prononciation finira par s'améliorer.
-6. Si tu regardes des dramas coréens tous les soirs, tu finiras par comprendre le coréen parlé sans sous-titres.
-7. À force d'étudier la langue avec passion chaque jour, ta motivation initiale ne s'éteindra jamais.
-8. Si tu écris ton journal en coréen tous les soirs, tu finiras par écrire des phrases bien plus longues.
-9. À force d'étudier le vocabulaire de façon globale, tu finiras par mieux le retenir.
-10. En réfléchissant profondément à chaque nouvelle expression, tu finiras par vraiment bien la comprendre.
+1. Si tu [[t'entraînes|훈련하다]] [[régulièrement|꾸준히]], tu finiras par beaucoup progresser.
+2. Si tu répètes [[sans cesse|자꾸]] les bases, tu finiras par les maîtriser [[parfaitement|완벽하다]].
+3. Même si le [[processus est difficile|과정이 힘들다]], si tu tiens [[sans cesse|자꾸]], tu finiras par devenir plus fort.
+4. Si tu n'[[abandonnes|포기하다]] jamais, tu finiras par atteindre le niveau que tu [[veux|원하다]].
+5. Si tu admires un [[maître|대가]], tu finiras par vouloir lui ressembler.
+6. Si tu veux tout faire [[parfaitement|완벽하다]], tu finiras par avancer trop lentement.
+7. Si tu comprends que le talent [[ne se fait pas du jour au lendemain|하루아침에 이루어진 것이 아니다]], tu finiras par devenir patient.
+8. Si tu [[t'entraînes|훈련하다]] [[sans cesse|자꾸]], tu finiras par devenir bien plus habile.
+9. Si tu travailles [[autant|이만큼]], tu finiras par ne plus avoir de regrets.
+10. Si tu [[rêves de|꿈꾸다]] devenir un grand joueur, tu finiras par [[t'entraîner|훈련하다]] sans relâche.
 
 **Corrections — II**
-1. 매일 한국어 팟캐스트를 듣다 보면 듣기 실력이 늘게 될 거예요.
-2. 매주 한국 친구들과 한국어로 이야기를 나누다 보면 더 자연스럽게 말하게 될 거예요.
-3. 하루에 단어를 열 개씩 외우다 보면 어휘가 눈에 띄게 풍부해질 거예요.
-4. 매일 한국어 글을 자세하게 읽다 보면 문법을 더 잘 이해하게 될 거예요.
-5. 발음 연습을 계속하다 보면 발음이 좋아질 거예요.
-6. 매일 저녁 한국 드라마를 보다 보면 자막 없이도 한국어를 알아듣게 될 거예요.
-7. 매일 열정을 가지고 언어를 공부하다 보면 초심을 잃지 않게 될 거예요.
-8. 매일 저녁 한국어로 일기를 쓰다 보면 훨씬 긴 문장을 쓰게 될 거예요.
-9. 단어를 전체적으로 공부하다 보면 더 잘 외우게 될 거예요.
-10. 새로 배운 표현을 매번 깊이 생각하다 보면 정말 잘 이해하게 될 거예요.
+1. 꾸준히 훈련하다 보면 실력이 많이 늘게 될 거예요.
+2. 기본기를 자꾸 반복하다 보면 완벽하게 익히게 될 거예요.
+3. 과정이 힘들어도 자꾸 버티다 보면 더 강해질 거예요.
+4. 포기하지 않고 계속하다 보면 원하는 수준에 이르게 될 거예요.
+5. 한 대가를 존경하다 보면 그분처럼 되고 싶어질 거예요.
+6. 모든 걸 완벽하게 하려고 하다 보면 너무 천천히 나아가게 될 거예요.
+7. 실력이 하루아침에 이루어진 게 아니라는 걸 알다 보면 참을성이 많아질 거예요.
+8. 자꾸 훈련하다 보면 훨씬 능숙해질 거예요.
+9. 이만큼 노력하다 보면 후회가 없어질 거예요.
+10. 훌륭한 선수가 되기를 꿈꾸다 보면 쉬지 않고 훈련하게 될 거예요.

@@ -1,50 +1,50 @@
 # EXO 5 — 4A 과2
-**Thème : Cuisine**
+**Thème : Styles d'apprentissage**
 
 **I. Structure 1 : -다 보니 -게 됐어요**
-1. À force de cuisiner tous les jours, mes compétences culinaires se sont améliorées.
-2. En goûtant sans arrêt pendant la cuisson, j'ai fini par bien assaisonner mes plats.
-3. À force d'essayer sans cesse de nouvelles recettes, j'ai fini par cuisiner des plats variés.
-4. En m'entraînant à découper les ingrédients, j'ai fini par les couper rapidement.
-5. À force de manger des plats épicés souvent, j'ai fini par bien supporter le piquant.
-6. En faisant du pain régulièrement, j'ai fini par bien pétrir la pâte.
-7. À force de préparer du kimchi maison, son goût s'est amélioré.
-8. En invitant souvent des amis à manger, cuisiner devant des invités est devenu confortable pour moi.
-9. À force de m'entraîner en suivant un livre de cuisine, j'ai fini par comprendre vite les nouvelles recettes.
-10. En faisant la vaisselle et en rangeant la cuisine tous les jours, ranger la cuisine est devenu plus rapide pour moi.
+1. À force d'analyser [[en détail|자세하게]] mon style d'[[apprentissage|학습]], j'ai fini par mieux étudier.
+2. À force de comprendre que j'étais [[du type penseur|생각형]], j'ai fini par toujours réfléchir avant d'agir.
+3. À force de [[résumer|요약하다]] chaque leçon, j'ai fini par tout retenir plus vite.
+4. À force d'étudier [[dans l'ordre|순서대로]] comme un [[type séquentiel|순차형]], j'ai fini par ne plus rien oublier.
+5. À force de regarder les choses [[globalement|전체적으로]], j'ai fini par mieux comprendre le [[résumé|줄거리]] d'une histoire.
+6. À force de répéter [[dans ma tête|머리 속으로]] [[sans cesse|자꾸]], j'ai fini par parler sans notes.
+7. À force de parler [[au fil de mes idées|생각나는 대로]], j'ai fini par être plus à l'aise à l'oral.
+8. À force de réfléchir [[profondément|깊이]], j'ai fini par trouver mes propres réponses.
+9. À force de comprendre [[en détail|자세하게]] chaque [[type|유형]], j'ai fini par mieux enseigner.
+10. À force de classer les nombres [[pairs|짝수]] et [[impairs|홀수]], j'ai fini par calculer plus vite.
 
 **Corrections — I**
-1. 매일 요리하다 보니 요리 실력이 늘게 됐어요.
-2. 자꾸 간을 보면서 요리하다 보니 간을 잘 맞추게 됐어요.
-3. 새 레시피를 계속 시도하다 보니 다양한 요리를 만들게 됐어요.
-4. 재료 써는 연습을 하다 보니 재료를 빨리 썰게 됐어요.
-5. 매운 음식을 자주 먹다 보니 매운 것을 잘 먹게 됐어요.
-6. 빵을 자주 굽다 보니 반죽을 잘하게 됐어요.
-7. 김치를 자주 담그다 보니 김치 맛이 좋아졌어요.
-8. 손님을 자주 초대해서 요리하다 보니 손님 앞에서 요리하는 것이 편해졌어요.
-9. 요리책을 보며 계속 연습하다 보니 새로운 요리법을 빨리 이해하게 됐어요.
-10. 매일 설거지와 정리를 하다 보니 주방 정리가 빨라졌어요.
+1. 학습 방법을 자세하게 분석하다 보니 공부를 더 잘하게 됐어요.
+2. 제가 생각형이라는 걸 알다 보니 항상 행동하기 전에 생각하게 됐어요.
+3. 수업마다 요약하다 보니 더 빨리 외우게 됐어요.
+4. 순차형처럼 순서대로 공부하다 보니 아무것도 안 빠뜨리게 됐어요.
+5. 전체적으로 보다 보니 이야기의 줄거리를 더 잘 이해하게 됐어요.
+6. 머리 속으로 자꾸 반복하다 보니 메모 없이 말하게 됐어요.
+7. 생각나는 대로 말하다 보니 말하기가 편해졌어요.
+8. 깊이 생각하다 보니 나만의 답을 찾게 됐어요.
+9. 각 유형을 자세하게 이해하다 보니 더 잘 가르치게 됐어요.
+10. 짝수와 홀수를 나누다 보니 계산을 더 빨리 하게 됐어요.
 
 **II. Structure 2 : -다 보면 -게 될 거예요**
-1. À force de cuisiner tous les jours, tes compétences culinaires finiront par s'améliorer.
-2. En goûtant sans arrêt pendant la cuisson, tu finiras par bien assaisonner tes plats.
-3. À force d'essayer sans cesse de nouvelles recettes, tu finiras par cuisiner des plats variés.
-4. En t'entraînant à découper les ingrédients, tu finiras par les couper rapidement.
-5. À force de manger des plats épicés souvent, tu finiras par bien supporter le piquant.
-6. Si tu fais du pain régulièrement, tu finiras par bien pétrir la pâte.
-7. À force de préparer du kimchi maison, son goût finira par s'améliorer.
-8. En invitant souvent des amis à manger, cuisiner devant des invités deviendra confortable pour toi.
-9. À force de t'entraîner en suivant un livre de cuisine, tu finiras par comprendre vite les nouvelles recettes.
-10. En faisant la vaisselle et en rangeant la cuisine tous les jours, ranger la cuisine deviendra plus rapide pour toi.
+1. Si tu analyses [[en détail|자세하게]] ton style d'[[apprentissage|학습]], tu finiras par mieux étudier.
+2. Si tu comprends que tu es [[du type penseur|생각형]], tu finiras par toujours réfléchir avant d'agir.
+3. Si tu [[résumes|요약하다]] chaque leçon, tu finiras par tout retenir plus vite.
+4. Si tu étudies [[dans l'ordre|순서대로]] comme un [[type séquentiel|순차형]], tu finiras par ne plus rien oublier.
+5. Si tu regardes les choses [[globalement|전체적으로]], tu finiras par mieux comprendre le [[résumé|줄거리]] d'une histoire.
+6. Si tu répètes [[dans ta tête|머리 속으로]] [[sans cesse|자꾸]], tu finiras par parler sans notes.
+7. Si tu parles [[au fil de tes idées|생각나는 대로]], tu finiras par être plus à l'aise à l'oral.
+8. Si tu réfléchis [[profondément|깊이]], tu finiras par trouver tes propres réponses.
+9. Si tu comprends [[en détail|자세하게]] chaque [[type|유형]], tu finiras par mieux enseigner.
+10. Si tu classes les nombres [[pairs|짝수]] et [[impairs|홀수]], tu finiras par calculer plus vite.
 
 **Corrections — II**
-1. 매일 요리하다 보면 요리 실력이 늘게 될 거예요.
-2. 자꾸 간을 보면서 요리하다 보면 간을 잘 맞추게 될 거예요.
-3. 새 레시피를 계속 시도하다 보면 다양한 요리를 만들게 될 거예요.
-4. 재료 써는 연습을 하다 보면 재료를 빨리 썰게 될 거예요.
-5. 매운 음식을 자주 먹다 보면 매운 것을 잘 먹게 될 거예요.
-6. 빵을 자주 굽다 보면 반죽을 잘하게 될 거예요.
-7. 김치를 자주 담그다 보면 김치 맛이 좋아질 거예요.
-8. 손님을 자주 초대해서 요리하다 보면 손님 앞에서 요리하는 것이 편해질 거예요.
-9. 요리책을 보며 계속 연습하다 보면 새로운 요리법을 빨리 이해하게 될 거예요.
-10. 매일 설거지와 정리를 하다 보면 주방 정리가 빨라질 거예요.
+1. 학습 방법을 자세하게 분석하다 보면 공부를 더 잘하게 될 거예요.
+2. 생각형이라는 걸 알다 보면 항상 행동하기 전에 생각하게 될 거예요.
+3. 수업마다 요약하다 보면 더 빨리 외우게 될 거예요.
+4. 순차형처럼 순서대로 공부하다 보면 아무것도 안 빠뜨리게 될 거예요.
+5. 전체적으로 보다 보면 이야기의 줄거리를 더 잘 이해하게 될 거예요.
+6. 머리 속으로 자꾸 반복하다 보면 메모 없이 말하게 될 거예요.
+7. 생각나는 대로 말하다 보면 말하기가 편해질 거예요.
+8. 깊이 생각하다 보면 나만의 답을 찾게 될 거예요.
+9. 각 유형을 자세하게 이해하다 보면 더 잘 가르치게 될 거예요.
+10. 짝수와 홀수를 나누다 보면 계산을 더 빨리 하게 될 거예요.
