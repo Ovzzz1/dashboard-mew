@@ -113,6 +113,42 @@
             border-radius: 6px;
             margin: 10px 0;
         }
+        /* Mot de vocab survolable dans une phrase d'exo → bulle 한글 */
+        .vocab-hint {
+            border-bottom: 1px dashed var(--accent);
+            cursor: help;
+            position: relative;
+            font-weight: 600;
+        }
+        .vocab-tip {
+            position: absolute;
+            bottom: 135%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #15171f;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: .9rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .12s ease;
+            z-index: 30;
+            box-shadow: 0 4px 14px rgba(0,0,0,.22);
+        }
+        .vocab-tip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #15171f;
+        }
+        .vocab-hint:hover .vocab-tip,
+        .vocab-hint:focus .vocab-tip { opacity: 1; }
         /* Bloc corrections replié */
         .exo-corr {
             margin: 6px 0 16px;
@@ -1591,6 +1627,9 @@
         function exoInline(s) {
             return s
                 .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                // Mot de vocab : [[français|한글]] → survol = bulle avec la trad coréenne
+                .replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g,
+                    '<span class="vocab-hint" tabindex="0">$1<span class="vocab-tip">$2</span></span>')
                 .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
                 .replace(/\*(.+?)\*/g, '<em>$1</em>');
         }
