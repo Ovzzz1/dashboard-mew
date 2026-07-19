@@ -929,7 +929,7 @@
         .card-inner {
             position: relative;
             width: 100%;
-            height: 240px;
+            height: 340px;
             transform-style: preserve-3d;
             transition: transform .45s cubic-bezier(.4, 0, .2, 1);
             cursor: pointer;
@@ -948,7 +948,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 28px 32px;
+            padding: 26px 30px;
+            overflow-y: auto;
         }
 
         .card-front {
@@ -983,6 +984,34 @@
             color: var(--text-muted);
             margin-top: 12px;
             text-align: center;
+        }
+
+        /* Sous-contenu de la carte : phrase d'exemple (한글) côté coréen,
+           phrase traduite + explication côté français. */
+        .card-sub {
+            margin-top: 16px;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+        .card-sub:empty { display: none; }
+        .card-ex {
+            font-size: 1.05rem;
+            line-height: 1.55;
+            text-align: center;
+            color: var(--text);
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+            width: 100%;
+        }
+        .card-back .card-ex { border-top-color: var(--accent-dim); }
+        .card-expl {
+            font-size: .84rem;
+            line-height: 1.5;
+            text-align: center;
+            color: var(--text-muted);
         }
 
         .card-controls {
@@ -2734,35 +2763,10 @@
             };
             _fc.words = shuffle(fcFilteredWords());
 
-            function getDir(idx) {
-                if (_fc.mode === 'kr') return 'kr';
-                if (_fc.mode === 'fr') return 'fr';
-                return idx % 2 === 0 ? 'kr' : 'fr';
-            }
-
-            function renderCard() {
-                const w = _fc.words[_fc.idx];
-                const dir = getDir(_fc.idx);
-                const frontWord = dir === 'kr' ? w.hangul : w.french;
-                const backWord = dir === 'kr' ? w.french : w.hangul;
-                const frontLang = dir === 'kr' ? '한글' : 'Français';
-                const backLang = dir === 'kr' ? 'Français' : '한글';
-                const total = _fc.words.length;
-
-                document.getElementById('fc-card-inner').className = 'card-inner' + (_fc.flipped ? ' flipped' : '');
-                document.getElementById('fc-front-lang').textContent = frontLang;
-                document.getElementById('fc-front-word').textContent = frontWord;
-                document.getElementById('fc-back-lang').textContent = backLang;
-                document.getElementById('fc-back-word').textContent = backWord;
-                document.getElementById('fc-counter').textContent = `${_fc.idx + 1} / ${total}`;
-                document.getElementById('fc-fill').style.width = `${((_fc.idx + 1) / total) * 100}%`;
-                document.getElementById('fc-score-ok').textContent = `${_fc.correct} ok`;
-                document.getElementById('fc-score-ko').textContent = `${_fc.wrong} ko`;
-                document.getElementById('fc-btn-prev').disabled = _fc.idx === 0;
-                const isLast = _fc.idx === total - 1;
-                document.getElementById('fc-btn-next').textContent = isLast ? 'Terminer' : 'Suivant →';
-                fcUpdateLevelButtons();
-            }
+            // Le rendu de carte est centralisé dans la fonction globale fcRenderCard()
+            // (lit l'état _fc), partagée avec fcNav/fcSetMode pour éviter toute
+            // divergence entre le rendu initial et les re-rendus.
+            const renderCard = fcRenderCard;
 
             document.getElementById('content').innerHTML = `
         <div class="fc-wrap">
@@ -2799,11 +2803,13 @@
                     <div class="card-face card-front">
                         <div class="card-lang-badge" id="fc-front-lang">한글</div>
                         <div class="card-word" id="fc-front-word"></div>
+                        <div class="card-sub" id="fc-front-sub"></div>
                         <div class="card-hint">Cliquer pour révéler</div>
                     </div>
                     <div class="card-face card-back">
                         <div class="card-lang-badge" id="fc-back-lang">Français</div>
                         <div class="card-word" id="fc-back-word"></div>
+                        <div class="card-sub" id="fc-back-sub"></div>
                     </div>
                 </div>
             </div>
@@ -2827,22 +2833,39 @@
             renderCard();
         }
 
-        window.fcFlip = function () { _fc.flipped = !_fc.flipped; document.getElementById('fc-card-inner').classList.toggle('flipped', _fc.flipped); };
-        window.fcNav = function (dir) {
-            const total = _fc.words.length;
-            const next = _fc.idx + dir;
-            if (next >= total) { fcShowEnd(); return; }
-            if (next < 0) return;
-            _fc.idx = next; _fc.flipped = false;
-            document.getElementById('fc-card-inner')?.classList.remove('flipped');
-            setTimeout(() => { try { renderFcCard(); } catch (e) { } }, 0);
-            // inline re-render
+        // Direction affichée pour la carte courante (한글 devant ou Français devant).
+        function fcDir() {
+            if (_fc.mode === 'kr') return 'kr';
+            if (_fc.mode === 'fr') return 'fr';
+            return _fc.idx % 2 === 0 ? 'kr' : 'fr';
+        }
+        // Sous-contenu d'une face selon sa langue :
+        //  · 한글  → phrase d'exemple coréenne
+        //  · Français → phrase traduite + explication
+        function fcFaceSub(w, lang) {
+            if (lang === 'kr') {
+                return w.example ? `<div class="card-ex">${escapeHtml(w.example)}</div>` : '';
+            }
+            let html = '';
+            if (w.translated) html += `<div class="card-ex">${escapeHtml(w.translated)}</div>`;
+            if (w.explanation) html += `<div class="card-expl">${escapeHtml(w.explanation)}</div>`;
+            return html;
+        }
+        // Rendu complet de la carte courante depuis l'état _fc (source unique).
+        function fcRenderCard() {
             const w = _fc.words[_fc.idx];
-            const d = _fc.mode === 'kr' ? 'kr' : _fc.mode === 'fr' ? 'fr' : (_fc.idx % 2 === 0 ? 'kr' : 'fr');
-            document.getElementById('fc-front-lang').textContent = d === 'kr' ? '한글' : 'Français';
-            document.getElementById('fc-front-word').textContent = d === 'kr' ? w.hangul : w.french;
-            document.getElementById('fc-back-lang').textContent = d === 'kr' ? 'Français' : '한글';
-            document.getElementById('fc-back-word').textContent = d === 'kr' ? w.french : w.hangul;
+            if (!w) return;
+            const total = _fc.words.length;
+            const dir = fcDir();
+            const frontLang = dir === 'kr' ? 'kr' : 'fr';
+            const backLang = dir === 'kr' ? 'fr' : 'kr';
+            document.getElementById('fc-card-inner').className = 'card-inner' + (_fc.flipped ? ' flipped' : '');
+            document.getElementById('fc-front-lang').textContent = frontLang === 'kr' ? '한글' : 'Français';
+            document.getElementById('fc-front-word').textContent = frontLang === 'kr' ? w.hangul : w.french;
+            document.getElementById('fc-front-sub').innerHTML = fcFaceSub(w, frontLang);
+            document.getElementById('fc-back-lang').textContent = backLang === 'kr' ? '한글' : 'Français';
+            document.getElementById('fc-back-word').textContent = backLang === 'kr' ? w.hangul : w.french;
+            document.getElementById('fc-back-sub').innerHTML = fcFaceSub(w, backLang);
             document.getElementById('fc-counter').textContent = `${_fc.idx + 1} / ${total}`;
             document.getElementById('fc-fill').style.width = `${((_fc.idx + 1) / total) * 100}%`;
             document.getElementById('fc-score-ok').textContent = `${_fc.correct} ok`;
@@ -2850,6 +2873,16 @@
             document.getElementById('fc-btn-prev').disabled = _fc.idx === 0;
             document.getElementById('fc-btn-next').textContent = _fc.idx === total - 1 ? 'Terminer' : 'Suivant →';
             fcUpdateLevelButtons();
+        }
+
+        window.fcFlip = function () { _fc.flipped = !_fc.flipped; document.getElementById('fc-card-inner').classList.toggle('flipped', _fc.flipped); };
+        window.fcNav = function (dir) {
+            const total = _fc.words.length;
+            const next = _fc.idx + dir;
+            if (next >= total) { fcShowEnd(); return; }
+            if (next < 0) return;
+            _fc.idx = next; _fc.flipped = false;
+            fcRenderCard();
         };
         // Highlight the level button (Connu / À réviser / À apprendre) matching the
         // saved level of the current word, using the same store as the vocab table.
