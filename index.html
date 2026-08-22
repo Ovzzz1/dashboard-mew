@@ -10,28 +10,55 @@
     <link rel="stylesheet" href="static/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        /* ================================================================
+           Mew — vues applicatives · charte « Hanji »
+           (base + composants partagés : static/style.css)
+           ================================================================ */
+
+        /* ================================================================
+           A. LEÇON — visionneuse + panneau exo
+           ================================================================ */
+        .lesson-viewer-bar {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            padding: 0 0 12px;
+            margin-bottom: 22px;
+            border-bottom: 1px solid var(--line);
+            max-width: 1350px;
+        }
+        .lesson-viewer-bar > a:first-child {
+            font: 400 12px var(--f-ui);
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 1px solid var(--ink);
+            padding-bottom: 1px;
+        }
+        .lesson-viewer-bar > a:first-child:hover { color: var(--ink-soft); border-color: var(--ink-soft); }
+        .lesson-viewer-bar .crumb {
+            font: 400 10px var(--f-mono);
+            letter-spacing: .1em;
+            text-transform: none;
+            color: var(--ink-faint);
+        }
+
         #lesson-frame {
             width: 100%;
-            max-width: 1350px; /* leçon à gauche, espace libre à droite */
-            border: none;
-            height: 1200px; /* fallback, ajusté au contenu par JS */
-            border-radius: var(--radius);
+            max-width: 1350px;
+            border: 1px solid var(--line);
+            height: 1200px;
             display: block;
-            background: #f4f5f8;
+            background: var(--paper);
         }
 
-        /* Vue leçon : pleine largeur + vrai scroll de toute la page */
-        body.lesson-mode main {
-            max-width: 100%;
-            padding: 1.25rem 1.75rem 3rem;
-        }
-        body.lesson-mode .lesson-viewer-bar { max-width: 1350px; }
+        /* Vue leçon : pleine largeur + scroll de page */
+        body.lesson-mode main { max-width: 100%; padding: 34px 42px 60px; }
 
-        /* ---------- LEÇON + PANNEAU EXO (2 colonnes) ---------- */
         .lesson-layout {
             display: grid;
             grid-template-columns: minmax(0, 1fr) 440px;
-            gap: 1.25rem;
+            gap: 26px;
             align-items: start;
             max-width: 1800px;
         }
@@ -40,1311 +67,704 @@
 
         .exo-side {
             position: sticky;
-            top: 1rem;
-            max-height: calc(100vh - 2rem);
+            top: 16px;
+            max-height: calc(100vh - 32px);
             display: flex;
             flex-direction: column;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
+            background: var(--paper);
+            border: 1px solid var(--line);
             overflow: hidden;
         }
         .exo-side-head {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 14px 18px;
-            font-weight: 700;
-            font-size: .95rem;
-            border-bottom: 1px solid var(--border);
-            background: var(--bg-card);
+            gap: 9px;
+            padding: 11px 16px;
+            background: var(--ink-surface);
+            color: var(--on-ink);
+            font: 500 14px var(--f-kr);
+            border-bottom: none;
         }
-        .exo-links {
+        .exo-side-head .icon-sm,
+        .exo-side-head .icon-xs { color: var(--on-ink-mute); }
+
+        /* liste de liens vers les exos (panneau leçon) */
+        .exo-links { display: flex; flex-direction: column; overflow-y: auto; }
+
+        /* ================================================================
+           B. EXERCICES — cartes, onglets, rendu markdown
+           ================================================================ */
+        .exo-gwa-block { margin-bottom: 26px; }
+        .exo-gwa-head {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 16px;
-            overflow-y: auto;
+            align-items: center;
+            gap: 14px;
+            background: var(--ink-surface);
+            color: var(--on-ink);
+            padding: 11px 16px;
+        }
+        .exo-gwa-title {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            font: 500 14px var(--f-kr);
+        }
+        .exo-gwa-title .icon-sm { color: var(--on-ink-mute); }
+        .exo-gwa-lesson {
+            margin-left: auto;
+            font: 400 11px var(--f-ui);
+            color: var(--pastel-red);
+            text-decoration: none;
+        }
+        .exo-gwa-lesson:hover { color: var(--paper); }
+
+        .exo-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(178px, 1fr));
+            gap: 0;
+            border: 1px solid var(--line);
+            border-top: none;
         }
 
-        /* ---------- ONGLETS + CONTENU EXO (partagé lesson/standalone) ---------- */
+        .exo-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 13px 16px;
+            border-right: 1px solid var(--line-soft);
+            border-bottom: 1px solid var(--line-soft);
+            text-decoration: none;
+            color: var(--ink);
+            transition: var(--transition);
+        }
+        .exo-card:hover { background: var(--paper-alt); }
+
+        .exo-card-num {
+            width: 22px; height: 22px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            border: 1.5px solid var(--status-none);
+            color: var(--ink-faint);
+            font: 500 11px var(--f-ui);
+        }
+        .exo-card:hover .exo-card-num { border-color: var(--ink); color: var(--ink); }
+        .exo-card-title { flex: 1; font: 400 13px var(--f-ui); color: var(--ink-soft); }
+        .exo-card-arrow { color: var(--ink-faint); font-size: 13px; transition: var(--transition); }
+        .exo-card:hover .exo-card-arrow { color: var(--ink); transform: translateX(3px); }
+
+        /* liste verticale dans le panneau latéral */
+        .exo-links .exo-card { border-right: none; }
+
+        /* --- onglets Exo 1..N --- */
+        .exo-standalone { max-width: 1000px; }
+
         .exo-tabs {
             display: flex;
+            gap: 0;
             flex-wrap: wrap;
-            gap: 6px;
-            padding: 12px 14px;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 26px;
+            overflow-x: auto;
         }
-        .exo-tab {
-            padding: 6px 12px;
-            font-size: .82rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            background: transparent;
-            border: 1px solid var(--border);
-            border-radius: 999px;
-            cursor: pointer;
-            transition: all .15s;
-        }
-        .exo-tab:hover { color: var(--accent); border-color: var(--accent); }
-        .exo-tab.active { color: #fff; background: var(--accent); border-color: var(--accent); }
+        .exo-side .exo-tabs { margin-bottom: 0; padding: 0 8px; }
 
-        .exo-content { overflow-y: auto; padding: 4px 0; }
-        .exo-side .exo-content { flex: 1; }
-        .exo-render { padding: 6px 18px 22px; font-size: .9rem; line-height: 1.6; }
+        .exo-tab {
+            padding: 10px 15px;
+            border: none;
+            border-bottom: 1.5px solid transparent;
+            background: transparent;
+            color: var(--ink-mute);
+            font: 400 12px var(--f-ui);
+            cursor: pointer;
+            white-space: nowrap;
+            transition: var(--transition);
+        }
+        .exo-tab:hover { color: var(--ink); }
+        .exo-tab.active {
+            color: var(--ink);
+            font-weight: 500;
+            border-bottom-color: var(--ink);
+        }
+
+        .exo-content { min-height: 200px; }
+        .exo-side .exo-content { overflow-y: auto; padding: 16px 18px 22px; }
+
+        /* --- rendu du markdown d'exercice --- */
+        .exo-render { font: 400 13.5px/1.75 var(--f-ui); color: var(--ink-soft); }
+
+        /* en-tête de section : « I. Structure 1 : … » */
         .exo-render .exo-h {
-            font-size: .82rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: .03em;
-            color: var(--accent);
-            margin: 20px 0 10px;
+            border-top: 1.5px solid var(--ink);
+            padding-top: 18px;
+            margin: 30px 0 14px;
+            font: 500 20px/1.35 var(--f-kr);
+            color: var(--ink);
+            font-weight: 500;
         }
-        .exo-render .exo-h:first-child { margin-top: 4px; }
-        .exo-render ol, .exo-render ul { margin: 0 0 8px; padding-left: 1.4em; }
-        .exo-render li { margin-bottom: 6px; }
-        .exo-render p { margin: 0 0 8px; }
+        .exo-render .exo-h:first-child { margin-top: 0; }
+
+        /* thème de l'exo (ligne **Thème : …** en tête) */
+        .exo-render > .exo-h:first-of-type { font-size: 22px; }
+
+        .exo-render ol,
+        .exo-render ul { margin: 0 0 18px; padding-left: 0; list-style: none; counter-reset: exoitem; }
+
+        .exo-render ol li {
+            counter-increment: exoitem;
+            position: relative;
+            padding: 9px 0 9px 34px;
+            border-bottom: 1px solid var(--line-soft);
+            font: 400 14px/1.6 var(--f-ed);
+            color: var(--ink);
+        }
+        .exo-render ol li::before {
+            content: counter(exoitem, decimal-leading-zero);
+            position: absolute;
+            left: 0; top: 12px;
+            font: 400 11px var(--f-mono);
+            color: var(--ink-faint);
+        }
+        .exo-render ol li:last-child { border-bottom: none; }
+
+        .exo-render p { margin: 0 0 12px; }
+
+        /* note de grammaire — italique éditoriale */
         .exo-render .exo-note {
-            font-size: .82rem;
-            color: var(--text-muted);
-            background: rgba(0, 71, 160, .06);
-            border-left: 3px solid var(--accent);
-            padding: 8px 12px;
-            border-radius: 6px;
-            margin: 10px 0;
+            font: 300 13px/1.7 var(--f-ed);
+            font-style: italic;
+            color: var(--ink-mute);
+            padding: 10px 0 10px 16px;
+            border-left: 2px solid var(--pastel-blue);
+            margin: 0 0 18px;
         }
-        /* Mot de vocab survolable dans une phrase d'exo → bulle 한글 */
+
+        /* bloc de corrections repliable */
+        .exo-render .exo-corr {
+            border: 1px solid var(--line);
+            margin: 0 0 22px;
+        }
+        .exo-render .exo-corr > summary {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 11px 16px;
+            background: var(--paper-alt);
+            color: var(--ink);
+            font: 400 10.5px var(--f-ui);
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            cursor: pointer;
+            list-style: none;
+            user-select: none;
+        }
+        .exo-render .exo-corr > summary::-webkit-details-marker { display: none; }
+        .exo-render .exo-corr > summary:hover { background: var(--tint-blue); color: var(--accent-blue); }
+        .exo-render .exo-corr[open] > summary {
+            background: var(--ink-surface);
+            color: var(--on-ink);
+            border-bottom: 1px solid var(--line);
+        }
+        .exo-render .exo-corr[open] > summary .icon-xs { color: var(--pastel-red); }
+
+        .exo-corr-body { padding: 14px 18px 18px; }
+        .exo-corr-body ol li {
+            font: 400 15px/1.7 var(--f-kr);
+            color: var(--status-known);
+            border-bottom: 1px solid var(--line-soft);
+        }
+        .exo-corr-body ol li::before { color: var(--ink-faint); top: 13px; }
+        .exo-corr-body .exo-note { border-left-color: var(--pastel-red); }
+
+        .no-exos { color: var(--ink-mute); font-style: italic; }
+
+        /* ================================================================
+           C. INFOBULLE DE VOCABULAIRE (balisage [[fr|한글]])
+           ================================================================ */
         .vocab-hint {
-            border-bottom: 1px dashed var(--accent);
+            border-bottom: 1px dashed var(--pastel-red);
             cursor: help;
             position: relative;
-            font-weight: 600;
+            font-weight: 500;
+            color: var(--ink);
         }
         .vocab-tip {
             position: absolute;
             bottom: 135%;
             left: 50%;
             transform: translateX(-50%);
-            background: #15171f;
-            color: #fff;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: .9rem;
-            font-weight: 600;
+            background: var(--ink-surface);
+            color: var(--on-ink);
+            padding: 5px 11px;
+            font: 400 13px var(--f-kr);
             white-space: nowrap;
             opacity: 0;
             pointer-events: none;
             transition: opacity .12s ease;
             z-index: 30;
-            box-shadow: 0 4px 14px rgba(0,0,0,.22);
         }
         .vocab-tip::after {
             content: '';
             position: absolute;
-            top: 100%;
-            left: 50%;
+            top: 100%; left: 50%;
             transform: translateX(-50%);
             border: 5px solid transparent;
-            border-top-color: #15171f;
+            border-top-color: var(--ink-surface);
         }
         .vocab-hint:hover .vocab-tip,
         .vocab-hint:focus .vocab-tip { opacity: 1; }
-        /* Bloc corrections replié */
-        .exo-corr {
-            margin: 6px 0 16px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            background: rgba(16, 122, 87, .05);
-            overflow: hidden;
-        }
-        .exo-corr > summary {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            padding: 9px 12px;
-            font-weight: 700;
-            font-size: .82rem;
-            color: #0b7a54;
-            list-style: none;
-            user-select: none;
-        }
-        .exo-corr > summary::-webkit-details-marker { display: none; }
-        .exo-corr[open] > summary { border-bottom: 1px solid var(--border); }
-        .exo-corr-body { padding: 8px 14px 4px; }
-        .exo-corr-body li { color: #15171f; }
 
-        /* ---------- STANDALONE EXO ---------- */
-        .exo-standalone {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            max-width: 900px;
-            overflow: hidden;
-        }
-        .exo-standalone .exo-content { max-height: none; }
+        /* ================================================================
+           D. FLASHCARDS — carte encre plein cadre
+           ================================================================ */
+        .fc-wrap { max-width: 980px; }
 
-        /* ---------- BROWSE EXO (Level > 과 > Exo) ---------- */
-        .exo-gwa-block { margin: 0 0 1.25rem; }
-        .exo-gwa-head {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            margin: 0 0 10px;
-        }
-        .exo-gwa-title { display: flex; align-items: center; gap: 7px; font-weight: 700; font-size: 1.05rem; }
-        .exo-gwa-lesson { font-size: .82rem; color: var(--accent); text-decoration: none; font-weight: 600; }
-        .exo-gwa-lesson:hover { text-decoration: underline; }
-        .exo-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
-        .exo-card {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 16px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            text-decoration: none;
-            color: inherit;
-            transition: border-color .15s, transform .15s;
-        }
-        .exo-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-        .exo-card-num {
-            display: grid;
-            place-items: center;
-            width: 28px; height: 28px;
-            flex: none;
-            border-radius: 8px;
-            background: var(--accent);
-            color: #fff;
-            font-weight: 700;
-            font-size: .85rem;
-        }
-        .exo-card-title { font-weight: 600; flex: 1; }
-        .exo-card-arrow { color: var(--text-muted); }
+        .fc-hero { margin-bottom: 20px; }
+        .fc-hero h1 { font: 300 34px/1.1 var(--f-ed); color: var(--ink); }
+        .fc-hero p { margin-top: 8px; font: 400 12.5px var(--f-ui); color: var(--ink-mute); }
 
-        @media (max-width: 1100px) {
-            .lesson-layout { grid-template-columns: 1fr; }
-            .exo-side { position: static; max-height: none; }
-            .exo-side .exo-content { max-height: 70vh; }
-        }
-
-        /* ---------- CALENDRIER ---------- */
-        .cal-hero { margin-bottom: 1.5rem; }
-        .cal-layout {
-            display: grid;
-            grid-template-columns: 1fr 340px;
-            gap: 1.5rem;
-            align-items: start;
-        }
-        .cal-main {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.25rem;
-        }
-        .cal-toolbar {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-        }
-        .cal-month-title {
-            font-size: 1.25rem;
-            font-weight: 800;
-            min-width: 180px;
-        }
-        .cal-nav-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 34px; height: 34px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            color: var(--text);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        .cal-nav-btn:hover { background: var(--bg); border-color: var(--accent); color: var(--accent); }
-        .cal-today-btn {
-            margin-left: auto;
-            padding: 0.4rem 0.85rem;
-            border-radius: 8px;
-            background: var(--accent);
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        .cal-today-btn:hover { filter: brightness(1.08); }
-        .cal-grid {
-            display: grid;
-            grid-template-columns: 46px repeat(7, 1fr);
-            gap: 6px;
-        }
-        .cal-weekdays { margin-bottom: 6px; }
-        .cal-wk-head { color: var(--text-muted); }
-        .cal-weekcell {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2px;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: var(--text-dim);
-            border: 1px solid transparent;
-            text-decoration: none;
-        }
-        .cal-weekcell .cal-wk-num { font-size: 0.82rem; }
-        .cal-weekcell.has-vocab {
-            color: var(--accent);
-            border-color: var(--border);
-            background: rgba(0,71,160,0.05);
-            cursor: pointer;
-        }
-        .cal-weekcell.has-vocab:hover { border-color: var(--accent); background: rgba(0,71,160,0.12); }
-        .cal-weekcell .cal-wk-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-
-        /* Vocab semaine — cartes */
-        .week-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 1rem;
-            margin-top: 1.25rem;
-        }
-        .week-card {
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.1rem 1.2rem;
-            text-decoration: none;
-            color: var(--text);
-            transition: var(--transition);
-        }
-        .week-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-        .week-card-range { font-size: 1.05rem; font-weight: 800; }
-        .week-card-count { font-size: 0.82rem; color: var(--text-dim); }
-        .week-card-actions { margin-top: 0.2rem; }
-        .week-card-go { font-size: 0.85rem; font-weight: 700; color: var(--accent); }
-        .week-sub { font-size: 0.82rem; color: var(--text-dim); margin-top: 0.25rem; }
-        .cal-weekday {
-            text-align: center;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
-            color: var(--text-dim);
-            padding: 4px 0;
-        }
-        .cal-cell {
-            position: relative;
-            min-height: 78px;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 6px 8px;
-            cursor: pointer;
-            transition: var(--transition);
-            overflow: hidden;
-            background: var(--bg);
-        }
-        .cal-cell:hover { border-color: var(--accent); }
-        .cal-empty { background: transparent; border: none; cursor: default; }
-        .cal-daynum { font-size: 0.9rem; font-weight: 600; color: var(--text); }
-        .cal-today { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
-        .cal-today .cal-daynum { color: var(--accent); }
-        .cal-selected { border-color: var(--accent); box-shadow: inset 0 0 0 2px var(--accent); background: rgba(0,71,160,0.10); }
-        .cal-has-note { background: rgba(0,71,160,0.05); }
-        .cal-dot {
-            position: absolute;
-            top: 9px; right: 9px;
-            width: 7px; height: 7px;
-            border-radius: 50%;
-            background: var(--accent);
-        }
-        .cal-preview {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            margin-top: 4px;
-            font-size: 0.72rem;
-            line-height: 1.3;
-            color: var(--text-dim);
-            white-space: pre-wrap;
-            word-break: break-word;
-        }
-        .cal-editor {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.25rem;
-            position: sticky;
-            top: 1rem;
-        }
-        .cal-editor-head {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 0.85rem;
-        }
-        .cal-textarea {
-            width: 100%;
-            min-height: 320px;
-            resize: vertical;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            background: var(--bg);
-            color: var(--text);
-            padding: 0.75rem;
-            font-family: inherit;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-        .cal-textarea:focus { outline: none; border-color: var(--accent); }
-        .cal-editor-foot { min-height: 20px; margin-top: 0.5rem; }
-        .cal-save-status { font-size: 0.78rem; color: var(--accent); font-weight: 600; }
-
-        @media (max-width: 900px) {
-            .cal-layout { grid-template-columns: 1fr; }
-            .cal-editor { position: static; }
-            .cal-cell { min-height: 58px; }
-            .cal-preview { display: none; }
-        }
-
-        .lesson-viewer-bar {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 1rem;
-        }
-
-        .lesson-viewer-bar a {
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        .lesson-viewer-bar a:hover {
-            text-decoration: underline;
-        }
-
-        .lesson-viewer-bar .crumb {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        /* Bouton de téléchargement (leçons + vocab) */
-        .dl-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 14px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--accent);
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            cursor: pointer;
-            text-decoration: none;
-            transition: background .15s, border-color .15s, color .15s;
-        }
-        .dl-btn:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: #fff;
-        }
-        .lesson-viewer-bar .dl-btn { margin-left: auto; }
-
-        .vocab-header {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-        .vocab-header .dl-btn { flex: none; }
-
-        .loading {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 200px;
-            color: var(--text-dim);
-            font-size: 0.95rem;
-            gap: 10px;
-        }
-
-        /* Level dot */
-        .col-level {
-            text-align: center;
-            padding: 0 6px !important;
-            vertical-align: middle !important;
-            cursor: pointer;
-            width: 36px;
-        }
-
-        .level-dot {
-            display: inline-block;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
+        .fc-mode-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+        .fc-mode-btn {
+            padding: 7px 13px;
+            border: 1px solid var(--line);
             background: transparent;
-            border: 2px solid var(--border);
-            transition: all .2s ease;
-            cursor: pointer;
-        }
-
-        .col-level:hover .level-dot {
-            transform: scale(1.4);
-            border-color: var(--text-muted);
-        }
-
-        tr[data-level="green"] .level-dot {
-            background: var(--green);
-            border-color: var(--green);
-            box-shadow: 0 0 6px var(--green);
-        }
-
-        tr[data-level="orange"] .level-dot {
-            background: var(--orange);
-            border-color: var(--orange);
-            box-shadow: 0 0 6px var(--orange);
-        }
-
-        tr[data-level="red"] .level-dot {
-            background: var(--red);
-            border-color: var(--red);
-            box-shadow: 0 0 6px var(--red);
-        }
-
-        /* Add word btn in chapter sep */
-        .chapter-sep-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .add-word-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 5px 12px;
-            border-radius: var(--radius-xs);
-            border: 1px solid var(--accent-dim);
-            background: var(--accent-glow);
-            color: var(--accent);
-            font-size: .78rem;
-            font-weight: 600;
+            color: var(--ink-soft);
+            font: 400 11.5px var(--f-ui);
             cursor: pointer;
             transition: var(--transition);
         }
-
-        .add-word-btn:hover {
-            background: var(--accent-dim);
-            color: #fff;
-            border-color: var(--accent);
-        }
-
-        /* Level filter bar */
-        .level-filter-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 1rem;
-            padding: 12px 14px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-        }
-
-        .lvl-filter-btn {
-            padding: 6px 14px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            background: var(--bg-card-alt);
-            color: var(--text-dim);
-            font-size: .82rem;
+        .fc-mode-btn:hover { border-color: var(--ink); color: var(--ink); }
+        .fc-mode-btn.active {
+            background: var(--ink);
+            border-color: var(--ink);
+            color: var(--paper);
             font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .lvl-filter-btn:hover {
-            border-color: var(--accent-dim);
-            color: var(--text);
-        }
-
-        .lvl-filter-btn.active {
-            background: var(--accent-glow);
-            border-color: var(--accent);
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .filter-label {
-            display: flex;
-            align-items: center;
-            font-size: .82rem;
-            font-weight: 600;
-            color: var(--text-dim);
-            margin-right: 2px;
-        }
-
-        .fc-level-filter-bar {
-            margin: 0 0 4px;
-        }
-
-        /* Modal */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, .65);
-            backdrop-filter: blur(6px);
-            z-index: 400;
-        }
-
-        .modal-overlay.open {
-            display: block;
-        }
-
-        .modal {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -52%) scale(.96);
-            z-index: 500;
-            width: min(540px, 94vw);
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
-            padding: 1.75rem 2rem;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity .25s ease, transform .25s cubic-bezier(.34, 1.56, .64, 1);
-        }
-
-        .modal.open {
-            opacity: 1;
-            pointer-events: all;
-            transform: translate(-50%, -50%) scale(1);
-        }
-
-        .modal-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: .4rem;
-        }
-
-        .modal-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .modal-subtitle {
-            font-size: .82rem;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 1.2rem;
-        }
-
-        .modal-close {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: var(--bg-card-alt);
-            color: var(--text-dim);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .modal-close:hover {
-            border-color: var(--red);
-            color: var(--red);
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .form-group-full {
-            grid-column: 1/-1;
-        }
-
-        .form-label {
-            font-size: .78rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: .5px;
-            color: var(--text-dim);
-        }
-
-        .form-label .req {
-            color: var(--red);
-        }
-
-        .form-input {
-            padding: 10px 14px;
-            background: var(--bg-card-alt);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-xs);
-            color: var(--text);
-            font-size: .9rem;
-            font-family: inherit;
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .form-input::placeholder {
-            color: var(--text-muted);
-        }
-
-        .form-input:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px var(--accent-glow);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 68px;
-        }
-
-        .modal-actions {
-            display: flex;
-            gap: 12px;
-            justify-content: flex-end;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 10px 22px;
-            border-radius: var(--radius-sm);
-            border: none;
-            background: var(--accent);
-            color: #fff;
-            font-size: .9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .btn-primary:hover {
-            opacity: .88;
-        }
-
-        .btn-primary:disabled {
-            opacity: .5;
-            cursor: not-allowed;
-        }
-
-        .btn-secondary {
-            padding: 10px 18px;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border);
-            background: var(--bg-card-alt);
-            color: var(--text-dim);
-            font-size: .9rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--text-dim);
-            color: var(--text);
-        }
-
-        .modal-success {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 18px;
-            border-radius: var(--radius-sm);
-            background: rgba(22, 163, 74, .1);
-            border: 1px solid rgba(22, 163, 74, .3);
-            color: var(--green);
-            font-weight: 500;
-            margin-top: .5rem;
-        }
-
-        @media(max-width:480px) {
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .modal {
-                padding: 1.25rem;
-            }
-        }
-
-        /* ── PRACTICE ENTRY BUTTONS (on vocab page) ── */
-        .practice-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 12px 0 4px;
-        }
-
-        .practice-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 7px 16px;
-            border-radius: 20px;
-            border: 1px solid var(--accent-dim);
-            background: var(--accent-glow);
-            color: var(--accent);
-            font-size: .82rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .practice-btn:hover {
-            background: var(--accent-dim);
-            color: #fff;
-            border-color: var(--accent);
-        }
-
-        .practice-btn.test-btn {
-            border-color: rgba(22, 163, 74, .4);
-            background: rgba(22, 163, 74, .07);
-            color: var(--green);
-        }
-
-        .practice-btn.test-btn:hover {
-            background: rgba(22, 163, 74, .18);
-            color: #fff;
-            border-color: var(--green);
-        }
-
-        /* ── FLASHCARD ── */
-        .fc-wrap {
-            max-width: 640px;
-            margin: 0 auto;
-            padding-top: 8px;
-        }
-
-        .fc-hero {
-            margin-bottom: 24px;
-        }
-
-        .fc-hero h1 {
-            font-size: 1.8em;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .fc-hero p {
-            color: var(--text-muted);
-            font-size: .9rem;
         }
 
         .fc-progress-row {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
+            gap: 14px;
+            margin-bottom: 8px;
         }
+        .fc-counter { font: 400 10px var(--f-mono); color: var(--ink-mute); white-space: nowrap; }
+        .fc-progress-bar { flex: 1; height: 4px; background: var(--line); }
+        .fc-progress-fill { height: 100%; background: var(--ink); transition: width .25s ease; }
 
-        .fc-counter {
-            font-size: .85rem;
-            font-weight: 600;
-            color: var(--text-dim);
-            min-width: 56px;
-        }
+        .fc-score-row { display: flex; gap: 14px; margin-bottom: 18px; }
+        .fc-score-ok { font: 400 10px var(--f-mono); color: var(--status-known); }
+        .fc-score-ko { font: 400 10px var(--f-mono); color: var(--status-todo); }
 
-        .fc-progress-bar {
-            flex: 1;
-            height: 5px;
-            background: var(--border);
-            border-radius: 3px;
-            overflow: hidden;
-        }
-
-        .fc-progress-fill {
-            height: 100%;
-            background: var(--accent);
-            border-radius: 3px;
-            transition: width .35s ease;
-        }
-
-        .fc-score-row {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 18px;
-            font-size: .82rem;
-            font-weight: 600;
-        }
-
-        .fc-score-ok {
-            color: var(--green);
-        }
-
-        .fc-score-ko {
-            color: var(--red);
-        }
-
+        /* carte 3D */
         .card-perspective {
-            perspective: 1200px;
-            margin-bottom: 20px;
+            perspective: 1600px;
+            cursor: pointer;
+            margin-bottom: 16px;
+            min-height: 380px;
         }
-
         .card-inner {
             position: relative;
             width: 100%;
-            height: 340px;
+            min-height: 380px;
             transform-style: preserve-3d;
-            transition: transform .45s cubic-bezier(.4, 0, .2, 1);
-            cursor: pointer;
+            transition: transform .5s cubic-bezier(.4, 0, .2, 1);
         }
-
-        .card-inner.flipped {
-            transform: rotateY(180deg);
-        }
+        .card-inner.flipped { transform: rotateY(180deg); }
 
         .card-face {
             position: absolute;
             inset: 0;
             backface-visibility: hidden;
-            border-radius: 12px;
+            -webkit-backface-visibility: hidden;
+            background: var(--ink-surface);
+            color: var(--on-ink);
+            padding: 36px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 26px 30px;
-            overflow-y: auto;
+            overflow: hidden;
         }
-
-        .card-front {
-            background: var(--bg-card);
-            border: 2px solid var(--border);
+        /* filigrane 한글 décoratif */
+        .card-face::after {
+            content: '한';
+            position: absolute;
+            right: -40px; bottom: -70px;
+            font: 300 260px/1 var(--f-kr);
+            color: var(--ink-ghost);
+            pointer-events: none;
+            user-select: none;
         }
-
-        .card-back {
-            background: var(--accent-glow);
-            border: 2px solid var(--accent);
-            transform: rotateY(180deg);
-        }
+        .card-back { transform: rotateY(180deg); }
+        .card-back::after { content: '글'; }
 
         .card-lang-badge {
-            font-size: .7rem;
-            font-weight: 700;
+            position: relative;
+            font: 400 10px var(--f-ui);
+            letter-spacing: .22em;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 10px;
+            color: var(--on-ink-mute);
         }
 
         .card-word {
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            line-height: 1.3;
+            position: relative;
+            font: 500 84px/1.1 var(--f-kr);
+            color: var(--on-ink);
+            margin: auto 0 0;
+            word-break: break-word;
         }
+        .card-front .card-word,
+        .card-back .card-word { margin-top: auto; }
+
+        .card-sub {
+            position: relative;
+            margin: 18px 0 auto;
+            padding-top: 18px;
+            border-top: 1px solid var(--ink-line);
+        }
+        .card-ex { font: 400 17px/1.7 var(--f-kr); color: #e6e8e9; }
+        .card-expl { font: 300 14px/1.6 var(--f-ed); font-style: italic; color: var(--on-ink-mute); margin-top: 9px; }
 
         .card-hint {
-            font-size: .78rem;
-            color: var(--text-muted);
-            margin-top: 12px;
-            text-align: center;
+            position: relative;
+            margin-top: auto;
+            font: 400 10.5px var(--f-mono);
+            color: var(--on-ink-dim);
         }
 
-        /* Sous-contenu de la carte : phrase d'exemple (한글) côté coréen,
-           phrase traduite + explication côté français. */
-        .card-sub {
-            margin-top: 16px;
-            max-width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            align-items: center;
-        }
-        .card-sub:empty { display: none; }
-        .card-ex {
-            font-size: 1.05rem;
-            line-height: 1.55;
-            text-align: center;
-            color: var(--text);
-            padding-top: 14px;
-            border-top: 1px solid var(--border);
-            width: 100%;
-        }
-        .card-back .card-ex { border-top-color: var(--accent-dim); }
-        .card-expl {
-            font-size: .84rem;
-            line-height: 1.5;
-            text-align: center;
-            color: var(--text-muted);
-        }
-
+        /* contrôles */
         .card-controls {
             display: flex;
+            gap: 6px;
             flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 14px;
+            margin-bottom: 22px;
         }
-
         .fc-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 9px 20px;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border);
-            background: var(--bg-card-alt);
-            color: var(--text-dim);
-            font-size: .88rem;
-            font-weight: 600;
+            padding: 10px 16px;
+            border: 1px solid var(--line);
+            background: transparent;
+            color: var(--ink-soft);
+            font: 400 12px var(--f-ui);
             cursor: pointer;
             transition: var(--transition);
         }
-
-        .fc-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
+        .fc-btn:hover:not(:disabled) { border-color: var(--ink); color: var(--ink); }
+        .fc-btn:disabled { opacity: .35; cursor: not-allowed; }
         .fc-btn.primary {
-            background: var(--accent-glow);
-            border-color: var(--accent);
-            color: var(--accent);
+            background: var(--ink);
+            border-color: var(--ink);
+            color: var(--paper);
+            font-weight: 500;
+            margin-left: auto;
         }
+        .fc-btn.primary:hover:not(:disabled) { background: var(--ink-soft); border-color: var(--ink-soft); color: var(--paper); }
 
-        .fc-btn:disabled {
-            opacity: .35;
-            cursor: not-allowed;
-        }
+        /* notations : couleur de statut sur le filet + le texte, fond neutre */
+        .fc-btn-green  { border-color: var(--status-known);    color: var(--status-known); }
+        .fc-btn-orange { border-color: var(--status-learning); color: var(--status-learning); }
+        .fc-btn-red    { border-color: var(--status-todo);     color: var(--status-todo); }
+        .fc-btn-green:hover:not(:disabled)  { background: var(--status-known);    border-color: var(--status-known);    color: var(--paper); }
+        .fc-btn-orange:hover:not(:disabled) { background: var(--status-learning); border-color: var(--status-learning); color: var(--paper); }
+        .fc-btn-red:hover:not(:disabled)    { background: var(--status-todo);     border-color: var(--status-todo);     color: var(--paper); }
 
-        .fc-btn-green {
-            border-color: rgba(22, 163, 74, .5);
-            color: var(--green);
-            background: rgba(22, 163, 74, .07);
-        }
-
-        .fc-btn-green:hover {
-            background: rgba(22, 163, 74, .18);
-        }
-
-        .fc-btn-green.active {
-            background: var(--green);
-            border-color: var(--green);
-            color: #fff;
-        }
-
-        .fc-btn-orange {
-            border-color: rgba(217, 119, 6, .5);
-            color: var(--orange);
-            background: rgba(217, 119, 6, .07);
-        }
-
-        .fc-btn-orange:hover {
-            background: rgba(217, 119, 6, .18);
-        }
-
-        .fc-btn-orange.active {
-            background: var(--orange);
-            border-color: var(--orange);
-            color: #fff;
-        }
-
-        .fc-btn-red {
-            border-color: rgba(205, 46, 58, .5);
-            color: var(--red);
-            background: rgba(205, 46, 58, .07);
-        }
-
-        .fc-btn-red:hover {
-            background: rgba(205, 46, 58, .18);
-        }
-
-        .fc-btn-red.active {
-            background: var(--red);
-            border-color: var(--red);
-            color: #fff;
-        }
-
-        .fc-mode-bar {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 18px;
-            flex-wrap: wrap;
-        }
-
-        .fc-mode-btn {
-            padding: 5px 13px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            background: var(--bg-card-alt);
-            color: var(--text-dim);
-            font-size: .78rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .fc-mode-btn.active {
-            background: var(--accent-glow);
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
+        /* écran de fin */
         .fc-end {
+            border: 1px solid var(--line);
+            padding: 34px;
             text-align: center;
-            padding: 40px 20px;
         }
+        .fc-end h2 { font: 300 30px var(--f-ed); color: var(--ink); margin-bottom: 14px; }
+        .score-big { font: 400 46px/1 var(--f-ed); color: var(--ink); }
 
-        .fc-end h2 {
-            font-size: 1.6em;
-            margin-bottom: 8px;
-        }
+        /* ================================================================
+           E. TEST
+           ================================================================ */
+        .test-wrap { max-width: 720px; }
 
-        .fc-end .score-big {
-            font-size: 3em;
-            font-weight: 700;
-            color: var(--accent);
-            margin: 12px 0;
-        }
-
-        /* ── TEST ── */
-        .test-wrap {
-            max-width: 640px;
-            margin: 0 auto;
-            padding-top: 8px;
-        }
-
-        .test-hero {
-            margin-bottom: 24px;
-        }
-
-        .test-hero h1 {
-            font-size: 1.8em;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .test-hero p {
-            color: var(--text-muted);
-            font-size: .9rem;
-        }
+        .test-hero { margin-bottom: 20px; }
+        .test-hero h1 { font: 300 34px/1.1 var(--f-ed); color: var(--ink); }
+        .test-hero p { margin-top: 8px; font: 400 10px var(--f-mono); color: var(--ink-mute); }
 
         .test-question-card {
-            background: var(--bg-card);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 36px 32px;
+            border: 1px solid var(--line);
+            border-top: 1.5px solid var(--ink);
+            padding: 34px 30px;
             text-align: center;
-            margin-bottom: 20px;
+            margin: 18px 0 16px;
         }
-
         .test-dir-badge {
-            font-size: .7rem;
-            font-weight: 700;
+            font: 400 10px var(--f-ui);
+            letter-spacing: .18em;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 12px;
+            color: var(--ink-mute);
+            margin-bottom: 18px;
         }
+        .test-q-word { font: 500 46px/1.2 var(--f-kr); color: var(--ink); word-break: break-word; }
+        .test-q-sub { margin-top: 10px; font: 300 15px var(--f-ed); font-style: italic; color: var(--ink-mute); }
 
-        .test-q-word {
-            font-size: 2.2rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 6px;
-        }
-
-        .test-q-sub {
-            font-size: .85rem;
-            color: var(--text-muted);
-        }
-
-        .test-input-row {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-
+        .test-input-row { display: flex; gap: 8px; margin-bottom: 14px; }
         .test-input {
             flex: 1;
-            padding: 13px 18px;
-            background: var(--bg-card-alt);
-            border: 2px solid var(--border);
-            border-radius: var(--radius-sm);
-            color: var(--text);
-            font-size: 1.05rem;
-            font-family: inherit;
+            padding: 12px 14px;
+            border: 1px solid var(--line);
+            background: transparent;
+            color: var(--ink);
+            font: 400 16px var(--f-kr);
             outline: none;
             transition: var(--transition);
         }
-
-        .test-input:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px var(--accent-glow);
-        }
-
-        .test-input.correct {
-            border-color: var(--green);
-            background: rgba(22, 163, 74, .07);
-        }
-
-        .test-input.wrong {
-            border-color: var(--red);
-            background: rgba(205, 46, 58, .07);
-        }
+        .test-input::placeholder { font-family: var(--f-ui); font-size: 13px; color: var(--ink-faint); }
+        .test-input:focus { border-color: var(--ink); }
+        .test-input.correct { border-color: var(--status-known); color: var(--status-known); }
+        .test-input.wrong   { border-color: var(--status-todo);  color: var(--status-todo); }
+        .test-input:disabled { background: var(--paper-alt); }
 
         .test-submit-btn {
-            padding: 13px 24px;
-            border-radius: var(--radius-sm);
-            border: none;
-            background: var(--accent);
-            color: #fff;
-            font-size: .95rem;
-            font-weight: 700;
+            padding: 12px 24px;
+            border: 1px solid var(--ink);
+            background: var(--ink);
+            color: var(--paper);
+            font: 500 12px var(--f-ui);
             cursor: pointer;
             transition: var(--transition);
-            white-space: nowrap;
         }
-
-        .test-submit-btn:hover {
-            opacity: .88;
-        }
+        .test-submit-btn:hover:not(:disabled) { background: var(--ink-soft); border-color: var(--ink-soft); }
+        .test-submit-btn:disabled { opacity: .35; cursor: not-allowed; }
 
         .test-feedback {
-            padding: 13px 18px;
-            border-radius: var(--radius-sm);
-            font-weight: 600;
-            margin-bottom: 12px;
             display: none;
+            padding: 12px 16px;
+            border: 1px solid var(--line);
+            font: 400 13.5px var(--f-ui);
+            margin-bottom: 14px;
         }
-
-        .test-feedback.show {
-            display: block;
-        }
-
-        .test-feedback.ok {
-            background: rgba(22, 163, 74, .1);
-            border: 1px solid rgba(22, 163, 74, .3);
-            color: var(--green);
-        }
-
-        .test-feedback.ko {
-            background: rgba(205, 46, 58, .08);
-            border: 1px solid rgba(205, 46, 58, .3);
-            color: var(--red);
-        }
+        .test-feedback.show { display: block; }
+        .test-feedback.ok { border-color: var(--status-known); color: var(--status-known); }
+        .test-feedback.ko { border-color: var(--status-todo);  color: var(--status-todo); background: var(--tint-red); }
 
         .test-next-btn {
-            width: 100%;
-            padding: 12px;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--accent);
-            background: var(--accent-glow);
-            color: var(--accent);
-            font-size: .95rem;
-            font-weight: 700;
+            display: none;
+            padding: 11px 22px;
+            border: 1px solid var(--ink);
+            background: transparent;
+            color: var(--ink);
+            font: 400 12px var(--f-ui);
             cursor: pointer;
             transition: var(--transition);
-            display: none;
         }
+        .test-next-btn.show { display: inline-flex; }
+        .test-next-btn:hover { background: var(--ink); color: var(--paper); }
 
-        .test-next-btn.show {
-            display: block;
+        /* résultats */
+        .test-results { border-top: 1.5px solid var(--ink); padding-top: 26px; }
+        .test-results h2 { font: 300 32px var(--f-ed); color: var(--ink); margin-bottom: 6px; }
+        .test-score-display { font: 400 52px/1 var(--f-ed); color: var(--ink); margin: 14px 0 22px; }
+
+        .test-wrong-list { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 16px; }
+        .test-wrong-list h3 {
+            font: 400 10px var(--f-ui) !important;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--ink-mute) !important;
         }
-
-        .test-next-btn:hover {
-            background: var(--accent-dim);
-            color: #fff;
-        }
-
-        .test-results {
-            background: var(--bg-card);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 32px;
-        }
-
-        .test-results h2 {
-            font-size: 1.5em;
-            margin-bottom: 6px;
-        }
-
-        .test-score-display {
-            font-size: 3em;
-            font-weight: 700;
-            color: var(--accent);
-            margin: 12px 0 20px;
-        }
-
-        .test-wrong-list {
-            margin-top: 16px;
-        }
-
         .test-wrong-item {
             display: flex;
-            gap: 12px;
             align-items: baseline;
-            padding: 10px 14px;
-            border-radius: 8px;
-            background: rgba(205, 46, 58, .06);
-            border: 1px solid rgba(205, 46, 58, .2);
-            margin-bottom: 8px;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line-soft);
         }
-
-        .test-wrong-kr {
-            font-weight: 700;
-            font-size: 1.05em;
-            min-width: 120px;
-        }
-
-        .test-wrong-arrow {
-            color: var(--text-muted);
-        }
-
-        .test-wrong-fr {
-            color: var(--text-dim);
-        }
-
+        .test-wrong-kr { font: 500 17px var(--f-kr); color: var(--ink); }
+        .test-wrong-arrow { color: var(--ink-faint); font-size: 13px; }
+        .test-wrong-fr { font: 400 14px var(--f-ed); color: var(--status-known); }
         .test-wrong-your {
-            color: var(--red);
-            font-size: .85em;
+            width: 100%;
+            font: 300 12.5px var(--f-ed);
+            font-style: italic;
+            color: var(--status-todo);
+        }
+
+        /* ================================================================
+           F. CALENDRIER
+           ================================================================ */
+        .cal-hero { margin-bottom: 22px; }
+
+        .cal-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 320px;
+            gap: 26px;
+            align-items: start;
+        }
+        .cal-main { border: 1px solid var(--line); }
+
+        .cal-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 16px;
+            background: var(--ink-surface);
+            color: var(--on-ink);
+        }
+        .cal-nav-btn {
+            width: 26px; height: 26px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--ink-line);
+            color: var(--on-ink-soft);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .cal-nav-btn:hover { border-color: var(--on-ink); color: var(--on-ink); }
+        .cal-month-title { font: 400 15px var(--f-ed); color: var(--on-ink); }
+        .cal-today-btn {
             margin-left: auto;
+            font: 400 11px var(--f-ui);
+            color: var(--pastel-red);
+            text-decoration: none;
+        }
+        .cal-today-btn:hover { color: var(--on-ink); }
+
+        .cal-grid {
+            display: grid;
+            grid-template-columns: 44px repeat(7, minmax(0, 1fr));
+        }
+
+        .cal-weekdays { border-bottom: 1px solid var(--line); }
+        .cal-weekday {
+            padding: 9px 6px;
+            text-align: center;
+            font: 400 9.5px var(--f-ui);
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--ink-faint);
+        }
+        .cal-wk-head { color: var(--ink-faint); }
+
+        .cal-cell {
+            position: relative;
+            min-height: 82px;
+            padding: 8px;
+            border-right: 1px solid var(--line-soft);
+            border-bottom: 1px solid var(--line-soft);
+            cursor: pointer;
+            overflow: hidden;
+            transition: background .15s ease;
+        }
+        .cal-cell:hover { background: var(--paper-alt); }
+        .cal-empty { background: var(--paper-alt); cursor: default; }
+        .cal-empty:hover { background: var(--paper-alt); }
+
+        .cal-daynum { font: 400 12px var(--f-mono); color: var(--ink-soft); }
+
+        .cal-today .cal-daynum {
+            display: inline-grid;
+            place-items: center;
+            width: 21px; height: 21px;
+            background: var(--ink);
+            color: var(--paper);
+        }
+        .cal-selected { background: var(--tint-blue) !important; box-shadow: inset 0 0 0 1.5px var(--ink); }
+
+        .cal-dot {
+            position: absolute;
+            top: 10px; right: 8px;
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            background: var(--pastel-red);
+        }
+        .cal-preview {
+            display: block;
+            margin-top: 5px;
+            font: 400 10.5px/1.45 var(--f-ui);
+            color: var(--ink-mute);
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        /* colonne « semaine » */
+        .cal-weekcell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 5px;
+            padding: 9px 4px;
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line-soft);
+            background: var(--paper-alt);
+            text-decoration: none;
+        }
+        .cal-wk-num { font: 400 9.5px var(--f-mono); color: var(--ink-faint); }
+        .cal-wk-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--pastel-blue); }
+        .cal-weekcell.has-vocab:hover { background: var(--tint-blue); }
+
+        /* éditeur de note */
+        .cal-editor {
+            position: sticky;
+            top: 16px;
+            border: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+        }
+        .cal-editor-head {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 11px 16px;
+            background: var(--paper-alt);
+            border-bottom: 1px solid var(--line);
+            font: 400 12.5px var(--f-ui);
+            color: var(--ink);
+        }
+        .cal-editor-head .icon-sm { color: var(--ink-mute); }
+
+        .cal-textarea {
+            border: none;
+            outline: none;
+            resize: vertical;
+            min-height: 240px;
+            padding: 16px;
+            background: transparent;
+            color: var(--ink);
+            font: 400 13.5px/1.75 var(--f-ui);
+        }
+        .cal-textarea::placeholder { color: var(--ink-faint); }
+
+        .cal-editor-foot {
+            padding: 9px 16px;
+            border-top: 1px solid var(--line);
+            min-height: 32px;
+        }
+        .cal-save-status { font: 400 10px var(--f-mono); color: var(--ink-faint); }
+
+        /* ================================================================
+           G. RESPONSIVE — vues
+           ================================================================ */
+        @media (max-width: 1100px) {
+            .lesson-layout { grid-template-columns: minmax(0, 1fr); }
+            .exo-side { position: static; max-height: none; }
+            .cal-layout { grid-template-columns: minmax(0, 1fr); }
+            .cal-editor { position: static; }
+        }
+
+        @media (max-width: 900px) {
+            body.lesson-mode main { padding: 74px 18px 40px; }
+
+            .card-word { font-size: 56px; }
+            .card-face { padding: 24px; }
+            .card-face::after { font-size: 180px; right: -20px; bottom: -50px; }
+            .card-perspective, .card-inner { min-height: 340px; }
+            .fc-btn.primary { margin-left: 0; }
+
+            .test-q-word { font-size: 34px; }
+            .test-question-card { padding: 26px 18px; }
+            .fc-hero h1, .test-hero h1 { font-size: 26px; }
+
+            .cal-grid { grid-template-columns: 30px repeat(7, minmax(0, 1fr)); }
+            .cal-cell { min-height: 62px; padding: 5px; }
+            .cal-preview { display: none; }
+            .exo-cards { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -1355,48 +775,51 @@
         <div class="sidebar-header">
             <a href="#" class="sidebar-brand">
                 <img src="static/images/logo-sk.png" alt="Mew" class="sidebar-logo">
-                <span class="sidebar-title">Mew</span>
+                <span class="sidebar-brand-text">
+                    <span class="sidebar-title">Mew</span>
+                    <span class="sidebar-sup">한국어 공부</span>
+                </span>
             </a>
         </div>
         <nav class="sidebar-nav">
-            <div class="nav-section-label">Navigation</div>
+            <div class="nav-section-label">메뉴</div>
             <a href="#" class="sidebar-link" id="nav-vocab">
-                <span class="sidebar-icon"><i data-lucide="book"></i></span>
+                <span class="sidebar-icon">어휘</span>
                 <span>Vocabulaire</span>
             </a>
             <a href="#weekly" class="sidebar-link" id="nav-weekly">
-                <span class="sidebar-icon"><i data-lucide="calendar-range"></i></span>
+                <span class="sidebar-icon">주간</span>
                 <span>Vocab semaine</span>
             </a>
             <a href="#lessons" class="sidebar-link" id="nav-lessons">
-                <span class="sidebar-icon"><i data-lucide="pen-tool"></i></span>
-                <span>Lessons</span>
+                <span class="sidebar-icon">문법</span>
+                <span>Leçons</span>
             </a>
             <a href="#exos" class="sidebar-link" id="nav-exos">
-                <span class="sidebar-icon"><i data-lucide="dumbbell"></i></span>
-                <span>Exo</span>
+                <span class="sidebar-icon">연습</span>
+                <span>Exercices</span>
             </a>
             <a href="#flashcard" class="sidebar-link" id="nav-flashcard">
-                <span class="sidebar-icon"><i data-lucide="layers"></i></span>
+                <span class="sidebar-icon">복습</span>
                 <span>Flashcards</span>
             </a>
             <a href="#test" class="sidebar-link" id="nav-test">
-                <span class="sidebar-icon"><i data-lucide="check-square"></i></span>
+                <span class="sidebar-icon">시험</span>
                 <span>Test</span>
             </a>
             <a href="#youtube" class="sidebar-link" id="nav-youtube">
-                <span class="sidebar-icon"><i data-lucide="play-circle"></i></span>
+                <span class="sidebar-icon">영상</span>
                 <span>Vidéos</span>
             </a>
             <a href="#calendar" class="sidebar-link" id="nav-calendar">
-                <span class="sidebar-icon"><i data-lucide="calendar-days"></i></span>
+                <span class="sidebar-icon">달력</span>
                 <span>Calendrier</span>
             </a>
             <div id="sidebar-extra"></div>
         </nav>
         <div class="sidebar-footer">
             <div class="sidebar-footer-text">
-                <span class="kr">한국어</span> Dashboard
+                <span class="kr">강인 선생님</span>
             </div>
         </div>
     </aside>
@@ -1891,7 +1314,7 @@
 
             // Sidebar extra: book links
             document.getElementById('sidebar-extra').innerHTML = `
-        <div class="nav-section-label">Livres</div>
+        <div class="nav-section-label">책 · Livres</div>
         ${books.map(b => `
         <a href="#vocab/${b.id}" class="sidebar-link">
             <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
@@ -1994,7 +1417,7 @@
             if (isWeek) {
                 const weeks = getWeeks();
                 document.getElementById('sidebar-extra').innerHTML = `
-        <div class="nav-section-label">Semaines</div>
+        <div class="nav-section-label">주 · Semaines</div>
         <div class="sidebar-sub">
             ${weeks.map(w => `
             <a href="#vocab/${weekBookId(w.id)}/1" class="sidebar-link ${weekBookId(w.id) === bookId ? 'active' : ''}">
@@ -2006,13 +1429,13 @@
                 const books = [];
                 for (const id of MANIFEST.books) books.push(await fetchBook(id));
                 document.getElementById('sidebar-extra').innerHTML = `
-        <div class="nav-section-label">Livres</div>
+        <div class="nav-section-label">책 · Livres</div>
         ${books.map(b => `
         <a href="#vocab/${b.id}" class="sidebar-link ${b.id === bookId ? 'active' : ''}">
             <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
             <span>${b.name}</span>
         </a>`).join('')}
-        <div class="nav-section-label">Chapitres</div>
+        <div class="nav-section-label">과 · Chapitres</div>
         <div class="sidebar-sub">
             <a href="#vocab/${bookId}" class="sidebar-link ${selectedChapter === null ? 'active' : ''}">
                 <span>Tous (${book.total})</span>
@@ -2723,11 +2146,11 @@
 
             // Build sidebar
             document.getElementById('sidebar-extra').innerHTML = `
-        <div class="nav-section-label">Livres</div>
+        <div class="nav-section-label">책 · Livres</div>
         ${books.map(b => `<a href="#flashcard/${b}" class="sidebar-link ${b === bookId ? 'active' : ''}">
             <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
             <span>${b}</span></a>`).join('')}
-        <div class="nav-section-label">Chapitres</div>
+        <div class="nav-section-label">과 · Chapitres</div>
         <div class="sidebar-sub">
             ${chNums.map(n => {
                 const words = book.chapters[n];
@@ -2986,11 +2409,11 @@
             }
 
             document.getElementById('sidebar-extra').innerHTML = `
-        <div class="nav-section-label">Livres</div>
+        <div class="nav-section-label">책 · Livres</div>
         ${books.map(b => `<a href="#test/${b}" class="sidebar-link ${b === bookId ? 'active' : ''}">
             <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
             <span>${b}</span></a>`).join('')}
-        <div class="nav-section-label">Chapitres</div>
+        <div class="nav-section-label">과 · Chapitres</div>
         <div class="sidebar-sub">
             ${chNums.map(n => `<a href="#test/${bookId}/${n}" class="sidebar-link ${n === chapter ? 'active' : ''}">
                 <span>${n}과 (${book.chapters[n].length})</span></a>`).join('')}
