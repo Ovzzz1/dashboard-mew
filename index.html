@@ -7,7 +7,9 @@
     <title>Mew Korean Learning</title>
     <link rel="icon" type="image/png" href="static/mew.png">
     <link rel="apple-touch-icon" href="static/mew.png">
-    <link rel="stylesheet" href="static/style.css">
+    <!-- ?v= = empreinte du contenu de style.css : à rebumper à chaque modif
+         de la feuille, sinon les navigateurs gardent l'ancienne en cache. -->
+    <link rel="stylesheet" href="static/style.css?v=6fe18775">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         /* ================================================================
@@ -470,13 +472,22 @@
         }
         .card-lang-badge { color: var(--pastel-red); }
 
+        /* 84px est la taille de la maquette pour un mot court type 오해.
+           Les gloses françaises étant bien plus longues, la taille descend
+           par paliers selon la longueur réelle (classe posée par fcRenderCard),
+           sinon le mot déborde et chasse la phrase d'exemple hors de la carte. */
         .card-word {
             position: relative;
             font: 500 84px/1.1 var(--f-kr);
             color: var(--on-ink);
             margin: auto 0 0;
             word-break: break-word;
+            hyphens: auto;
         }
+        .card-word.len-s  { font-size: 64px; }
+        .card-word.len-m  { font-size: 48px; }
+        .card-word.len-l  { font-size: 36px; line-height: 1.2; }
+        .card-word.len-xl { font-size: 28px; line-height: 1.25; }
         .card-front .card-word,
         .card-back .card-word { margin-top: auto; }
 
@@ -2396,6 +2407,17 @@
             return html;
         }
         // Rendu complet de la carte courante depuis l'état _fc (source unique).
+        // Pose le mot ET son palier de taille. Le 한글 est compact (2-5 blocs),
+        // le français peut faire 30+ caractères : sans paliers, la carte déborde.
+        function fcSetWord(id, text) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.textContent = text;
+            const n = (text || '').length;
+            const cls = n <= 6 ? '' : n <= 12 ? 'len-s' : n <= 20 ? 'len-m' : n <= 32 ? 'len-l' : 'len-xl';
+            el.className = 'card-word' + (cls ? ' ' + cls : '');
+        }
+
         function fcRenderCard() {
             const w = _fc.words[_fc.idx];
             if (!w) return;
@@ -2405,10 +2427,10 @@
             const backLang = dir === 'kr' ? 'fr' : 'kr';
             document.getElementById('fc-card-inner').className = 'card-inner' + (_fc.flipped ? ' flipped' : '');
             document.getElementById('fc-front-lang').textContent = frontLang === 'kr' ? '한글' : 'Français';
-            document.getElementById('fc-front-word').textContent = frontLang === 'kr' ? w.hangul : w.french;
+            fcSetWord('fc-front-word', frontLang === 'kr' ? w.hangul : w.french);
             document.getElementById('fc-front-sub').innerHTML = fcFaceSub(w, frontLang);
             document.getElementById('fc-back-lang').textContent = backLang === 'kr' ? '한글' : 'Français';
-            document.getElementById('fc-back-word').textContent = backLang === 'kr' ? w.hangul : w.french;
+            fcSetWord('fc-back-word', backLang === 'kr' ? w.hangul : w.french);
             document.getElementById('fc-back-sub').innerHTML = fcFaceSub(w, backLang);
             document.getElementById('fc-counter').textContent = `${_fc.idx + 1} / ${total}`;
             document.getElementById('fc-fill').style.width = `${((_fc.idx + 1) / total) * 100}%`;
