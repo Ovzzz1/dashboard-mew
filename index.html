@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mew Korean Learning</title>
-    <link rel="icon" type="image/png" href="static/images/logo-sk.png">
-    <link rel="apple-touch-icon" href="static/images/logo-sk.png">
+    <link rel="icon" type="image/png" href="static/mew.png">
+    <link rel="apple-touch-icon" href="static/mew.png">
     <link rel="stylesheet" href="static/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -774,7 +774,7 @@
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="#" class="sidebar-brand">
-                <img src="static/images/logo-sk.png" alt="Mew" class="sidebar-logo">
+                <img src="static/mew.png" alt="Mew" class="sidebar-logo">
                 <span class="sidebar-brand-text">
                     <span class="sidebar-title">Mew</span>
                     <span class="sidebar-sup">한국어 공부</span>
@@ -818,8 +818,10 @@
             <div id="sidebar-extra"></div>
         </nav>
         <div class="sidebar-footer">
+            <div class="side-teacher-badge">강</div>
             <div class="sidebar-footer-text">
                 <span class="kr">강인 선생님</span>
+                <span class="side-teacher-sub">서강한국어 · 4급</span>
             </div>
         </div>
     </aside>
@@ -832,7 +834,7 @@
                 <span></span><span></span><span></span>
             </button>
             <a href="#" class="topbar-brand">
-                <img src="static/images/logo-sk.png" alt="Mew" class="topbar-logo">
+                <img src="static/mew.png" alt="Mew" class="topbar-logo">
                 <span>Mew</span>
             </a>
         </div>
@@ -1315,11 +1317,7 @@
             // Sidebar extra: book links
             document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">책 · Livres</div>
-        ${books.map(b => `
-        <a href="#vocab/${b.id}" class="sidebar-link">
-            <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
-            <span>${b.name}</span>
-        </a>`).join('')}
+        <div class="side-books">${books.map(b => `<a href="#vocab/${b.id}" class="side-book">${b.id}</a>`).join('')}</div>
     `;
 
             const totalWords = books.reduce((s, b) => s + b.total, 0);
@@ -1401,6 +1399,29 @@
             lucide.createIcons();
         }
 
+        // Bloc « Progression » en pied de sidebar (maquette vocabulaire) :
+        // barre encre remplie par les mots maîtrisés + segment pastel pour
+        // ceux en cours. Données réelles issues du level store — aucun compteur
+        // inventé (pas de série/streak : cette donnée n'existe pas côté app).
+        function sidebarProgress(bookId, book, chNums) {
+            const lvl = getLvlStore(bookId);
+            let known = 0, learning = 0;
+            chNums.forEach(n => (book.chapters[n] || []).forEach(w => {
+                const l = lvl[`${n}_${w.hangul}`];
+                if (l === 'green') known++; else if (l === 'orange') learning++;
+            }));
+            const total = book.total || 1;
+            const pct = Math.round((known / total) * 100);
+            return `<div class="side-progress">
+            <div class="side-progress-label">Progression ${bookId}</div>
+            <div class="side-progress-bar">
+                <span style="width:${(known / total) * 100}%;background:#fff"></span>
+                <span style="width:${(learning / total) * 100}%;background:var(--pastel-red)"></span>
+            </div>
+            <div class="side-progress-foot"><span>${known} / ${total}</span><span>${pct}%</span></div>
+        </div>`;
+        }
+
         // ================================================================
         // VOCAB — table with chapters, search, toggle
         // ================================================================
@@ -1430,21 +1451,18 @@
                 for (const id of MANIFEST.books) books.push(await fetchBook(id));
                 document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">책 · Livres</div>
-        ${books.map(b => `
-        <a href="#vocab/${b.id}" class="sidebar-link ${b.id === bookId ? 'active' : ''}">
-            <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
-            <span>${b.name}</span>
-        </a>`).join('')}
+        <div class="side-books">${books.map(b => `<a href="#vocab/${b.id}" class="side-book ${b.id === bookId ? 'active' : ''}">${b.id}</a>`).join('')}</div>
         <div class="nav-section-label">과 · Chapitres</div>
         <div class="sidebar-sub">
-            <a href="#vocab/${bookId}" class="sidebar-link ${selectedChapter === null ? 'active' : ''}">
-                <span>Tous (${book.total})</span>
+            <a href="#vocab/${bookId}" class="sidebar-link side-chap ${selectedChapter === null ? 'active' : ''}">
+                <span class="side-chap-n">전체</span><span class="side-chap-c">${book.total}</span>
             </a>
             ${chNums.map(n => `
-            <a href="#vocab/${bookId}/${n}" class="sidebar-link ${selectedChapter === n ? 'active' : ''}">
-                <span>${n}과 (${book.chapters[n].length})</span>
+            <a href="#vocab/${bookId}/${n}" class="sidebar-link side-chap ${selectedChapter === n ? 'active' : ''}">
+                <span class="side-chap-n">제${n}과</span><span class="side-chap-c">${book.chapters[n].length}</span>
             </a>`).join('')}
         </div>
+        ${sidebarProgress(bookId, book, chNums)}
     `;
             }
 
@@ -2147,23 +2165,21 @@
             // Build sidebar
             document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">책 · Livres</div>
-        ${books.map(b => `<a href="#flashcard/${b}" class="sidebar-link ${b === bookId ? 'active' : ''}">
-            <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
-            <span>${b}</span></a>`).join('')}
+        <div class="side-books">${books.map(b => `<a href="#flashcard/${b}" class="side-book ${b === bookId ? 'active' : ''}">${b}</a>`).join('')}</div>
         <div class="nav-section-label">과 · Chapitres</div>
         <div class="sidebar-sub">
             ${chNums.map(n => {
                 const words = book.chapters[n];
-                const link = `<a href="#flashcard/${bookId}/${n}" class="sidebar-link ${n === chapter && !week ? 'active' : ''}">
-                    <span>${n}과 (${words.length})</span></a>`;
+                const link = `<a href="#flashcard/${bookId}/${n}" class="sidebar-link side-chap ${n === chapter && !week ? 'active' : ''}">
+                    <span class="side-chap-n">제${n}과</span><span class="side-chap-c">${words.length}</span></a>`;
                 if (n !== chapter) return link;
                 const groups = fcGroups(words, bookId);
                 if (groups.length <= 1) return link;
                 const unitLong = fcUnitLabel(bookId, false);
                 const weekLinks = groups.map((g, i) => {
                     const w = i + 1;
-                    return `<a href="#flashcard/${bookId}/${n}/${w}" class="sidebar-link ${week === w ? 'active' : ''}">
-                        <span>${unitLong} ${w} (${g.length})</span></a>`;
+                    return `<a href="#flashcard/${bookId}/${n}/${w}" class="sidebar-link side-chap ${week === w ? 'active' : ''}">
+                        <span class="side-chap-n">${unitLong} ${w}</span><span class="side-chap-c">${g.length}</span></a>`;
                 }).join('');
                 return link + `<div class="sidebar-sub">${weekLinks}</div>`;
             }).join('')}
@@ -2410,13 +2426,11 @@
 
             document.getElementById('sidebar-extra').innerHTML = `
         <div class="nav-section-label">책 · Livres</div>
-        ${books.map(b => `<a href="#test/${b}" class="sidebar-link ${b === bookId ? 'active' : ''}">
-            <span class="sidebar-icon"><i data-lucide="book-open" class="icon-sm"></i></span>
-            <span>${b}</span></a>`).join('')}
+        <div class="side-books">${books.map(b => `<a href="#test/${b}" class="side-book ${b === bookId ? 'active' : ''}">${b}</a>`).join('')}</div>
         <div class="nav-section-label">과 · Chapitres</div>
         <div class="sidebar-sub">
-            ${chNums.map(n => `<a href="#test/${bookId}/${n}" class="sidebar-link ${n === chapter ? 'active' : ''}">
-                <span>${n}과 (${book.chapters[n].length})</span></a>`).join('')}
+            ${chNums.map(n => `<a href="#test/${bookId}/${n}" class="sidebar-link side-chap ${n === chapter ? 'active' : ''}">
+                <span class="side-chap-n">제${n}과</span><span class="side-chap-c">${book.chapters[n].length}</span></a>`).join('')}
         </div>`;
 
             function shuffle(arr) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a; }

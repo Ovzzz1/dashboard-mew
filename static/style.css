@@ -228,27 +228,88 @@ body {
 
 /* blocs « 책 · Livres » / « 과 · Chapitres » injectés dans #sidebar-extra */
 #sidebar-extra { display: block; }
-/* icônes lucide des livres : discrètes, le 한글 reste le repère */
-#sidebar-extra .sidebar-icon svg { width: 13px; height: 13px; opacity: .5; }
+
+/* livres : grille 2×2 de pastilles (maquette vocabulaire) */
+.side-books {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+.side-book {
+    padding: 10px;
+    background: rgba(255, 255, 255, .06);
+    color: #9fa2a3;
+    font: 400 13px var(--f-ui);
+    text-decoration: none;
+    transition: var(--transition);
+}
+.side-book:hover { background: rgba(255, 255, 255, .12); color: var(--on-ink); }
+.side-book.active { background: var(--paper); color: var(--ink); font-weight: 500; }
+
+/* chapitres : 제N과 à gauche, compteur mono à droite */
+.side-chap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 7px 10px;
+}
+.side-chap-n { font: 400 12.5px var(--f-kr); }
+.side-chap.active .side-chap-n { font-weight: 500; }
+.side-chap-c { font: 400 10px var(--f-mono); color: var(--on-ink-dim); }
+.side-chap.active .side-chap-c { color: var(--ink-mute); }
+
+/* bloc progression en pied de sidebar (maquette vocabulaire) */
+.side-progress { margin-top: 22px; }
+.side-progress-label {
+    font: 400 10px var(--f-ui);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--on-ink-dim);
+    margin-bottom: 9px;
+}
+.side-progress-bar { display: flex; height: 4px; background: var(--ink-line); }
+.side-progress-bar span { display: block; }
+.side-progress-foot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font: 400 10px var(--f-mono);
+    color: #7f8384;
+}
 
 .sidebar-footer {
     position: relative;
     padding: 16px 22px 22px;
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* badge carré 강 — filet pastel rouge (maquette accueil) */
+.side-teacher-badge {
+    width: 34px; height: 34px;
+    border: 1.5px solid var(--pastel-red);
+    display: grid;
+    place-items: center;
+    font: 500 15px var(--f-kr);
+    color: var(--pastel-red);
 }
 
 .sidebar-footer-text {
-    font: 400 10px var(--f-ui);
-    letter-spacing: .2em;
-    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    font: 400 10.5px/1.6 var(--f-ui);
     color: var(--on-ink-dim);
 }
 .sidebar-footer-text .kr {
     font-family: var(--f-kr);
-    letter-spacing: 0;
-    text-transform: none;
-    color: var(--on-ink-mute);
+    color: #7f8384;
 }
+.side-teacher-sub { color: #5e6263; }
 
 .sidebar-overlay {
     display: none;
