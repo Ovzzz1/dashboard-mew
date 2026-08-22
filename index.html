@@ -59,7 +59,9 @@
 
         .lesson-layout {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) 440px;
+            /* 320px suffisent à la liste « Exo 1..10 » ; le reste revient au
+               texte de la leçon, qui était à l'étroit à 440px. */
+            grid-template-columns: minmax(0, 1fr) 320px;
             gap: 26px;
             align-items: start;
             max-width: 1800px;
@@ -970,7 +972,7 @@
     <script>
         // Empreinte de static/lesson.css (charte injectée dans l'iframe de leçon).
         // Maintenue par stamp-css.sh — ne pas éditer à la main.
-        const LESSON_CSS_V = 'fcbc30d5';
+        const LESSON_CSS_V = 'b8d6892e';
 
         // ================================================================
         // DATA (inlined from manifest.json — auto-updated by LLM)
