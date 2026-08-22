@@ -968,6 +968,10 @@
     </div>
 
     <script>
+        // Empreinte de static/lesson.css (charte injectée dans l'iframe de leçon).
+        // Maintenue par stamp-css.sh — ne pas éditer à la main.
+        const LESSON_CSS_V = 'fcbc30d5';
+
         // ================================================================
         // DATA (inlined from manifest.json — auto-updated by LLM)
         // ================================================================
@@ -1932,26 +1936,32 @@
             const frame = document.getElementById('lesson-frame');
             // Élargit la leçon et l'aligne à gauche (override du .container interne
             // qui est bridé à ~950px et centré dans chaque fichier de leçon).
+            // Les fichiers de content/lessons/ embarquent leur propre feuille
+            // (bleu, arrondis, Inter). On injecte static/lesson.css APRÈS elle
+            // dans le <head> de l'iframe : la charte Hanji prend le dessus sans
+            // qu'il faille réécrire les 17 fichiers de contenu.
             const widen = () => {
                 try {
                     const doc = frame.contentDocument || frame.contentWindow.document;
-                    if (doc.getElementById('mew-widen')) return;
-                    const st = doc.createElement('style');
-                    st.id = 'mew-widen';
-                    st.textContent = `
-                        body { padding: 28px 40px !important; background: #fff !important; }
-                        .container { max-width: 100% !important; width: 100% !important; margin: 0 !important; box-shadow: none !important; border-radius: 0 !important; }
-                    `;
-                    doc.head.appendChild(st);
+                    if (doc.getElementById('mew-charte')) return;
+                    const link = doc.createElement('link');
+                    link.id = 'mew-charte';
+                    link.rel = 'stylesheet';
+                    // URL résolue depuis le document parent : robuste au sous-chemin
+                    // (GitHub Pages sert sous /dashboard-mew/) et au niveau de l'iframe.
+                    link.href = new URL(`static/lesson.css?v=${LESSON_CSS_V}`, location.href).href;
+                    doc.head.appendChild(link);
                 } catch (e) { /* cross-origin */ }
             };
             const resize = () => {
                 try {
                     const doc = frame.contentDocument || frame.contentWindow.document;
-                    const h = Math.max(
-                        doc.body.scrollHeight, doc.documentElement.scrollHeight,
-                        doc.body.offsetHeight, doc.documentElement.offsetHeight
-                    );
+                    // On mesure le <body> SEUL, jamais documentElement : une fois
+                    // la hauteur posée sur l'iframe, documentElement.scrollHeight
+                    // se verrouille dessus et ne redescend plus — l'iframe ne
+                    // pourrait alors que grandir (ici ~2700px de blanc après que
+                    // la charte a compacté le contenu).
+                    const h = Math.max(doc.body.scrollHeight, doc.body.offsetHeight);
                     if (h > 0) frame.style.height = h + 'px';
                 } catch (e) { /* cross-origin : on garde le fallback */ }
             };

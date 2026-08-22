@@ -1,0 +1,281 @@
+/* ================================================================
+   Mew — charte « Hanji » appliquée aux documents de leçon
+   ================================================================
+   Les fichiers de content/lessons/ sont des documents HTML autonomes
+   qui embarquent leur propre feuille (bleu #0047a0, coins arrondis,
+   Inter). Ce fichier est injecté dans l'iframe APRÈS celle-ci et la
+   neutralise, sans qu'il faille réécrire les 17 fichiers de contenu.
+
+   Il ne dépend d'aucune classe nouvelle : il cible exactement les
+   classes déjà produites par le générateur de leçons.
+   ================================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+:root {
+    --ink:         #17191a;
+    --ink-soft:    #4c4f50;
+    --ink-mute:    #8e9192;
+    --ink-faint:   #b4b6b7;
+    --paper:       #ffffff;
+    --paper-alt:   #fafbfc;
+    --line:        #ededeb;
+    --line-soft:   #f2f2f0;
+    --pastel-red:  #c98d92;
+    --pastel-blue: #8fa8cc;
+    --accent-red:  #b0545c;
+    --accent-blue: #4a6fa5;
+    --tint-red:    #faeef0;
+    --tint-blue:   #eef2f8;
+    --status-known:    #2f9e5f;
+    --status-learning: #d98b1f;
+    --status-todo:     #cd2e3a;
+    --f-kr:   'Noto Serif KR', serif;
+    --f-ed:   'Newsreader', serif;
+    --f-ui:   'Outfit', system-ui, sans-serif;
+    --f-mono: 'JetBrains Mono', monospace;
+}
+
+/* ---------- page & conteneur ---------- */
+body {
+    background: var(--paper) !important;
+    color: var(--ink);
+    font-family: var(--f-ui);
+    line-height: 1.75;
+    padding: 28px 40px !important;
+}
+
+.container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    background: var(--paper);
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: visible;
+}
+
+/* ---------- en-tête du document ---------- */
+.header {
+    background: var(--paper) !important;
+    color: var(--ink);
+    border-bottom: 1.5px solid var(--ink) !important;
+    padding: 0 0 20px !important;
+    margin-bottom: 34px;
+}
+
+h1 {
+    font: 300 42px/1.05 var(--f-ed) !important;
+    color: var(--ink) !important;
+    margin-bottom: 10px !important;
+    letter-spacing: 0;
+}
+
+.header-subtitle {
+    font: 400 10px var(--f-ui);
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+}
+
+.content { padding: 0 !important; }
+
+/* ---------- titres de section ---------- */
+h2 {
+    font: 500 30px/1.3 var(--f-kr) !important;
+    color: var(--ink) !important;
+    border-bottom: none !important;
+    border-top: 1.5px solid var(--ink);
+    padding: 20px 0 0 !important;
+    margin: 50px 0 22px !important;
+}
+/* la barre bleue verticale d'origine devant chaque h2 */
+h2::before { display: none !important; }
+
+h3 {
+    font: 500 20px/1.4 var(--f-kr) !important;
+    color: var(--ink) !important;
+    margin: 32px 0 14px !important;
+}
+
+h4 {
+    font: 500 12px var(--f-ui) !important;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink-mute) !important;
+    margin: 24px 0 10px !important;
+}
+
+p, li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+}
+ul, ol { margin: 16px 0; padding-left: 22px; }
+strong { color: var(--ink); font-weight: 600; }
+
+/* ---------- coréen & gloses ---------- */
+.korean {
+    font-family: var(--f-kr) !important;
+    font-size: 16px !important;
+    font-weight: 500;
+    color: var(--ink) !important;
+}
+
+/* marquage du point de grammaire : encre appuyée, pas de couleur —
+   les couleurs saturées restent réservées aux statuts. */
+.grammar-red {
+    color: var(--ink) !important;
+    font-weight: 700 !important;
+    border-bottom: 1.5px solid var(--pastel-red);
+    padding-bottom: 1px;
+}
+
+.french-translation {
+    font: 300 13px/1.6 var(--f-ed) !important;
+    font-style: italic !important;
+    color: var(--ink-mute) !important;
+    display: block;
+    margin-top: 7px;
+}
+
+/* ---------- encadrés ---------- */
+.example-box {
+    background: var(--paper-alt) !important;
+    border: 1px solid var(--line) !important;
+    border-left: 2px solid var(--pastel-blue) !important;
+    border-radius: 0 !important;
+    padding: 18px 20px !important;
+    margin: 22px 0 !important;
+}
+
+.error-box {
+    background: var(--tint-red) !important;
+    border: 1px solid #f2dfe1 !important;
+    border-left: 2px solid var(--status-todo) !important;
+    border-radius: 0 !important;
+    padding: 16px 20px !important;
+    margin: 16px 0 !important;
+}
+
+.success-box {
+    background: var(--paper) !important;
+    border: 1px solid var(--line) !important;
+    border-left: 2px solid var(--status-known) !important;
+    border-radius: 0 !important;
+    padding: 16px 20px !important;
+    margin: 16px 0 !important;
+}
+
+/* Note / règle : encadré clair à filet.
+   Volontairement PAS en encre pleine : .note-box apparaît ~130 fois dans les
+   leçons ; le bloc encre est un accent rare (aside « Note de 강인 »), l'utiliser
+   partout noierait la page. */
+.note-box, .rule-box {
+    background: var(--paper) !important;
+    border: 1px solid var(--line) !important;
+    border-left: 2px solid var(--ink) !important;
+    border-radius: 0 !important;
+    padding: 16px 20px !important;
+    margin: 22px 0 !important;
+}
+.note-box p:last-child, .rule-box p:last-child { margin-bottom: 0; }
+
+/* ---------- pastilles & emphases ---------- */
+.tip-badge {
+    display: inline-block;
+    background: transparent !important;
+    color: var(--ink-mute) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 8px 0 0 !important;
+    font: 400 10px var(--f-ui) !important;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+.note-box .tip-badge, .rule-box .tip-badge { color: var(--accent-red) !important; }
+
+.super-important {
+    background: var(--tint-red) !important;
+    color: var(--ink) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 2px 6px !important;
+    font-weight: 600 !important;
+}
+
+.highlight-yellow {
+    background: var(--tint-blue) !important;
+    color: var(--ink) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 2px 6px !important;
+    font-weight: 500 !important;
+}
+
+/* ---------- formule ---------- */
+.formula {
+    background: var(--paper-alt) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 0 !important;
+    font-family: var(--f-mono) !important;
+    font-size: 13px !important;
+    color: var(--ink) !important;
+    padding: 16px 20px !important;
+    margin: 18px 0 !important;
+}
+
+/* ---------- tableaux ---------- */
+table {
+    border-collapse: collapse !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 0 !important;
+    margin: 22px 0 !important;
+    overflow: visible;
+}
+th {
+    background: var(--paper-alt) !important;
+    color: var(--ink-mute) !important;
+    font: 400 9.5px var(--f-ui) !important;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    padding: 11px 14px !important;
+    border-bottom: 1px solid var(--line) !important;
+    text-align: left;
+}
+td {
+    padding: 12px 14px !important;
+    border-bottom: 1px solid var(--line-soft) !important;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+}
+tr:hover { background: var(--paper-alt) !important; }
+
+.recap-table { border: 1px solid var(--ink) !important; }
+.recap-table th {
+    background: var(--ink) !important;
+    color: var(--paper) !important;
+}
+
+/* ---------- fiches de vocabulaire ---------- */
+.vocab-card {
+    background: var(--paper) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 14px 16px !important;
+}
+.vocab-word { font: 500 17px var(--f-kr) !important; color: var(--ink) !important; }
+.vocab-def  { font: 300 13px var(--f-ed) !important; font-style: italic; color: var(--ink-mute) !important; }
+
+/* ---------- divers ---------- */
+a { color: var(--accent-blue); }
+code { font-family: var(--f-mono); font-size: .92em; }
+hr { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
+
+@media (max-width: 700px) {
+    body { padding: 20px 16px !important; }
+    h1 { font-size: 28px !important; }
+    h2 { font-size: 22px !important; }
+}
