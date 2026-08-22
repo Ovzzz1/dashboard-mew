@@ -355,11 +355,71 @@
         .fc-score-ok { font: 400 10px var(--f-mono); color: var(--status-known); }
         .fc-score-ko { font: 400 10px var(--f-mono); color: var(--status-todo); }
 
+        /* scène : carte à gauche, colonne de notation à droite (maquette) */
+        .fc-stage {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 280px;
+            gap: 20px;
+            align-items: stretch;
+            margin-bottom: 16px;
+        }
+
+        /* colonne de notation 1 / 2 / 3 */
+        .fc-rates { display: flex; flex-direction: column; gap: 10px; }
+        .fc-rate {
+            flex: 1;
+            border: 1px solid var(--line);
+            background: transparent;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 6px;
+            text-align: left;
+            cursor: pointer;
+            font-family: var(--f-ui);
+            transition: var(--transition);
+        }
+        .fc-rate-label {
+            font: 400 10px var(--f-ui);
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+        .fc-rate-sub { font: 400 12.5px/1.6 var(--f-ui); color: var(--ink-mute); }
+
+        .fc-rate-red .fc-rate-label    { color: var(--status-todo); }
+        .fc-rate-orange .fc-rate-label { color: var(--status-learning); }
+        .fc-rate-green .fc-rate-label  { color: var(--status-known); }
+
+        .fc-rate:hover { border-color: var(--ink); }
+        /* la note « acquis » est la carte pleine encre de la maquette */
+        .fc-rate-green { background: var(--ink-surface); border-color: var(--ink-surface); }
+        .fc-rate-green .fc-rate-label { color: #7fbf8f; }
+        .fc-rate-green .fc-rate-sub { color: var(--on-ink-soft); }
+        .fc-rate-green:hover { background: var(--ink-soft); border-color: var(--ink-soft); }
+
+        /* note déjà attribuée au mot courant */
+        .fc-rate.active { box-shadow: inset 0 0 0 1.5px currentColor; }
+        .fc-rate-red.active    { border-color: var(--status-todo); }
+        .fc-rate-orange.active { border-color: var(--status-learning); }
+        .fc-rate-green.active  { box-shadow: inset 0 0 0 1.5px #7fbf8f; }
+
+        .fc-rate-nav { display: flex; gap: 6px; }
+        .fc-rate-nav .fc-btn { flex: 1; justify-content: center; text-align: center; }
+        .fc-rate-nav .fc-btn.primary { margin-left: 0; }
+
+        /* barre de segments : une case par carte de la session */
+        .fc-segments { display: flex; gap: 5px; margin-bottom: 22px; }
+        .fc-seg { flex: 1; height: 4px; background: var(--line); }
+        .fc-seg-green  { background: var(--status-known); }
+        .fc-seg-orange { background: var(--status-learning); }
+        .fc-seg-red    { background: var(--status-todo); }
+        .fc-seg-now    { background: var(--ink); }
+
         /* carte 3D */
         .card-perspective {
             perspective: 1600px;
             cursor: pointer;
-            margin-bottom: 16px;
             min-height: 380px;
         }
         .card-inner {
@@ -396,13 +456,19 @@
         .card-back { transform: rotateY(180deg); }
         .card-back::after { content: '글'; }
 
-        .card-lang-badge {
+        /* bandeau haut de carte : position dans le paquet + langue affichée */
+        .card-meta {
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
             font: 400 10px var(--f-ui);
             letter-spacing: .22em;
             text-transform: uppercase;
             color: var(--on-ink-mute);
         }
+        .card-lang-badge { color: var(--pastel-red); }
 
         .card-word {
             position: relative;
@@ -751,6 +817,11 @@
         @media (max-width: 900px) {
             body.lesson-mode main { padding: 74px 18px 40px; }
 
+            .fc-stage { grid-template-columns: minmax(0, 1fr); }
+            .fc-rates { flex-direction: row; flex-wrap: wrap; }
+            .fc-rate { flex: 1 1 30%; padding: 12px; }
+            .fc-rate-sub { display: none; }
+            .fc-rate-nav { flex: 1 1 100%; }
             .card-word { font-size: 56px; }
             .card-face { padding: 24px; }
             .card-face::after { font-size: 180px; right: -20px; bottom: -50px; }
@@ -2199,8 +2270,21 @@
                 mode: 'alternate',  // 'kr', 'fr', 'alternate'
                 correct: 0, wrong: 0,
                 flipped: false,
+                marks: [],          // note donnée par carte sur la session (barre de segments)
             };
             _fc.words = shuffle(fcFilteredWords());
+
+            // Bloc « 오늘의 묶음 · Paquet du jour » (maquette flashcards) : portée du
+            // paquet + compteurs cartes / restantes, tenus à jour par fcRenderCard.
+            document.getElementById('sidebar-extra').insertAdjacentHTML('beforeend', `
+        <div class="side-deck">
+            <div class="nav-section-label">오늘의 묶음</div>
+            <div class="side-deck-scope">${bookId} · ${chapter}과${week ? ` · ${fcUnitLabel(bookId, false)} ${week}` : ''}</div>
+            <div class="side-deck-stats">
+                <div class="side-deck-stat"><span class="side-deck-n">${_fc.words.length}</span><span class="side-deck-l">cartes</span></div>
+                <div class="side-deck-stat"><span class="side-deck-n" id="fc-remaining">${_fc.words.length}</span><span class="side-deck-l">restantes</span></div>
+            </div>
+        </div>`);
 
             // Le rendu de carte est centralisé dans la fonction globale fcRenderCard()
             // (lit l'état _fc), partagée avec fcNav/fcSetMode pour éviter toute
@@ -2237,28 +2321,49 @@
                 <span class="fc-score-ok" id="fc-score-ok">0 ok</span>
                 <span class="fc-score-ko" id="fc-score-ko">0 ko</span>
             </div>
-            <div class="card-perspective" onclick="fcFlip()">
-                <div class="card-inner" id="fc-card-inner">
-                    <div class="card-face card-front">
-                        <div class="card-lang-badge" id="fc-front-lang">한글</div>
-                        <div class="card-word" id="fc-front-word"></div>
-                        <div class="card-sub" id="fc-front-sub"></div>
-                        <div class="card-hint">Cliquer pour révéler</div>
+            <div class="fc-stage">
+                <div class="card-perspective" onclick="fcFlip()">
+                    <div class="card-inner" id="fc-card-inner">
+                        <div class="card-face card-front">
+                            <div class="card-meta">
+                                <span id="fc-front-pos"></span>
+                                <span class="card-lang-badge" id="fc-front-lang">한글</span>
+                            </div>
+                            <div class="card-word" id="fc-front-word"></div>
+                            <div class="card-sub" id="fc-front-sub"></div>
+                            <div class="card-hint">espace = retourner · 1 / 2 / 3 = noter</div>
+                        </div>
+                        <div class="card-face card-back">
+                            <div class="card-meta">
+                                <span id="fc-back-pos"></span>
+                                <span class="card-lang-badge" id="fc-back-lang">Français</span>
+                            </div>
+                            <div class="card-word" id="fc-back-word"></div>
+                            <div class="card-sub" id="fc-back-sub"></div>
+                            <div class="card-hint">espace = retourner · 1 / 2 / 3 = noter</div>
+                        </div>
                     </div>
-                    <div class="card-face card-back">
-                        <div class="card-lang-badge" id="fc-back-lang">Français</div>
-                        <div class="card-word" id="fc-back-word"></div>
-                        <div class="card-sub" id="fc-back-sub"></div>
+                </div>
+                <div class="fc-rates">
+                    <button class="fc-rate fc-rate-red fc-lvl-btn" data-lvl="red" onclick="fcMark('red')">
+                        <span class="fc-rate-label">1 · à apprendre</span>
+                        <span class="fc-rate-sub">à revoir en priorité</span>
+                    </button>
+                    <button class="fc-rate fc-rate-orange fc-lvl-btn" data-lvl="orange" onclick="fcMark('orange')">
+                        <span class="fc-rate-label">2 · à réviser</span>
+                        <span class="fc-rate-sub">encore fragile</span>
+                    </button>
+                    <button class="fc-rate fc-rate-green fc-lvl-btn" data-lvl="green" onclick="fcMark('green')">
+                        <span class="fc-rate-label">3 · connu</span>
+                        <span class="fc-rate-sub">acquis</span>
+                    </button>
+                    <div class="fc-rate-nav">
+                        <button class="fc-btn" id="fc-btn-prev" onclick="fcNav(-1)" disabled>← Précédent</button>
+                        <button class="fc-btn primary" id="fc-btn-next" onclick="fcNav(1)">Passer →</button>
                     </div>
                 </div>
             </div>
-            <div class="card-controls">
-                <button class="fc-btn" id="fc-btn-prev" onclick="fcNav(-1)" disabled>← Précédent</button>
-                <button class="fc-btn fc-btn-green fc-lvl-btn" data-lvl="green" onclick="fcMark('green')">Connu</button>
-                <button class="fc-btn fc-btn-orange fc-lvl-btn" data-lvl="orange" onclick="fcMark('orange')">À réviser</button>
-                <button class="fc-btn fc-btn-red fc-lvl-btn" data-lvl="red" onclick="fcMark('red')">À apprendre</button>
-                <button class="fc-btn primary" id="fc-btn-next" onclick="fcNav(1)">Suivant →</button>
-            </div>
+            <div class="fc-segments" id="fc-segments"></div>
             <div id="fc-end-screen" style="display:none" class="fc-end">
                 <h2>Série terminée !</h2>
                 <div class="score-big" id="fc-end-score"></div>
@@ -2310,8 +2415,26 @@
             document.getElementById('fc-score-ok').textContent = `${_fc.correct} ok`;
             document.getElementById('fc-score-ko').textContent = `${_fc.wrong} ko`;
             document.getElementById('fc-btn-prev').disabled = _fc.idx === 0;
-            document.getElementById('fc-btn-next').textContent = _fc.idx === total - 1 ? 'Terminer' : 'Suivant →';
+            document.getElementById('fc-btn-next').textContent = _fc.idx === total - 1 ? 'Terminer' : 'Passer →';
+            const posLabel = `carte ${_fc.idx + 1} / ${total}${_fc.chapter ? ` · ${_fc.chapter}과` : ''}`;
+            const fp = document.getElementById('fc-front-pos'); if (fp) fp.textContent = posLabel;
+            const bp = document.getElementById('fc-back-pos'); if (bp) bp.textContent = posLabel;
+            const rem = document.getElementById('fc-remaining');
+            if (rem) rem.textContent = _fc.words.filter((_, i) => !_fc.marks[i]).length;
+            fcRenderSegments();
             fcUpdateLevelButtons();
+        }
+
+        // Barre de segments : un segment par carte de la session, coloré par la
+        // note donnée. Le segment courant est en encre, les non notés en filet.
+        function fcRenderSegments() {
+            const el = document.getElementById('fc-segments');
+            if (!el) return;
+            el.innerHTML = _fc.words.map((_, i) => {
+                const m = _fc.marks[i];
+                const cls = i === _fc.idx ? 'now' : (m || 'todo');
+                return `<span class="fc-seg fc-seg-${cls}"></span>`;
+            }).join('');
         }
 
         window.fcFlip = function () { _fc.flipped = !_fc.flipped; document.getElementById('fc-card-inner').classList.toggle('flipped', _fc.flipped); };
@@ -2336,7 +2459,9 @@
         // and move to the next card.
         window.fcMark = function (level) {
             const w = _fc.words[_fc.idx];
+            if (!w) return;
             if (level === 'green') _fc.correct++; else _fc.wrong++;
+            _fc.marks[_fc.idx] = level;
             const data = getLvlStore(_fc.bookId);
             data[`${_fc.chapter}_${w.hangul}`] = level;
             saveLvlStore(_fc.bookId, data);
@@ -2350,11 +2475,11 @@
             _fc.levelFilter[lvl] = !_fc.levelFilter[lvl];
             document.querySelector(`.fc-level-filter-bar .lvl-filter-btn[data-lvl="${lvl}"]`)?.classList.toggle('active', _fc.levelFilter[lvl]);
             _fc.words = shuffleArr(fcFilteredWords());
-            _fc.idx = 0; _fc.flipped = false; _fc.correct = 0; _fc.wrong = 0;
+            _fc.idx = 0; _fc.flipped = false; _fc.correct = 0; _fc.wrong = 0; _fc.marks = [];
             document.getElementById('fc-end-screen').style.display = 'none';
             const subtitle = document.getElementById('fc-subtitle');
             if (subtitle) subtitle.textContent = `${_fc.words.length} / ${_fc.rawWords.length} mots sélectionnés · Cliquez sur la carte pour révéler la réponse`;
-            const playEls = document.querySelectorAll('.card-perspective,.card-controls,.fc-progress-row,.fc-score-row');
+            const playEls = document.querySelectorAll('.fc-stage,.fc-progress-row,.fc-score-row,.fc-segments');
             if (_fc.words.length === 0) {
                 document.getElementById('fc-empty-state').style.display = '';
                 playEls.forEach(el => el.style.display = 'none');
@@ -2374,20 +2499,26 @@
         };
         window.fcShuffle = function () {
             const arr = _fc.words; for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[arr[i], arr[j]] = [arr[j], arr[i]]; }
-            _fc.idx = 0; _fc.flipped = false; _fc.correct = 0; _fc.wrong = 0;
+            _fc.idx = 0; _fc.flipped = false; _fc.correct = 0; _fc.wrong = 0; _fc.marks = [];
             fcNav(0);
         };
         function fcShowEnd() {
             document.getElementById('fc-end-screen').style.display = '';
             document.getElementById('fc-end-score').textContent = `${_fc.correct} / ${_fc.words.length}`;
-            document.querySelectorAll('.card-perspective,.card-controls,.fc-progress-row,.fc-score-row').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.fc-stage,.fc-progress-row,.fc-score-row,.fc-segments').forEach(el => el.style.display = 'none');
         }
-        window.fcRestart = function () { _fc.idx = 0; _fc.correct = 0; _fc.wrong = 0; _fc.flipped = false; document.getElementById('fc-end-screen').style.display = 'none'; document.querySelectorAll('.card-perspective,.card-controls,.fc-progress-row,.fc-score-row').forEach(el => el.style.display = ''); fcNav(0); };
+        window.fcRestart = function () { _fc.idx = 0; _fc.correct = 0; _fc.wrong = 0; _fc.flipped = false; _fc.marks = []; document.getElementById('fc-end-screen').style.display = 'none'; document.querySelectorAll('.fc-stage,.fc-progress-row,.fc-score-row,.fc-segments').forEach(el => el.style.display = ''); fcNav(0); };
         document.addEventListener('keydown', e => {
             if (!document.getElementById('fc-card-inner')) return;
+            // e.target peut être `document` (pas de .matches) — d'où le garde-fou
+            if (e.target instanceof Element && e.target.closest('input,textarea')) return;
             if (e.key === ' ') { e.preventDefault(); fcFlip(); }
             if (e.key === 'ArrowRight') { e.preventDefault(); fcNav(1); }
             if (e.key === 'ArrowLeft') { e.preventDefault(); fcNav(-1); }
+            // 1 / 2 / 3 = noter la carte (maquette flashcards)
+            if (e.key === '1') { e.preventDefault(); fcMark('red'); }
+            if (e.key === '2') { e.preventDefault(); fcMark('orange'); }
+            if (e.key === '3') { e.preventDefault(); fcMark('green'); }
         });
 
         // ================================================================

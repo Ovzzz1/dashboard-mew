@@ -260,6 +260,30 @@ body {
 .side-chap-c { font: 400 10px var(--f-mono); color: var(--on-ink-dim); }
 .side-chap.active .side-chap-c { color: var(--ink-mute); }
 
+/* bloc « 오늘의 묶음 · Paquet du jour » (maquette flashcards) */
+.side-deck { margin-top: 22px; }
+.side-deck-scope {
+    font: 400 12.5px/1.7 var(--f-ui);
+    color: #9fa2a3;
+    margin-bottom: 10px;
+}
+.side-deck-stats { display: flex; gap: 6px; }
+.side-deck-stat {
+    flex: 1;
+    background: rgba(255, 255, 255, .06);
+    padding: 9px;
+    text-align: center;
+}
+.side-deck-n { display: block; font: 400 16px var(--f-ed); color: var(--on-ink); }
+.side-deck-l {
+    display: block;
+    margin-top: 3px;
+    font: 400 9px var(--f-ui);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #7f8384;
+}
+
 /* bloc progression en pied de sidebar (maquette vocabulaire) */
 .side-progress { margin-top: 22px; }
 .side-progress-label {
