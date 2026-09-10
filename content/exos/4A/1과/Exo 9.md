@@ -1,67 +1,80 @@
 # EXO 9 — 4A 과1
+**Thème : Animer un événement (사회자)**
 
-**I. -아/어서 -게 됐어요**
-1. J'aime la musique, donc j'ai fini par apprendre la guitare.
-2. Comme il voulait progresser vite, il a fini par prendre des cours particuliers de piano.
-3. Elle s'intéressait au chant, donc elle a fini par rejoindre une chorale.
-4. Comme je voulais me détendre après le travail, j'ai fini par écouter du jazz tous les soirs.
-5. Il voulait composer ses propres chansons, donc il a fini par apprendre la théorie musicale.
-6. Comme elle aimait la musique traditionnelle coréenne, elle a fini par apprendre le gayageum.
-7. J'ai eu envie de jouer en groupe, donc j'ai fini par former un groupe de musique.
-8. Comme il voulait impressionner ses amis, il a fini par apprendre à jouer du violon.
-9. Elle aimait danser, donc elle a fini par s'inscrire à des cours de danse hip-hop.
-10. Comme je voulais partager ma passion, j'ai fini par donner des cours de musique aux enfants.
+**I. Structure principale : -아/어서 -게 됐어요**
+1. Comme j'aimais parler en public, j'ai fini par [[être le maître de cérémonie|사회를 맡다]].
+2. Comme le [[présentateur|사회자]] était malade, j'ai fini par le remplacer.
+3. J'ai vu la vidéo d'un bon [[présentateur|사회자]] et j'ai fini par imiter sa façon de parler.
+4. Comme je voulais bien [[mener|진행을 하다]] la réunion, j'ai fini par préparer un script.
+5. Comme mes informations n'étaient pas [[précises|정확하다]], j'ai fini par tout vérifier deux fois.
+6. Comme les invités étaient timides, j'ai fini par proposer qu'on se [[présente à tour de rôle|돌아가면서 소개를 하다]].
+7. Comme j'étais [[plein d'énergie|씩씩하다]] sur scène, j'ai fini par animer tous les événements du club.
+8. J'ai lu les commentaires du public et j'ai fini par [[prendre le temps|-는 시간을 갖다]] de corriger mes erreurs.
+9. Comme la cérémonie avait été [[annoncée|공지되다]] partout, j'ai fini par être très nerveux.
+10. Comme je voulais [[accumuler de l'expérience|경험을 쌓다]], j'ai fini par animer des mariages.
 
 **Corrections — I**
-1. 저는 음악을 좋아해서 기타를 배우게 됐어요.
-2. 그는 빨리 실력을 늘리고 싶어서 피아노 개인 레슨을 받게 됐어요.
-3. 그녀는 노래에 관심이 있어서 합창단에 가입하게 됐어요.
-4. 저는 퇴근 후에 쉬고 싶어서 매일 저녁 재즈를 듣게 됐어요.
-5. 그는 자기 노래를 작곡하고 싶어서 음악 이론을 배우게 됐어요.
-6. 그녀는 한국 전통 음악을 좋아해서 가야금을 배우게 됐어요.
-7. 밴드로 연주하고 싶은 마음이 생겨서 음악 그룹을 만들게 됐어요.
-8. 그는 친구들에게 잘 보이고 싶어서 바이올린을 배우게 됐어요.
-9. 그녀는 춤추는 것을 좋아해서 힙합 댄스 수업에 등록하게 됐어요.
-10. 제 열정을 나누고 싶어서 아이들에게 음악을 가르치게 됐어요.
+1. 사람들 앞에서 말하는 걸 좋아해서 사회를 맡게 됐어요.
+2. 사회자가 아파서 대신하게 됐어요.
+3. 좋은 사회자의 영상을 보고 그 말투를 따라 하게 됐어요.
+4. 모임 진행을 잘하고 싶어서 대본을 준비하게 됐어요.
+5. 정보가 정확하지 않아서 두 번씩 확인하게 됐어요.
+6. 손님들이 수줍어해서 돌아가면서 소개를 하자고 제안하게 됐어요.
+7. 무대에서 씩씩해서 동호회 행사를 다 진행하게 됐어요.
+8. 관객들의 후기를 읽고 제 실수를 고치는 시간을 갖게 됐어요.
+9. 행사가 여기저기 공지돼서 아주 긴장하게 됐어요.
+10. 경험을 쌓고 싶어서 결혼식 사회를 보게 됐어요.
 
-**II. -다가 -아/어서 -게 됐어요**
-1. En écoutant de la musique classique, il s'est passionné pour le piano, donc il a fini par prendre des cours.
-2. En chantant sous la douche, elle a découvert sa voix, donc elle a fini par rejoindre une chorale.
-3. En regardant des concerts en ligne, j'ai eu envie de jouer d'un instrument, donc j'ai fini par apprendre la guitare.
-4. En jouant seul chez lui, il a voulu progresser, donc il a fini par former un groupe avec des amis.
-5. En assistant à un spectacle de samulnori, elle est tombée amoureuse de cet instrument, donc elle a fini par apprendre le gayageum.
-6. En composant de petites mélodies, j'ai voulu comprendre la théorie, donc j'ai fini par prendre des cours.
-7. En regardant des vidéos de danse, elle s'est passionnée pour le hip-hop, donc elle a fini par s'inscrire à un cours.
-8. En pratiquant le violon tous les jours, il a beaucoup progressé, donc il a fini par se produire en public.
-9. En enseignant la musique bénévolement, j'ai pris goût à ça, donc j'ai fini par en faire mon métier.
-10. En participant à un festival de musique, elle a rencontré d'autres musiciens, donc elle a fini par jouer avec eux régulièrement.
+**II. Variante avancée : -다가 -아/어서 -게 됐어요**
+1. En aidant à préparer la fête, le [[présentateur|사회자]] a annulé, donc j'ai fini par [[prendre l'animation|사회를 맡다]].
+2. En relisant mon script, j'ai remarqué une erreur de nom, donc j'ai fini par vérifier chaque nom de façon [[précise|정확하다]].
+3. En [[menant la réunion|진행을 하다]], le micro est tombé en panne, donc j'ai fini par parler très fort.
+4. En appelant les invités, j'ai oublié un nom, donc j'ai fini par [[demander de l'aide|도움을 구하다]] à mon collègue.
+5. En présentant le programme aux [[nouveaux membres|신입 회원]], ils ont beaucoup ri, donc j'ai fini par me détendre.
+6. En animant un mariage, j'ai rencontré une organisatrice d'événements, donc j'ai fini par [[travailler avec elle|함께하다]].
+7. En invitant les gens à [[s'avancer|앞으로 나오다]], j'ai trébuché sur scène, donc j'ai fini par faire rire toute la salle.
+8. En préparant le [[rituel d'accueil|신고식]], on l'a trouvé trop dur, donc on a fini par le changer.
+9. En répétant mon discours, [[j'ai eu envie|-고 싶은 마음이 생기다]] d'ajouter une blague, donc j'ai fini par réécrire le début.
+10. En [[menant|진행을 하다]] un concours de chant, j'ai été interviewé par un journaliste, donc j'ai fini par [[paraître dans le journal|신문에 나다]].
 
 **Corrections — II**
-1. 클래식 음악을 듣다가 피아노에 관심이 생겨서 레슨을 받게 됐어요.
-2. 샤워하면서 노래를 부르다가 자기 목소리를 발견해서 합창단에 가입하게 됐어요.
-3. 온라인으로 공연을 보다가 악기를 연주하고 싶어져서 기타를 배우게 됐어요.
-4. 혼자 집에서 연주하다가 실력을 늘리고 싶어져서 친구들과 그룹을 만들게 됐어요.
-5. 사물놀이 공연을 보다가 그 악기에 반해서 가야금을 배우게 됐어요.
-6. 짧은 멜로디를 만들다가 이론을 이해하고 싶어져서 수업을 듣게 됐어요.
-7. 춤 영상을 보다가 힙합에 관심이 생겨서 수업에 등록하게 됐어요.
-8. 매일 바이올린을 연습하다가 실력이 많이 늘어서 사람들 앞에서 연주하게 됐어요.
-9. 봉사로 음악을 가르치다가 재미를 느껴서 그것을 직업으로 삼게 됐어요.
-10. 음악 축제에 참여하다가 다른 음악가들을 만나서 정기적으로 함께 연주하게 됐어요.
+1. 파티 준비를 돕다가 사회자가 취소해서 제가 사회를 맡게 됐어요.
+2. 대본을 읽다가 이름이 틀린 걸 알아서 이름을 하나하나 정확하게 확인하게 됐어요.
+3. 모임 진행을 하다가 마이크가 고장 나서 아주 크게 말하게 됐어요.
+4. 손님들을 부르다가 이름 하나를 잊어버려서 동료에게 도움을 구하게 됐어요.
+5. 신입 회원들에게 프로그램을 소개하다가 모두 많이 웃어서 긴장이 풀리게 됐어요.
+6. 결혼식 사회를 보다가 행사 기획자를 만나서 그분과 일을 함께하게 됐어요.
+7. 사람들에게 앞으로 나오라고 하다가 무대에서 넘어져서 모두의 웃음을 사게 됐어요.
+8. 신고식을 준비하다가 너무 심하다고 생각해서 방식을 바꾸게 됐어요.
+9. 연설을 연습하다가 농담을 넣고 싶은 마음이 생겨서 처음 부분을 다시 쓰게 됐어요.
+10. 노래 대회 진행을 하다가 기자와 인터뷰를 해서 신문에 나게 됐어요.
 
 **III. Expressions pour organiser un événement**
-- Annoncez : « Nous allons maintenant écouter un morceau interprété par un membre. »
-- Annoncez : « Il va maintenant y avoir un concert improvisé. »
-- Demandez au public : « Veuillez garder le silence pendant la performance. »
-- Demandez au public : « Veuillez applaudir seulement à la fin du morceau. »
+
+*Contexte : tu es le 사회자 (animateur) de l'événement. Traduis en 격식체.*
+
+1. Annonce : « Nous allons maintenant avoir le discours d'un diplômé. »
+2. Annonce : « Il va maintenant y avoir la performance de danse des étudiants de niveau 4. »
+3. Consigne : « Veuillez [[vous avancer|앞으로 나오다]] pour recevoir votre diplôme. »
+4. Consigne : « Veuillez prendre les photos après la cérémonie. »
 
 **Corrections — III**
-- 지금부터 회원이 연주하는 곡을 듣겠습니다.
-- 지금부터 즉흥 공연이 있겠습니다.
-- 공연 중에는 조용히 해 주시기 바랍니다.
-- 곡이 끝난 후에만 박수를 쳐 주시기 바랍니다.
+1. 지금부터 졸업생의 연설이 있겠습니다.
+2. 지금부터 4급 학생들의 춤 공연이 있겠습니다.
+3. 졸업장을 받으러 앞으로 나와 주시기 바랍니다.
+4. 사진은 행사가 끝난 후에 찍어 주시기 바랍니다.
 
 **IV. Expressions pour se présenter**
-« Je m'appelle Nathan, je viens de Strasbourg. J'aime la musique, donc j'ai fini par apprendre la guitare. J'espère bien m'entendre avec vous à l'avenir. »
 
-**Correction — IV**
-저는 스트라스부르에서 온 나탕입니다. 음악을 좋아해서 기타를 배우게 됐습니다. 앞으로 여러분과 잘 지냈으면 좋겠습니다.
+*Contexte : tu te présentes aux membres. Garde le 격식체 du début à la fin.*
+
+1. « Je suis Lee Jun, votre [[présentateur|사회자]] du jour, je viens de Séoul. »
+2. « En aidant à l'organisation, on m'a demandé d'animer, donc j'ai fini par [[me charger de l'animation|사회를 맡다]]. »
+3. « Je vais faire de mon mieux. »
+4. « J'espère que nous [[passerons|함께하다]] un bon moment ensemble aujourd'hui. »
+
+**Corrections — IV**
+1. 오늘 사회를 맡은, 서울에서 온 이준입니다.
+2. 행사 준비를 돕다가 부탁을 받아서 사회를 맡게 됐습니다.
+3. 최선을 다하겠습니다.
+4. 오늘 여러분과 즐거운 시간을 함께했으면 좋겠습니다.

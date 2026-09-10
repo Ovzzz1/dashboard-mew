@@ -29,15 +29,15 @@
 
 *Contexte : vous présentez le roi Sejong à un public international.*
 
-1. "Je vais maintenant commencer ma présentation."
+1. "Je vais maintenant commencer ma présentation sur le roi Sejong."
 2. "Je vais parler du [[roi|왕]] Sejong et de la [[période Joseon|조선 시대]]."
 3. "Je vais d'abord présenter sa vie, puis expliquer ses principales réalisations."
-4. "Ce que vous voyez maintenant, c'est un portrait du roi Sejong sur le billet de 10 000 wons."
+4. "Si vous regardez la suite, il y a une carte de Joseon, qui montre bien l'étendue du royaume."
 5. "Veuillez prendre la parole si vous avez des questions."
 
 **Corrections — II**
-1. 지금부터 발표를 시작하겠습니다.
+1. 지금부터 세종대왕에 대한 발표를 시작하겠습니다.
 2. 저는 세종대왕과 조선 시대에 대해 발표하려고 합니다.
 3. 먼저 세종대왕의 생애를 소개한 다음에 주요 업적에 대해 설명하겠습니다.
-4. 지금 보시는 것은 만 원짜리 지폐에 있는 세종대왕의 초상화입니다.
+4. 다음을 보시면 조선 시대 지도가 있는데 나라의 크기를 잘 보여 줍니다.
 5. 질문이 있으신 분은 말씀해 주십시오.

@@ -5,11 +5,11 @@
 
 *Contexte : tu expliques l'accès à Cheongwadae depuis la station Gyeongbokgung.*
 
-1. Sortez par la [[sortie 2|2번 출구로 나가다]] de Gyeongbokgung.
-2. Si vous [[suivez la route|길을 따라 가다]], un grand portail apparaît.
+1. Sortez par la sortie 2 de Gyeongbokgung.
+2. Si vous suivez la route, un grand portail apparaît.
 3. Longez le palais et allez à gauche.
-4. Continuez tout droit, puis au feu, [[tournez à droite|오른쪽으로 돌다]].
-5. La [[Maison Bleue|청와대]] est [[juste devant|정면에 있다]] ; [[présentez votre pièce d'identité|신분증을 제시하다]] à l'entrée.
+4. Continuez tout droit, puis au feu, tournez à droite.
+5. La [[Maison Bleue|청와대]] est juste devant ; [[présentez votre pièce d'identité|신분증을 제시하다]] à l'entrée.
 
 **Corrections — I**
 1. 경복궁역 2번 출구로 나가세요.

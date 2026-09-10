@@ -27,7 +27,7 @@
 
 **II. Nuancer une généralité : -다고 해서 다 -은/는 것은 아니에요**
 1. Ce n'est pas parce qu'on connaît beaucoup de grammaire qu'on parle [[correctement|제대로]] forcément.
-2. Ce n'est pas parce que c'est cher que la [[qualité est bonne|품질이 좋다]].
+2. Ce n'est pas parce qu'un produit est à la mode que la [[qualité est forcément bonne|품질이 좋다]].
 3. Ce n'est pas parce qu'un plat vient du [[Jeolla|전라도]] qu'il est forcément épicé.
 4. Ce n'est pas parce qu'on a un [[fort sens des responsabilités|책임감이 강하다]] qu'on sait forcément tout.
 5. Ce n'est pas parce qu'on a beaucoup d'[[enfants|자녀]] qu'on est forcément fatigué.
@@ -39,7 +39,7 @@
 
 **Corrections — II**
 1. 문법을 많이 안다고 해서 다 제대로 말하는 것은 아니에요.
-2. 비싸다고 해서 다 품질이 좋은 것은 아니에요.
+2. 유행한다고 해서 다 품질이 좋은 것은 아니에요.
 3. 전라도 음식이라고 해서 다 매운 것은 아니에요.
 4. 책임감이 강하다고 해서 다 아는 것은 아니에요.
 5. 자녀가 많다고 해서 다 힘든 것은 아니에요.

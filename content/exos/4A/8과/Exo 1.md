@@ -5,11 +5,11 @@
 
 *Contexte : tu décris les objets que tu revends avant de partir.*
 
-1. C'est un [[humidificateur|가습기]] [[allongé|길쭉하다]] en [[plastique|플라스틱]] blanc.
-2. Le [[ventilateur|선풍기]] a une base [[ronde|둥글다]] et [[dure|딱딱하다]].
-3. C'est une [[bouilloire électrique|전기 포트]] [[carrée|네모나다]] avec une [[fonction de réglage de température|온도 조절 기능]].
-4. Le [[tapis chauffant|전기 장판]] est en [[tissu|천]] [[doux|부드럽다]].
-5. C'est un objet [[triangulaire|세모나다]] et [[moelleux|푹신하다]], en tissu : un coussin.
+1. C'est un [[humidificateur|가습기]] allongé en plastique blanc.
+2. Le [[ventilateur|선풍기]] a une base ronde et dure.
+3. C'est une [[bouilloire électrique|전기 포트]] carrée avec une [[fonction de réglage de température|온도 조절 기능]].
+4. Le [[tapis chauffant|전기 장판]] est en tissu doux.
+5. C'est un objet triangulaire et moelleux, en tissu : un coussin.
 6. Le [[déshumidificateur|제습기]] est [[volumineux|부피가 크다]] et le [[couvercle ferme mal|뚜껑이 잘 안 닫히다]].
 
 **Corrections — I**

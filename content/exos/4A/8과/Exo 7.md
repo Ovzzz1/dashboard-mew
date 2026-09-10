@@ -5,10 +5,10 @@
 
 *Contexte : tu compares des appareils de chauffage.*
 
-1. Le [[radiateur électrique|전기 히터]] est [[rond|둥글다]] et son corps est [[dur|딱딱하다]].
-2. Le [[tapis chauffant|전기 장판]] est [[rectangulaire|네모나다]] et en [[tissu|천]] [[moelleux|푹신하다]].
-3. La couverture est [[douce|부드럽다]] au toucher : la [[texture|감촉]] est agréable.
-4. Le [[humidificateur|가습기]] est [[allongé|길쭉하다]] et en [[verre|유리]] transparent.
+1. Le [[radiateur électrique|전기 히터]] est rond et son corps est dur.
+2. Le [[tapis chauffant|전기 장판]] est rectangulaire et en tissu moelleux.
+3. La couverture est douce au toucher : la texture est agréable.
+4. Le [[humidificateur|가습기]] est allongé et en verre transparent.
 5. Quand [[on a les pieds froids|손/발이 시리다]], ce [[gadget|아이디어 상품]] est parfait.
 6. Ça [[se transforme|변신하다]] en coussin, donc c'est [[deux en un|일석이조]].
 
@@ -36,13 +36,13 @@
 1. 전기 히터는 이 여행 가방만 해요.
 2. 전기 장판은 이 침대만 해요.
 3. 가습기는 이 2리터 병만 해요.
-4. 찜질팩은 이 쿠션만 해요.
-5. 미니 히터는 이 책만 해요.
+4. 찜질팩 크기가 이 쿠션만 해요.
+5. 미니 히터 크기가 이 책만 해요.
 6. 에어컨은 이 옷장만 해요.
 7. 제습기는 이 쓰레기통만 해요.
-8. 손난로는 제 휴대폰만 해요.
+8. 손난로 크기가 제 휴대폰만 해요.
 9. 선풍기는 이 의자만 해요.
-10. 리모컨은 손바닥만 해요.
+10. 리모컨 크기가 손바닥만 해요.
 
 **III. Dépasser ou ne pas atteindre une valeur : -이 넘어요 / -이 안 돼요**
 1. La consommation du [[climatiseur|에어컨]] dépasse mille watts.

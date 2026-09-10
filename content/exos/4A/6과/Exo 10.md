@@ -5,12 +5,12 @@
 
 *Contexte : de petites scènes du quotidien où quelqu'un aide quelqu'un.*
 
-1. Il a [[souri largement|활짝]] en me tendant son parapluie.
-2. Elle a [[reniflé|훌쩍훌쩍]] en racontant sa journée difficile.
-3. Mon collègue a [[hoché la tête|끄덕끄덕]] en signe d'accord.
-4. Ils ont chuchoté [[à voix basse|소곤소곤]] pour ne pas réveiller le bébé.
-5. Ses [[yeux se sont remplis de larmes|글썽글썽]] quand je l'ai remercié.
-6. Le ballon des enfants est monté [[en flottant|훨훨]] dans le ciel.
+1. Il a souri largement en me tendant son parapluie.
+2. Elle a reniflé en racontant sa journée difficile.
+3. Mon collègue a hoché la tête en signe d'accord.
+4. Ils ont chuchoté à voix basse pour ne pas réveiller le bébé.
+5. Ses yeux se sont remplis de larmes quand je l'ai remercié.
+6. Le ballon des enfants est monté en flottant dans le ciel.
 
 **Corrections — I**
 1. 그가 우산을 건네주면서 활짝 웃었어요.

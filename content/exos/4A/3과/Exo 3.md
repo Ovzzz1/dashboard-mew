@@ -9,19 +9,19 @@
 5. Je me suis [[suffisamment|충분히]] préparé pour cet entretien.
 6. J'essaie toujours de [[faire contact visuel|눈을 맞추다]] avec mon interlocuteur.
 7. Je pense pouvoir m'améliorer [[encore plus|더욱]] grâce à votre entreprise.
-8. Je m'exprime en [[style formel|격식체]] dans ce contexte professionnel.
+8. Je vais vous présenter mes points forts [[efficacement|효과적으로]] en trois minutes.
 9. Mon [[attitude lors des présentations|발표 태도]] s'améliore grâce à la pratique régulière.
 10. Si vous avez des questions sur ma [[candidature|지원하다]], je suis prêt à y répondre.
 
 **Corrections — I**
-1. 이 자리에 지원하고 싶어서 말씀드립니다. 정말 열심히 하겠습니다.
-2. 저의 발표 태도는 담당 교수님께 칭찬을 받았습니다.
+1. 저는 이 자리에 지원하고 싶고 의욕이 넘칩니다.
+2. 제 발표 태도는 부장님께 칭찬을 받았습니다.
 3. 저는 압박감 속에서도 자연스럽게 말하는 법을 배웠습니다.
 4. 저는 팀 안에서 효과적으로 일할 수 있다고 생각합니다.
 5. 저는 이 면접을 위해 충분히 준비했습니다.
 6. 저는 항상 상대방과 눈을 맞추려고 노력합니다.
 7. 귀사 덕분에 더욱 발전할 수 있다고 생각합니다.
-8. 이 전문적인 자리에서 격식체로 말씀드리겠습니다.
+8. 제 장점을 3분 동안 효과적으로 말씀드리겠습니다.
 9. 꾸준한 연습 덕분에 발표 태도가 더욱 좋아지고 있습니다.
 10. 저의 지원에 관해 질문이 있으시면 말씀해 주십시오.
 

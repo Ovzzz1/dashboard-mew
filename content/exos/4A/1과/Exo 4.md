@@ -1,68 +1,80 @@
 # EXO 4 — 4A 과1
+**Thème : Voyager à pied (도보 여행)**
 
-**I. -아/어서 -게 됐어요**
-1. Il voulait se faire des amis qui se comprennent bien, donc il a fini par adhérer à ce club.
-2. Comme les membres étaient très chaleureux, elle a fini par devenir présidente du club.
-3. J'ai eu envie de partager des informations avec d'autres passionnés, donc j'ai fini par créer un groupe.
-4. Comme il s'intéressait passionnément à l'environnement, il a fini par participer à des activités bénévoles.
-5. Elle voulait rassembler des fonds pour une bonne cause, donc elle a fini par organiser un événement.
-6. Comme il aimait être entouré de monde, il a fini par organiser une réunion régulière chaque mois.
-7. J'ai eu envie de gérer ma santé, donc j'ai fini par rejoindre un club de sport.
-8. Comme elle voulait apprendre les bases d'un nouvel instrument, elle a fini par s'inscrire à des cours de percussion.
-9. Il s'intéressait au mode de vie des gens de tout le pays, donc il a fini par voyager pour les rencontrer.
-10. Comme la cotisation était abordable, j'ai fini par la verser et rejoindre l'association.
+**I. Structure principale : -아/어서 -게 됐어요**
+1. Comme je voulais [[retrouver la sérénité|마음의 여유를 찾다]], j'ai fini par faire un [[voyage à pied|도보 여행]].
+2. J'ai vu des photos de Jeju sur un blog et j'ai fini par parcourir l'île [[dans tous ses recoins|구석구석]].
+3. Comme les [[frais de voyage|여행 경비]] étaient élevés, j'ai fini par marcher au lieu de prendre le bus.
+4. Comme je voulais [[réunir|마련하다]] les [[frais du voyage|여행 경비]], j'ai fini par travailler à mi-temps.
+5. Comme on marchait au même rythme, on a fini par bien [[se comprendre|마음이 통하다]].
+6. J'ai entendu parler d'un magnifique sentier et j'ai fini par le [[visiter|방문하다]].
+7. Comme le voyage durait [[plus de dix jours|10일 이상]], j'ai fini par dormir chez l'habitant.
+8. Comme je voulais [[changer ma routine|생활에 변화를 주다]], j'ai fini par faire une pause d'un mois dans mon travail.
+9. Comme je voulais [[goûter|맛을 보다]] les plats locaux, j'ai fini par [[m'arrêter|들르다]] dans chaque village.
+10. Comme la [[destination|목적지]] était loin, j'ai fini par partir à l'aube.
 
 **Corrections — I**
-1. 그는 마음이 통하는 친구를 사귀고 싶어서 이 동호회에 가입하게 됐어요.
-2. 회원들이 아주 따뜻해서 그녀는 동호회 회장으로 뽑히게 됐어요.
-3. 다른 애호가들과 정보를 나누고 싶은 마음이 생겨서 모임을 만들게 됐어요.
-4. 그는 환경 문제에 뜨거운 관심을 가져서 봉사 활동에 참여하게 됐어요.
-5. 그녀는 좋은 일을 위해 기부금을 모으고 싶어서 행사를 열게 됐어요.
-6. 그는 사람들과 함께하는 것을 좋아해서 매달 정기 모임을 갖게 됐어요.
-7. 건강 관리를 하고 싶은 마음이 생겨서 운동 동호회에 가입하게 됐어요.
-8. 그녀는 새 악기의 기초를 배우고 싶어서 타악기 수업에 등록하게 됐어요.
-9. 그는 전국 사람들의 사는 방식에 관심이 있어서 그들을 만나러 여행하게 됐어요.
-10. 회비가 저렴해서 입금하고 동호회에 가입하게 됐어요.
+1. 마음의 여유를 찾고 싶어서 도보 여행을 하게 됐어요.
+2. 블로그에서 제주도 사진을 보고 섬을 구석구석 다니게 됐어요.
+3. 여행 경비가 많이 들어서 버스 대신 걷게 됐어요.
+4. 여행 경비를 마련하고 싶어서 아르바이트를 하게 됐어요.
+5. 같은 속도로 걸어서 마음이 잘 통하게 됐어요.
+6. 아름다운 둘레길 이야기를 듣고 그곳을 방문하게 됐어요.
+7. 여행이 10일 이상이어서 민박에서 자게 됐어요.
+8. 생활에 변화를 주고 싶어서 한 달 동안 일을 쉬게 됐어요.
+9. 지역 음식의 맛을 보고 싶어서 마을마다 들르게 됐어요.
+10. 목적지가 멀어서 새벽에 출발하게 됐어요.
 
-**II. -다가 -아/어서 -게 됐어요**
-1. En participant à des réunions régulières, il s'est fait beaucoup d'amis, donc il a fini par devenir responsable du club.
-2. En partageant des informations avec les autres membres, elle a gagné leur confiance, donc elle a fini par être élue présidente.
-3. En collectant des dons pour une association, j'ai rencontré des gens passionnants, donc j'ai fini par m'investir davantage.
-4. En s'intéressant aux questions environnementales, il a voulu agir concrètement, donc il a fini par participer à des actions bénévoles.
-5. En animant plusieurs événements, elle a pris confiance en elle, donc elle a fini par devenir animatrice professionnelle.
-6. En versant sa cotisation chaque année, il a suivi l'évolution du club, donc il a fini par s'impliquer davantage.
-7. En organisant l'assemblée générale annuelle, elle a rencontré de nouveaux membres, donc elle a fini par créer un sous-groupe.
-8. En gérant sa santé plus sérieusement, il a vu des résultats, donc il a fini par conseiller d'autres membres.
-9. En observant le nouveau membre, j'ai remarqué son énergie, donc j'ai fini par lui proposer un rôle important.
-10. En discutant avec les autres lors de la cérémonie d'initiation, elle s'est sentie plus à l'aise, donc elle a fini par y participer chaque année.
+**II. Variante avancée : -다가 -아/어서 -게 됐어요**
+1. En marchant le long de la côte, j'ai rencontré un autre voyageur, donc j'ai fini par [[faire la route avec lui|함께하다]].
+2. En explorant Séoul à pied [[dans tous ses recoins|구석구석]], j'ai découvert un vieux café, donc j'ai fini par y aller chaque semaine.
+3. En marchant sous la pluie, je suis tombé malade, donc j'ai fini par [[rester|-에 머무르다]] trois jours dans une auberge.
+4. En cherchant la [[destination|목적지]], je me suis perdu, donc j'ai fini par [[demander de l'aide|도움을 구하다]] à un habitant.
+5. En [[prenant le temps de discuter|-는 시간을 갖다]] avec un vieil homme, je me suis intéressé à l'histoire du village, donc j'ai fini par tenir un blog.
+6. En marchant seul, j'ai [[retrouvé la sérénité|마음의 여유를 찾다]], donc j'ai fini par repartir chaque année.
+7. En faisant du stop, un couple m'a [[pris en voiture|태워주다]], donc j'ai fini par dîner chez eux.
+8. En marchant [[plus de dix jours|10일 이상]], j'ai eu mal aux pieds, donc j'ai fini par me reposer une semaine.
+9. En visitant un marché local, j'ai [[goûté|맛을 보다]] un plat étonnant et j'ai craqué, donc j'ai fini par apprendre à le cuisiner.
+10. En préparant mon sac, j'ai trouvé une vieille carte, donc j'ai fini par changer de [[destination|목적지]].
 
 **Corrections — II**
-1. 정기 모임에 참여하다가 친구를 많이 사귀어서 동호회 일을 맡게 됐어요.
-2. 회원들과 정보를 나누다가 신뢰를 얻어서 회장으로 뽑히게 됐어요.
-3. 단체를 위해 기부금을 모으다가 멋진 사람들을 만나서 더 열심히 참여하게 됐어요.
-4. 환경 문제에 관심을 가지다가 직접 행동하고 싶어져서 봉사 활동에 참여하게 됐어요.
-5. 여러 행사의 사회를 맡다가 자신감이 생겨서 전문 사회자로 일하게 됐어요.
-6. 매년 회비를 입금하다가 동호회의 변화를 지켜보게 돼서 더 적극적으로 참여하게 됐어요.
-7. 연 1회 정기 총회를 준비하다가 새 회원들을 만나서 소모임을 만들게 됐어요.
-8. 건강 관리를 열심히 하다가 효과를 보게 돼서 다른 회원들에게 조언하게 됐어요.
-9. 신입 회원을 지켜보다가 씩씩한 모습을 발견해서 중요한 역할을 맡기게 됐어요.
-10. 신고식에서 다른 사람들과 이야기하다가 마음이 편해져서 매년 참석하게 됐어요.
+1. 해안을 따라 걷다가 다른 여행자를 만나서 여행을 함께하게 됐어요.
+2. 서울을 구석구석 걸어 다니다가 오래된 카페를 발견해서 매주 가게 됐어요.
+3. 비를 맞으며 걷다가 병이 나서 여관에 사흘 머무르게 됐어요.
+4. 목적지를 찾다가 길을 잃어서 주민에게 도움을 구하게 됐어요.
+5. 할아버지와 이야기하는 시간을 갖다가 마을 역사에 흥미가 생겨서 블로그를 쓰게 됐어요.
+6. 혼자 걷다가 마음의 여유를 찾아서 해마다 다시 떠나게 됐어요.
+7. 히치하이킹을 하다가 한 부부가 태워 줘서 그 집에서 저녁을 먹게 됐어요.
+8. 10일 이상 걷다가 발이 아파서 일주일 동안 쉬게 됐어요.
+9. 지역 시장을 구경하다가 신기한 음식 맛을 보고 반해서 만드는 법을 배우게 됐어요.
+10. 배낭을 싸다가 오래된 지도를 발견해서 목적지를 바꾸게 됐어요.
 
 **III. Expressions pour organiser un événement**
-- Annoncez : « Nous allons maintenant entendre les motivations d'adhésion des nouveaux membres. »
-- Annoncez : « Il va maintenant y avoir la cérémonie d'initiation. »
-- Demandez au public : « Veuillez rester assis jusqu'à la fin de la cérémonie. »
-- Demandez au public : « Veuillez applaudir les nouveaux membres. »
+
+*Contexte : tu es le 사회자 (animateur) de l'événement. Traduis en 격식체.*
+
+1. Annonce : « Nous allons maintenant avoir la présentation de l'itinéraire du [[voyage à pied|도보 여행]]. »
+2. Annonce : « Il va maintenant y avoir une courte séance d'échauffement. »
+3. Consigne : « Veuillez [[verser|입금하다]] la cotisation avant vendredi. »
+4. Consigne : « Veuillez vous rassembler devant la gare à 8 heures. »
 
 **Corrections — III**
-- 지금부터 신입 회원들의 가입 동기 발표가 있겠습니다.
-- 지금부터 신고식이 있겠습니다.
-- 행사가 끝날 때까지 자리에 앉아 주시기 바랍니다.
-- 신입 회원들에게 박수를 쳐 주시기 바랍니다.
+1. 지금부터 도보 여행 코스 소개가 있겠습니다.
+2. 지금부터 간단한 준비 운동이 있겠습니다.
+3. 금요일까지 회비를 입금해 주시기 바랍니다.
+4. 8시까지 역 앞으로 모여 주시기 바랍니다.
 
 **IV. Expressions pour se présenter**
-Traduisez cette présentation formelle complète :
-« Je m'appelle Claire, je viens de Bordeaux. En discutant avec une amie, j'ai eu envie d'apprendre le coréen, donc j'ai fini par m'inscrire à ce cours. Enseignez-moi beaucoup, s'il vous plaît. »
 
-**Correction — IV**
-저는 보르도에서 온 클레르입니다. 친구랑 이야기하다가 한국어를 배우고 싶어져서 이 수업에 등록하게 됐습니다. 많이 가르쳐 주세요.
+*Contexte : tu te présentes aux membres. Garde le 격식체 du début à la fin.*
+
+1. « Je suis Paul, je viens de Bordeaux. »
+2. « Je voulais [[retrouver la sérénité|마음의 여유를 찾다]], donc j'ai fini par adhérer à ce club de randonnée. »
+3. (à quelqu'un qui te complimente) « Oh, je ne suis pas si bon, j'ai encore du chemin. »
+4. « Je vais participer activement. Enseignez-moi beaucoup, s'il vous plaît. »
+
+**Corrections — IV**
+1. 보르도에서 온 폴입니다.
+2. 마음의 여유를 찾고 싶어서 이 도보 여행 동호회에 가입하게 됐습니다.
+3. 잘하기는요. 아직 멀었어요.
+4. 열심히 활동하겠습니다. 많이 가르쳐 주세요.

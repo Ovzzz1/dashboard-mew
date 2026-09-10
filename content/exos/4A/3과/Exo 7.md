@@ -29,15 +29,15 @@
 
 *Contexte : vous présentez l'influence du confucianisme à l'époque Joseon.*
 
-1. "Je vais maintenant commencer ma présentation."
+1. "Je vais maintenant commencer ma présentation sur le confucianisme."
 2. "Je vais parler de l'influence du [[confucianisme|유학]] sur la société coréenne."
 3. "Je vais d'abord présenter le contexte historique, puis les valeurs confucéennes."
 4. "Ce que vous voyez maintenant, c'est le système de castes de la [[période Joseon|조선 시대]]."
-5. "Je vais maintenant conclure. Merci de m'avoir écouté."
+5. "Jusqu'ici, je vous ai parlé de l'influence du confucianisme. Merci."
 
 **Corrections — II**
-1. 지금부터 발표를 시작하겠습니다.
+1. 지금부터 유학에 대한 발표를 시작하겠습니다.
 2. 저는 유학이 한국 사회에 미친 영향에 대해 발표하려고 합니다.
 3. 먼저 역사적 배경을 소개한 다음에 유학적 가치관에 대해 설명하겠습니다.
 4. 지금 보시는 것은 조선 시대의 신분 제도입니다.
-5. 이것으로 발표를 마치겠습니다. 들어 주셔서 감사합니다.
+5. 지금까지 저는 유학의 영향에 대해서 말씀드렸습니다. 감사합니다.

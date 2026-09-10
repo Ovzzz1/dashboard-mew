@@ -5,10 +5,10 @@
 
 *Contexte : tu décris un objet à un vendeur sans en connaître le nom.*
 
-1. C'est un objet [[rond|둥글다]] et [[moelleux|푹신하다]] fait en [[tissu|천]].
-2. C'est un objet [[rectangulaire|네모나다]] et [[dur|딱딱하다]] en [[plastique|플라스틱]].
-3. C'est [[allongé|길쭉하다]], en [[verre|유리]], et la [[texture|감촉]] est [[lisse|부드럽다]].
-4. La [[forme|모양]] est [[triangulaire|세모나다]] et c'est enveloppé de [[plastique souple|비닐]].
+1. C'est un objet rond et moelleux fait en tissu.
+2. C'est un objet rectangulaire et dur en plastique.
+3. C'est allongé, en verre, et la texture est lisse.
+4. La forme est triangulaire et c'est enveloppé de plastique souple.
 5. C'est [[gros|이만하다]] comme ça, et ça [[tient dans une main|한 손에 쏙 들어오다]].
 6. Ça a des [[roues|바퀴]] en [[caoutchouc|고무]] des [[deux côtés|양쪽]].
 
@@ -33,10 +33,10 @@
 10. Ça fait la taille de cette [[fiche|플러그]].
 
 **Corrections — II**
-1. 이 책만 해요.
-2. 제 휴대폰만 해요.
-3. 이 의자만 해요.
-4. 손바닥만 해요.
+1. 크기가 이 책만 해요.
+2. 크기가 제 휴대폰만 해요.
+3. 크기가 이 의자만 해요.
+4. 크기가 손바닥만 해요.
 5. 이 텀블러만 해요.
 6. 이 서랍만 해요.
 7. 이 장난감만 해요.

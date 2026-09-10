@@ -1,67 +1,80 @@
 # EXO 8 — 4A 과1
+**Thème : Réunions et rencontres**
 
-**I. -아/어서 -게 됐어요**
-1. J'aime manger, donc j'ai fini par apprendre à cuisiner.
-2. Comme elle voulait préserver les recettes familiales, elle a fini par écrire un livre de cuisine.
-3. Il s'intéressait à la pâtisserie, donc il a fini par ouvrir une petite boulangerie.
-4. Comme je voulais manger plus sainement, j'ai fini par cuisiner moi-même chaque jour.
-5. Elle voulait découvrir la cuisine coréenne, donc elle a fini par prendre des cours de kimchi.
-6. Comme il aimait le café, il a fini par devenir barista.
-7. J'ai eu envie de partager mes recettes, donc j'ai fini par créer une chaîne de cuisine.
-8. Comme elle voulait économiser de l'argent, elle a fini par arrêter de manger au restaurant.
-9. Il aimait les épices, donc il a fini par voyager pour découvrir de nouvelles saveurs.
-10. Comme je voulais impressionner mes amis, j'ai fini par organiser un dîner à thème.
+**I. Structure principale : -아/어서 -게 됐어요**
+1. Comme on voulait se voir plus souvent, on a fini par [[nous réunir|모임을 갖다]] chaque mois.
+2. J'ai vu un message dans le groupe de discussion et j'ai fini par aller à une [[rencontre improvisée|번개 모임]].
+3. Comme la date a été [[annoncée|공지되다]] tard, j'ai fini par annuler mon rendez-vous.
+4. Comme on [[partage des informations|정보를 나누다]] utiles, j'ai fini par venir à chaque [[réunion régulière|정기 모임]].
+5. Comme l'assemblée n'a lieu qu'[[une fois par an|연 1회]], j'ai fini par tout noter.
+6. J'ai entendu dire que le club recrutait et j'ai fini par [[participer|-에 참여하다]] à la première réunion.
+7. Comme j'avais oublié de [[virer|입금하다]] la cotisation, j'ai fini par payer sur place.
+8. Comme la réunion était [[centrée sur|-을 중심으로]] les débutants, j'ai fini par poser beaucoup de questions.
+9. Comme l'équipe [[ne faisait qu'un|하나가 되다]], on a fini par gagner le tournoi.
+10. Comme je voulais [[rassembler|-을 모으다]] tout le monde, j'ai fini par organiser un pique-nique.
 
 **Corrections — I**
-1. 저는 먹는 것을 좋아해서 요리를 배우게 됐어요.
-2. 그녀는 가족 요리법을 지키고 싶어서 요리책을 쓰게 됐어요.
-3. 그는 제과에 관심이 있어서 작은 빵집을 열게 됐어요.
-4. 저는 더 건강하게 먹고 싶어서 매일 직접 요리하게 됐어요.
-5. 그녀는 한국 음식을 알고 싶어서 김치 수업을 듣게 됐어요.
-6. 그는 커피를 좋아해서 바리스타로 일하게 됐어요.
-7. 제 레시피를 나누고 싶은 마음이 생겨서 요리 채널을 만들게 됐어요.
-8. 그녀는 돈을 아끼고 싶어서 외식을 그만하게 됐어요.
-9. 그는 향신료를 좋아해서 새로운 맛을 찾아 여행하게 됐어요.
-10. 친구들에게 잘 보이고 싶어서 테마 저녁 식사를 준비하게 됐어요.
+1. 더 자주 보고 싶어서 매달 모임을 갖게 됐어요.
+2. 단톡방 메시지를 보고 번개 모임에 가게 됐어요.
+3. 날짜가 늦게 공지돼서 약속을 취소하게 됐어요.
+4. 유용한 정보를 나눠서 정기 모임에 매번 오게 됐어요.
+5. 총회가 연 1회만 있어서 다 적어 두게 됐어요.
+6. 동호회에서 회원을 모집한다는 말을 듣고 첫 모임에 참여하게 됐어요.
+7. 회비 입금하는 걸 잊어버려서 현장에서 내게 됐어요.
+8. 모임이 초보자를 중심으로 진행돼서 질문을 많이 하게 됐어요.
+9. 팀이 하나가 돼서 대회에서 이기게 됐어요.
+10. 모두를 모으고 싶어서 소풍을 준비하게 됐어요.
 
-**II. -다가 -아/어서 -게 됐어요**
-1. En regardant des vidéos de cuisine, elle s'est passionnée pour la pâtisserie, donc elle a fini par ouvrir sa boulangerie.
-2. En essayant plusieurs recettes, il a découvert la cuisine coréenne, donc il a fini par prendre des cours.
-3. En cuisinant pour ses amis, j'ai reçu beaucoup de compliments, donc j'ai fini par créer une chaîne de cuisine.
-4. En travaillant dans un café, elle s'est intéressée au café, donc elle a fini par devenir barista.
-5. En lisant un livre de recettes familiales, il a voulu les préserver, donc il a fini par les écrire lui-même.
-6. En mangeant souvent au restaurant, j'ai remarqué mes dépenses, donc j'ai fini par cuisiner à la maison.
-7. En goûtant des plats épicés en voyage, elle a adoré ça, donc elle a fini par apprendre à les préparer.
-8. En organisant un petit dîner entre amis, il a eu du succès, donc il a fini par en organiser régulièrement.
-9. En suivant un régime plus sain, j'ai changé mes habitudes, donc j'ai fini par cuisiner tous les jours moi-même.
-10. En discutant avec un chef, elle a appris beaucoup de choses, donc elle a fini par travailler dans son restaurant.
+**II. Variante avancée : -다가 -아/어서 -게 됐어요**
+1. En discutant dans le groupe de discussion, quelqu'un a proposé une [[rencontre improvisée|번개 모임]], donc on a fini par se voir le soir même.
+2. En préparant la [[réunion régulière|정기 모임]], j'ai croisé le président, donc j'ai fini par [[me charger de l'animation|사회를 맡다]].
+3. En [[prenant le temps de discuter|-는 시간을 갖다]] après la réunion, on s'est découvert des points communs, donc on a fini par se voir en dehors du club.
+4. En regardant la liste des [[nouveaux membres|신입 회원]], j'ai trouvé un ancien camarade, donc j'ai fini par le recontacter.
+5. Pendant qu'on [[tenait la réunion|모임을 갖다]], on a manqué de place, donc on a fini par louer une salle.
+6. En [[partageant des informations|정보를 나누다]] sur les voyages, on a eu envie de partir ensemble, donc on a fini par organiser un voyage.
+7. En [[partageant|함께하다]] un bon moment au café, on n'a pas vu l'heure passer, donc on a fini par rater le dernier métro.
+8. En faisant les comptes, j'ai remarqué qu'un membre n'avait pas [[versé|입금하다]] sa cotisation, donc j'ai fini par lui envoyer un rappel.
+9. En nous [[présentant à tour de rôle|돌아가면서 소개를 하다]], on a découvert qu'on venait tous de la même ville, donc on a fini par créer un groupe.
+10. En [[participant|-에 참여하다]] à un événement [[national|전국]], on a rencontré d'autres clubs, donc on a fini par organiser une réunion commune.
 
 **Corrections — II**
-1. 요리 영상을 보다가 제과에 관심이 생겨서 빵집을 열게 됐어요.
-2. 여러 레시피를 시도하다가 한국 음식을 알게 돼서 수업을 듣게 됐어요.
-3. 친구들에게 요리를 해 주다가 칭찬을 많이 받아서 요리 채널을 만들게 됐어요.
-4. 카페에서 일하다가 커피에 관심이 생겨서 바리스타로 일하게 됐어요.
-5. 가족 요리책을 읽다가 지키고 싶어져서 직접 쓰게 됐어요.
-6. 자주 외식하다가 지출을 깨달아서 집에서 요리하게 됐어요.
-7. 여행 중에 매운 음식을 맛보다가 반해서 만드는 법을 배우게 됐어요.
-8. 친구들과 작은 저녁 식사를 열다가 반응이 좋아서 자주 열게 됐어요.
-9. 더 건강한 식단을 따르다가 습관이 바뀌어서 매일 직접 요리하게 됐어요.
-10. 셰프와 이야기하다가 많은 것을 배워서 그의 식당에서 일하게 됐어요.
+1. 단톡방에서 이야기하다가 누가 번개 모임을 제안해서 그날 저녁에 만나게 됐어요.
+2. 정기 모임을 준비하다가 회장님을 만나서 사회를 맡게 됐어요.
+3. 모임 후에 이야기하는 시간을 갖다가 공통점을 찾아서 모임 밖에서도 만나게 됐어요.
+4. 신입 회원 명단을 보다가 옛 친구를 발견해서 다시 연락하게 됐어요.
+5. 모임을 갖다가 자리가 부족해서 공간을 빌리게 됐어요.
+6. 여행 정보를 나누다가 같이 떠나고 싶어져서 여행을 계획하게 됐어요.
+7. 카페에서 즐거운 시간을 함께하다가 시간 가는 줄 몰라서 막차를 놓치게 됐어요.
+8. 회계 정리를 하다가 한 회원이 회비를 입금하지 않은 걸 알아서 알림을 보내게 됐어요.
+9. 돌아가면서 소개를 하다가 모두 같은 고향이라는 걸 알아서 모임을 만들게 됐어요.
+10. 전국 행사에 참여하다가 다른 동호회들을 만나서 합동 모임을 열게 됐어요.
 
 **III. Expressions pour organiser un événement**
-- Annoncez : « Nous allons maintenant déguster les plats préparés par les membres. »
-- Annoncez : « Il va maintenant y avoir une démonstration de cuisine. »
-- Demandez au public : « Veuillez vous laver les mains avant de commencer. »
-- Demandez au public : « Veuillez goûter chaque plat avec modération. »
+
+*Contexte : tu es le 사회자 (animateur) de l'événement. Traduis en 격식체.*
+
+1. Annonce : « Nous allons maintenant avoir le rapport financier de l'année. »
+2. Annonce : « Il va maintenant y avoir l'élection du nouveau président. »
+3. Consigne : « Veuillez noter la date de la prochaine [[réunion régulière|정기 모임]]. »
+4. Consigne : « Veuillez voter en levant la main. »
 
 **Corrections — III**
-- 지금부터 회원들이 준비한 음식을 시식하겠습니다.
-- 지금부터 요리 시연이 있겠습니다.
-- 시작하기 전에 손을 씻어 주시기 바랍니다.
-- 각 음식을 적당히 맛봐 주시기 바랍니다.
+1. 지금부터 올해 회계 보고가 있겠습니다.
+2. 지금부터 새 회장 선출이 있겠습니다.
+3. 다음 정기 모임 날짜를 적어 주시기 바랍니다.
+4. 손을 들어 투표해 주시기 바랍니다.
 
 **IV. Expressions pour se présenter**
-« Je m'appelle Manon, je viens de Lille. J'aime cuisiner, donc j'ai fini par rejoindre ce club de cuisine. Enseignez-moi beaucoup, s'il vous plaît. »
 
-**Correction — IV**
-저는 릴에서 온 마농입니다. 요리하는 것을 좋아해서 이 요리 동호회에 가입하게 됐습니다. 많이 가르쳐 주세요.
+*Contexte : tu te présentes aux membres. Garde le 격식체 du début à la fin.*
+
+1. « Je m'appelle Thomas. »
+2. « Comme je voulais [[partager des informations|정보를 나누다]] sur la cuisine, j'ai fini par adhérer. »
+3. « Appelez-moi Tom. »
+4. « J'espère qu'on [[se comprendra bien|마음이 통하다]] à l'avenir. »
+
+**Corrections — IV**
+1. 저는 토마라고 합니다.
+2. 요리 정보를 나누고 싶어서 가입하게 됐습니다.
+3. 톰이라고 불러 주세요.
+4. 앞으로 여러분과 마음이 잘 통했으면 좋겠습니다.

@@ -5,12 +5,12 @@
 
 *Contexte : tu racontes ce que tu as vu tes camarades faire aujourd'hui.*
 
-1. Mika est entrée en classe en [[souriant largement|활짝]].
-2. Après le film, Louis a [[reniflé|훌쩍훌쩍]] pendant dix minutes.
-3. Mes amis ont [[hoché la tête|끄덕끄덕]] pendant ma présentation.
-4. Ils ont chuchoté [[à voix basse|소곤소곤]] à propos de la fête surprise.
-5. Pei avait les [[yeux pleins de larmes|글썽글썽]] en recevant son cadeau.
-6. Un oiseau est passé [[à grands coups d'ailes|훨훨]] devant la fenêtre de la classe.
+1. Mika est entrée en classe en souriant largement.
+2. Après le film, Louis a reniflé pendant dix minutes.
+3. Mes amis ont hoché la tête pendant ma présentation.
+4. Ils ont chuchoté à voix basse à propos de la fête surprise.
+5. Pei avait les yeux pleins de larmes en recevant son cadeau.
+6. Un oiseau est passé à grands coups d'ailes devant la fenêtre de la classe.
 
 **Corrections — I**
 1. 미카 씨가 활짝 웃으면서 교실에 들어왔어요.

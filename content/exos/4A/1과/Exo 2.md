@@ -1,70 +1,80 @@
 # EXO 2 — 4A 과1
+**Thème : Club de patinage artistique**
 
-**I. -아/어서 -게 됐어요**
-1. Comme il aimait les langues, il a fini par se spécialiser en littérature coréenne.
-2. Elle s'intéressait à la médecine, donc elle a fini par étudier la biologie.
-3. Comme il manquait d'expérience, il a fini par accepter un stage non payé.
-4. J'ai eu envie de vivre à l'étranger, donc j'ai fini par déménager à Séoul.
-5. Comme elle aimait aider les autres, elle a fini par devenir secouriste d'urgence.
-6. Il voulait obtenir des informations sur le marché, donc il a fini par lire beaucoup d'articles.
-7. Comme il venait d'être libéré du service militaire, il a fini par reprendre ses études.
-8. J'aime les percussions, donc j'ai fini par apprendre le samulnori.
-9. Elle voulait retrouver la sérénité, donc elle a fini par pratiquer la méditation.
-10. Comme il aimait le patinage, il a fini par s'inscrire à un cours de patinage artistique.
+**I. Structure principale : -아/어서 -게 됐어요**
+1. Comme j'aimais regarder le [[patinage artistique|피겨 스케이팅]], j'ai fini par m'inscrire à un club.
+2. J'ai vu un spectacle de [[danse sur glace|아이스 댄싱]] et j'ai fini par [[relever le défi|도전하다]].
+3. Comme j'étais [[débutant|초보자]], j'ai fini par suivre des cours [[centrés sur|-을 중심으로]] les bases.
+4. Comme je voulais [[profiter|즐기다]] de l'hiver, j'ai fini par patiner chaque week-end.
+5. Comme le coach était un vrai [[expert|전문가]], j'ai fini par apprendre très vite.
+6. J'ai lu un article sur une patineuse célèbre et j'ai fini par [[me passionner|뜨거운 관심을 갖다]] pour ce sport.
+7. Comme on s'entraînait ensemble tous les jours, on a fini par [[partager|함께하다]] aussi nos week-ends.
+8. Comme les cours étaient trop [[basiques|기본적이다]], j'ai fini par changer de groupe.
+9. Comme je voulais [[relever un nouveau défi|도전하다]], j'ai fini par participer à un concours [[national|전국]].
+10. Comme la patinoire était [[bon marché|저렴하다]] le matin, j'ai fini par y aller avant le travail.
 
 **Corrections — I**
-1. 그는 언어를 좋아해서 국어국문학과를 전공하게 됐어요.
-2. 그녀는 의학에 관심이 있어서 생물학을 공부하게 됐어요.
-3. 그는 경험이 부족해서 무급 인턴을 하게 됐어요.
-4. 외국에서 살고 싶은 마음이 생겨서 서울로 이사하게 됐어요.
-5. 그녀는 다른 사람을 돕는 것을 좋아해서 긴급 구호가로 활동하게 됐어요.
-6. 그는 시장에 대한 정보를 얻고 싶어서 기사를 많이 읽게 됐어요.
-7. 그는 얼마 전에 제대해서 다시 공부하게 됐어요.
-8. 저는 타악기를 좋아해서 사물놀이를 배우게 됐어요.
-9. 그녀는 마음의 여유를 찾고 싶어서 명상을 하게 됐어요.
-10. 그는 스케이팅을 좋아해서 피겨 스케이팅 수업에 등록하게 됐어요.
+1. 피겨 스케이팅 보는 걸 좋아해서 동호회에 가입하게 됐어요.
+2. 아이스 댄싱 공연을 보고 도전하게 됐어요.
+3. 초보자라서 기초를 중심으로 수업을 듣게 됐어요.
+4. 겨울을 즐기고 싶어서 주말마다 스케이트를 타게 됐어요.
+5. 코치님이 진짜 전문가라서 아주 빨리 배우게 됐어요.
+6. 유명한 피겨 선수에 대한 기사를 읽고 이 스포츠에 뜨거운 관심을 갖게 됐어요.
+7. 매일 같이 연습해서 주말도 함께하게 됐어요.
+8. 수업이 너무 기본적이어서 반을 바꾸게 됐어요.
+9. 새로운 것에 도전하고 싶어서 전국 대회에 나가게 됐어요.
+10. 아침에는 스케이트장이 저렴해서 출근 전에 가게 됐어요.
 
-**II. -다가 -아/어서 -게 됐어요**
-1. En étudiant à l'université, il s'est passionné pour la littérature coréenne, donc il a fini par se spécialiser dans ce domaine.
-2. En faisant du bénévolat, elle a voulu aider davantage les gens, donc elle a fini par devenir secouriste d'urgence.
-3. En travaillant comme stagiaire, il a découvert les avantages de l'entreprise, donc il a fini par y postuler.
-4. En lisant des articles sur l'économie, j'ai eu envie d'en savoir plus, donc j'ai fini par étudier le commerce.
-5. En discutant avec des collègues, elle a eu envie de changer de carrière, donc elle a fini par changer de métier.
-6. En pratiquant la méditation chaque jour, il a retrouvé la sérénité, donc il a fini par l'enseigner à d'autres.
-7. En regardant des vidéos de patinage, elle s'est passionnée pour ce sport, donc elle a fini par s'inscrire à un cours.
-8. En vivant sa période de service militaire, il s'inquiétait pour son avenir, donc il a fini par reprendre ses études après avoir été libéré.
-9. En apprenant les percussions traditionnelles, j'ai découvert le samulnori, donc j'ai fini par rejoindre un groupe de musique.
-10. En cherchant du travail, elle a trouvé une offre intéressante, donc elle a fini par accepter ce poste.
+**II. Variante avancée : -다가 -아/어서 -게 됐어요**
+1. En regardant les Jeux olympiques à la télé, j'ai eu envie de patiner, donc j'ai fini par m'inscrire à un club de [[patinage artistique|피겨 스케이팅]].
+2. En patinant seul, je suis tombé plusieurs fois, donc j'ai fini par [[demander l'aide|도움을 구하다]] d'un [[expert|전문가]].
+3. En essayant la [[danse sur glace|아이스 댄싱]], j'ai rencontré ma partenaire, donc j'ai fini par [[me lancer dans|도전하다]] les compétitions.
+4. En [[participant|-에 참여하다]] à un stage, je me suis blessé au genou, donc j'ai fini par me reposer un mois.
+5. En aidant les [[débutants|초보자]], j'ai pris goût à l'enseignement, donc j'ai fini par travailler comme coach.
+6. En [[profitant|즐기다]] de la patinoire le soir, j'ai rencontré des gens sympas, donc j'ai fini par former une équipe.
+7. En [[passant du temps ensemble|함께하다]] à la patinoire, on s'est rapprochés, donc on a fini par se marier.
+8. En cherchant une activité d'hiver, je suis tombé sur une pub de la patinoire, donc j'ai fini par m'inscrire à un cours pour [[débutants|초보자]].
+9. En m'entraînant chaque matin, je suis devenu ami avec un [[expert|전문가]], donc j'ai fini par m'entraîner avec lui gratuitement.
+10. En [[participant|-에 참여하다]] à un concours [[national|전국]], j'ai été remarqué par un entraîneur, donc j'ai fini par entrer dans une équipe.
 
 **Corrections — II**
-1. 대학교에서 공부하다가 국어국문학에 관심이 생겨서 그 분야를 전공하게 됐어요.
-2. 봉사 활동을 하다가 사람들을 더 돕고 싶어져서 긴급 구호가로 활동하게 됐어요.
-3. 인턴으로 일하다가 그 회사의 장점을 알게 돼서 지원하게 됐어요.
-4. 경제 기사를 읽다가 더 알고 싶어져서 경영학을 공부하게 됐어요.
-5. 동료들과 이야기하다가 직업을 바꾸고 싶어져서 이직하게 됐어요.
-6. 매일 명상을 하다가 마음의 여유를 찾게 돼서 다른 사람들에게 가르치게 됐어요.
-7. 스케이팅 영상을 보다가 이 운동에 관심이 생겨서 수업에 등록하게 됐어요.
-8. 군 생활을 하다가 미래가 걱정돼서 제대 후에 다시 공부하게 됐어요.
-9. 전통 타악기를 배우다가 사물놀이를 알게 돼서 음악 모임에 가입하게 됐어요.
-10. 일자리를 찾다가 좋은 조건을 발견해서 이 일을 하게 됐어요.
-
-*Note grammaire (phrase 8) : ici l'action « faire son service militaire » est vécue comme terminée avant la décision de reprendre les études → on aurait aussi pu dire 군 생활을 했다가 (-았다가), cf. la nuance -다가 vs -았/었다가 de la leçon.*
+1. 텔레비전으로 올림픽을 보다가 스케이트를 타고 싶어져서 피겨 스케이팅 동호회에 가입하게 됐어요.
+2. 혼자 스케이트를 타다가 여러 번 넘어져서 전문가에게 도움을 구하게 됐어요.
+3. 아이스 댄싱을 해 보다가 파트너를 만나서 대회에 도전하게 됐어요.
+4. 훈련 캠프에 참여하다가 무릎을 다쳐서 한 달 동안 쉬게 됐어요.
+5. 초보자들을 도와주다가 가르치는 게 좋아져서 코치로 일하게 됐어요.
+6. 저녁에 스케이트장을 즐기다가 좋은 사람들을 만나서 팀을 만들게 됐어요.
+7. 스케이트장에서 시간을 함께하다가 친해져서 결혼하게 됐어요.
+8. 겨울 운동을 찾다가 스케이트장 광고가 눈에 띄어서 초보자 수업에 등록하게 됐어요.
+9. 매일 아침 연습하다가 한 전문가와 친해져서 그분과 무료로 연습하게 됐어요.
+10. 전국 대회에 참여하다가 코치의 눈에 띄어서 팀에 들어가게 됐어요.
 
 **III. Expressions pour organiser un événement**
-- Annoncez : « Nous allons maintenant assister à une performance de danse. »
-- Annoncez : « Il va maintenant y avoir la présentation des nouveaux membres. »
-- Demandez au public : « Veuillez écouter attentivement jusqu'à la fin. »
-- Demandez au public : « Veuillez vous présenter à tour de rôle. »
+
+*Contexte : tu es le 사회자 (animateur) de l'événement. Traduis en 격식체.*
+
+1. Annonce : « Nous allons maintenant avoir le spectacle de [[danse sur glace|아이스 댄싱]] des membres. »
+2. Annonce : « Il va maintenant y avoir la remise des prix. »
+3. Consigne : « Veuillez ne pas prendre de photos avec le flash. »
+4. Consigne : « Veuillez applaudir bien fort les patineurs. »
 
 **Corrections — III**
-- 지금부터 춤 공연이 있겠습니다.
-- 지금부터 신입 회원 소개가 있겠습니다.
-- 여러분, 끝까지 잘 들어 주시기 바랍니다.
-- 돌아가면서 자기소개를 해 주시기 바랍니다.
+1. 지금부터 회원들의 아이스 댄싱 공연이 있겠습니다.
+2. 지금부터 시상식이 있겠습니다.
+3. 플래시를 켜고 사진을 찍지 말아 주시기 바랍니다.
+4. 선수들에게 큰 박수를 보내 주시기 바랍니다.
 
 **IV. Expressions pour se présenter**
-Traduisez cette présentation formelle complète :
-« Je m'appelle Sophie, je viens de Paris. En regardant une annonce sur Internet, je me suis intéressée à ce club, donc j'ai fini par m'inscrire. Je vais participer activement. Aidez-moi beaucoup, s'il vous plaît. »
 
-**Correction — IV**
-저는 파리에서 온 소피입니다. 인터넷에서 광고를 보다가 이 동호회에 관심이 생겨서 가입하게 됐습니다. 열심히 활동하겠습니다. 많이 도와주세요.
+*Contexte : tu te présentes aux membres. Garde le 격식체 du début à la fin.*
+
+1. « Je suis Minsu, je viens de Busan. »
+2. « En regardant les Jeux olympiques, j'ai eu envie d'essayer, donc j'ai fini par adhérer. »
+3. « Je suis encore [[débutant|초보자]]. Je ne suis pas assez bon, alors aidez-moi beaucoup. »
+4. « J'espère bien m'entendre avec vous à l'avenir. »
+
+**Corrections — IV**
+1. 부산에서 온 민수입니다.
+2. 올림픽을 보다가 해 보고 싶어져서 가입하게 됐습니다.
+3. 아직 초보자입니다. 부족하니까 많이 도와주세요.
+4. 앞으로 여러분과 잘 지냈으면 좋겠습니다.

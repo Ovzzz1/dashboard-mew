@@ -5,11 +5,11 @@
 
 *Contexte : tu expliques comment monter à l'observatoire du parc.*
 
-1. Sortez par la [[sortie 2|2번 출구로 나가다]] et [[suivez la route|길을 따라 가다]].
+1. Sortez par la sortie 2 et suivez la route.
 2. Si vous marchez un peu, un bâtiment [[ordinaire|평범하다]] de trois étages apparaît.
 3. Longez ce bâtiment et allez à gauche.
-4. Montez la côte, puis au parking, [[tournez à droite|오른쪽으로 돌다]].
-5. L'[[observatoire|전망대]] est [[juste devant|정면에 있다]] ; la [[piste de luge|눈썰매장]] est en contrebas.
+4. Montez la côte, puis au parking, tournez à droite.
+5. L'[[observatoire|전망대]] est juste devant ; la [[piste de luge|눈썰매장]] est en contrebas.
 
 **Corrections — I**
 1. 2번 출구로 나가서 길을 따라 가세요.

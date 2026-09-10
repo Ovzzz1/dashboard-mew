@@ -29,15 +29,15 @@
 
 *Contexte : vous présentez la culture vestimentaire de la période Joseon.*
 
-1. "Je vais maintenant commencer ma présentation."
+1. "Bonjour à tous. Je vais maintenant commencer ma présentation."
 2. "Je vais parler de la [[culture vestimentaire|의복 문화]] de la [[période Joseon|조선 시대]]."
 3. "Je vais d'abord présenter la hiérarchie sociale, puis son influence sur les vêtements."
 4. "Ce que vous voyez maintenant, c'est une illustration des habits royaux de Joseon."
-5. "Merci de m'avoir écouté. Veuillez prendre la parole si vous avez des questions."
+5. "Jusqu'ici, je vous ai parlé de la culture vestimentaire de Joseon. Merci."
 
 **Corrections — II**
-1. 지금부터 발표를 시작하겠습니다.
+1. 안녕하십니까? 지금부터 발표를 시작하겠습니다.
 2. 저는 조선 시대의 의복 문화에 대해 발표하려고 합니다.
 3. 먼저 사회 계층을 소개한 다음에 의복에 미친 영향에 대해 설명하겠습니다.
 4. 지금 보시는 것은 조선 시대 왕실 복식의 그림입니다.
-5. 들어 주셔서 감사합니다. 질문이 있으신 분은 말씀해 주십시오.
+5. 지금까지 저는 조선 시대 의복 문화에 대해서 말씀드렸습니다. 감사합니다.

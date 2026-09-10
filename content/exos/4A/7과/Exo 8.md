@@ -57,7 +57,7 @@
 5. Le recruteur va sûrement chercher la [[corrélation|관련성]], alors explique-la clairement.
 6. Tu vas sûrement hésiter sur le ton, alors reste [[sérieux|진지하게]].
 7. Ils vont sûrement remarquer ton [[mémoire|졸업 논문]], alors résume-le en deux lignes.
-8. Ce sera sûrement une [[occasion précieuse|소중하다]], alors [[fais de ton mieux|최선을 다하다]].
+8. Ce sera sûrement ta seule chance cette année, alors [[fais de ton mieux|최선을 다하다]].
 9. Tu vas sûrement [[gagner en confiance|자신감을 얻다]] après, alors envoie-la.
 10. Le [[traitement des employés|직원 대우]] va sûrement t'intéresser, alors renseigne-toi avant.
 
@@ -69,6 +69,6 @@
 5. 면접관이 관련성을 볼 텐데 분명하게 설명해.
 6. 어떤 어조로 쓸지 고민될 텐데 진지하게 써.
 7. 졸업 논문을 볼 텐데 두 줄로 요약해.
-8. 소중한 기회일 텐데 최선을 다해.
+8. 올해 유일한 기회일 텐데 최선을 다해.
 9. 쓰고 나면 자신감을 얻을 텐데 그냥 보내.
 10. 직원 대우가 궁금할 텐데 미리 알아봐.

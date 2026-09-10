@@ -5,11 +5,11 @@
 
 *Contexte : tu guides un visiteur jusqu'au parc écologique de Seonyudo.*
 
-1. [[Sortez par la sortie 2|2번 출구로 나가다]] de la station Seonyudo.
-2. Si vous [[suivez la route|길을 따라 가다]], un pont apparaît.
-3. Traversez le pont, puis au bout, [[tournez à droite|오른쪽으로 돌다]].
+1. Sortez par la sortie 2 de la station Seonyudo.
+2. Si vous suivez la route, un pont apparaît.
+3. Traversez le pont, puis au bout, tournez à droite.
 4. Tournez à gauche en longeant le [[pilier|기둥]] et le [[parc écologique|생태 공원]] apparaît.
-5. Une fois entré, l'ancienne [[station d'épuration|정수장]] est [[juste devant vous|정면에 있다]].
+5. Une fois entré, l'ancienne [[station d'épuration|정수장]] est juste devant vous.
 
 **Corrections — I**
 1. 선유도역 2번 출구로 나가세요.

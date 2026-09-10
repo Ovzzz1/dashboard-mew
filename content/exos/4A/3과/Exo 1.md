@@ -31,13 +31,13 @@
 
 1. "Je vais maintenant commencer ma présentation."
 2. "Le [[sujet|발표 주제]] de ma présentation est la cuisine traditionnelle coréenne."
-3. "Je vais d'abord présenter l'[[introduction|서론]], puis passer au [[développement|본론]]."
+3. "Je vais d'abord présenter l'histoire, puis expliquer les plats représentatifs."
 4. "Ce que vous voyez maintenant, c'est la carte des plats les plus populaires par région."
 5. "Je vais maintenant conclure ma présentation. Merci de m'avoir écouté."
 
 **Corrections — II**
 1. 지금부터 발표를 시작하겠습니다.
 2. 발표 주제는 한국 전통 음식입니다.
-3. 먼저 서론을 소개한 다음에 본론으로 넘어가겠습니다.
+3. 먼저 역사를 소개한 다음에 대표 음식에 대해 설명하겠습니다.
 4. 지금 보시는 것은 지역별 인기 음식 지도입니다.
 5. 이것으로 발표를 마치겠습니다. 들어 주셔서 감사합니다.

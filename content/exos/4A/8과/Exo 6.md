@@ -5,10 +5,10 @@
 
 *Contexte : tu expliques comment ranger ton matériel électrique.*
 
-1. Le [[câble|케이블]] est [[allongé|길쭉하다]] et en [[caoutchouc|고무]] [[souple|부드럽다]].
-2. La [[fiche|플러그]] est [[carrée|네모나다]] et [[dure|딱딱하다]].
-3. La [[prise|콘센트]] est [[rectangulaire|네모나다]] et fixée [[des deux côtés|양쪽]] du mur.
-4. Range-le dans un sac en [[plastique souple|비닐]] avant de le [[stocker|보관하다]].
+1. Le [[câble|케이블]] est allongé et en [[caoutchouc|고무]] souple.
+2. La [[fiche|플러그]] est carrée et dure.
+3. La [[prise|콘센트]] est rectangulaire et fixée [[des deux côtés|양쪽]] du mur.
+4. Range-le dans un sac en plastique souple avant de le [[stocker|보관하다]].
 5. Il faut [[débrancher|빼다]] la fiche avant de [[la brancher|꽂다]] ailleurs.
 6. Si on l'enroule [[dans tous les sens|이리저리]], ça finit par [[se casser|부서지다]].
 
@@ -33,19 +33,19 @@
 10. La [[commode|서랍장]] à câbles fait la taille de cette valise.
 
 **Corrections — II**
-1. 충전기는 손바닥만 해요.
+1. 충전기 크기가 손바닥만 해요.
 2. 플러그는 500원짜리 동전만 해요.
 3. 보관 상자는 이 서랍만 해요.
-4. 어댑터는 이 라이터만 해요.
-5. 감아 놓은 연장선은 이 접시만 해요.
-6. 전원 어댑터는 이 비누만 해요.
-7. 가방은 이 책만 해요.
-8. 라벨은 이 우표만 해요.
+4. 어댑터 크기가 이 라이터만 해요.
+5. 감아 놓 크기가 연장선은 이 접시만 해요.
+6. 전원 어댑터 크기가 이 비누만 해요.
+7. 가방 크기가 이 책만 해요.
+8. 라벨 크기가 이 우표만 해요.
 9. 케이블 정리용 열쇠고리는 제 엄지손가락만 해요.
 10. 케이블 서랍장은 이 여행 가방만 해요.
 
 **III. Dépasser ou ne pas atteindre une valeur : -이 넘어요 / -이 안 돼요**
-1. La [[longueur|길이]] du câble dépasse trois mètres.
+1. La [[longueur|길이]] de la rallonge dépasse cinq mètres.
 2. La [[largeur|가로]] de la prise ne fait pas 10 cm.
 3. Le [[poids|무게]] du chargeur ne fait pas 150 grammes.
 4. Le nombre de [[câbles|케이블]] à ranger dépasse dix.
@@ -57,7 +57,7 @@
 10. Le temps pour tout [[ranger|보관하다]] ne fait pas trente minutes.
 
 **Corrections — III**
-1. 케이블 길이가 3미터가 넘어요.
+1. 연장선 길이가 5미터가 넘어요.
 2. 콘센트 가로가 10센티미터가 안 돼요.
 3. 충전기 무게가 150그램이 안 돼요.
 4. 정리할 케이블이 열 개가 넘어요.

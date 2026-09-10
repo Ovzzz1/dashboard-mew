@@ -7,7 +7,7 @@
 3. Tu sais bien qu'il y a une place pour les [[fauteuils roulants|휠체어]].
 4. Tu sais bien qu'un peu de [[considération|배려]] suffit.
 5. Tu sais bien que les [[fumées|매연]] sont pires aux heures de pointe.
-6. Tu sais bien que [[c'est dommage de perdre du temps sur la route|길에 버리는 시간이 너무 아까워요]].
+6. Tu sais bien qu'on perd une heure chaque matin dans le [[bus bondé|만원 버스]].
 7. Tu sais bien qu'il vaut mieux partir tôt, [[plutôt que|차라리]] courir.
 8. Tu sais bien qu'on a tous [[pensé aux autres|마음 쓰다]] ce jour-là.
 9. Tu sais bien que ce n'est pas [[suffisant|충분하다]] de klaxonner.
@@ -19,7 +19,7 @@
 3. 휠체어 자리가 있잖아요.
 4. 배려만 있으면 되잖아요.
 5. 출퇴근 시간에 매연이 더 심하잖아요.
-6. 길에 버리는 시간이 너무 아깝잖아요.
+6. 매일 아침 만원 버스에서 한 시간을 버리잖아요.
 7. 뛰는 것보다 차라리 일찍 나가는 게 낫잖아요.
 8. 그날 다들 서로 마음 썼잖아요.
 9. 경적만으로는 충분하지 않잖아요.
@@ -35,7 +35,7 @@
 7. Ce n'est pas parce qu'on montre de la [[considération|배려]] qu'on est forcément remercié.
 8. Ce n'est pas parce qu'un métro est neuf que la [[qualité est forcément bonne|품질이 좋다]].
 9. Ce n'est pas parce qu'il y a un [[conflit|갈등]] que quelqu'un a forcément tort.
-10. Ce n'est pas parce qu'on [[aide|일으켜 주다]] quelqu'un qu'on est forcément héroïque.
+10. Ce n'est pas parce qu'on [[aide quelqu'un à se relever|일으켜 주다]] qu'on est forcément un héros.
 
 **Corrections — II**
 1. 만원 버스라고 해서 다 밀어야 하는 것은 아니에요.
@@ -47,7 +47,7 @@
 7. 배려한다고 해서 다 고맙다는 말을 듣는 것은 아니에요.
 8. 지하철이 새것이라고 해서 다 품질이 좋은 것은 아니에요.
 9. 갈등이 있다고 해서 다 누가 잘못한 것은 아니에요.
-10. 도와준다고 해서 다 영웅인 것은 아니에요.
+10. 넘어진 사람을 일으켜 준다고 해서 다 영웅인 것은 아니에요.
 
 **III. Probabilité comme base d'une action : -을 텐데②**
 1. Le bus va sûrement être [[bondé|만원 버스]], alors prenons le métro.

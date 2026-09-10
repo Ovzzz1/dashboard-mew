@@ -5,12 +5,12 @@
 
 *Contexte : tu rédiges des annonces pour vendre tes affaires.*
 
-1. Réveil : [[rond|둥글다]], en [[plastique|플라스틱]], il [[fait du bruit|소리를 내다]] fort.
-2. [[Commode|서랍장]] : [[rectangulaire|네모나다]], en bois [[dur|딱딱하다]], trois [[tiroirs|서랍]].
-3. [[Gourde|텀블러]] : [[allongée|길쭉하다]], en [[verre|유리]], [[texture|감촉]] [[lisse|부드럽다]].
-4. [[Lampadaire|스탠드]] : [[haut|높이]], base [[ronde|둥글다]], [[à utiliser souvent|즐겨 쓰다]] pour lire.
-5. Coussin : [[moelleux|푹신하다]], en [[tissu|천]], [[forme|모양]] [[carrée|네모나다]].
-6. [[Haltère|아령]] : [[dur|딱딱하다]], recouvert de [[caoutchouc|고무]], ça [[fait de l'exercice|운동이 되다]] à la maison.
+1. Réveil : rond, en plastique, il [[fait du bruit|소리를 내다]] fort.
+2. [[Commode|서랍장]] : rectangulaire, en bois dur, trois [[tiroirs|서랍]].
+3. [[Gourde|텀블러]] : allongée, en verre, texture lisse.
+4. [[Lampadaire|스탠드]] : [[haut|높이]], base ronde, [[à utiliser souvent|즐겨 쓰다]] pour lire.
+5. Coussin : moelleux, en tissu, forme carrée.
+6. [[Haltère|아령]] : dur, recouvert de [[caoutchouc|고무]], ça [[fait de l'exercice|운동이 되다]] à la maison.
 
 **Corrections — I**
 1. 둥근 플라스틱 알람 시계인데 소리를 크게 내요.
@@ -34,10 +34,10 @@
 
 **Corrections — II**
 1. 서랍장은 이 냉장고만 해요.
-2. 알람 시계는 사과만 해요.
+2. 알람 시계 크기가 사과만 해요.
 3. 텀블러는 이 병만 해요.
 4. 스탠드는 이 문만 해요.
-5. 쿠션은 이 베개만 해요.
+5. 쿠션 크기가 이 베개만 해요.
 6. 아령은 제 주먹만 해요.
 7. 열쇠고리는 동전만 해요.
 8. 수첩은 손바닥만 해요.

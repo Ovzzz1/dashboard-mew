@@ -5,12 +5,12 @@
 
 *Contexte : quelqu'un rend une faveur reçue autrefois.*
 
-1. Il a [[souri largement|활짝]] en promettant de [[rendre la faveur|은혜를 갚다]].
-2. En racontant son histoire, elle a [[reniflé|훌쩍훌쩍]] plusieurs fois.
-3. Le vieil homme a [[hoché la tête|끄덕끄덕]] sans rien dire.
-4. Ils ont parlé [[à voix basse|소곤소곤]] pour garder le [[secret|비밀]].
-5. Ses [[yeux se sont remplis de larmes|글썽글썽]] quand il a dit merci.
-6. L'oiseau libéré s'est envolé [[à grands coups d'ailes|훨훨]].
+1. Il a souri largement en promettant de [[rendre la faveur|은혜를 갚다]].
+2. En racontant son histoire, elle a reniflé plusieurs fois.
+3. Le vieil homme a hoché la tête sans rien dire.
+4. Ils ont parlé à voix basse pour garder le [[secret|비밀]].
+5. Ses yeux se sont remplis de larmes quand il a dit merci.
+6. L'oiseau libéré s'est envolé à grands coups d'ailes.
 
 **Corrections — I**
 1. 그가 은혜를 갚겠다고 하면서 활짝 웃었어요.

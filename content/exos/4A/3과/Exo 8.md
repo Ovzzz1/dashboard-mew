@@ -29,14 +29,14 @@
 
 *Contexte : vous présentez des conseils pour réussir un exposé oral en 격식체.*
 
-1. "Je vais maintenant commencer ma présentation."
+1. "Je vais maintenant commencer. Le thème de ma présentation, c'est l'art de bien présenter."
 2. "Je vais parler des techniques pour réussir une présentation en [[style formel|격식체]]."
 3. "Premièrement, la posture. Deuxièmement, le [[contact visuel|눈을 맞추다]]."
 4. "Ce que vous voyez maintenant, c'est un exemple de [[diapositive|슬라이드]] mal conçue."
 5. "Veuillez noter vos commentaires et prendre la parole ensuite."
 
 **Corrections — II**
-1. 지금부터 발표를 시작하겠습니다.
+1. 지금부터 발표를 시작하겠습니다. 발표 주제는 발표를 잘하는 방법입니다.
 2. 저는 격식체로 발표를 잘하기 위한 기법에 대해 말씀드리려고 합니다.
 3. 첫째, 자세입니다. 둘째, 눈 맞추기입니다.
 4. 지금 보시는 것은 잘못 만든 슬라이드의 예입니다.

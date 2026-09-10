@@ -5,12 +5,12 @@
 
 *Contexte : ton groupe tourne un UCC pour un concours.*
 
-1. Le réalisateur a [[souri largement|활짝]] en voyant la première prise.
-2. L'actrice a [[reniflé|훌쩍훌쩍]] pendant toute la scène d'adieu.
-3. L'équipe a [[hoché la tête|끄덕끄덕]] quand il a expliqué le plan.
-4. Ils ont parlé [[à voix basse|소곤소곤]] pour ne pas gêner le tournage.
-5. Ses [[yeux se sont embués|글썽글썽]] en revoyant le montage final.
-6. Le drone a volé [[à grands coups d'ailes|훨훨]] au-dessus du champ.
+1. Le réalisateur a souri largement en voyant la première prise.
+2. L'actrice a reniflé pendant toute la scène d'adieu.
+3. L'équipe a hoché la tête quand il a expliqué le plan.
+4. Ils ont parlé à voix basse pour ne pas gêner le tournage.
+5. Ses yeux se sont embués en revoyant le montage final.
+6. Le drone a volé à grands coups d'ailes au-dessus du champ.
 
 **Corrections — I**
 1. 감독이 첫 촬영을 보고 활짝 웃었어요.

@@ -5,12 +5,12 @@
 
 *Contexte : tu racontes ce que tu as observé au parc.*
 
-1. L'oiseau s'est envolé [[à grands coups d'ailes|훨훨]] au-dessus des arbres.
-2. Une petite fille a [[pleuré en reniflant|훌쩍훌쩍]] parce qu'elle avait perdu son ballon.
-3. Le guide a [[hoché la tête|끄덕끄덕]] en écoutant les questions des enfants.
-4. Les visiteurs ont parlé [[à voix basse|소곤소곤]] devant la cage.
-5. Elle avait les [[yeux embués|글썽글썽]] en voyant les animaux [[pitoyables|불쌍하다]].
-6. Le [[papillon|나비]] s'est posé et l'enfant a [[souri largement|활짝]].
+1. L'oiseau s'est envolé à grands coups d'ailes au-dessus des arbres.
+2. Une petite fille a pleuré en reniflant parce qu'elle avait perdu son ballon.
+3. Le guide a hoché la tête en écoutant les questions des enfants.
+4. Les visiteurs ont parlé à voix basse devant la cage.
+5. Elle avait les yeux embués en voyant les animaux [[pitoyables|불쌍하다]].
+6. Le [[papillon|나비]] s'est posé et l'enfant a souri largement.
 
 **Corrections — I**
 1. 새가 나무 위로 훨훨 날아갔어요.

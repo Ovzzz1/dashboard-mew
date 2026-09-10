@@ -5,12 +5,12 @@
 
 *Contexte : tu parles de réveils et de bonnes résolutions.*
 
-1. Ce réveil est [[rond|둥글다]] et [[fait un bruit|소리를 내다]] très fort.
+1. Ce réveil est rond et [[fait un bruit|소리를 내다]] très fort.
 2. Il a des [[roues|바퀴]] en [[caoutchouc|고무]] et il roule [[dans tous les sens|이리저리]].
-3. Le corps est en [[plastique|플라스틱]] [[dur|딱딱하다]] et ne [[se casse|부서지다]] pas.
-4. Le bouton est [[carré|네모나다]] et la [[texture|감촉]] est [[douce|부드럽다]].
+3. Le corps est en plastique dur et ne [[se casse|부서지다]] pas.
+4. Le bouton est carré et la texture est douce.
 5. On peut [[régler l'heure et se coucher|시간을 맞춰 놓고 자다]] : il s'éteint [[tout seul|저절로]].
-6. Il est [[allongé|길쭉하다]] et [[tient dans une main|한 손에 쏙 들어오다]].
+6. Il est allongé et [[tient dans une main|한 손에 쏙 들어오다]].
 
 **Corrections — I**
 1. 이 알람 시계는 둥글고 소리를 아주 크게 내요.
@@ -33,15 +33,15 @@
 10. La télécommande fait la taille de ce [[carnet|수첩]].
 
 **Corrections — II**
-1. 이 알람 시계는 테니스공만 해요.
-2. 버튼은 동전만 해요.
-3. 화면은 이 카드만 해요.
-4. 새 모델은 제 휴대폰만 해요.
-5. 스피커는 제 엄지손가락만 해요.
-6. 상자는 이 책만 해요.
+1. 이 알람 시계 크기가 테니스공만 해요.
+2. 버튼 크기가 동전만 해요.
+3. 화면 크기가 이 카드만 해요.
+4. 새 모델 크기가 제 휴대폰만 해요.
+5. 스피커 크기가 제 엄지손가락만 해요.
+6. 상자 크기가 이 책만 해요.
 7. 충전기는 이 콘센트만 해요.
 8. 여행용 모델은 이 열쇠고리만 해요.
-9. 받침은 이 접시만 해요.
+9. 받침 크기가 이 접시만 해요.
 10. 리모컨은 이 수첩만 해요.
 
 **III. Dépasser ou ne pas atteindre une valeur : -이 넘어요 / -이 안 돼요**

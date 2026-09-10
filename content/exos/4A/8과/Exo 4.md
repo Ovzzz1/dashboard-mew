@@ -5,11 +5,11 @@
 
 *Contexte : tu présentes des 아이디어 상품 vus en ligne.*
 
-1. C'est un [[article gadget|아이디어 상품]] [[allongé|길쭉하다]] qui [[se transforme|변신하다]] en [[outil de sport|운동 도구]].
-2. Ce [[support de téléphone|휴대폰 꽃이]] est [[triangulaire|세모나다]] et [[dur|딱딱하다]].
-3. Il est en [[caoutchouc|고무]] [[doux|부드럽다]] et ne [[se casse|부서지다]] pas.
-4. C'est [[rond|둥글다]] et ça [[tient dans une main|한 손에 쏙 들어오다]].
-5. On peut l'[[enrouler autour de la cheville|발목에 감다]] : c'est en [[tissu|천]] [[moelleux|푹신하다]].
+1. C'est un [[article gadget|아이디어 상품]] allongé qui [[se transforme|변신하다]] en [[outil de sport|운동 도구]].
+2. Ce [[support de téléphone|휴대폰 꽃이]] est triangulaire et dur.
+3. Il est en [[caoutchouc|고무]] doux et ne [[se casse|부서지다]] pas.
+4. C'est rond et ça [[tient dans une main|한 손에 쏙 들어오다]].
+5. On peut l'[[enrouler autour de la cheville|발목에 감다]] : c'est en tissu moelleux.
 6. Ça sert aussi de [[décoration d'intérieur|실내 장식]], donc c'est [[deux d'un coup|일석이조]].
 
 **Corrections — I**
@@ -33,13 +33,13 @@
 10. La boîte fait la taille de ce [[tiroir|서랍]].
 
 **Corrections — II**
-1. 이 상품은 제 휴대폰만 해요.
-2. 휴대폰 꽂이는 이 컵만 해요.
+1. 이 상품 크기가 제 휴대폰만 해요.
+2. 휴대폰 꽂이 크기가 이 컵만 해요.
 3. 고무공은 오렌지만 해요.
 4. 이 장난감은 제 손만 해요.
 5. 재떨이는 이 받침 접시만 해요.
 6. 수첩은 이 카드만 해요.
-7. 접으면 이 지갑만 해요.
+7. 접으면 크기가 이 지갑만 해요.
 8. 접히는 텀블러는 레몬만 해요.
 9. 열쇠고리는 이 열쇠만 해요.
 10. 상자는 이 서랍만 해요.

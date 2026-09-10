@@ -5,12 +5,12 @@
 
 *Contexte : tu observes tes camarades préparer un 단막극.*
 
-1. Mika est entrée en [[souriant largement|활짝]] et a annoncé qu'on allait [[répartir les rôles|역할을 나누다]].
-2. Pendant la scène triste, Louis a [[pleuré en reniflant|훌쩍훌쩍]] sur scène.
-3. Le public a [[hoché la tête|끄덕끄덕]] en écoutant la fin de l'histoire.
-4. Les deux acteurs ont chuchoté [[à voix basse|소곤소곤]] derrière le rideau.
-5. À la dernière réplique, elle avait les [[yeux pleins de larmes|글썽글썽]].
-6. Le [[papillon|나비]] en papier a volé [[à grands coups d'ailes|훨훨]] au-dessus de la scène.
+1. Mika est entrée en souriant largement et a annoncé qu'on allait [[répartir les rôles|역할을 나누다]].
+2. Pendant la scène triste, Louis a pleuré en reniflant sur scène.
+3. Le public a hoché la tête en écoutant la fin de l'histoire.
+4. Les deux acteurs ont chuchoté à voix basse derrière le rideau.
+5. À la dernière réplique, elle avait les yeux pleins de larmes.
+6. Le [[papillon|나비]] en papier a volé à grands coups d'ailes au-dessus de la scène.
 
 **Corrections — I**
 1. 미카가 활짝 웃으면서 들어와서 역할을 나누자고 했어요.

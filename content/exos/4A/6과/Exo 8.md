@@ -5,12 +5,12 @@
 
 *Contexte : un camarade présente les symboles de la fondation nationale.*
 
-1. Il a [[souri largement|활짝]] en montrant le [[miroir|거울]] et l'[[épée|칼]] du mythe.
-2. Un enfant a [[reniflé|훌쩍훌쩍]] pendant la scène de l'ourse dans la grotte.
-3. Le public a [[hoché la tête|끄덕끄덕]] quand il a expliqué ce que [[signifiait|뜻하다]] chaque objet.
-4. Deux élèves ont parlé [[à voix basse|소곤소곤]] au fond de la salle.
-5. En parlant de son pays, elle avait les [[yeux embués|글썽글썽]].
-6. Sur l'écran, un oiseau volait [[à grands coups d'ailes|훨훨]] au-dessus du [[soleil|태양]].
+1. Il a souri largement en montrant le [[miroir|거울]] et l'[[épée|칼]] du mythe.
+2. Un enfant a reniflé pendant la scène de l'ourse dans la grotte.
+3. Le public a hoché la tête quand il a expliqué ce que [[signifiait|뜻하다]] chaque objet.
+4. Deux élèves ont parlé à voix basse au fond de la salle.
+5. En parlant de son pays, elle avait les yeux embués.
+6. Sur l'écran, un oiseau volait à grands coups d'ailes au-dessus du [[soleil|태양]].
 
 **Corrections — I**
 1. 그가 신화 속 거울과 칼을 보여주면서 활짝 웃었어요.

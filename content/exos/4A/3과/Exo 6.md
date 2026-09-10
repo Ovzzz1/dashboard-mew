@@ -15,7 +15,7 @@
 
 **Corrections — I**
 1. 오늘은 한국 지폐에 대해 말씀드리겠습니다.
-2. 모든 지폐에 숨은 그림이 있습니다.
+2. 모든 지폐에서 숨은 그림을 볼 수 있습니다.
 3. 이 그림들은 빛에 비추면 반짝입니다.
 4. 이 기술들은 위조 지폐를 방지하기 위한 것입니다.
 5. 이 지폐에 찍힌 숫자를 보십시오.
@@ -29,15 +29,15 @@
 
 *Contexte : vous expliquez les éléments de sécurité des billets coréens.*
 
-1. "Je vais maintenant commencer ma présentation."
+1. "Je vais maintenant commencer ma présentation sur les billets coréens."
 2. "Je vais parler des éléments de sécurité des [[billets de banque|지폐]] coréens."
-3. "Je vais d'abord présenter l'historique, puis expliquer les caractéristiques de sécurité."
+3. "Si vous regardez la suite, il y a un billet de 5 000 wons, qui montre bien les images cachées."
 4. "Ce que vous voyez maintenant, c'est une image agrandie d'un billet de 50 000 wons."
 5. "Veuillez tenir votre billet face à la lumière pour voir les [[images cachées|숨은 그림]]."
 
 **Corrections — II**
-1. 지금부터 발표를 시작하겠습니다.
+1. 지금부터 한국 지폐에 대한 발표를 시작하겠습니다.
 2. 저는 한국 지폐의 보안 요소에 대해 발표하려고 합니다.
-3. 먼저 지폐의 역사를 소개한 다음에 보안 특징에 대해 설명하겠습니다.
+3. 다음을 보시면 오천 원짜리 지폐가 있는데 숨은 그림을 잘 보여 줍니다.
 4. 지금 보시는 것은 오만 원짜리 지폐의 확대 이미지입니다.
 5. 지폐를 빛에 비추어 숨은 그림을 확인해 주십시오.

@@ -5,11 +5,11 @@
 
 *Contexte : un ami cherche une galerie près d'une académie d'art. Traduis chaque étape de l'itinéraire.*
 
-1. [[Sortez par la sortie 2|2번 출구로 나가다]] et [[continuez dans la direction de sortie|나간 방향으로 가다]].
+1. Sortez par la sortie 2 et continuez dans la direction de sortie.
 2. Si vous marchez un peu, un [[immeuble de trois étages|3층짜리 건물]] apparaît.
-3. [[Tournez à droite|오른쪽으로 돌다]] en longeant ce bâtiment.
+3. Tournez à droite en longeant ce bâtiment.
 4. Continuez tout droit, puis à la [[ruelle|골목]], allez à gauche.
-5. La [[galerie|갤러리]] est [[juste en face|정면에 있다]] : elle [[ne saute pas aux yeux|눈에 잘 안 띄어요]], le nom est [[écrit verticalement|세로로 쓰여 있다]].
+5. La [[galerie|갤러리]] est juste en face : elle [[ne saute pas aux yeux|눈에 잘 안 띄어요]], le nom est [[écrit verticalement|세로로 쓰여 있다]].
 
 **Corrections — I**
 1. 2번 출구로 나가서 나간 방향으로 가세요.

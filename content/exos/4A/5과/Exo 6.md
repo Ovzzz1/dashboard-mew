@@ -5,14 +5,14 @@
 
 *Contexte : tu guides un randonneur jusqu'au sommet de Bukaksan.*
 
-1. Sortez par la [[sortie 2|2번 출구로 나가다]] et [[continuez dans la direction de sortie|나간 방향으로 가다]].
+1. Sortez par la sortie 3 et continuez dans la direction de sortie.
 2. Si vous marchez [[un bon moment|한참]], l'entrée du [[sentier des remparts|성곽길]] apparaît.
 3. Longez le mur et montez vers la droite.
 4. Montez, puis à la bifurcation, prenez à gauche vers [[Bukaksan|북악산]].
 5. Au [[sommet|정상]], la ville [[se voit d'un coup d'œil|한눈에 보이다]].
 
 **Corrections — I**
-1. 2번 출구로 나가서 나간 방향으로 가세요.
+1. 3번 출구로 나가서 나간 방향으로 가세요.
 2. 한참 걸으면 성곽길 입구가 나와요.
 3. 성곽을 끼고 오른쪽으로 올라가세요.
 4. 올라가다가 갈림길에서 북악산 쪽으로 왼쪽으로 가세요.

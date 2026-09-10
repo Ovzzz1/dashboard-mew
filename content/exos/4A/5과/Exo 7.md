@@ -5,14 +5,14 @@
 
 *Contexte : tu indiques à une famille le chemin du marché solidaire du parc.*
 
-1. Sortez par la [[sortie 2|2번 출구로 나가다]] et [[faites demi-tour|뒤로 돌다]].
+1. Sortez par la sortie 4 et faites demi-tour.
 2. Si vous allez tout droit, une [[aire de jeux|놀이터]] apparaît.
-3. Longez l'aire de jeux et [[tournez à droite|오른쪽으로 돌다]].
+3. Longez l'aire de jeux et tournez à droite.
 4. Continuez, puis à la [[cafétéria|카페테리아]], allez à gauche.
-5. Le [[marché solidaire|나눔 장터]] est [[juste en face|정면에 있다]].
+5. Le [[marché solidaire|나눔 장터]] est juste en face.
 
 **Corrections — I**
-1. 2번 출구로 나가서 뒤로 도세요.
+1. 4번 출구로 나가서 뒤로 도세요.
 2. 똑바로 가면 놀이터가 나와요.
 3. 놀이터를 끼고 오른쪽으로 도세요.
 4. 쭉 가다가 카페테리아에서 왼쪽으로 가세요.

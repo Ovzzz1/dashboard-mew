@@ -29,15 +29,15 @@
 
 *Contexte : vous présentez la street food coréenne à des étudiants étrangers.*
 
-1. "Je vais maintenant commencer ma présentation."
+1. "Je vais maintenant commencer ma présentation sur la street food."
 2. "Je vais parler de la nourriture de [[rue|길거리]] coréenne et de ses origines."
-3. "Je vais d'abord présenter les plats les plus populaires, puis expliquer leur préparation."
+3. "D'abord les snacks sucrés, ensuite les plats salés, et pour finir les boissons."
 4. "Ce que vous voyez maintenant, c'est une carte des zones de street food à Séoul."
-5. "Je vais maintenant conclure ma présentation. Merci de m'avoir écouté."
+5. "Y a-t-il des points sur lesquels vous avez des questions ?"
 
 **Corrections — II**
-1. 지금부터 발표를 시작하겠습니다.
+1. 지금부터 길거리 음식에 대한 발표를 시작하겠습니다.
 2. 저는 한국 길거리 음식과 그 기원에 대해 발표하려고 합니다.
-3. 먼저 가장 인기 있는 음식을 소개한 다음에 만드는 방법에 대해 설명하겠습니다.
+3. 먼저 단 간식을 소개하고, 다음으로 짠 음식을, 마지막으로 음료를 소개하겠습니다.
 4. 지금 보시는 것은 서울의 길거리 음식 지역 지도입니다.
-5. 이것으로 발표를 마치겠습니다. 들어 주셔서 감사합니다.
+5. 궁금한 점이 있으십니까?

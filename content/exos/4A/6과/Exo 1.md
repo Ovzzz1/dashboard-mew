@@ -5,12 +5,12 @@
 
 *Contexte : raconte des scènes du conte 선녀와 나무꾼 en employant le mot expressif qui convient.*
 
-1. La [[fée|선녀]] a mis ses [[habits ailés|날개옷]] et s'est envolée [[en battant grand les ailes|훨훨]].
-2. Le bûcheron a regardé le ciel en [[levant les yeux|올려다 보다]] et s'est mis à [[pleurer en reniflant|훌쩍훌쩍]].
-3. Le [[cerf|사슴]] a [[hoché la tête|끄덕끄덕]] pour promettre de [[rendre la faveur|은혜를 갚다]].
-4. Ils ont parlé [[à voix basse|소곤소곤]] pour que le [[secret|비밀]] ne s'échappe pas.
-5. En revoyant sa mère, il a eu les [[yeux pleins de larmes|글썽글썽]].
-6. La fée a [[souri de toutes ses dents|활짝]] en [[tenant son bébé|아기를 안다]].
+1. La [[fée|선녀]] a mis ses [[habits ailés|날개옷]] et s'est envolée en battant grand les ailes.
+2. Le bûcheron a regardé le ciel en [[levant les yeux|올려다 보다]] et s'est mis à pleurer en reniflant.
+3. Le [[cerf|사슴]] a hoché la tête pour promettre de [[rendre la faveur|은혜를 갚다]].
+4. Ils ont parlé à voix basse pour que le [[secret|비밀]] ne s'échappe pas.
+5. En revoyant sa mère, il a eu les yeux pleins de larmes.
+6. La fée a souri de toutes ses dents en [[tenant son bébé|아기를 안다]].
 
 **Corrections — I**
 1. 선녀가 날개옷을 입고 훨훨 날아갔어요.
@@ -28,7 +28,7 @@
 5. Le bûcheron a caché les [[habits ailés|날개옷]] et puis il est rentré chez lui.
 6. Elle a [[donné naissance|아기를 낳다]] à un enfant et puis elle a oublié le ciel un moment.
 7. Il lui a montré les habits et puis il a [[regretté|반성하다]] aussitôt.
-8. La [[pleine lune s'est levée|보름달이 뜨다]] et puis tout le [[sommet de la montagne|산꼭대기]] est devenu clair.
+8. Le bûcheron a vu la [[pleine lune se lever|보름달이 뜨다]] et puis il est monté au [[sommet de la montagne|산꼭대기]].
 9. Sa mère a préparé du [[porridge|죽]] et puis elle l'a [[renversé|쏟다]] sur le [[dos|등]] de son fils.
 10. Le cerf a écouté son [[vœu|소원]] et puis il lui a dit de [[se marier|장가를 가다]].
 
@@ -40,6 +40,6 @@
 5. 나무꾼이 날개옷을 숨기더니 집으로 돌아갔어요.
 6. 선녀가 아기를 낳더니 한동안 하늘을 잊었어요.
 7. 나무꾼이 날개옷을 보여주더니 바로 반성했어요.
-8. 보름달이 뜨더니 산꼭대기가 다 환해졌어요.
+8. 나무꾼이 보름달이 뜨는 걸 보더니 산꼭대기로 올라갔어요.
 9. 어머니가 죽을 만들더니 아들 등에 쏟았어요.
 10. 사슴이 소원을 듣더니 장가를 가라고 했어요.

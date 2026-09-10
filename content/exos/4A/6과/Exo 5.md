@@ -5,12 +5,12 @@
 
 *Contexte : un fils rentre au village voir sa mère.*
 
-1. Il a [[levé les yeux|올려다 보다]] vers la maison et a [[souri largement|활짝]].
-2. Sa mère l'a appelé « [[mon enfant|얘야]] » et il s'est mis à [[renifler|훌쩍훌쩍]].
-3. Elle a [[hoché la tête|끄덕끄덕]] en écoutant ses histoires de Séoul.
-4. Les voisins ont parlé [[à voix basse|소곤소곤]] de son retour.
-5. En [[voyant le visage de sa mère|어머니 얼굴을 뵙다]], il a eu les [[yeux embués|글썽글썽]].
-6. Un [[papillon|나비]] est passé [[en battant des ailes|훨훨]] devant la fenêtre.
+1. Il a [[levé les yeux|올려다 보다]] vers la maison et a souri largement.
+2. Sa mère l'a appelé « [[mon enfant|얘야]] » et il s'est mis à renifler.
+3. Elle a hoché la tête en écoutant ses histoires de Séoul.
+4. Les voisins ont parlé à voix basse de son retour.
+5. En [[voyant le visage de sa mère|어머니 얼굴을 뵙다]], il a eu les yeux embués.
+6. Un [[papillon|나비]] est passé en battant des ailes devant la fenêtre.
 
 **Corrections — I**
 1. 그가 집을 올려다보더니 활짝 웃었어요.

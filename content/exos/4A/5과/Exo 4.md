@@ -5,11 +5,11 @@
 
 *Contexte : un ami veut essayer la planche à voile, tu lui indiques le club.*
 
-1. Sortez par la [[sortie 2|2번 출구로 나가다]] et [[faites demi-tour|뒤로 돌다]].
+1. Sortez par la sortie 2 et faites demi-tour.
 2. Si vous allez tout droit, la [[piscine extérieure|야외 수영장]] apparaît.
-3. Longez la piscine et [[tournez à droite|오른쪽으로 돌다]].
+3. Longez la piscine et tournez à droite.
 4. Continuez, puis au passage piéton, allez à gauche.
-5. Le club de [[planche à voile|윈드서핑]] est [[juste en face|정면에 있다]].
+5. Le club de [[planche à voile|윈드서핑]] est juste en face.
 
 **Corrections — I**
 1. 2번 출구로 나가서 뒤로 도세요.

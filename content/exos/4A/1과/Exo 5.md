@@ -1,70 +1,80 @@
 # EXO 5 — 4A 과1
+**Thème : Secours humanitaire d'urgence**
 
-**I. -아/어서 -게 됐어요**
-1. J'ai eu envie de relever un nouveau défi, donc j'ai fini par apprendre le patinage.
-2. Comme il hésitait longtemps, il a fini par se décider à s'inscrire au club.
-3. Elle voulait profiter davantage de la vie, donc elle a fini par pratiquer de nouveaux loisirs.
-4. Comme il aimait discuter avec des experts, il a fini par devenir lui-même spécialiste du sujet.
-5. J'ai eu envie de sortir de ma routine quotidienne, donc j'ai fini par voyager seul.
-6. Comme elle voulait aider les autres, elle a fini par chercher du travail dans l'humanitaire.
-7. Il s'intéressait aux traditions coréennes, donc il a fini par apprendre le samulnori.
-8. Comme elle voulait vivre une vie plus simple, elle a fini par changer son mode de vie.
-9. J'ai eu envie de comprendre une nouvelle culture, donc j'ai fini par emménager à l'étranger.
-10. Comme il voulait aider dans une zone de crise, il a fini par travailler dans un camp de réfugiés.
+**I. Structure principale : -아/어서 -게 됐어요**
+1. J'ai lu le livre d'une [[secouriste d'urgence|긴급 구호가]] et j'ai fini par changer de métier.
+2. Comme je voulais aider les habitants des [[régions isolées|오지]], j'ai fini par apprendre les premiers secours.
+3. Comme le [[paludisme|말라리아]] était fréquent, j'ai fini par prendre un traitement tous les jours.
+4. Comme le [[médicament était fort|약이 독하다]], j'ai fini par manger très peu.
+5. Comme il y avait beaucoup d'[[insectes|벌레]], j'ai fini par dormir sous une moustiquaire.
+6. Comme je voulais [[sauver|-을 살리다]] des vies, j'ai fini par travailler comme infirmier.
+7. J'ai vu des images d'un [[camp de réfugiés|난민촌]] et j'ai fini par [[me décider|마음먹다]] à partir.
+8. Comme les [[frais de voyage|여행 경비]] étaient élevés, j'ai fini par [[collecter|-을 모으다]] des dons.
+9. Comme la [[destination|목적지]] était loin, j'ai fini par [[me déplacer|이동하다]] en camion.
+10. Cette expérience a été un [[déclic|계기]], alors j'ai fini par changer ma [[façon de vivre|사는 방식]].
 
 **Corrections — I**
-1. 새로운 것에 도전하고 싶은 마음이 생겨서 스케이팅을 배우게 됐어요.
-2. 그는 오래 망설여서 결국 가입을 결심하게 됐어요.
-3. 그녀는 인생을 더 즐기고 싶어서 새로운 취미를 시작하게 됐어요.
-4. 그는 전문가들과 이야기하는 것을 좋아해서 그 분야의 전문가로 활동하게 됐어요.
-5. 일상에서 벗어나고 싶은 마음이 생겨서 혼자 여행하게 됐어요.
-6. 그녀는 다른 사람을 돕고 싶어서 구호 단체에서 일을 찾게 됐어요.
-7. 그는 한국 전통문화에 관심이 있어서 사물놀이를 배우게 됐어요.
-8. 그녀는 더 단순한 삶을 살고 싶어서 사는 방식을 바꾸게 됐어요.
-9. 새로운 문화를 이해하고 싶은 마음이 생겨서 외국으로 이사하게 됐어요.
-10. 그는 위기 지역에서 돕고 싶어서 난민촌에서 일하게 됐어요.
+1. 한 긴급 구호가의 책을 읽고 직업을 바꾸게 됐어요.
+2. 오지 사람들을 돕고 싶어서 응급 처치를 배우게 됐어요.
+3. 말라리아가 흔해서 매일 약을 먹게 됐어요.
+4. 약이 독해서 밥을 조금만 먹게 됐어요.
+5. 벌레가 많아서 모기장 안에서 자게 됐어요.
+6. 생명을 살리고 싶어서 간호사로 일하게 됐어요.
+7. 난민촌 영상을 보고 떠나기로 마음먹게 됐어요.
+8. 여행 경비가 많이 들어서 기부금을 모으게 됐어요.
+9. 목적지가 멀어서 트럭을 타고 이동하게 됐어요.
+10. 그 경험이 계기가 돼서 사는 방식을 바꾸게 됐어요.
 
-*Note grammaire (phrase 2) : « hésiter longtemps » décrit ici la cause directe de la décision (-아/어서), pas une action en cours interrompue par un événement — c'est pour ça qu'on garde -아/어서 et non -다가.*
-
-**II. -다가 -아/어서 -게 됐어요**
-1. En cherchant un nouveau défi, il a découvert le patinage artistique, donc il a fini par s'y consacrer entièrement.
-2. En hésitant longtemps à s'inscrire, elle a finalement pris confiance, donc elle a fini par rejoindre le club.
-3. En discutant avec des experts du domaine, j'ai appris énormément, donc j'ai fini par devenir moi-même spécialiste.
-4. En sortant de sa routine habituelle, il a découvert de nouvelles passions, donc il a fini par changer de mode de vie.
-5. En travaillant dans l'humanitaire, elle a vu la réalité du terrain, donc elle a fini par s'installer dans un camp de réfugiés.
-6. En apprenant les bases d'un instrument traditionnel, j'ai eu envie d'aller plus loin, donc j'ai fini par me perfectionner.
-7. En vivant à l'étranger, il a compris une nouvelle culture, donc il a fini par s'y adapter complètement.
-8. En cherchant de l'aide en situation d'urgence, elle a rencontré des bénévoles formidables, donc elle a fini par devenir bénévole elle-même.
-9. En observant les traditions locales, j'ai voulu les préserver, donc j'ai fini par écrire un article dessus.
-10. En pratiquant régulièrement, il a fini par se sentir à l'aise dans ce nouveau mode de vie.
+**II. Variante avancée : -다가 -아/어서 -게 됐어요**
+1. En travaillant dans une [[région isolée|오지]], j'ai attrapé le [[paludisme|말라리아]], donc j'ai fini par rentrer en France.
+2. En [[nous déplaçant|이동하다]] vers le camp, notre voiture est tombée en panne, donc on a fini par dormir dehors.
+3. En aidant au [[camp de réfugiés|난민촌]], j'ai rencontré un médecin, donc j'ai fini par travailler avec lui.
+4. En faisant du stop, seul un [[corbillard|장의차]] s'est arrêté, donc j'ai fini par [[voyager|이동하다]] avec un cercueil.
+5. En [[séjournant|-에 머무르다]] dans un village, je me suis fait piquer par des [[insectes|벌레]], donc j'ai fini par aller à l'hôpital.
+6. En lisant le journal, un [[appel à l'aide|도움을 구하다]] m'a ému, donc j'ai fini par m'engager comme bénévole.
+7. En soignant un enfant, j'ai compris la valeur de la [[vie|삶]], donc j'ai fini par changer ma [[façon de vivre|사는 방식]].
+8. En [[collectant|-을 모으다]] des dons, j'ai [[paru dans le journal|신문에 나다]], donc j'ai fini par recevoir beaucoup d'aide.
+9. En [[réunissant|마련하다]] le budget, j'ai trouvé un sponsor, donc j'ai fini par partir plus tôt.
+10. En parlant avec une [[secouriste d'urgence|긴급 구호가]], [[j'ai eu envie|-고 싶은 마음이 생기다]] de faire comme elle, donc j'ai fini par étudier la médecine.
 
 **Corrections — II**
-1. 새로운 도전을 찾다가 피겨 스케이팅을 알게 돼서 그것에 전념하게 됐어요.
-2. 오래 망설이다가 마침내 자신감이 생겨서 동호회에 가입하게 됐어요.
-3. 그 분야의 전문가들과 이야기하다가 많이 배워서 저도 전문가로 활동하게 됐어요.
-4. 평소의 일상에서 벗어나다가 새로운 열정을 발견해서 사는 방식을 바꾸게 됐어요.
-5. 구호 단체에서 일하다가 현장의 현실을 보게 돼서 난민촌에 정착하게 됐어요.
-6. 전통 악기의 기초를 배우다가 더 잘하고 싶어져서 실력을 쌓게 됐어요.
-7. 외국에서 살다가 새로운 문화를 이해하게 돼서 완전히 적응하게 됐어요.
-8. 응급 상황에서 도움을 구하다가 멋진 봉사자들을 만나서 봉사를 시작하게 됐어요.
-9. 지역 전통을 지켜보다가 보존하고 싶어져서 그것에 대한 글을 쓰게 됐어요.
-10. 꾸준히 연습하다가 실력이 늘어서 이 새로운 사는 방식에 익숙하게 됐어요.
+1. 오지에서 일하다가 말라리아에 걸려서 프랑스로 돌아가게 됐어요.
+2. 캠프로 이동하다가 차가 고장 나서 밖에서 자게 됐어요.
+3. 난민촌에서 돕다가 한 의사를 만나서 그분과 일하게 됐어요.
+4. 히치하이킹을 하다가 장의차만 서서 관과 함께 이동하게 됐어요.
+5. 마을에 머무르다가 벌레에 물려서 병원에 가게 됐어요.
+6. 신문을 읽다가 도움을 구하는 기사에 마음이 움직여서 자원봉사를 하게 됐어요.
+7. 아이를 치료하다가 삶의 소중함을 깨달아서 사는 방식을 바꾸게 됐어요.
+8. 기부금을 모으다가 신문에 나서 도움을 많이 받게 됐어요.
+9. 경비를 마련하다가 후원자를 찾아서 일찍 떠나게 됐어요.
+10. 긴급 구호가와 이야기하다가 그분처럼 되고 싶은 마음이 생겨서 의학을 공부하게 됐어요.
 
 **III. Expressions pour organiser un événement**
-- Annoncez : « Nous allons maintenant entendre la présentation du sujet du jour. »
-- Annoncez : « Il va maintenant y avoir la remise des prix. »
-- Demandez au public : « Veuillez écouter jusqu'au bout. »
-- Demandez au public : « Veuillez accueillir le nouveau président avec des applaudissements. »
+
+*Contexte : tu es le 사회자 (animateur) de l'événement. Traduis en 격식체.*
+
+1. Annonce : « Nous allons maintenant entendre le témoignage d'une [[secouriste d'urgence|긴급 구호가]]. »
+2. Annonce : « Il va maintenant y avoir la projection d'une courte vidéo. »
+3. Consigne : « Veuillez [[verser|입금하다]] vos dons sur ce compte. »
+4. Consigne : « Veuillez écouter attentivement jusqu'à la fin. »
 
 **Corrections — III**
-- 지금부터 오늘의 주제 발표가 있겠습니다.
-- 지금부터 시상식이 있겠습니다.
-- 끝까지 잘 들어 주시기 바랍니다.
-- 새 회장님을 박수로 환영해 주시기 바랍니다.
+1. 지금부터 긴급 구호가의 경험담이 있겠습니다.
+2. 지금부터 짧은 영상 상영이 있겠습니다.
+3. 이 계좌로 기부금을 입금해 주시기 바랍니다.
+4. 끝까지 잘 들어 주시기 바랍니다.
 
 **IV. Expressions pour se présenter**
-Traduisez cette présentation formelle complète :
-« Je m'appelle Antoine, je viens de Nice. J'aime la musique traditionnelle, donc j'ai fini par apprendre le samulnori. Je vais participer activement et j'espère bien m'entendre avec vous. »
 
-**Correction — IV**
-저는 니스에서 온 앙투안입니다. 전통 음악을 좋아해서 사물놀이를 배우게 됐습니다. 열심히 활동하고 앞으로 여러분과 잘 지냈으면 좋겠습니다.
+*Contexte : tu te présentes aux membres. Garde le 격식체 du début à la fin.*
+
+1. « Je m'appelle Sophie. »
+2. « En aidant dans un [[camp de réfugiés|난민촌]], j'ai été touchée, donc j'ai fini par adhérer à cette association. »
+3. « Je vais participer activement aux missions sur le terrain. »
+4. « Je manque d'expérience, alors aidez-moi beaucoup. »
+
+**Corrections — IV**
+1. 저는 소피라고 합니다.
+2. 난민촌에서 돕다가 감동을 받아서 이 단체에 가입하게 됐습니다.
+3. 현장 활동에 열심히 참여하겠습니다.
+4. 경험이 부족하니까 많이 도와주세요.

@@ -5,10 +5,10 @@
 
 *Contexte : tu décris ton matériel de sport à domicile.*
 
-1. L'[[haltère|아령]] est [[rond|둥글다]] aux [[deux extrémités|양쪽]] et [[dur|딱딱하다]].
-2. Il est recouvert de [[caoutchouc|고무]] [[doux|부드럽다]] pour ne pas glisser.
-3. Le tapis est [[rectangulaire|네모나다]] et [[moelleux|푹신하다]].
-4. La bande élastique est [[allongée|길쭉하다]] et on peut l'[[enrouler autour de la cheville|발목에 감다]].
+1. L'[[haltère|아령]] est rond aux [[deux extrémités|양쪽]] et dur.
+2. Il est recouvert de [[caoutchouc|고무]] doux pour ne pas glisser.
+3. Le tapis est rectangulaire et moelleux.
+4. La bande élastique est allongée et on peut l'[[enrouler autour de la cheville|발목에 감다]].
 5. Ce petit [[outil de sport|운동 도구]] [[tient dans une main|한 손에 쏙 들어오다]].
 6. Ça [[sert d'exercice|운동이 되다]] et de [[décoration|실내 장식]] : [[deux en un|일석이조]].
 
@@ -34,10 +34,10 @@
 
 **Corrections — II**
 1. 아령은 이 병만 해요.
-2. 매트는 이 문만 해요.
-3. 감은 밴드는 제 주먹만 해요.
-4. 짐볼은 이 의자만 해요.
-5. 접은 줄넘기는 손바닥만 해요.
+2. 매트 크기가 이 문만 해요.
+3. 감 크기가 밴드는 제 주먹만 해요.
+4. 짐볼 크기가 이 의자만 해요.
+5. 접 크기가 줄넘기는 손바닥만 해요.
 6. 운동용 텀블러는 이 컵만 해요.
 7. 운동 가방은 이 서랍만 해요.
 8. 타이머는 이 열쇠고리만 해요.

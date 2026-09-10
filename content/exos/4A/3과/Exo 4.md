@@ -29,15 +29,15 @@
 
 *Contexte : vous présentez un artiste musical coréen à votre classe.*
 
-1. "Je vais maintenant commencer ma présentation."
+1. "Je vais maintenant commencer ma présentation sur le trot."
 2. "Je vais parler des [[paroles|가사]] de la musique trot et de leur signification."
 3. "Je vais d'abord présenter l'histoire, puis vous [[faire écouter|들려주다]] des extraits."
 4. "Ce que vous voyez maintenant, c'est la [[pochette d'album|음반 재킷]] originale de 1975."
-5. "Je vais maintenant conclure. Merci d'avoir été si attentifs."
+5. "C'est la fin de ma présentation. Merci de m'avoir écouté."
 
 **Corrections — II**
-1. 지금부터 발표를 시작하겠습니다.
+1. 지금부터 트로트에 대한 발표를 시작하겠습니다.
 2. 저는 트로트 가사와 그 의미에 대해 발표하려고 합니다.
 3. 먼저 역사를 소개한 다음에 음악을 들려드리겠습니다.
 4. 지금 보시는 것은 1975년 원본 음반 재킷입니다.
-5. 이것으로 발표를 마치겠습니다. 열심히 들어 주셔서 감사합니다.
+5. 제 발표는 여기까지입니다. 들어 주셔서 감사합니다.

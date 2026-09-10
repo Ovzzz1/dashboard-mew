@@ -1,68 +1,80 @@
 # EXO 3 — 4A 과1
+**Thème : Club de samulnori (사물놀이)**
 
-**I. -아/어서 -게 됐어요**
-1. J'aime découvrir de nouveaux endroits, donc j'ai fini par faire de la randonnée.
-2. Comme elle voulait explorer tous les recoins de la ville, elle a fini par visiter Séoul à pied.
-3. Il voulait goûter à des plats différents, donc il a fini par voyager dans tout le pays.
-4. Comme le voyage lui plaisait, elle a fini par organiser des rencontres spontanées avec des amis.
-5. J'ai eu envie de changer de mode de vie, donc j'ai fini par déménager à la campagne.
-6. Comme il voulait économiser sur les frais de voyage, il a fini par voyager en train.
-7. Elle s'intéressait aux régions isolées, donc elle a fini par visiter une contrée reculée en Afrique.
-8. Comme il devait prendre un traitement contre le paludisme, il a fini par consulter un médecin avant le voyage.
-9. J'aime la nature, donc j'ai fini par passer plus de dix jours en randonnée.
-10. Comme elle voulait vivre de nouvelles expériences, elle a fini par participer à un camp de bénévolat.
+**I. Structure principale : -아/어서 -게 됐어요**
+1. Comme je voulais apprendre un [[instrument de percussion|타악기]], j'ai fini par rejoindre un club de [[samulnori|사물놀이]].
+2. J'ai entendu un concert de samulnori et j'ai fini par [[me passionner|뜨거운 관심을 갖다]] pour la musique traditionnelle.
+3. Comme je ne connaissais même pas les [[bases|기초]], j'ai fini par commencer par le janggu.
+4. Comme les membres venaient de [[tout le pays|전국]], j'ai fini par me faire des amis partout.
+5. Comme on jouait ensemble tous les soirs, on a fini par bien [[se comprendre|마음이 통하다]].
+6. Comme j'étais [[plein d'énergie|씩씩하다]], j'ai fini par être [[choisi|뽑다]] comme représentant.
+7. J'ai lu l'histoire du [[samulnori|사물놀이]] et j'ai fini par comprendre le sens de chaque instrument.
+8. Comme je voulais [[prendre le temps de répéter|-는 시간을 갖다]], j'ai fini par louer une salle.
+9. Comme notre groupe jouait bien, on a fini par [[paraître dans le journal|신문에 나다]].
+10. Comme je voulais [[apporter un changement à ma routine|생활에 변화를 주다]], j'ai fini par [[me lancer dans|도전하다]] le samulnori.
 
 **Corrections — I**
-1. 저는 새로운 곳을 발견하는 것을 좋아해서 도보 여행을 하게 됐어요.
-2. 그녀는 도시 구석구석을 다녀 보고 싶어서 서울을 걸어서 돌아다니게 됐어요.
-3. 그는 여러 음식을 맛보고 싶어서 전국을 여행하게 됐어요.
-4. 그녀는 여행이 마음에 들어서 친구들과 번개 모임을 하게 됐어요.
-5. 사는 방식을 바꾸고 싶은 마음이 생겨서 시골로 이사하게 됐어요.
-6. 그는 여행 경비를 아끼고 싶어서 기차로 여행하게 됐어요.
-7. 그녀는 오지에 관심이 있어서 아프리카의 오지를 방문하게 됐어요.
-8. 그는 말라리아 예방약을 먹어야 해서 여행 전에 병원에 가게 됐어요.
-9. 저는 자연을 좋아해서 10일 이상 도보 여행을 하게 됐어요.
-10. 그녀는 새로운 경험을 하고 싶어서 봉사 캠프에 참여하게 됐어요.
+1. 타악기를 배우고 싶어서 사물놀이 동호회에 들어가게 됐어요.
+2. 사물놀이 공연을 듣고 전통 음악에 뜨거운 관심을 갖게 됐어요.
+3. 기초도 몰라서 장구부터 배우게 됐어요.
+4. 회원들이 전국에서 와서 여기저기에 친구를 사귀게 됐어요.
+5. 매일 저녁 같이 연주해서 서로 마음이 잘 통하게 됐어요.
+6. 제가 씩씩해서 대표로 뽑히게 됐어요.
+7. 사물놀이의 역사를 읽고 악기마다 의미를 이해하게 됐어요.
+8. 연습하는 시간을 갖고 싶어서 연습실을 빌리게 됐어요.
+9. 우리 팀이 잘해서 신문에 나게 됐어요.
+10. 생활에 변화를 주고 싶어서 사물놀이에 도전하게 됐어요.
 
-**II. -다가 -아/어서 -게 됐어요**
-1. En voyageant à travers le pays, il a découvert de nombreux endroits magnifiques, donc il a fini par écrire un livre sur ses voyages.
-2. En explorant tous les recoins de la ville à pied, elle a eu envie de continuer, donc elle a fini par organiser une randonnée urbaine.
-3. En goûtant différents plats régionaux, j'ai découvert de nouvelles saveurs, donc j'ai fini par apprendre à cuisiner ces plats.
-4. En économisant sur ses frais de voyage, il a pu voyager plus longtemps, donc il a fini par rester plus de dix jours sur place.
-5. En visitant une région isolée, elle a été touchée par la pauvreté, donc elle a fini par faire du bénévolat là-bas.
-6. En prenant un traitement contre le paludisme avant son départ, il s'est senti rassuré, donc il a fini par partir sans crainte.
-7. En restant plusieurs jours dans le même hôtel, j'ai sympathisé avec le personnel, donc j'ai fini par y retourner chaque année.
-8. En se déplaçant vers sa destination, elle a rencontré des voyageurs intéressants, donc elle a fini par voyager avec eux.
-9. En organisant une rencontre spontanée entre amis, il a eu du succès, donc il a fini par en organiser régulièrement.
-10. En vivant dans une contrée reculée, elle a appris un nouveau mode de vie, donc elle a fini par y rester plus longtemps que prévu.
+**II. Variante avancée : -다가 -아/어서 -게 됐어요**
+1. En me promenant dans un festival, j'ai été attiré par le son du samulnori, donc j'ai fini par m'intéresser aux [[percussions|타악기]].
+2. En apprenant les [[bases|기초]] du janggu, je me suis intéressé au buk, donc j'ai fini par jouer des deux.
+3. En [[nous réunissant|모임을 갖다]] chaque semaine, on a enfin trouvé notre rythme, donc on a fini par jouer en public.
+4. En faisant un [[voyage à pied|도보 여행]] à Jeonju, j'ai croisé une troupe de samulnori, donc j'ai fini par la suivre toute la journée.
+5. En jouant dans la rue, on a été repérés par un journaliste, donc on a fini par [[paraître dans le journal|신문에 나다]].
+6. En m'entraînant seul, j'ai perdu confiance, donc j'ai fini par [[demander de l'aide|도움을 구하다]] au professeur.
+7. En [[partageant des informations|정보를 나누다]] avec d'autres clubs, on a trouvé un sponsor, donc on a fini par partir en tournée dans [[tout le pays|전국]].
+8. En enseignant aux enfants, [[j'ai eu envie|-고 싶은 마음이 생기다]] de devenir professeur, donc j'ai fini par reprendre mes études.
+9. En regardant une vidéo du club, mon ami a été ému, donc il a fini par nous [[rejoindre|함께하다]].
+10. En [[visitant|방문하다]] un village traditionnel, j'ai rencontré un vieux maître, donc j'ai fini par apprendre auprès de lui.
 
 **Corrections — II**
-1. 전국을 여행하다가 멋진 곳을 많이 발견해서 여행 책을 쓰게 됐어요.
-2. 도시 구석구석을 걸어 다니다가 계속하고 싶어져서 도보 여행 모임을 만들게 됐어요.
-3. 여러 지역 음식을 맛보다가 새로운 맛에 반해서 그 음식을 배우게 됐어요.
-4. 여행 경비를 아끼다가 더 오래 여행할 수 있게 돼서 10일 이상 머무르게 됐어요.
-5. 오지를 방문하다가 가난한 현실에 마음이 움직여서 그곳에서 봉사하게 됐어요.
-6. 출발 전에 말라리아 예방약을 먹다가 마음이 놓여서 걱정 없이 떠나게 됐어요.
-7. 같은 호텔에 며칠 머무르다가 직원들과 친해져서 매년 다시 가게 됐어요.
-8. 목적지로 이동하다가 재미있는 여행자들을 만나서 그들과 함께 여행하게 됐어요.
-9. 친구들과 번개 모임을 하다가 반응이 좋아서 정기적으로 모임을 갖게 됐어요.
-10. 오지에서 살다가 새로운 사는 방식을 배우게 돼서 예상보다 오래 머무르게 됐어요.
+1. 축제를 구경하다가 사물놀이 소리에 끌려서 타악기에 관심을 갖게 됐어요.
+2. 장구 기초를 배우다가 북에도 흥미가 생겨서 둘 다 연주하게 됐어요.
+3. 매주 모임을 갖다가 드디어 호흡이 맞아서 무대에서 공연하게 됐어요.
+4. 전주에서 도보 여행을 하다가 사물놀이 팀을 만나서 하루 종일 따라다니게 됐어요.
+5. 길에서 공연하다가 기자의 눈에 띄어서 신문에 나게 됐어요.
+6. 혼자 연습하다가 자신감을 잃어서 선생님께 도움을 구하게 됐어요.
+7. 다른 동호회와 정보를 나누다가 후원자를 찾아서 전국 공연을 하게 됐어요.
+8. 아이들을 가르치다가 선생님이 되고 싶은 마음이 생겨서 다시 공부하게 됐어요.
+9. 친구가 동호회 영상을 보다가 감동을 받아서 우리와 함께하게 됐어요.
+10. 전통 마을을 방문하다가 한 명인을 만나서 그분께 배우게 됐어요.
 
 **III. Expressions pour organiser un événement**
-- Annoncez : « Nous allons maintenant entendre le discours du diplômé. »
-- Annoncez : « Il va maintenant y avoir une performance musicale. »
-- Demandez au public : « Veuillez applaudir chaleureusement. »
-- Demandez au public : « Veuillez vous avancer devant la scène. »
+
+*Contexte : tu es le 사회자 (animateur) de l'événement. Traduis en 격식체.*
+
+1. Annonce : « Nous allons maintenant avoir la performance de [[samulnori|사물놀이]] du club. »
+2. Annonce : « Il va maintenant y avoir un mot du président. »
+3. Consigne : « Veuillez éteindre vos téléphones. »
+4. Consigne : « Veuillez frapper des mains en rythme avec nous. »
 
 **Corrections — III**
-- 지금부터 졸업생의 연설이 있겠습니다.
-- 지금부터 음악 공연이 있겠습니다.
-- 박수를 많이 쳐 주시기 바랍니다.
-- 무대 앞으로 나와 주시기 바랍니다.
+1. 지금부터 동호회의 사물놀이 공연이 있겠습니다.
+2. 지금부터 회장님의 인사 말씀이 있겠습니다.
+3. 휴대폰을 꺼 주시기 바랍니다.
+4. 저희와 함께 박자에 맞춰 손뼉을 쳐 주시기 바랍니다.
 
 **IV. Expressions pour se présenter**
-Traduisez cette présentation formelle complète :
-« Je m'appelle Thomas, je viens de Marseille. J'aime voyager, donc j'ai fini par rejoindre ce club de randonnée. J'espère bien m'entendre avec vous à l'avenir. »
 
-**Correction — IV**
-저는 마르세유에서 온 토마입니다. 여행을 좋아해서 이 도보 여행 동호회에 가입하게 됐습니다. 앞으로 여러분과 잘 지냈으면 좋겠습니다.
+*Contexte : tu te présentes aux membres. Garde le 격식체 du début à la fin.*
+
+1. « Je m'appelle Hana. »
+2. « En me promenant dans un festival, j'ai été attirée par le samulnori, donc j'ai fini par adhérer. »
+3. « Appelez-moi simplement Hana. »
+4. « Je vais participer activement. »
+
+**Corrections — IV**
+1. 저는 하나라고 합니다.
+2. 축제를 구경하다가 사물놀이에 끌려서 가입하게 됐습니다.
+3. 그냥 하나라고 불러 주세요.
+4. 열심히 활동하겠습니다.

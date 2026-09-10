@@ -14,9 +14,9 @@
 10. Notre équipe a [[évalué|평가하다]] 500 réponses à ce [[sondage|설문 조사]].
 
 **Corrections — I**
-1. 이 데이터는 설문 조사를 통해 수집했습니다.
+1. 이 데이터는 설문 조사를 통해 수집한 것입니다.
 2. 전 세계 학자들이 이 현상을 연구합니다.
-3. 발표는 세 부분으로 구성했습니다.
+3. 이 발표는 세 부분으로 구성되어 있습니다.
 4. 발표한 결과를 공정하게 평가해 주십시오.
 5. 이 발표는 모든 참가자들께 매우 유익했습니다.
 6. 이 시각 자료를 보십시오. 저희 연구 결과가 요약되어 있습니다.
@@ -29,14 +29,14 @@
 
 *Contexte : vous ouvrez une conférence de recherche sur les habitudes alimentaires.*
 
-1. "Je vais maintenant commencer ma présentation."
+1. "Bonjour à tous. Je vais maintenant commencer la présentation de notre sondage."
 2. "Je vais parler des résultats de notre [[sondage|설문 조사]] sur les habitudes alimentaires."
 3. "Je vais d'abord présenter la méthode, puis les résultats et la [[conclusion|결론]]."
 4. "Ce que vous voyez maintenant, c'est le graphique de distribution des réponses."
 5. "Merci de votre attention. Veuillez prendre la parole si vous avez des questions."
 
 **Corrections — II**
-1. 지금부터 발표를 시작하겠습니다.
+1. 안녕하십니까? 지금부터 설문 조사 결과 발표를 시작하겠습니다.
 2. 저는 식습관에 관한 설문 조사 결과에 대해 발표하려고 합니다.
 3. 먼저 조사 방법을 소개한 다음에 결과와 결론에 대해 설명하겠습니다.
 4. 지금 보시는 것은 응답 분포 그래프입니다.

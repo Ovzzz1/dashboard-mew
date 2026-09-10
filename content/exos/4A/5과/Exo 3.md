@@ -5,9 +5,9 @@
 
 *Contexte : tu expliques comment rejoindre l'embarcadère depuis Yeouinaru.*
 
-1. Sortez par la [[sortie 2|2번 출구로 나가다]] de la station Yeouinaru.
-2. En sortant, le fleuve est [[juste en face|정면에 있다]].
-3. [[Longez le chemin|길을 따라 걷다]] puis allez à droite.
+1. Sortez par la sortie 2 de la station Yeouinaru.
+2. En sortant, le fleuve est juste en face.
+3. Longez le chemin puis allez à droite.
 4. Marchez, puis à la [[fontaine|분수]], tournez à gauche.
 5. Continuez tout droit et l'embarcadère du [[bateau de croisière|유람선]] apparaît.
 

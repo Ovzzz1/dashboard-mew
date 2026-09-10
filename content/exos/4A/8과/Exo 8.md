@@ -5,10 +5,10 @@
 
 *Contexte : un objet-gadget conçu comme message anti-tabac.*
 
-1. Le [[cendrier|재떨이]] a la [[forme|모양]] d'un [[poumon|폐]] : il est [[rond|둥글다]] et [[dur|딱딱하다]].
-2. Il est en [[plastique|플라스틱]] blanc avec un [[trou|구멍이 나다]] au milieu.
+1. Le [[cendrier|재떨이]] a la forme d'un [[poumon|폐]] : il est rond et dur.
+2. Il est en plastique blanc avec un [[trou|구멍이 나다]] au milieu.
 3. Quand on y [[fait tomber la cendre|담뱃재를 떨다]], il [[émet un son|소리를 내다]] : « [[keuf keuf|콜록콜록]] ».
-4. La surface est [[douce|부드럽다]] mais le fond est [[dur|딱딱하다]].
+4. La surface est douce mais le fond est dur.
 5. C'est un [[bon exemple|대표적이다]] de [[gadget|아이디어 상품]] à message.
 6. Ça rappelle que fumer est [[mauvais pour la santé|몸에 해롭다]] : le message est [[puissant|강력하다]].
 
@@ -34,15 +34,15 @@
 
 **Corrections — II**
 1. 재떨이는 이 그릇만 해요.
-2. 담뱃갑은 손바닥만 해요.
+2. 담뱃갑 크기가 손바닥만 해요.
 3. 폐 모형은 이 공만 해요.
-4. 포스터는 이 문만 해요.
-5. 라이터는 제 엄지손가락만 해요.
-6. 패치는 이 우표만 해요.
+4. 포스터 크기가 이 문만 해요.
+5. 라이터 크기가 제 엄지손가락만 해요.
+6. 패치 크기가 이 우표만 해요.
 7. 안내 책자는 이 수첩만 해요.
 8. 보관함은 이 서랍만 해요.
 9. 금연 배지는 동전만 해요.
-10. 자판기는 이 냉장고만 해요.
+10. 자판기 크기가 이 냉장고만 해요.
 
 **III. Dépasser ou ne pas atteindre une valeur : -이 넘어요 / -이 안 돼요**
 1. Le nombre de jours de [[non-tabac|금연]] dépasse cent.
@@ -52,7 +52,7 @@
 5. Le taux de réussite pour [[arrêter de fumer|담배를 끊다]] ne fait pas dix pour cent.
 6. Le prix d'un paquet, pourtant [[mauvais pour la santé|몸에 해롭다]], dépasse 4 500 wons.
 7. La [[hauteur|높이]] du cendrier ne fait pas 8 cm.
-8. Le [[poids|무게]] ne fait pas 200 grammes.
+8. Le [[poids|무게]] du cendrier ne fait pas 300 grammes.
 9. Le nombre de campagnes cette [[année|올해]] dépasse vingt.
 10. La [[largeur|가로]] de l'affiche dépasse un mètre.
 
@@ -64,6 +64,6 @@
 5. 담배를 끊는 성공률이 10퍼센트가 안 돼요.
 6. 몸에 해로운데도 한 갑 값이 4500원이 넘어요.
 7. 재떨이 높이가 8센티미터가 안 돼요.
-8. 무게가 200그램이 안 돼요.
+8. 재떨이 무게가 300그램이 안 돼요.
 9. 올해 캠페인이 스무 개가 넘어요.
 10. 포스터 가로가 1미터가 넘어요.
