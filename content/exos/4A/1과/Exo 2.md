@@ -57,12 +57,14 @@
 2. Annonce : « Il va maintenant y avoir la remise des prix. »
 3. Consigne : « Veuillez ne pas prendre de photos avec le flash. »
 4. Consigne : « Veuillez applaudir bien fort les patineurs. »
+5. Annonce : « Nous allons maintenant avoir la démonstration de [[patinage artistique|피겨 스케이팅]] des [[débutants|초보자]]. »
 
 **Corrections — III**
 1. 지금부터 회원들의 아이스 댄싱 공연이 있겠습니다.
 2. 지금부터 시상식이 있겠습니다.
 3. 플래시를 켜고 사진을 찍지 말아 주시기 바랍니다.
 4. 선수들에게 큰 박수를 보내 주시기 바랍니다.
+5. 지금부터 초보자들의 피겨 스케이팅 시범이 있겠습니다.
 
 **IV. Expressions pour se présenter**
 
@@ -72,9 +74,11 @@
 2. « En regardant les Jeux olympiques, j'ai eu envie d'essayer, donc j'ai fini par adhérer. »
 3. « Je suis encore [[débutant|초보자]]. Je ne suis pas assez bon, alors aidez-moi beaucoup. »
 4. « J'espère bien m'entendre avec vous à l'avenir. »
+5. « Cette année, je vais [[relever le défi|도전하다]] de la [[danse sur glace|아이스 댄싱]]. »
 
 **Corrections — IV**
 1. 부산에서 온 민수입니다.
 2. 올림픽을 보다가 해 보고 싶어져서 가입하게 됐습니다.
 3. 아직 초보자입니다. 부족하니까 많이 도와주세요.
 4. 앞으로 여러분과 잘 지냈으면 좋겠습니다.
+5. 올해는 아이스 댄싱에 도전하겠습니다.

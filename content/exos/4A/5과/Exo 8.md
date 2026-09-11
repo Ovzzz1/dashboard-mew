@@ -3,13 +3,18 @@
 
 **I. Expressions pour donner des directions**
 
-*Contexte : tu expliques comment monter à l'observatoire du parc.*
+*Contexte : tu expliques comment monter à l'observatoire du parc, puis rejoindre la cafétéria.*
 
 1. Sortez par la sortie 2 et suivez la route.
 2. Si vous marchez un peu, un bâtiment [[ordinaire|평범하다]] de trois étages apparaît.
 3. Longez ce bâtiment et allez à gauche.
 4. Montez la côte, puis au parking, tournez à droite.
 5. L'[[observatoire|전망대]] est juste devant ; la [[piste de luge|눈썰매장]] est en contrebas.
+6. Après la luge, descendez par l'escalier à droite de la [[piste de luge|눈썰매장]].
+7. Suivez la route jusqu'en bas.
+8. Descendez, puis à la billetterie, allez à gauche.
+9. Tournez à droite en longeant le bâtiment de la billetterie.
+10. La [[cafétéria|카페테리아]] est ouverte [[toute l'année|사계절 내내]].
 
 **Corrections — I**
 1. 2번 출구로 나가서 길을 따라 가세요.
@@ -17,6 +22,11 @@
 3. 그 건물을 끼고 왼쪽으로 가세요.
 4. 언덕을 올라가다가 주차장에서 오른쪽으로 도세요.
 5. 전망대가 정면에 있어요. 눈썰매장은 그 아래에 있어요.
+6. 눈썰매를 탄 다음에 눈썰매장 오른쪽 계단으로 내려오세요.
+7. 길을 따라 쭉 내려가세요.
+8. 내려가다가 매표소에서 왼쪽으로 가세요.
+9. 매표소 건물을 끼고 오른쪽으로 도세요.
+10. 카페테리아는 사계절 내내 문을 열어요.
 
 **II. Confirmer ce qu'on a entendu : -다고요?**
 1. Tu dis que l'[[observatoire|전망대]] est ouvert [[toute l'année|사계절 내내]] ?

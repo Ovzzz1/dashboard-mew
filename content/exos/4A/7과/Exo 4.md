@@ -8,7 +8,7 @@
 4. Tu sais bien que les [[fumées|매연]] des voitures sont un problème.
 5. Tu sais bien que la [[protection de l'environnement|환경 보호]] commence chez soi.
 6. Tu sais bien que ça [[pollue|-을 오염시키다]] les rivières.
-7. Tu sais bien qu'un [[message d'intérêt public|공익광고]] peut faire réfléchir.
+7. Le [[message|메시지]] de cette [[publicité d'intérêt public|공익광고]] est clair, non ?
 8. Tu sais bien qu'il vaut mieux [[utiliser avec parcimonie|아껴 쓰다]].
 9. Tu sais bien que ce n'est pas [[remboursable|환불이 안 되다]].
 10. Tu sais bien qu'un petit geste est déjà [[suffisant|충분하다]].
@@ -20,7 +20,7 @@
 4. 자동차 매연이 문제잖아요.
 5. 환경 보호는 집에서 시작하잖아요.
 6. 그게 강을 오염시키잖아요.
-7. 공익광고가 생각하게 만들잖아요.
+7. 그 공익광고의 메시지가 분명하잖아요.
 8. 아껴 쓰는 게 낫잖아요.
 9. 그건 환불이 안 되잖아요.
 10. 작은 행동으로도 충분하잖아요.

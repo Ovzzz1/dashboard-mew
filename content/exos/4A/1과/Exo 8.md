@@ -57,12 +57,14 @@
 2. Annonce : « Il va maintenant y avoir l'élection du nouveau président. »
 3. Consigne : « Veuillez noter la date de la prochaine [[réunion régulière|정기 모임]]. »
 4. Consigne : « Veuillez voter en levant la main. »
+5. Annonce : « Nous allons maintenant avoir le lieu de la [[rencontre improvisée|번개 모임]] de ce soir. »
 
 **Corrections — III**
 1. 지금부터 올해 회계 보고가 있겠습니다.
 2. 지금부터 새 회장 선출이 있겠습니다.
 3. 다음 정기 모임 날짜를 적어 주시기 바랍니다.
 4. 손을 들어 투표해 주시기 바랍니다.
+5. 지금부터 오늘 저녁 번개 모임 장소 안내가 있겠습니다.
 
 **IV. Expressions pour se présenter**
 
@@ -72,9 +74,11 @@
 2. « Comme je voulais [[partager des informations|정보를 나누다]] sur la cuisine, j'ai fini par adhérer. »
 3. « Appelez-moi Tom. »
 4. « J'espère qu'on [[se comprendra bien|마음이 통하다]] à l'avenir. »
+5. « Je cuisine depuis dix ans, mais je ne suis pas un [[expert|전문가]]. Enseignez-moi beaucoup, s'il vous plaît. »
 
 **Corrections — IV**
 1. 저는 토마라고 합니다.
 2. 요리 정보를 나누고 싶어서 가입하게 됐습니다.
 3. 톰이라고 불러 주세요.
 4. 앞으로 여러분과 마음이 잘 통했으면 좋겠습니다.
+5. 10년 동안 요리를 했지만 전문가는 아닙니다. 많이 가르쳐 주세요.

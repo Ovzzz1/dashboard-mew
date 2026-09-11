@@ -11,6 +11,10 @@
 4. La forme est triangulaire et c'est enveloppé de plastique souple.
 5. C'est [[gros|이만하다]] comme ça, et ça [[tient dans une main|한 손에 쏙 들어오다]].
 6. Ça a des [[roues|바퀴]] en [[caoutchouc|고무]] des [[deux côtés|양쪽]].
+7. Petit exercice de [[description|묘사하기]] : c'est un objet rond en [[caoutchouc|고무]] qui [[fait du bruit|소리를 내다]] quand on appuie dessus.
+8. Il fait [[à peu près cette taille|이만하다]], il est carré et le dessus est doux au toucher.
+9. « [[Ça existe, un truc pareil ?|그런 게 있어?]] — Oui, c'est une poche en vinyle qu'on gonfle pour s'en servir d'oreiller. »
+10. C'est un objet triangulaire en tissu : si on le [[tape fort|세게 탁 치다]], il se déplie.
 
 **Corrections — I**
 1. 둥글고 푹신한 천으로 만든 물건이에요.
@@ -19,6 +23,10 @@
 4. 모양이 세모나고 비닐로 싸여 있어요.
 5. 이만한데 한 손에 쏙 들어와요.
 6. 양쪽에 고무 바퀴가 달려 있어요.
+7. 묘사하기 연습이에요. 둥근 고무로 된 물건인데 누르면 소리를 내요.
+8. 크기가 이만하고 네모난데 윗부분 감촉이 부드러워요.
+9. “그런 게 있어?” “응, 바람을 넣어서 베개로 쓰는 비닐 주머니야.”
+10. 천으로 된 세모난 물건인데 세게 탁 치면 펴져요.
 
 **II. Comparer à une taille connue : noun만 해요**
 1. Ça fait la [[taille|크기]] de ce livre.

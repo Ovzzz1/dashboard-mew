@@ -11,6 +11,10 @@
 4. Les [[gens|백성]] ont parlé à voix basse de la naissance de Dangun.
 5. L'ourse devenue femme a souri largement en [[posant le pied sur le sol|땅을 밟다]].
 6. Ceux qui écoutaient ce [[mythe|신화]] avaient les yeux embués.
+7. Le jour de la naissance de Dangun, les fleurs de la montagne se sont ouvertes en grand.
+8. L'ourse avait les yeux pleins de larmes en mangeant l'[[armoise|쑥]] amère.
+9. Le tigre a proposé à l'ourse à voix basse de sortir [[vite|얼른]].
+10. Quand le [[dieu|신]] a dit de ne [[jamais|절대로 안/못]] sortir, l'ourse a hoché la tête.
 
 **Corrections — I**
 1. 곰이 깜깜한 동굴에서 훌쩍훌쩍하면서 백 일을 참았어요.
@@ -19,6 +23,10 @@
 4. 백성들이 단군의 탄생에 대해 소곤소곤 얘기했어요.
 5. 여자가 된 곰이 땅을 밟으면서 활짝 웃었어요.
 6. 그 신화를 듣는 사람들의 눈이 글썽글썽했어요.
+7. 단군이 태어난 날 산에 꽃이 활짝 피었어요.
+8. 곰이 쓴 쑥을 먹으면서 눈물이 글썽글썽했어요.
+9. 호랑이가 곰에게 얼른 나가자고 소곤소곤 말했어요.
+10. 신이 절대로 밖에 나가면 안 된다고 하자 곰이 끄덕끄덕했어요.
 
 **II. Enchaîner deux actions observées : -더니**
 1. L'ourse a mangé de l'[[armoise|쑥]] et de l'[[ail|마늘]] et puis elle est devenue une femme.
@@ -28,9 +36,9 @@
 5. Le roi a contemplé le [[soleil|태양]] et puis il a décidé de gouverner toute la [[péninsule coréenne|한반도]].
 6. Le dieu a regardé le [[miroir|거울]] et puis il a tendu la [[clochette|방울]] à Dangun.
 7. Le peuple a été [[touché|감동을 받다]] et puis il a suivi le roi.
-8. Il a [[réfléchi à ses fautes|반성하다]] et puis il a [[pardonné|용서하다]] à son ennemi.
+8. Le roi a [[réfléchi à ses fautes|반성하다]] et puis il a [[pardonné|용서하다]] à son ennemi.
 9. L'ourse a levé les yeux vers le ciel et puis elle a [[prié|기도하다]] longtemps.
-10. Le roi a pris son [[épée|칼]] et puis il a [[fondé|나라를 세우다]] le premier [[État|국가]].
+10. Le roi a pris son [[épée|칼]] et puis il a fondé le [[premier|최초]] [[État|국가]].
 
 **Corrections — II**
 1. 곰이 쑥과 마늘을 먹더니 여자가 됐어요.
@@ -40,6 +48,6 @@
 5. 왕이 태양을 바라보더니 한반도 전체를 다스리기로 했어요.
 6. 신이 거울을 보더니 단군에게 방울을 줬어요.
 7. 백성들이 감동을 받더니 왕을 따랐어요.
-8. 그가 반성하더니 적을 용서했어요.
+8. 왕이 반성하더니 적을 용서했어요.
 9. 곰이 하늘을 올려다보더니 오랫동안 기도했어요.
 10. 왕이 칼을 들더니 최초의 국가를 세웠어요.

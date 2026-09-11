@@ -5,7 +5,7 @@
 1. Ne pars pas maintenant : tu sais bien que le [[prix des logements|집값]] est trop élevé.
 2. Tu sais bien qu'il faut une [[caution|보증금]] pour louer.
 3. Tu sais bien que tu rentres [[complètement crevé|파김치가 되다]] tous les soirs.
-4. Tu sais bien qu'[[autrefois|예전]] tout était moins cher.
+4. Quand on vit seul, [[on a mille choses à gérer|신경 써야 할 게 한두 가지가 아니야]], tu sais bien.
 5. Tu sais bien que je [[mets de l'argent de côté|저금하다]] depuis deux ans.
 6. Tu sais bien qu'il faut un [[système de sécurité|경비 시스템]] dans ce quartier.
 7. Tu sais bien qu'on ne peut pas [[vivre de façon indépendante|독립해서 살다]] sans économies.
@@ -17,7 +17,7 @@
 1. 지금 나가지 마. 집값이 너무 비싸잖아.
 2. 집을 빌리려면 보증금이 필요하잖아요.
 3. 매일 저녁에 파김치가 되잖아요.
-4. 예전에는 다 더 쌌잖아요.
+4. 혼자 살면 신경 써야 할 게 한두 가지가 아니잖아요.
 5. 제가 2년 동안 저금했잖아요.
 6. 이 동네는 경비 시스템이 필요하잖아요.
 7. 돈 없이는 독립해서 살 수 없잖아요.

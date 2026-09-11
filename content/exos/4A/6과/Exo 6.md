@@ -11,6 +11,10 @@
 4. Ils ont parlé à voix basse pour ne pas gêner le tournage.
 5. Ses yeux se sont embués en revoyant le montage final.
 6. Le drone a volé à grands coups d'ailes au-dessus du champ.
+7. En apprenant qu'on avait gagné un prix, toute l'équipe a souri de toutes ses dents.
+8. L'actrice avait les yeux pleins de larmes en lisant le scénario.
+9. Le jeune acteur a pleuré en reniflant parce qu'il avait oublié sa réplique.
+10. Pour tourner la dernière scène, on a ouvert grand les fenêtres.
 
 **Corrections — I**
 1. 감독이 첫 촬영을 보고 활짝 웃었어요.
@@ -19,6 +23,10 @@
 4. 촬영에 방해될까 봐 소곤소곤 얘기했어요.
 5. 최종 편집본을 보고 눈이 글썽글썽했어요.
 6. 드론이 들판 위를 훨훨 날았어요.
+7. 상을 받았다는 소식에 팀 전체가 활짝 웃었어요.
+8. 여배우가 대본을 읽으면서 눈물이 글썽글썽했어요.
+9. 어린 배우가 대사를 잊어버려서 훌쩍훌쩍 울었어요.
+10. 마지막 장면을 찍으려고 창문을 활짝 열었어요.
 
 **II. Enchaîner deux actions observées : -더니**
 1. Mika a lu le scénario et puis elle a proposé de [[répartir les rôles|역할을 나누다]] autrement.
@@ -27,7 +35,7 @@
 4. L'acteur a [[levé les yeux|올려다 보다]] et puis il a récité sa réplique.
 5. Le professeur a regardé l'[[UCC|UCC]] et puis il a dit que c'était [[remarquable|훌륭하다]].
 6. Le chien du tournage a [[remué la queue|꼬리를 흔들다]] et puis il a aboyé.
-7. Elle a trébuché et puis elle a [[renversé|쏟다]] son café sur le scénario.
+7. La technicienne lumière a trébuché et puis elle a [[renversé|쏟다]] son café sur le scénario.
 8. Le film a [[ému|감동시키다]] le jury et puis il a remporté le prix.
 9. Louis a [[réfléchi à ses erreurs|반성하다]] et puis il est arrivé à l'heure le lendemain.
 10. Ce film a représenté la [[République de Corée|대한민국]] à Cannes et puis il est devenu célèbre.
@@ -39,7 +47,7 @@
 4. 배우가 올려다보더니 대사를 말했어요.
 5. 선생님이 UCC를 보시더니 훌륭하다고 하셨어요.
 6. 촬영장 개가 꼬리를 흔들더니 짖었어요.
-7. 그 사람이 발이 걸리더니 대본에 커피를 쏟았어요.
+7. 조명 담당이 발이 걸리더니 대본에 커피를 쏟았어요.
 8. 그 영화가 심사위원을 감동시키더니 상을 받았어요.
 9. 루이 씨가 반성하더니 다음 날 제시간에 왔어요.
 10. 그 영화가 칸에서 대한민국을 대표하더니 유명해졌어요.

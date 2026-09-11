@@ -11,6 +11,10 @@
 4. Le [[tapis chauffant|전기 장판]] est en tissu doux.
 5. C'est un objet triangulaire et moelleux, en tissu : un coussin.
 6. Le [[déshumidificateur|제습기]] est [[volumineux|부피가 크다]] et le [[couvercle ferme mal|뚜껑이 잘 안 닫히다]].
+7. C'est la [[fin du semestre|학기 말]] et il [[ne reste plus beaucoup de temps|얼마 안 남다]] avant mon retour : je vends ce ventilateur rond.
+8. Chez moi, la [[tension ne correspondra pas|전압이 안 맞다]] pour ce radiateur carré en plastique dur.
+9. C'est un [[tapis chauffant|전기 장판]] [[pour une personne|1인용]], doux et moelleux.
+10. [[L'année est passée en un clin d'œil|눈 깜짝할 사이에 시간이 지나갔어요.]] Même ce coussin triangulaire me [[rappelle|떠오르다]] des souvenirs.
 
 **Corrections — I**
 1. 하얀 플라스틱으로 된 길쭉한 가습기예요.
@@ -19,6 +23,10 @@
 4. 전기 장판은 부드러운 천으로 돼 있어요.
 5. 세모나고 푹신한 천으로 만든 물건이에요. 쿠션이에요.
 6. 제습기는 부피가 크고 뚜껑이 잘 안 닫혀요.
+7. 학기 말이라서 귀국까지 얼마 안 남았어요. 그래서 이 둥근 선풍기를 팔아요.
+8. 우리나라에서는 이 네모나고 딱딱한 플라스틱 전기 히터가 전압이 안 맞아요.
+9. 부드럽고 푹신한 1인용 전기 장판이에요.
+10. 1년이 눈 깜짝할 사이에 지나갔어요. 이 세모난 쿠션을 봐도 추억이 떠올라요.
 
 **II. Comparer à une taille connue : noun만 해요**
 1. Mon [[radiateur électrique|전기 히터]] fait la taille de ce sac.

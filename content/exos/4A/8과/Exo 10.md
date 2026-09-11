@@ -11,6 +11,10 @@
 4. La bande élastique est allongée et on peut l'[[enrouler autour de la cheville|발목에 감다]].
 5. Ce petit [[outil de sport|운동 도구]] [[tient dans une main|한 손에 쏙 들어오다]].
 6. Ça [[sert d'exercice|운동이 되다]] et de [[décoration|실내 장식]] : [[deux en un|일석이조]].
+7. J'ai acheté un tapis de sport [[pour une personne|1인용]], carré et moelleux.
+8. La corde à sauter est allongée, avec des poignées en plastique dur.
+9. Je fais des séries de [[30 répétitions|30회]] avec ce ballon rond en caoutchouc.
+10. Cet appareil était [[mieux que ce que j'attendais|기대했던 것 이상으로 좋았어]] : grâce à lui, le sport est devenu un plaisir.
 
 **Corrections — I**
 1. 아령은 양쪽이 둥글고 딱딱해요.
@@ -19,6 +23,10 @@
 4. 밴드는 길쭉해서 발목에 감을 수 있어요.
 5. 이 작은 운동 도구는 한 손에 쏙 들어와요.
 6. 운동도 되고 실내 장식도 되니까 일석이조예요.
+7. 네모나고 푹신한 1인용 운동 매트를 샀어요.
+8. 줄넘기는 길쭉하고 손잡이가 딱딱한 플라스틱이에요.
+9. 이 둥근 고무공으로 30회씩 운동해요.
+10. 이 운동 기구는 기대했던 것 이상으로 좋았어요. 덕분에 운동이 즐거워졌어요.
 
 **II. Comparer à une taille connue : noun만 해요**
 1. L'[[haltère|아령]] fait la taille de cette bouteille.

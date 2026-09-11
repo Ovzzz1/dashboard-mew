@@ -57,24 +57,28 @@
 2. Annonce : « Il va maintenant y avoir la performance de danse des étudiants de niveau 4. »
 3. Consigne : « Veuillez [[vous avancer|앞으로 나오다]] pour recevoir votre diplôme. »
 4. Consigne : « Veuillez prendre les photos après la cérémonie. »
+5. Consigne : « Veuillez tous vous lever pour chanter l'hymne de l'école. »
 
 **Corrections — III**
 1. 지금부터 졸업생의 연설이 있겠습니다.
 2. 지금부터 4급 학생들의 춤 공연이 있겠습니다.
 3. 졸업장을 받으러 앞으로 나와 주시기 바랍니다.
 4. 사진은 행사가 끝난 후에 찍어 주시기 바랍니다.
+5. 교가를 부르기 위해 모두 일어나 주시기 바랍니다.
 
 **IV. Expressions pour se présenter**
 
 *Contexte : tu te présentes aux membres. Garde le 격식체 du début à la fin.*
 
-1. « Je suis Lee Jun, votre [[présentateur|사회자]] du jour, je viens de Séoul. »
+1. « Je suis Lee Jun, [[l'animateur du jour|사회를 맡다]], je viens de Séoul. »
 2. « En aidant à l'organisation, on m'a demandé d'animer, donc j'ai fini par [[me charger de l'animation|사회를 맡다]]. »
 3. « Je vais faire de mon mieux. »
 4. « J'espère que nous [[passerons|함께하다]] un bon moment ensemble aujourd'hui. »
+5. « Comme [[animateur|사회자]], je suis encore [[débutant|초보자]], alors aidez-moi beaucoup. »
 
 **Corrections — IV**
 1. 오늘 사회를 맡은, 서울에서 온 이준입니다.
 2. 행사 준비를 돕다가 부탁을 받아서 사회를 맡게 됐습니다.
 3. 최선을 다하겠습니다.
 4. 오늘 여러분과 즐거운 시간을 함께했으면 좋겠습니다.
+5. 사회자로서는 아직 초보자니까 많이 도와주세요.

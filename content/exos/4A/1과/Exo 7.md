@@ -57,12 +57,14 @@
 2. Annonce : « Il va maintenant y avoir la remise des primes. »
 3. Consigne : « Veuillez [[vous avancer|앞으로 나오다]] quand j'appelle votre nom. »
 4. Consigne : « Veuillez vérifier votre planning de la semaine prochaine. »
+5. Consigne : « Veuillez vérifier votre [[salaire horaire|시급]] sur le contrat. »
 
 **Corrections — III**
 1. 지금부터 신입 직원 소개가 있겠습니다.
 2. 지금부터 상여금 전달이 있겠습니다.
 3. 이름을 부르면 앞으로 나와 주시기 바랍니다.
 4. 다음 주 근무표를 확인해 주시기 바랍니다.
+5. 계약서에서 시급을 확인해 주시기 바랍니다.
 
 **IV. Expressions pour se présenter**
 
@@ -72,9 +74,11 @@
 2. « En cherchant un emploi, cette annonce m'a plu, donc j'ai fini par postuler. »
 3. « Je vais travailler dur. »
 4. « Enseignez-moi beaucoup, s'il vous plaît. »
+5. « J'espère que nous travaillerons bien ensemble à l'avenir. »
 
 **Corrections — IV**
 1. 낭트에서 온 카밀입니다.
 2. 일자리를 찾다가 이 공고가 마음에 들어서 지원하게 됐습니다.
 3. 열심히 하겠습니다.
 4. 많이 가르쳐 주세요.
+5. 앞으로 여러분과 즐겁게 일했으면 좋겠습니다.

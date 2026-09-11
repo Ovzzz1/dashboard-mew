@@ -57,12 +57,14 @@
 2. Annonce : « Il va maintenant y avoir la projection d'une courte vidéo. »
 3. Consigne : « Veuillez [[verser|입금하다]] vos dons sur ce compte. »
 4. Consigne : « Veuillez écouter attentivement jusqu'à la fin. »
+5. Consigne : « Veuillez bien [[prendre soin de votre santé|건강 관리]] avant le départ. »
 
 **Corrections — III**
 1. 지금부터 긴급 구호가의 경험담이 있겠습니다.
 2. 지금부터 짧은 영상 상영이 있겠습니다.
 3. 이 계좌로 기부금을 입금해 주시기 바랍니다.
 4. 끝까지 잘 들어 주시기 바랍니다.
+5. 출발 전에 건강 관리를 잘해 주시기 바랍니다.
 
 **IV. Expressions pour se présenter**
 
@@ -72,9 +74,11 @@
 2. « En aidant dans un [[camp de réfugiés|난민촌]], j'ai été touchée, donc j'ai fini par adhérer à cette association. »
 3. « Je vais participer activement aux missions sur le terrain. »
 4. « Je manque d'expérience, alors aidez-moi beaucoup. »
+5. « Je voulais [[sauver|-을 살리다]] des vies, donc j'ai fini par [[me lancer|도전하다]] dans ce travail. »
 
 **Corrections — IV**
 1. 저는 소피라고 합니다.
 2. 난민촌에서 돕다가 감동을 받아서 이 단체에 가입하게 됐습니다.
 3. 현장 활동에 열심히 참여하겠습니다.
 4. 경험이 부족하니까 많이 도와주세요.
+5. 사람들을 살리고 싶어서 이 일에 도전하게 됐습니다.

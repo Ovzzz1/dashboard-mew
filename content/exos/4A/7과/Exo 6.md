@@ -8,7 +8,7 @@
 4. Tu sais bien que je veux [[vivre de façon indépendante|독립해서 살다]].
 5. Tu sais bien que tu m'as dit [[catégoriquement|무조건]] non sans écouter.
 6. Tu sais bien que je veux [[élever|키우다]] un chat.
-7. Tu sais bien que je le fais [[correctement|제대로]] maintenant.
+7. [[Laissez-moi|-게 해 주세요]] vivre seul. J'ai quand même vingt-cinq ans.
 8. Tu sais bien que c'est [[précieux|소중하다]] pour moi.
 9. Tu sais bien que je vais [[faire de mon mieux|최선을 다하다]].
 10. Tu sais bien que ça me [[donne confiance|자신감을 얻다]].
@@ -20,7 +20,7 @@
 4. 제가 독립해서 살고 싶어 하잖아요.
 5. 듣지도 않고 무조건 안 된다고 하셨잖아요.
 6. 제가 고양이를 키우고 싶어 하잖아요.
-7. 이제는 제대로 하잖아요.
+7. 혼자 살게 해 주세요. 저도 이제 스물다섯 살이잖아요.
 8. 저한테 소중하잖아요.
 9. 제가 최선을 다할 거잖아요.
 10. 그게 저한테 자신감을 주잖아요.

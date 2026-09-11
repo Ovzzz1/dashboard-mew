@@ -57,12 +57,14 @@
 2. Annonce : « Il va maintenant y avoir le discours du directeur du département. »
 3. Consigne : « Veuillez vous [[présenter à tour de rôle|돌아가면서 소개를 하다]]. »
 4. Consigne : « Veuillez vous asseoir avant le début de la cérémonie. »
+5. Annonce : « Nous allons maintenant avoir les informations sur les [[réunions régulières|정기 모임]] du département. »
 
 **Corrections — III**
 1. 지금부터 신입생 신고식이 있겠습니다.
 2. 지금부터 학과장님의 축사가 있겠습니다.
 3. 돌아가면서 소개해 주시기 바랍니다.
 4. 행사가 시작되기 전에 자리에 앉아 주시기 바랍니다.
+5. 지금부터 학과 정기 모임 안내가 있겠습니다.
 
 **IV. Expressions pour se présenter**
 
@@ -72,9 +74,11 @@
 2. « J'ai été [[libéré du service|제대하다]] le mois dernier, donc j'ai fini par reprendre les cours. »
 3. « Appelez-moi Minho. »
 4. « Je ne suis pas encore très bon, alors aidez-moi beaucoup. »
+5. « Je suis au [[département de langue et littérature coréennes|국어국문학과]]. J'ai l'air [[énergique|씩씩하다]], mais en fait je suis timide. »
 
 **Corrections — IV**
 1. 대전에서 온 김민호입니다.
 2. 지난달에 제대해서 다시 학교에 다니게 됐습니다.
 3. 민호라고 불러 주세요.
 4. 아직 부족하니까 많이 도와주세요.
+5. 국어국문학과에 다니고 있습니다. 씩씩해 보이지만 사실은 수줍음이 많습니다.

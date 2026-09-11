@@ -6,11 +6,15 @@
 *Contexte : tu présentes des 아이디어 상품 vus en ligne.*
 
 1. C'est un [[article gadget|아이디어 상품]] allongé qui [[se transforme|변신하다]] en [[outil de sport|운동 도구]].
-2. Ce [[support de téléphone|휴대폰 꽃이]] est triangulaire et dur.
+2. Ce [[support de téléphone|휴대폰 꽂이]] est triangulaire et dur.
 3. Il est en [[caoutchouc|고무]] doux et ne [[se casse|부서지다]] pas.
 4. C'est rond et ça [[tient dans une main|한 손에 쏙 들어오다]].
 5. On peut l'[[enrouler autour de la cheville|발목에 감다]] : c'est en tissu moelleux.
 6. Ça sert aussi de [[décoration d'intérieur|실내 장식]], donc c'est [[deux d'un coup|일석이조]].
+7. On peut [[utiliser|활용하다]] ce coussin en tissu comme oreiller de voyage.
+8. Cette lampe ronde s'allume quand on la [[tape fort|세게 탁 치다]].
+9. C'est un [[porte-clés|열쇠고리]] en caoutchouc doux, en forme de poisson allongé.
+10. Cette boîte carrée en verre garde les plantes au chaud : [[génial|멋지다]] !
 
 **Corrections — I**
 1. 길쭉한 아이디어 상품인데 운동 도구로 변신해요.
@@ -19,6 +23,10 @@
 4. 둥글고 한 손에 쏙 들어와요.
 5. 발목에 감을 수 있는데 푹신한 천으로 돼 있어요.
 6. 실내 장식도 되니까 일석이조예요.
+7. 이 천 쿠션은 여행용 베개로도 활용할 수 있어요.
+8. 이 둥근 스탠드는 세게 탁 치면 불이 켜져요.
+9. 길쭉한 물고기 모양의 부드러운 고무 열쇠고리예요.
+10. 이 네모난 유리 상자는 식물을 따뜻하게 지켜 줘요. 정말 멋져요!
 
 **II. Comparer à une taille connue : noun만 해요**
 1. Ce gadget fait la [[taille|크기]] de mon téléphone.

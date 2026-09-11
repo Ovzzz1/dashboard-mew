@@ -11,6 +11,10 @@
 4. Les photos sont [[empilées|-이 쌓여 있다]] dans le [[tiroir|서랍]].
 5. Quand on les [[touche|만지다]], les souvenirs [[reviennent|떠오르다]] de façon [[très vive|생생하다]].
 6. Cette boîte [[contient des souvenirs|추억이 담겨 있다]], alors je la [[garde précieusement|간직하다]].
+7. Ce vieux coussin triangulaire est tout doux : c'est ma grand-mère qui l'a fait.
+8. Cette petite boîte carrée est [[pleine|가득]] de lettres.
+9. Ce téléphone en plastique dur ne s'allume plus, mais je le [[garde précieusement|간직하다]].
+10. J'[[accorde beaucoup de sens|의미를 두다]] à cette écharpe en tissu doux que ma mère m'a offerte.
 
 **Corrections — I**
 1. 수첩은 네모나고 표지가 부드러운 천이에요.
@@ -19,6 +23,10 @@
 4. 사진이 서랍에 쌓여 있어요.
 5. 만지면 추억이 생생하게 떠올라요.
 6. 이 상자에는 추억이 담겨 있어서 소중히 간직해요.
+7. 이 오래된 세모난 쿠션은 아주 부드러워요. 할머니가 만들어 주셨어요.
+8. 이 네모난 작은 상자에 편지가 가득 들어 있어요.
+9. 이 딱딱한 플라스틱 휴대폰은 이제 안 켜지지만 소중히 간직해요.
+10. 어머니가 주신 부드러운 천 목도리에 큰 의미를 두고 있어요.
 
 **II. Comparer à une taille connue : noun만 해요**
 1. Le [[carnet|수첩]] fait la taille de cette carte postale.

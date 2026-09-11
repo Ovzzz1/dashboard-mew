@@ -57,12 +57,14 @@
 2. Annonce : « Il va maintenant y avoir un mot du président. »
 3. Consigne : « Veuillez éteindre vos téléphones. »
 4. Consigne : « Veuillez frapper des mains en rythme avec nous. »
+5. Consigne : « Veuillez [[profiter|즐기다]] du spectacle jusqu'à la fin. »
 
 **Corrections — III**
 1. 지금부터 동호회의 사물놀이 공연이 있겠습니다.
 2. 지금부터 회장님의 인사 말씀이 있겠습니다.
 3. 휴대폰을 꺼 주시기 바랍니다.
 4. 저희와 함께 박자에 맞춰 손뼉을 쳐 주시기 바랍니다.
+5. 공연을 끝까지 즐겨 주시기 바랍니다.
 
 **IV. Expressions pour se présenter**
 
@@ -72,9 +74,11 @@
 2. « En me promenant dans un festival, j'ai été attirée par le samulnori, donc j'ai fini par adhérer. »
 3. « Appelez-moi simplement Hana. »
 4. « Je vais participer activement. »
+5. « Je joue d'un [[instrument de percussion|타악기]] depuis cinq ans, mais je ne suis pas encore assez bonne, alors aidez-moi beaucoup. »
 
 **Corrections — IV**
 1. 저는 하나라고 합니다.
 2. 축제를 구경하다가 사물놀이에 끌려서 가입하게 됐습니다.
 3. 그냥 하나라고 불러 주세요.
 4. 열심히 활동하겠습니다.
+5. 5년 동안 타악기를 쳤지만 아직 부족하니까 많이 도와주세요.

@@ -57,12 +57,14 @@
 2. Annonce : « Il va maintenant y avoir une séance de questions-réponses. »
 3. Consigne : « Veuillez [[prendre le temps|-는 시간을 갖다]] de préparer vos questions. »
 4. Consigne : « Veuillez remercier notre invité par de chaleureux applaudissements. »
+5. Annonce : « Il va maintenant y avoir la projection d'un film sur la [[vie|삶]] de notre invité. »
 
 **Corrections — III**
 1. 지금부터 초대 손님의 인생 이야기가 있겠습니다.
 2. 지금부터 질의응답 시간이 있겠습니다.
 3. 질문을 준비하는 시간을 가져 주시기 바랍니다.
 4. 큰 박수로 초대 손님께 감사의 마음을 전해 주시기 바랍니다.
+5. 지금부터 초대 손님의 삶을 담은 영상 상영이 있겠습니다.
 
 **IV. Expressions pour se présenter**
 
@@ -72,9 +74,11 @@
 2. « En voyageant seule, j'ai [[retrouvé la sérénité|마음의 여유를 찾다]], donc j'ai fini par adhérer à ce groupe. »
 3. « Appelez-moi Nès. »
 4. « J'espère bien m'entendre avec vous. Je vais participer activement. »
+5. « J'ai [[décidé|마음먹다]] de changer ma [[façon de vivre|사는 방식]], donc j'ai fini par adhérer. »
 
 **Corrections — IV**
 1. 마르세유에서 온 이네스입니다.
 2. 혼자 여행하다가 마음의 여유를 찾아서 이 모임에 가입하게 됐습니다.
 3. 네스라고 불러 주세요.
 4. 앞으로 여러분과 잘 지냈으면 좋겠습니다. 열심히 활동하겠습니다.
+5. 사는 방식을 바꾸기로 마음먹어서 가입하게 됐습니다.

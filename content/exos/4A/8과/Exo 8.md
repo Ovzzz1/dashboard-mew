@@ -11,6 +11,10 @@
 4. La surface est douce mais le fond est dur.
 5. C'est un [[bon exemple|대표적이다]] de [[gadget|아이디어 상품]] à message.
 6. Ça rappelle que fumer est [[mauvais pour la santé|몸에 해롭다]] : le message est [[puissant|강력하다]].
+7. J'ai essayé d'[[arrêter de fumer|담배를 끊다]], mais ça a toujours [[tourné court|작심삼일로 끝나다]].
+8. Quand je vois ce [[porte-clés|열쇠고리]] allongé en caoutchouc, ma résolution me [[revient à l'esprit|떠오르다]] chaque jour.
+9. J'[[accorde de l'importance|의미를 두다]] à ce petit [[carnet|수첩]] carré : j'y note chaque jour sans tabac.
+10. Maintenant, le carnet est [[plein|가득]] : sa couverture en tissu est toute douce.
 
 **Corrections — I**
 1. 재떨이가 폐 모양인데 둥글고 딱딱해요.
@@ -19,6 +23,10 @@
 4. 겉은 부드러운데 바닥은 딱딱해요.
 5. 메시지를 담은 아이디어 상품의 대표적인 예예요.
 6. 담배가 몸에 해롭다는 걸 알려 주는데 메시지가 강력해요.
+7. 담배를 끊으려고 했지만 늘 작심삼일로 끝났어요.
+8. 이 길쭉한 고무 열쇠고리를 보면 매일 제 결심이 떠올라요.
+9. 이 네모난 수첩에 의미를 두고 있어요. 담배를 안 피운 날을 매일 적어요.
+10. 이제 수첩이 가득 찼어요. 천으로 된 표지가 아주 부드러워요.
 
 **II. Comparer à une taille connue : noun만 해요**
 1. Le [[cendrier|재떨이]] fait la taille de ce bol.

@@ -3,13 +3,18 @@
 
 **I. Expressions pour donner des directions**
 
-*Contexte : tu donnes rendez-vous à des amis sur la pelouse du parc.*
+*Contexte : tu donnes rendez-vous à des amis sur la pelouse du parc, puis tu expliques le retour vers la station.*
 
 1. Sortez par la sortie 5 et continuez dans la direction de sortie.
 2. Si vous suivez la route, l'entrée du [[parc écologique|생태 공원]] apparaît.
 3. Longez la [[fontaine|분수]] et allez à gauche.
 4. Continuez, puis au petit pont, tournez à droite.
 5. La pelouse où manger les [[paniers-repas|도시락]] est juste en face.
+6. Pour repartir, faites demi-tour au bout de la pelouse.
+7. Continuez, puis à l'intersection en T devant l'étang, allez à gauche.
+8. Si vous suivez le chemin, le point de location de vélos apparaît.
+9. [[Rendez|반납하다]] les vélos là-bas, puis tournez à droite en longeant le bâtiment.
+10. La station est juste en face : prenez le métro [[en direction de|방면]] Jamsil.
 
 **Corrections — I**
 1. 5번 출구로 나가서 나간 방향으로 가세요.
@@ -17,6 +22,11 @@
 3. 분수를 끼고 왼쪽으로 가세요.
 4. 쭉 가다가 작은 다리에서 오른쪽으로 도세요.
 5. 도시락 먹는 잔디밭이 정면에 있어요.
+6. 돌아갈 때는 잔디밭 끝에서 뒤로 도세요.
+7. 쭉 가다가 연못 앞 삼거리에서 왼쪽으로 가세요.
+8. 길을 따라 걸으면 자전거 대여소가 나와요.
+9. 거기서 자전거를 반납하고 건물을 끼고 오른쪽으로 도세요.
+10. 역이 정면에 있어요. 잠실 방면 지하철을 타세요.
 
 **II. Confirmer ce qu'on a entendu : -다고요?**
 1. Tu dis que tu as préparé les [[paniers-repas|도시락]] toi-même ?

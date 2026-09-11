@@ -11,6 +11,10 @@
 4. Les deux acteurs ont chuchoté à voix basse derrière le rideau.
 5. À la dernière réplique, elle avait les yeux pleins de larmes.
 6. Le [[papillon|나비]] en papier a volé à grands coups d'ailes au-dessus de la scène.
+7. Pendant la répétition de la [[pièce en un acte|단막극]], Mika a pleuré en reniflant.
+8. Le metteur en scène hochait la tête en regardant la dernière scène.
+9. Avant le lever du rideau, on a ouvert grand les portes de la salle.
+10. Louis a parlé à voix basse, de peur que le public entende le [[secret|비밀]] de la fin.
 
 **Corrections — I**
 1. 미카가 활짝 웃으면서 들어와서 역할을 나누자고 했어요.
@@ -19,6 +23,10 @@
 4. 두 배우가 무대 뒤에서 소곤소곤 얘기했어요.
 5. 마지막 대사에서 눈이 글썽글썽했어요.
 6. 종이 나비가 무대 위에서 훨훨 날았어요.
+7. 단막극 연습 중에 미카가 훌쩍훌쩍 울었어요.
+8. 연출가가 마지막 장면을 보면서 끄덕끄덕했어요.
+9. 막이 오르기 전에 공연장 문을 활짝 열었어요.
+10. 관객이 결말의 비밀을 들을까 봐 루이가 소곤소곤 말했어요.
 
 **II. Enchaîner deux actions observées : -더니**
 1. Stefan est monté sur scène et puis il a [[souri largement|활짝 웃다]] avant de danser.
@@ -26,8 +34,8 @@
 3. Mika a [[inventé une histoire|이야기를 지어내다]] et puis elle l'a proposée au groupe.
 4. Le professeur a regardé la répétition et puis il a [[hoché la tête|끄덕거리다]] avec satisfaction.
 5. Louis a oublié sa réplique et puis il a baissé la [[tête|고개]].
-6. Elle a lu le scénario et puis elle a dit que c'était [[pitoyable|불쌍하다]] pour le personnage.
-7. Il a [[trompé|속이다]] son camarade dans la pièce et puis il lui a demandé [[pardon|용서하다]].
+6. Alex a lu le scénario et puis il a dit que l'héroïne était [[à plaindre|불쌍하다]].
+7. Dans la pièce, Stéphane a [[trompé|속이다]] son ami et puis il lui a demandé [[pardon|용서하다]].
 8. Le club a filmé un [[UCC|UCC]] et puis l'a mis en ligne le soir même.
 9. Pei a préparé la [[production|제작]] et puis elle a tout organisé en une semaine.
 10. Le public a été [[ému|감동을 받다]] et puis il a applaudi debout.
@@ -38,8 +46,8 @@
 3. 미카 씨가 이야기를 지어내더니 팀에 제안했어요.
 4. 선생님이 연습을 보시더니 만족스럽게 끄덕거리셨어요.
 5. 루이 씨가 대사를 잊어버리더니 고개를 숙였어요.
-6. 그 사람이 대본을 읽더니 주인공이 불쌍하다고 했어요.
-7. 그가 극에서 친구를 속이더니 용서를 빌었어요.
+6. 알렉스 씨가 대본을 읽더니 주인공이 불쌍하다고 했어요.
+7. 극 속에서 스테판 씨가 친구를 속이더니 용서를 빌었어요.
 8. 동아리가 UCC를 찍더니 그날 밤에 올렸어요.
 9. 페이 씨가 제작을 맡더니 일주일 만에 다 준비했어요.
 10. 관객들이 감동을 받더니 일어서서 박수를 쳤어요.

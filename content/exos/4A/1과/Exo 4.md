@@ -57,12 +57,14 @@
 2. Annonce : « Il va maintenant y avoir une courte séance d'échauffement. »
 3. Consigne : « Veuillez [[verser|입금하다]] la cotisation avant vendredi. »
 4. Consigne : « Veuillez vous rassembler devant la gare à 8 heures. »
+5. Annonce : « Nous allons maintenant avoir les informations sur les [[frais de voyage|여행 경비]]. »
 
 **Corrections — III**
 1. 지금부터 도보 여행 코스 소개가 있겠습니다.
 2. 지금부터 간단한 준비 운동이 있겠습니다.
 3. 금요일까지 회비를 입금해 주시기 바랍니다.
 4. 8시까지 역 앞으로 모여 주시기 바랍니다.
+5. 지금부터 여행 경비 안내가 있겠습니다.
 
 **IV. Expressions pour se présenter**
 
@@ -72,9 +74,11 @@
 2. « Je voulais [[retrouver la sérénité|마음의 여유를 찾다]], donc j'ai fini par adhérer à ce club de randonnée. »
 3. (à quelqu'un qui te complimente) « Oh, je ne suis pas si bon, j'ai encore du chemin. »
 4. « Je vais participer activement. Enseignez-moi beaucoup, s'il vous plaît. »
+5. « Ma [[motivation d'adhésion|가입 동기]], c'est que je voulais parcourir la Corée [[dans tous ses recoins|구석구석]]. »
 
 **Corrections — IV**
 1. 보르도에서 온 폴입니다.
 2. 마음의 여유를 찾고 싶어서 이 도보 여행 동호회에 가입하게 됐습니다.
 3. 잘하기는요. 아직 멀었어요.
 4. 열심히 활동하겠습니다. 많이 가르쳐 주세요.
+5. 제 가입 동기는 한국을 구석구석 여행하고 싶었던 것입니다.

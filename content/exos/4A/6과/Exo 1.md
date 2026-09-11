@@ -11,6 +11,10 @@
 4. Ils ont parlé à voix basse pour que le [[secret|비밀]] ne s'échappe pas.
 5. En revoyant sa mère, il a eu les yeux pleins de larmes.
 6. La fée a souri de toutes ses dents en [[tenant son bébé|아기를 안다]].
+7. Le bûcheron a caché les habits ailés [[en secret|몰래]], alors la fée a pleuré en reniflant.
+8. Le cerf a hoché la tête en disant de ne [[jamais|절대로 안/못]] rendre les habits ailés.
+9. Quand le chasseur l'a [[poursuivi|쫓아오다]], le cerf a chuchoté au bûcheron de le cacher [[vite|얼른]].
+10. [[À ce moment-là|그러자]], la fée a ouvert grand la porte et s'est envolée à grands coups d'ailes.
 
 **Corrections — I**
 1. 선녀가 날개옷을 입고 훨훨 날아갔어요.
@@ -19,6 +23,10 @@
 4. 비밀이 새어 나갈까 봐 소곤소곤 얘기했어요.
 5. 어머니를 다시 뵙고 눈물이 글썽글썽했어요.
 6. 선녀가 아기를 안고 활짝 웃었어요.
+7. 나무꾼이 날개옷을 몰래 숨기자 선녀가 훌쩍훌쩍 울었어요.
+8. 사슴이 고개를 끄덕끄덕하면서 날개옷을 절대로 돌려주면 안 된다고 했어요.
+9. 사냥꾼이 쫓아오자 사슴이 나무꾼에게 얼른 숨겨 달라고 소곤소곤 말했어요.
+10. 그러자 선녀가 문을 활짝 열고 훨훨 날아갔어요.
 
 **II. Enchaîner deux actions observées : -더니**
 1. Le [[cerf|사슴]] est arrivé [[en courant|뛰어오다]] et puis il a supplié : « [[Sauvez-moi|살려 주세요]] ! »

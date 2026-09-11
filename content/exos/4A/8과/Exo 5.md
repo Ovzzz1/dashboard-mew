@@ -11,6 +11,10 @@
 4. Le bouton est carré et la texture est douce.
 5. On peut [[régler l'heure et se coucher|시간을 맞춰 놓고 자다]] : il s'éteint [[tout seul|저절로]].
 6. Il est allongé et [[tient dans une main|한 손에 쏙 들어오다]].
+7. Le matin, [[j'ai du mal à me réveiller|잠이 안 깨다]], alors j'ai acheté ce réveil allongé.
+8. Quand [[l'alarme sonne|알람이 울리다]], il se met à rouler sur ses [[roues|바퀴]] en caoutchouc.
+9. Pour l'arrêter, il faut [[taper fort|세게 탁 치다]] sur le dessus, qui est dur.
+10. Grâce à lui, j'arrive [[à l'heure|제시간]] en cours : cette fois, ma résolution ne [[s'est pas arrêtée au bout de trois jours|작심삼일로 끝나다]].
 
 **Corrections — I**
 1. 이 알람 시계는 둥글고 소리를 아주 크게 내요.
@@ -19,6 +23,10 @@
 4. 버튼이 네모나고 감촉이 부드러워요.
 5. 시간을 맞춰 놓고 자면 저절로 꺼져요.
 6. 길쭉해서 한 손에 쏙 들어와요.
+7. 아침에 잠이 잘 안 깨서 이 길쭉한 알람 시계를 샀어요.
+8. 알람이 울리면 고무 바퀴로 굴러다니기 시작해요.
+9. 끄려면 딱딱한 윗부분을 세게 탁 쳐야 해요.
+10. 덕분에 수업에 제시간에 가요. 이번에는 작심삼일로 끝나지 않았어요.
 
 **II. Comparer à une taille connue : noun만 해요**
 1. Ce réveil fait la [[taille|크기]] d'une balle de tennis.

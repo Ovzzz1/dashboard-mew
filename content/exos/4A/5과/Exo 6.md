@@ -3,13 +3,18 @@
 
 **I. Expressions pour donner des directions**
 
-*Contexte : tu guides un randonneur jusqu'au sommet de Bukaksan.*
+*Contexte : tu guides un randonneur jusqu'au sommet de Bukaksan, puis pour redescendre jusqu'à l'arrêt de bus.*
 
 1. Sortez par la sortie 3 et continuez dans la direction de sortie.
 2. Si vous marchez [[un bon moment|한참]], l'entrée du [[sentier des remparts|성곽길]] apparaît.
 3. Longez le mur et montez vers la droite.
 4. Montez, puis à la bifurcation, prenez à gauche vers [[Bukaksan|북악산]].
 5. Au [[sommet|정상]], la ville [[se voit d'un coup d'œil|한눈에 보이다]].
+6. Pour redescendre, faites demi-tour au [[sommet|정상]].
+7. Descendez par le [[sentier des remparts|성곽길]], puis à la bifurcation, allez à droite.
+8. Si vous descendez un peu, vous verrez des [[traces|자국]] de balles sur un pin.
+9. Tournez à gauche en longeant ce pin.
+10. L'arrêt de bus est juste en face : prenez le bus [[en direction de|방면]] Gwanghwamun.
 
 **Corrections — I**
 1. 3번 출구로 나가서 나간 방향으로 가세요.
@@ -17,6 +22,11 @@
 3. 성곽을 끼고 오른쪽으로 올라가세요.
 4. 올라가다가 갈림길에서 북악산 쪽으로 왼쪽으로 가세요.
 5. 정상에 가면 서울이 한눈에 보여요.
+6. 내려올 때는 정상에서 뒤로 도세요.
+7. 성곽길을 따라 내려가다가 갈림길에서 오른쪽으로 가세요.
+8. 조금 내려가면 소나무에 총알 자국이 보여요.
+9. 그 소나무를 끼고 왼쪽으로 도세요.
+10. 버스 정류장이 정면에 있어요. 광화문 방면 버스를 타세요.
 
 **II. Confirmer ce qu'on a entendu : -다고요?**
 1. Tu dis que le [[sommet|정상]] est encore loin ?

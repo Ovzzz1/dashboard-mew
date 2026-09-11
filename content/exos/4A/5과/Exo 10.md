@@ -3,13 +3,18 @@
 
 **I. Expressions pour donner des directions**
 
-*Contexte : un lecteur de ton blog te demande le chemin d'un café caché.*
+*Contexte : un lecteur de ton blog te demande le chemin d'un café caché, puis celui d'un lieu de tournage voisin.*
 
 1. Sortez par la sortie 7 et faites demi-tour.
 2. Si vous [[passez|지나가다]] devant la banque, une [[ruelle|골목]] apparaît à droite.
 3. Longez le café et tournez à droite.
 4. Continuez, puis à la maison [[ordinaire|평범하다]] avec une affiche [[collée|-이 붙어 있다]], allez à gauche.
 5. L'entrée [[ne saute pas aux yeux|눈에 잘 안 띄어요]] mais elle est juste devant.
+6. En sortant du café, allez à droite.
+7. Allez tout droit, puis à l'intersection en T, tournez à gauche.
+8. Si vous marchez [[un bon moment|한참]], un escalier [[entouré|-으로 둘러싸여 있다]] de fleurs apparaît.
+9. En haut de l'escalier se trouve le lieu de tournage d'un drama célèbre.
+10. Ensuite, si tu veux, tu peux [[partir vers|-으로 떠나다]] Namsan à pied.
 
 **Corrections — I**
 1. 7번 출구로 나가서 뒤로 도세요.
@@ -17,6 +22,11 @@
 3. 카페를 끼고 오른쪽으로 도세요.
 4. 쭉 가다가 포스터가 붙어 있는 평범한 집에서 왼쪽으로 가세요.
 5. 입구가 눈에 잘 안 띄지만 정면에 있어요.
+6. 카페에서 나와서 오른쪽으로 가세요.
+7. 쭉 가다가 삼거리에서 왼쪽으로 도세요.
+8. 한참 걸으면 꽃으로 둘러싸인 계단이 나와요.
+9. 계단 위에 유명한 드라마 촬영지가 있어요.
+10. 그다음에 원하면 걸어서 남산으로 떠나도 돼요.
 
 **II. Confirmer ce qu'on a entendu : -다고요?**
 1. Tu dis que tu tiens un [[blog|블로그]] de balades ?

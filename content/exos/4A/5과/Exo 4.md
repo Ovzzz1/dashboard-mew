@@ -3,13 +3,18 @@
 
 **I. Expressions pour donner des directions**
 
-*Contexte : un ami veut essayer la planche à voile, tu lui indiques le club.*
+*Contexte : un ami veut essayer la planche à voile, tu lui indiques le club, puis la cafétéria.*
 
 1. Sortez par la sortie 2 et faites demi-tour.
 2. Si vous allez tout droit, la [[piscine extérieure|야외 수영장]] apparaît.
 3. Longez la piscine et tournez à droite.
 4. Continuez, puis au passage piéton, allez à gauche.
 5. Le club de [[planche à voile|윈드서핑]] est juste en face.
+6. Après le cours, sortez du club et tournez à droite.
+7. Longez le chemin au bord du fleuve.
+8. Marchez, puis à l'endroit où l'on fait du [[ski nautique|수상스키]], allez à gauche.
+9. Si vous [[passez|지나가다]] la [[piscine extérieure|야외 수영장]], la [[cafétéria|카페테리아]] apparaît.
+10. C'est [[bondé|붐비다]] le week-end, alors venez tôt.
 
 **Corrections — I**
 1. 2번 출구로 나가서 뒤로 도세요.
@@ -17,6 +22,11 @@
 3. 수영장을 끼고 오른쪽으로 도세요.
 4. 쭉 가다가 횡단보도에서 왼쪽으로 가세요.
 5. 윈드서핑 클럽이 정면에 있어요.
+6. 수업이 끝나면 클럽에서 나와서 오른쪽으로 도세요.
+7. 강변 길을 따라 걸으세요.
+8. 걷다가 수상스키 타는 곳에서 왼쪽으로 가세요.
+9. 야외 수영장을 지나가면 카페테리아가 나와요.
+10. 주말에는 붐비니까 일찍 오세요.
 
 **II. Confirmer ce qu'on a entendu : -다고요?**
 1. Tu dis que tu fais du [[ski nautique|수상스키]] tous les week-ends ?

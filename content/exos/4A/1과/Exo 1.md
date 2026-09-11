@@ -57,12 +57,14 @@
 2. Annonce : « Il va maintenant y avoir la présentation du programme de l'année. »
 3. Consigne : « Veuillez [[vous avancer|앞으로 나오다]] un par un. »
 4. Consigne : « Veuillez les accueillir avec de chaleureux applaudissements. »
+5. Consigne : « Veuillez écrire votre [[motivation d'adhésion|가입 동기]] sur la fiche. »
 
 **Corrections — III**
 1. 지금부터 신입 회원들의 인사가 있겠습니다.
 2. 지금부터 올해 활동 계획 발표가 있겠습니다.
 3. 한 분씩 앞으로 나와 주시기 바랍니다.
 4. 큰 박수로 환영해 주시기 바랍니다.
+5. 신청서에 가입 동기를 적어 주시기 바랍니다.
 
 **IV. Expressions pour se présenter**
 
@@ -72,9 +74,11 @@
 2. « J'aime la photo, donc j'ai fini par [[adhérer|가입하다]] au club. »
 3. « Appelez-moi Juju. »
 4. « Je vais participer activement. Aidez-moi beaucoup, s'il vous plaît. »
+5. « J'espère qu'à l'avenir, nous pourrons souvent [[partager des informations|정보를 나누다]]. »
 
 **Corrections — IV**
 1. 리옹에서 온 줄리앙입니다.
 2. 사진을 좋아해서 동호회에 가입하게 됐습니다.
 3. 주주라고 불러 주세요.
 4. 열심히 활동하겠습니다. 많이 도와주세요.
+5. 앞으로 여러분과 정보를 자주 나눴으면 좋겠습니다.

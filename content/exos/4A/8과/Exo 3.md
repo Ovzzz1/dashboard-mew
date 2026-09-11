@@ -8,9 +8,13 @@
 1. Réveil : rond, en plastique, il [[fait du bruit|소리를 내다]] fort.
 2. [[Commode|서랍장]] : rectangulaire, en bois dur, trois [[tiroirs|서랍]].
 3. [[Gourde|텀블러]] : allongée, en verre, texture lisse.
-4. [[Lampadaire|스탠드]] : [[haut|높이]], base ronde, [[à utiliser souvent|즐겨 쓰다]] pour lire.
+4. [[Lampadaire|스탠드]] : haut, base ronde, [[à utiliser souvent|즐겨 쓰다]] pour lire.
 5. Coussin : moelleux, en tissu, forme carrée.
 6. [[Haltère|아령]] : dur, recouvert de [[caoutchouc|고무]], ça [[fait de l'exercice|운동이 되다]] à la maison.
+7. Cette lampe a une minuterie : elle [[s'éteint|꺼지다]] [[toute seule|저절로]].
+8. C'est un [[support de téléphone|휴대폰 꽂이]] triangulaire en bois, vraiment [[chouette|멋지다]].
+9. C'est une tasse en verre d'occasion, mais elle est [[mieux que ce que j'attendais|기대했던 것 이상으로 좋았어]].
+10. « Je vous la laisse à 5 000 wons ? — [[Ça me va très bien !|저야 좋지요]] » C'est une commode carrée en plastique.
 
 **Corrections — I**
 1. 둥근 플라스틱 알람 시계인데 소리를 크게 내요.
@@ -19,6 +23,10 @@
 4. 높은 스탠드인데 받침이 둥글고 책 읽을 때 즐겨 써요.
 5. 푹신한 천 쿠션인데 모양이 네모나요.
 6. 딱딱하고 고무로 싸인 아령인데 집에서 운동이 돼요.
+7. 이 스탠드는 타이머가 있어서 저절로 꺼져요.
+8. 나무로 된 세모난 휴대폰 꽂이인데 정말 멋져요.
+9. 중고 유리컵인데 기대했던 것 이상으로 좋아요.
+10. “5천 원에 드릴까요?” “저야 좋지요!” 네모난 플라스틱 서랍장이에요.
 
 **II. Comparer à une taille connue : noun만 해요**
 1. La [[commode|서랍장]] fait la taille de ce frigo.

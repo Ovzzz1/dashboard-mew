@@ -3,13 +3,18 @@
 
 **I. Expressions pour donner des directions**
 
-*Contexte : tu guides un visiteur jusqu'au parc écologique de Seonyudo.*
+*Contexte : tu guides un visiteur jusqu'au parc écologique de Seonyudo, puis jusqu'à l'embarcadère.*
 
 1. Sortez par la sortie 2 de la station Seonyudo.
 2. Si vous suivez la route, un pont apparaît.
 3. Traversez le pont, puis au bout, tournez à droite.
 4. Tournez à gauche en longeant le [[pilier|기둥]] et le [[parc écologique|생태 공원]] apparaît.
 5. Une fois entré, l'ancienne [[station d'épuration|정수장]] est juste devant vous.
+6. Pour aller à l'embarcadère, ressortez par l'entrée du parc.
+7. Faites demi-tour et suivez la route.
+8. Continuez tout droit, puis à l'intersection en T, allez à gauche.
+9. Il y a des cerisiers [[des deux côtés|양쪽]] du chemin.
+10. Si vous marchez encore un peu, le [[bateau de croisière|유람선]] [[en direction de|방면]] Yeouido apparaît.
 
 **Corrections — I**
 1. 선유도역 2번 출구로 나가세요.
@@ -17,6 +22,11 @@
 3. 다리를 건너다가 끝에서 오른쪽으로 도세요.
 4. 기둥을 끼고 왼쪽으로 돌면 생태 공원이 보여요.
 5. 들어가면 옛 정수장이 정면에 있어요.
+6. 선착장에 가려면 공원 입구로 다시 나오세요.
+7. 뒤로 돌아서 길을 따라 가세요.
+8. 쭉 가다가 삼거리에서 왼쪽으로 가세요.
+9. 길 양쪽에 벚나무가 있어요.
+10. 조금 더 걸으면 여의도 방면 유람선이 나와요.
 
 **II. Confirmer ce qu'on a entendu : -다고요?**
 1. Vous dites que c'était une [[station d'épuration|정수장]] ?

@@ -11,6 +11,10 @@
 4. Le [[humidificateur|가습기]] est allongé et en verre transparent.
 5. Quand [[on a les pieds froids|손/발이 시리다]], ce [[gadget|아이디어 상품]] est parfait.
 6. Ça [[se transforme|변신하다]] en coussin, donc c'est [[deux en un|일석이조]].
+7. Ce [[tapis chauffant|전기 장판]] [[pour une personne|1인용]] s'[[éteint|꺼지다]] tout seul au bout de deux heures.
+8. J'ai [[froid aux pieds|손/발이 시리다]], alors je mets ces chaussons moelleux en tissu.
+9. Dans ce vieil appartement, le problème de chauffage est [[grave|심각하다]] : même les fenêtres sont en verre fin.
+10. L'avant de ce [[radiateur|전기 히터]] rond est en verre dur : ne le touchez pas quand il est chaud.
 
 **Corrections — I**
 1. 전기 히터는 둥글고 몸체가 딱딱해요.
@@ -19,6 +23,10 @@
 4. 가습기는 길쭉하고 투명한 유리로 돼 있어요.
 5. 발이 시릴 때 이 아이디어 상품이 딱이에요.
 6. 쿠션으로 변신하니까 일석이조예요.
+7. 이 1인용 전기 장판은 두 시간이 지나면 저절로 꺼져요.
+8. 발이 시려서 푹신한 천 실내화를 신어요.
+9. 이 오래된 집은 난방 문제가 심각해요. 창문도 얇은 유리예요.
+10. 이 둥근 전기 히터는 앞부분이 딱딱한 유리라서 뜨거울 때 만지면 안 돼요.
 
 **II. Comparer à une taille connue : noun만 해요**
 1. Le [[radiateur|전기 히터]] fait la taille de cette valise.

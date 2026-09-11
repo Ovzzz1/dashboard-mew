@@ -11,6 +11,10 @@
 4. Range-le dans un sac en plastique souple avant de le [[stocker|보관하다]].
 5. Il faut [[débrancher|빼다]] la fiche avant de [[la brancher|꽂다]] ailleurs.
 6. Si on l'enroule [[dans tous les sens|이리저리]], ça finit par [[se casser|부서지다]].
+7. Cette multiprise carrée en plastique a six [[prises|콘센트]].
+8. Les [[câbles|케이블]] sont [[empilés|-이 쌓여 있다]] dans une boîte en vinyle.
+9. Avec tous ces câbles, j'ai [[eu du mal|고생하다]] à trouver la bonne [[fiche|플러그]].
+10. Ce range-câbles est une idée [[géniale|멋지다]] : c'est un tube allongé en caoutchouc doux.
 
 **Corrections — I**
 1. 케이블은 길쭉하고 부드러운 고무로 돼 있어요.
@@ -19,6 +23,10 @@
 4. 비닐 봉지에 넣어서 보관하세요.
 5. 다른 데 꽂기 전에 플러그를 빼야 해요.
 6. 이리저리 감으면 결국 부서져요.
+7. 이 네모난 플라스틱 멀티탭에는 콘센트가 여섯 개 있어요.
+8. 케이블이 비닐 상자에 쌓여 있어요.
+9. 케이블이 많아서 맞는 플러그를 찾느라고 고생했어요.
+10. 이 케이블 정리함은 정말 멋진 아이디어예요. 부드러운 고무로 된 길쭉한 통이에요.
 
 **II. Comparer à une taille connue : noun만 해요**
 1. Le chargeur fait la [[taille|크기]] de ma paume.
