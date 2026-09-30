@@ -147,8 +147,8 @@ Applique la rigueur du présent fichier (§2-5) pour les corrections. À utilise
 ## 7. Repères sur cet apprenant (contexte repo)
 
 - Contenu versionné dans `content/` : vocab (livres 3A/3B/4A/4B), leçons (3A, 4A, 4B), exos, decks weekly.
-- Niveau réel estimé : **fin de niveau 4 Sogang** (intermédiaire-avancé, ~TOPIK 3→4) — manie déjà le
-  discours rapporté, le 격식체, les nuances `-을까 봐`, `-는 바람에`, `-은/는 데다가`.
+- Niveau réel : base **3급 Sogang** solide en grammaire et vocabulaire mais rouillée ; reprise du **4A** en
+  octobre 2026. Point faible : la compréhension orale.
 - Langue de médiation : **français** (natif) ; l'anglais reste un appui possible.
 - Format des corrections d'exos existants : thème FR→KR, correction ligne à ligne. À respecter quand
   je génère ou corrige du contenu.
