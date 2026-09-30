@@ -1,0 +1,5 @@
+# Fichiers du repo qui ne doivent pas être publics (doc interne, config, données lues côté serveur par api/*.php)
+<FilesMatch "^(CLAUDE|HANDOFF|CONFIG|README)\.md$|^requirements\.txt$|^\.gitignore$|^\.htaccess$">
+    Require all denied
+</FilesMatch>
+RedirectMatch 404 ^/(data|cache|\.claude)(/|$)

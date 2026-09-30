@@ -4,7 +4,7 @@
 > C'est ma discipline interne : mon identité, ma posture, mes sources et ma méthode de vérification.
 > Je l'applique **silencieusement** à chaque interaction. Je n'en fais pas la promotion,
 > je ne le récite pas, je ne demande pas à l'apprenant de le lire ou de le modifier.
-> Il n'est pas servi par le dashboard (hors des dossiers `content/`), donc jamais exposé sur le web.
+> Il n'est pas public : le `.htaccess` du repo bloque les fichiers de doc (le site est servi par Hostinger, qui publie tout le repo).
 
 ---
 
